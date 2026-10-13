@@ -1,0 +1,72 @@
+# 案例分析用的词表。整理者自拟，用来给案例编码；会随案例增加而修订，修订时要回头重看已编码的案例。
+# 词表来自两部分：先从文献和已有分类里取一版初稿（见 04-structure-and-cognition/case-analysis-method.md），
+# 再按案例里实际遇到的情况增删。每个词条的定义写的是本库里的用法，不等于文献里的定义。
+
+# 议题：使用者想用这个结构回答什么问题（看的目的，不是对象本身）
+issue_types:
+  locate-anomaly: {title: 定位异常, desc: "找出哪里慢、哪里错、哪里不该有；通常要从结果往回追原因"}
+  impact: {title: 影响范围, desc: "改动或故障会波及哪些对象；沿依赖方向往上游或下游追"}
+  understand-whole: {title: 建立全貌, desc: "弄清整体由什么组成、各部分怎么关联；入门、接手、沟通用"}
+  trace-flow: {title: 追踪流向, desc: "数据、资源、请求从哪来、到哪去；强调来源和去向"}
+  compare: {title: 比较, desc: "比较版本、运行、方案、状态之间的差异"}
+  decide-status: {title: 决策与状态, desc: "给每个对象一个状态或结论（采用、观察、停用），支持取舍"}
+  explore-discover: {title: 探索发现, desc: "事先不知道要找什么，看有哪些群落、缺口、异常、规律"}
+  reason-argue: {title: 论证推理, desc: "一个判断凭什么成立，有哪些支持和反对"}
+  simulate: {title: 推演仿真, desc: "改变条件，看结果怎么变"}
+  build-author: {title: 构建编辑, desc: "人来搭建或修改这个结构本身"}
+  explain-teach: {title: 讲解传达, desc: "把已有的理解讲给别人"}
+  retrieve: {title: 检索召回, desc: "按问题把相关的部分找出来"}
+
+# 数据结构类别：材料被当成什么结构（主类放第一位，可带次要类）
+structures:
+  set: {title: 集合与分类, desc: "成员加类别，没有显式的关系边；类别可有几层，但不表达成员之间的关系"}
+  hierarchy: {title: 层级与树, desc: "每个对象至多一个上级；包含或父子关系；叶子可带数值"}
+  dag: {title: 有向无环图, desc: "一个对象可有多个上级或下游；方向表示先后、依赖或来源；没有环"}
+  graph: {title: 一般图与网络, desc: "对象与关系；可有环、可无向、关系可分类型、对象可分类型、边与点可带属性"}
+  multilayer: {title: 多层与复合, desc: "层、视角或嵌套本身是模型里的对象；同一对象可出现在多层"}
+  sequence: {title: 序列与事件流, desc: "按时间或顺序排列的事件、状态、记录"}
+  table: {title: 表与多维属性, desc: "对象乘以属性；没有显式关系，关系靠属性值相似产生"}
+  flow: {title: 流量网络, desc: "边上带的量要守恒或可汇总；关心数量如何分配"}
+  spatial: {title: 空间与几何, desc: "对象有位置（地理、版图、嵌入空间里的坐标）；位置本身有含义"}
+  text: {title: 文本与文档, desc: "还没有结构的材料，结构要先被提取出来"}
+  causal: {title: 因果与反馈, desc: "变量之间的影响，常含环与延迟"}
+
+# 结构修饰：叠加在主类上的性质
+modifiers:
+  directed: 有方向
+  cyclic: 含环
+  typed: 对象或关系分类型
+  weighted: 边或点带数值
+  temporal: 带时间
+  versioned: 有版本或有效期
+  nested: 嵌套（复合）
+  bipartite: 两类对象互相连接
+  derived: 派生（结构由别的材料推出，不是原始给定）
+  provenance: 保留来源与证据
+
+# 重点部分：这个案例的视图主要在回答结构的哪一部分（可多选，主要的放前面）
+focus_parts:
+  membership: {title: 有什么, desc: "有哪些对象，属于哪类"}
+  containment: {title: 包含与层次, desc: "谁包含谁、处于哪一层"}
+  connectivity: {title: 连通与邻域, desc: "谁与谁相连，路径，周围有什么"}
+  precedence: {title: 先后与依赖方向, desc: "谁先谁后，谁依赖谁，关键路径"}
+  cycle: {title: 环与反馈, desc: "有没有环，环在哪里"}
+  node_attr: {title: 对象上的度量, desc: "对象的状态、数值、指标"}
+  edge_attr: {title: 关系上的类型与量, desc: "关系的种类、强弱、流量"}
+  time: {title: 时间与演化, desc: "时间位置、耗时、版本、变化"}
+  identity: {title: 跨视图的同一对象, desc: "同一个对象在不同视图、不同层之间保持可对应"}
+  cluster: {title: 群落与相似, desc: "哪些对象聚成一群、彼此相似"}
+  position: {title: 空间位置, desc: "位置本身含义（地理或嵌入）"}
+  provenance: {title: 来源与证据, desc: "判断从哪来、凭什么"}
+  distribution: {title: 总体分布, desc: "整体的比例、分布、规模"}
+
+# 抽象处理：案例怎样处理层级和颗粒度
+abstraction_modes:
+  none: 没有处理（一个层级一张图）
+  fold-drill: 折叠展开或钻取（同一视图里换层级）
+  aggregate: 聚合（多个对象合成一个，量也合并）
+  filter-scope: 过滤或限定范围（按类型、深度、邻域裁剪）
+  separate-views: 分成多个视图，各看一个侧面
+  zoom: 缩放（连续换尺度）
+  summarize: 生成摘要或概括（语义概括，不只是合并）
+  none-stated: 页面没写

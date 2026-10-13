@@ -18,6 +18,9 @@ from pathlib import Path
 
 import yaml
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from cases import CASE_RENDERERS, load_cases, validate_cases  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
 CAT = ROOT / "catalog"
 
@@ -74,6 +77,7 @@ def load() -> dict:
         "rels": read(CAT / "relationships.yaml"),
         "evals": read(CAT / "evaluation-records.yaml"),
         "forms": read(CAT / "diagram-types.yaml"),
+        "cases": load_cases(CAT),
     }
 
 
@@ -194,6 +198,8 @@ def validate(d: dict) -> list[str]:
     for a in d["refs"]["awesome_lists"]:
         if not is_url(a["repo"]):
             errs.append(f"上游清单 {a['id']}: repo 不合法")
+    form_ids = {f["id"] for fam in d["forms"]["families"] for f in fam["forms"]}
+    errs += validate_cases(d["cases"], {p["id"] for p in d["projects"]}, form_ids)
     return errs
 
 
@@ -247,6 +253,7 @@ def cell_notes(e: dict) -> str:
         bits.append(e["notes"])
     if e.get("facts_gaps"):
         bits.append("官方页面没找到依据的说明：" + "、".join(e["facts_gaps"]))
+    bits = [x.rstrip("。") if i < len(bits) - 1 else x for i, x in enumerate(bits)]
     return esc("；".join(bits)) if bits else "—"
 
 
@@ -332,6 +339,7 @@ def render_refs(d: dict, arg: str) -> str:
 
 
 RENDERERS = {
+    **CASE_RENDERERS,
     "catalog": render_catalog,
     "eval": render_eval,
     "forms": render_forms,
