@@ -47,6 +47,8 @@ def validate_cases(c: dict, project_ids: set[str], form_ids: set[str]) -> list[s
     errs: list[str] = []
     v = c["vocab"]
     seen: set[str] = set()
+    field_order = list(v["fields"])
+    last_field = -1
     for case in c["cases"]:
         i = case.get("id")
         if not i:
@@ -55,9 +57,16 @@ def validate_cases(c: dict, project_ids: set[str], form_ids: set[str]) -> list[s
         if i in seen:
             errs.append(f"案例 {i}: id 重复")
         seen.add(i)
-        for k in ("domain", "issue", "structure", "confidence", "origin"):
+        for k in ("domain", "field", "issue", "structure", "confidence", "origin"):
             if not case.get(k):
                 errs.append(f"案例 {i}: 缺少 {k}")
+        if case.get("field") and case["field"] not in v["fields"]:
+            errs.append(f"案例 {i}: field {case['field']!r} 不在词表 fields 里")
+        elif case.get("field"):
+            pos = field_order.index(case["field"])
+            if pos < last_field:
+                errs.append(f"案例 {i}: 放错了位置，cases.yaml 里案例要按词表 fields 的顺序分段，它属于“{v['fields'][case['field']]['title']}”那一段")
+            last_field = max(last_field, pos)
         if case.get("origin") not in ORIGINS:
             errs.append(f"案例 {i}: origin 必须是 project 或 external")
         elif case["origin"] == "project" and i not in project_ids:
@@ -337,8 +346,22 @@ def render_stats(d: dict, _arg: str) -> str:
         by_origin[x["origin"]] += 1
         by_conf[x["confidence"]] += 1
     domains = sorted({x["domain"] for x in cs})
-    return (f"共 {len(cs)} 个案例：目录内项目 {by_origin['project']} 个，其他领域 {by_origin['external']} 个；"
-            f"覆盖 {len(domains)} 个领域标签。编码把握：高 {by_conf['high']}、中 {by_conf['medium']}、低 {by_conf['low']}。\n")
+    nfields = len({x["field"] for x in cs})
+    return (f"共 {len(cs)} 个案例，归在 {nfields} 个领域大类里（细标签 {len(domains)} 个）；"
+            f"来源：目录内项目 {by_origin['project']} 个，补收的 {by_origin['external']} 个。"
+            f"编码把握：高 {by_conf['high']}、中 {by_conf['medium']}、低 {by_conf['low']}。\n")
+
+
+def render_by_field(d: dict, _arg: str) -> str:
+    """按领域大类列出案例（括号里是主类结构），并给出大类的定义。"""
+    c, v = d["cases"], d["cases"]["vocab"]
+    projects = {p["id"]: p for p in d["projects"]}
+    out = ["| 领域大类 | 数量 | 案例（主类结构） |", "| --- | --- | --- |"]
+    for fid, f in v["fields"].items():
+        rows = [x for x in c["cases"] if x["field"] == fid]
+        names = "、".join(f"{name_link(x, projects)}（{v['structures'][x['structure'][0]]['title']}）" for x in rows)
+        out.append(f"| **{esc(f['title'])}**<br><sub>{esc(f['desc'])}</sub> | {len(rows)} | {names} |")
+    return "\n".join(out) + "\n"
 
 
 def render_evidence(d: dict, _arg: str) -> str:
@@ -507,5 +530,6 @@ CASE_RENDERERS = {
     "caseissue": render_issue_matrix,
     "caseforms": render_forms_by_structure,
     "casestats": render_stats,
+    "casefields": render_by_field,
     "caseevidence": render_evidence,
 }

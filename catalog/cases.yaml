@@ -4,8 +4,9 @@
 # 词表见 case-vocab.yaml，词表会随案例修订。
 #
 # 字段：
-#   origin      project（在 projects/ 里，id 同项目 id）或 external（目录外的案例，要写 name 和 urls）
-#   domain      领域
+#   origin      project（在 projects/ 里，id 同项目 id）或 external（补收的案例，要写 name 和 urls）。只说案例怎么来的，不决定它放在文件的哪里
+#   domain      领域（细标签）
+#   field       领域大类（词表 fields）。下面的分段就是按它分的：新案例放进所属大类的段落里，不要追加在文件末尾
 #   issue       这个案例的使用者要回答的问题（一句话，要能从 ev 的摘录里看出来）
 #   issue_types 议题类型（词表 issue_types）
 #   structure   数据结构类别，主类放第一位（词表 structures）
@@ -24,10 +25,11 @@
 #   confidence  编码的把握：high（官方页面直接写了）/ medium（页面信息支持，但归类靠推断）/ low（证据很少）
 #   note        其他
 
-# ───────── 软件工程：代码与架构 ─────────
+# ───────── 软件工程：代码、架构与历史 ─────────
 - id: dependency-cruiser
   origin: project
   domain: 软件工程
+  field: code
   issue: 找出项目里不该有的、奇怪的模块依赖
   issue_types: [locate-anomaly, impact]
   structure: [graph]
@@ -45,6 +47,7 @@
 - id: madge
   origin: project
   domain: 软件工程
+  field: code
   issue: 生成模块依赖图，发现循环依赖
   issue_types: [locate-anomaly]
   structure: [graph]
@@ -62,6 +65,7 @@
 - id: pydeps
   origin: project
   domain: 软件工程
+  field: code
   issue: 在大型 Python 项目里发现循环导入，并只看某个模块周围的依赖
   issue_types: [locate-anomaly, impact]
   structure: [graph]
@@ -81,6 +85,7 @@
 - id: codeboarding
   origin: project
   domain: 软件工程
+  field: code
   issue: 合并之前看清一个 PR 改了系统的哪些部分、影响哪里
   issue_types: [impact, compare, understand-whole]
   structure: [hierarchy, graph]
@@ -100,6 +105,7 @@
 - id: understand-anything
   origin: project
   domain: 软件工程
+  field: code
   issue: 接手代码库时弄懂它由什么组成、怎么连接，并把代码对应到业务领域
   issue_types: [understand-whole, explain-teach]
   structure: [graph, hierarchy]
@@ -118,6 +124,7 @@
 - id: likec4
   origin: project
   domain: 软件工程
+  field: code
   issue: 用同一份架构模型，向不同的人展示不同范围、不同层级的图
   issue_types: [understand-whole, explain-teach]
   structure: [hierarchy, graph]
@@ -132,412 +139,29 @@
   ev: ["entities:hierarchical elements", "abstraction:strict number of levels", "abstraction:inherit the scope", "interactions:onNavigateTo"]
   confidence: high
 
-- id: bpmn-js
+- id: tree-sitter
   origin: project
-  domain: 业务流程
-  issue: 在浏览器里查看、创建和编辑 BPMN 流程图
-  issue_types: [build-author, explain-teach]
-  structure: [graph]
-  modifiers: [directed, typed]
-  source: [authored]
-  structure_note: "BPMN 模型：形状与连线；底层有一份 BPMN 元模型，图只是它的一种呈现"
-  focus: [precedence, node_attr]
-  forms: [bpmn, flowchart]
-  schools: [notation, link]
-  views_note: "可以用覆盖层（overlay）在图元素上叠加信息；有令牌模拟扩展"
-  abstraction: [none-stated]
-  ev: ["views:Overlays", "abstraction:Diagram Interaction / Modeling", "interactions:token simulation"]
-  confidence: medium
-  note: "官方页面把“图交互”（diagram-js）、“BPMN 元模型”（bpmn-moddle）和“组装”（bpmn-js）分成三层，说明图形层和语义层是分开设计的。"
-
-# ───────── AI Agent：编排与运行观测 ─────────
-- id: agentensemble-viz
-  origin: project
-  domain: AI Agent 开发
-  issue: 看清一次多 Agent 任务：计划里哪些任务并行、哪些串行、关键路径是哪条，实际每个任务何时运行、调了哪些工具
-  issue_types: [understand-whole, locate-anomaly, compare]
-  structure: [dag, sequence]
-  modifiers: [directed, temporal, typed]
-  source: [recorded]
-  structure_note: "同一批任务有两份数据：执行前的任务依赖 DAG（含拓扑层级、关键路径）和执行后的 Trace（起止时间、LLM 与工具调用）"
-  focus: [precedence, time, identity]
-  dropped: "Flow 视图不画时间，Timeline 视图不画依赖箭头"
-  forms: [dag, gantt]
-  schools: [link, timebar]
-  abstraction: [separate-views, fold-drill, zoom]
-  abstraction_note: "两张视图各回答结构的一个侧面；点任务进入 LLM 调用、工具调用；时间轴缩放"
-  ev: ["questions:which tasks run in parallel", "encodings:gray = normal, red = critical path", "encodings:L0, L1", "interactions:Zoom slider", "abstraction:drill-down into LLM calls"]
-  confidence: high
-
-- id: agentprism
-  origin: project
-  domain: AI Agent 观测
-  issue: 调试 Agent 运行，看时间和成本浪费在哪
-  issue_types: [locate-anomaly]
-  structure: [hierarchy, sequence]
-  modifiers: [temporal, weighted]
-  source: [recorded]
-  structure_note: "OpenTelemetry 的 span 被转成层级树（父子），每个 span 带耗时、成本、状态"
-  focus: [containment, time, node_attr]
-  forms: [trace-waterfall]
-  schools: [timebar]
-  views_note: "左边树视图，右边时间线视图，加详情面板"
-  abstraction: [fold-drill, aggregate]
-  abstraction_note: "渐进披露（progressive disclosure）；重复序列折叠成摘要；开发者“最想要的是层级”"
-  ev: ["views:Tree View on the left", "encodings:Color-coded status", "abstraction:Collapsed summary", "abstraction:wanted hierarchy above all", "questions:where time and money"]
-  confidence: high
-  thinking: ["alternative:The only problem? The answer is buried", "why:Tree View was the most effective", "why:human brains excel at visual pattern recognition"]
-
-- id: otel-genai-semconv
-  origin: project
-  domain: AI Agent 观测
-  issue: 规定 AI 和 Agent 的运行记录该有哪些字段（后面所有可视化的数据来源）
-  issue_types: []
-  structure: [sequence]
-  modifiers: [typed]
-  source: [recorded]
-  structure_note: "语义约定是字段词表：操作名、工具、Agent 描述等；span 与事件的结构在所读页面上没写（页面已迁移）"
-  focus: [node_attr]
-  schools: []
-  abstraction: [none-stated]
-  ev: ["attributes:operation being performed", "entities:Name of the tool"]
-  confidence: low
-  note: "这是“数据先于图”的一例：可视化假定的结构（谁是父、谁是子、带什么属性）要在这一层先定下来。官方页面已迁到别处，这里没读到 span 的定义。"
-
-- id: openllmetry
-  origin: project
-  domain: AI Agent 观测
-  issue: 以不改代码的方式采集 LLM 应用的运行追踪
-  issue_types: []
-  structure: [sequence]
-  modifiers: []
-  source: [recorded]
-  structure_note: "把应用里的工作流、任务、Agent、工具标注成可追踪的单元"
+  domain: 软件工程
+  field: code
+  issue: 把源码解析成语法树，并随编辑增量更新
+  issue_types: [build-author]
+  structure: [hierarchy]
+  modifiers: [derived, nested]
+  source: [derived]
+  structure_note: "源码按语法规则解析为具体语法树；节点分命名与匿名两种，类似抽象语法树但保留所有记号"
   focus: [containment]
-  schools: []
-  abstraction: [none-stated]
-  ev: ["entities:Workflows, Tasks, Agents and Tools", "questions:monitoring and debugging"]
-  confidence: low
-
-- id: jaeger
-  origin: project
-  domain: 分布式系统运维
-  issue: 找出一次请求流经了哪些服务，性能瓶颈和错误在哪
-  issue_types: [locate-anomaly, understand-whole]
-  structure: [hierarchy, graph]
-  modifiers: [temporal, derived, directed]
-  source: [recorded, derived]
-  structure_note: "一条 trace 是 span 的父子树，带起止时间；跨 trace 聚合出服务依赖图"
-  focus: [time, containment, connectivity]
-  forms: [trace-waterfall, dependency-graph]
-  schools: [timebar, link]
-  abstraction: [separate-views, aggregate]
-  abstraction_note: "单次请求用时间线（含缩略图）；全局关系用服务依赖图"
-  ev: ["questions:Find & fix performance bottlenecks", "relations:Analyze service dependencies", "views:uiTimelineHideMinimap"]
-  confidence: medium
-
-- id: grafana-tempo
-  origin: project
-  domain: 分布式系统运维
-  issue: 理解分布式系统的结构，找出瓶颈和互联问题
-  issue_types: [understand-whole, locate-anomaly]
-  structure: [hierarchy, graph]
-  modifiers: [temporal, derived, weighted, directed]
-  source: [recorded, derived]
-  structure_note: "span 之间的父子关系，聚合成服务之间的关系图；边上是请求率、错误、耗时（RED）"
-  focus: [connectivity, edge_attr]
-  forms: [dependency-graph]
-  schools: [link, timebar]
-  abstraction: [aggregate]
-  abstraction_note: "把 span 按服务名、操作等维度聚合，span 级的树变成服务级的图"
-  ev: ["abstraction:Analyzes traces to map relationships", "questions:structure of a distributed system", "attributes:Calculates the total count and duration"]
-  confidence: high
-
-- id: marquez
-  origin: project
-  domain: 数据工程
-  issue: 数据模式改变时，审计并排查下游受影响的作业
-  issue_types: [impact, trace-flow, locate-anomaly]
-  structure: [dag]
-  modifiers: [directed, bipartite, versioned, typed]
-  source: [recorded]
-  structure_note: "作业与数据集两类对象：作业消费并产出数据集，构成有向的血缘；数据集有 schema 版本，作业有版本和运行"
-  focus: [precedence, time]
-  forms: [dag]
-  schools: [link]
-  abstraction: [fold-drill]
-  abstraction_note: "流水线由多个作业组成（一层包含）"
-  ev: ["relations:dependencies between jobs and the datasets", "questions:impacted jobs downstream", "attributes:compare a previous schema version"]
-  confidence: medium
-
-- id: neodash
-  origin: project
-  domain: 图数据库应用
-  issue: 用图数据库里的查询结果搭交互看板
-  issue_types: [build-author, explore-discover]
-  structure: [graph]
-  modifiers: [typed]
-  source: [given]
-  structure_note: "底层是 Neo4j 属性图；用 Cypher 查询取出一部分，再按需要投影成表、图、柱状图、折线图、地图"
-  focus: [node_attr]
-  schools: [channels, link]
-  views_note: "同一份查询结果可选表、图、柱状图、折线图、地图"
-  abstraction: [separate-views]
-  ev: ["views:tables, graphs, bar charts", "input_material:Create visualizations directly from Cypher"]
-  confidence: low
-  note: "官方页面没写数据对象和关系是什么，重点部分由用户的查询决定。这是“结构存在数据库里，视图由查询临时投影”的一例。"
-
-# ───────── AI Agent：工作流平台与编排 ─────────
-- id: dify
-  origin: project
-  domain: AI Agent 开发
-  issue: 搭建 AI 工作流，并逐节点测试、检查数据怎么流过去
-  issue_types: [build-author, locate-anomaly]
-  structure: [graph]
-  structure_was: [dag]
-  modifiers: [directed, typed]
-  source: [authored, recorded]
-  structure_note: "工作流是节点图；每个节点执行后留下一条记录（输入、输出、耗时、错误）"
-  focus: [precedence, node_attr]
-  forms: [flowchart]
-  schools: [link]
-  abstraction: [fold-drill]
-  abstraction_note: "可单独测试任一节点；整个应用可以被复用成另一个工作流里的 Agent 节点（嵌套）"
-  ev: ["attributes:Last run", "views:Variable Inspector", "interactions:test any node individually", "abstraction:reuse it as an agent node"]
-  confidence: high
-
-- id: langflow
-  origin: project
-  domain: AI Agent 开发
-  issue: 用拖拽组件搭 AI 流程，并在 Playground 里实时测试
-  issue_types: [build-author]
-  structure: [graph]
-  structure_was: [dag]
-  modifiers: [directed, typed]
-  source: [authored]
-  structure_note: "组件与连线构成的流程；组件和整条流程都能被当作 Agent 的工具"
-  focus: [precedence]
-  forms: [flowchart]
-  schools: [link]
-  abstraction: [fold-drill]
-  abstraction_note: "组件与流程可作为更上层 Agent 的工具使用"
-  ev: ["views:visual editor", "interactions:Playground", "abstraction:components and flows as agent tools"]
-  confidence: medium
-
-- id: n8n
-  origin: project
-  domain: 业务自动化
-  issue: 工作流在生产中失败后，把当时的执行数据带回编辑器里调试
-  issue_types: [locate-anomaly, build-author]
-  structure: [graph, sequence]
-  structure_was: [dag, sequence]
-  modifiers: [directed, versioned, temporal]
-  source: [authored, recorded]
-  structure_note: "工作流是设计时的节点图；每次运行是一条执行记录（execution），执行数据可以复制回设计时的工作流"
-  focus: [identity, time]
-  schools: [link, textlist]
-  views_note: "编辑器画布 + 执行列表"
-  abstraction: [separate-views]
-  abstraction_note: "设计时（工作流）与运行时（执行列表）分开；单个工作流的执行与全部工作流的执行两个范围"
-  ev: ["entities:An execution is a single run", "relations:n8n copies the execution data"]
-  confidence: medium
-  note: "“Debug in editor”把运行时的一条记录接回设计时的图——两种结构靠对象身份连起来。"
-
-- id: node-red
-  origin: project
-  domain: 物联网与事件流
-  issue: 把节点连起来搭事件驱动的流，并看消息在流里是什么样
-  issue_types: [build-author, locate-anomaly]
-  structure: [graph]
-  modifiers: [directed, typed]
-  source: [authored]
-  structure_note: "流（flow）由节点和连线组成，消息沿线传递；Debug 节点把流经的消息收集到侧栏"
-  focus: [connectivity, node_attr]
-  schools: [link]
-  views_note: "编辑器画布 + Debug 侧栏"
-  abstraction: [fold-drill]
-  abstraction_note: "分组（Groups）和子流程（Subflows）"
-  ev: ["views:The Debug sidebar displays", "abstraction:Groups Subflows", "entities:build, wire together"]
-  confidence: medium
-
-- id: flowise
-  origin: project
-  domain: AI Agent 开发
-  issue: 可视化搭建带条件、循环、人工介入的多 Agent 流程
-  issue_types: [build-author]
-  structure: [graph]
-  modifiers: [directed, cyclic, nested, typed]
-  source: [authored]
-  structure_note: "节点图里有条件节点、迭代节点；迭代节点内嵌一个子流程；共享的 Flow State 跨分支传数据；检查点可保存与恢复"
-  focus: [precedence, time]
-  forms: [flowchart]
-  schools: [link]
-  abstraction: [fold-drill]
-  abstraction_note: "迭代节点内嵌子流程（嵌套）"
-  ev: ["entities:Executes a defined", "relations:Shared state enables data exchange", "attributes:Each checkpoint is saved"]
-  confidence: medium
-  note: "官网已宣布停止运营（见 projects/L3.yaml）。"
-
-- id: agentscope
-  origin: project
-  domain: AI Agent 开发
-  issue: 观察一个由领导者协调多个工作者的 Agent 团队怎么运作
-  issue_types: [understand-whole, locate-anomaly]
-  structure: [hierarchy, sequence]
-  modifiers: [temporal]
-  source: [recorded]
-  structure_note: "团队由领导者 Agent 和工作者 Agent 组成；每个工作者有自己的事件流"
-  focus: [containment, time, connectivity]
   schools: [textlist]
-  views_note: "Web 界面渲染团队成员和每个工作者的流"
-  abstraction: [separate-views]
-  ev: ["entities:A leader agent assembling a team", "views:renders team membership", "relations:exchange messages"]
-  confidence: medium
-
-- id: langgraph
-  origin: project
-  domain: AI Agent 开发
-  issue: 调试 Agent 的状态：回到某个检查点重放，或分叉出另一条路径
-  issue_types: [locate-anomaly, compare]
-  structure: [graph, sequence]
-  modifiers: [directed, versioned, temporal]
-  source: [authored, recorded]
-  structure_note: "Agent 是带状态的节点图；每一步产生一个检查点，检查点形成历史，可从任一检查点分叉"
-  focus: [precedence, time]
-  schools: [link]
-  views_note: "Studio 的图模式和聊天模式"
-  abstraction: [separate-views]
-  ev: ["relations:Branch from a prior checkpoint", "views:Graph mode", "interactions:Debug agent state via time travel"]
-  confidence: medium
-  note: "“分叉”让线性的运行历史长成树——对比两条路径靠的是共享前缀。"
-
-- id: agentensemble
-  origin: project
-  domain: AI Agent 开发
-  issue: 编排多 Agent 任务，并在关键点让人审核、修改或叫停
-  issue_types: [build-author, understand-whole]
-  structure: [dag, sequence]
-  modifiers: [directed, temporal]
-  source: [authored, recorded]
-  structure_note: "任务依赖 DAG 加执行 Trace；审核门插在执行过程里"
-  focus: [precedence, time]
-  forms: [dag, gantt]
-  schools: [link, timebar]
-  abstraction: [separate-views]
-  ev: ["views:Live Execution Dashboard", "interactions:pause pipeline execution"]
-  confidence: low
-  note: "可视化部分与 agentensemble-viz 相同，这里只记审核门这一点。"
-
-- id: autogen
-  origin: project
-  domain: AI Agent 开发
-  issue: 快速原型化 Agent 团队并观察它们的消息流
-  issue_types: [build-author, explain-teach]
-  structure: [graph, sequence]
-  modifiers: [directed, typed, temporal]
-  source: [authored, recorded]
-  structure_note: "团队、Agent、工具、模型和终止条件是可配置的组件；运行时的消息流画成控制转移图"
-  focus: [precedence, time]
-  schools: [link]
-  views_note: "团队构建器（JSON 或拖拽）、Playground、控制转移图"
-  abstraction: [separate-views]
-  ev: ["relations:Visual representation of message flow", "views:A visual interface for creating agent teams", "questions:not meant to be a production-ready"]
-  confidence: medium
-
-# ───────── LLM 观测平台 ─────────
-- id: langfuse
-  origin: project
-  domain: AI 应用观测
-  issue: 弄清应用内部发生了什么，并用评测持续改进
-  issue_types: [locate-anomaly, compare]
-  structure: [hierarchy, table]
-  modifiers: [temporal, weighted]
-  source: [recorded]
-  structure_note: "trace 记录每次请求的提示词、回复、token、延迟、成本；trace 可沉淀成数据集，用实验比较不同改动"
-  focus: [time, node_attr, identity]
-  schools: [timebar, channels]
-  views_note: "单条 trace 检视 + 自定义看板"
-  abstraction: [separate-views]
-  abstraction_note: "在线（生产 trace）与离线（数据集实验）两种评测场景"
-  ev: ["input_material:structured logs of every request", "attributes:cost, latency, volume, and quality"]
-  confidence: medium
-
-- id: arize-phoenix
-  origin: project
-  domain: AI 应用观测
-  issue: 一步步看一次 AI 应用运行，调试行为并衡量输出质量
-  issue_types: [locate-anomaly, compare]
-  structure: [hierarchy, sequence]
-  modifiers: [temporal]
-  source: [recorded]
-  structure_note: "项目包含会话，会话包含 trace，trace 包含 span（模型调用、检索、工具调用）"
-  focus: [containment, time, node_attr]
-  schools: [timebar]
-  views_note: "详细的执行时间线 + 提示词游乐场"
-  abstraction: [aggregate, fold-drill]
-  abstraction_note: "按项目、会话分组；单次运行逐步看"
-  ev: ["abstraction:Group related traces", "questions:where time is spent", "interactions:Span Replay"]
-  confidence: medium
-
-- id: comet-opik
-  origin: project
-  domain: AI 应用观测
-  issue: 弄清 Agent 为什么失败、哪个 span 引起延迟
-  issue_types: [locate-anomaly, compare]
-  structure: [hierarchy, graph]
-  modifiers: [temporal, weighted]
-  source: [recorded]
-  structure_note: "trace 的 span 树；另外把 Agent 的执行流程单独画成 Agent Graph"
-  focus: [containment, time, node_attr, identity]
-  forms: [trace-waterfall]
-  schools: [timebar, link]
-  views_note: "trace 视图 + Agent Graph"
-  abstraction: [fold-drill, separate-views]
-  ev: ["questions:Which span caused the latency spike", "views:visual representations of your agent workflows", "interactions:drill into individual spans"]
-  confidence: medium
-
-- id: agentops
-  origin: project
-  domain: AI 应用观测
-  issue: 在会话的时间线上看 LLM 调用、工具调用和错误，并回放
-  issue_types: [locate-anomaly]
-  structure: [hierarchy, sequence]
-  modifiers: [temporal, weighted]
-  source: [recorded]
-  structure_note: "会话是根容器，其下是有父子关系的 span；带耗时、状态、token、成本"
-  focus: [time, containment, node_attr]
-  forms: [trace-waterfall]
-  schools: [timebar]
-  abstraction: [zoom, fold-drill]
-  abstraction_note: "全部会话的总览，到单个会话的下钻，到瀑布图，到单个事件详情，四级"
-  ev: ["views:Session Waterfall", "views:meta-analysis of all of your sessions", "interactions:Rewind and replay", "relations:Hierarchical structure of operations"]
+  dropped: "语法事实不等于架构语义；注释和语义关系不在树里"
+  views_note: "游乐场：树与代码互相定位，查询面板可抓取模式"
+  abstraction: [filter-scope]
+  abstraction_note: "区分命名节点与匿名节点；可显示或隐藏匿名节点"
+  ev: ["input_material:build a concrete syntax tree", "abstraction:a tree in which the less important details", "interactions:click any node in the tree", "abstraction:named and anonymous nodes"]
   confidence: high
 
-- id: langwatch
-  origin: project
-  domain: AI 应用观测
-  issue: 找出一次运行的瓶颈，并看全局的成本、延迟与话题分布
-  issue_types: [locate-anomaly, explore-discover]
-  structure: [hierarchy, graph]
-  structure_was: [hierarchy, graph, text]
-  modifiers: [temporal, weighted, derived]
-  source: [recorded, derived]
-  structure_note: "同一次运行有多种读法：瀑布图、火焰图、拓扑图、时序图；对话文本被自动聚成话题与子话题"
-  focus: [time, connectivity, cluster]
-  forms: [trace-waterfall, flame-graph, sequence-diagram]
-  schools: [timebar, link, channels]
-  views_note: "拓扑视图 + 自定义分析图表"
-  abstraction: [separate-views, summarize]
-  abstraction_note: "同一次运行用四种投影；跨对话按话题自动聚类"
-  ev: ["views:Waterfall, flame graph, topology", "abstraction:clustered by topic and subtopic", "questions:identify bottlenecks"]
-  confidence: high
-  thinking: ["why:whichever way you need to read a run"]
-  note: "四种视图读的是同一次运行，各自强调不同部分：瀑布看时间，火焰看栈内占比，拓扑看连接，时序看消息顺序。"
-
-# ───────── 软件工程平台与服务拓扑 ─────────
 - id: nx
   origin: project
   domain: 软件工程
+  field: code
   issue: 知道改动会影响哪些项目，决定任务的执行顺序
   issue_types: [impact, understand-whole]
   structure: [dag, hierarchy]
@@ -557,6 +181,7 @@
 - id: backstage
   origin: project
   domain: 软件工程
+  field: code
   issue: 看清软件目录里的对象各自由谁拥有、依赖谁、提供什么 API
   issue_types: [understand-whole]
   structure: [graph]
@@ -571,47 +196,92 @@
   ev: ["interactions:KINDS - select", "interactions:RELATIONS - select", "abstraction:MAX DEPTH", "abstraction:Simplified"]
   confidence: high
 
-- id: datahub
-  origin: project
-  domain: 数据工程
-  issue: 排查数据问题的上游来源，改动前评估对下游的影响
-  issue_types: [impact, trace-flow, locate-anomaly]
-  structure: [dag]
-  modifiers: [directed, typed, temporal, versioned, derived]
+- id: codecity
+  origin: external
+  name: CodeCity
+  urls: [https://www.inf.usi.ch/faculty/lanza/PUBS/M/Wett2008e.pdf]
+  domain: 软件演化与度量
+  field: code
+  issue: 把软件系统的整体结构一眼看清，找出设计问题的位置
+  issue_types: [understand-whole, locate-anomaly]
+  structure: [hierarchy, table]
+  modifiers: [nested, weighted, derived]
   source: [derived]
-  structure_note: "元数据图：实体（数据集等）通过带名字的关系连起来；血缘是上下游的边，表级与字段级两个粒度"
-  focus: [precedence, edge_attr, time]
-  forms: [dag]
-  schools: [link]
-  abstraction: [fold-drill, filter-scope, aggregate]
-  abstraction_note: "表级血缘里展开字段；聚焦单个字段；数据管道节点是装着任务的盒子；时间选择器过滤边"
-  ev: ["questions:Root cause analysis", "questions:Impact analysis to prevent", "abstraction:Column lineage can be visualized while viewing table-level", "attributes:The time picker can be used to filter out edges"]
-  confidence: high
-  thinking: ["alternative:the table-level view is getting too busy", "limit:you can only expand one task's upstreams"]
+  structure_note: "包的嵌套层级，类是叶子；每个类有一组度量（方法数、属性数）"
+  focus: [containment, node_attr]
+  dropped: "调用与继承等关系默认不画"
+  forms: [scene-3d]
+  schools: [enclosure, schematic]
+  views_note: "城市隐喻：类是建筑（高度=方法数，底面=属性数），包是街区（嵌套深度=颜色饱和度）"
+  abstraction: [none]
+  abstraction_note: "靠嵌套街区和度量映射表达层级，不折叠"
+  fit_note: "和矩形树图同类：包含加叶子度量；三维多出的一个维度被用来编码第二个度量"
+  ev: ["input_material:buildings represent the classes", "encodings:the number of methods metric for the class is mapped on the building height", "encodings:nesting level of a package is mapped on the color saturation"]
+  confidence: medium
+  thinking: ["alternative:Using an all too simple visual metaphor", "why:A city, with its downtown area and its suburbs is a familiar notion", "limit:We currently do not display the class internals"]
 
-- id: openmetadata
-  origin: project
-  domain: 数据工程
-  issue: 发现数据资产，并追踪数据怎么变换、在哪被使用
-  issue_types: [trace-flow, impact, explore-discover]
+- id: git-history
+  origin: external
+  name: Git 提交历史
+  urls: [https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell]
+  domain: 版本控制
+  field: code
+  issue: 回看发生过什么，分支怎样分叉与合并
+  issue_types: [trace-flow, compare]
   structure: [dag]
-  modifiers: [directed, typed, temporal, versioned, derived]
-  source: [derived]
-  structure_note: "表、主题、仪表盘、管道等资产是节点，边带 SQL 与字段级血缘；资产元数据有版本"
-  focus: [precedence, edge_attr, time]
-  forms: [dag]
-  schools: [link, textlist]
-  views_note: "血缘图与影响分析表并列：同一批上下游资产，一个画成图，一个列成表"
-  abstraction: [fold-drill, filter-scope, separate-views]
-  abstraction_note: "节点可展开上下游与字段；多个探索层（字段层、服务层、领域层、数据产品层）；日历控件按时间限定边"
-  ev: ["views:two tabs at the top", "abstraction:Column Layer Observability Layer", "attributes:limit the graph to edges observed", "interactions:Click an edge"]
+  modifiers: [directed, temporal, versioned]
+  source: [recorded]
+  structure_note: "提交对象指向父提交（零个、一个或多个），分支只是指向某个提交的可移动指针"
+  focus: [precedence, time]
+  schools: [textlist, link]
+  views_note: "git log 按时间倒序列出；--graph 在日志旁画分支与合并的 ASCII 图"
+  abstraction: [aggregate]
+  abstraction_note: "oneline、stat、shortstat 等汇总选项把每个提交压缩成一行或几个数字"
+  fit_note: "数据结构是 DAG（合并提交有多个父亲），默认视图却是按时间排的一维列表，需要 --graph 才露出分叉结构"
+  ev: ["relations:pointers to the commit or commits that directly came before", "views:--graph Display an ASCII graph", "views:in reverse chronological order", "abstraction:a series of summarizing options"]
   confidence: high
-  thinking: ["why:easier to scan, search, and sort", "limit:If an edge falls outside the selected window"]
-  note: "“服务层、领域层、数据产品层”是在同一张血缘上换聚合口径——聚合方式本身是一个可选的维度。"
+
+# ───────── 运行观测：分布式系统与 AI 应用 ─────────
+- id: jaeger
+  origin: project
+  domain: 分布式系统运维
+  field: observability
+  issue: 找出一次请求流经了哪些服务，性能瓶颈和错误在哪
+  issue_types: [locate-anomaly, understand-whole]
+  structure: [hierarchy, graph]
+  modifiers: [temporal, derived, directed]
+  source: [recorded, derived]
+  structure_note: "一条 trace 是 span 的父子树，带起止时间；跨 trace 聚合出服务依赖图"
+  focus: [time, containment, connectivity]
+  forms: [trace-waterfall, dependency-graph]
+  schools: [timebar, link]
+  abstraction: [separate-views, aggregate]
+  abstraction_note: "单次请求用时间线（含缩略图）；全局关系用服务依赖图"
+  ev: ["questions:Find & fix performance bottlenecks", "relations:Analyze service dependencies", "views:uiTimelineHideMinimap"]
+  confidence: medium
+
+- id: grafana-tempo
+  origin: project
+  domain: 分布式系统运维
+  field: observability
+  issue: 理解分布式系统的结构，找出瓶颈和互联问题
+  issue_types: [understand-whole, locate-anomaly]
+  structure: [hierarchy, graph]
+  modifiers: [temporal, derived, weighted, directed]
+  source: [recorded, derived]
+  structure_note: "span 之间的父子关系，聚合成服务之间的关系图；边上是请求率、错误、耗时（RED）"
+  focus: [connectivity, edge_attr]
+  forms: [dependency-graph]
+  schools: [link, timebar]
+  abstraction: [aggregate]
+  abstraction_note: "把 span 按服务名、操作等维度聚合，span 级的树变成服务级的图"
+  ev: ["abstraction:Analyzes traces to map relationships", "questions:structure of a distributed system", "attributes:Calculates the total count and duration"]
+  confidence: high
 
 - id: skywalking
   origin: project
   domain: 分布式系统运维
+  field: observability
   issue: 从拓扑进入追踪、指标、日志，弄清运行系统的状况
   issue_types: [locate-anomaly, understand-whole]
   structure: [graph, hierarchy, spatial]
@@ -629,6 +299,7 @@
 - id: kiali
   origin: project
   domain: 服务网格运维
+  field: observability
   issue: 看服务网格里的流量，快速发现 mTLS、延迟、错误问题
   issue_types: [locate-anomaly, understand-whole]
   structure: [graph]
@@ -648,6 +319,7 @@
 - id: grafana
   origin: project
   domain: 基础设施运维
+  field: observability
   issue: 把查询结果画成面板，其中节点图用来看相互关联的元素
   issue_types: [explore-discover, understand-whole]
   structure: [table, graph]
@@ -662,27 +334,410 @@
   ev: ["views:Flame graph Gauge Geomap", "views:Node graphs are useful", "input_material:composed of a query and a visualization"]
   confidence: low
 
-# ───────── 知识、文档与认知工具 ─────────
-- id: affine
+- id: flame-graph
+  origin: external
+  name: 火焰图
+  urls: [https://www.brendangregg.com/flamegraphs.html]
+  domain: 性能剖析
+  field: observability
+  issue: 找出最频繁的代码路径
+  issue_types: [locate-anomaly]
+  structure: [hierarchy]
+  modifiers: [weighted, derived]
+  source: [derived]
+  structure_note: "采样得到的调用栈，合并相同的帧后形成层级（调用祖先关系），每帧的值是样本数"
+  focus: [containment, distribution]
+  dropped: "时间顺序（x 轴按字母排序，不是时间）"
+  forms: [flame-graph, icicle]
+  schools: [enclosure]
+  views_note: "x 轴=栈剖面总体（字母序），y 轴=栈深度，宽度=出现频率；颜色不代表含义"
+  abstraction: [aggregate]
+  abstraction_note: "按字母序重排以最大化相同帧的合并；只有最宽的帧才有位置写标签；点击水平放大"
+  fit_note: "有意丢掉时间顺序，换来“同一路径的样本合并后宽度可比”"
+  ev: ["encodings:The x-axis shows the stack profile population, sorted alphabetically", "encodings:The wider a frame is", "abstraction:maximizes frame merging", "questions:most frequent code-paths can be identified"]
+  confidence: high
+  thinking: ["alternative:The regular profilers/tracers had produced walls of text", "why:I ditched time on the x-axis", "limit:not the passage of time"]
+  note: "同一个官方页面还讲到“火焰图表”（flame chart）：把时间放在 x 轴——这是同一批栈数据换了重点部分后的另一种视图。"
+
+- id: treemap-diskspace
+  origin: external
+  name: Treemap（磁盘空间）
+  urls: [https://www.cs.umd.edu/hcil/treemap-history/]
+  domain: 文件系统与资源占用
+  field: observability
+  issue: 看谁占用了最多的磁盘空间，哪里有大块或重复的目录
+  issue_types: [locate-anomaly, understand-whole]
+  structure: [hierarchy]
+  modifiers: [weighted, nested]
+  source: [given]
+  structure_note: "目录树，叶子（文件）带大小，大小向上累加"
+  focus: [containment, distribution, node_attr]
+  forms: [treemap]
+  schools: [enclosure]
+  views_note: "递归的空间填充布局：面积=大小，嵌套边框=目录，颜色=另一属性"
+  abstraction: [aggregate, fold-drill, zoom]
+  abstraction_note: "聚合低层；缩放进入子树；悬停显示精确大小"
+  fit_note: "要看的是“叶子的量在层级中怎么分布”，用面积编码量、用包含表达层级，一屏看数万节点"
+  ev: ["input_material:compact visualization of directory tree structures", "encodings:Showing file size by area coding", "encodings:a more comprehensible design used a border to show the nesting", "abstraction:Aggregate the Lower Levels of the Tree"]
+  confidence: high
+  thinking: ["alternative:Tree structured node-link diagrams grew too large to be useful", "why:The capacity to see tens of thousands of nodes", "limit:encoding a linear variable such as file size as an area"]
+
+- id: agentprism
   origin: project
-  domain: 知识管理
-  issue: 同一批内容既要线性地写，又要空间化地摆
-  issue_types: [build-author, explain-teach]
-  structure: [hierarchy, spatial]
-  structure_was: [text, multilayer]
-  modifiers: [nested]
-  source: [authored]
-  structure_note: "内容单元是块（block）；同一批块既能排成文档页，也能摆在无边界画布上"
-  focus: [identity]
-  schools: [textlist]
+  domain: AI Agent 观测
+  field: observability
+  issue: 调试 Agent 运行，看时间和成本浪费在哪
+  issue_types: [locate-anomaly]
+  structure: [hierarchy, sequence]
+  modifiers: [temporal, weighted]
+  source: [recorded]
+  structure_note: "OpenTelemetry 的 span 被转成层级树（父子），每个 span 带耗时、成本、状态"
+  focus: [containment, time, node_attr]
+  forms: [trace-waterfall]
+  schools: [timebar]
+  views_note: "左边树视图，右边时间线视图，加详情面板"
+  abstraction: [fold-drill, aggregate]
+  abstraction_note: "渐进披露（progressive disclosure）；重复序列折叠成摘要；开发者“最想要的是层级”"
+  ev: ["views:Tree View on the left", "encodings:Color-coded status", "abstraction:Collapsed summary", "abstraction:wanted hierarchy above all", "questions:where time and money"]
+  confidence: high
+  thinking: ["alternative:The only problem? The answer is buried", "why:Tree View was the most effective", "why:human brains excel at visual pattern recognition"]
+
+- id: otel-genai-semconv
+  origin: project
+  domain: AI Agent 观测
+  field: observability
+  issue: 规定 AI 和 Agent 的运行记录该有哪些字段（后面所有可视化的数据来源）
+  issue_types: []
+  structure: [sequence]
+  modifiers: [typed]
+  source: [recorded]
+  structure_note: "语义约定是字段词表：操作名、工具、Agent 描述等；span 与事件的结构在所读页面上没写（页面已迁移）"
+  focus: [node_attr]
+  schools: []
+  abstraction: [none-stated]
+  ev: ["attributes:operation being performed", "entities:Name of the tool"]
+  confidence: low
+  note: "这是“数据先于图”的一例：可视化假定的结构（谁是父、谁是子、带什么属性）要在这一层先定下来。官方页面已迁到别处，这里没读到 span 的定义。"
+
+- id: openllmetry
+  origin: project
+  domain: AI Agent 观测
+  field: observability
+  issue: 以不改代码的方式采集 LLM 应用的运行追踪
+  issue_types: []
+  structure: [sequence]
+  modifiers: []
+  source: [recorded]
+  structure_note: "把应用里的工作流、任务、Agent、工具标注成可追踪的单元"
+  focus: [containment]
+  schools: []
+  abstraction: [none-stated]
+  ev: ["entities:Workflows, Tasks, Agents and Tools", "questions:monitoring and debugging"]
+  confidence: low
+
+- id: langfuse
+  origin: project
+  domain: AI 应用观测
+  field: observability
+  issue: 弄清应用内部发生了什么，并用评测持续改进
+  issue_types: [locate-anomaly, compare]
+  structure: [hierarchy, table]
+  modifiers: [temporal, weighted]
+  source: [recorded]
+  structure_note: "trace 记录每次请求的提示词、回复、token、延迟、成本；trace 可沉淀成数据集，用实验比较不同改动"
+  focus: [time, node_attr, identity]
+  schools: [timebar, channels]
+  views_note: "单条 trace 检视 + 自定义看板"
   abstraction: [separate-views]
-  abstraction_note: "页面与白板两种模式切换，“同样的块在两种模式下都能用”，不用复制内容"
-  ev: ["relations:the same blocks work in both modes", "abstraction:From Freeform Canvas to Structured Pages", "interactions:switch to the edgeless whiteboard"]
+  abstraction_note: "在线（生产 trace）与离线（数据集实验）两种评测场景"
+  ev: ["input_material:structured logs of every request", "attributes:cost, latency, volume, and quality"]
+  confidence: medium
+
+- id: arize-phoenix
+  origin: project
+  domain: AI 应用观测
+  field: observability
+  issue: 一步步看一次 AI 应用运行，调试行为并衡量输出质量
+  issue_types: [locate-anomaly, compare]
+  structure: [hierarchy, sequence]
+  modifiers: [temporal]
+  source: [recorded]
+  structure_note: "项目包含会话，会话包含 trace，trace 包含 span（模型调用、检索、工具调用）"
+  focus: [containment, time, node_attr]
+  schools: [timebar]
+  views_note: "详细的执行时间线 + 提示词游乐场"
+  abstraction: [aggregate, fold-drill]
+  abstraction_note: "按项目、会话分组；单次运行逐步看"
+  ev: ["abstraction:Group related traces", "questions:where time is spent", "interactions:Span Replay"]
+  confidence: medium
+
+- id: comet-opik
+  origin: project
+  domain: AI 应用观测
+  field: observability
+  issue: 弄清 Agent 为什么失败、哪个 span 引起延迟
+  issue_types: [locate-anomaly, compare]
+  structure: [hierarchy, graph]
+  modifiers: [temporal, weighted]
+  source: [recorded]
+  structure_note: "trace 的 span 树；另外把 Agent 的执行流程单独画成 Agent Graph"
+  focus: [containment, time, node_attr, identity]
+  forms: [trace-waterfall]
+  schools: [timebar, link]
+  views_note: "trace 视图 + Agent Graph"
+  abstraction: [fold-drill, separate-views]
+  ev: ["questions:Which span caused the latency spike", "views:visual representations of your agent workflows", "interactions:drill into individual spans"]
+  confidence: medium
+
+- id: agentops
+  origin: project
+  domain: AI 应用观测
+  field: observability
+  issue: 在会话的时间线上看 LLM 调用、工具调用和错误，并回放
+  issue_types: [locate-anomaly]
+  structure: [hierarchy, sequence]
+  modifiers: [temporal, weighted]
+  source: [recorded]
+  structure_note: "会话是根容器，其下是有父子关系的 span；带耗时、状态、token、成本"
+  focus: [time, containment, node_attr]
+  forms: [trace-waterfall]
+  schools: [timebar]
+  abstraction: [zoom, fold-drill]
+  abstraction_note: "全部会话的总览，到单个会话的下钻，到瀑布图，到单个事件详情，四级"
+  ev: ["views:Session Waterfall", "views:meta-analysis of all of your sessions", "interactions:Rewind and replay", "relations:Hierarchical structure of operations"]
   confidence: high
 
+- id: langwatch
+  origin: project
+  domain: AI 应用观测
+  field: observability
+  issue: 找出一次运行的瓶颈，并看全局的成本、延迟与话题分布
+  issue_types: [locate-anomaly, explore-discover]
+  structure: [hierarchy, graph]
+  structure_was: [hierarchy, graph, text]
+  modifiers: [temporal, weighted, derived]
+  source: [recorded, derived]
+  structure_note: "同一次运行有多种读法：瀑布图、火焰图、拓扑图、时序图；对话文本被自动聚成话题与子话题"
+  focus: [time, connectivity, cluster]
+  forms: [trace-waterfall, flame-graph, sequence-diagram]
+  schools: [timebar, link, channels]
+  views_note: "拓扑视图 + 自定义分析图表"
+  abstraction: [separate-views, summarize]
+  abstraction_note: "同一次运行用四种投影；跨对话按话题自动聚类"
+  ev: ["views:Waterfall, flame graph, topology", "abstraction:clustered by topic and subtopic", "questions:identify bottlenecks"]
+  confidence: high
+  thinking: ["why:whichever way you need to read a run"]
+  note: "四种视图读的是同一次运行，各自强调不同部分：瀑布看时间，火焰看栈内占比，拓扑看连接，时序看消息顺序。"
+
+# ───────── 工作流、自动化与 Agent 编排 ─────────
+- id: dify
+  origin: project
+  domain: AI Agent 开发
+  field: orchestration
+  issue: 搭建 AI 工作流，并逐节点测试、检查数据怎么流过去
+  issue_types: [build-author, locate-anomaly]
+  structure: [graph]
+  structure_was: [dag]
+  modifiers: [directed, typed]
+  source: [authored, recorded]
+  structure_note: "工作流是节点图；每个节点执行后留下一条记录（输入、输出、耗时、错误）"
+  focus: [precedence, node_attr]
+  forms: [flowchart]
+  schools: [link]
+  abstraction: [fold-drill]
+  abstraction_note: "可单独测试任一节点；整个应用可以被复用成另一个工作流里的 Agent 节点（嵌套）"
+  ev: ["attributes:Last run", "views:Variable Inspector", "interactions:test any node individually", "abstraction:reuse it as an agent node"]
+  confidence: high
+
+- id: langflow
+  origin: project
+  domain: AI Agent 开发
+  field: orchestration
+  issue: 用拖拽组件搭 AI 流程，并在 Playground 里实时测试
+  issue_types: [build-author]
+  structure: [graph]
+  structure_was: [dag]
+  modifiers: [directed, typed]
+  source: [authored]
+  structure_note: "组件与连线构成的流程；组件和整条流程都能被当作 Agent 的工具"
+  focus: [precedence]
+  forms: [flowchart]
+  schools: [link]
+  abstraction: [fold-drill]
+  abstraction_note: "组件与流程可作为更上层 Agent 的工具使用"
+  ev: ["views:visual editor", "interactions:Playground", "abstraction:components and flows as agent tools"]
+  confidence: medium
+
+- id: flowise
+  origin: project
+  domain: AI Agent 开发
+  field: orchestration
+  issue: 可视化搭建带条件、循环、人工介入的多 Agent 流程
+  issue_types: [build-author]
+  structure: [graph]
+  modifiers: [directed, cyclic, nested, typed]
+  source: [authored]
+  structure_note: "节点图里有条件节点、迭代节点；迭代节点内嵌一个子流程；共享的 Flow State 跨分支传数据；检查点可保存与恢复"
+  focus: [precedence, time]
+  forms: [flowchart]
+  schools: [link]
+  abstraction: [fold-drill]
+  abstraction_note: "迭代节点内嵌子流程（嵌套）"
+  ev: ["entities:Executes a defined", "relations:Shared state enables data exchange", "attributes:Each checkpoint is saved"]
+  confidence: medium
+  note: "官网已宣布停止运营（见 projects/L3.yaml）。"
+
+- id: n8n
+  origin: project
+  domain: 业务自动化
+  field: orchestration
+  issue: 工作流在生产中失败后，把当时的执行数据带回编辑器里调试
+  issue_types: [locate-anomaly, build-author]
+  structure: [graph, sequence]
+  structure_was: [dag, sequence]
+  modifiers: [directed, versioned, temporal]
+  source: [authored, recorded]
+  structure_note: "工作流是设计时的节点图；每次运行是一条执行记录（execution），执行数据可以复制回设计时的工作流"
+  focus: [identity, time]
+  schools: [link, textlist]
+  views_note: "编辑器画布 + 执行列表"
+  abstraction: [separate-views]
+  abstraction_note: "设计时（工作流）与运行时（执行列表）分开；单个工作流的执行与全部工作流的执行两个范围"
+  ev: ["entities:An execution is a single run", "relations:n8n copies the execution data"]
+  confidence: medium
+  note: "“Debug in editor”把运行时的一条记录接回设计时的图——两种结构靠对象身份连起来。"
+
+- id: node-red
+  origin: project
+  domain: 物联网与事件流
+  field: orchestration
+  issue: 把节点连起来搭事件驱动的流，并看消息在流里是什么样
+  issue_types: [build-author, locate-anomaly]
+  structure: [graph]
+  modifiers: [directed, typed]
+  source: [authored]
+  structure_note: "流（flow）由节点和连线组成，消息沿线传递；Debug 节点把流经的消息收集到侧栏"
+  focus: [connectivity, node_attr]
+  schools: [link]
+  views_note: "编辑器画布 + Debug 侧栏"
+  abstraction: [fold-drill]
+  abstraction_note: "分组（Groups）和子流程（Subflows）"
+  ev: ["views:The Debug sidebar displays", "abstraction:Groups Subflows", "entities:build, wire together"]
+  confidence: medium
+
+- id: bpmn-js
+  origin: project
+  domain: 业务流程
+  field: orchestration
+  issue: 在浏览器里查看、创建和编辑 BPMN 流程图
+  issue_types: [build-author, explain-teach]
+  structure: [graph]
+  modifiers: [directed, typed]
+  source: [authored]
+  structure_note: "BPMN 模型：形状与连线；底层有一份 BPMN 元模型，图只是它的一种呈现"
+  focus: [precedence, node_attr]
+  forms: [bpmn, flowchart]
+  schools: [notation, link]
+  views_note: "可以用覆盖层（overlay）在图元素上叠加信息；有令牌模拟扩展"
+  abstraction: [none-stated]
+  ev: ["views:Overlays", "abstraction:Diagram Interaction / Modeling", "interactions:token simulation"]
+  confidence: medium
+  note: "官方页面把“图交互”（diagram-js）、“BPMN 元模型”（bpmn-moddle）和“组装”（bpmn-js）分成三层，说明图形层和语义层是分开设计的。"
+
+- id: agentscope
+  origin: project
+  domain: AI Agent 开发
+  field: orchestration
+  issue: 观察一个由领导者协调多个工作者的 Agent 团队怎么运作
+  issue_types: [understand-whole, locate-anomaly]
+  structure: [hierarchy, sequence]
+  modifiers: [temporal]
+  source: [recorded]
+  structure_note: "团队由领导者 Agent 和工作者 Agent 组成；每个工作者有自己的事件流"
+  focus: [containment, time, connectivity]
+  schools: [textlist]
+  views_note: "Web 界面渲染团队成员和每个工作者的流"
+  abstraction: [separate-views]
+  ev: ["entities:A leader agent assembling a team", "views:renders team membership", "relations:exchange messages"]
+  confidence: medium
+
+- id: langgraph
+  origin: project
+  domain: AI Agent 开发
+  field: orchestration
+  issue: 调试 Agent 的状态：回到某个检查点重放，或分叉出另一条路径
+  issue_types: [locate-anomaly, compare]
+  structure: [graph, sequence]
+  modifiers: [directed, versioned, temporal]
+  source: [authored, recorded]
+  structure_note: "Agent 是带状态的节点图；每一步产生一个检查点，检查点形成历史，可从任一检查点分叉"
+  focus: [precedence, time]
+  schools: [link]
+  views_note: "Studio 的图模式和聊天模式"
+  abstraction: [separate-views]
+  ev: ["relations:Branch from a prior checkpoint", "views:Graph mode", "interactions:Debug agent state via time travel"]
+  confidence: medium
+  note: "“分叉”让线性的运行历史长成树——对比两条路径靠的是共享前缀。"
+
+- id: agentensemble
+  origin: project
+  domain: AI Agent 开发
+  field: orchestration
+  issue: 编排多 Agent 任务，并在关键点让人审核、修改或叫停
+  issue_types: [build-author, understand-whole]
+  structure: [dag, sequence]
+  modifiers: [directed, temporal]
+  source: [authored, recorded]
+  structure_note: "任务依赖 DAG 加执行 Trace；审核门插在执行过程里"
+  focus: [precedence, time]
+  forms: [dag, gantt]
+  schools: [link, timebar]
+  abstraction: [separate-views]
+  ev: ["views:Live Execution Dashboard", "interactions:pause pipeline execution"]
+  confidence: low
+  note: "可视化部分与 agentensemble-viz 相同，这里只记审核门这一点。"
+
+- id: agentensemble-viz
+  origin: project
+  domain: AI Agent 开发
+  field: orchestration
+  issue: 看清一次多 Agent 任务：计划里哪些任务并行、哪些串行、关键路径是哪条，实际每个任务何时运行、调了哪些工具
+  issue_types: [understand-whole, locate-anomaly, compare]
+  structure: [dag, sequence]
+  modifiers: [directed, temporal, typed]
+  source: [recorded]
+  structure_note: "同一批任务有两份数据：执行前的任务依赖 DAG（含拓扑层级、关键路径）和执行后的 Trace（起止时间、LLM 与工具调用）"
+  focus: [precedence, time, identity]
+  dropped: "Flow 视图不画时间，Timeline 视图不画依赖箭头"
+  forms: [dag, gantt]
+  schools: [link, timebar]
+  abstraction: [separate-views, fold-drill, zoom]
+  abstraction_note: "两张视图各回答结构的一个侧面；点任务进入 LLM 调用、工具调用；时间轴缩放"
+  ev: ["questions:which tasks run in parallel", "encodings:gray = normal, red = critical path", "encodings:L0, L1", "interactions:Zoom slider", "abstraction:drill-down into LLM calls"]
+  confidence: high
+
+- id: autogen
+  origin: project
+  domain: AI Agent 开发
+  field: orchestration
+  issue: 快速原型化 Agent 团队并观察它们的消息流
+  issue_types: [build-author, explain-teach]
+  structure: [graph, sequence]
+  modifiers: [directed, typed, temporal]
+  source: [authored, recorded]
+  structure_note: "团队、Agent、工具、模型和终止条件是可配置的组件；运行时的消息流画成控制转移图"
+  focus: [precedence, time]
+  schools: [link]
+  views_note: "团队构建器（JSON 或拖拽）、Playground、控制转移图"
+  abstraction: [separate-views]
+  ev: ["relations:Visual representation of message flow", "views:A visual interface for creating agent teams", "questions:not meant to be a production-ready"]
+  confidence: medium
+
+# ───────── 通用绘图与系统建模 ─────────
 - id: drawio
   origin: project
   domain: 通用绘图
+  field: modeling
   issue: 快速画出任意类型的图
   issue_types: [build-author, explain-teach]
   structure: [graph]
@@ -701,6 +756,7 @@
 - id: kumu
   origin: project
   domain: 系统与关系分析
+  field: modeling
   issue: 把复杂的关系整理成地图，找出关键人物与关系
   issue_types: [understand-whole, explore-discover]
   structure: [graph]
@@ -716,137 +772,127 @@
   confidence: high
   thinking: ["why:Cut through the clutter using filter, focus and showcase", "limit:don't go too crazy"]
 
-- id: infranodus
+- id: insightmaker
   origin: project
-  domain: 文本分析与知识发现
-  issue: 在一大段文字里找出主要话题群和它们之间的结构空白
-  issue_types: [explore-discover, understand-whole]
+  domain: 系统建模
+  field: modeling
+  issue: 搭建存量流量模型并改变参数，看系统的行为
+  issue_types: [simulate, understand-whole]
+  structure: [causal, flow]
+  modifiers: [directed, cyclic, weighted]
+  source: [authored]
+  structure_note: "存量、流量、变量、链接构成的系统动力学模型；也可以画因果回路图和基于主体的模型"
+  focus: [cycle, node_attr, edge_attr]
+  forms: [stock-flow, causal-loop]
+  schools: [notation, link]
+  abstraction: [separate-views]
+  ev: ["entities:Stocks Flows Variables Links", "attributes:Run the model with various values", "relations:rich pictures and causal loop diagrams"]
+  confidence: medium
+
+- id: dsm
+  origin: external
+  name: 设计结构矩阵 DSM
+  urls: [https://dsmweb.org/reading-a-dsm/]
+  domain: 工程系统与产品架构
+  field: modeling
+  issue: 看清一个系统里元素之间的依赖，决定怎样分组与排序（团队、模块、先后）
+  issue_types: [understand-whole, impact]
   structure: [graph]
-  structure_was: [text, graph]
-  modifiers: [derived, weighted]
-  source: [derived]
-  structure_note: "文本被转成网络：词（概念）是节点，共现是边，相邻越近边越强；再做社区检测得到话题群"
-  focus: [cluster, connectivity, node_attr]
-  forms: [knowledge-graph]
+  modifiers: [directed, typed, bipartite]
+  source: [authored]
+  structure_note: "同一类元素的方阵：行是输出，列是输入，非对角格里的标记是依赖；也可以是两个域之间的矩阵"
+  focus: [precedence, cycle, cluster]
+  forms: [dsm, adjacency-matrix]
+  schools: [rulepos]
+  views_note: "矩阵；排序（sequencing）使反馈标记集中，聚类（clustering）找模块，分带（banding）标出可并行的活动"
+  abstraction: [aggregate, separate-views]
+  abstraction_note: "聚类把大部分交互吸收到簇内；“域”是系统的一个特定视角，一张 DSM 只含一个域"
+  fit_note: "矩阵适合稠密依赖，并且重排行列就能暴露环（反馈）和模块——这是节点连线图做不到的"
+  ev: ["encodings:Looking down any column of the matrix shows all of the inputs", "interactions:Sequencing is the reordering of the DSM rows and columns", "interactions:finding subsets of DSM elements", "abstraction:A DSM always only contains elements from one domain"]
+  confidence: high
+  thinking: ["why:The matrix provides a highly compact", "why:It is important that a DSM contains only one relationship type", "limit:A DSM always only contains elements from one domain"]
+
+# ───────── 数据、元数据与分析工具 ─────────
+- id: marquez
+  origin: project
+  domain: 数据工程
+  field: data
+  issue: 数据模式改变时，审计并排查下游受影响的作业
+  issue_types: [impact, trace-flow, locate-anomaly]
+  structure: [dag]
+  modifiers: [directed, bipartite, versioned, typed]
+  source: [recorded]
+  structure_note: "作业与数据集两类对象：作业消费并产出数据集，构成有向的血缘；数据集有 schema 版本，作业有版本和运行"
+  focus: [precedence, time]
+  forms: [dag]
   schools: [link]
-  views_note: "话题视图、概念视图；ForceAtlas 布局"
-  abstraction: [aggregate, summarize]
-  abstraction_note: "社区检测把节点聚成话题群并着色；节点大小是介数中心性"
-  ev: ["entities:the concepts (or entities) are the nodes", "encodings:Nodes are sized by betweenness centrality", "encodings:the topical clusters (colors)", "questions:gaps between them"]
-  confidence: high
-  thinking: ["alternative:The result is not a word cloud", "why:adjacent words get the strongest link", "why:Nodes are sized by betweenness centrality"]
-  note: "重点不只是“连了什么”，还有“没连什么”：结构空白（structural gaps）是主要产出。"
-
-- id: cncf-landscape
-  origin: project
-  domain: 技术生态
-  issue: 在云原生生态里找到某类项目，并查看具体项目的信息
-  issue_types: [explore-discover, understand-whole]
-  structure: [set]
-  modifiers: [typed]
-  source: [given]
-  structure_note: "项目归入分类；分类是几层的目录，项目带成熟度等属性；没有项目之间的关系"
-  focus: [membership, node_attr]
-  schools: [enclosure]
-  views_note: "按类别分块的景观图，带筛选"
-  abstraction: [filter-scope]
-  abstraction_note: "筛选；点项目看详情；状态可以通过网址分享"
-  ev: ["abstraction:categorical overview", "interactions:filter, obtain detailed information"]
-  confidence: medium
-  note: "景观图表达的是“哪类里有谁”，不表达项目之间的依赖——这是它的重点，也是它的盲区。"
-
-- id: thoughtworks-tech-radar
-  origin: project
-  domain: 技术生态
-  issue: 判断每项技术或做法现在是否推荐采用
-  issue_types: [decide-status]
-  structure: [set]
-  modifiers: [typed, temporal]
-  source: [authored]
-  structure_note: "每条技术（blip）有象限（种类）和环（推荐程度）两个类别属性，还标记本期新增或移动"
-  focus: [node_attr, time]
-  schools: [rulepos]
-  dropped: "技术之间的关系完全不表达"
-  views_note: "雷达：象限分种类，环由内到外表示采用建议"
-  abstraction: [filter-scope]
-  abstraction_note: "按象限查看"
-  ev: ["encodings:The rings indicate our recommendation", "encodings:The quadrants represent different kinds", "attributes:Blips may be new to the latest Radar volume"]
-  confidence: high
-
-- id: zalando-tech-radar
-  origin: project
-  domain: 技术生态
-  issue: 帮工程团队为新项目选技术，并跟踪技术决策的演变
-  issue_types: [decide-status]
-  structure: [set]
-  modifiers: [typed]
-  source: [authored]
-  structure_note: "一张技术清单，每项带“环”（ring assignment）这一评估结果"
-  focus: [node_attr]
-  schools: [rulepos]
-  dropped: "技术之间的关系不表达"
-  views_note: "雷达"
-  abstraction: [none-stated]
-  ev: ["input_material:a list of technologies, complemented by an assessment result", "questions:pick the best technologies for new projects"]
+  abstraction: [fold-drill]
+  abstraction_note: "流水线由多个作业组成（一层包含）"
+  ev: ["relations:dependencies between jobs and the datasets", "questions:impacted jobs downstream", "attributes:compare a previous schema version"]
   confidence: medium
 
-- id: build-your-own-radar
+- id: datahub
   origin: project
-  domain: 技术生态
-  issue: 从一张表生成自己的技术雷达
-  issue_types: [decide-status, build-author]
-  structure: [table, set]
-  modifiers: [typed]
-  source: [given]
-  structure_note: "输入是一张表（name、ring、quadrant、isNew、description），每行成为雷达上的一个点"
-  focus: [node_attr]
-  schools: [rulepos]
-  views_note: "雷达；表到图的映射由列名固定：ring 和 quadrant 决定位置"
-  abstraction: [none-stated]
-  ev: ["input_material:Google Sheets or CSV/JSON", "attributes:name, ring, quadrant, isNew, description"]
-  confidence: high
-  note: "表的列名承担了“角色”：ring 决定半径，quadrant 决定扇区——视图对数据的要求就是列要有这些角色。"
-
-- id: oss-insight
-  origin: project
-  domain: 开源生态
-  issue: 了解 GitHub 上现在在发生什么，以及技术领域的排名与趋势
-  issue_types: [explore-discover]
-  structure: [table, sequence]
-  modifiers: [temporal, weighted, derived]
-  source: [recorded, derived]
-  structure_note: "GitHub 事件流，聚合成仓库、开发者、组织的指标（星标、提交、PR 等）；仓库按技术领域分入集合"
-  focus: [distribution, time, membership]
-  schools: [channels]
-  views_note: "数据浏览器、集合、趋势榜"
-  abstraction: [aggregate]
-  abstraction_note: "把上百亿事件聚合成仓库和集合层面的指标"
-  ev: ["input_material:tracks over 10 billion GitHub events", "abstraction:grouped by technology domain", "questions:rankings and trends in technical fields"]
-  thinking: ["limit:Rankings that depend on those counts would be misleading"]
-  note: "官网首页（2026-10-13 打开）写明：基于 Star 的趋势榜已暂停——GitHub 公共事件流的分页方式变了，OSSInsight 的采集只读了第一段，2025 年年中以来的 Star、PR、Issue 事件被严重漏采；2025 年 5 月以前的历史、直接从 GitHub 同步的仓库总数和提交活动不受影响。这是“实时趋势”依赖原始数据完整性的一个实例。"
-  confidence: medium
-
-- id: oss-compass
-  origin: project
-  domain: 开源生态
-  issue: 评估开源社区的健康状况
-  issue_types: [decide-status, understand-whole]
-  structure: [table]
-  modifiers: [weighted, temporal, derived]
+  domain: 数据工程
+  field: data
+  issue: 排查数据问题的上游来源，改动前评估对下游的影响
+  issue_types: [impact, trace-flow, locate-anomaly]
+  structure: [dag]
+  modifiers: [directed, typed, temporal, versioned, derived]
   source: [derived]
-  structure_note: "多维指标模型（社区活力、协作效率、开放治理等）打分；对象是社区、开发者、技术领域"
-  focus: [node_attr]
-  schools: [channels]
-  views_note: "周活动看板"
-  abstraction: [aggregate]
-  abstraction_note: "指标先合成维度，再合成评估体系（三维评估）"
-  ev: ["questions:three-dimensional evaluation system", "attributes:Community Vitality"]
-  confidence: medium
+  structure_note: "元数据图：实体（数据集等）通过带名字的关系连起来；血缘是上下游的边，表级与字段级两个粒度"
+  focus: [precedence, edge_attr, time]
+  forms: [dag]
+  schools: [link]
+  abstraction: [fold-drill, filter-scope, aggregate]
+  abstraction_note: "表级血缘里展开字段；聚焦单个字段；数据管道节点是装着任务的盒子；时间选择器过滤边"
+  ev: ["questions:Root cause analysis", "questions:Impact analysis to prevent", "abstraction:Column lineage can be visualized while viewing table-level", "attributes:The time picker can be used to filter out edges"]
+  confidence: high
+  thinking: ["alternative:the table-level view is getting too busy", "limit:you can only expand one task's upstreams"]
 
-# ───────── 表、嵌入与系统建模 ─────────
+- id: openmetadata
+  origin: project
+  domain: 数据工程
+  field: data
+  issue: 发现数据资产，并追踪数据怎么变换、在哪被使用
+  issue_types: [trace-flow, impact, explore-discover]
+  structure: [dag]
+  modifiers: [directed, typed, temporal, versioned, derived]
+  source: [derived]
+  structure_note: "表、主题、仪表盘、管道等资产是节点，边带 SQL 与字段级血缘；资产元数据有版本"
+  focus: [precedence, edge_attr, time]
+  forms: [dag]
+  schools: [link, textlist]
+  views_note: "血缘图与影响分析表并列：同一批上下游资产，一个画成图，一个列成表"
+  abstraction: [fold-drill, filter-scope, separate-views]
+  abstraction_note: "节点可展开上下游与字段；多个探索层（字段层、服务层、领域层、数据产品层）；日历控件按时间限定边"
+  ev: ["views:two tabs at the top", "abstraction:Column Layer Observability Layer", "attributes:limit the graph to edges observed", "interactions:Click an edge"]
+  confidence: high
+  thinking: ["why:easier to scan, search, and sort", "limit:If an edge falls outside the selected window"]
+  note: "“服务层、领域层、数据产品层”是在同一张血缘上换聚合口径——聚合方式本身是一个可选的维度。"
+
+- id: neodash
+  origin: project
+  domain: 图数据库应用
+  field: data
+  issue: 用图数据库里的查询结果搭交互看板
+  issue_types: [build-author, explore-discover]
+  structure: [graph]
+  modifiers: [typed]
+  source: [given]
+  structure_note: "底层是 Neo4j 属性图；用 Cypher 查询取出一部分，再按需要投影成表、图、柱状图、折线图、地图"
+  focus: [node_attr]
+  schools: [channels, link]
+  views_note: "同一份查询结果可选表、图、柱状图、折线图、地图"
+  abstraction: [separate-views]
+  ev: ["views:tables, graphs, bar charts", "input_material:Create visualizations directly from Cypher"]
+  confidence: low
+  note: "官方页面没写数据对象和关系是什么，重点部分由用户的查询决定。这是“结构存在数据库里，视图由查询临时投影”的一例。"
+
 - id: pygraphistry
   origin: project
   domain: 数据分析
+  field: data
   issue: 把任意表当作图来做可视分析（例如攻击者 IP 到受害者 IP）
   issue_types: [explore-discover]
   structure: [table, graph]
@@ -865,6 +911,7 @@
 - id: embedding-projector
   origin: project
   domain: 机器学习
+  field: data
   issue: 检查相近的点是否在语义上真的相关，并在高维空间里找有意义的方向
   issue_types: [explore-discover, locate-anomaly]
   structure: [spatial]
@@ -881,64 +928,77 @@
   confidence: high
   thinking: ["alternative:these static views are generally inadequate", "why:customized for the kinds of tasks", "limit:visually compare two embeddings"]
 
-- id: argdown
-  origin: project
-  domain: 论证与讨论
-  issue: 把一场辩论或论证重建成地图
-  issue_types: [reason-argue]
-  structure: [propositional]
-  structure_was: [graph]
-  modifiers: [typed, directed]
-  source: [authored]
-  structure_note: "陈述与论证是节点，支持、攻击等是带类型的边；用文本写源，地图由文本生成"
-  focus: [connectivity, edge_attr]
-  dropped: "地图默认隐藏很多逻辑细节，要点“Source”看原文"
-  forms: [argument-map]
-  schools: [notation, link]
-  abstraction: [separate-views, summarize]
-  abstraction_note: "同一份文本可以出简略的地图，也可以每个前提和推理步骤都画出来；样式可调"
-  ev: ["abstraction:This map hides a lot of the logical details", "abstraction:every premise and inferential step", "views:Your code is transformed into an argument map", "entities:statement and argument nodes"]
-  confidence: high
-  thinking: ["why:no user interface gets in your way", "limit:This map hides a lot of the logical details", "alternative:it's questionable whether all pros and cons"]
-
-- id: insightmaker
-  origin: project
-  domain: 系统建模
-  issue: 搭建存量流量模型并改变参数，看系统的行为
-  issue_types: [simulate, understand-whole]
-  structure: [causal, flow]
-  modifiers: [directed, cyclic, weighted]
-  source: [authored]
-  structure_note: "存量、流量、变量、链接构成的系统动力学模型；也可以画因果回路图和基于主体的模型"
-  focus: [cycle, node_attr, edge_attr]
-  forms: [stock-flow, causal-loop]
-  schools: [notation, link]
-  abstraction: [separate-views]
-  ev: ["entities:Stocks Flows Variables Links", "attributes:Run the model with various values", "relations:rich pictures and causal loop diagrams"]
+- id: gephi
+  origin: external
+  name: Gephi
+  urls: [https://gephi.org/desktop/]
+  domain: 通用网络分析
+  field: data
+  issue: 探索网络、检验假设、发现复杂关系数据里的模式
+  issue_types: [explore-discover]
+  structure: [graph]
+  modifiers: [weighted, typed, directed]
+  source: [given]
+  structure_note: "节点表和边表；可以计算度量（介数、PageRank 等）和社区"
+  focus: [connectivity, cluster, node_attr]
+  forms: [force-directed, node-link]
+  schools: [link]
+  views_note: "图窗口、数据表、预览导出"
+  abstraction: [filter-scope, aggregate]
+  abstraction_note: "按拓扑或属性实时过滤；按排名或分区数据设置颜色和大小；社区检测"
+  fit_note: "把“计算出的度量”映射到颜色和大小——图形上的重点由分析结果决定"
+  ev: ["questions:explore networks, test hypotheses", "encodings:Use ranking or partition data", "interactions:Use interactive user interface to filter", "relations:the filters related to the relational structure"]
   confidence: medium
 
-# ───────── 结构提取与知识建模（第四板块） ─────────
-- id: tree-sitter
-  origin: project
-  domain: 软件工程
-  issue: 把源码解析成语法树，并随编辑增量更新
-  issue_types: [build-author]
-  structure: [hierarchy]
-  modifiers: [derived, nested]
-  source: [derived]
-  structure_note: "源码按语法规则解析为具体语法树；节点分命名与匿名两种，类似抽象语法树但保留所有记号"
-  focus: [containment]
-  schools: [textlist]
-  dropped: "语法事实不等于架构语义；注释和语义关系不在树里"
-  views_note: "游乐场：树与代码互相定位，查询面板可抓取模式"
-  abstraction: [filter-scope]
-  abstraction_note: "区分命名节点与匿名节点；可显示或隐藏匿名节点"
-  ev: ["input_material:build a concrete syntax tree", "abstraction:a tree in which the less important details", "interactions:click any node in the tree", "abstraction:named and anonymous nodes"]
+- id: hive-plot
+  origin: external
+  name: Hive Plot
+  urls: [https://mk.bcgsc.ca/linnet/]
+  domain: 网络分析（生物与社会网络）
+  field: data
+  issue: 在大型网络里看出趋势和异常，并能比较相关的网络
+  issue_types: [explore-discover, compare]
+  structure: [graph]
+  modifiers: [weighted]
+  source: [given]
+  structure_note: "一般网络；节点被分配到辐射状的线性轴上，轴和轴上的位置只由网络结构（如汇点、源点、度数）决定"
+  focus: [connectivity, node_attr]
+  forms: [node-link]
+  schools: [rulepos]
+  views_note: "线性轴 + 曲线边；多个蜂巢图并排成面板"
+  abstraction: [none]
+  fit_note: "把位置从“物理模拟的结果”改成“网络性质的函数”，因此布局可复现、可比较"
+  ev: ["encodings:Node-to-axis assignment and node-on-axis position are determined solely by network structure", "questions:exposing both trends and outlier patterns", "views:Multiple hive plots are presented together"]
   confidence: high
+  thinking: ["alternative:In a hairball, data is subordinate to layout", "why:Hive plots make it possible to assess network structure", "limit:The axis and node mapping is arbitrary"]
+
+# ───────── 知识抽取、知识图谱与本体 ─────────
+- id: infranodus
+  origin: project
+  domain: 文本分析与知识发现
+  field: knowledge
+  issue: 在一大段文字里找出主要话题群和它们之间的结构空白
+  issue_types: [explore-discover, understand-whole]
+  structure: [graph]
+  structure_was: [text, graph]
+  modifiers: [derived, weighted]
+  source: [derived]
+  structure_note: "文本被转成网络：词（概念）是节点，共现是边，相邻越近边越强；再做社区检测得到话题群"
+  focus: [cluster, connectivity, node_attr]
+  forms: [knowledge-graph]
+  schools: [link]
+  views_note: "话题视图、概念视图；ForceAtlas 布局"
+  abstraction: [aggregate, summarize]
+  abstraction_note: "社区检测把节点聚成话题群并着色；节点大小是介数中心性"
+  ev: ["entities:the concepts (or entities) are the nodes", "encodings:Nodes are sized by betweenness centrality", "encodings:the topical clusters (colors)", "questions:gaps between them"]
+  confidence: high
+  thinking: ["alternative:The result is not a word cloud", "why:adjacent words get the strongest link", "why:Nodes are sized by betweenness centrality"]
+  note: "重点不只是“连了什么”，还有“没连什么”：结构空白（structural gaps）是主要产出。"
 
 - id: docling
   origin: project
   domain: 文档处理
+  field: knowledge
   issue: 把 PDF 等文档转成保留版面和阅读顺序的统一结构
   issue_types: [build-author]
   structure: [hierarchy]
@@ -957,6 +1017,7 @@
 - id: docling-graph
   origin: project
   domain: 文档处理
+  field: knowledge
   issue: 把文档变成带显式语义关系的知识图，用于需要精确实体连接的场合
   issue_types: [build-author]
   structure: [graph]
@@ -974,6 +1035,7 @@
 - id: graphrag
   origin: project
   domain: 文本检索与知识建模
+  field: knowledge
   issue: 回答关于整个语料库的整体性问题，以及关于具体实体的局部问题
   issue_types: [understand-whole, retrieve]
   structure: [graph, hierarchy]
@@ -994,6 +1056,7 @@
 - id: lightrag
   origin: project
   domain: 文本检索与知识建模
+  field: knowledge
   issue: 用图结构配合向量做检索，并用网页看板查看知识
   issue_types: [retrieve]
   structure: [graph]
@@ -1011,6 +1074,7 @@
 - id: graphiti
   origin: project
   domain: Agent 记忆
+  field: knowledge
   issue: 让 Agent 长期记得事实，并知道哪些事实现在不再成立
   issue_types: [retrieve]
   structure: [graph, sequence]
@@ -1026,34 +1090,701 @@
   confidence: high
   note: "没有可视化的案例：说明在画图之前，时间有效期和来源要先进数据模型，否则图只能显示“现在”。"
 
-# ───────── 目录外的案例：其他领域 ─────────
-- id: tube-map
+- id: wikidata-query-views
   origin: external
-  name: 伦敦地铁图（Beck）
-  urls: [https://www.londonmuseum.org.uk/collections/london-stories/harry-beck-revolutionised-tube-map/]
-  domain: 交通
-  issue: 乘客要知道在哪条线、哪站换乘、几站到达，不需要知道地面上的真实距离
-  issue_types: [understand-whole, explain-teach]
+  name: Wikidata Query Service 结果视图
+  urls: [https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/Wikidata_Query_Help/Result_Views]
+  domain: 开放知识图谱
+  field: knowledge
+  issue: 把一次 SPARQL 查询的结果换成不同的图来看
+  issue_types: [explore-discover]
+  structure: [table]
+  modifiers: []
+  source: [given]
+  structure_note: "查询结果是一张表；每个视图要求特定的列扮演特定角色（第一列 X 轴、第二列 Y 轴、气泡大小、颜色、节点 ID、时间点等）"
+  focus: [node_attr, time, position]
+  schools: [channels]
+  views_note: "表、图片网格、地图、图、气泡图、树图、树、时间线、维度（平行坐标）等，同一份结果可切换"
+  abstraction: [separate-views]
+  abstraction_note: "树图的第一列是第一层级；树视图按行嵌套"
+  fit_note: "视图与数据的对接靠“列的角色”：同一张结果表是否适合某个视图，取决于列能否填进它的角色"
+  ev: ["views:Shows the result data as a table", "views:Shows the result data as map", "encodings:First will be X-axis, second Y-axis", "encodings:the size and the color of the bubble can configured", "abstraction:1st label in a row will be 1st level in tree map"]
+  confidence: high
+  note: "这是研究“数据结构的哪一部分对应视图的哪个通道”最直接的一例：每种视图的页面都列出了它要的列角色。"
+
+- id: vowl
+  origin: external
+  name: VOWL / WebVOWL 本体可视化
+  urls: [https://semantic-web-journal.net/content/visualizing-ontologies-vowl-0]
+  domain: 本体与语义网
+  field: knowledge
+  issue: 让不懂本体语言的人也能看懂本体
+  issue_types: [explain-teach, understand-whole]
   structure: [graph]
-  modifiers: [typed]
+  modifiers: [typed, directed]
+  source: [given]
+  structure_note: "本体的模式部分：类、属性、数据类型；规范为 OWL 的多数元素规定了图形画法，再用力导向布局排开"
+  focus: [connectivity, edge_attr]
+  forms: [force-directed, knowledge-graph]
+  schools: [notation, link]
+  abstraction: [none-stated]
+  fit_note: "用统一的形状颜色区分元素种类，让“类型”成为一眼可读的重点；布局本身不携带语义"
+  ev: ["input_material:well-specified visual language", "entities:graphical depictions for most elements", "views:force-directed graph layout"]
+  confidence: low
+  thinking: ["alternative:A major drawback of these attempts is that they require knowledge about UML", "why:visual impression of the size and topology", "limit:graph visualizations are only viable up to a certain size"]
+  note: "官方站点读不到，只依据期刊页面摘要。"
+
+- id: universal-dependencies
+  origin: external
+  name: Universal Dependencies 依存树
+  urls: [https://universaldependencies.org/introduction.html]
+  domain: 语言学
+  field: knowledge
+  issue: 用同一套标注描述多种语言的句子结构，方便比较和训练解析器
+  issue_types: [explain-teach, compare]
+  structure: [hierarchy]
+  structure_was: [hierarchy, text]
+  modifiers: [typed, directed]
   source: [authored]
-  structure_note: "线路与车站：车站是节点，线路是带颜色的路径，换乘站属于多条线"
-  focus: [connectivity, membership]
-  dropped: "真实地理形状和距离（线路被画成变形的直线，中心区放大）"
-  forms: [node-link]
-  schools: [schematic, link]
-  views_note: "示意图（diagram）：正交与 45 度斜线、等距站点、线路着色"
+  structure_note: "句子里每个词有一个中心词（HEAD）和一个依存关系类型（DEPREL）；另有增强依存图以容纳多中心词"
+  focus: [edge_attr, containment]
+  schools: [textlist, link]
+  views_note: "纯文本格式（CoNLL-U）；另有简单的文件查看器"
   abstraction: [none]
-  abstraction_note: "不是折叠，而是几何上的取舍：中心区放大以便读站名，外围压缩"
-  fit_note: "视图完全服务于“连通与换乘”；代价是不能用它估距离"
-  ev: ["input_material:geographically distorted straight lines", "relations:the connections and interchanges", "abstraction:Central London was distorted and made bigger", "questions:reduced the network"]
+  abstraction_note: "通用类别清单，加上语言专属扩展"
+  fit_note: "数据格式几乎就是结构的定义：每行一个词，两列表达“指向谁、什么关系”"
+  ev: ["relations:HEAD: Head of the current word", "relations:DEPREL: Universal dependency relation", "relations:DEPS: Enhanced dependency graph", "abstraction:propose a universal inventory of categories"]
+  confidence: medium
+
+# ───────── 认知、写作与教育 ─────────
+- id: affine
+  origin: project
+  domain: 知识管理
+  field: cognition
+  issue: 同一批内容既要线性地写，又要空间化地摆
+  issue_types: [build-author, explain-teach]
+  structure: [hierarchy, spatial]
+  structure_was: [text, multilayer]
+  modifiers: [nested]
+  source: [authored]
+  structure_note: "内容单元是块（block）；同一批块既能排成文档页，也能摆在无边界画布上"
+  focus: [identity]
+  schools: [textlist]
+  abstraction: [separate-views]
+  abstraction_note: "页面与白板两种模式切换，“同样的块在两种模式下都能用”，不用复制内容"
+  ev: ["relations:the same blocks work in both modes", "abstraction:From Freeform Canvas to Structured Pages", "interactions:switch to the edgeless whiteboard"]
   confidence: high
 
+- id: zettelkasten
+  origin: external
+  name: Luhmann 的卡片盒
+  urls: [https://www.uni-bielefeld.de/fakultaeten/soziologie/forschung/luhmann-archiv/pdf/jschmidt_zettelkasten-als-uberraschungsgenerator.pdf]
+  domain: 知识管理与写作
+  field: cognition
+  issue: 让积累的笔记自己产生不显而易见的联想（“卡片盒为什么能发展出自己的创造力”）
+  issue_types: [explore-discover, build-author]
+  structure: [graph, hierarchy]
+  modifiers: [typed, versioned]
+  source: [authored]
+  structure_note: "每张卡片是一个单元；编号给出类似提纲或书籍目录的层级位置；卡片之间有引用，一张卡最多可列二十五个引用；另有关键词索引，同一个主题可以从不同入口进入（多重存放）"
+  focus: [connectivity, identity]
+  schools: [textlist]
+  dropped: "没有全局视图：只能沿引用和索引一步步走"
+  views_note: "实体卡片，没有画出来的图；但数据结构是图加层级加索引"
+  abstraction: [none-stated]
+  fit_note: "层级编号决定卡片放在哪里，引用建立横向联系，索引提供多个入口：同一个对象有多条到达路径。这里的“多条路径”是整理者对原文的概括"
+  ev: ["relations:Die Verweise können sich auf thematisch und räumlich nahestehende Zettel beziehen", "entities:Auf einem solchen Zettel können bis zu 25 Verweise", "abstraction:Multiple-Storage-Prinzip", "questions:Wie aber ist es möglich", "views:eine Ordnungsstruktur im Sinne einer Systematik"]
+  confidence: medium
+  note: "来源是 Bielefeld 的 Luhmann 档案网站上一篇分析卡片盒的文章（德语，二手分析），不是 Luhmann 本人的文字；档案网站的教程页读不到。"
+
+- id: markmap
+  origin: external
+  name: Markmap
+  urls: [https://markmap.js.org/docs/markmap]
+  domain: 知识管理与写作
+  field: cognition
+  issue: 把一篇 Markdown 文档的层级直接看成一张可折叠的思维导图
+  issue_types: [understand-whole, explain-teach]
+  structure: [hierarchy]
+  structure_was: [text, hierarchy]
+  modifiers: [derived, nested]
+  source: [derived]
+  structure_note: "Markdown 的标题和列表被解析成树，再渲染成 SVG 思维导图；文字和导图共用一份源"
+  focus: [containment]
+  dropped: "只用到层级这一种关系；文章里的论证、引用、跨节联系不会出现在导图里（整理者判断）"
+  forms: [tree]
+  schools: [link]
+  views_note: "可缩放、平移、折叠的思维导图；分支颜色按祖先冻结"
+  abstraction: [fold-drill]
+  abstraction_note: "初始展开层数可设置；折叠一个节点和它的所有后代"
+  fit_note: "把分层文章和结构图连起来最直接的一例，但连的只是“层级”这一种关系"
+  ev: ["input_material:extracts its intrinsic hierarchical structure", "interactions:Fold the current node and all its descendents", "abstraction:The maximum level of nodes to expand on initial render", "encodings:all child branches will use the color of their ancestor node"]
+  confidence: high
+
+- id: cmaptools
+  origin: external
+  name: CmapTools 概念图
+  urls: [https://cmap.ihmc.us/]
+  domain: 教育与知识建模
+  field: cognition
+  issue: 围绕一个焦点问题组织并表示知识，发现概念之间的跨联
+  issue_types: [build-author, understand-whole]
+  structure: [propositional, hierarchy]
+  structure_was: [graph, hierarchy]
+  modifiers: [typed, directed]
+  source: [authored]
+  structure_note: "概念（节点）与连接词（边上的短语）构成命题；概念由一般到具体排成层级；不同分支之间的跨联（cross-link）单独强调"
+  focus: [containment, connectivity, edge_attr]
+  forms: [concept-map]
+  schools: [notation, link]
+  views_note: "自上而下阅读的概念图"
+  abstraction: [fold-drill]
+  abstraction_note: "层级由焦点问题决定（同一领域换问题层级就变）；构建流程：焦点问题、列 15 到 25 个概念并粗排序（停车场）、初稿、找跨联、反复修订"
+  fit_note: "把“层级”和“跨联”同时画出，前者表达抽象程度，后者表达跨领域联系——两种关系用不同的线型"
+  ev: ["questions:construct concept maps with reference to some particular question", "relations:cross-links", "encodings:the most inclusive, most general concepts at the top", "relations:linking words or linking phrases"]
+  confidence: high
+  thinking: ["why:with reference to some particular question we seek to answer", "why:two features of concept maps", "limit:somewhat limit the creativity"]
+  note: "这个案例里最关键的一条：层级“依赖于使用知识的情境”，所以要有焦点问题。"
+
+- id: argdown
+  origin: project
+  domain: 论证与讨论
+  field: cognition
+  issue: 把一场辩论或论证重建成地图
+  issue_types: [reason-argue]
+  structure: [propositional]
+  structure_was: [graph]
+  modifiers: [typed, directed]
+  source: [authored]
+  structure_note: "陈述与论证是节点，支持、攻击等是带类型的边；用文本写源，地图由文本生成"
+  focus: [connectivity, edge_attr]
+  dropped: "地图默认隐藏很多逻辑细节，要点“Source”看原文"
+  forms: [argument-map]
+  schools: [notation, link]
+  abstraction: [separate-views, summarize]
+  abstraction_note: "同一份文本可以出简略的地图，也可以每个前提和推理步骤都画出来；样式可调"
+  ev: ["abstraction:This map hides a lot of the logical details", "abstraction:every premise and inferential step", "views:Your code is transformed into an argument map", "entities:statement and argument nodes"]
+  confidence: high
+  thinking: ["why:no user interface gets in your way", "limit:This map hides a lot of the logical details", "alternative:it's questionable whether all pros and cons"]
+
+- id: kialo
+  origin: external
+  name: Kialo 论证树
+  urls: [https://support.kialo.com/en/]
+  domain: 论证与讨论
+  field: cognition
+  issue: 把一个论题的赞成与反对理由层层展开，参与者能找到自己该回应的位置
+  issue_types: [reason-argue]
+  structure: [propositional, hierarchy]
+  structure_was: [hierarchy]
+  modifiers: [typed, directed]
+  source: [authored]
+  structure_note: "论题在上，其下是支持（Pros）和反对（Cons）的主张，每个主张下面还有自己的支持与反对；主张可以链接到别的讨论，所以并不总是严格的树"
+  focus: [containment, edge_attr]
+  schools: [textlist]
+  views_note: "按 Pros / Cons 分栏的层级列表，不是节点连线图"
+  abstraction: [fold-drill]
+  abstraction_note: "标记某个分支已看过；多论题与单论题讨论"
+  fit_note: "关心的是“这条主张支持还是反对它的上级”，所以每个节点只有一个上级，极性由栏位表示"
+  ev: ["views:Pros or Cons column", "relations:Linking Claims Between Discussions", "abstraction:Marking a Branch Seen", "abstraction:Multi- vs Single-Thesis Discussions"]
+  confidence: low
+
+- id: toulmin
+  origin: external
+  name: 图尔敏论证模型
+  urls: [https://www.blinn.edu/writing-centers/wide/toulmin-argument.html]
+  domain: 论证与写作
+  field: cognition
+  issue: 分析并检验一个论证站不站得住，找出最弱的一环
+  issue_types: [reason-argue, build-author]
+  structure: [propositional]
+  structure_was: [graph]
+  modifiers: [typed, directed]
+  source: [authored]
+  structure_note: "论证被拆成有固定角色的部分：主张、依据、保证（warrant）、支撑（backing）、限定词、反驳；关系也只有几种固定的（支持、依赖、加强、限定）"
+  focus: [edge_attr, provenance]
+  forms: [argument-map]
+  schools: [notation]
+  views_note: "一张固定的角色关系图"
+  abstraction: [none]
+  fit_note: "把“为什么这条依据能推出这个主张”这个常被省略的连接（保证）变成必须写明的一个对象——这是整理者对原文的概括"
+  ev: ["entities:WARRANT – logical and persuasive connection", "attributes:Toulmin says that the weakest part of any argument", "relations:The warrant is the assumption on which the claim and the evidence depend", "questions:Second, test and critique your own argument"]
+  confidence: high
+
+- id: wikipedia-summary-style
+  origin: external
+  name: Wikipedia 摘要式写作
+  urls: [https://en.wikipedia.org/wiki/Wikipedia:Summary_style]
+  domain: 百科写作
+  field: cognition
+  issue: 一个大主题的文章太长，如何拆分又不让读者迷路
+  issue_types: [explain-teach]
+  structure: [hierarchy]
+  structure_was: [hierarchy, text]
+  modifiers: [nested]
+  source: [authored]
+  structure_note: "主文章加子文章；主文章里留下每个子主题的摘要段，并链接到子文章；子文章有自己的导语，与主文章里的摘要相近，并链回父文章"
+  focus: [containment, identity]
+  schools: [textlist]
+  views_note: "文字，用小标题下的“主条目”链接连接上下两层"
+  abstraction: [summarize, fold-drill]
+  abstraction_note: "语义概括（摘要）加链接钻取；要求在子文章里先开发新内容，再概括回父文章"
+  fit_note: "摘要与全文共存，读者一次点击切换层级；同步问题（摘要与子文章不一致）靠模板标记"
+  ev: ["abstraction:Wikipedia articles cover topics at several levels of detail", "relations:The original article should contain a section with a summary", "relations:It also contains a link back to the parent article", "interactions:Templates are available to link to subtopics and to tag synchronization problems"]
+  confidence: high
+  thinking: ["alternative:Articles over a certain size might not cover their topic", "why:Summary style keeps the reader from being overwhelmed", "limit:the summary of the child article in the parent article will need to be rewritten"]
+
+- id: explorable-explanations
+  origin: external
+  name: Explorable Explanations
+  urls: [https://worrydream.com/ExplorableExplanations/]
+  domain: 交互式写作
+  field: cognition
+  issue: 让读者不只读结论，还能改动前提看后果
+  issue_types: [explain-teach, simulate]
+  structure: [causal]
+  structure_was: [causal, text]
+  modifiers: []
+  source: [authored]
+  structure_note: "文字里嵌着一个模型：前提、假设是可调参数，后果随之更新；文字和模型对应"
+  focus: [edge_attr, node_attr]
+  schools: [textlist, channels]
+  views_note: "可调节的下划线数字；模型随之更新旁边的段落"
+  abstraction: [fold-drill]
+  abstraction_note: "同一份文档可按兴趣在多个层次阅读；相关背景“即时”给出"
+  fit_note: "文章的论述结构（前提到结论）被做成了可操作的因果结构"
+  ev: ["relations:The reader can play with the premise and assumptions", "abstraction:It can be read at multiple levels", "abstraction:Contextual information allows the reader to learn related material just-in-time"]
+  confidence: medium
+  thinking: ["alternative:A typical reading tool, such as a book or website", "why:environment to think in", "limit:the interactivity itself is not really the point"]
+
+- id: ladder-of-abstraction
+  origin: external
+  name: Up and Down the Ladder of Abstraction
+  urls: [https://worrydream.com/LadderOfAbstraction/]
+  domain: 交互式写作与抽象
+  field: cognition
+  issue: 通过在不同抽象层之间上下移动，理解一个系统的行为
+  issue_types: [explore-discover, explain-teach]
+  structure: [sequence, causal]
+  modifiers: [temporal, derived]
+  source: [authored, derived]
+  structure_note: "一个系统在参数空间里每组参数产生一条轨迹（随时间的状态序列）；从轨迹汇总出度量，再看度量如何随参数变化"
+  focus: [time, node_attr, distribution]
+  schools: [channels]
+  views_note: "单条轨迹，叠加多条轨迹，小多图阵列，度量对参数的图；颜色表示完成时间"
+  abstraction: [zoom, aggregate]
+  abstraction_note: "层级阶梯：具体的一次运行，到一组参数，到全局的度量曲面；“创造抽象时，往下走和往上走同样重要”"
+  fit_note: "每升一级都用上一级的结果做汇总；每降一级都能点回具体的一条轨迹，可追溯"
+  ev: ["abstraction:stepping down is as important as stepping up", "abstraction:The purpose of abstraction is to bring out high-level patterns", "encodings:The color represents the time to completion", "interactions:Touch the chart to step down two levels"]
+  confidence: high
+  thinking: ["why:The purpose of abstraction is to bring out high-level patterns", "limit:But this benefit comes at a cost", "alternative:each trajectory is separate and isolated"]
+
+# ───────── 开源与技术生态 ─────────
+- id: cncf-landscape
+  origin: project
+  domain: 技术生态
+  field: ecosystem
+  issue: 在云原生生态里找到某类项目，并查看具体项目的信息
+  issue_types: [explore-discover, understand-whole]
+  structure: [set]
+  modifiers: [typed]
+  source: [given]
+  structure_note: "项目归入分类；分类是几层的目录，项目带成熟度等属性；没有项目之间的关系"
+  focus: [membership, node_attr]
+  schools: [enclosure]
+  views_note: "按类别分块的景观图，带筛选"
+  abstraction: [filter-scope]
+  abstraction_note: "筛选；点项目看详情；状态可以通过网址分享"
+  ev: ["abstraction:categorical overview", "interactions:filter, obtain detailed information"]
+  confidence: medium
+  note: "景观图表达的是“哪类里有谁”，不表达项目之间的依赖——这是它的重点，也是它的盲区。"
+
+- id: thoughtworks-tech-radar
+  origin: project
+  domain: 技术生态
+  field: ecosystem
+  issue: 判断每项技术或做法现在是否推荐采用
+  issue_types: [decide-status]
+  structure: [set]
+  modifiers: [typed, temporal]
+  source: [authored]
+  structure_note: "每条技术（blip）有象限（种类）和环（推荐程度）两个类别属性，还标记本期新增或移动"
+  focus: [node_attr, time]
+  schools: [rulepos]
+  dropped: "技术之间的关系完全不表达"
+  views_note: "雷达：象限分种类，环由内到外表示采用建议"
+  abstraction: [filter-scope]
+  abstraction_note: "按象限查看"
+  ev: ["encodings:The rings indicate our recommendation", "encodings:The quadrants represent different kinds", "attributes:Blips may be new to the latest Radar volume"]
+  confidence: high
+
+- id: zalando-tech-radar
+  origin: project
+  domain: 技术生态
+  field: ecosystem
+  issue: 帮工程团队为新项目选技术，并跟踪技术决策的演变
+  issue_types: [decide-status]
+  structure: [set]
+  modifiers: [typed]
+  source: [authored]
+  structure_note: "一张技术清单，每项带“环”（ring assignment）这一评估结果"
+  focus: [node_attr]
+  schools: [rulepos]
+  dropped: "技术之间的关系不表达"
+  views_note: "雷达"
+  abstraction: [none-stated]
+  ev: ["input_material:a list of technologies, complemented by an assessment result", "questions:pick the best technologies for new projects"]
+  confidence: medium
+
+- id: build-your-own-radar
+  origin: project
+  domain: 技术生态
+  field: ecosystem
+  issue: 从一张表生成自己的技术雷达
+  issue_types: [decide-status, build-author]
+  structure: [table, set]
+  modifiers: [typed]
+  source: [given]
+  structure_note: "输入是一张表（name、ring、quadrant、isNew、description），每行成为雷达上的一个点"
+  focus: [node_attr]
+  schools: [rulepos]
+  views_note: "雷达；表到图的映射由列名固定：ring 和 quadrant 决定位置"
+  abstraction: [none-stated]
+  ev: ["input_material:Google Sheets or CSV/JSON", "attributes:name, ring, quadrant, isNew, description"]
+  confidence: high
+  note: "表的列名承担了“角色”：ring 决定半径，quadrant 决定扇区——视图对数据的要求就是列要有这些角色。"
+
+- id: oss-ai-gap-map
+  origin: external
+  name: Open Source AI Gap Map
+  urls: ["https://www.aipotluck.org/map", "https://www.currentai.org/blogs/introducing-the-gap-map-v0-1"]
+  domain: 开源生态评估
+  field: ecosystem
+  issue: 看开源 AI 生态里哪些类别已经成熟、哪里还有缺口，好决定资金和精力投向哪里
+  issue_types: [decide-status, understand-whole]
+  structure: [set, table]
+  modifiers: [typed, weighted]
+  source: [authored, given]
+  structure_note: "产品归入类别，类别归入三个层次（模型组件、产品与用户体验、基础设施）；产品带开放程度、能力、采用程度，打 1 到 5 分；成熟度阶段和缺口是类别的属性，不是产品的属性"
+  focus: [node_attr, membership]
+  schools: [channels, textlist]
+  views_note: "按层次分页签的类别列表：每行一个类别，列出成熟度阶段、发现的缺口（字母标记）和该类别下的开放产品（色块，得分高的实心、其余只画轮廓）"
+  dropped: "不比较开源与闭源生态谁领先，只说开源生态还缺什么"
+  abstraction: [aggregate, separate-views]
+  abstraction_note: "类别的成熟度由其中完全开放的产品推进；三个层次分页签"
+  ev: ["abstraction:Maturity is a property of a category", "attributes:Every product carries a score on a 1–5 scale", "questions:What layers are overinvested in", "encodings:Products scoring 4.5 or above", "relations:Only fully open products advance"]
+  thinking: ["why:compare closed versus open AI ecosystems", "alternative:Repository stars can provide a useful signal", "limit:The map is a curated view of a fast-moving ecosystem"]
+  confidence: medium
+  note: "调研里的“62,538 个收录条目、1,133 个已评分、v0.5.0、2026-10-13 更新、三个层次”，官方页面都找到了原文（页面写 Version 0.5.0 - Last update: 13 Oct 2026）；已评分占比约 1.8% 是调研按这两个数算的。官方方法页写明这是“curated view … not a complete census”。"
+
+- id: oss-insight
+  origin: project
+  domain: 开源生态
+  field: ecosystem
+  issue: 了解 GitHub 上现在在发生什么，以及技术领域的排名与趋势
+  issue_types: [explore-discover]
+  structure: [table, sequence]
+  modifiers: [temporal, weighted, derived]
+  source: [recorded, derived]
+  structure_note: "GitHub 事件流，聚合成仓库、开发者、组织的指标（星标、提交、PR 等）；仓库按技术领域分入集合"
+  focus: [distribution, time, membership]
+  schools: [channels]
+  views_note: "数据浏览器、集合、趋势榜"
+  abstraction: [aggregate]
+  abstraction_note: "把上百亿事件聚合成仓库和集合层面的指标"
+  ev: ["input_material:tracks over 10 billion GitHub events", "abstraction:grouped by technology domain", "questions:rankings and trends in technical fields"]
+  thinking: ["limit:Rankings that depend on those counts would be misleading"]
+  note: "官网首页（2026-10-13 打开）写明：基于 Star 的趋势榜已暂停——GitHub 公共事件流的分页方式变了，OSSInsight 的采集只读了第一段，2025 年年中以来的 Star、PR、Issue 事件被严重漏采；2025 年 5 月以前的历史、直接从 GitHub 同步的仓库总数和提交活动不受影响。这是“实时趋势”依赖原始数据完整性的一个实例。"
+  confidence: medium
+
+- id: oss-compass
+  origin: project
+  domain: 开源生态
+  field: ecosystem
+  issue: 评估开源社区的健康状况
+  issue_types: [decide-status, understand-whole]
+  structure: [table]
+  modifiers: [weighted, temporal, derived]
+  source: [derived]
+  structure_note: "多维指标模型（社区活力、协作效率、开放治理等）打分；对象是社区、开发者、技术领域"
+  focus: [node_attr]
+  schools: [channels]
+  views_note: "周活动看板"
+  abstraction: [aggregate]
+  abstraction_note: "指标先合成维度，再合成评估体系（三维评估）"
+  ev: ["questions:three-dimensional evaluation system", "attributes:Community Vitality"]
+  confidence: medium
+
+- id: opendigger
+  origin: external
+  name: OpenDigger
+  urls: ["https://open-digger.cn/en/", "https://open-digger.cn/en/docs/user-docs/metrics/openrank", "https://open-digger.cn/en/docs/user-docs/metrics/playground"]
+  domain: 开源活动指标
+  field: ecosystem
+  issue: 用统一的指标（活跃度、OpenRank 等）度量开源项目和开发者的活动与影响力随时间的变化
+  issue_types: [decide-status, explore-discover]
+  structure: [graph, sequence]
+  modifiers: [weighted, temporal, derived, typed]
+  source: [derived]
+  structure_note: "协作网络：开发者、仓库、Issue、合并的 PR 是节点，归属与活动是带权边；OpenRank 沿网络迭代并继承上个月的值；指标按月、季、年出时间序列"
+  focus: [node_attr, time, edge_attr]
+  schools: [channels]
+  views_note: "Playground：输入平台、仓库或用户名，看指标的柱线图；另有 OpenLeaderboard 和浏览器插件 HyperCRX 里的 Perceptor 标签"
+  abstraction: [aggregate]
+  abstraction_note: "开发者活跃度求和成仓库活跃度；仓库的 OpenRank 平均分给它的 Issue 与 PR；指标按月、季、年汇总"
+  ev: ["questions:OpenRank aims to explore the flow of value", "abstraction:The repository's OpenRank is evenly distributed", "views:In this playground page", "relations:transferred to its repository"]
+  thinking: ["why:OpenRank was introduced to address the widespread observer effect", "alternative:such as the alienation behavior and community damage caused by metrics like the number of stars", "limit:OpenDigger does not export metrics data for all repositories and users"]
+  confidence: high
+  note: "调研里的“项目活动、开发者参与、OpenRank、历史序列”，官方文档能对上（指标文件按月、季、年存成 JSON）；“社区演化”页面没有这个词。官方文档自己写了几条局限：GitHub 数据源有缺失，Community OpenRank 算法实现尚未开源，活跃度只算有实质贡献的协作行为、不算 Star 和 Fork。"
+
+- id: ecosystems
+  origin: external
+  name: Ecosyste.ms
+  urls: ["https://packages.ecosyste.ms/", "https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html"]
+  domain: 开源数据基础设施
+  field: ecosystem
+  issue: 为开源项目提供跨托管平台的包、仓库、依赖、提交、Issue 数据的开放 API，支撑生态研究与维护
+  issue_types: [explore-discover]
+  structure: [graph, sequence]
+  modifiers: [typed, temporal, derived]
+  source: [derived]
+  structure_note: "多个服务各管一块：包（含版本、命名空间、维护者）、仓库（含标签、清单、依赖）、Issue 与 PR、提交、时间线事件、论文与软件项目的映射；依赖是包之间的关系"
+  focus: [connectivity]
+  schools: []
+  views_note: "读到的是服务列表和规模数字，没有视图的描述"
+  abstraction: [none-stated]
+  ev: ["entities:Hosts: 784", "relations:Dependencies: 14,051,505,152"]
+  thinking: ["why:16 significant services", "limit:We also used up the majority of our grant"]
+  confidence: low
+  note: "只读到作者 Andrew Nesbitt 2023 年 12 月的年终博客，所有数字是 2023 年底的；官方文档站（各服务的 API 文档）这次没有读。调研里“跨托管平台整合仓库、包、依赖、Issue、提交和历史事件、开放 API”，博客里能对上（784 个托管平台、74.3 亿条事件、各服务都是开放 API）。"
+
+- id: deps-dev
+  origin: external
+  name: deps.dev（Open Source Insights）
+  urls: ["https://docs.deps.dev/", "https://blog.deps.dev/api/"]
+  domain: 软件供应链
+  field: ecosystem
+  issue: 弄清一个包的完整依赖图、版本、许可证和安全公告，评估引入它会带来多大风险
+  issue_types: [impact, understand-whole, locate-anomaly]
+  structure: [graph]
+  modifiers: [directed, typed, versioned, derived]
+  source: [derived]
+  structure_note: "包、版本、依赖、许可证、安全公告、项目托管构成的图；传递依赖图按各包管理器自己的算法算出，不只是清单里声明的"
+  focus: [connectivity, node_attr]
+  schools: [link]
+  views_note: "网站：搜索包、可视化依赖、比较版本、看安全公告；API 博客里的依赖图用 GraphViz 渲染"
+  abstraction: [aggregate]
+  abstraction_note: "收集并聚合数据，再推出传递依赖图和安全公告的影响报告"
+  ev: ["relations:a full dependency graph computed using the same algorithms", "views:Search for open source packages, visualize dependencies", "questions:How many dependencies does this package have"]
+  thinking: ["why:The goal is to provide developers with a picture of how their software is put together", "alternative:The deps.dev dependency data is not just what a package declares", "limit:The service currently indexes the Cargo, Go, Maven"]
+  confidence: high
+  note: "调研里的“包、版本、依赖、安全公告”，官方文档与博客都找到了原文；“关系以软件供应链为主”，官方博客写 understand the risks in their software supply chains。"
+
+- id: atlas-taxonomy
+  origin: external
+  name: ATLAS：用多个 LLM Agent 自动构建软件仓库分类体系
+  urls: ["https://arxiv.org/abs/2606.21597", "https://atlas-taxonomy.netlify.app/"]
+  domain: 软件仓库分类
+  field: ecosystem
+  issue: 给五万多个 GitHub 仓库建一棵带定义和拆分理由的多层分类树，用来按任意粒度检索、找功能等价的替代项目、看生态趋势
+  issue_types: [retrieve, explore-discover]
+  structure: [hierarchy]
+  modifiers: [derived, nested]
+  source: [derived]
+  structure_note: "分类树：每个节点有名称、定义、纳入标准、拆分维度、层级、父子关系和归入的仓库；54k 版本有 9 个顶层领域、9 层、36,000 个节点；一个仓库只归入一个主要功能角色"
+  focus: [containment, membership]
+  schools: [link]
+  views_note: "探索器（Rank-Aligned View）：把各分支按语义层级对齐的树，可展开、折叠，高亮后插入的子层和深度被调整的节点"
+  dropped: "活跃度、许可证、安全等维度不进分类；不做多标签"
+  abstraction: [fold-drill, aggregate]
+  abstraction_note: "层级越深越具体；构建后做“层级对齐”，让不同分支的粒度一致；从粗类进入逐层下钻"
+  ev: ["abstraction:tree depth encodes increasing specificity", "abstraction:After construction, a Level Alignment phase", "interactions:Expand All Collapse All", "attributes:every category carries a name"]
+  thinking: ["why:GitHub Topics, the dominant organizational mechanism, is flat", "alternative:Embedding-based clustering groups repositories", "limit:ATLAS assigns each repository a single dominant functional role"]
+  confidence: high
+  note: "调研里的“54,387 个仓库、36,000 个节点、9 层 9 个顶层领域、Star 至少 1,000、数据含定义与纳入标准、85.71% 的 Top-1 精度”五条，官方 Zenodo 页都找到了原文。85.71% 是作者在替代项目发现任务上的实验精度，不是现实产品推荐的已验证准确率（调研也这样提醒）。"
+
+- id: semantic-map-github
+  origin: external
+  name: Semantic Map of GitHub
+  urls: ["https://stevenfazzio.com/semantic-github-map/", "https://stevenfazzio.com/semantic-github-map/methodology.html"]
+  domain: 开源生态地图
+  field: ecosystem
+  issue: 看高 Star 仓库按 README 语义自然聚成哪些主题，每个仓库在地图上和谁相邻
+  issue_types: [explore-discover, understand-whole]
+  structure: [spatial]
+  modifiers: [derived, typed]
+  source: [derived]
+  structure_note: "每个仓库是一个点；位置由 README 的向量经降维得到，语义相近的挨在一起；多层级主题标签由层次密度聚类生成；每个仓库另有大模型从 README 提取的标题、摘要、标语、项目类型、目标读者"
+  focus: [position, cluster]
+  schools: [channels, schematic]
+  views_note: "交互 HTML 地图（DataMapPlot）：悬停看标题、标语、类型、语言、Star；可换颜色（创建时间、最近推送、簇）；可搜索、过滤、点击跳转"
+  dropped: "页面写明簇与簇之间的距离不宜读作差异大小的精确度量；README 短于 200 字符的仓库不收"
+  abstraction: [zoom, aggregate]
+  abstraction_note: "主题标签分多个细节层级，从大类到子主题，缩放时出现"
+  ev: ["encodings:Repositories with similar descriptions", "abstraction:Cluster labels appear on the map at multiple levels", "attributes:Each README is processed by Claude Haiku"]
+  thinking: ["alternative:This project instead uses a content-based signal", "why:result cap and non-deterministic ordering", "limit:Selection bias"]
+  confidence: high
+  note: "调研里的“约 1 万个高 Star 仓库、README 转向量、UMAP 降维、公开处理脚本”，官方方法页都找到了原文（向量 512 维，用 Cohere embed-v4.0；降维到二维）。调研说“地图距离来自 README 语义，不是经过验证的产品定位”，方法页的局限一节也写了：README 稀疏或有误导会被放错位置。"
+
+- id: map-of-github
+  origin: external
+  name: Map of GitHub
+  urls: ["https://anvaka.github.io/map-of-github/"]
+  domain: 开源生态地图
+  field: ecosystem
+  issue: 看 GitHub 上几十万个项目在“被同一批人点 Star”的空间里怎样分布成一块块“国家”，找到相邻的项目
+  issue_types: [explore-discover]
+  structure: [spatial]
+  modifiers: [derived, weighted]
+  source: [derived]
+  structure_note: "点是项目；两点靠得近，是因为多个用户同时给两者点过 Star；约 69 万个项目聚成约 1,500 个“国家”；点的大小是 Star 数"
+  focus: [cluster, position]
+  schools: [schematic, channels]
+  views_note: "二维地图：点按共同 Star 的用户聚成团，团有名字（国家）；可缩放、搜索项目、与 ChatGPT 对话。地图风格的国家、地区隐喻是页面自己的说法"
+  abstraction: [aggregate, zoom]
+  abstraction_note: "约 69 万个项目聚成约 1,500 个国家；缩放到一定程度才看得到单个项目（无结果时页面提示 Try zooming in?）"
+  ev: ["abstraction:The map has approximately 690,000 projects", "relations:Two dots within the same cluster", "attributes:The size of the dot"]
+  confidence: medium
+  note: "调研里的“约 69 万个项目、约 1,500 个聚类、用共同 Star 的用户重合度算距离、数据到 2025 年 5 月前”，官方页面（About 文字在页面加载的脚本里）都找到了原文；页面写的是 Star 数据到 2025 年 4 月底，没写发布日期。“揭示的是开发者兴趣结构，不是产品需求结构”是调研的判断，页面只写“多个用户同时给两者点 Star”。官方页没有设计思路类的说明，所以没有 thinking。"
+
+- id: git-top-atlas
+  origin: external
+  name: Git.Top Atlas
+  urls: ["https://git.top/atlas", "https://git.top/topics/atlas-guide"]
+  domain: 开源生态导航
+  field: ecosystem
+  issue: 从一个生态（如 Cloudflare、MCP、RAG）进入，看里面的项目、替代方案、依赖和评分，做取舍
+  issue_types: [explore-discover, decide-status, compare]
+  structure: [graph, set]
+  modifiers: [typed, weighted, derived, provenance]
+  source: [derived]
+  structure_note: "生态里的项目是节点；替代、部署、依赖、用例、类别变成可复用的图边；项目带质量分和代理分（分开），回答附来源元数据、分类证据和置信度"
+  focus: [connectivity, node_attr]
+  schools: [link, textlist]
+  views_note: "Atlas 页：每个生态一张卡片，卡片里是该生态的小关系图；点进去按生态、项目、关系图与评分逐步收窄；另提供 Atlas JSON"
+  abstraction: [fold-drill, filter-scope]
+  abstraction_note: "“Start broad in Cloudflare Ecosystem, then narrow to one project with score and graph evidence”"
+  ev: ["abstraction:Start broad in Cloudflare Ecosystem", "relations:Alternatives, deployments, dependencies, use cases, and categories become reusable graph edges", "attributes:Quality score and agent score are separate", "attributes:Responses include source metadata"]
+  thinking: ["why:Atlas is the Git.Top map layer", "alternative:Navigate ecosystems as connected project maps instead of isolated lists"]
+  confidence: medium
+  note: "调研里的“Beta、覆盖 Agent/MCP/RAG/浏览器 AI/AI IDE/LLM Gateway、从类别进项目看关系图替代方案评分、项目约一千多个”，官方页面都找到了原文（页面写 1216 projects loaded）。页面没有写评分怎么算，所以评分的依据没核实。"
+
+- id: semrepo
+  origin: external
+  name: SemRepo
+  urls: ["https://arxiv.org/abs/2605.13310", "https://scads.ai/semrepo-knowledge-graph-for-research-software/"]
+  domain: 研究软件知识图谱
+  field: ecosystem
+  issue: 把研究软件和论文、作者连起来，回答哪些论文对应的仓库仍在维护、被广泛复用、背后是哪些研究者
+  issue_types: [retrieve, explore-discover]
+  structure: [graph]
+  modifiers: [typed, derived, provenance]
+  source: [derived, given]
+  structure_note: "以仓库为中心的本体：仓库、人（作者、贡献者、点赞者等角色）、Issue、编程语言引用、论文；贡献量和语言占比用中间节点（ContributorReference、LanguageReference）带上提交数和占比；作者链到 SemOpenAlex，仓库链到 LPWC 论文"
+  focus: [connectivity, edge_attr]
+  schools: []
+  views_note: "没有图形界面：以 RDF 转储和公开 SPARQL 端点提供，读到的页面里没有可视化（端点页是一个查询编辑器）"
+  abstraction: [none-stated]
+  ev: ["entities:At the center of the ontology is the class Repository", "relations:sr:ContributorReference, which acts as an intermediate node", "interactions:(b) We deploy the dataset in triple store"]
+  thinking: ["why:cannot be adequately represented by a simple binary predicate", "alternative:links to implementations are often buried in unstructured text", "limit:we acknowledge that it inherits structural biases"]
+  confidence: high
+  note: "调研里的“约 19.8 万个仓库的元数据、Issue、开发者与论文关联、SPARQL、约半年更新一次”，官方论文都找到了原文（197,566 个唯一仓库地址；approx. twice per year）。整理者的读法〔推〕：把“贡献”做成带提交数的中间节点，是给边加属性的一种做法（Hogan 等综述里叫 reification），和本库“一般图”一节讲的一致。"
+
+- id: moss
+  origin: external
+  name: MOSS（研究软件知识图谱）
+  urls: ["https://pretalx.com/juliacon-2025/talk/3EVLR9/", "https://numfocus.org/open-source-science-initiative-ossci"]
+  domain: 研究软件知识图谱
+  field: ecosystem
+  issue: 把 Julia 生态里的仓库、贡献者、论文、机构连成属性图，看谁贡献了什么、哪些包被哪些论文引用
+  issue_types: [explore-discover, understand-whole]
+  structure: [graph]
+  modifiers: [typed, derived]
+  source: [derived]
+  structure_note: "属性图：节点类型有仓库、论文、人、机构、主题，由关系连接；数据来自 GitHub、OpenAlex、CrossRef 等，经转换层统一字段、合并冲突、解析别名"
+  focus: [connectivity]
+  schools: []
+  views_note: "读到的页面只说“可视化代码贡献、论文与机构的关系”，没写画法；演讲页给的在线地址 opensource.science/moss 在这次访问里返回 404"
+  abstraction: [none-stated]
+  ev: ["entities:The resulting property graph uses well-defined node types", "input_material:a system that consolidates data from GitHub"]
+  thinking: ["why:Our goal with MOSS is to unify disparate data streams", "alternative:While the Julia ecosystem has grown impressively"]
+  confidence: low
+  note: "只读到 JuliaCon 2025 的演讲介绍页和 NumFOCUS 的项目页，没有读到项目自己的文档。调研里的三条说法——“把仓库、作者、机构、出版物、依赖关系连起来”“记录关系的发现来源”“代码最近一次更新停留在 2025 年 7 月”——在这两页里都没找到（演讲页没提依赖关系和来源记录；更新时间要看 GitHub，没有访问），**未核实**。"
+
+- id: codegraph
+  origin: external
+  name: CodeGraph（面向源代码的开放分类知识图谱）
+  urls: ["https://arxiv.org/abs/2609.29474"]
+  domain: 代码知识图谱
+  field: ecosystem
+  issue: 用代码本身而不是标签，找到实现某个算法、遵循某种范式、属于某个应用领域的文件，并看同一算法跨领域的复用
+  issue_types: [retrieve, explore-discover]
+  structure: [graph, hierarchy]
+  modifiers: [typed, derived, provenance, nested]
+  source: [derived]
+  structure_note: "文件节点连到抽取出的概念节点（算法、范式、设计模式、应用领域），边带类型和来源；概念再对齐到 Wikidata，并沿 Wikidata 的父类关系向上汇总；约 6.3 万个概念实体，1.449 亿个文件节点"
+  focus: [connectivity, containment, provenance]
+  schools: [channels]
+  views_note: "没有图探索界面：论文里是方法流程图、组成统计图和“算法 × 应用领域”热图（用颜色表示出现次数）；数据在 Hugging Face 上以表格浏览"
+  abstraction: [aggregate, summarize]
+  abstraction_note: "hierarchy-rollup：引入 Wikidata 的父类闭包，把细粒度概念汇总到任意层级"
+  ev: ["abstraction:enabling aggregation of fine-grained concepts at arbitrary levels", "relations:the same algorithm node dynamic programming", "entities:about 63,000 extracted concept entities"]
+  thinking: ["why:The taxonomy is deliberately open", "alternative:Classical static-analysis tools dissect code with high precision", "limit:The two values therefore bracket the range of plausible precision estimates"]
+  confidence: high
+  note: "调研里的“把算法、设计模式、编程范式和应用领域连接起来”“约 1.449 亿个代码文件”，论文都找到了原文（144,910,008 个文件节点，来自 167M 文件语料去掉约 2200 万个标记语言文件）。论文自己写了抽取精度的范围：保守下限 68%、宽松上限 88%，设计模式和范式的标注不够可靠、不能单独支持强的定量结论。"
+
+- id: software-heritage-graph
+  origin: external
+  name: Software Heritage Graph Dataset
+  urls: ["https://registry.opendata.aws/software-heritage/", "https://arxiv.org/abs/2011.07824"]
+  domain: 源代码历史图谱
+  field: ecosystem
+  issue: 跨项目、跨托管平台追踪同一份源码和它的开发历史，研究公开软件开发的长尾
+  issue_types: [trace-flow, explore-discover]
+  structure: [dag]
+  modifiers: [directed, versioned, provenance]
+  source: [recorded]
+  structure_note: "统一的 Merkle DAG，五个逻辑层：内容（叶子）、目录、修订（提交）、发布、快照；目录项指向内容、修订或别的目录，修订指向根目录和父修订；相同节点被共享，用密码学哈希作标识"
+  focus: [precedence, provenance, identity]
+  schools: []
+  views_note: "没有交互视图：论文里是数据模型图（图 2）和简化 schema；数据以关系表提供，可用 SQL 查询。官方文档站被反机器人页拦住，没读到"
+  abstraction: [aggregate]
+  abstraction_note: "去重：所有相同的节点被共享；跨版本控制系统和包管理器，给出规范的表示"
+  ev: ["entities:point-in-time captures of the entire source tree", "relations:Each revision points to the root directory", "abstraction:As shown in Figure 2, the Software Heritage DAG is organized in five logical layers", "views:Figure 2: Data model"]
+  thinking: ["why:exploits the fact that source code artifacts are massively duplicated", "alternative:This approach has limitations in scope", "limit:The dataset captures the state of the Software Heritage archive on September 25th 2018"]
+  confidence: high
+  note: "证据主要来自 2020 年的论文（数据截至 2018 年 9 月）和 AWS 开放数据登记页（写数据每年更新）。调研里“保存源代码对象、目录、版本和历史来源之间的关系”，登记页找到了原文；“是理解开源软件历史谱系的基础”是调研的判断，页面没有这样写。"
+
+- id: speculora
+  origin: external
+  name: Speculora
+  urls: ["https://speculora.com/", "https://speculora.com/info"]
+  domain: 市场需求分析
+  field: ecosystem
+  issue: 让独立开发者看到软件需求在哪里拥挤、哪里有可用的缺口
+  issue_types: [decide-status, explore-discover, compare]
+  structure: [hierarchy, table]
+  modifiers: [typed, weighted, derived, temporal]
+  source: [derived]
+  structure_note: "15 个领域，下分子领域，下面是“任务”（人想完成的一件具体事）；每个任务带需求、供给、质量、价格信号，算出缺口等级和机会分；证据来自应用商店评论和技术论坛"
+  focus: [node_attr, membership]
+  schools: [textlist, enclosure]
+  views_note: "首页是交互地图；领域页是按机会分数排序的任务列表，每项标缺口等级、应用数和用户反馈数；无头浏览器打开首页还看到 Top gaps、Full tree、Treemap 等标签（整理者所见，官方文字没有说明）"
+  dropped: "以“任务”而不是“市场”为单位"
+  abstraction: [fold-drill, aggregate]
+  abstraction_note: "领域、子领域、任务三级；缺口等级把多项信号合成一个状态"
+  ev: ["abstraction:The unit is a task, not a market", "relations:Each task carries demand, supply, quality, and price signals", "views:Explore the live, interactive map above", "input_material:real user reviews mined from the app stores"]
+  thinking: ["why:It is not another idea generator", "alternative:There has been no systematic way for a solo builder", "limit:And gaps decay, so freshness matters"]
+  confidence: medium
+  note: "调研里的“15 个领域、对任务按需求/竞争/现有产品的不足打分、证据来自 App Store、Google Play、Hacker News、Stack Exchange”，官方首页都找到了原文。“指标缺独立效果验证”是调研的判断，官方页面没有相关说明；官方写数据每周重算。"
+
+# ───────── 生命科学 ─────────
 - id: nextstrain
   origin: external
   name: Nextstrain / Auspice
   urls: [https://docs.nextstrain.org/en/latest/learn/interpret/interacting-with-nextstrain.html]
   domain: 流行病与基因组
+  field: life
   issue: 同时看病原体的系统发生关系、地理传播和时间
   issue_types: [explore-discover, understand-whole]
   structure: [hierarchy, spatial, sequence]
@@ -1076,6 +1807,7 @@
   name: OneZoom 生命之树
   urls: [https://www.onezoom.org/introduction]
   domain: 生物分类
+  field: life
   issue: 在上百万物种的进化树里自由探索，不被规模压垮
   issue_types: [explore-discover]
   structure: [hierarchy]
@@ -1098,6 +1830,7 @@
   name: Circos
   urls: [https://pmc.ncbi.nlm.nih.gov/articles/PMC2752132/]
   domain: 比较基因组
+  field: life
   issue: 比较基因组，显示基因组位置对之间的关系
   issue_types: [compare, explore-discover]
   structure: [spatial, graph]
@@ -1121,6 +1854,7 @@
   name: Reactome 通路浏览器
   urls: [https://reactome.org/userguide/pathway-browser]
   domain: 分子生物学通路
+  field: life
   issue: 浏览人类生物通路：从全部通路总览，进入某条通路的反应图
   issue_types: [explore-discover, understand-whole]
   structure: [hierarchy, graph]
@@ -1142,6 +1876,7 @@
   name: SBGN 系统生物学图形标记
   urls: [https://sbgn.github.io/specifications]
   domain: 分子生物学通路
+  field: life
   issue: 用统一的图形语言表示生物网络，并按想传达的信息选择详细程度
   issue_types: [explain-teach, build-author]
   structure: [graph]
@@ -1160,11 +1895,36 @@
   confidence: high
   thinking: ["why:three alternative projections", "why:This will help you choose what to omit", "limit:It omits information about the state transitions"]
 
+# ───────── 社会、经济与公共数据 ─────────
+- id: tube-map
+  origin: external
+  name: 伦敦地铁图（Beck）
+  urls: [https://www.londonmuseum.org.uk/collections/london-stories/harry-beck-revolutionised-tube-map/]
+  domain: 交通
+  field: society
+  issue: 乘客要知道在哪条线、哪站换乘、几站到达，不需要知道地面上的真实距离
+  issue_types: [understand-whole, explain-teach]
+  structure: [graph]
+  modifiers: [typed]
+  source: [authored]
+  structure_note: "线路与车站：车站是节点，线路是带颜色的路径，换乘站属于多条线"
+  focus: [connectivity, membership]
+  dropped: "真实地理形状和距离（线路被画成变形的直线，中心区放大）"
+  forms: [node-link]
+  schools: [schematic, link]
+  views_note: "示意图（diagram）：正交与 45 度斜线、等距站点、线路着色"
+  abstraction: [none]
+  abstraction_note: "不是折叠，而是几何上的取舍：中心区放大以便读站名，外围压缩"
+  fit_note: "视图完全服务于“连通与换乘”；代价是不能用它估距离"
+  ev: ["input_material:geographically distorted straight lines", "relations:the connections and interchanges", "abstraction:Central London was distorted and made bigger", "questions:reduced the network"]
+  confidence: high
+
 - id: llnl-energy-flow
   origin: external
   name: LLNL 美国能源流向图
   urls: [https://flowcharts.llnl.gov/]
   domain: 能源
+  field: society
   issue: 看清能源从哪里来、被哪些部门使用、有多少被浪费
   issue_types: [trace-flow, understand-whole]
   structure: [flow]
@@ -1187,6 +1947,7 @@
   name: ICIJ Offshore Leaks 数据库
   urls: [https://offshoreleaks.icij.org/pages/howtouse]
   domain: 调查报道与金融
+  field: society
   issue: 查出离岸公司背后是谁，以及两个人之间有什么间接联系
   issue_types: [explore-discover, trace-flow]
   structure: [graph]
@@ -1203,118 +1964,12 @@
   ev: ["entities:Officer - A person or company", "questions:discover the shortest paths between two entity officers", "interactions:filter “Officers,”", "input_material:They come from leaked records"]
   confidence: medium
 
-- id: wikidata-query-views
-  origin: external
-  name: Wikidata Query Service 结果视图
-  urls: [https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/Wikidata_Query_Help/Result_Views]
-  domain: 开放知识图谱
-  issue: 把一次 SPARQL 查询的结果换成不同的图来看
-  issue_types: [explore-discover]
-  structure: [table]
-  modifiers: []
-  source: [given]
-  structure_note: "查询结果是一张表；每个视图要求特定的列扮演特定角色（第一列 X 轴、第二列 Y 轴、气泡大小、颜色、节点 ID、时间点等）"
-  focus: [node_attr, time, position]
-  schools: [channels]
-  views_note: "表、图片网格、地图、图、气泡图、树图、树、时间线、维度（平行坐标）等，同一份结果可切换"
-  abstraction: [separate-views]
-  abstraction_note: "树图的第一列是第一层级；树视图按行嵌套"
-  fit_note: "视图与数据的对接靠“列的角色”：同一张结果表是否适合某个视图，取决于列能否填进它的角色"
-  ev: ["views:Shows the result data as a table", "views:Shows the result data as map", "encodings:First will be X-axis, second Y-axis", "encodings:the size and the color of the bubble can configured", "abstraction:1st label in a row will be 1st level in tree map"]
-  confidence: high
-  note: "这是研究“数据结构的哪一部分对应视图的哪个通道”最直接的一例：每种视图的页面都列出了它要的列角色。"
-
-- id: vowl
-  origin: external
-  name: VOWL / WebVOWL 本体可视化
-  urls: [https://semantic-web-journal.net/content/visualizing-ontologies-vowl-0]
-  domain: 本体与语义网
-  issue: 让不懂本体语言的人也能看懂本体
-  issue_types: [explain-teach, understand-whole]
-  structure: [graph]
-  modifiers: [typed, directed]
-  source: [given]
-  structure_note: "本体的模式部分：类、属性、数据类型；规范为 OWL 的多数元素规定了图形画法，再用力导向布局排开"
-  focus: [connectivity, edge_attr]
-  forms: [force-directed, knowledge-graph]
-  schools: [notation, link]
-  abstraction: [none-stated]
-  fit_note: "用统一的形状颜色区分元素种类，让“类型”成为一眼可读的重点；布局本身不携带语义"
-  ev: ["input_material:well-specified visual language", "entities:graphical depictions for most elements", "views:force-directed graph layout"]
-  confidence: low
-  thinking: ["alternative:A major drawback of these attempts is that they require knowledge about UML", "why:visual impression of the size and topology", "limit:graph visualizations are only viable up to a certain size"]
-  note: "官方站点读不到，只依据期刊页面摘要。"
-
-- id: kialo
-  origin: external
-  name: Kialo 论证树
-  urls: [https://support.kialo.com/en/]
-  domain: 论证与讨论
-  issue: 把一个论题的赞成与反对理由层层展开，参与者能找到自己该回应的位置
-  issue_types: [reason-argue]
-  structure: [propositional, hierarchy]
-  structure_was: [hierarchy]
-  modifiers: [typed, directed]
-  source: [authored]
-  structure_note: "论题在上，其下是支持（Pros）和反对（Cons）的主张，每个主张下面还有自己的支持与反对；主张可以链接到别的讨论，所以并不总是严格的树"
-  focus: [containment, edge_attr]
-  schools: [textlist]
-  views_note: "按 Pros / Cons 分栏的层级列表，不是节点连线图"
-  abstraction: [fold-drill]
-  abstraction_note: "标记某个分支已看过；多论题与单论题讨论"
-  fit_note: "关心的是“这条主张支持还是反对它的上级”，所以每个节点只有一个上级，极性由栏位表示"
-  ev: ["views:Pros or Cons column", "relations:Linking Claims Between Discussions", "abstraction:Marking a Branch Seen", "abstraction:Multi- vs Single-Thesis Discussions"]
-  confidence: low
-
-- id: codecity
-  origin: external
-  name: CodeCity
-  urls: [https://www.inf.usi.ch/faculty/lanza/PUBS/M/Wett2008e.pdf]
-  domain: 软件演化与度量
-  issue: 把软件系统的整体结构一眼看清，找出设计问题的位置
-  issue_types: [understand-whole, locate-anomaly]
-  structure: [hierarchy, table]
-  modifiers: [nested, weighted, derived]
-  source: [derived]
-  structure_note: "包的嵌套层级，类是叶子；每个类有一组度量（方法数、属性数）"
-  focus: [containment, node_attr]
-  dropped: "调用与继承等关系默认不画"
-  forms: [scene-3d]
-  schools: [enclosure, schematic]
-  views_note: "城市隐喻：类是建筑（高度=方法数，底面=属性数），包是街区（嵌套深度=颜色饱和度）"
-  abstraction: [none]
-  abstraction_note: "靠嵌套街区和度量映射表达层级，不折叠"
-  fit_note: "和矩形树图同类：包含加叶子度量；三维多出的一个维度被用来编码第二个度量"
-  ev: ["input_material:buildings represent the classes", "encodings:the number of methods metric for the class is mapped on the building height", "encodings:nesting level of a package is mapped on the color saturation"]
-  confidence: medium
-  thinking: ["alternative:Using an all too simple visual metaphor", "why:A city, with its downtown area and its suburbs is a familiar notion", "limit:We currently do not display the class internals"]
-
-- id: hive-plot
-  origin: external
-  name: Hive Plot
-  urls: [https://mk.bcgsc.ca/linnet/]
-  domain: 网络分析（生物与社会网络）
-  issue: 在大型网络里看出趋势和异常，并能比较相关的网络
-  issue_types: [explore-discover, compare]
-  structure: [graph]
-  modifiers: [weighted]
-  source: [given]
-  structure_note: "一般网络；节点被分配到辐射状的线性轴上，轴和轴上的位置只由网络结构（如汇点、源点、度数）决定"
-  focus: [connectivity, node_attr]
-  forms: [node-link]
-  schools: [rulepos]
-  views_note: "线性轴 + 曲线边；多个蜂巢图并排成面板"
-  abstraction: [none]
-  fit_note: "把位置从“物理模拟的结果”改成“网络性质的函数”，因此布局可复现、可比较"
-  ev: ["encodings:Node-to-axis assignment and node-on-axis position are determined solely by network structure", "questions:exposing both trends and outlier patterns", "views:Multiple hive plots are presented together"]
-  confidence: high
-  thinking: ["alternative:In a hairball, data is subordinate to layout", "why:Hive plots make it possible to assess network structure", "limit:The axis and node mapping is arbitrary"]
-
 - id: gapminder
   origin: external
   name: Gapminder 气泡图
   urls: [https://www.gapminder.org/tools/]
   domain: 国际发展统计
+  field: society
   issue: 看各国在收入、寿命、人口等指标上的关系，以及这种关系怎样随时间变化
   issue_types: [explore-discover, explain-teach]
   structure: [table, sequence]
@@ -1332,120 +1987,12 @@
   confidence: medium
   thinking: ["why:make data more accessible and easier to use for instant visual analysis"]
 
-- id: gephi
-  origin: external
-  name: Gephi
-  urls: [https://gephi.org/desktop/]
-  domain: 通用网络分析
-  issue: 探索网络、检验假设、发现复杂关系数据里的模式
-  issue_types: [explore-discover]
-  structure: [graph]
-  modifiers: [weighted, typed, directed]
-  source: [given]
-  structure_note: "节点表和边表；可以计算度量（介数、PageRank 等）和社区"
-  focus: [connectivity, cluster, node_attr]
-  forms: [force-directed, node-link]
-  schools: [link]
-  views_note: "图窗口、数据表、预览导出"
-  abstraction: [filter-scope, aggregate]
-  abstraction_note: "按拓扑或属性实时过滤；按排名或分区数据设置颜色和大小；社区检测"
-  fit_note: "把“计算出的度量”映射到颜色和大小——图形上的重点由分析结果决定"
-  ev: ["questions:explore networks, test hypotheses", "encodings:Use ranking or partition data", "interactions:Use interactive user interface to filter", "relations:the filters related to the relational structure"]
-  confidence: medium
-
-- id: treemap-diskspace
-  origin: external
-  name: Treemap（磁盘空间）
-  urls: [https://www.cs.umd.edu/hcil/treemap-history/]
-  domain: 文件系统与资源占用
-  issue: 看谁占用了最多的磁盘空间，哪里有大块或重复的目录
-  issue_types: [locate-anomaly, understand-whole]
-  structure: [hierarchy]
-  modifiers: [weighted, nested]
-  source: [given]
-  structure_note: "目录树，叶子（文件）带大小，大小向上累加"
-  focus: [containment, distribution, node_attr]
-  forms: [treemap]
-  schools: [enclosure]
-  views_note: "递归的空间填充布局：面积=大小，嵌套边框=目录，颜色=另一属性"
-  abstraction: [aggregate, fold-drill, zoom]
-  abstraction_note: "聚合低层；缩放进入子树；悬停显示精确大小"
-  fit_note: "要看的是“叶子的量在层级中怎么分布”，用面积编码量、用包含表达层级，一屏看数万节点"
-  ev: ["input_material:compact visualization of directory tree structures", "encodings:Showing file size by area coding", "encodings:a more comprehensible design used a border to show the nesting", "abstraction:Aggregate the Lower Levels of the Tree"]
-  confidence: high
-  thinking: ["alternative:Tree structured node-link diagrams grew too large to be useful", "why:The capacity to see tens of thousands of nodes", "limit:encoding a linear variable such as file size as an area"]
-
-- id: git-history
-  origin: external
-  name: Git 提交历史
-  urls: [https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell]
-  domain: 版本控制
-  issue: 回看发生过什么，分支怎样分叉与合并
-  issue_types: [trace-flow, compare]
-  structure: [dag]
-  modifiers: [directed, temporal, versioned]
-  source: [recorded]
-  structure_note: "提交对象指向父提交（零个、一个或多个），分支只是指向某个提交的可移动指针"
-  focus: [precedence, time]
-  schools: [textlist, link]
-  views_note: "git log 按时间倒序列出；--graph 在日志旁画分支与合并的 ASCII 图"
-  abstraction: [aggregate]
-  abstraction_note: "oneline、stat、shortstat 等汇总选项把每个提交压缩成一行或几个数字"
-  fit_note: "数据结构是 DAG（合并提交有多个父亲），默认视图却是按时间排的一维列表，需要 --graph 才露出分叉结构"
-  ev: ["relations:pointers to the commit or commits that directly came before", "views:--graph Display an ASCII graph", "views:in reverse chronological order", "abstraction:a series of summarizing options"]
-  confidence: high
-
-- id: flame-graph
-  origin: external
-  name: 火焰图
-  urls: [https://www.brendangregg.com/flamegraphs.html]
-  domain: 性能剖析
-  issue: 找出最频繁的代码路径
-  issue_types: [locate-anomaly]
-  structure: [hierarchy]
-  modifiers: [weighted, derived]
-  source: [derived]
-  structure_note: "采样得到的调用栈，合并相同的帧后形成层级（调用祖先关系），每帧的值是样本数"
-  focus: [containment, distribution]
-  dropped: "时间顺序（x 轴按字母排序，不是时间）"
-  forms: [flame-graph, icicle]
-  schools: [enclosure]
-  views_note: "x 轴=栈剖面总体（字母序），y 轴=栈深度，宽度=出现频率；颜色不代表含义"
-  abstraction: [aggregate]
-  abstraction_note: "按字母序重排以最大化相同帧的合并；只有最宽的帧才有位置写标签；点击水平放大"
-  fit_note: "有意丢掉时间顺序，换来“同一路径的样本合并后宽度可比”"
-  ev: ["encodings:The x-axis shows the stack profile population, sorted alphabetically", "encodings:The wider a frame is", "abstraction:maximizes frame merging", "questions:most frequent code-paths can be identified"]
-  confidence: high
-  thinking: ["alternative:The regular profilers/tracers had produced walls of text", "why:I ditched time on the x-axis", "limit:not the passage of time"]
-  note: "同一个官方页面还讲到“火焰图表”（flame chart）：把时间放在 x 轴——这是同一批栈数据换了重点部分后的另一种视图。"
-
-- id: dsm
-  origin: external
-  name: 设计结构矩阵 DSM
-  urls: [https://dsmweb.org/reading-a-dsm/]
-  domain: 工程系统与产品架构
-  issue: 看清一个系统里元素之间的依赖，决定怎样分组与排序（团队、模块、先后）
-  issue_types: [understand-whole, impact]
-  structure: [graph]
-  modifiers: [directed, typed, bipartite]
-  source: [authored]
-  structure_note: "同一类元素的方阵：行是输出，列是输入，非对角格里的标记是依赖；也可以是两个域之间的矩阵"
-  focus: [precedence, cycle, cluster]
-  forms: [dsm, adjacency-matrix]
-  schools: [rulepos]
-  views_note: "矩阵；排序（sequencing）使反馈标记集中，聚类（clustering）找模块，分带（banding）标出可并行的活动"
-  abstraction: [aggregate, separate-views]
-  abstraction_note: "聚类把大部分交互吸收到簇内；“域”是系统的一个特定视角，一张 DSM 只含一个域"
-  fit_note: "矩阵适合稠密依赖，并且重排行列就能暴露环（反馈）和模块——这是节点连线图做不到的"
-  ev: ["encodings:Looking down any column of the matrix shows all of the inputs", "interactions:Sequencing is the reordering of the DSM rows and columns", "interactions:finding subsets of DSM elements", "abstraction:A DSM always only contains elements from one domain"]
-  confidence: high
-  thinking: ["why:The matrix provides a highly compact", "why:It is important that a DSM contains only one relationship type", "limit:A DSM always only contains elements from one domain"]
-
 - id: genealogical-graphs
   origin: external
   name: 家谱图的交互可视化
   urls: [https://www.cs.ubc.ca/~tmm/courses/grad/slides/week8.pdf]
   domain: 谱系与家族史
+  field: society
   issue: 在家谱里按自己的关系去探索，不迷路
   issue_types: [explore-discover]
   structure: [dag]
@@ -1463,453 +2010,3 @@
   confidence: low
   thinking: ["alternative:conventional charts of large, extended families", "why:to focus on visualizing only a subset of the graph at a time", "limit:Dual-trees can show many generations vertically"]
   note: "证据来自课程幻灯片对论文的转述，没读到论文原文。"
-
-- id: universal-dependencies
-  origin: external
-  name: Universal Dependencies 依存树
-  urls: [https://universaldependencies.org/introduction.html]
-  domain: 语言学
-  issue: 用同一套标注描述多种语言的句子结构，方便比较和训练解析器
-  issue_types: [explain-teach, compare]
-  structure: [hierarchy]
-  structure_was: [hierarchy, text]
-  modifiers: [typed, directed]
-  source: [authored]
-  structure_note: "句子里每个词有一个中心词（HEAD）和一个依存关系类型（DEPREL）；另有增强依存图以容纳多中心词"
-  focus: [edge_attr, containment]
-  schools: [textlist, link]
-  views_note: "纯文本格式（CoNLL-U）；另有简单的文件查看器"
-  abstraction: [none]
-  abstraction_note: "通用类别清单，加上语言专属扩展"
-  fit_note: "数据格式几乎就是结构的定义：每行一个词，两列表达“指向谁、什么关系”"
-  ev: ["relations:HEAD: Head of the current word", "relations:DEPREL: Universal dependency relation", "relations:DEPS: Enhanced dependency graph", "abstraction:propose a universal inventory of categories"]
-  confidence: medium
-
-- id: cmaptools
-  origin: external
-  name: CmapTools 概念图
-  urls: [https://cmap.ihmc.us/]
-  domain: 教育与知识建模
-  issue: 围绕一个焦点问题组织并表示知识，发现概念之间的跨联
-  issue_types: [build-author, understand-whole]
-  structure: [propositional, hierarchy]
-  structure_was: [graph, hierarchy]
-  modifiers: [typed, directed]
-  source: [authored]
-  structure_note: "概念（节点）与连接词（边上的短语）构成命题；概念由一般到具体排成层级；不同分支之间的跨联（cross-link）单独强调"
-  focus: [containment, connectivity, edge_attr]
-  forms: [concept-map]
-  schools: [notation, link]
-  views_note: "自上而下阅读的概念图"
-  abstraction: [fold-drill]
-  abstraction_note: "层级由焦点问题决定（同一领域换问题层级就变）；构建流程：焦点问题、列 15 到 25 个概念并粗排序（停车场）、初稿、找跨联、反复修订"
-  fit_note: "把“层级”和“跨联”同时画出，前者表达抽象程度，后者表达跨领域联系——两种关系用不同的线型"
-  ev: ["questions:construct concept maps with reference to some particular question", "relations:cross-links", "encodings:the most inclusive, most general concepts at the top", "relations:linking words or linking phrases"]
-  confidence: high
-  thinking: ["why:with reference to some particular question we seek to answer", "why:two features of concept maps", "limit:somewhat limit the creativity"]
-  note: "这个案例里最关键的一条：层级“依赖于使用知识的情境”，所以要有焦点问题。"
-
-- id: wikipedia-summary-style
-  origin: external
-  name: Wikipedia 摘要式写作
-  urls: [https://en.wikipedia.org/wiki/Wikipedia:Summary_style]
-  domain: 百科写作
-  issue: 一个大主题的文章太长，如何拆分又不让读者迷路
-  issue_types: [explain-teach]
-  structure: [hierarchy]
-  structure_was: [hierarchy, text]
-  modifiers: [nested]
-  source: [authored]
-  structure_note: "主文章加子文章；主文章里留下每个子主题的摘要段，并链接到子文章；子文章有自己的导语，与主文章里的摘要相近，并链回父文章"
-  focus: [containment, identity]
-  schools: [textlist]
-  views_note: "文字，用小标题下的“主条目”链接连接上下两层"
-  abstraction: [summarize, fold-drill]
-  abstraction_note: "语义概括（摘要）加链接钻取；要求在子文章里先开发新内容，再概括回父文章"
-  fit_note: "摘要与全文共存，读者一次点击切换层级；同步问题（摘要与子文章不一致）靠模板标记"
-  ev: ["abstraction:Wikipedia articles cover topics at several levels of detail", "relations:The original article should contain a section with a summary", "relations:It also contains a link back to the parent article", "interactions:Templates are available to link to subtopics and to tag synchronization problems"]
-  confidence: high
-  thinking: ["alternative:Articles over a certain size might not cover their topic", "why:Summary style keeps the reader from being overwhelmed", "limit:the summary of the child article in the parent article will need to be rewritten"]
-
-- id: explorable-explanations
-  origin: external
-  name: Explorable Explanations
-  urls: [https://worrydream.com/ExplorableExplanations/]
-  domain: 交互式写作
-  issue: 让读者不只读结论，还能改动前提看后果
-  issue_types: [explain-teach, simulate]
-  structure: [causal]
-  structure_was: [causal, text]
-  modifiers: []
-  source: [authored]
-  structure_note: "文字里嵌着一个模型：前提、假设是可调参数，后果随之更新；文字和模型对应"
-  focus: [edge_attr, node_attr]
-  schools: [textlist, channels]
-  views_note: "可调节的下划线数字；模型随之更新旁边的段落"
-  abstraction: [fold-drill]
-  abstraction_note: "同一份文档可按兴趣在多个层次阅读；相关背景“即时”给出"
-  fit_note: "文章的论述结构（前提到结论）被做成了可操作的因果结构"
-  ev: ["relations:The reader can play with the premise and assumptions", "abstraction:It can be read at multiple levels", "abstraction:Contextual information allows the reader to learn related material just-in-time"]
-  confidence: medium
-  thinking: ["alternative:A typical reading tool, such as a book or website", "why:environment to think in", "limit:the interactivity itself is not really the point"]
-
-- id: ladder-of-abstraction
-  origin: external
-  name: Up and Down the Ladder of Abstraction
-  urls: [https://worrydream.com/LadderOfAbstraction/]
-  domain: 交互式写作与抽象
-  issue: 通过在不同抽象层之间上下移动，理解一个系统的行为
-  issue_types: [explore-discover, explain-teach]
-  structure: [sequence, causal]
-  modifiers: [temporal, derived]
-  source: [authored, derived]
-  structure_note: "一个系统在参数空间里每组参数产生一条轨迹（随时间的状态序列）；从轨迹汇总出度量，再看度量如何随参数变化"
-  focus: [time, node_attr, distribution]
-  schools: [channels]
-  views_note: "单条轨迹，叠加多条轨迹，小多图阵列，度量对参数的图；颜色表示完成时间"
-  abstraction: [zoom, aggregate]
-  abstraction_note: "层级阶梯：具体的一次运行，到一组参数，到全局的度量曲面；“创造抽象时，往下走和往上走同样重要”"
-  fit_note: "每升一级都用上一级的结果做汇总；每降一级都能点回具体的一条轨迹，可追溯"
-  ev: ["abstraction:stepping down is as important as stepping up", "abstraction:The purpose of abstraction is to bring out high-level patterns", "encodings:The color represents the time to completion", "interactions:Touch the chart to step down two levels"]
-  confidence: high
-  thinking: ["why:The purpose of abstraction is to bring out high-level patterns", "limit:But this benefit comes at a cost", "alternative:each trajectory is separate and isolated"]
-
-# ───────── 认知结构本身：卡片盒、导图、论证模型 ─────────
-- id: zettelkasten
-  origin: external
-  name: Luhmann 的卡片盒
-  urls: [https://www.uni-bielefeld.de/fakultaeten/soziologie/forschung/luhmann-archiv/pdf/jschmidt_zettelkasten-als-uberraschungsgenerator.pdf]
-  domain: 知识管理与写作
-  issue: 让积累的笔记自己产生不显而易见的联想（“卡片盒为什么能发展出自己的创造力”）
-  issue_types: [explore-discover, build-author]
-  structure: [graph, hierarchy]
-  modifiers: [typed, versioned]
-  source: [authored]
-  structure_note: "每张卡片是一个单元；编号给出类似提纲或书籍目录的层级位置；卡片之间有引用，一张卡最多可列二十五个引用；另有关键词索引，同一个主题可以从不同入口进入（多重存放）"
-  focus: [connectivity, identity]
-  schools: [textlist]
-  dropped: "没有全局视图：只能沿引用和索引一步步走"
-  views_note: "实体卡片，没有画出来的图；但数据结构是图加层级加索引"
-  abstraction: [none-stated]
-  fit_note: "层级编号决定卡片放在哪里，引用建立横向联系，索引提供多个入口：同一个对象有多条到达路径。这里的“多条路径”是整理者对原文的概括"
-  ev: ["relations:Die Verweise können sich auf thematisch und räumlich nahestehende Zettel beziehen", "entities:Auf einem solchen Zettel können bis zu 25 Verweise", "abstraction:Multiple-Storage-Prinzip", "questions:Wie aber ist es möglich", "views:eine Ordnungsstruktur im Sinne einer Systematik"]
-  confidence: medium
-  note: "来源是 Bielefeld 的 Luhmann 档案网站上一篇分析卡片盒的文章（德语，二手分析），不是 Luhmann 本人的文字；档案网站的教程页读不到。"
-
-- id: markmap
-  origin: external
-  name: Markmap
-  urls: [https://markmap.js.org/docs/markmap]
-  domain: 知识管理与写作
-  issue: 把一篇 Markdown 文档的层级直接看成一张可折叠的思维导图
-  issue_types: [understand-whole, explain-teach]
-  structure: [hierarchy]
-  structure_was: [text, hierarchy]
-  modifiers: [derived, nested]
-  source: [derived]
-  structure_note: "Markdown 的标题和列表被解析成树，再渲染成 SVG 思维导图；文字和导图共用一份源"
-  focus: [containment]
-  dropped: "只用到层级这一种关系；文章里的论证、引用、跨节联系不会出现在导图里（整理者判断）"
-  forms: [tree]
-  schools: [link]
-  views_note: "可缩放、平移、折叠的思维导图；分支颜色按祖先冻结"
-  abstraction: [fold-drill]
-  abstraction_note: "初始展开层数可设置；折叠一个节点和它的所有后代"
-  fit_note: "把分层文章和结构图连起来最直接的一例，但连的只是“层级”这一种关系"
-  ev: ["input_material:extracts its intrinsic hierarchical structure", "interactions:Fold the current node and all its descendents", "abstraction:The maximum level of nodes to expand on initial render", "encodings:all child branches will use the color of their ancestor node"]
-  confidence: high
-
-- id: toulmin
-  origin: external
-  name: 图尔敏论证模型
-  urls: [https://www.blinn.edu/writing-centers/wide/toulmin-argument.html]
-  domain: 论证与写作
-  issue: 分析并检验一个论证站不站得住，找出最弱的一环
-  issue_types: [reason-argue, build-author]
-  structure: [propositional]
-  structure_was: [graph]
-  modifiers: [typed, directed]
-  source: [authored]
-  structure_note: "论证被拆成有固定角色的部分：主张、依据、保证（warrant）、支撑（backing）、限定词、反驳；关系也只有几种固定的（支持、依赖、加强、限定）"
-  focus: [edge_attr, provenance]
-  forms: [argument-map]
-  schools: [notation]
-  views_note: "一张固定的角色关系图"
-  abstraction: [none]
-  fit_note: "把“为什么这条依据能推出这个主张”这个常被省略的连接（保证）变成必须写明的一个对象——这是整理者对原文的概括"
-  ev: ["entities:WARRANT – logical and persuasive connection", "attributes:Toulmin says that the weakest part of any argument", "relations:The warrant is the assumption on which the claim and the evidence depend", "questions:Second, test and critique your own argument"]
-  confidence: high
-
-# ───────── 开源生态的地图、分类与知识图谱（用户 2026-10-13 发来的一份调研里提到的项目；事实只取官方页面，调研里的说法逐条核对过，见各案例 note）─────────
-- id: oss-ai-gap-map
-  origin: external
-  name: Open Source AI Gap Map
-  urls: ["https://www.aipotluck.org/map", "https://www.currentai.org/blogs/introducing-the-gap-map-v0-1"]
-  domain: 开源生态评估
-  issue: 看开源 AI 生态里哪些类别已经成熟、哪里还有缺口，好决定资金和精力投向哪里
-  issue_types: [decide-status, understand-whole]
-  structure: [set, table]
-  modifiers: [typed, weighted]
-  source: [authored, given]
-  structure_note: "产品归入类别，类别归入三个层次（模型组件、产品与用户体验、基础设施）；产品带开放程度、能力、采用程度，打 1 到 5 分；成熟度阶段和缺口是类别的属性，不是产品的属性"
-  focus: [node_attr, membership]
-  schools: [channels, textlist]
-  views_note: "按层次分页签的类别列表：每行一个类别，列出成熟度阶段、发现的缺口（字母标记）和该类别下的开放产品（色块，得分高的实心、其余只画轮廓）"
-  dropped: "不比较开源与闭源生态谁领先，只说开源生态还缺什么"
-  abstraction: [aggregate, separate-views]
-  abstraction_note: "类别的成熟度由其中完全开放的产品推进；三个层次分页签"
-  ev: ["abstraction:Maturity is a property of a category", "attributes:Every product carries a score on a 1–5 scale", "questions:What layers are overinvested in", "encodings:Products scoring 4.5 or above", "relations:Only fully open products advance"]
-  thinking: ["why:compare closed versus open AI ecosystems", "alternative:Repository stars can provide a useful signal", "limit:The map is a curated view of a fast-moving ecosystem"]
-  confidence: medium
-  note: "调研里的“62,538 个收录条目、1,133 个已评分、v0.5.0、2026-10-13 更新、三个层次”，官方页面都找到了原文（页面写 Version 0.5.0 - Last update: 13 Oct 2026）；已评分占比约 1.8% 是调研按这两个数算的。官方方法页写明这是“curated view … not a complete census”。"
-
-- id: atlas-taxonomy
-  origin: external
-  name: ATLAS：用多个 LLM Agent 自动构建软件仓库分类体系
-  urls: ["https://arxiv.org/abs/2606.21597", "https://atlas-taxonomy.netlify.app/"]
-  domain: 软件仓库分类
-  issue: 给五万多个 GitHub 仓库建一棵带定义和拆分理由的多层分类树，用来按任意粒度检索、找功能等价的替代项目、看生态趋势
-  issue_types: [retrieve, explore-discover]
-  structure: [hierarchy]
-  modifiers: [derived, nested]
-  source: [derived]
-  structure_note: "分类树：每个节点有名称、定义、纳入标准、拆分维度、层级、父子关系和归入的仓库；54k 版本有 9 个顶层领域、9 层、36,000 个节点；一个仓库只归入一个主要功能角色"
-  focus: [containment, membership]
-  schools: [link]
-  views_note: "探索器（Rank-Aligned View）：把各分支按语义层级对齐的树，可展开、折叠，高亮后插入的子层和深度被调整的节点"
-  dropped: "活跃度、许可证、安全等维度不进分类；不做多标签"
-  abstraction: [fold-drill, aggregate]
-  abstraction_note: "层级越深越具体；构建后做“层级对齐”，让不同分支的粒度一致；从粗类进入逐层下钻"
-  ev: ["abstraction:tree depth encodes increasing specificity", "abstraction:After construction, a Level Alignment phase", "interactions:Expand All Collapse All", "attributes:every category carries a name"]
-  thinking: ["why:GitHub Topics, the dominant organizational mechanism, is flat", "alternative:Embedding-based clustering groups repositories", "limit:ATLAS assigns each repository a single dominant functional role"]
-  confidence: high
-  note: "调研里的“54,387 个仓库、36,000 个节点、9 层 9 个顶层领域、Star 至少 1,000、数据含定义与纳入标准、85.71% 的 Top-1 精度”五条，官方 Zenodo 页都找到了原文。85.71% 是作者在替代项目发现任务上的实验精度，不是现实产品推荐的已验证准确率（调研也这样提醒）。"
-
-- id: semantic-map-github
-  origin: external
-  name: Semantic Map of GitHub
-  urls: ["https://stevenfazzio.com/semantic-github-map/", "https://stevenfazzio.com/semantic-github-map/methodology.html"]
-  domain: 开源生态地图
-  issue: 看高 Star 仓库按 README 语义自然聚成哪些主题，每个仓库在地图上和谁相邻
-  issue_types: [explore-discover, understand-whole]
-  structure: [spatial]
-  modifiers: [derived, typed]
-  source: [derived]
-  structure_note: "每个仓库是一个点；位置由 README 的向量经降维得到，语义相近的挨在一起；多层级主题标签由层次密度聚类生成；每个仓库另有大模型从 README 提取的标题、摘要、标语、项目类型、目标读者"
-  focus: [position, cluster]
-  schools: [channels, schematic]
-  views_note: "交互 HTML 地图（DataMapPlot）：悬停看标题、标语、类型、语言、Star；可换颜色（创建时间、最近推送、簇）；可搜索、过滤、点击跳转"
-  dropped: "页面写明簇与簇之间的距离不宜读作差异大小的精确度量；README 短于 200 字符的仓库不收"
-  abstraction: [zoom, aggregate]
-  abstraction_note: "主题标签分多个细节层级，从大类到子主题，缩放时出现"
-  ev: ["encodings:Repositories with similar descriptions", "abstraction:Cluster labels appear on the map at multiple levels", "attributes:Each README is processed by Claude Haiku"]
-  thinking: ["alternative:This project instead uses a content-based signal", "why:result cap and non-deterministic ordering", "limit:Selection bias"]
-  confidence: high
-  note: "调研里的“约 1 万个高 Star 仓库、README 转向量、UMAP 降维、公开处理脚本”，官方方法页都找到了原文（向量 512 维，用 Cohere embed-v4.0；降维到二维）。调研说“地图距离来自 README 语义，不是经过验证的产品定位”，方法页的局限一节也写了：README 稀疏或有误导会被放错位置。"
-
-- id: map-of-github
-  origin: external
-  name: Map of GitHub
-  urls: ["https://anvaka.github.io/map-of-github/"]
-  domain: 开源生态地图
-  issue: 看 GitHub 上几十万个项目在“被同一批人点 Star”的空间里怎样分布成一块块“国家”，找到相邻的项目
-  issue_types: [explore-discover]
-  structure: [spatial]
-  modifiers: [derived, weighted]
-  source: [derived]
-  structure_note: "点是项目；两点靠得近，是因为多个用户同时给两者点过 Star；约 69 万个项目聚成约 1,500 个“国家”；点的大小是 Star 数"
-  focus: [cluster, position]
-  schools: [schematic, channels]
-  views_note: "二维地图：点按共同 Star 的用户聚成团，团有名字（国家）；可缩放、搜索项目、与 ChatGPT 对话。地图风格的国家、地区隐喻是页面自己的说法"
-  abstraction: [aggregate, zoom]
-  abstraction_note: "约 69 万个项目聚成约 1,500 个国家；缩放到一定程度才看得到单个项目（无结果时页面提示 Try zooming in?）"
-  ev: ["abstraction:The map has approximately 690,000 projects", "relations:Two dots within the same cluster", "attributes:The size of the dot"]
-  confidence: medium
-  note: "调研里的“约 69 万个项目、约 1,500 个聚类、用共同 Star 的用户重合度算距离、数据到 2025 年 5 月前”，官方页面（About 文字在页面加载的脚本里）都找到了原文；页面写的是 Star 数据到 2025 年 4 月底，没写发布日期。“揭示的是开发者兴趣结构，不是产品需求结构”是调研的判断，页面只写“多个用户同时给两者点 Star”。官方页没有设计思路类的说明，所以没有 thinking。"
-
-- id: git-top-atlas
-  origin: external
-  name: Git.Top Atlas
-  urls: ["https://git.top/atlas", "https://git.top/topics/atlas-guide"]
-  domain: 开源生态导航
-  issue: 从一个生态（如 Cloudflare、MCP、RAG）进入，看里面的项目、替代方案、依赖和评分，做取舍
-  issue_types: [explore-discover, decide-status, compare]
-  structure: [graph, set]
-  modifiers: [typed, weighted, derived, provenance]
-  source: [derived]
-  structure_note: "生态里的项目是节点；替代、部署、依赖、用例、类别变成可复用的图边；项目带质量分和代理分（分开），回答附来源元数据、分类证据和置信度"
-  focus: [connectivity, node_attr]
-  schools: [link, textlist]
-  views_note: "Atlas 页：每个生态一张卡片，卡片里是该生态的小关系图；点进去按生态、项目、关系图与评分逐步收窄；另提供 Atlas JSON"
-  abstraction: [fold-drill, filter-scope]
-  abstraction_note: "“Start broad in Cloudflare Ecosystem, then narrow to one project with score and graph evidence”"
-  ev: ["abstraction:Start broad in Cloudflare Ecosystem", "relations:Alternatives, deployments, dependencies, use cases, and categories become reusable graph edges", "attributes:Quality score and agent score are separate", "attributes:Responses include source metadata"]
-  thinking: ["why:Atlas is the Git.Top map layer", "alternative:Navigate ecosystems as connected project maps instead of isolated lists"]
-  confidence: medium
-  note: "调研里的“Beta、覆盖 Agent/MCP/RAG/浏览器 AI/AI IDE/LLM Gateway、从类别进项目看关系图替代方案评分、项目约一千多个”，官方页面都找到了原文（页面写 1216 projects loaded）。页面没有写评分怎么算，所以评分的依据没核实。"
-
-- id: semrepo
-  origin: external
-  name: SemRepo
-  urls: ["https://arxiv.org/abs/2605.13310", "https://scads.ai/semrepo-knowledge-graph-for-research-software/"]
-  domain: 研究软件知识图谱
-  issue: 把研究软件和论文、作者连起来，回答哪些论文对应的仓库仍在维护、被广泛复用、背后是哪些研究者
-  issue_types: [retrieve, explore-discover]
-  structure: [graph]
-  modifiers: [typed, derived, provenance]
-  source: [derived, given]
-  structure_note: "以仓库为中心的本体：仓库、人（作者、贡献者、点赞者等角色）、Issue、编程语言引用、论文；贡献量和语言占比用中间节点（ContributorReference、LanguageReference）带上提交数和占比；作者链到 SemOpenAlex，仓库链到 LPWC 论文"
-  focus: [connectivity, edge_attr]
-  schools: []
-  views_note: "没有图形界面：以 RDF 转储和公开 SPARQL 端点提供，读到的页面里没有可视化（端点页是一个查询编辑器）"
-  abstraction: [none-stated]
-  ev: ["entities:At the center of the ontology is the class Repository", "relations:sr:ContributorReference, which acts as an intermediate node", "interactions:(b) We deploy the dataset in triple store"]
-  thinking: ["why:cannot be adequately represented by a simple binary predicate", "alternative:links to implementations are often buried in unstructured text", "limit:we acknowledge that it inherits structural biases"]
-  confidence: high
-  note: "调研里的“约 19.8 万个仓库的元数据、Issue、开发者与论文关联、SPARQL、约半年更新一次”，官方论文都找到了原文（197,566 个唯一仓库地址；approx. twice per year）。整理者的读法〔推〕：把“贡献”做成带提交数的中间节点，是给边加属性的一种做法（Hogan 等综述里叫 reification），和本库“一般图”一节讲的一致。"
-
-- id: moss
-  origin: external
-  name: MOSS（研究软件知识图谱）
-  urls: ["https://pretalx.com/juliacon-2025/talk/3EVLR9/", "https://numfocus.org/open-source-science-initiative-ossci"]
-  domain: 研究软件知识图谱
-  issue: 把 Julia 生态里的仓库、贡献者、论文、机构连成属性图，看谁贡献了什么、哪些包被哪些论文引用
-  issue_types: [explore-discover, understand-whole]
-  structure: [graph]
-  modifiers: [typed, derived]
-  source: [derived]
-  structure_note: "属性图：节点类型有仓库、论文、人、机构、主题，由关系连接；数据来自 GitHub、OpenAlex、CrossRef 等，经转换层统一字段、合并冲突、解析别名"
-  focus: [connectivity]
-  schools: []
-  views_note: "读到的页面只说“可视化代码贡献、论文与机构的关系”，没写画法；演讲页给的在线地址 opensource.science/moss 在这次访问里返回 404"
-  abstraction: [none-stated]
-  ev: ["entities:The resulting property graph uses well-defined node types", "input_material:a system that consolidates data from GitHub"]
-  thinking: ["why:Our goal with MOSS is to unify disparate data streams", "alternative:While the Julia ecosystem has grown impressively"]
-  confidence: low
-  note: "只读到 JuliaCon 2025 的演讲介绍页和 NumFOCUS 的项目页，没有读到项目自己的文档。调研里的三条说法——“把仓库、作者、机构、出版物、依赖关系连起来”“记录关系的发现来源”“代码最近一次更新停留在 2025 年 7 月”——在这两页里都没找到（演讲页没提依赖关系和来源记录；更新时间要看 GitHub，没有访问），**未核实**。"
-
-- id: ecosystems
-  origin: external
-  name: Ecosyste.ms
-  urls: ["https://packages.ecosyste.ms/", "https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html"]
-  domain: 开源数据基础设施
-  issue: 为开源项目提供跨托管平台的包、仓库、依赖、提交、Issue 数据的开放 API，支撑生态研究与维护
-  issue_types: [explore-discover]
-  structure: [graph, sequence]
-  modifiers: [typed, temporal, derived]
-  source: [derived]
-  structure_note: "多个服务各管一块：包（含版本、命名空间、维护者）、仓库（含标签、清单、依赖）、Issue 与 PR、提交、时间线事件、论文与软件项目的映射；依赖是包之间的关系"
-  focus: [connectivity]
-  schools: []
-  views_note: "读到的是服务列表和规模数字，没有视图的描述"
-  abstraction: [none-stated]
-  ev: ["entities:Hosts: 784", "relations:Dependencies: 14,051,505,152"]
-  thinking: ["why:16 significant services", "limit:We also used up the majority of our grant"]
-  confidence: low
-  note: "只读到作者 Andrew Nesbitt 2023 年 12 月的年终博客，所有数字是 2023 年底的；官方文档站（各服务的 API 文档）这次没有读。调研里“跨托管平台整合仓库、包、依赖、Issue、提交和历史事件、开放 API”，博客里能对上（784 个托管平台、74.3 亿条事件、各服务都是开放 API）。"
-
-- id: opendigger
-  origin: external
-  name: OpenDigger
-  urls: ["https://open-digger.cn/en/", "https://open-digger.cn/en/docs/user-docs/metrics/openrank", "https://open-digger.cn/en/docs/user-docs/metrics/playground"]
-  domain: 开源活动指标
-  issue: 用统一的指标（活跃度、OpenRank 等）度量开源项目和开发者的活动与影响力随时间的变化
-  issue_types: [decide-status, explore-discover]
-  structure: [graph, sequence]
-  modifiers: [weighted, temporal, derived, typed]
-  source: [derived]
-  structure_note: "协作网络：开发者、仓库、Issue、合并的 PR 是节点，归属与活动是带权边；OpenRank 沿网络迭代并继承上个月的值；指标按月、季、年出时间序列"
-  focus: [node_attr, time, edge_attr]
-  schools: [channels]
-  views_note: "Playground：输入平台、仓库或用户名，看指标的柱线图；另有 OpenLeaderboard 和浏览器插件 HyperCRX 里的 Perceptor 标签"
-  abstraction: [aggregate]
-  abstraction_note: "开发者活跃度求和成仓库活跃度；仓库的 OpenRank 平均分给它的 Issue 与 PR；指标按月、季、年汇总"
-  ev: ["questions:OpenRank aims to explore the flow of value", "abstraction:The repository's OpenRank is evenly distributed", "views:In this playground page", "relations:transferred to its repository"]
-  thinking: ["why:OpenRank was introduced to address the widespread observer effect", "alternative:such as the alienation behavior and community damage caused by metrics like the number of stars", "limit:OpenDigger does not export metrics data for all repositories and users"]
-  confidence: high
-  note: "调研里的“项目活动、开发者参与、OpenRank、历史序列”，官方文档能对上（指标文件按月、季、年存成 JSON）；“社区演化”页面没有这个词。官方文档自己写了几条局限：GitHub 数据源有缺失，Community OpenRank 算法实现尚未开源，活跃度只算有实质贡献的协作行为、不算 Star 和 Fork。"
-
-- id: deps-dev
-  origin: external
-  name: deps.dev（Open Source Insights）
-  urls: ["https://docs.deps.dev/", "https://blog.deps.dev/api/"]
-  domain: 软件供应链
-  issue: 弄清一个包的完整依赖图、版本、许可证和安全公告，评估引入它会带来多大风险
-  issue_types: [impact, understand-whole, locate-anomaly]
-  structure: [graph]
-  modifiers: [directed, typed, versioned, derived]
-  source: [derived]
-  structure_note: "包、版本、依赖、许可证、安全公告、项目托管构成的图；传递依赖图按各包管理器自己的算法算出，不只是清单里声明的"
-  focus: [connectivity, node_attr]
-  schools: [link]
-  views_note: "网站：搜索包、可视化依赖、比较版本、看安全公告；API 博客里的依赖图用 GraphViz 渲染"
-  abstraction: [aggregate]
-  abstraction_note: "收集并聚合数据，再推出传递依赖图和安全公告的影响报告"
-  ev: ["relations:a full dependency graph computed using the same algorithms", "views:Search for open source packages, visualize dependencies", "questions:How many dependencies does this package have"]
-  thinking: ["why:The goal is to provide developers with a picture of how their software is put together", "alternative:The deps.dev dependency data is not just what a package declares", "limit:The service currently indexes the Cargo, Go, Maven"]
-  confidence: high
-  note: "调研里的“包、版本、依赖、安全公告”，官方文档与博客都找到了原文；“关系以软件供应链为主”，官方博客写 understand the risks in their software supply chains。"
-
-- id: codegraph
-  origin: external
-  name: CodeGraph（面向源代码的开放分类知识图谱）
-  urls: ["https://arxiv.org/abs/2609.29474"]
-  domain: 代码知识图谱
-  issue: 用代码本身而不是标签，找到实现某个算法、遵循某种范式、属于某个应用领域的文件，并看同一算法跨领域的复用
-  issue_types: [retrieve, explore-discover]
-  structure: [graph, hierarchy]
-  modifiers: [typed, derived, provenance, nested]
-  source: [derived]
-  structure_note: "文件节点连到抽取出的概念节点（算法、范式、设计模式、应用领域），边带类型和来源；概念再对齐到 Wikidata，并沿 Wikidata 的父类关系向上汇总；约 6.3 万个概念实体，1.449 亿个文件节点"
-  focus: [connectivity, containment, provenance]
-  schools: [channels]
-  views_note: "没有图探索界面：论文里是方法流程图、组成统计图和“算法 × 应用领域”热图（用颜色表示出现次数）；数据在 Hugging Face 上以表格浏览"
-  abstraction: [aggregate, summarize]
-  abstraction_note: "hierarchy-rollup：引入 Wikidata 的父类闭包，把细粒度概念汇总到任意层级"
-  ev: ["abstraction:enabling aggregation of fine-grained concepts at arbitrary levels", "relations:the same algorithm node dynamic programming", "entities:about 63,000 extracted concept entities"]
-  thinking: ["why:The taxonomy is deliberately open", "alternative:Classical static-analysis tools dissect code with high precision", "limit:The two values therefore bracket the range of plausible precision estimates"]
-  confidence: high
-  note: "调研里的“把算法、设计模式、编程范式和应用领域连接起来”“约 1.449 亿个代码文件”，论文都找到了原文（144,910,008 个文件节点，来自 167M 文件语料去掉约 2200 万个标记语言文件）。论文自己写了抽取精度的范围：保守下限 68%、宽松上限 88%，设计模式和范式的标注不够可靠、不能单独支持强的定量结论。"
-
-- id: software-heritage-graph
-  origin: external
-  name: Software Heritage Graph Dataset
-  urls: ["https://registry.opendata.aws/software-heritage/", "https://arxiv.org/abs/2011.07824"]
-  domain: 源代码历史图谱
-  issue: 跨项目、跨托管平台追踪同一份源码和它的开发历史，研究公开软件开发的长尾
-  issue_types: [trace-flow, explore-discover]
-  structure: [dag]
-  modifiers: [directed, versioned, provenance]
-  source: [recorded]
-  structure_note: "统一的 Merkle DAG，五个逻辑层：内容（叶子）、目录、修订（提交）、发布、快照；目录项指向内容、修订或别的目录，修订指向根目录和父修订；相同节点被共享，用密码学哈希作标识"
-  focus: [precedence, provenance, identity]
-  schools: []
-  views_note: "没有交互视图：论文里是数据模型图（图 2）和简化 schema；数据以关系表提供，可用 SQL 查询。官方文档站被反机器人页拦住，没读到"
-  abstraction: [aggregate]
-  abstraction_note: "去重：所有相同的节点被共享；跨版本控制系统和包管理器，给出规范的表示"
-  ev: ["entities:point-in-time captures of the entire source tree", "relations:Each revision points to the root directory", "abstraction:As shown in Figure 2, the Software Heritage DAG is organized in five logical layers", "views:Figure 2: Data model"]
-  thinking: ["why:exploits the fact that source code artifacts are massively duplicated", "alternative:This approach has limitations in scope", "limit:The dataset captures the state of the Software Heritage archive on September 25th 2018"]
-  confidence: high
-  note: "证据主要来自 2020 年的论文（数据截至 2018 年 9 月）和 AWS 开放数据登记页（写数据每年更新）。调研里“保存源代码对象、目录、版本和历史来源之间的关系”，登记页找到了原文；“是理解开源软件历史谱系的基础”是调研的判断，页面没有这样写。"
-
-- id: speculora
-  origin: external
-  name: Speculora
-  urls: ["https://speculora.com/", "https://speculora.com/info"]
-  domain: 市场需求分析
-  issue: 让独立开发者看到软件需求在哪里拥挤、哪里有可用的缺口
-  issue_types: [decide-status, explore-discover, compare]
-  structure: [hierarchy, table]
-  modifiers: [typed, weighted, derived, temporal]
-  source: [derived]
-  structure_note: "15 个领域，下分子领域，下面是“任务”（人想完成的一件具体事）；每个任务带需求、供给、质量、价格信号，算出缺口等级和机会分；证据来自应用商店评论和技术论坛"
-  focus: [node_attr, membership]
-  schools: [textlist, enclosure]
-  views_note: "首页是交互地图；领域页是按机会分数排序的任务列表，每项标缺口等级、应用数和用户反馈数；无头浏览器打开首页还看到 Top gaps、Full tree、Treemap 等标签（整理者所见，官方文字没有说明）"
-  dropped: "以“任务”而不是“市场”为单位"
-  abstraction: [fold-drill, aggregate]
-  abstraction_note: "领域、子领域、任务三级；缺口等级把多项信号合成一个状态"
-  ev: ["abstraction:The unit is a task, not a market", "relations:Each task carries demand, supply, quality, and price signals", "views:Explore the live, interactive map above", "input_material:real user reviews mined from the app stores"]
-  thinking: ["why:It is not another idea generator", "alternative:There has been no systematic way for a solo builder", "limit:And gaps decay, so freshness matters"]
-  confidence: medium
-  note: "调研里的“15 个领域、对任务按需求/竞争/现有产品的不足打分、证据来自 App Store、Google Play、Hacker News、Stack Exchange”，官方首页都找到了原文。“指标缺独立效果验证”是调研的判断，官方页面没有相关说明；官方写数据每周重算。"
