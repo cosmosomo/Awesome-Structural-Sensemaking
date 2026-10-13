@@ -24,7 +24,9 @@ CHECK_MARK = {"ok": "✓", "missing": "？", "unreadable": "？", "unchecked": "
 
 
 def load_cases(cat: Path) -> dict:
+    gpath = cat / "case-gallery.json"
     return {
+        "gallery": json.loads(gpath.read_text(encoding="utf-8")) if gpath.exists() else {},
         "cases": yaml.safe_load((cat / "cases.yaml").read_text(encoding="utf-8")) or [],
         "vocab": yaml.safe_load((cat / "case-vocab.yaml").read_text(encoding="utf-8")),
         "evidence": json.loads((cat / "case-evidence.json").read_text(encoding="utf-8")),
@@ -87,8 +89,24 @@ def validate_cases(c: dict, project_ids: set[str], form_ids: set[str]) -> list[s
             errs.append(f"案例 {i}: confidence 为 high 但没有 ev")
         if case.get("structure") and case.get("focus") is None:
             errs.append(f"案例 {i}: 缺少 focus（没有重点部分的案例写 focus: []）")
-    for i in c["evidence"]:
-        pass
+    case_ids = {x["id"] for x in c["cases"]}
+    for gid, g in c.get("gallery", {}).items():
+        if gid not in case_ids:
+            errs.append(f"画廊: {gid} 不是案例 id")
+            continue
+        urls = []
+        if g.get("demo"):
+            urls.append(g["demo"].get("url"))
+            if g["demo"].get("mode") not in ("live", "samples", "video", "login"):
+                errs.append(f"画廊 {gid}: 展示页 mode 要是 live / samples / video / login: {g['demo'].get('mode')}")
+        urls += [p.get("url") for p in g.get("pages", [])]
+        for im in g.get("images", []):
+            urls.append(im.get("url"))
+            if im.get("kind") not in ("screenshot", "diagram", "figure", "banner"):
+                errs.append(f"画廊 {gid}: 图片 kind 不合法: {im.get('kind')}")
+        for u in urls:
+            if not (isinstance(u, str) and u.startswith("https://") and " " not in u):
+                errs.append(f"画廊 {gid}: 地址不合法: {u}")
     return errs
 
 
@@ -283,7 +301,127 @@ def render_evidence(d: dict, _arg: str) -> str:
     return "\n".join(out)
 
 
+def gallery_images(g: dict) -> list[dict]:
+    """能展示的图片：核对过是图片；位图宽不小于 180、高不小于 100（更小的看不清）。"""
+    out = []
+    for im in g.get("images", []):
+        ck = im.get("check") or {}
+        if ck.get("status") != 200 or not str(ck.get("content_type", "")).startswith("image/"):
+            continue
+        if (ck.get("width") and ck["width"] < 180) or (ck.get("height") and ck["height"] < 100):
+            continue
+        out.append(im)
+    return out
+
+
+def gallery_pages(g: dict) -> list[dict]:
+    """说明页：去掉和展示页同一地址的，以及核对时打不开的。"""
+    demo = (g.get("demo") or {}).get("url")
+    return [p for p in g.get("pages", []) if p["url"] != demo and (p.get("check") or {}).get("status") in (None, 200)]
+
+
+def render_demo_line(g: dict) -> str:
+    demo = g.get("demo")
+    if not demo:
+        why = (g.get("not_found") or [""])[0]
+        if len(why) > 110:
+            cut = max(why.rfind(x, 0, 110) for x in ("；", "。", "，", "，"))
+            why = why[: cut if cut > 40 else 110] + "…"
+        return "- 展示页：没有找到在线展示页" + (f"<sub>（{esc(why)}）</sub>" if why else "")
+    ck = demo.get("check") or {}
+    rd = demo.get("render") or {}
+    title = demo.get("title") or ck.get("title") or "展示页"
+    label = {"live": "展示页（可直接操作）", "samples": "展示页（样例目录）", "video": "展示页（演示视频或导览）", "login": "展示页（需要登录）"}[demo.get("mode", "live")]
+    bits = [f"- {label}：[{esc(title)}]({demo['url']})"]
+    if demo.get("how"):
+        bits.append(f"（{esc(demo['how'])}）")
+    if rd:
+        if rd.get("error"):
+            bits.append("<sub> 渲染检查：没打开</sub>")
+        else:
+            parts = [f"页面文字 {rd.get('text_len', 0)} 字"]
+            if rd.get("canvas"):
+                parts.append(f"canvas {rd['canvas']} 个")
+            if rd.get("svg"):
+                parts.append(f"svg {rd['svg']} 个")
+            thin = rd.get("text_len", 0) < 200 and not rd.get("canvas") and rd.get("svg", 0) < 3 and not demo["url"].endswith(".svg")
+            bits.append(f"<sub> 渲染检查（无头 Chromium，{rd.get('at', '')}）：{'、'.join(parts)}{'；内容很少，可能需要交互或登录' if thin else ''}</sub>")
+    elif ck.get("status") == 200:
+        bits.append("<sub> 链接可访问，未做渲染检查</sub>")
+    elif ck:
+        bits.append(f"<sub> 链接检查：{ck.get('status')}</sub>")
+    if demo.get("seen"):
+        bits.append(f"<sub> 打开后所见：{esc(demo['seen'])}</sub>")
+    return "".join(bits)
+
+
+def render_gallery(d: dict, arg: str) -> str:
+    c, v = d["cases"], d["cases"]["vocab"]
+    projects = {p["id"]: p for p in d["projects"]}
+    gal = c.get("gallery", {})
+    rows = [x for x in c["cases"] if x["structure"][0] == arg and x["id"] in gal]
+    if not rows:
+        return "暂无。\n"
+    out: list[str] = []
+    for x in rows:
+        g = gal[x["id"]]
+        meta = f"{esc(x['domain'])} · {v['structures'][x['structure'][0]]['title']}"
+        if x.get("focus"):
+            meta += " · 重点：" + "、".join(v["focus_parts"][f]["title"] for f in x["focus"][:2])
+        out.append(f"#### {name_link(x, projects)}\n")
+        out.append(f"<sub>{meta}</sub>　{esc(x['issue'])}\n")
+        out.append(render_demo_line(g))
+        for p in gallery_pages(g):
+            why = f"（{esc(p['why'])}）" if p.get("why") else ""
+            out.append(f"- 网页：[{esc(p.get('title') or p['url'])}]({p['url']}){why}")
+        imgs = gallery_images(g)
+        if imgs:
+            out.append("")
+            out.append(" ".join(f'<a href="{im["url"]}"><img src="{im["url"]}" width="230" alt="{esc(im.get("alt") or x["id"])}"></a>' for im in imgs))
+            caps = [f"{esc(im['caption'] or im['alt'])}（[来源页]({im['page']})）" for im in imgs if (im.get("caption") or im.get("alt"))]
+            if caps:
+                out.append("")
+                out.append("<sub>图：" + "；".join(caps) + "</sub>")
+        out.append(f"\n<sub>[编码与原文摘录](case-evidence.md#{x['id']})</sub>\n")
+    return "\n".join(out) + "\n"
+
+
+def render_gallery_index(d: dict, _arg: str) -> str:
+    """一张总表：每个案例的展示页、图片数、网页数，方便一个个点开。"""
+    c, v = d["cases"], d["cases"]["vocab"]
+    projects = {p["id"]: p for p in d["projects"]}
+    gal = c.get("gallery", {})
+    order = list(v["structures"])
+    rows = sorted(c["cases"], key=lambda x: order.index(x["structure"][0]))
+    out = ["| 案例 | 领域 | 主结构 | 展示页 | 图 | 网页 |", "|---|---|---|---|---|---|"]
+    mode = {"live": "可操作", "samples": "样例目录", "video": "视频/导览", "login": "需登录"}
+    for x in rows:
+        g = gal.get(x["id"], {})
+        demo = g.get("demo")
+        dcell = f"[{mode[demo.get('mode', 'live')]}]({demo['url']})" if demo else "—"
+        out.append(f"| {name_link(x, projects)} | {esc(x['domain'])} | {v['structures'][x['structure'][0]]['title']} | {dcell} | "
+                   f"{len(gallery_images(g)) or '—'} | {len(gallery_pages(g)) or '—'} |")
+    return "\n".join(out) + "\n"
+
+
+def render_gallery_stats(d: dict, _arg: str) -> str:
+    c = d["cases"]
+    gal = c.get("gallery", {})
+    cases = len(c["cases"])
+    demos = [g["demo"] for g in gal.values() if g.get("demo")]
+    modes = {m: sum(1 for x in demos if x.get("mode") == m) for m in ("live", "samples", "video", "login")}
+    rendered = sum(1 for x in demos if x.get("render") and not x["render"].get("error"))
+    with_img = sum(1 for g in gal.values() if gallery_images(g))
+    n_img = sum(len(gallery_images(g)) for g in gal.values())
+    return (f"{cases} 个案例里，{len(demos)} 个有在线展示页（可操作 {modes['live']}、样例目录 {modes['samples']}、视频或导览 {modes['video']}、需要登录 {modes['login']}），"
+            f"其中 {rendered} 个用无头 Chromium 实际打开过；{with_img} 个有官方图片，共 {n_img} 张。"
+            f"其余 {cases - len(demos)} 个没找到在线展示页（命令行工具、规范、方法类，或官方页面读不到），原因写在各案例下。图片只存地址，不转存。\n")
+
+
 CASE_RENDERERS = {
+    "gallery": render_gallery,
+    "gallerystats": render_gallery_stats,
+    "galleryindex": render_gallery_index,
     "cases": render_by_structure,
     "casefocus": render_focus_matrix,
     "caseissue": render_issue_matrix,

@@ -243,7 +243,7 @@
   focus: "图数据查询驱动的看板。"
   repo: https://github.com/neo4j-labs/neodash
   status: needs-check
-  notes: "Neo4j Labs 页面写明该文档对应 Labs 里“不受官方支持”的 NeoDash 版本，受支持的版本见 NeoDash commercial（2026-10-13 访问）；仓库原写 neo4j-contrib/neodash，页面里的源码链接是 neo4j-labs/neodash，已改。独立仓库的维护状态需在 GitHub 上核实。"
+  notes: "Neo4j Labs 页面写明该文档对应 Labs 里“不受官方支持”的 NeoDash 版本，受支持的版本见 NeoDash commercial（2026-10-13 访问）；仓库原写 neo4j-contrib/neodash，页面里的源码链接是 neo4j-labs/neodash，已改。独立仓库的维护状态需在 GitHub 上核实；示例看板站（demo）用无头浏览器打开后页面写着 “The NeoDash sample gallery has been deprecated”，已弃用（2026-10-13）。"
   demo: https://neodash-gallery.graphapp.io/
   demo_source: search
   demo_checked: "2026-10-13"

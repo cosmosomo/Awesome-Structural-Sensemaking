@@ -12,6 +12,7 @@
 | [`case-analysis-method.md`](case-analysis-method.md) | 案例分析的方法：怎么收案例、编码、核对摘录，以及限制。 |
 | [`case-analysis.md`](case-analysis.md) | 84 个案例的编码表：领域、议题、数据结构、重点部分、可视化与交互、设计者的思路。 |
 | [`case-evidence.md`](case-evidence.md) | 每个案例编码所依据的官方原文摘录。 |
+| [`case-gallery.md`](case-gallery.md) | 案例画廊：每个案例的展示页、官方图片、说明网页，可以一个个点开看是什么样子。 |
 | [`layered-writing.md`](layered-writing.md) | 分层写作：别人怎么处理分层文本，以及能归纳出的做法。 |
 
 ## 三类输入不能用同一套方法

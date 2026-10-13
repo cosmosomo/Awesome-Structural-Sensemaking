@@ -1,0 +1,5311 @@
+{
+ "dependency-cruiser": {
+  "demo": {
+   "url": "https://sverweij.github.io/dependency-cruiser-repro-repo/458/",
+   "title": "Demo: 3D graph reporter plugin for dependency-cruiser (issue #458) | dependency-cruiser-repro-repo",
+   "how": "页面正文 'Results (interactive html):' 下列出两个交互式 HTML 结果：dependency-cruiser 自身的内部图（节点为 bald）和 react 模块图，并给出运行命令",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Demo: 3D graph reporter plugin for dependency-cruiser (issue #458) | dependency-cruiser-repro-repo"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://sverweij.github.io/dependency-cruiser-repro-repo/458/",
+    "title": "Demo: 3D graph reporter plugin for dependency-cruiser (issue #458) | dependency-cruiser-repro-repo",
+    "text_len": 1110,
+    "canvas": 0,
+    "svg": 0,
+    "img": 1,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [
+   {
+    "url": "https://sverweij.github.io/dependency-cruiser-repro-repo/458/dependency-cruiser-bald-nodes.png",
+    "page": "https://sverweij.github.io/dependency-cruiser-repro-repo/458/",
+    "alt": "dependency-cruiser",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 437188,
+     "at": "2026-10-13",
+     "width": 1870,
+     "height": 976
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://sverweij.github.io/dependency-cruiser/",
+    "title": "dependency-cruiser",
+    "why": "官方站首页，正文说明它分析 JavaScript、TypeScript 等项目的依赖；首页上没有找到截图，只作官方入口",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "dependency-cruiser"
+    }
+   }
+  ],
+  "not_found": [
+   "官方站的 og:image（dependency-cruiser-social-sharing-image.png）内容未核实，未收",
+   "repro 页面里 'dependency-cruiser internal graph - nodes are bald' 这段文字与图片在标记上没有直接关联，caption 留空"
+  ]
+ },
+ "madge": {
+  "not_found": [
+   "官方在线演示未找到：npm 元数据里的 homepage 指向 https://github.com/pahen/madge（按规则不访问），www.npmjs.com/package/madge 返回 403，未绕过",
+   "README 里的图片托管在 GitHub，未收"
+  ]
+ },
+ "pydeps": {
+  "pages": [
+   {
+    "url": "https://pydeps.readthedocs.io/en/latest/index.html",
+    "title": "pydeps — pydeps 3.0.9 documentation",
+    "why": "文档首页，页面写明它主要通过 pydeps 命令行使用，用于 Python 模块依赖可视化",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "pydeps — pydeps 3.0.9 documentation"
+    }
+   }
+  ],
+  "not_found": [
+   "命令行工具，文档站未找到在线演示",
+   "文档里的示例 SVG（如 pydeps-cycle.svg、pydeps-18-bacon4-cluster.svg）地址在 raw.githubusercontent.com，按规则未收",
+   "首页上的图片只有徽章类（readthedocs、codecov、pepy）"
+  ]
+ },
+ "codeboarding": {
+  "demo": {
+   "url": "https://app.codeboarding.org/CodeBoarding/CodeBoarding",
+   "title": "CodeBoarding/CodeBoarding · CodeBoarding",
+   "mode": "live",
+   "how": "官方首页 “Open a live example” 指向的是一个 PR 分析页，那页写着 “PR #586 has no analysis yet”；这里改用同站的公开架构图页（页面写 “Or browse public maps, no account needed”）：5 个组件的架构图，点组件的 + 号展开，另有 Pull requests、Health、History 标签",
+   "render": {
+    "status": 200,
+    "final": "https://app.codeboarding.org/CodeBoarding/CodeBoarding",
+    "title": "CodeBoarding/CodeBoarding · CodeBoarding",
+    "text_len": 2217,
+    "canvas": 0,
+    "svg": 52,
+    "img": 0,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   },
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "CodeBoarding"
+   }
+  },
+  "images": [
+   {
+    "url": "https://codeboarding.org/images/website/review-stage-light.png",
+    "page": "https://codeboarding.org/",
+    "alt": "A pull request reviewed as a system diagram with changed components and the diff beside it",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 201292,
+     "at": "2026-10-13",
+     "width": 1840,
+     "height": 1382
+    }
+   },
+   {
+    "url": "https://codeboarding.org/images/website/review-map-light.png",
+    "page": "https://codeboarding.org/",
+    "alt": "Detail of the CodeBoarding change diagram, with changed components and their dependencies",
+    "caption": "",
+    "kind": "diagram",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 121747,
+     "at": "2026-10-13",
+     "width": 1244,
+     "height": 1378
+    }
+   },
+   {
+    "url": "https://codeboarding.org/_next/image?url=%2Fimages%2Fwebsite%2Faction-comment-light.svg&w=1920&q=75",
+    "page": "https://codeboarding.org/",
+    "alt": "Mermaid architecture diagram with Identity and Payments modified and a new dependency between them",
+    "caption": "",
+    "kind": "diagram",
+    "check": {
+     "status": 200,
+     "content_type": "image/svg+xml",
+     "bytes": 16637,
+     "at": "2026-10-13"
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://codeboarding.org/diagrams",
+    "title": "CodeBoarding",
+    "why": "首页 'Example diagrams' 链接指向的页面，页面文字列出已分析的仓库，并有 'Architecture Summary' 与 'Select a component in the diagram to view details.' 等图示界面文字",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "CodeBoarding"
+    }
+   },
+   {
+    "url": "https://codeboarding.org/",
+    "title": "CodeBoarding, review the change, not the diff",
+    "why": "官方首页，带有 PR 审查示意图（review-stage、review-map、action-comment 等图片）",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "CodeBoarding, review the change, not the diff"
+    }
+   }
+  ],
+  "not_found": [
+   "app.codeboarding.org 的分析页为 JS 渲染，静态读取只得到标题 'CodeBoarding'，未能确认页面内容",
+   "首页 'Book a demo' 指向 calendly，不是展示页，未收",
+   "深色版图片（*-dark）以及 logo、图标未收"
+  ]
+ },
+ "understand-anything": {
+  "demo": {
+   "url": "https://understand-anything.com/",
+   "title": "Understand Anything — Graphs that teach the codebase",
+   "how": "首页 'Live Demo →' 按钮及 'Live Demo' 区块（'See what your code is really doing'，'Interactive Dashboard'）",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Understand Anything — Graphs that teach the codebase"
+   },
+   "seen": "首页；“Live Demo” 是页面上的一个按钮",
+   "render": {
+    "status": 200,
+    "final": "https://understand-anything.com/",
+    "title": "Understand Anything — Graphs that teach the codebase",
+    "text_len": 2358,
+    "canvas": 0,
+    "svg": 12,
+    "img": 4,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [],
+  "pages": [
+   {
+    "url": "https://understand-anything.com/",
+    "title": "Understand Anything — Graphs that teach the codebase",
+    "why": "官方首页，页面文字描述了交互式仪表盘的功能（层级下钻、模糊搜索、按类型过滤、导出 PNG/SVG 等）",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Understand Anything — Graphs that teach the codebase"
+    }
+   }
+  ],
+  "not_found": [
+   "'Live Demo' 按钮的目标在静态页面中没有独立地址，demo 暂指向首页的 Live Demo 区块",
+   "images/hero.jpg 无 alt 与说明，内容未核实，只按位置标为 banner，是否收录由你判断",
+   "首页 Community 部分的视频是 Better Stack 制作的第三方视频，未收",
+   "官网 hero.jpg 是宣传图（'Turn any codebase into an interactive knowledge graph'），不是界面截图，未收"
+  ]
+ },
+ "likec4": {
+  "demo": {
+   "url": "https://playground.likec4.dev/w/bigbank/",
+   "title": "LikeC4 Playground",
+   "how": "在 Big Bank 示例页的 'Try it online' 一节，点击 'LikeC4 playground'（页面原文：Preview and play with this example in the LikeC4 playground）打开同一示例",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "LikeC4 Playground"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://playground.likec4.dev/w/bigbank/index/",
+    "title": "LikeC4 Playground",
+    "text_len": 2201,
+    "canvas": 3,
+    "svg": 52,
+    "img": 0,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "pages": [
+   {
+    "url": "https://likec4.dev/showcases/bigbank/",
+    "title": "Big Bank Example | LikeC4",
+    "why": "同一个 Big Bank 示例，页面对照 LikeC4 与 Structurizr 的写法，并配有 System Landscape、System Context、Containers 的渲染图",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Big Bank Example | LikeC4"
+    }
+   }
+  ],
+  "not_found": [
+   "收的 3 张图（System Landscape、System Context、Containers）由 www.plantuml.com 渲染（页面写 'Rendered with PlantUML'），图片托管在第三方域名，也不一定是 LikeC4 自己的渲染效果，请你判断；第 4 张 Components 图同来源，未收。",
+   "bigbank 页另有 Structurizr playground（https://structurizr.com/dsl?example=big-bank-plc），是 Structurizr 的在线页，未收为 demo。"
+  ]
+ },
+ "bpmn-js": {
+  "demo": {
+   "url": "https://demo.bpmn.io/",
+   "title": "BPMN Editor | bpmn-js modeler Demo | demo.bpmn.io",
+   "how": "页面文字 'Open or create a BPMN diagram.'，可直接打开或新建 BPMN 图；示例图上写着 'Click the diagram and continue modeling.'，点击图即可继续编辑",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "BPMN Editor | bpmn-js modeler Demo | demo.bpmn.io"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://demo.bpmn.io/",
+    "title": "BPMN Editor | bpmn-js modeler Demo | demo.bpmn.io",
+    "text_len": 472,
+    "canvas": 0,
+    "svg": 8,
+    "img": 1,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [
+   {
+    "url": "https://bpmn.io/assets/img/model.png",
+    "page": "https://bpmn.io/toolkit/bpmn-js/",
+    "alt": "Model BPMN 2.0 diagrams",
+    "caption": "",
+    "kind": "figure",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 9973,
+     "at": "2026-10-13",
+     "width": 1000,
+     "height": 509
+    }
+   },
+   {
+    "url": "https://bpmn.io/assets/img/embed.png",
+    "page": "https://bpmn.io/toolkit/bpmn-js/",
+    "alt": "Embed BPMN 2.0 diagrams into the application",
+    "caption": "",
+    "kind": "figure",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 16855,
+     "at": "2026-10-13",
+     "width": 1000,
+     "height": 509
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://bpmn.io/toolkit/bpmn-js/",
+    "title": "bpmn-js: BPMN 2.0 rendering toolkit and web modeler | Toolkits | bpmn.io",
+    "why": "概述页，用 Model、Embed and Annotate、Extend 三节介绍 bpmn-js 的功能，并配有对应插图",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "bpmn-js: BPMN 2.0 rendering toolkit and web modeler | Toolkits | bpmn.io"
+    }
+   },
+   {
+    "url": "https://bpmn.io/toolkit/bpmn-js/walkthrough/",
+    "title": "bpmn-js walkthrough | Toolkits | bpmn.io",
+    "why": "教程页，用 overview.svg（架构图）与 data-model.png（数据模型图）说明 bpmn-js 的组成部分",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "bpmn-js walkthrough | Toolkits | bpmn.io"
+    }
+   }
+  ],
+  "not_found": [
+   "model.png 与 embed.png 的图像内容我没有直接看到，kind 按页面功能区块（Model、Embed and Annotate）判为 figure，请你核对。",
+   "walkthrough 页的 overview.svg、data-model.png 是架构与数据模型图，不是案例界面，未作为图片收录。",
+   "bpmn.io 页的 'Try Online' 链接是 http://demo.bpmn.io，本条收的是 https://demo.bpmn.io/（已访问，返回 200）。",
+   "demo 页的 screencast.gif 起始帧只有一个空白起始事件，未收"
+  ]
+ },
+ "agentensemble-viz": {
+  "pages": [
+   {
+    "url": "https://docs.agentensemble.net/examples/visualization/",
+    "title": "Visualization Example | AgentEnsemble",
+    "why": "'What You’ll See' 一节按 Flow View 与 Timeline View 描述视图里能看到什么（如关键路径高亮）",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Visualization Example | AgentEnsemble"
+    }
+   },
+   {
+    "url": "https://docs.agentensemble.net/guides/visualization/",
+    "title": "Execution Graph Visualization | AgentEnsemble",
+    "why": "指南页说明 viewer 用 npx @agentensemble/viz 启动，地址为 http://localhost:7328",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Execution Graph Visualization | AgentEnsemble"
+    }
+   }
+  ],
+  "not_found": [
+   "viewer 是本地运行的（npx @agentensemble/viz ./traces/，地址 http://localhost:7328），没有找到托管的在线 viewer 或公开样例页。官方示例页 https://docs.agentensemble.net/examples/visualization/ 只有代码和本地运行说明，未当作展示页收录。",
+   "docs.agentensemble.net 的 guides/visualization、examples/visualization、examples/metrics 三页源码里只有 logo 图，没有截图；agentensemble.net 镜像页同样只有 logo。",
+   "WebSearch 没有找到截图或在线 demo。",
+   "npm 包页 https://www.npmjs.com/package/@agentensemble/viz 返回 403，读不到其中的 README，未核对其中可能有的截图。"
+  ]
+ },
+ "agentprism": {
+  "demo": {
+   "url": "https://agent-prism.evilmartians.io/",
+   "title": "AgentPrism - AI Observability Platform",
+   "how": "首页显示一条示例 trace 的 span 树（页面文字中有 ChatCompletion、AgentExecutor、anonymized_search 等条目），页面写着 'Select a span to see the details'，点选 span 即可看详情",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "AgentPrism - AI Observability Platform"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://agent-prism.evilmartians.io/",
+    "title": "AgentPrism - AI Observability Platform",
+    "text_len": 2604,
+    "canvas": 0,
+    "svg": 67,
+    "img": 10,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [
+   {
+    "url": "https://evilmartians.com/static/3c7e8a7abf1e378396cba6bc7e7447da/tree-view.png",
+    "page": "https://evilmartians.com/chronicles/debug-ai-fast-agent-prism-open-source-library-visualize-agent-traces",
+    "alt": "Tree View and Timeline View Component",
+    "caption": "Tree View on the left, Timeline on the right",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 105060,
+     "at": "2026-10-13",
+     "width": 1644,
+     "height": 1136
+    }
+   },
+   {
+    "url": "https://evilmartians.com/static/ab1d0e50075794e438463803b1bb3008/quotient-demo.png",
+    "page": "https://evilmartians.com/chronicles/debug-ai-fast-agent-prism-open-source-library-visualize-agent-traces",
+    "alt": "A demo of AgentPrism",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 740080,
+     "at": "2026-10-13",
+     "width": 3390,
+     "height": 1804
+    }
+   },
+   {
+    "url": "https://evilmartians.com/static/3c8643b78b5a0f96241f127f36ec2f40/details-4p.png",
+    "page": "https://evilmartians.com/chronicles/debug-ai-fast-agent-prism-open-source-library-visualize-agent-traces",
+    "alt": "Span Details",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 216578,
+     "at": "2026-10-13",
+     "width": 3596,
+     "height": 1188
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://evilmartians.com/chronicles/debug-ai-fast-agent-prism-open-source-library-visualize-agent-traces",
+    "title": "Debug AI fast with this open source library to visualize agent traces—Martian Chronicles, Evil Martians’ team blog",
+    "why": "博文配有 Tree View 与 Timeline 组件、Span Details 的截图，说明 AgentPrism 的界面（图见 images）",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Debug AI fast with this open source library to visualize agent traces—Martian Chronicles, Evil Martians’ team blog"
+    }
+   }
+  ],
+  "not_found": [
+   "未收：博文中的 storybook.png（A Storybook demo of AgentPrism）与 sequence-concept.png（概念图），图片上限 3 张。",
+   "博文中 [Storybook] 链接 https://agent-prism-ui.web.app/ 可以打开（标题 storybook - Storybook），页面可读文字很少，未作为 demo 收录，可作组件层面的备选。"
+  ]
+ },
+ "otel-genai-semconv": {
+  "not_found": [
+   "规范类，没有在线展示页。",
+   "opentelemetry.io 上的 gen-ai 首页、gen-ai-spans、gen-ai-agent-spans、registry/attributes/gen-ai 四页都是 'Moved: Generative AI semantic conventions' 迁移提示页，正文只有迁移说明，已读取，未收为 pages。",
+   "迁移提示写 'GenAI semantic conventions have moved to the …'，目标链接没能从页面读出，未找到新的官方页面地址。",
+   "四页源码里没有 <img>，images 为空。",
+   "（未核实）WebSearch 的二手资料称内容迁到 GitHub 仓库 open-telemetry/semantic-conventions-genai，该仓库不在收集范围内，未访问。"
+  ]
+ },
+ "openllmetry": {
+  "images": [
+   {
+    "url": "https://mintcdn.com/enrolla/UIxmLWs2sJDl37WW/img/trace/trace-light.png?fit=max&auto=format&n=UIxmLWs2sJDl37WW&q=85&s=2733424bcb797188846417e2516e50fe",
+    "page": "https://docs.traceloop.com/docs/openllmetry/introduction",
+    "alt": "",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 217773,
+     "at": "2026-10-13",
+     "width": 3014,
+     "height": 1798
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://docs.traceloop.com/docs/openllmetry/introduction",
+    "title": "What is OpenLLMetry? - traceloop",
+    "why": "官方文档的介绍页，页面标题即为 What is OpenLLMetry?。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "What is OpenLLMetry? - traceloop"
+    }
+   },
+   {
+    "url": "https://www.traceloop.com/openllmetry",
+    "title": "Open-source Observability for LLMs with OpenTelemetry",
+    "why": "官网的 OpenLLMetry 页，页面上有 'Start now with just 2 lines of code' 下的 Python 和 Typescript 示例代码。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Open-source Observability for LLMs with OpenTelemetry"
+    }
+   }
+  ],
+  "not_found": [
+   "在线展示页：traceloop.com/demo 与 www.traceloop.com/demo 均返回 404；官网页和文档介绍页上未找到 demo 或 playground 链接。搜索摘要提到的 Prompt Playground 属于 Traceloop 平台，未访问核对，未收。"
+  ]
+ },
+ "jaeger": {
+  "demo": {
+   "url": "https://demo.jaegertracing.io/jaeger/",
+   "title": "Jaeger UI",
+   "how": "jaegertracing.io/demo/ 的 'Live Demo' 一节写明 Jaeger Live Demo 由 HotROD 应用和 Jaeger UI 组成，Jaeger UI 的地址是 https://demo.jaegertracing.io/jaeger/，即此处的 demo 地址。",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Jaeger UI"
+   },
+   "seen": "打开是搜索页，要先在左侧选一个服务（Service）才能查 trace",
+   "render": {
+    "status": 200,
+    "final": "https://demo.jaegertracing.io/jaeger/search",
+    "title": "Jaeger UI",
+    "text_len": 211,
+    "canvas": 0,
+    "svg": 13,
+    "img": 2,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "pages": [
+   {
+    "url": "https://www.jaegertracing.io/docs/2.22/deployment/frontend-ui/",
+    "title": "Frontend/UI Configuration | Jaeger",
+    "why": "2.22 文档说明 Jaeger UI 可配置的部分，如主题切换、Dependencies、Monitor 标签页和 critical path 可视化；页面为文字，没有截图。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Frontend/UI Configuration | Jaeger"
+    }
+   },
+   {
+    "url": "https://www.jaegertracing.io/demo/",
+    "title": "Live Demo | Jaeger",
+    "why": "官方 Live Demo 页，列出可直接打开的 HotROD 应用和 Jaeger UI 地址。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Live Demo | Jaeger"
+    }
+   }
+  ],
+  "not_found": [
+   "截图：jaegertracing.io 首页、/docs/、/docs/2.21/、/docs/2.22/getting-started/、/docs/2.22/deployment/frontend-ui/ 源码中只有统计像素图 scarf.jaegertracing.io，没有 imgs.py 能列出的截图或示意图地址。"
+  ]
+ },
+ "grafana-tempo": {
+  "pages": [
+   {
+    "url": "https://grafana.com/docs/tempo/latest/visualize-traces/",
+    "title": "Visualize tracing data in Grafana | Grafana Tempo documentation",
+    "why": "页面写明 Grafana 内置 Tempo 数据源，可以查询 Tempo 并可视化 trace。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Visualize tracing data in Grafana | Grafana Tempo documentation"
+    }
+   },
+   {
+    "url": "https://grafana.com/docs/tempo/latest/metrics-from-traces/service_graphs/",
+    "title": "Service graphs | Grafana Tempo documentation",
+    "why": "页面介绍服务图（service graph），即各服务之间相互关系的可视化表示。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Service graphs | Grafana Tempo documentation"
+    }
+   }
+  ],
+  "not_found": [
+   "在线展示页：play.grafana.org 返回 200，但页面文字为 'Grafana is starting up... Error loading Grafana'，前端没有加载出来，无法确认其中是否有 Tempo 数据，记为未核对。",
+   "截图：Tempo 文档页（introduction、visualize-traces、metrics-from-traces/service_graphs）源码里没有页内截图或示意图，只有 grafana.com 自动生成的 og:image 社交卡片（meta-generator），不算案例图片，未收。"
+  ]
+ },
+ "marquez": {
+  "images": [
+   {
+    "url": "https://marquezproject.ai/img/marquez_caps_couple.svg",
+    "page": "https://marquezproject.ai/",
+    "alt": "Marquez UI Screencaps",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/svg+xml",
+     "bytes": 2883387,
+     "at": "2026-10-13"
+    }
+   },
+   {
+    "url": "https://marquezproject.ai/assets/images/search-view-job-99ec2f2497f982774ce92482b7e18c30.png",
+    "page": "https://marquezproject.ai/docs/quickstart/",
+    "alt": "",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 1120299,
+     "at": "2026-10-13",
+     "width": 3236,
+     "height": 2112
+    }
+   },
+   {
+    "url": "https://marquezproject.ai/assets/images/tab-view-job-metadata-3607d299e6f085e60a500067694614e2.png",
+    "page": "https://marquezproject.ai/docs/quickstart/",
+    "alt": "",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 1192928,
+     "at": "2026-10-13",
+     "width": 3236,
+     "height": 2112
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://marquezproject.ai/",
+    "title": "Marquez Project | Marquez Project",
+    "why": "首页的 'Unified visual graph' 一节写明：通过网页界面提供可视化的依赖关系图，可查看每个 job 的输入输出，并追踪 dataset 的血缘。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Marquez Project | Marquez Project"
+    }
+   },
+   {
+    "url": "https://marquezproject.ai/docs/quickstart/",
+    "title": "Quickstart | Marquez Project",
+    "why": "快速开始页写明在 http://localhost:3000 打开 UI，可通过 lineage graph 查看 job 与 dataset 的依赖，并可搜索 job 查看运行元数据。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Quickstart | Marquez Project"
+    }
+   }
+  ],
+  "not_found": [
+   "在线展示页：首页有 'Interactive Demo' 标题，但抓到的页面里没有对应链接（按 demo、interactive 搜索均无结果），可能由脚本或 iframe 渲染，未能核对入口。quickstart 的做法是本地 Docker（./docker/up.sh --seed 后打开 localhost:3000），不是在线页面，未收。"
+  ]
+ },
+ "neodash": {
+  "images": [
+   {
+    "url": "https://neo4j.com/labs/neodash/_images/neodash.png",
+    "page": "https://neo4j.com/labs/neodash/",
+    "alt": "neodash",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 418577,
+     "at": "2026-10-13",
+     "width": 1903,
+     "height": 1006
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://neo4j.com/labs/neodash/",
+    "title": "Untitled - Neo4j Labs",
+    "why": "Neo4j Labs 上的 NeoDash 页面，页面中嵌有 alt 为 neodash 的图片（见 images）。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Untitled - Neo4j Labs"
+    }
+   }
+  ],
+  "not_found": [
+   "示例看板站 neodash-gallery.graphapp.io 无头浏览器打开后页面写着 “The NeoDash sample gallery has been deprecated. Check the latest Neo4j dashboards here.”，已弃用，不收为展示页",
+   "看板内容未核对：gallery 与 neodash.graphapp.io 都由脚本渲染，抓到的文字只有标题（neodash.graphapp.io 为 NeoDash - Neo4j Dashboard Builder），没能确认看板能否正常显示或在页面上操作。",
+   "gallery 页源码里没有能列出的单个看板链接（--links dashboard 与 neodash 均无结果），未收到逐个看板的页面。"
+  ]
+ },
+ "dify": {
+  "demo": {
+   "url": "https://marketplace.dify.ai/templates",
+   "title": "Dify Marketplace",
+   "how": "页面顶部有 'Plugins' 与 'Templates' 两个标签，Templates 下列出模板卡片，每张带 'View' 按钮（如 'AI Business Analyst'、'Offer Arena'）；部分卡片标注 'Verified by a Dify partner'。",
+   "mode": "samples",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Dify Marketplace"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://marketplace.dify.ai/templates",
+    "title": "Dify Marketplace",
+    "text_len": 31600,
+    "canvas": 0,
+    "svg": 1,
+    "img": 161,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [
+   {
+    "url": "https://dify.ai/_astro/workflow.Dl7EY_X1_rPiFq.webp",
+    "page": "https://dify.ai/",
+    "alt": "Dify Workflow Studio canvas showing connected nodes for an AI workflow.",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/webp",
+     "bytes": 114444,
+     "at": "2026-10-13",
+     "width": 2804,
+     "height": 1492
+    }
+   },
+   {
+    "url": "https://dify.ai/_astro/agent.Ba3STi-y_Z18Lowi.webp",
+    "page": "https://dify.ai/",
+    "alt": "Dify agent configuration with tools and memory.",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/webp",
+     "bytes": 121740,
+     "at": "2026-10-13",
+     "width": 2262,
+     "height": 1594
+    }
+   },
+   {
+    "url": "https://dify.ai/_astro/knowledge.COlULHvU_Z1dyyjQ.webp",
+    "page": "https://dify.ai/",
+    "alt": "Dify Knowledge Pipeline turning documents into an indexed knowledge base.",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/webp",
+     "bytes": 48258,
+     "at": "2026-10-13",
+     "width": 1712,
+     "height": 1096
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://dify.ai/",
+    "title": "Dify - The Platform for Production-Ready Agentic Workflows",
+    "why": "官网首页，列出 Workflow Studio、Knowledge Pipeline 等产品模块，并附对应截图",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Dify - The Platform for Production-Ready Agentic Workflows"
+    }
+   },
+   {
+    "url": "https://docs.dify.ai/en/cloud/use-dify/debug/step-run",
+    "title": "Single Node - Dify Docs",
+    "why": "单节点运行调试的文档页，内嵌节点运行输出相关截图（alt：'When You Run Nodes One at a Time, Their Outputs Are Cached in the Variable'）",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Single Node - Dify Docs"
+    }
+   }
+  ],
+  "not_found": [
+   "说明：known.demo 原为 marketplace.dify.ai 根页（插件市场），已改为其 Templates 页；模板作者各不相同（页面写 'by ...'）。",
+   "未找到 dify.ai 上的 live demo 或 playground；docs 首页的 'Try Dify' 按钮未点击核对目标，未收录。"
+  ]
+ },
+ "langflow": {
+  "demo": {
+   "url": "https://www.langflow.org/templates/use-langflow-to-process-and-classify-call-transcripts/",
+   "title": "Call Classification Analytics | Langflow | Low-code AI builder for agentic and RAG applications",
+   "how": "模板页列出流程组件（如 Prompt、Agent、Transcription Result Parser、Model Provider）和示例提示词；页面有 'Use for Free' 与 'Share' 按钮（未点击核对是否需要登录）。",
+   "mode": "samples",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Call Classification Analytics | Langflow | Low-code AI builder for agentic and RAG applications"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://www.langflow.org/templates/use-langflow-to-process-and-classify-call-transcripts/",
+    "title": "Call Classification Analytics | Langflow | Low-code AI builder for agentic and RAG applications",
+    "text_len": 7401,
+    "canvas": 0,
+    "svg": 74,
+    "img": 2,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [
+   {
+    "url": "https://docs.langflow.org/assets/images/playground-34f869f8763b3c69ddcd4d365c96d0e6.png",
+    "page": "https://docs.langflow.org/concepts-playground",
+    "alt": "The Langflow visual builder with the Playground active",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 550787,
+     "at": "2026-10-13",
+     "width": 4000,
+     "height": 2204
+    }
+   },
+   {
+    "url": "https://docs.langflow.org/assets/images/playground-with-agent-56fa39130f9a50d376ba5a226ae254f0.png",
+    "page": "https://docs.langflow.org/concepts-playground",
+    "alt": "Playground with agent response",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 275095,
+     "at": "2026-10-13",
+     "width": 4000,
+     "height": 1360
+    }
+   },
+   {
+    "url": "https://docs.langflow.org/assets/images/workspace-basic-prompting-c16e2f001725aa6dc1bc479f22aa11df.png",
+    "page": "https://docs.langflow.org/",
+    "alt": "Basic Prompting flow in Langflow",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 995239,
+     "at": "2026-10-13",
+     "width": 4000,
+     "height": 2296
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://docs.langflow.org/concepts-playground",
+    "title": "Test flows in the Playground | Langflow Documentation",
+    "why": "Playground 功能页，说明可以实时测试基于 LLM 的流程的响应，页面内嵌 Playground 界面与 agent 回复的截图",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Test flows in the Playground | Langflow Documentation"
+    }
+   },
+   {
+    "url": "https://docs.langflow.org/",
+    "title": "What is Langflow? | Langflow Documentation",
+    "why": "官方文档首页，内嵌 Basic Prompting 流程的截图",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "What is Langflow? | Langflow Documentation"
+    }
+   }
+  ],
+  "not_found": [
+   "说明：langflow.org/use-cases/ 是模板目录页（列出 Call Classification、Data Extraction 等多个模板），未逐个收录。",
+   "未找到独立的 live demo 或 playground 页；模板页的 'Use for Free' 未点击核对。"
+  ]
+ },
+ "n8n": {
+  "demo": {
+   "url": "https://n8n.io/workflows/",
+   "title": "Discover 13200 Automation Workflows from the n8n's Community",
+   "how": "页面列出社区工作流模板（标题写 'Discover 13200 Automation Workflows'），并有按分类浏览的入口：AI、Sales、IT Ops、Marketing、Document Ops、Support、Other。",
+   "mode": "samples",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Discover 13200 Automation Workflows from the n8n's Community"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://n8n.io/workflows/",
+    "title": "Discover 13200 Automation Workflows from the n8n's Community",
+    "text_len": 16182,
+    "canvas": 0,
+    "svg": 126,
+    "img": 111,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "pages": [
+   {
+    "url": "https://docs.n8n.io/build/understand-workflows/understand-executions/debug-executions",
+    "title": "Debug executions | Build | n8n Docs",
+    "why": "文档页，主题为调试执行（Debug executions），属于 Understand executions 章节；静态 HTML 中可用图片只有图标，无功能截图",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Debug executions | Build | n8n Docs"
+    }
+   },
+   {
+    "url": "https://docs.n8n.io/build/understand-workflows/understand-executions/view-executions-for-a-single-workflow",
+    "title": "View executions for a single workflow | Build | n8n Docs",
+    "why": "文档页，主题为查看单个工作流的执行记录；静态 HTML 中可用图片只有图标，无功能截图",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "View executions for a single workflow | Build | n8n Docs"
+    }
+   }
+  ],
+  "not_found": [
+   "n8n.io 首页的 hero-bg.webp（alt 'Hero image'）未核对内容，按装饰性背景未收录",
+   "n8n 文档页与 workflows 页的图片为图标、头像和 logo，未找到可用的功能截图",
+   "未找到 n8n.io 的 live demo 或 playground；workflows 页的模板详情链接在静态 HTML 中读不到，未收录"
+  ]
+ },
+ "node-red": {
+  "demo": {
+   "url": "https://flows.nodered.org/",
+   "title": "Library - Node-RED",
+   "how": "页面写着 'Find new nodes, share your flows and see what other people have done with Node-RED'，有 'Filter Nodes'、'Flows'、'Collections' 等入口，可浏览社区分享的 flows 与节点。",
+   "mode": "samples",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Library - Node-RED"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://flows.nodered.org/",
+    "title": "Library - Node-RED",
+    "text_len": 2367,
+    "canvas": 0,
+    "svg": 0,
+    "img": 1,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [
+   {
+    "url": "https://nodered.org/docs/user-guide/editor/images/editor-default.png",
+    "page": "https://nodered.org/docs/user-guide/editor/",
+    "alt": "Editor window",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 140624,
+     "at": "2026-10-13",
+     "width": 2800,
+     "height": 1600
+    }
+   },
+   {
+    "url": "https://nodered.org/docs/user-guide/editor/images/editor-sidebar-debug.png",
+    "page": "https://nodered.org/docs/user-guide/editor/sidebar/debug",
+    "alt": "Debug messages Sidebar",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 88387,
+     "at": "2026-10-13",
+     "width": 592,
+     "height": 802
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://nodered.org/docs/user-guide/editor/",
+    "title": "Editor Guide : Node-RED",
+    "why": "编辑器指南，目录包括 Workspace、Flows、Nodes、Wires、Groups、Subflows 等章节，并附编辑器窗口截图",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Editor Guide : Node-RED"
+    }
+   },
+   {
+    "url": "https://nodered.org/docs/user-guide/editor/sidebar/debug",
+    "title": "Sidebar: Debug messages : Node-RED",
+    "why": "调试消息侧边栏页，内嵌 Debug 侧边栏的截图",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Sidebar: Debug messages : Node-RED"
+    }
+   }
+  ],
+  "not_found": [
+   "说明：同一页面还有可用截图未收录：editor-sidebar-debug-filter.png（alt 'Debug filter options'）、editor-sidebar-debug-pause.png（alt 'Debug paused'）。"
+  ]
+ },
+ "flowise": {
+  "images": [
+   {
+    "url": "https://docs.flowiseai.com/~gitbook/image?url=https%3A%2F%2F823733684-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F00tYLwhz5RyR7fJEhrWy%252Fuploads%252FDOgMs2ywc1bdE09oa10c%252FFlowiseIntro.gif%3Falt%3Dmedia%26token%3D55bbcbc6-e586-4a79-8923-20c2b39e7bf9&width=768&dpr=3&quality=100&sign=ecfa638621ad32883f2cd872c1dec2cc&sv=3",
+    "page": "https://docs.flowiseai.com/",
+    "alt": "",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/gif",
+     "bytes": 3797018,
+     "at": "2026-10-13",
+     "width": 2560,
+     "height": 1382
+    }
+   },
+   {
+    "url": "https://docs.flowiseai.com/~gitbook/image?url=https%3A%2F%2F823733684-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F00tYLwhz5RyR7fJEhrWy%252Fuploads%252Fgit-blob-c20ed065f28758e800bcdcc22531d70ca7df5547%252Fv2-all-nodes.png%3Falt%3Dmedia&width=768&dpr=3&quality=100&sign=5eb56a7b24905589d49585b8414dc2d1&sv=3",
+    "page": "https://docs.flowiseai.com/using-flowise/agentflowv2",
+    "alt": "",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/jpeg",
+     "bytes": 122655,
+     "at": "2026-10-13",
+     "width": 2304,
+     "height": 838
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://docs.flowiseai.com/using-flowise/agentflowv2",
+    "title": "Agentflow V2 | FlowiseAI",
+    "why": "Agentflow V2 功能文档，页面内嵌多张截图，其中一张为全部节点（文件名 v2-all-nodes）",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Agentflow V2 | FlowiseAI"
+    }
+   },
+   {
+    "url": "https://docs.flowiseai.com/",
+    "title": "Introduction | FlowiseAI",
+    "why": "文档首页，内嵌一张介绍用的 GIF（FlowiseIntro.gif，未打开核对内容）",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Introduction | FlowiseAI"
+    }
+   }
+  ],
+  "not_found": [
+   "flowiseai.com 没有可打开的在线 demo 或 playground：'Get Started' 指向 cloud.flowiseai.com/signin，按地址判断需要登录，未打开核对；文档页无 demo 链接。",
+   "注意：flowiseai.com 首页写有 'We're sunsetting Flowise. Learn more'，官网称 Flowise 正在下线，收录前请确认。"
+  ]
+ },
+ "agentscope": {
+  "images": [
+   {
+    "url": "https://mintcdn.com/agentscope-ai-786677c7/c8Op3M8_8-WXpeVH/images/team.gif?s=604f394f94cca0dbca8fdeee75a0f7ff",
+    "page": "https://docs.agentscope.io/en/versions/2.0.9/deploy/agent-team",
+    "alt": "Agent team coordination demo",
+    "caption": "A leader agent assembling a team and coordinating workers in the example web UI.",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/gif",
+     "bytes": 1338298,
+     "at": "2026-10-13",
+     "width": 1920,
+     "height": 1080
+    }
+   },
+   {
+    "url": "https://agentscope.io/images/agentscope2-ecosystem.svg",
+    "page": "https://agentscope.io/",
+    "alt": "AgentScope 2.0 ecosystem diagram",
+    "caption": "",
+    "kind": "diagram",
+    "check": {
+     "status": 200,
+     "content_type": "image/svg+xml",
+     "bytes": 6180216,
+     "at": "2026-10-13"
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://docs.agentscope.io/en/versions/2.0.9/deploy/agent-team",
+    "title": "Agent Team - AgentScope",
+    "why": "页面用一张动图（alt 为 Agent team coordination demo）展示 leader agent 组队并协调 worker 的过程；图注取自页面正文：'A leader agent assembling a team and coordinating workers in the example web UI.'",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Agent Team - AgentScope"
+    }
+   },
+   {
+    "url": "https://docs.agentscope.io/en/versions/2.0.9/building-blocks/console",
+    "title": "Console - AgentScope",
+    "why": "页面说明可以在终端里与智能体对话并查看完整事件流（'you can chat with it and inspect its full event stream directly in the terminal'）；页面上没有截图。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Console - AgentScope"
+    }
+   }
+  ],
+  "not_found": [
+   "未找到 AgentScope 2.0 的官方在线演示或 playground。WebSearch 也没有找到官方托管的 demo 地址。",
+   "agentscope.io 首页的 showcase 项目（如 PawFriends https://www.pawfriends.live/）是基于 AgentScope 的独立应用，不是本案例的展示页，未收。",
+   "Console 是终端工具，需要本地运行；examples/web_ui 只在 GitHub 上，按规则未访问。"
+  ]
+ },
+ "langgraph": {
+  "images": [
+   {
+    "url": "https://mintcdn.com/langchain-5e9cc07a/-_xGPoyjhyiDWTPJ/oss/images/graph_api_image_3.png?fit=max&auto=format&n=-_xGPoyjhyiDWTPJ&q=85&s=8359f2e8d9dde03d7cc25f9d755a428d",
+    "page": "https://docs.langchain.com/oss/python/langgraph/use-graph-api",
+    "alt": "Parallel execution graph",
+    "caption": "",
+    "kind": "diagram",
+    "check": {
+     "status": 200,
+     "content_type": "image/jpeg",
+     "bytes": 5976,
+     "at": "2026-10-13",
+     "width": 143,
+     "height": 432
+    }
+   },
+   {
+    "url": "https://mintcdn.com/langchain-5e9cc07a/-_xGPoyjhyiDWTPJ/oss/images/graph_api_image_5.png?fit=max&auto=format&n=-_xGPoyjhyiDWTPJ&q=85&s=3373a383d5acc3e4d6a4d1575e849146",
+    "page": "https://docs.langchain.com/oss/python/langgraph/use-graph-api",
+    "alt": "Conditional branching graph",
+    "caption": "",
+    "kind": "diagram",
+    "check": {
+     "status": 200,
+     "content_type": "image/jpeg",
+     "bytes": 5162,
+     "at": "2026-10-13",
+     "width": 143,
+     "height": 333
+    }
+   },
+   {
+    "url": "https://mintcdn.com/langchain-5e9cc07a/dL5Sn6Cmy9pwtY0V/oss/images/re_play.png?fit=max&auto=format&n=dL5Sn6Cmy9pwtY0V&q=85&s=d7b34b85c106e55d181ae1f4afb50251",
+    "page": "https://docs.langchain.com/oss/python/langgraph/use-time-travel",
+    "alt": "Replay",
+    "caption": "",
+    "kind": "figure",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 66862,
+     "at": "2026-10-13",
+     "width": 2276,
+     "height": 986
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://docs.langchain.com/langsmith/studio",
+    "title": "LangSmith Studio - Docs by LangChain",
+    "why": "页面介绍 Studio：'Studio is a specialized agent IDE that enables visualization, interaction, and debugging of agentic systems'，并说明 Graph mode 与 Chat mode。页面上没有截图。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "LangSmith Studio - Docs by LangChain"
+    }
+   },
+   {
+    "url": "https://docs.langchain.com/oss/python/langgraph/use-graph-api",
+    "title": "Use the graph API - Docs by LangChain",
+    "why": "页面有多张图结构示意图（并行执行、条件分支等，alt 为页面原文），并说明 'LangGraph provides built-in utilities for visualizing your graph'。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Use the graph API - Docs by LangChain"
+    }
+   }
+  ],
+  "not_found": [
+   "未找到 LangGraph Studio 的官方公开 demo。WebSearch 也没有找到官方 live demo。",
+   "smith.langchain.com/studio 可以打开，但读到的页面文字只有 'LangSmith'，无法确认是否可直接操作，未收为展示页。",
+   "use-time-travel 页面的 Fork 图（alt: Fork，checkpoints_full_story.jpg）与 Replay 图 re_play.png 为同一页面的两张图，本次只收了 Replay 图，Fork 图未收。"
+  ]
+ },
+ "agentensemble": {
+  "pages": [
+   {
+    "url": "https://agentensemble.github.io/agentensemble/examples/visualization/",
+    "title": "Visualization - AgentEnsemble",
+    "why": "官方示例页：只有代码和本地运行说明，没有可点的在线界面。这是官方 Examples 库里的 Visualization 示例页。页面 'What You'll See' 一节写明会看到 Flow View 和 Timeline View 两种视图，并有 'Running the Viewer' 一节。页面本身没有可直接点击的在线界面。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Visualization - AgentEnsemble"
+    }
+   },
+   {
+    "url": "https://docs.agentensemble.net/guides/visualization/",
+    "title": "Execution Graph Visualization | AgentEnsemble",
+    "why": "AgentEnsemble 文档中的可视化指南页（标题 Execution Graph Visualization）。页面上只找到 logo 图片，没有截图或示意图。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Execution Graph Visualization | AgentEnsemble"
+    }
+   }
+  ],
+  "not_found": [
+   "官方首页 https://agentensemble.github.io/agentensemble/、guides/visualization、examples/visualization、guides/review 页面只有 logo 图片，没有截图或示意图，因此未收录图片。"
+  ]
+ },
+ "autogen": {
+  "pages": [
+   {
+    "url": "https://microsoft.github.io/autogen/stable/user-guide/autogenstudio-user-guide/index.html",
+    "title": "AutoGen Studio — AutoGen",
+    "why": "官方用户指南，说明 AutoGen Studio 是低代码界面（'AutoGen Studio is a low-code interface built to help you rapidly prototype AI agents'），并列出可视化创建团队（JSON 或拖拽）和 Playground 等界面。页面上没有截图。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "AutoGen Studio — AutoGen"
+    }
+   }
+  ],
+  "not_found": [
+   "未找到官方托管的 AutoGen Studio 在线演示。页面说明它是研究原型（'not meant to be a production-ready app'）。WebSearch 结果里的 thinkall/autogen-demos 在 GitHub 上，第三方页面不算官方，按规则未收。",
+   "官方指南页只有 logo、徽章（badge）和一张 YouTube 视频封面（img.youtube.com/vi/oum6EI7wohM/maxresdefault.jpg，alt 为 'A Friendly Introduction to AutoGen Studio v0.4'）。视频封面未核对内容，未收为图片。"
+  ]
+ },
+ "langfuse": {
+  "demo": {
+   "url": "https://langfuse.com/docs/demo",
+   "title": "Example Project - Langfuse",
+   "how": "页面 'Generate your first demo trace' 一节（页面文字：'Run a demo interaction below to generate real data.'）下方可直接操作，列出 Q&A Chatbot、Voice Agent、Image Generator、Sentiment Classifier、Rock Paper Scissors 等示例应用。生成 trace 后按 Step 02 'Find your trace in Langfuse' 查看。",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Example Project - Langfuse"
+   },
+   "seen": "无头浏览器里页面显示 “This page couldn’t load”，没看到内容（等 12 秒后仍如此，页面有脚本报错）",
+   "render": {
+    "status": 200,
+    "final": "https://langfuse.com/docs/demo",
+    "title": "",
+    "text_len": 70,
+    "canvas": 0,
+    "svg": 1,
+    "img": 0,
+    "page_errors": 2,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [
+   {
+    "url": "https://langfuse.com/_next/image?url=%2Fimages%2Fdocs%2Ftracing-overview.png&w=3840&q=85&dpl=dpl_rew97PyGrqkVtmb1L4Ag4QeXhcfN",
+    "page": "https://langfuse.com/docs/observability/overview",
+    "alt": "Example of a trace in the Langfuse UI showing nested observations, timing, inputs, outputs, and meta",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 234487,
+     "at": "2026-10-13",
+     "width": 2048,
+     "height": 1270
+    }
+   },
+   {
+    "url": "https://langfuse.com/_next/image?url=%2Fimages%2Fdocs%2Fscore-analytics-full-dashboard.png&w=3840&q=85&dpl=dpl_rew97PyGrqkVtmb1L4Ag4QeXhcfN",
+    "page": "https://langfuse.com/docs/evaluation/overview",
+    "alt": "Score Analytics dashboard in Langfuse showing evaluation scores trended over time across multiple ev",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 241065,
+     "at": "2026-10-13",
+     "width": 2048,
+     "height": 1234
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://langfuse.com/docs/observability/overview",
+    "title": "LLM Observability & Application Tracing (Open Source) - Langfuse",
+    "why": "页面配有 Langfuse UI 中 trace 的截图（嵌套 observation、耗时、输入输出和 metadata），能说明追踪功能的界面。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "LLM Observability & Application Tracing (Open Source) - Langfuse"
+    }
+   },
+   {
+    "url": "https://langfuse.com/docs/evaluation/overview",
+    "title": "Evaluation of LLM Applications - Langfuse",
+    "why": "页面配有 Score Analytics 仪表盘截图，展示评估分数随时间的变化。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Evaluation of LLM Applications - Langfuse"
+    }
+   }
+  ],
+  "not_found": [
+   "https://langfuse.com/cloud/demo 页面标题为 'Langfuse login'，是登录页，不算展示页，未收。",
+   "imgs.py 把图片 alt 截断为 100 个字符，上面两张图的 alt 可能不完整，填的是截断后的原文。"
+  ]
+ },
+ "arize-phoenix": {
+  "demo": {
+   "url": "https://phoenix-demo.arize.com/",
+   "title": "Phoenix",
+   "how": "",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Phoenix"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://phoenix-demo.arize.com/projects?timeRangeKey=7d",
+    "title": "Projects",
+    "text_len": 527,
+    "canvas": 0,
+    "svg": 27,
+    "img": 1,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   },
+   "seen": "打开是 Phoenix 的项目列表（demo_agents、demo_llama_index、default），左侧有 Tracing、Datasets & Experiments、Playground 等入口；三个项目卡片上的 Traces 都显示 0，需点进项目看"
+  },
+  "images": [
+   {
+    "url": "https://storage.googleapis.com/arize-phoenix-assets/assets/images/evaluator_traces_page.png",
+    "page": "https://arize.com/docs/phoenix/evaluation/llm-evals",
+    "alt": "Evaluator traces page",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 1548654,
+     "at": "2026-10-13",
+     "width": 6384,
+     "height": 2654
+    }
+   },
+   {
+    "url": "https://storage.googleapis.com/arize-phoenix-assets/assets/images/evaluator_trace.png",
+    "page": "https://arize.com/docs/phoenix/evaluation/llm-evals",
+    "alt": "Evaluator trace detail",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 2106900,
+     "at": "2026-10-13",
+     "width": 6408,
+     "height": 3302
+    }
+   },
+   {
+    "url": "https://storage.googleapis.com/arize-phoenix-assets/assets/images/phoenix-docs-images/15fe0366-image.jpeg",
+    "page": "https://arize.com/docs/phoenix/tracing/llm-traces",
+    "alt": "",
+    "caption": "",
+    "kind": "figure",
+    "check": {
+     "status": 200,
+     "content_type": "image/jpeg",
+     "bytes": 522759,
+     "at": "2026-10-13",
+     "width": 2304,
+     "height": 1304
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://arize.com/docs/phoenix/tracing/llm-traces",
+    "title": "Overview: Tracing - Phoenix",
+    "why": "追踪功能页，嵌有一张没有 alt 和说明文字的图片。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Overview: Tracing - Phoenix"
+    }
+   },
+   {
+    "url": "https://arize.com/docs/phoenix/evaluation/llm-evals",
+    "title": "Evaluation - Phoenix",
+    "why": "评估功能页，嵌有 evaluator trace 与 evaluator traces page 两张带 alt 的图片。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Evaluation - Phoenix"
+    }
+   }
+  ],
+  "not_found": [
+   "未找到其他无需登录的官方在线 playground。Prompt Playground 文档 https://arize.com/docs/phoenix/prompt-engineering/overview-prompts/prompt-playground 只描述功能，没有核实公开入口。"
+  ]
+ },
+ "comet-opik": {
+  "images": [
+   {
+    "url": "https://www.comet.com/site/wp-content/uploads/2026/05/opik-llm-tracing.png",
+    "page": "https://www.comet.com/site/products/opik/",
+    "alt": "",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 861759,
+     "at": "2026-10-13",
+     "width": 1920,
+     "height": 1080
+    }
+   },
+   {
+    "url": "https://www.comet.com/site/wp-content/uploads/2026/05/experiments-comparison-1024x557.png",
+    "page": "https://www.comet.com/site/products/opik/",
+    "alt": "",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 259677,
+     "at": "2026-10-13",
+     "width": 1024,
+     "height": 557
+    }
+   },
+   {
+    "url": "https://www.comet.com/docs/opik/_fern-img/fe85b7f2855f7e02aa74fdccae736d557b71806abc45560e8b9dcffcf9c478b7.webp",
+    "page": "https://www.comet.com/docs/opik/tracing/advanced/log_agent_graphs",
+    "alt": "",
+    "caption": "",
+    "kind": "figure",
+    "check": {
+     "status": 200,
+     "content_type": "image/webp",
+     "bytes": 47354,
+     "at": "2026-10-13",
+     "width": 1600,
+     "height": 900
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://www.comet.com/site/products/opik/",
+    "title": "Open-Source AI Observability Platform | Opik by Comet",
+    "why": "产品页，页面文字列出 LLM Observability & Evaluation、Experiment Management 等模块，并嵌有多张功能图片。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Open-Source AI Observability Platform | Opik by Comet"
+    }
+   },
+   {
+    "url": "https://www.comet.com/docs/opik/tracing/debug-agents",
+    "title": "Debugging Agents with Ollie | Opik Documentation",
+    "why": "文档页，嵌有三张带 alt 的图片，alt 分别是 Ollie analyzing a trace and identifying the root cause、Ollie proposing a code fix with a diff view、Ollie running a test suite and showing pass/fail results。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Debugging Agents with Ollie | Opik Documentation"
+    }
+   }
+  ],
+  "not_found": [
+   "未找到无需注册即可打开的在线展示页。产品页的 Try Opik Free 指向注册页 https://www.comet.com/signup?from=llm，Get Demo 指向联系页，都不算展示页。搜索也未找到公开的在线 playground。"
+  ]
+ },
+ "agentops": {
+  "images": [
+   {
+    "url": "https://mintcdn.com/agentops/lKHoIAF-8UF9BP18/images/overview.png?fit=max&auto=format&n=lKHoIAF-8UF9BP18&q=85&s=7eaf05b550f66df6c3ea493035a827b3",
+    "page": "https://docs.agentops.ai/v2/introduction",
+    "alt": "",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 146175,
+     "at": "2026-10-13",
+     "width": 2004,
+     "height": 1458
+    }
+   },
+   {
+    "url": "https://mintcdn.com/agentops/lKHoIAF-8UF9BP18/images/session-waterfall.gif?s=dc65c7b9a11e84ba14105811b1eaa1e5",
+    "page": "https://docs.agentops.ai/v2/introduction",
+    "alt": "",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/gif",
+     "bytes": 8887905,
+     "at": "2026-10-13",
+     "width": 3212,
+     "height": 1758
+    }
+   },
+   {
+    "url": "https://mintcdn.com/agentops/lKHoIAF-8UF9BP18/images/session-drawer.gif?s=6831798a3bb0401e0c416c4ade17822a",
+    "page": "https://docs.agentops.ai/v2/introduction",
+    "alt": "",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/gif",
+     "bytes": 4750218,
+     "at": "2026-10-13",
+     "width": 3446,
+     "height": 1212
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://docs.agentops.ai/v2/introduction",
+    "title": "Introduction - AgentOps",
+    "why": "介绍页，嵌有 overview 截图以及 session-waterfall、session-drawer 两张动图，图片没有 alt 和说明文字。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Introduction - AgentOps"
+    }
+   }
+  ],
+  "not_found": [
+   "未找到无需登录的在线展示页。主页的 Dashboard 按钮指向 https://app.agentops.ai/，这是账号控制台，未访问，不计为展示页。搜索也未找到公开演示。"
+  ]
+ },
+ "langwatch": {
+  "demo": {
+   "url": "https://app.langwatch.ai/demo",
+   "title": "LangWatch",
+   "how": "",
+   "mode": "login",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "LangWatch"
+   },
+   "seen": "打开后跳转到登录页（/auth/signin?callbackUrl=/demo）",
+   "render": {
+    "status": 200,
+    "final": "https://app.langwatch.ai/auth/signin?callbackUrl=%2Fdemo",
+    "title": "LangWatch",
+    "text_len": 335,
+    "canvas": 1,
+    "svg": 7,
+    "img": 0,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [
+   {
+    "url": "https://mintcdn.com/langwatch/CYVXWbKFuujxTm5z/images/llm-observability/overview.webp?fit=max&auto=format&n=CYVXWbKFuujxTm5z&q=85&s=7a4b821ffba7245468439d747524247a",
+    "page": "https://langwatch.ai/docs/observability/overview.md",
+    "alt": "LangWatch Observability Dashboard",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 1063794,
+     "at": "2026-10-13",
+     "width": 3534,
+     "height": 1815
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://langwatch.ai/docs/observability/overview.md",
+    "title": "Observability & Tracing",
+    "why": "可观测性概览页，页面文字说明接入 SDK 后可在仪表盘实时查看调用，并可点入 trace 调试；嵌有 Observability Dashboard 图。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13"
+    }
+   }
+  ],
+  "not_found": [
+   "app.langwatch.ai/demo 只确认了 200 和标题，没有跳转到登录页；页面是 JS 渲染，是否需要登录未能完全核实，收录时请再确认。",
+   "langwatch.ai 首页和概览页上除 logo 与客户照片外只找到这一张功能图，其他功能页没有再查。"
+  ]
+ },
+ "nx": {
+  "demo": {
+   "url": "https://nrwl-nx-examples-dep-graph.netlify.app/?focus=cart",
+   "title": "Nx Workspace Project Graph",
+   "how": "链接来自 Nx 功能页 https://nx.dev/docs/features/explore-graph ，那里标注为 'fully interactive graph on a sample repo'；同页正文写道可在侧栏里用 proximity 和 group by folder 控件调整围绕某项目的图，也可以手动隐藏或显示项目。",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Nx Workspace Project Graph"
+   },
+   "seen": "能看到示例工程的依赖图，左侧可勾选要显示的项目",
+   "render": {
+    "status": 200,
+    "final": "https://nrwl-nx-examples-dep-graph.netlify.app/?focus=cart#/projects?graph=JTdCJTIyYyUyMiUzQSU3QiUyMnRoZW1lJTIyJTNBJTIybGlnaHQlMjIlMkMlMjJyYW5rRGlyJTIyJTNBJTIyVEIlMjIlMkMlMjJxdWVyeSUyMiUzQSUyMiUyMiUyQyUyMmF1dG9FeHBhbmQlMjIlM0ExNSUyQyUyMmRlcGVuZGVuY3lEaXN0YW5jZSUyMiUzQTElMkMlMjJtb2RlJTIyJTNBJTIyY29tcG9zaXRlJTIyJTJDJTIyc2hvd01vZGUlMjIlM0ElMjJhbGwlMjIlMkMlMjJzaG93T25seUV4dGVybmFsRGVwZW5kZW5jaWVzJTIyJTNBZmFsc2UlMkMlMjJ0cmFjZUFsZ29yaXRobSUyMiUzQSUyMnNob3J0ZXN0JTIyJTdEJTJDJTIydiUyMiUzQTElN0Q%3D",
+    "title": "Nx Workspace Project Graph",
+    "text_len": 367,
+    "canvas": 3,
+    "svg": 30,
+    "img": 0,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "pages": [
+   {
+    "url": "https://nx.dev/docs/features/explore-graph",
+    "title": "Explore your Workspace | Nx",
+    "why": "功能页，说明可在浏览器里交互式查看工作区的项目图，并链接到一个互动样例图。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Explore your Workspace | Nx"
+    }
+   }
+  ],
+  "not_found": [
+   "known.demo 原为 https://nx.dev/docs/features/explore-graph，它是文档页，不是展示页，已换成该页链接的互动样例图。",
+   "explore-graph 页面上只找到 Nx 标志（logo），没有功能截图，图片未收。",
+   "搜索结果给出的 nx.dev/nx/dep-graph 与 nx.dev/tutorials 下的地址返回 404，未收录。"
+  ]
+ },
+ "backstage": {
+  "demo": {
+   "url": "https://demo.backstage.io/catalog",
+   "title": "Backstage Demo",
+   "how": "",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Backstage Demo"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://demo.backstage.io/catalog?filters%5Bkind%5D=component&filters%5Buser%5D=all&limit=20",
+    "title": "Backstage Demo",
+    "text_len": 2113,
+    "canvas": 0,
+    "svg": 129,
+    "img": 0,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   },
+   "seen": "打开是 Backstage 的 Catalog 页：All Components（16 个），左侧可按 Kind、Type、Owner、Lifecycle 过滤，点组件进详情"
+  },
+  "pages": [
+   {
+    "url": "https://backstage.io/docs/next/getting-started/viewing-entity-relationships/",
+    "title": "Viewing entity relationships | Backstage Software Catalog and Developer Platform",
+    "why": "说明在 Catalog 里点开组件名称后，页面中的 Relations 区域显示该实体与相关实体的关系",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Viewing entity relationships | Backstage Software Catalog and Developer Platform"
+    }
+   }
+  ],
+  "not_found": [
+   "demo 页面正文为前端渲染，无法从页面文字确认目录界面的样子，how 只能如实写明读不到",
+   "已读的 Backstage 页面（viewing-entity-relationships、software-catalog/descriptor-format、software-catalog、backstage.io 首页）静态 HTML 中没有内容图片地址"
+  ]
+ },
+ "datahub": {
+  "demo": {
+   "url": "https://datahub.com/demos/data-lineage-with-datahub/",
+   "title": "Complete Data Lineage with DataHub Cloud | Live Demo",
+   "how": "页面写 'Experience DataHub Cloud with demos of' 后列出 'Visual lineage explorer with filtering by time, owner, and platform' 和列级血缘，按钮为 'Watch the Demo'",
+   "mode": "video",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Complete Data Lineage with DataHub Cloud | Live Demo"
+   },
+   "seen": "页面是带注册表单的宣传页，没有直接可操作的血缘界面",
+   "render": {
+    "status": 200,
+    "final": "https://datahub.com/demos/data-lineage-with-datahub/",
+    "title": "Complete Data Lineage with DataHub Cloud | Live Demo",
+    "text_len": 2630,
+    "canvas": 0,
+    "svg": 104,
+    "img": 15,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [],
+  "pages": [
+   {
+    "url": "https://docs.datahub.com/docs/features/feature-guides/lineage",
+    "title": "About DataHub Lineage | DataHub",
+    "why": "官方血缘功能文档，页内嵌有血缘视图、列级血缘、字段级血缘等截图（图片地址在 raw.githubusercontent.com，未收）",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "About DataHub Lineage | DataHub"
+    }
+   }
+  ],
+  "not_found": [
+   "images 只有该页的 og:image（分享卡片图），正文没有界面截图地址；无法确认这张图是否为产品界面截图，kind 按页面上下文写为 banner，请判断",
+   "docs.datahub.com 血缘页的截图地址都在 raw.githubusercontent.com，按规则未收录",
+   "'Watch the Demo' 看起来是观看演示，页面文字不能确认是否可以自行操作，是否采用由你判断",
+   "页面唯一的图是宣传卡片 'Complete Data Lineage with DataHub Cloud'，不是界面，未收"
+  ]
+ },
+ "openmetadata": {
+  "demo": {
+   "url": "https://sandbox.open-metadata.org/",
+   "title": "",
+   "how": "官方沙盒（项目表里已有的展示页）",
+   "from_projects": true,
+   "mode": "login",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "OpenMetadata"
+   },
+   "seen": "打开是 “Welcome to OpenMetadata”，只有 Sign in with Google",
+   "render": {
+    "status": 200,
+    "final": "https://sandbox.open-metadata.org/signin",
+    "title": "Sign In | OpenMetadata",
+    "text_len": 121,
+    "canvas": 0,
+    "svg": 0,
+    "img": 3,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [
+   {
+    "url": "https://mintcdn.com/openmetadata/ukveY9QLJfPEF8DI/public/images/how-to-guides/lineage/lineage1.png?fit=max&auto=format&n=ukveY9QLJfPEF8DI&q=85&s=7fcc8275a83d82a45203e001310d0ca9",
+    "page": "https://docs.open-metadata.org/v2.0.x/how-to-guides/data-lineage/explore",
+    "alt": "Column-Level Data Lineage in OpenMetadata",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 156548,
+     "at": "2026-10-13",
+     "width": 2850,
+     "height": 1564
+    }
+   },
+   {
+    "url": "https://mintcdn.com/openmetadata/ukveY9QLJfPEF8DI/public/images/how-to-guides/lineage/pipeline.png?fit=max&auto=format&n=ukveY9QLJfPEF8DI&q=85&s=5abc1aee0d0145744ea87894b2970473",
+    "page": "https://docs.open-metadata.org/v2.0.x/how-to-guides/data-lineage/explore",
+    "alt": "Database and Pipeline Lineage",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 169528,
+     "at": "2026-10-13",
+     "width": 2700,
+     "height": 852
+    }
+   },
+   {
+    "url": "https://mintcdn.com/openmetadata/ukveY9QLJfPEF8DI/public/images/how-to-guides/lineage/lineage2.png?fit=max&auto=format&n=ukveY9QLJfPEF8DI&q=85&s=c8b0b3f9715d54623184bd5a6586ca21",
+    "page": "https://docs.open-metadata.org/v2.0.x/how-to-guides/data-lineage/explore",
+    "alt": "Quick Glance at the Data Asset from Lineage View",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 206162,
+     "at": "2026-10-13",
+     "width": 2990,
+     "height": 1660
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://docs.open-metadata.org/v2.0.x/how-to-guides/data-lineage/explore",
+    "title": "Explore the Lineage View | Official Documentation - OpenMetadata Documentation",
+    "why": "官方血缘视图操作页，页内有列级血缘、数据库与管道血缘、影响分析等界面截图",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Explore the Lineage View | Official Documentation - OpenMetadata Documentation"
+    }
+   }
+  ],
+  "not_found": [
+   "官方沙盒 https://sandbox.open-metadata.org/ 的快速入门页写明需要用 Google 账号登录（'Login using your Google credentials'），按规则不算展示页",
+   "open-metadata.org 首页未找到公开的 demo 或 playground 链接",
+   "images 只收了 explore 页的 3 张界面截图，同页其它 lineage 图（如 edge、lineage-setting、nodes、impact-analysis）未收"
+  ]
+ },
+ "skywalking": {
+  "demo": {
+   "url": "https://demo.skywalking.apache.org/",
+   "title": "SkyWalking Horizon UI",
+   "how": "官网首页入口文字为 'Try the cloud-native Showcase'（入门页锚点 #qs-showcase）",
+   "mode": "login",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "SkyWalking Horizon UI"
+   },
+   "seen": "打开是 “Welcome to SkyWalking”，要选 Continue with GitHub 或 Google",
+   "render": {
+    "status": 200,
+    "final": "https://demo.skywalking.apache.org/login?redirect=/",
+    "title": "SkyWalking Horizon UI",
+    "text_len": 343,
+    "canvas": 0,
+    "svg": 3,
+    "img": 0,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "pages": [
+   {
+    "url": "https://skywalking.apache.org/docs/skywalking-horizon-ui/next/dashboards/general/",
+    "title": "General Service | Apache SkyWalking",
+    "why": "Horizon UI 仪表盘说明页，页面链接列出 Services Dashboard、Mesh Dashboard、AI Agent Overview 等仪表盘",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "General Service | Apache SkyWalking"
+    }
+   }
+  ],
+  "not_found": [
+   "官网入门页上的 Showcase 入口只是锚点，未核实它是否指向 demo.skywalking.apache.org；demo 的 how 来自首页入口文字",
+   "已读的 SkyWalking 页面（官网首页、入门页、showcase 说明页、Horizon UI 仪表盘页与 overview-services 页）静态 HTML 中只有 logo 和项目图标，没有界面截图地址"
+  ]
+ },
+ "kiali": {
+  "images": [
+   {
+    "url": "https://kiali.io/images/documentation/features/topology-graph.png",
+    "page": "https://kiali.io/docs/features/topology/",
+    "alt": "Topology graph",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 140471,
+     "at": "2026-10-13",
+     "width": 1905,
+     "height": 737
+    }
+   },
+   {
+    "url": "https://kiali.io/images/documentation/features/topology-overview.png",
+    "page": "https://kiali.io/docs/features/topology/",
+    "alt": "Topology namespace overview",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 140473,
+     "at": "2026-10-13",
+     "width": 1892,
+     "height": 927
+    }
+   },
+   {
+    "url": "https://kiali.io/images/documentation/features/topology-graph-sidepanel.png",
+    "page": "https://kiali.io/docs/features/topology/",
+    "alt": "Topology graph side-panel app",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 28612,
+     "at": "2026-10-13",
+     "width": 288,
+     "height": 669
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://kiali.io/docs/features/topology/",
+    "title": "Topology | Kiali",
+    "why": "Kiali 拓扑图功能页，页内有拓扑图、命名空间概览和侧边栏等截图",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Topology | Kiali"
+    }
+   },
+   {
+    "url": "https://kiali.io/docs/features/health/",
+    "title": "Health | Kiali",
+    "why": "Kiali 健康状态功能页，页内有健康概览、图上健康状态等截图",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Health | Kiali"
+    }
+   }
+  ],
+  "not_found": [
+   "kiali.io 首页及拓扑、健康功能页没有链接到在线演示或 playground；功能页只链接到 Travel Demo 教程（需要自己安装到集群里），不算可直接打开的展示页",
+   "未做站外搜索查找社区或第三方的在线演示"
+  ]
+ },
+ "grafana": {
+  "demo": {
+   "url": "https://play.grafana.org/",
+   "title": "Grafana",
+   "how": "",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Grafana"
+   },
+   "seen": "打开后跳到 “Grafana Play Home” 仪表盘（第一次渲染停在 Loading…，等更久后加载出来）",
+   "render": {
+    "status": 200,
+    "final": "https://play.grafana.org/d/to6j8mh/grafana-play-home?from=now-6h&to=now&timezone=utc",
+    "title": "Grafana Play Home - Examples - Dashboards - Grafana",
+    "text_len": 4523,
+    "canvas": 0,
+    "svg": 80,
+    "img": 11,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "pages": [
+   {
+    "url": "https://grafana.com/docs/grafana/latest/visualizations/panels-visualizations/visualizations/node-graph/",
+    "title": "Node graph | Grafana documentation",
+    "why": "页面写明节点图用于展示相互关联的元素（节点与连线），列出网络、基础设施、组织架构、思维导图等适用场景，并有 'Give it a try using Grafana Play' 一节。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Node graph | Grafana documentation"
+    }
+   }
+  ],
+  "not_found": [
+   "play.grafana.org 未确认渲染，demo 保留但需在浏览器核对。",
+   "explore、panels-visualizations、node-graph 三个文档页的 HTML 里没有功能截图的 img 地址；imgs.py 只列出生成的社交分享卡 og:image（https://grafana.com/meta-generator/Explore@@@grafana@@@1.png 与 https://grafana.com/meta-generator/Node+graph@@@grafana@@@12.png），它们是标题卡而非功能截图，未收。",
+   "grafana.com/grafana/dashboards/ 搜索页报错（There was an error with your request），没有可用的示例仪表盘列表。"
+  ]
+ },
+ "affine": {
+  "demo": {
+   "url": "https://affine.pro/templates",
+   "title": "Free Templates for Notes, Planning & Whiteboards | AFFiNE",
+   "how": "页面是模板目录，列出多个模板的链接（如 'Free Blank Checklist Template with a Filled Example'、'Case Brief Example: Facts, Issues, Holding, Reasoning'），每条指向单独的模板页；未逐个打开模板页核对。",
+   "mode": "samples",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Free Templates for Notes, Planning & Whiteboards | AFFiNE"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://affine.pro/templates",
+    "title": "Free Templates for Notes, Planning & Whiteboards | AFFiNE",
+    "text_len": 18918,
+    "canvas": 0,
+    "svg": 40,
+    "img": 26,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [
+   {
+    "url": "https://affine.pro/edgeless/monthly-weekly-planner-slide.webp",
+    "page": "https://affine.pro/whiteboard",
+    "alt": "Monthly Weekly Planner — Stay Organized, Achieve More",
+    "caption": "",
+    "kind": "figure",
+    "check": {
+     "status": 200,
+     "content_type": "image/webp",
+     "bytes": 71896,
+     "at": "2026-10-13",
+     "width": 2160,
+     "height": 1402
+    }
+   },
+   {
+    "url": "https://affine.pro/edgeless/cornell-notes-template-slide.webp",
+    "page": "https://affine.pro/whiteboard",
+    "alt": "Cornell Notes Template — Write, Draw all in one Template",
+    "caption": "",
+    "kind": "figure",
+    "check": {
+     "status": 200,
+     "content_type": "image/webp",
+     "bytes": 99954,
+     "at": "2026-10-13",
+     "width": 2160,
+     "height": 1402
+    }
+   },
+   {
+    "url": "https://affine.pro/edgeless/habit-tracker-slide.webp",
+    "page": "https://affine.pro/whiteboard",
+    "alt": "Habit Tracker — Monitor Habits, Boost Motivation",
+    "caption": "",
+    "kind": "figure",
+    "check": {
+     "status": 200,
+     "content_type": "image/webp",
+     "bytes": 73140,
+     "at": "2026-10-13",
+     "width": 2160,
+     "height": 1402
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://affine.pro/whiteboard",
+    "title": "Online Whiteboard for Brainstorming and Planning | AFFiNE",
+    "why": "页面围绕在线白板（Edgeless 画布），正文有 'Draw, Plan, and Share Ideas Seamlessly'、'Endless Possibilities with the Edgeless Canvas' 等句子，并列出 Monthly Weekly Planner、Cornell Notes Template、Habit Tracker 等白板模板。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Online Whiteboard for Brainstorming and Planning | AFFiNE"
+    }
+   },
+   {
+    "url": "https://affine.pro/pagedoc",
+    "title": "Collaborative Docs for Notes and Structured Writing | AFFiNE",
+    "why": "页面围绕 Page Docs 文档编辑，正文标题为 'Beyond Text: Build Rich, Interactive Documents'，列出 Blocks、Table、PDF Preview、Image & Videos 等内容块。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Collaborative Docs for Notes and Structured Writing | AFFiNE"
+    }
+   }
+  ],
+  "not_found": [
+   "没有访问需要登录的应用端（不属于展示页），demo 用模板目录页代替；模板目录里的模板页未逐个打开。",
+   "templates 页的部分封面图 alt 超过工具的 100 字截断，无法照抄完整原文，未收。"
+  ]
+ },
+ "drawio": {
+  "demo": {
+   "url": "https://app.diagrams.net/",
+   "title": "Flowchart Maker & Online Diagram Software",
+   "how": "draw.io 功能页写明其 'free online diagram editor at app.diagrams.net'",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Flowchart Maker & Online Diagram Software"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://app.diagrams.net/",
+    "title": "Untitled Diagram - draw.io",
+    "text_len": 566,
+    "canvas": 0,
+    "svg": 67,
+    "img": 9,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   },
+   "seen": "打开是空白画布加左侧图形库（General、Misc、Advanced 等），可直接画图"
+  },
+  "images": [
+   {
+    "url": "https://www.drawio.com/img/blog/gitflow-example.png",
+    "page": "https://www.drawio.com/docs/diagram-types/",
+    "alt": "An example gitflow diagram",
+    "caption": "",
+    "kind": "diagram",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 40070,
+     "at": "2026-10-13",
+     "width": 881,
+     "height": 278
+    }
+   },
+   {
+    "url": "https://www.drawio.com/img/blog/c4-component.png",
+    "page": "https://www.drawio.com/docs/diagram-types/",
+    "alt": "An example C4 component diagram",
+    "caption": "",
+    "kind": "diagram",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 132280,
+     "at": "2026-10-13",
+     "width": 813,
+     "height": 1161
+    }
+   },
+   {
+    "url": "https://www.drawio.com/img/blog/bpmn-example.png",
+    "page": "https://www.drawio.com/docs/features/",
+    "alt": "An example BPMN diagram",
+    "caption": "",
+    "kind": "diagram",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 141689,
+     "at": "2026-10-13",
+     "width": 1692,
+     "height": 1104
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://www.drawio.com/docs/diagram-types/",
+    "title": "Example technical diagrams | draw.io",
+    "why": "按图类型列出示例图，页面示例图的 alt 包括 gitflow、C4 组件图、UML 类图、用例图、序列图、部署图等。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Example technical diagrams | draw.io"
+    }
+   },
+   {
+    "url": "https://www.drawio.com/docs/features/",
+    "title": "An overview of draw.io's features | draw.io",
+    "why": "功能概览页，写有可用 'Enter a text description and let an AI tool generate the diagram' 生成图表、可切换暗色模式（Diagram in dark mode），以及导入导出多种格式（Import and export many formats）等功能。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "An overview of draw.io's features | draw.io"
+    }
+   }
+  ],
+  "not_found": [
+   "app.diagrams.net 抓取只拿到标题，编辑器是否可用未确认。"
+  ]
+ },
+ "kumu": {
+  "demo": {
+   "url": "https://kumu.io/tanyabeer/hewlett-foundation-madison-initiative",
+   "title": "Hewlett Foundation Madison Initiative • Kumu",
+   "how": "",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Hewlett Foundation Madison Initiative • Kumu"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://kumu.io/tanyabeer/hewlett-foundation-madison-initiative",
+    "title": "Hewlett Foundation Madison Initiative • The Madison Initiative- 2016 REVISION • Kumu",
+    "text_len": 5899,
+    "canvas": 24,
+    "svg": 1,
+    "img": 4,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   },
+   "seen": "打开是 “The Madison Initiative- 2016” 地图：左侧是文字说明，右侧是节点连线的关系图（节点按类型着色，图例在左下）"
+  },
+  "images": [
+   {
+    "url": "https://assets.kumu.io/production/public/assets/marketing/screenshots/decorate-2b496ab4136d2d652d329f2ac54c8f6208aa9e7d8cd1416f9f5c3ea1838beb7b.jpg",
+    "page": "https://kumu.io/tour",
+    "alt": "Decorate",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/jpeg",
+     "bytes": 118461,
+     "at": "2026-10-13",
+     "width": 1280,
+     "height": 907
+    }
+   },
+   {
+    "url": "https://assets.kumu.io/production/public/assets/marketing/screenshots/metrics-2b9a140553c4460249a36275da807a638254ef01618fed5d4d1dcf298000c856.jpg",
+    "page": "https://kumu.io/tour",
+    "alt": "Metrics",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/jpeg",
+     "bytes": 139237,
+     "at": "2026-10-13",
+     "width": 1280,
+     "height": 721
+    }
+   },
+   {
+    "url": "https://assets.kumu.io/production/public/assets/marketing/screenshots/reid-hoffman-profile-d2e1e480844bd8ab603b39615f520bf90282cd3b3a690207985891f2c12894f4.jpg",
+    "page": "https://kumu.io/tour",
+    "alt": "Reid hoffman profile",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/jpeg",
+     "bytes": 122571,
+     "at": "2026-10-13",
+     "width": 1280,
+     "height": 721
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://kumu.io/tour",
+    "title": "Tour",
+    "why": "页面用截图和动图介绍 Kumu 的制作、筛选与装饰功能，正文如 'Create maps by hand, or import existing data.'、'Style your maps with data-driven decorations.'、'Discover insights through automated calculations.'",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Tour"
+    }
+   }
+  ],
+  "not_found": [
+   "kumu.io/gallery 抓取只有导航和一句介绍，没有列出具体示例地图的链接，未用作 demo。",
+   "docs.kumu.io 的 views 与 partial-views 页只有 GitBook 图标，另有一张 view-toggle.gif 动图，未收。"
+  ]
+ },
+ "infranodus": {
+  "demo": {
+   "url": "https://infranodus.com/live/hourlydailynews?background=default&most_influential=bc&maxnodes=150&demo=1&defaultlabelsize=14&labelsizeratio=2&demo=1",
+   "title": "InfraNodus - hourlydailynews by live - Text Network Graph",
+   "how": "页面文字写明 'To change visibility, use the Filter menu above or select topics or nodes on the graph'（用上方 Filter 菜单，或点选图上的主题、节点来改变可见内容），顶部有 'visible graph / whole text / top graphs / all graphs' 切换，页面里有 'AI Text Tools' 面板",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "InfraNodus - hourlydailynews by live - Text Network Graph"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://infranodus.com/live/hourlydailynews?background=default&most_influential=bc&maxnodes=150&demo=1&defaultlabelsize=14&labelsizeratio=2&demo=1",
+    "title": "InfraNodus - hourlydailynews by live - Text Network Graph",
+    "text_len": 1584,
+    "canvas": 6,
+    "svg": 63,
+    "img": 0,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   },
+   "seen": "打开是 hourlydailynews 的文本网络图：按主题着色的词节点与连线，左侧是原文列表，下方有 AI Insights 面板"
+  },
+  "images": [
+   {
+    "url": "https://infranodus.com/images/front/graph-visualization-popular-tweets.jpg",
+    "page": "https://infranodus.com/graphs",
+    "alt": "Graph visualization of the most popular tweets",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/jpeg",
+     "bytes": 70375,
+     "at": "2026-10-13",
+     "width": 260,
+     "height": 707
+    }
+   },
+   {
+    "url": "https://infranodus.com/images/front/graph-visualization-coronavirus-tweets.jpg",
+    "page": "https://infranodus.com/graphs",
+    "alt": "Network Graph of the Tweets on Coronavirus",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/jpeg",
+     "bytes": 70198,
+     "at": "2026-10-13",
+     "width": 260,
+     "height": 686
+    }
+   },
+   {
+    "url": "https://infranodus.com/images/front/graph-chinese-medicine-tcm.jpg",
+    "page": "https://infranodus.com/graphs",
+    "alt": "Mind Map of Chinese Medicine",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/jpeg",
+     "bytes": 52071,
+     "at": "2026-10-13",
+     "width": 280,
+     "height": 736
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://infranodus.com/tutorial/create-your-first-knowledge-graph",
+    "title": "Create Your First Knowledge Graph from Any Text (No Code) - InfraNodus.Com",
+    "why": "教程页，说明把任意文字变成可交互的知识图谱，页面正文区分 'Topics View' 与 'Concepts View' 两个视图（页面文字：'1 Topics View 2 Concepts View'）。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Create Your First Knowledge Graph from Any Text (No Code) - InfraNodus.Com"
+    }
+   },
+   {
+    "url": "https://infranodus.com/use-case/text-network-analysis",
+    "title": "Text Network Analysis and Visualization — InfraNodus.Com",
+    "why": "用例页，写有 'Represent your text as a network and apply advanced graph theory tools for topic modeling, classification, and structural gap detection.'，页面嵌有 Chinese Medicine、Google 搜索结果等文本网络图。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Text Network Analysis and Visualization — InfraNodus.Com"
+    }
+   }
+  ],
+  "not_found": [
+   "tutorial 页的 infranodus-overview.webp（Topics view）与 infranodus-excerpts.webp（Concepts view）最能说明图的样子，但 imgs.py 把 alt 截在 100 字、说明截在 120 字，无法照抄完整原文，未收。",
+   "/graphs 页还链接了其它 live 图（如 coronatwittergraph），工具输出把 ¤tapp 显示成 ¤tapp，无法确定原文地址，未收也未核对。"
+  ]
+ },
+ "cncf-landscape": {
+  "demo": {
+   "url": "https://landscape.cncf.io/",
+   "title": "CNCF Landscape",
+   "how": "",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "CNCF Landscape"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://landscape.cncf.io/",
+    "title": "CNCF Landscape",
+    "text_len": 2737,
+    "canvas": 0,
+    "svg": 78,
+    "img": 991,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   },
+   "seen": "打开是 CNCF 交互式全景图：按类别分区的项目 logo 网格，顶部有 Explore / Guide / Stats 标签，左侧有筛选与分组选项"
+  },
+  "images": [
+   {
+    "url": "https://www.cncf.io/wp-content/uploads/2020/08/CNCF-Lanscape-1.png",
+    "page": "https://www.cncf.io/blog/2018/03/08/introducing-the-cloud-native-landscape-2-0-interactive-edition/",
+    "alt": "Cloud Native Interactive Landscape website page",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 50703,
+     "at": "2026-10-13",
+     "width": 975,
+     "height": 538
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://www.cncf.io/blog/2018/03/08/introducing-the-cloud-native-landscape-2-0-interactive-edition/",
+    "title": "Introducing the Cloud Native Landscape 2.0 - interactive edition | CNCF",
+    "why": "官方博客介绍交互版：可以筛选、查看某个项目或技术的详细信息，并通过带状态的 URL 分享；页内有 landscape 网站页面的截图。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Introducing the Cloud Native Landscape 2.0 - interactive edition | CNCF"
+    }
+   },
+   {
+    "url": "https://www.cncf.io/blog/2018/11/05/beginners-guide-cncf-landscape/",
+    "title": "The beginner's guide to the CNCF landscape | CNCF",
+    "why": "官方入门指南，按类别逐个解释 landscape 中的项目（正文例如 Notary、OPA、NATS、gRPC）；页面上未见界面截图。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "The beginner’s guide to the CNCF landscape | CNCF"
+    }
+   }
+  ],
+  "not_found": [
+   "landscape.cncf.io 的静态 HTML 只有标题，除 og:image 外没有找到界面截图地址。",
+   "博客中的 CNCF_TrailMap_latest-1.png 是 Cloud Native Trail Map 信息图，不是 landscape 的界面，未收。",
+   "入门指南页的图片都是其他文章的缩略图和一张活动照片，未收。",
+   "landscape2 站的 open_graph.jpg 是分享卡片图（'Explore Cloud Native'），不是界面，未收"
+  ]
+ },
+ "thoughtworks-tech-radar": {
+  "demo": {
+   "url": "https://www.thoughtworks.com/radar",
+   "title": "Technology Radar | Guide to technology landscape | Thoughtworks",
+   "how": "页面正文写有 'Explore the interactive version by quadrant, or download the PDF to read the Radar in full'（按象限查看交互版，或下载 PDF）；页面列出 Adopt、Trial、Assess、Caution 四个环的说明。",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Technology Radar | Guide to technology landscape | Thoughtworks"
+   },
+   "seen": "打开是第 34 期技术雷达的介绍页（有下载和订阅按钮），页面上没有直接显示雷达图",
+   "render": {
+    "status": 200,
+    "final": "https://www.thoughtworks.com/radar",
+    "title": "Technology Radar | Guide to technology landscape | Thoughtworks",
+    "text_len": 13734,
+    "canvas": 6,
+    "svg": 29,
+    "img": 60,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "pages": [
+   {
+    "url": "https://www.thoughtworks.com/radar/faq",
+    "title": "FAQ | Thoughtworks",
+    "why": "官方 FAQ 解释雷达的象限（quadrants）与环（rings）的含义，以及 blip 在环中位置的意义。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "FAQ | Thoughtworks"
+    }
+   }
+  ],
+  "not_found": [
+   "页面图片只有 logo、国家旗帜、横幅和人物照片，没有雷达本身的截图，未收。",
+   "og:image（in_meta_tr34_meta.jpg）是摄影类配图，未收。",
+   "byor 页面的 in_radar_byor.png 归在 build-your-own-radar 案例里，这里不重复收。",
+   "页面 HTML 中未找到独立的交互版雷达地址，交互版是否单独成页未能确认。"
+  ]
+ },
+ "zalando-tech-radar": {
+  "demo": {
+   "url": "https://opensource.zalando.com/tech-radar/",
+   "title": "Zalando Tech Radar",
+   "how": "页面正文是 'What is the Tech Radar?' 和四个环（ADOPT / TRIAL / ASSESS / HOLD）的说明；末尾写有 'generate this visualization'（生成这一可视化的代码已开源），说明页面上有雷达可视化，但页面文字没有描述具体交互方式。",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Zalando Tech Radar"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://opensource.zalando.com/tech-radar/",
+    "title": "Zalando Tech Radar",
+    "text_len": 4367,
+    "canvas": 0,
+    "svg": 1,
+    "img": 0,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [
+   {
+    "url": "https://img01.ztat.net/engineering-blog/posts/2018/01/images/75793f677142d5be65cd880d33eaee13ea5594c5_screen-shot-2018-01-25-at-11.16.16.png?imwidth=1320",
+    "page": "https://engineering.zalando.com/posts/2018/01/building-tech-radar.html",
+    "alt": "",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/jpeg",
+     "bytes": 25295,
+     "at": "2026-10-13",
+     "width": 640,
+     "height": 605
+    }
+   },
+   {
+    "url": "https://img01.ztat.net/engineering-blog/posts/2018/01/images/548edf261441e52cf3d159b67e0a0e6ec71a5112_box_cartesian.jpg?imwidth=1320",
+    "page": "https://engineering.zalando.com/posts/2018/01/building-tech-radar.html",
+    "alt": "",
+    "caption": "",
+    "kind": "diagram",
+    "check": {
+     "status": 200,
+     "content_type": "image/jpeg",
+     "bytes": 24452,
+     "at": "2026-10-13",
+     "width": 640,
+     "height": 640
+    }
+   },
+   {
+    "url": "https://img01.ztat.net/engineering-blog/posts/2018/01/images/e8f6161a9fddebfef558a60dffa6243e23745965_box_polar.jpg?imwidth=1320",
+    "page": "https://engineering.zalando.com/posts/2018/01/building-tech-radar.html",
+    "alt": "",
+    "caption": "",
+    "kind": "diagram",
+    "check": {
+     "status": 200,
+     "content_type": "image/jpeg",
+     "bytes": 26302,
+     "at": "2026-10-13",
+     "width": 640,
+     "height": 640
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://engineering.zalando.com/posts/2018/01/building-tech-radar.html",
+    "title": "Building a Better Tech Radar",
+    "why": "官方工程博客，讲 Tech Radar 的自动布局（力导向布局加笛卡尔与极坐标包围盒），文中嵌有一张自动生成的雷达截图。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Building a Better Tech Radar"
+    }
+   }
+  ],
+  "not_found": [
+   "静态 HTML 中没有找到雷达可视化本身的图片地址，demo 的 how 只能依据页面文字判断。",
+   "2016 年博文 engineering.zalando.com/posts/2016/05/zalando-tech-radar.html 只读到标题和开头，正文未读，未收。"
+  ]
+ },
+ "build-your-own-radar": {
+  "demo": {
+   "url": "https://radar.thoughtworks.com/",
+   "title": "Build your own Radar（页面 title 标签为空，此为页面可见文字）",
+   "how": "页面有输入框 'Enter the URL of your Google Sheet, CSV or JSON file below…'，填入表格或 CSV/JSON 地址即可生成雷达；页面文字写有 'Once you've created your Radar you can use this service to generate an interactive version of your Technology Radar'。",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13"
+   },
+   "seen": "只有一个输入框：要填自己的 Google Sheet、CSV 或 JSON 地址才会生成雷达，没有现成的雷达可看",
+   "render": {
+    "status": 200,
+    "final": "https://radar.thoughtworks.com/",
+    "title": "Build your own Radar",
+    "text_len": 1135,
+    "canvas": 0,
+    "svg": 4,
+    "img": 8,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [
+   {
+    "url": "https://www.thoughtworks.com/content/dam/thoughtworks/images/photography/inline-image/insights/radar/in_radar_byor.png",
+    "page": "https://www.thoughtworks.com/radar/byor",
+    "alt": "",
+    "caption": "",
+    "kind": "figure",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 556136,
+     "at": "2026-10-13",
+     "width": 2878,
+     "height": 1500
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://www.thoughtworks.com/radar/byor",
+    "title": "Build your Own Radar | Thoughtworks",
+    "why": "官方说明页，讲如何用 Google Sheet / CSV / JSON 数据生成雷达，页内列出数据要求（例如象限名称须为四个）和 'Is my data public?' 等问答。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Build your Own Radar | Thoughtworks"
+    }
+   }
+  ],
+  "not_found": [
+   "radar.thoughtworks.com 页面文字里没有示例数据，要看到雷达需要自己提供表格或 CSV/JSON 地址，未找到现成的示例链接。",
+   "pdf_banner.png（alt 'Pdf cover image'，100×300）像是 PDF 封面图，无法确认是雷达截图，未收。",
+   "开源仓库在 github.com，按规则未访问。"
+  ]
+ },
+ "oss-insight": {
+  "demo": {
+   "url": "https://ossinsight.io/",
+   "title": "OSSInsight — AI Agent Analytics & Open Source GitHub Intelligence",
+   "how": "首页导航有 Data Explorer、Collections、Trending、Languages；页面中部有 'What is happening on GitHub NOW' 实时区块、'Trending Repos' 区块和搜索框。Trending Repos 区块写明 'Star-based rankings are paused'（星标排名暂停），原因是 GitHub 事件流分页变化导致采集不全。",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "OSSInsight — AI Agent Analytics & Open Source GitHub Intelligence"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://ossinsight.io/",
+    "title": "OSSInsight — AI Agent Analytics & Open Source GitHub Intelligence",
+    "text_len": 1885,
+    "canvas": 1,
+    "svg": 20,
+    "img": 2,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [
+   {
+    "url": "https://ossinsight.io/blog-assets/why-we-choose-tidb-to-support-ossinsight/javascript-framework-rankings.png",
+    "page": "https://ossinsight.io/blog/why-we-choose-tidb-to-support-ossinsight",
+    "alt": "JavaScript frameworks with the most issue creators",
+    "caption": "",
+    "kind": "figure",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 27067,
+     "at": "2026-10-13",
+     "width": 1504,
+     "height": 940
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://ossinsight.io/collections",
+    "title": "Open Source Collections — AI Agent Frameworks, GitHub Trending & More | OSSInsight",
+    "why": "页面文字写有 'Browse 102 + curated collections of GitHub repositories grouped by technology domain'，即按技术领域分组的合集列表，可看到站点内容的组织形式。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Open Source Collections — AI Agent Frameworks, GitHub Trending & More | OSSInsight"
+    }
+   }
+  ],
+  "not_found": [
+   "https://ossinsight.io/explore（Data Explorer）页面显示 'Under maintenance'，数据探索器暂不可用，未作为展示页。",
+   "collections 页面的图片是 GitHub 头像（github.com 域），按规则未收。",
+   "博文 why-we-choose-tidb 第一次读取因代理连接中断失败，第二次只读到开头，图片的上下文主要来自 alt 文字，需要人工确认。",
+   "首页 og:image 没有目视确认内容，kind 为 banner 是按 meta 标签判断的。",
+   "首页的 seo-widgets-homepage.jpeg 是 'Customize GitHub Widgets' 宣传图，未收"
+  ]
+ },
+ "oss-compass": {
+  "demo": {
+   "url": "https://oss-compass.org/os-situation",
+   "title": "OSS Compass",
+   "how": "首页上 'Open Source Situation Insight' 链接指向此页（首页链接文字）",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "OSS Compass"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://oss-compass.org/os-situation",
+    "title": "OSS Compass",
+    "text_len": 2571,
+    "canvas": 0,
+    "svg": 34,
+    "img": 2,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   },
+   "seen": "打开是 “Open Source Situation Insight” 页：按洞察维度列出分析卡片（开源贡献趋势、项目发展趋势等），点 View 进入"
+  },
+  "images": [
+   {
+    "url": "https://oss-compass.org/assets/images/image5-eeec3a8851a9c3caf04d198db5ccbd2a.png",
+    "page": "https://oss-compass.org/docs/docs/service-guide/open-source-insights/",
+    "alt": "",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 315050,
+     "at": "2026-10-13",
+     "width": 1898,
+     "height": 908
+    }
+   },
+   {
+    "url": "https://oss-compass.org/assets/images/image3-dabc48d9448b2017cddd137359482846.png",
+    "page": "https://oss-compass.org/docs/docs/service-guide/open-source-insights/",
+    "alt": "",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 213762,
+     "at": "2026-10-13",
+     "width": 1866,
+     "height": 831
+    }
+   },
+   {
+    "url": "https://oss-compass.org/assets/images/image10-96a1ea5d656d9187b2903beadef6315b.png",
+    "page": "https://oss-compass.org/docs/docs/service-guide/software-selection/",
+    "alt": "",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 115670,
+     "at": "2026-10-13",
+     "width": 1952,
+     "height": 716
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://oss-compass.org/docs/docs/service-guide/open-source-insights/",
+    "title": "Open Source Trend Insights Service | OSS compass",
+    "why": "服务指南中的开源态势洞察服务页。页面文字说明它通过分析全球开源项目，提供进出口、社区、技术领域、开发者、编程语言和许可证等方面的洞察；页内有 5 张配图。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Open Source Trend Insights Service | OSS compass"
+    }
+   },
+   {
+    "url": "https://oss-compass.org/docs/docs/service-guide/software-selection/",
+    "title": "Open Source Software Selection Evaluation Service | OSS compass",
+    "why": "服务指南中的软件选型评估服务页。页面文字说明它提供三项功能：评估已知软件、推荐候选软件、查找相似功能的替代软件；页内有 8 张配图。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Open Source Software Selection Evaluation Service | OSS compass"
+    }
+   }
+  ],
+  "not_found": [
+   "/os-situation 静态页面文字只有 'OSS Compass'，界面由脚本渲染，未能确认无需登录即可操作，需人工打开确认。",
+   "图片未目视核对（脚本只能读到地址、alt 与尺寸），kind 按页面位置与尺寸推断。"
+  ]
+ },
+ "pygraphistry": {
+  "images": [
+   {
+    "url": "https://hub.graphistry.com/static/legacy/images/updated_ui_callouts.png",
+    "page": "https://hub.graphistry.com/docs/ui/index/",
+    "alt": "Responsive image",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 136095,
+     "at": "2026-10-13",
+     "width": 1882,
+     "height": 890
+    }
+   },
+   {
+    "url": "https://hub.graphistry.com/static/legacy/images/main%20panel.png",
+    "page": "https://hub.graphistry.com/docs/ui/index/",
+    "alt": "Responsive image",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 122399,
+     "at": "2026-10-13",
+     "width": 984,
+     "height": 585
+    }
+   },
+   {
+    "url": "https://hub.graphistry.com/static/legacy/images/data%20inspector.jpg",
+    "page": "https://hub.graphistry.com/docs/ui/index/",
+    "alt": "Responsive image",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/jpeg",
+     "bytes": 344849,
+     "at": "2026-10-13",
+     "width": 1214,
+     "height": 867
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://pygraphistry.readthedocs.io/en/latest/demos/for_analysis.html",
+    "title": "Tutorial: Data Analysis in Graphistry — PyGraphistry Documentation",
+    "why": "教程页：图在 Graphistry 服务端渲染，需要账号，页面本身只有代码与输出表格。页面是 Notebook 教程，以代码单元和输出表格展示（如 [62] 的节点表）；代码中 g2.plot(as_files=False) 生成图形，encodings 示例注明 'requires api=3' 并给出 graphistry.register(api=3, username='...', password='...')。页面本身无需登录即可打开，但图形渲染需要 Graphistry 账号。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Tutorial: Data Analysis in Graphistry — PyGraphistry Documentation"
+    }
+   },
+   {
+    "url": "https://hub.graphistry.com/docs/ui/index/",
+    "title": "UI Guide & Advanced Links",
+    "why": "Graphistry 官方 UI 指南页，列出 UI Basics、Filters & Exclusions、Histograms、Selections 等章节，页内有界面截图。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "UI Guide & Advanced Links"
+    }
+   }
+  ],
+  "not_found": [
+   "未找到无需登录即可交互的 PyGraphistry 在线演示：教程中的图形由 g2.plot() 在 Graphistry 服务端渲染，代码写明需要 graphistry.register(...) 账号，因此 demo 只能给教程页。",
+   "readthedocs 的教程页（for_analysis、UI Guide 等）只有 Graphistry 横幅图，未收。",
+   "hub.graphistry.com 截图的 alt 均为 'Responsive image'，caption 为空；kind 按文件名与页面位置推断，未目视核对。"
+  ]
+ },
+ "embedding-projector": {
+  "demo": {
+   "url": "https://projector.tensorflow.org/",
+   "title": "",
+   "how": "页面静态 HTML 中有投影面板的文字：BOOKMARKS 抽屉说明 'Open this drawer to save a set of views of the projection, including selected points. A file containing the bookmarks can then be saved and later loaded to view them.'",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://projector.tensorflow.org/",
+    "title": "Embedding projector - visualization of high-dimensional data",
+    "text_len": 415,
+    "canvas": 3,
+    "svg": 39,
+    "img": 0,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   },
+   "seen": "打开是 Embedding Projector：左侧选数据（默认 Word2Vec 10K），中间是点云（PCA 视图，10000 点、200 维），可切换 UMAP、T-SNE、PCA、CUSTOM"
+  },
+  "images": [
+   {
+    "url": "https://www.tensorflow.org/tensorboard/images/embedding_projector.png?raw=1",
+    "page": "https://www.tensorflow.org/tensorboard/tensorboard_projector_plugin",
+    "alt": "",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 343841,
+     "at": "2026-10-13",
+     "width": 2874,
+     "height": 1365
+    }
+   },
+   {
+    "url": "https://www.tensorflow.org/tensorboard/images/embedding_projector_hitchcock.png?raw=1",
+    "page": "https://www.tensorflow.org/tensorboard/tensorboard_projector_plugin",
+    "alt": "",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 303343,
+     "at": "2026-10-13",
+     "width": 2370,
+     "height": 1221
+    }
+   },
+   {
+    "url": "https://storage.googleapis.com/gweb-research2023-media/original_images/f02c81bacca2434edcc059ef56bbd5e4-embedding-mnist.gif",
+    "page": "https://research.google/blog/open-sourcing-the-embedding-projector-a-tool-for-visualizing-high-dimensional-data/",
+    "alt": "",
+    "caption": "",
+    "kind": "figure",
+    "check": {
+     "status": 200,
+     "content_type": "image/gif",
+     "bytes": 9449665,
+     "at": "2026-10-13",
+     "width": 640,
+     "height": 327
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://www.tensorflow.org/tensorboard/tensorboard_projector_plugin",
+    "title": "Visualizing Data using the Embedding Projector in TensorBoard | TensorFlow",
+    "why": "TensorFlow 官方的 TensorBoard Embedding Projector 使用页，页内有 embedding_projector 系列示例图（alt 为空）。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Visualizing Data using the Embedding Projector in TensorBoard  |  TensorFlow"
+    }
+   },
+   {
+    "url": "https://research.google/blog/open-sourcing-the-embedding-projector-a-tool-for-visualizing-high-dimensional-data/",
+    "title": "Open sourcing the Embedding Projector: a tool for visualizing high dimensional d",
+    "why": "Google Research 官方博客，介绍 Embedding Projector 的开源；页面 og:image 文件名为 embedding-mnist.gif。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Open sourcing the Embedding Projector: a tool for visualizing high dimensional d"
+    }
+   }
+  ],
+  "not_found": [
+   "projector.tensorflow.org 静态 HTML 没有可读的 <title>，demo 的 title 留空；界面由脚本渲染，未能确认可操作的具体部分。",
+   "研究博客的 <title> 原文即在 'high dimensional d' 处截断，未补全。",
+   "博客图片来自 og:image，kind 为推断，未目视核对。"
+  ]
+ },
+ "argdown": {
+  "demo": {
+   "url": "https://argdown.org/sandbox/",
+   "title": "Sandbox | Argdown",
+   "how": "argdown.org 首页上 'Browser Sandbox' 链接指向 argdown.github.io/argdown/sandbox/，该地址跳转到此页",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Sandbox | Argdown"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://argdown.org/sandbox/html",
+    "title": "Sandbox | Argdown",
+    "text_len": 4471,
+    "canvas": 0,
+    "svg": 0,
+    "img": 3,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   },
+   "seen": "打开是左侧 Argdown 文本、右侧渲染结果（HTML / Map / JSON 标签），默认文本是 “Welcome to Argdown!” 教程"
+  },
+  "images": [
+   {
+    "url": "https://argdown.org/assets/argdown-vscode-greenspan-1.8miLtm3Q.png",
+    "page": "https://argdown.org/guide/installing-the-vscode-extension.html",
+    "alt": "",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 363494,
+     "at": "2026-10-13",
+     "width": 1552,
+     "height": 985
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://argdown.org/guide/a-first-example.html",
+    "title": "A first example | Argdown",
+    "why": "Argdown 官方入门教程。页面说明它带读者完成一场简单辩论的重构与可视化，并介绍 Argdown 语法的主要元素。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "A first example | Argdown"
+    }
+   },
+   {
+    "url": "https://argdown.org/guide/installing-the-vscode-extension.html",
+    "title": "Installing the Argdown VS Code Extension | Argdown",
+    "why": "Argdown 官方的 VS Code 扩展安装指南，页内有一张 argdown-vscode 相关图片（alt 为空）。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Installing the Argdown VS Code Extension | Argdown"
+    }
+   }
+  ],
+  "not_found": [
+   "argdown.org/sandbox/html 返回 404，它是导航中 Sandbox 链接的地址；改用 argdown.org/sandbox/（经 argdown.github.io/argdown/sandbox/ 跳转后可打开）。",
+   "argdown.org/guide/creating-argument-maps/ 返回 404，未能核对该页配图。",
+   "elements-of-an-argument-map 与 a-first-example 页面只有 Argdown 标志图（argdown-mark.svg），未收。",
+   "图片 kind 按页面位置推断，未目视核对。"
+  ]
+ },
+ "insightmaker": {
+  "demo": {
+   "url": "https://www.insightmaker.com/explore",
+   "title": "Explore Insights | Insight Maker",
+   "how": "页面有 'Find Insights' 区块，文字为 'Enter keywords or topics to find matching Insights.'，下方有 'Popular Tags'（如 ABM、Agriculture、Animals）。",
+   "mode": "samples",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Explore Insights | Insight Maker"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://www.insightmaker.com/explore",
+    "title": "Explore Insights | Insight Maker",
+    "text_len": 1253,
+    "canvas": 0,
+    "svg": 1,
+    "img": 2,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [
+   {
+    "url": "https://www.insightmaker.com/images/diagram_slide.png",
+    "page": "https://www.insightmaker.com/",
+    "alt": "A climate change model",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 34248,
+     "at": "2026-10-13",
+     "width": 800,
+     "height": 368
+    }
+   },
+   {
+    "url": "https://www.insightmaker.com/images/sd_slide.png",
+    "page": "https://www.insightmaker.com/",
+    "alt": "A world model",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 51948,
+     "at": "2026-10-13",
+     "width": 1240,
+     "height": 570
+    }
+   },
+   {
+    "url": "https://www.insightmaker.com/images/abm_slide.png",
+    "page": "https://www.insightmaker.com/",
+    "alt": "An Agent Based disease model",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 43400,
+     "at": "2026-10-13",
+     "width": 800,
+     "height": 368
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://www.insightmaker.com/",
+    "title": "Insight Maker | Build simulations and models for free",
+    "why": "官网首页，页内有 'Explore More Insights' 入口和三张模型图（alt 分别为 'A climate change model'、'A world model'、'An Agent Based disease model'）。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Insight Maker | Build simulations and models for free"
+    }
+   },
+   {
+    "url": "https://www.insightmaker.com/docs/diagramming",
+    "title": "Model Diagramming | Insight Maker",
+    "why": "官方文档中的 Model Diagramming 页，页内有 toolbar_nodes、toolbar_connector、toolbar_style 等编辑器工具栏图片（alt 为空）。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Model Diagramming | Insight Maker"
+    }
+   }
+  ],
+  "not_found": [
+   "原 demo（tag/simulation?page=3）是社区模型列表，已换为官方 Explore Insights 页 /explore；原地址仍可打开。",
+   "/explore 与 tag 页上的模型封面图是带 X-Goog-Expires=3600 的限时签名地址，已排除，未收。",
+   "首页三张模型图的 kind 按页面上下文推断，未目视核对。"
+  ]
+ },
+ "tree-sitter": {
+  "demo": {
+   "url": "https://tree-sitter.github.io/tree-sitter/7-playground.html",
+   "title": "Playground - Tree-sitter",
+   "how": "页面 About 段写明可用预选语法试用；Code 区可选 JavaScript、Python、Rust 等语言编辑代码，Tree 面板显示语法树，代码改动时树实时更新，点击树中节点可选中对应代码；Query 面板可输入查询模式，有效时捕获结果在 Code 与 Query 中高亮。",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Playground - Tree-sitter"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://tree-sitter.github.io/tree-sitter/7-playground.html",
+    "title": "Playground - Tree-sitter",
+    "text_len": 1738,
+    "canvas": 0,
+    "svg": 14,
+    "img": 0,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "pages": [
+   {
+    "url": "https://tree-sitter.github.io/tree-sitter/using-parsers/2-basic-parsing.html",
+    "title": "Basic Parsing - Tree-sitter",
+    "why": "官方教程页，标题为 Basic Parsing，讲解解析代码的基本步骤，页面有 Providing the Code 一节。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Basic Parsing - Tree-sitter"
+    }
+   },
+   {
+    "url": "https://tree-sitter.github.io/tree-sitter/",
+    "title": "Introduction - Tree-sitter",
+    "why": "官网首页，首段说明 Tree-sitter 是解析器生成工具和增量解析库。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Introduction - Tree-sitter"
+    }
+   }
+  ],
+  "not_found": [
+   "已读的首页、Basic Parsing 与 Playground 页面没有截图或示意图，只有站点 logo（tree-sitter-small.png），按规则未收。"
+  ]
+ },
+ "docling": {
+  "demo": {
+   "url": "https://huggingface.co/spaces/docling-project/SmolDocling-256M-Demo",
+   "title": "SmolDocling - a Hugging Face Space by docling-project",
+   "how": "",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "SmolDocling - a Hugging Face Space by docling-project"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://huggingface.co/spaces/docling-project/SmolDocling-256M-Demo",
+    "title": "SmolDocling - a Hugging Face Space by docling-project",
+    "text_len": 108,
+    "canvas": 0,
+    "svg": 16,
+    "img": 2,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   },
+   "seen": "打开是 SmolDocling-256M 的 Hugging Face Space：一个聊天框加几个示例提示（Convert this page to docling 等），要上传图片才能转换"
+  },
+  "images": [
+   {
+    "url": "https://docling-project.github.io/docling/assets/docling_arch.png",
+    "page": "https://docling-project.github.io/docling/concepts/architecture/",
+    "alt": "docling_architecture",
+    "caption": "",
+    "kind": "diagram",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 467220,
+     "at": "2026-10-13",
+     "width": 4152,
+     "height": 1902
+    }
+   },
+   {
+    "url": "https://docling-project.github.io/docling/assets/docling_doc_hierarchy_1.png",
+    "page": "https://docling-project.github.io/docling/concepts/docling_document/",
+    "alt": "doc_hierarchy_1",
+    "caption": "",
+    "kind": "diagram",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 377808,
+     "at": "2026-10-13",
+     "width": 1950,
+     "height": 900
+    }
+   },
+   {
+    "url": "https://docling-project.github.io/docling/assets/docling_doc_hierarchy_2.png",
+    "page": "https://docling-project.github.io/docling/concepts/docling_document/",
+    "alt": "doc_hierarchy_2",
+    "caption": "",
+    "kind": "diagram",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 367053,
+     "at": "2026-10-13",
+     "width": 1950,
+     "height": 900
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://docling-project.github.io/docling/concepts/architecture/",
+    "title": "Architecture - Docling",
+    "why": "页面标题为 Architecture，并嵌有架构图 docling_arch.png。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Architecture - Docling"
+    }
+   },
+   {
+    "url": "https://docling-project.github.io/docling/concepts/docling_document/",
+    "title": "Docling document - Docling",
+    "why": "概念页，标题为 Docling document，嵌有两张文档层级图。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Docling document - Docling"
+    }
+   }
+  ],
+  "not_found": [
+   "SmolDocling 空间页面为 JS 渲染，界面未核对，也未能确认当前是否在线；页面所属组织为 docling-project。",
+   "docling_doc_hierarchy 页面有一行文字 'Document hierarchy with sections and groups'，未能确认它是哪张图的说明，两张图的 caption 留空。",
+   "HF 模型页 SmolDocling-256M-preview 的 SmolDocling_doctags1.png 与 doctags_v2.png 未收：页面上只有 alt 文字（SmolDocling、Image description），无法确认图的内容。",
+   "首页链接的 GraniteDocling 模型页与 IBM 文档中的 Granite Docling demo 未访问，未收。"
+  ]
+ },
+ "docling-graph": {
+  "demo": {
+   "url": "https://docling-project.github.io/docling-graph/usage/examples/",
+   "title": "Overview - Docling Graph Documentation",
+   "how": "示例总览页按输入格式（URL Input、Markdown Input、DoclingDocument Input）和领域（Billing Document、ID Card、Insurance Policy、Rheology Research）分类，并列出 Workflow 1: URL → Extract → Visualize。",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Overview - Docling Graph Documentation"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://docling-project.github.io/docling-graph/usage/examples/",
+    "title": "Overview - Docling Graph Documentation",
+    "text_len": 5323,
+    "canvas": 0,
+    "svg": 12,
+    "img": 2,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "pages": [
+   {
+    "url": "https://docling-project.github.io/docling-graph/fundamentals/graph-management/visualization/",
+    "title": "Visualization - Docling Graph Documentation",
+    "why": "讲交互式 HTML 可视化，页面列出 Zoom and pan 等功能，并给出 open outputs/visualization.html 的打开方法。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Visualization - Docling Graph Documentation"
+    }
+   },
+   {
+    "url": "https://docling-project.github.io/docling-graph/",
+    "title": "Docling Graph Documentation",
+    "why": "项目首页，目录下有 What is Docling Graph? 的介绍。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Docling Graph Documentation"
+    }
+   }
+  ],
+  "not_found": [
+   "首页、visualization、graph-conversion、schema relationships 页面和示例页只有站点 logo，没有截图或示意图；交互式 HTML 可视化只有文字描述，未收图。",
+   "示例页（如 billing-document、id-card）能打开，但页面上没有结果截图，效果需运行示例才能看到。"
+  ]
+ },
+ "graphrag": {
+  "images": [
+   {
+    "url": "https://microsoft.github.io/graphrag/img/GraphRag-Figure1.jpg",
+    "page": "https://microsoft.github.io/graphrag/",
+    "alt": "Figure 1: LLM-generated knowledge graph built from a private dataset using GPT-4 Turbo.",
+    "caption": "Figure 1: An LLM-generated knowledge graph built using GPT-4 Turbo.",
+    "kind": "figure",
+    "check": {
+     "status": 200,
+     "content_type": "image/jpeg",
+     "bytes": 62215,
+     "at": "2026-10-13",
+     "width": 600,
+     "height": 611
+    }
+   },
+   {
+    "url": "https://microsoft.github.io/graphrag/img/viz_guide/gephi-initial-graph-example.png",
+    "page": "https://microsoft.github.io/graphrag/visualization_guide/",
+    "alt": "A basic graph visualization by Gephi",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 1327031,
+     "at": "2026-10-13",
+     "width": 1234,
+     "height": 1242
+    }
+   },
+   {
+    "url": "https://microsoft.github.io/graphrag/img/viz_guide/gephi-appearance-pane.png",
+    "page": "https://microsoft.github.io/graphrag/visualization_guide/",
+    "alt": "A view of Gephi",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 70968,
+     "at": "2026-10-13",
+     "width": 1246,
+     "height": 290
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://microsoft.github.io/graphrag/",
+    "title": "Welcome - GraphRAG",
+    "why": "官方首页，嵌有 Figure 1 知识图谱图，正文说明图中圆圈是实体、大小表示度数、颜色表示社区。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Welcome - GraphRAG"
+    }
+   },
+   {
+    "url": "https://microsoft.github.io/graphrag/visualization_guide/",
+    "title": "Visualization Guide - GraphRAG",
+    "why": "可视化指南，讲如何把输出的 graph.graphml 导入 Gephi，页面含 Gephi 界面截图。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Visualization Guide - GraphRAG"
+    }
+   }
+  ],
+  "not_found": [
+   "官网与可视化指南中没有官方在线演示或 playground。WebSearch 只找到社区项目 graphrag-visualizer 与 graphrag-workbench，不是官方，也未找到可直接打开的托管页，未收。",
+   "visualization_guide 另有三张 Gephi 设置面板截图（gephi-network-overview-settings、gephi-layout-pane、gephi-layout-forceatlas2-pane），未收。"
+  ]
+ },
+ "lightrag": {
+  "pages": [
+   {
+    "url": "https://pypi.org/project/lightrag-hku/",
+    "title": "lightrag-hku · PyPI",
+    "why": "包的 PyPI 项目页，README 嵌有 LightRAG Diagram 与一张 iShot 截图，并介绍 LightRAG WebUI（2024.11 新功能）。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "lightrag-hku · PyPI"
+    }
+   }
+  ],
+  "not_found": [
+   "没有找到官方托管的在线演示。README 只链接了 YouTube 视频（https://www.youtube.com/watch?v=g21royNJ4fw，标为 video demo）；视频不是可直接操作的页面，未收为展示页。",
+   "WebSearch 提到的 Streamlit 应用 https://lightrag-gui.streamlit.app/ 访问返回 303 且读不到内容，未收，也未能确认维护者。",
+   "两张图经 PyPI 的 pypi-camo 代理，原始地址是 GitHub 仓库里的相对路径（./README.assets/…），未核对 GitHub 原图；iShot 图的页面上下文未能确认，kind 暂记为 figure。",
+   "PyPI 页面的 learnopencv.com 流程图（LightRAG Indexing Flowchart、Retrieval and Querying Flowchart）是第三方站点的图，未收；user-images.githubusercontent.com 的 GIF 与其他 GitHub 托管图按规则未收。"
+  ]
+ },
+ "graphiti": {
+  "demo": {
+   "url": "https://app.getzep.com/playground",
+   "title": "Playground | Zep",
+   "how": "Graphiti 概述页顶部导航有 Playground 入口，链接指向该地址。页面文字为 Pick example 和 This dataset doesn't have any graph data to visualize. Pick example，即先选示例数据再看图谱。打开时无需登录",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Playground | Zep"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://app.getzep.com/playground",
+    "title": "Playground | Zep",
+    "text_len": 6451,
+    "canvas": 1,
+    "svg": 41,
+    "img": 2,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [],
+  "pages": [
+   {
+    "url": "https://help.getzep.com/graphiti/getting-started/overview",
+    "title": "Overview | Zep Documentation",
+    "why": "Graphiti 官方概述页，页内嵌有两张幻灯式动图（intro 与 demo slides）",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Overview | Zep Documentation"
+    }
+   },
+   {
+    "url": "https://help.getzep.com/graphiti/core-concepts/adding-episodes",
+    "title": "Adding Episodes | Zep Documentation",
+    "why": "核心概念页，标题为 Adding Episodes（添加 episode）",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Adding Episodes | Zep Documentation"
+    }
+   }
+  ],
+  "not_found": [
+   "adding-episodes 页的 Simple Graph 示意图地址在 raw.githubusercontent.com（GitHub 域），按规则未收录",
+   "Playground 属于 Zep 平台（页面标题 Playground | Zep），页面未说明是否专门展示 Graphiti，需要你判断",
+   "概述页的两张幻灯式动图，第一帧是黑屏，内容未能核对，未收"
+  ]
+ },
+ "tube-map": {
+  "images": [
+   {
+    "url": "https://media.londonmuseum.org.uk/images/WagtailSource-Railway-map.width-1136.format-webp.webp",
+    "page": "https://www.londonmuseum.org.uk/collections/london-stories/harry-beck-revolutionised-tube-map/",
+    "alt": "1933 map of the london underground, showing colored lines and stations in a stylized layout, with th",
+    "caption": "",
+    "kind": "figure",
+    "check": {
+     "status": 200,
+     "content_type": "image/webp",
+     "bytes": 126178,
+     "at": "2026-10-13",
+     "width": 1136,
+     "height": 791
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://www.londonmuseum.org.uk/collections/london-stories/harry-beck-revolutionised-tube-map/",
+    "title": "How Harry Beck revolutionised the Tube map | London Museum",
+    "why": "伦敦博物馆专题页，讲 Harry Beck 对地铁图的改画，页内有 1933 年地图图片",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "How Harry Beck revolutionised the Tube map | London Museum"
+    }
+   },
+   {
+    "url": "https://www.londonmuseum.org.uk/collections/v/object-536576/railway-map/",
+    "title": "Railway map | London Museum",
+    "why": "馆藏记录 Railway map，专题页把它链接为 1935 map，页面有该地图的大图",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Railway map | London Museum"
+    }
+   }
+  ],
+  "not_found": [
+   "官方地铁图页 https://tfl.gov.uk/maps/tube 返回 403，读不到，无法确认是否有 TfL 在线交互地图",
+   "馆藏页 object-536576 是静态馆藏图，不是在线演示，不算展示页",
+   "第一张图的 alt 被脚本截到 100 个字符，原文更长，未核全",
+   "专题页中的 British Library digitised image 没有 alt 和说明，未收录",
+   "Adam Dant 重绘的地铁图（https://www.londonmuseum.org.uk/collections/v/object-731204/the-centrally-planned-london-underground-map/）是艺术作品，未收录",
+   "馆藏记录里的 1935 地图与专题页的 1933 地图看起来是同一幅图，只留专题页那张"
+  ]
+ },
+ "nextstrain": {
+  "demo": {
+   "url": "https://nextstrain.org/ncov/open/global/6m",
+   "title": "auspice",
+   "how": "nextstrain.org 首页 Core pathogens 区（页面文字：Continually updated views of a range of pathogens maintained by the Nextstrain）下的 SARS-CoV-2 链接指向该地址，即 Auspice 实时视图",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "auspice"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://nextstrain.org/ncov/open/global/6m",
+    "title": "Nextstrain / ncov / open / global / 6m",
+    "text_len": 31191,
+    "canvas": 1,
+    "svg": 60,
+    "img": 3,
+    "page_errors": 1,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [
+   {
+    "url": "https://docs.nextstrain.org/en/latest/_images/mumps.png",
+    "page": "https://docs.nextstrain.org/en/latest/learn/interpret/interacting-with-nextstrain.html",
+    "alt": "mumps",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 360568,
+     "at": "2026-10-13",
+     "width": 2288,
+     "height": 1540
+    }
+   },
+   {
+    "url": "https://docs.nextstrain.org/projects/auspice/en/stable/_images/v2-pie-charts.gif",
+    "page": "https://docs.nextstrain.org/projects/auspice/en/stable/",
+    "alt": "_images/v2-pie-charts.gif",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/gif",
+     "bytes": 619667,
+     "at": "2026-10-13",
+     "width": 990,
+     "height": 515
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://docs.nextstrain.org/en/latest/learn/interpret/interacting-with-nextstrain.html",
+    "title": "Interacting with Nextstrain’s phylogeographic visualisations — Nextstrain documentation",
+    "why": "官方文档，讲怎样与 Nextstrain 的系统发育地理可视化互动，页内有 mumps 视图截图",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Interacting with Nextstrain’s phylogeographic visualisations — Nextstrain documentation"
+    }
+   },
+   {
+    "url": "https://docs.nextstrain.org/projects/auspice/en/stable/",
+    "title": "Auspice: An Open-source Interactive Tool for Visualising Phylogenomic Data — Auspice documentation",
+    "why": "Auspice 官方文档首页，页内嵌有 Auspice v2 饼图的动图",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Auspice: An Open-source Interactive Tool for Visualising Phylogenomic Data — Auspice documentation"
+    }
+   }
+  ],
+  "not_found": [
+   "nextstrain.org 实时视图页由前端渲染，只读到页面标题 auspice，视图内容未核对",
+   "Auspice 文档首页的 splash.png 无法确定是截图还是装饰图，未收录"
+  ]
+ },
+ "onezoom": {
+  "demo": {
+   "url": "https://www.onezoom.org/",
+   "title": "OneZoom web software Tree of Life Explorer",
+   "how": "首页即生命树浏览器。页面导航文字有 A view of all known life（全部已知生命的视图）和 Your name on the tree",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "OneZoom web software Tree of Life Explorer"
+   },
+   "seen": "先弹出 cookie 窗口，后面是生命树",
+   "render": {
+    "status": 200,
+    "final": "https://www.onezoom.org/",
+    "title": "OneZoom web software Tree of Life Explorer",
+    "text_len": 5940,
+    "canvas": 1,
+    "svg": 9,
+    "img": 68,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [
+   {
+    "url": "https://journals.plos.org/plosbiology/article/figure/image?size=inline&id=10.1371/journal.pbio.1001406.g001",
+    "page": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001406",
+    "alt": "Figure 1",
+    "caption": "Figure 1. An example IFIG of mammals compiled from the data in [ 8 ] .",
+    "kind": "figure",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 52580,
+     "at": "2026-10-13",
+     "width": 320,
+     "height": 93
+    }
+   },
+   {
+    "url": "https://journals.plos.org/plosbiology/article/figure/image?size=inline&id=10.1371/journal.pbio.1001406.g002",
+    "page": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001406",
+    "alt": "Figure 2",
+    "caption": "Figure 2. An example IFIG of a 408,135-tip phylogeny of small-subunit RNAs using data from SILVA [ 9 ] .",
+    "kind": "figure",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 84616,
+     "at": "2026-10-13",
+     "width": 320,
+     "height": 266
+    }
+   },
+   {
+    "url": "https://journals.plos.org/plosbiology/article/figure/image?size=inline&id=10.1371/journal.pbio.1001406.g003",
+    "page": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001406",
+    "alt": "Figure 3",
+    "caption": "Figure 3. The different fractal forms available in OneZoom.",
+    "kind": "figure",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 45468,
+     "at": "2026-10-13",
+     "width": 320,
+     "height": 107
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://www.onezoom.org/introduction",
+    "title": "About OneZoom web software",
+    "why": "官方介绍页，说明 OneZoom 网页软件",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "About OneZoom web software"
+    }
+   },
+   {
+    "url": "https://www.onezoom.org/full_guide",
+    "title": "OneZoom web software: Full user guide",
+    "why": "完整用户指南，标题为 Full user guide，适合查看界面操作说明",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "OneZoom web software: Full user guide"
+    }
+   }
+  ],
+  "not_found": [
+   "introduction 与 full_guide 页里的三张图（Dragonflies、Shrimps and more、Mushrooms）是物种照片，不是界面截图，未收录",
+   "PLOS 论文的 Figure 4（哺乳类树加 IUCN 数据）也可作为界面示例，本次只收了 Figure 1 至 3"
+  ]
+ },
+ "circos": {
+  "images": [
+   {
+    "url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/83a8/2752132/c478c2ce1cb2/1639fig5.jpg",
+    "page": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2752132/",
+    "alt": "Figure 5.",
+    "caption": "Copy number whole-genome profiles of five follicular lymphoma tumor samples generated from the Affymetrix Mapping 500K array. Samples are represented in each of the five histograms in tracks A–E. (后文省略)",
+    "kind": "diagram",
+    "check": {
+     "status": 200,
+     "content_type": "image/jpeg",
+     "bytes": 205623,
+     "at": "2026-10-13",
+     "width": 510,
+     "height": 503
+    }
+   },
+   {
+    "url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/83a8/2752132/60841735c591/1639fig6.jpg",
+    "page": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2752132/",
+    "alt": "Figure 6.",
+    "caption": "Copy number profiles for chromosomes 6 and 17 of five follicular lymphoma tumor samples generated from the Affymetrix Mapping 500K array. Probe values were averaged across 20 adjacent probes. (后文省略)",
+    "kind": "figure",
+    "check": {
+     "status": 200,
+     "content_type": "image/jpeg",
+     "bytes": 203740,
+     "at": "2026-10-13",
+     "width": 510,
+     "height": 504
+    }
+   },
+   {
+    "url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/83a8/2752132/4e726d4b0642/1639fig7.jpg",
+    "page": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2752132/",
+    "alt": "Figure 7.",
+    "caption": "Copy number profiles for chromosomes 6 and 17 of five follicular lymphoma tumor samples generated from the Affymetrix Mapping 500K array. Regions of interest A and B on chromosomes 6 and J and K on chromosomes 17 (后文省略)",
+    "kind": "figure",
+    "check": {
+     "status": 200,
+     "content_type": "image/jpeg",
+     "bytes": 199477,
+     "at": "2026-10-13",
+     "width": 510,
+     "height": 498
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2752132/",
+    "title": "Circos: An information aesthetic for comparative genomics - PMC",
+    "why": "Circos 原论文页，Figure 5 至 7 的图注描述了全基因组拷贝数轨道及染色体放大等图的画法",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Circos: An information aesthetic for comparative genomics - PMC"
+    }
+   }
+  ],
+  "not_found": [
+   "circos.ca 官网，以及 PMC 页面链接的 mkweb.bcgsc.ca/circos 与 /tableviewer，在本环境 DNS 解析失败，读不到，无法确认是否有在线演示",
+   "PMC 页面图片列表中只找到 Figure 5 至 7 的图片地址，Figure 1 与 Figure 8 未取得图片地址，未收录",
+   "图注中的 caption 按原文截取了前半部分，后文已省略"
+  ]
+ },
+ "reactome": {
+  "images": [
+   {
+    "url": "https://reactome.org/images/userguide/pathway_browser/pathway_browser_labelled.png",
+    "page": "https://reactome.org/userguide/pathway-browser",
+    "alt": "pathway browser labelled",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 436987,
+     "at": "2026-10-13",
+     "width": 1006,
+     "height": 708
+    }
+   },
+   {
+    "url": "https://reactome.org/images/userguide/pathway_browser/subpathway_selection.png",
+    "page": "https://reactome.org/userguide/pathway-browser",
+    "alt": "subpathway selection",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 493763,
+     "at": "2026-10-13",
+     "width": 969,
+     "height": 591
+    }
+   },
+   {
+    "url": "https://reactome.org/images/userguide/pathway_browser/EHLD.png",
+    "page": "https://reactome.org/userguide/pathway-browser",
+    "alt": "EHLD",
+    "caption": "",
+    "kind": "diagram",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 614929,
+     "at": "2026-10-13",
+     "width": 964,
+     "height": 591
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://reactome.org/userguide/pathway-browser",
+    "title": "Pathway Browser - Reactome Pathway Database",
+    "why": "用户指南，说明 Pathway Browser 的总览用同心圆层级图表示通路，并标注了界面各部分",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Pathway Browser - Reactome Pathway Database"
+    }
+   },
+   {
+    "url": "https://www.ebi.ac.uk/training/online/courses/reactome-exploring-biological-pathways/understanding-the-pathway-browser/",
+    "title": "Understanding the Pathway Browser | Reactome",
+    "why": "EMBL-EBI 培训页，标题为 Understanding the Pathway Browser，属于 Reactome 培训课程 Exploring biological pathways",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Understanding the Pathway Browser | Reactome"
+    }
+   }
+  ],
+  "not_found": [
+   "https://reactome.org/PathwayBrowser/ 返回 200，但页面显示 'Ooops! This is unexpected...' 错误提示，检查时不可用",
+   "https://reactome.org/beta/PathwayBrowser/ 返回 200，但页面文字只有标题，正文由脚本渲染，未能读到内容，未收为展示页，可人工确认",
+   "userguide 页还有几张 lh7-us.googleusercontent.com 图片没有 alt 与说明，内容无法核对，未收"
+  ]
+ },
+ "sbgn": {
+  "demo": {
+   "url": "https://sbgn.github.io/examples",
+   "title": "Examples | Systems Biology Graphical Notation",
+   "how": "示例页列出 MAPK、Glycolysis、Insulin signalling 等示例图；每个示例可下载 PNG，并有 Newt 链接（在 Newt 编辑器中打开 SBGN-ML 文件）",
+   "mode": "samples",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Examples | Systems Biology Graphical Notation"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://sbgn.github.io/examples",
+    "title": "Examples | Systems Biology Graphical Notation",
+    "text_len": 8078,
+    "canvas": 0,
+    "svg": 0,
+    "img": 18,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [
+   {
+    "url": "https://sbgn.github.io/images/examples/Sample-mapk-pd.png",
+    "page": "https://sbgn.github.io/examples",
+    "alt": "MAPK-PD",
+    "caption": "",
+    "kind": "diagram",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 34629,
+     "at": "2026-10-13",
+     "width": 483,
+     "height": 450
+    }
+   },
+   {
+    "url": "https://sbgn.github.io/images/examples/WWWglycolysis.png",
+    "page": "https://sbgn.github.io/examples",
+    "alt": "Glycolysis.png",
+    "caption": "",
+    "kind": "diagram",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 74733,
+     "at": "2026-10-13",
+     "width": 750,
+     "height": 407
+    }
+   },
+   {
+    "url": "https://sbgn.github.io/images/examples/WWWinsulin.png",
+    "page": "https://sbgn.github.io/examples",
+    "alt": "Insulin_signaling",
+    "caption": "",
+    "kind": "diagram",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 84910,
+     "at": "2026-10-13",
+     "width": 710,
+     "height": 562
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://sbgn.github.io/symbols",
+    "title": "Symbols | Systems Biology Graphical Notation",
+    "why": "符号页，按类别列出 SBGN 的符号（如 Stimulation、Inhibition、Process、Macromolecule），并附每个符号的示例图",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Symbols | Systems Biology Graphical Notation"
+    }
+   },
+   {
+    "url": "https://sbgn.github.io/learning",
+    "title": "Learning SBGN | Systems Biology Graphical Notation",
+    "why": "学习页，用葡萄糖被己糖激酶磷酸化等例子讲解 Process 符号，并介绍 SBGN Bricks 的示例图",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Learning SBGN | Systems Biology Graphical Notation"
+    }
+   }
+  ],
+  "not_found": [
+   "symbols 页的符号图都在 raw.githubusercontent.com 上，按规则未收"
+  ]
+ },
+ "llnl-energy-flow": {
+  "demo": {
+   "url": "https://flowcharts.llnl.gov/commodities/energy",
+   "title": "Energy Flow Charts | Flowcharts",
+   "how": "页面写明 'Search the flow chart database by year, country, and state'，可按年份、国家、州搜索流向图数据库；页内列出各州 2024 年 Sankey 图的缩略图",
+   "mode": "samples",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Energy Flow Charts | Flowcharts"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://flowcharts.llnl.gov/commodities/energy",
+    "title": "Energy Flow Charts | Flowcharts",
+    "text_len": 4901,
+    "canvas": 0,
+    "svg": 13,
+    "img": 56,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [
+   {
+    "url": "https://flowcharts.llnl.gov/sites/flowcharts/files/2026-08/2024-us-energy-flowchart-homepage.jpg",
+    "page": "https://flowcharts.llnl.gov/",
+    "alt": "A sankey chart showing U.S. energy consumption in 2024.",
+    "caption": "",
+    "kind": "diagram",
+    "check": {
+     "status": 200,
+     "content_type": "image/jpeg",
+     "bytes": 542679,
+     "at": "2026-10-13",
+     "width": 3058,
+     "height": 1737
+    }
+   },
+   {
+    "url": "https://flowcharts.llnl.gov/sites/flowcharts/files/styles/scaled_220w/public/2026-08/energy-2024-united-states-california.png?itok=rvZzmtck",
+    "page": "https://flowcharts.llnl.gov/commodities/energy",
+    "alt": "Sankey diagram for California's energy usage in 2024.",
+    "caption": "",
+    "kind": "diagram",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 20345,
+     "at": "2026-10-13",
+     "width": 220,
+     "height": 124
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://flowcharts.llnl.gov/",
+    "title": "Energy Flow Charts | Lawrence Livermore National Laboratory",
+    "why": "首页说明流向图（也称 Sankey 图）是单页参考图，并给出 2024 年美国能源流向图",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Energy Flow Charts | Lawrence Livermore National Laboratory"
+    }
+   },
+   {
+    "url": "https://star.llnl.gov/energy-homeland-security/energy-security/energy-flow-charts",
+    "title": "Energy Flow Charts | STAR",
+    "why": "STAR 站的能源流向图页，说明这些图用来呈现国家尺度能源系统的结构",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Energy Flow Charts | STAR"
+    }
+   }
+  ],
+  "not_found": [
+   "未提交 commodities 页的搜索表单，搜索结果页未核对",
+   "STAR 页的缩略图（220×124）太小，看不清，未收"
+  ]
+ },
+ "icij-offshore-leaks": {
+  "demo": {
+   "url": "https://offshoreleaks.icij.org/",
+   "title": "ICIJ Offshore Leaks Database",
+   "how": "首页搜索框（页面示例：'British Virgin Islands | Entity Name LLC | Lima, Peru'）；'Explore the investigations' 可按 Pandora、Paradise、Panama、Bahamas、Offshore Leaks 调查浏览；how-to 页说明点击人名会出现连接关系的可视化",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "ICIJ Offshore Leaks Database"
+   },
+   "seen": "先弹出使用声明，勾选同意并提交后才能搜索",
+   "render": {
+    "status": 200,
+    "final": "https://offshoreleaks.icij.org/",
+    "title": "ICIJ Offshore Leaks Database",
+    "text_len": 4058,
+    "canvas": 0,
+    "svg": 2,
+    "img": 14,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [
+   {
+    "url": "https://offshoreleaks.icij.org/vite/assets/how_to_1-3651839e.png",
+    "page": "https://offshoreleaks.icij.org/pages/howtouse",
+    "alt": "",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 14077,
+     "at": "2026-10-13",
+     "width": 512,
+     "height": 112
+    }
+   },
+   {
+    "url": "https://offshoreleaks.icij.org/vite/assets/how_to_2-24a5f4e5.png",
+    "page": "https://offshoreleaks.icij.org/pages/howtouse",
+    "alt": "",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 30590,
+     "at": "2026-10-13",
+     "width": 512,
+     "height": 205
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://offshoreleaks.icij.org/pages/howtouse",
+    "title": "How to use the Offshore Leaks Database | ICIJ Offshore Leaks Database",
+    "why": "使用指南，按例子说明搜索人名或公司、按国家和司法辖区筛选，以及点击节点查看关系图",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "How to use the Offshore Leaks Database | ICIJ Offshore Leaks Database"
+    }
+   },
+   {
+    "url": "https://offshoreleaks.icij.org/",
+    "title": "ICIJ Offshore Leaks Database",
+    "why": "数据库首页，有搜索框和各调查的入口",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "ICIJ Offshore Leaks Database"
+    }
+   }
+  ],
+  "not_found": [
+   "how_to_1 至 how_to_11 图片都没有 alt 与说明文字，内容无法用文字核对；这里的 kind 是按 how-to 页面用途推测的，只收了前两张",
+   "首页的调查缩略图、og:image 以及 Linkurious、neo4j 的 logo 未收"
+  ]
+ },
+ "wikidata-query-views": {
+  "demo": {
+   "url": "https://query.wikidata.org/",
+   "title": "SPARQL",
+   "how": "在查询界面写好 SPARQL 后运行（侧栏蓝色 Execute query 按钮，说明见 Result_Views 页），再在 'Display' 格式中切换结果视图，如 Table、Image Grid、Map、Bubble Chart 等",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13"
+   },
+   "seen": "打开是空的 SPARQL 查询框，要自己输入查询或从 Examples 里选",
+   "render": {
+    "status": 200,
+    "final": "https://query.wikidata.org/",
+    "title": "Wikidata Query Service",
+    "text_len": 265,
+    "canvas": 0,
+    "svg": 0,
+    "img": 1,
+    "page_errors": 1,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/WDQS_-_Table_Result_View.png/120px-WDQS_-_Table_Result_View.png?utm_source=www.wikidata.org&utm_campaign=parser&utm_content=thumbnail",
+    "page": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/Wikidata_Query_Help/Result_Views",
+    "alt": "Table Result",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 4961,
+     "at": "2026-10-13",
+     "width": 120,
+     "height": 65
+    }
+   },
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/WDQS_-_Map_Result_View.png/120px-WDQS_-_Map_Result_View.png?utm_source=www.wikidata.org&utm_campaign=parser&utm_content=thumbnail",
+    "page": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/Wikidata_Query_Help/Result_Views",
+    "alt": "Map of airports in Belgium Try Out",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 24429,
+     "at": "2026-10-13",
+     "width": 120,
+     "height": 99
+    }
+   },
+   {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/WDQS_-_Bubble_Chart_Result_View.png/250px-WDQS_-_Bubble_Chart_Result_View.png?utm_source=www.wikidata.org&utm_campaign=parser&utm_content=thumbnail",
+    "page": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/Wikidata_Query_Help/Result_Views",
+    "alt": "",
+    "caption": "Bubble Chart Try Out",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 60908,
+     "at": "2026-10-13",
+     "width": 250,
+     "height": 234
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/Wikidata_Query_Help/Result_Views",
+    "title": "Wikidata:SPARQL query service/Wikidata Query Help/Result Views - Wikidata",
+    "why": "逐个介绍结果视图（Table、Image Grid、Map、折线/柱状/散点/面积图、Bubble Chart、Tree Map、Tree、Timeline、Dimensions、Graph），并附截图",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Wikidata:SPARQL query service/Wikidata Query Help/Result Views - Wikidata"
+    }
+   }
+  ],
+  "not_found": [
+   "query.wikidata.org 的 <title> 为空，上面的 title 取自页面文字中的 SPARQL；页面正文由脚本加载，只读到界面框架（Test result、Loading...），未能确认查询结果能否正常显示"
+  ]
+ },
+ "vowl": {
+  "pages": [
+   {
+    "url": "https://semantic-web-journal.net/content/visualizing-ontologies-vowl-0",
+    "title": "Visualizing Ontologies with VOWL",
+    "why": "期刊文章页，摘要说明 VOWL 用力导向图布局表示本体，并介绍了 ProtégéVOWL 与 WebVOWL 两种实现",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Visualizing Ontologies with VOWL | www.semantic-web-journal.net"
+    }
+   },
+   {
+    "url": "https://semantic-web-journal.net/content/vowl-2-user-oriented-visualization-ontologies",
+    "title": "VOWL 2: User-Oriented Visualization of Ontologies",
+    "why": "期刊文章页，摘要说明 VOWL 2 的图形原语与抽象配色方案，并简述两种实现",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "VOWL 2: User-Oriented Visualization of Ontologies | www.semantic-web-journal.net"
+    }
+   }
+  ],
+  "not_found": [
+   "未找到可打开的官方 WebVOWL 在线版。已知地址 http://vowl.visualdataweb.org/webvowl.html 域名无法解析；vowl.visualdataweb.org 根地址跳转到与本项目无关的博彩网站，已排除。http://www.visualdataweb.de/webvowl/ 域名也无法解析。",
+   "两篇论文页面上没有指向在线 demo 的链接，只读到摘要与 PDF 链接。",
+   "论文 PDF swj1114.pdf 中的图只在 PDF 内，没有独立图片地址，未收录，图号未核对。",
+   "两篇论文页面上的图片只有站点 logo、订阅图标和 PDF 图标，未收录。"
+  ]
+ },
+ "kialo": {
+  "demo": {
+   "url": "https://www.kialo.com/should-us-internet-platforms-be-able-to-remove-or-demote-speech-by-elected-public-figures-39863",
+   "title": "Should US internet platforms be able to remove or demote… | Kialo",
+   "how": "kialo.com 首页的 Explore Debates 列表中的公开辩论（首页文字含 'Explore Debates'、'Featured Popular New Hot'）；直接请求返回 200，未见登录要求",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Should US internet platforms be able to remove or demote… | Kialo"
+   },
+   "seen": "先是辩论的介绍框，点 Enter 进入论点树",
+   "render": {
+    "status": 200,
+    "final": "https://www.kialo.com/should-us-internet-platforms-be-able-to-remove-or-demote-speech-by-elected-public-figures-39863",
+    "title": "Should US internet platforms be able to remove or demote… | Kialo",
+    "text_len": 2934,
+    "canvas": 0,
+    "svg": 33,
+    "img": 11,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [
+   {
+    "url": "https://support.kialo.com/wp-content/uploads/sites/17/2023/04/Create-a-Claim-1024x466.png",
+    "page": "https://support.kialo.com/en/hc/creating-a-claim/",
+    "alt": "",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 61526,
+     "at": "2026-10-13",
+     "width": 1024,
+     "height": 466
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://support.kialo.com/en/hc/creating-a-claim/",
+    "title": "Creating a Claim | Kialo Help Center",
+    "why": "帮助中心文章，页面带有同名的 Create-a-Claim 截图（og:image 也指向该图）",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Creating a Claim | Kialo Help Center"
+    }
+   },
+   {
+    "url": "https://support.kialo.com/en/hc/navigating-the-claim-menu/",
+    "title": "Navigating the Claim Menu | Kialo Help Center",
+    "why": "帮助中心文章，标题为 Navigating the Claim Menu；页面上没有截图，只读到标题与导航文字",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Navigating the Claim Menu | Kialo Help Center"
+    }
+   }
+  ],
+  "not_found": [
+   "辩论页正文文字很少，只读到标题，论点树的具体界面未核对。",
+   "kialo.com 首页有一张 688x382 的图（c3977f06…_688x382.webp），alt 为空，无法判断内容，未收录。",
+   "navigating-the-claim-menu 页面的图片只有图标，未收录。"
+  ]
+ },
+ "codecity": {
+  "pages": [
+   {
+    "url": "https://www.inf.usi.ch/faculty/lanza/PUBS/M/Wett2008e.pdf",
+    "title": "",
+    "why": "论文 PDF（无页面标题），书签目录含 The City Metaphor in a Nutshell、The Tool、Configurability、Application，可看到工具与应用的说明",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13"
+    }
+   }
+  ],
+  "not_found": [
+   "未找到官方在线 demo。搜索结果提到 2021、2022 年的论文描述了一个基于 git 仓库的网页版 CodeCity，但未能在官方页面上找到可打开的地址，未收录。",
+   "城市截图和图示只在论文 PDF 中（Wett2008e.pdf），没有独立图片地址，未收录；图号未核对。"
+  ]
+ },
+ "hive-plot": {
+  "demo": {
+   "url": "https://bost.ocks.org/mike/hive/",
+   "title": "Hive Plots",
+   "how": "页面正文写 'This hive plot, a type of node-link diagram, shows the dependency graph of the Flare visualization toolkit'，并提示 'Mouseover for more details'",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Hive Plots"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://bost.ocks.org/mike/hive/",
+    "title": "Hive Plots",
+    "text_len": 2832,
+    "canvas": 0,
+    "svg": 1,
+    "img": 0,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   },
+   "seen": "打开能看到 Flare 依赖图的 hive plot（三条轴之间的弧线）"
+  },
+  "images": [
+   {
+    "url": "https://mk.bcgsc.ca/linnet/img/hiveplot-ecoli.png",
+    "page": "https://mk.bcgsc.ca/linnet/",
+    "alt": "E. coli gene regulatory network visualized with the linear layout.",
+    "caption": "",
+    "kind": "figure",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 74102,
+     "at": "2026-10-13",
+     "width": 575,
+     "height": 570
+    }
+   },
+   {
+    "url": "https://mk.bcgsc.ca/linnet/img/hiveplot-linux.png",
+    "page": "https://mk.bcgsc.ca/linnet/",
+    "alt": "Linux kernel function call network visualized with the linear layout.",
+    "caption": "",
+    "kind": "figure",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 90943,
+     "at": "2026-10-13",
+     "width": 575,
+     "height": 570
+    }
+   },
+   {
+    "url": "https://mk.bcgsc.ca/linnet/img/hiveplot-undirected-01.png",
+    "page": "https://mk.bcgsc.ca/linnet/",
+    "alt": "Application of the linear layout for network visualization to an undirected network (graph).",
+    "caption": "",
+    "kind": "figure",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 20556,
+     "at": "2026-10-13",
+     "width": 550,
+     "height": 510
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://mk.bcgsc.ca/linnet/",
+    "title": "Hive Plots - Linear Layout for Network Visualization - Visually Interpreting Network Structure and Content Made Possible",
+    "why": "hive plot 原作者 Martin Krzywinski 的主页，页面上有多张线性布局的网络图",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Hive Plots - Linear Layout for Network Visualization - Visually Interpreting Network Structure and Content Made Possible"
+    }
+   }
+  ],
+  "not_found": [
+   "linnet 页面自己的 demo 链接 https://bl.ocks.org/d/2117857/ 返回 404，未收录。",
+   "https://www.hiveplot.com/ 证书校验失败，按规则未绕过，读不到其内容。",
+   "bost.ocks.org 是 d3 作者 Mike Bostock 的博客示例，不是 Krzywinski 的官方 demo，作为备选收录。",
+   "jhive 为 Java 应用（zip 下载），不是在线展示页，未收录。"
+  ]
+ },
+ "gapminder": {
+  "demo": {
+   "url": "https://www.gapminder.org/tools/",
+   "title": "",
+   "how": "新闻页 'Gapminder Tools are coming' 中的链接 '⧉ Gapminder Tools' 指向该地址；新闻页正文写 'Welcome ⧉ Gapminder Tools : our new Bubble Chart and more!'",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://www.gapminder.org/tools/#$chart-type=bubbles&url=v2",
+    "title": "Gapminder Tools",
+    "text_len": 3451,
+    "canvas": 4,
+    "svg": 149,
+    "img": 20,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [],
+  "pages": [
+   {
+    "url": "https://www.gapminder.org/news/gapminder-tools-are-coming/",
+    "title": "Gapminder Tools are coming | Gapminder",
+    "why": "官方新闻页，介绍新版 Gapminder Tools 的 Bubble Chart，页面附有使用方法的示意图",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Gapminder Tools are coming | Gapminder"
+    }
+   },
+   {
+    "url": "https://www.gapminder.org/upload-data/motion-chart/",
+    "title": "Quick guide to the Motion Chart | Gapminder",
+    "why": "官方指南页，说明在 Google 表格里用 Motion Chart 做气泡图的步骤（这是 Google 表格的小工具，不是 Gapminder 自己的工具），页面有一张样例图",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Quick guide to the Motion Chart | Gapminder"
+    }
+   }
+  ],
+  "not_found": [
+   "gapminder.org/tools/ 返回 200，但页面是脚本渲染，读不到标题与操作说明，只核对到可以打开，未核对其中图表的功能。",
+   "新闻页说旧版 Bubble Chart（Gapminder World）仍保留在网站上但不保证可用，该地址未访问，未收录。",
+   "新闻页里的 Gapminder-Tools-Guide.png 图在 www.gapminder.org 上返回 404，换到 static.gapminder.org 返回 403，没有再试，未收",
+   "Motion Chart 指南页的样例图是 Google 表格里的数据表，不是气泡图界面，未收"
+  ]
+ },
+ "gephi": {
+  "demo": {
+   "url": "https://lite.gephi.org/",
+   "title": "Gephi Lite",
+   "how": "gephi.org/lite 页面的 “Open in your browser” 按钮指向此地址，该页写着 “Import graph data, run network ranking and layout algorithms, customize the graph appearance … No installation required.”",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Gephi Lite"
+   },
+   "seen": "弹出欢迎窗口，可选 Les Miserables 等示例图",
+   "render": {
+    "status": 200,
+    "final": "https://lite.gephi.org/v1.1.0/",
+    "title": "Gephi Lite",
+    "text_len": 352,
+    "canvas": 7,
+    "svg": 33,
+    "img": 0,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [
+   {
+    "url": "https://gephi.org/_astro/Gephi%20Desktop%20Screenshot%20DtB.DzXtydP5_1uXmvG.webp",
+    "page": "https://gephi.org/desktop/",
+    "alt": "",
+    "caption": "Visual user interface",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/webp",
+     "bytes": 19466,
+     "at": "2026-10-13",
+     "width": 532,
+     "height": 315
+    }
+   },
+   {
+    "url": "https://gephi.org/_astro/graph.C6hSDaRl_oWvg9.webp",
+    "page": "https://gephi.org/quickstart/",
+    "alt": "Les misérables.gexf in the graph view",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/webp",
+     "bytes": 74490,
+     "at": "2026-10-13",
+     "width": 1920,
+     "height": 1080
+    }
+   },
+   {
+    "url": "https://gephi.org/_astro/layout_02.DQ0xO6Xg_Z1H0oyf.webp",
+    "page": "https://gephi.org/desktop/",
+    "alt": "",
+    "caption": "Separate clusters",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/webp",
+     "bytes": 97022,
+     "at": "2026-10-13",
+     "width": 950,
+     "height": 758
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://gephi.org/desktop/",
+    "title": "Gephi Desktop: Free Network Analysis and Visualization Software",
+    "why": "Gephi 桌面版的官方功能页，带界面截图，图注有 “Drag and drop nodes”、“Highlight neighbors” 等操作示意",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Gephi Desktop: Free Network Analysis and Visualization Software"
+    }
+   },
+   {
+    "url": "https://gephi.org/quickstart/",
+    "title": "Gephi Quickstart: Visualize and Analyze Your First Network",
+    "why": "官方入门教程，用 Les misérables 图等例子配步骤截图",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Gephi Quickstart: Visualize and Analyze Your First Network"
+    }
+   }
+  ]
+ },
+ "treemap-diskspace": {
+  "demo": {
+   "url": "https://d3-graph-gallery.com/treemap.html",
+   "title": "Treemap | the D3 Graph Gallery",
+   "how": "“Interactivity” 下的 “Button and smooth transition” 一节：按钮可在 size 与 count 之间切换，用于学习平滑过渡（页面文字）。这是第三方示例库，非 D3 官方；页面示例为通用 treemap，未针对磁盘空间。",
+   "mode": "samples",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Treemap | the D3 Graph Gallery"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://d3-graph-gallery.com/treemap.html",
+    "title": "Treemap | the D3 Graph Gallery",
+    "text_len": 2042,
+    "canvas": 0,
+    "svg": 0,
+    "img": 54,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [
+   {
+    "url": "https://www.cs.umd.edu/hcil/treemap-history/index_files/image005.jpg",
+    "page": "https://www.cs.umd.edu/hcil/treemap-history/",
+    "alt": "KDirStat main window",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/jpeg",
+     "bytes": 8546,
+     "at": "2026-10-13",
+     "width": 222,
+     "height": 172
+    }
+   },
+   {
+    "url": "https://www.cs.umd.edu/hcil/treemap-history/windirstat-small.jpg",
+    "page": "https://www.cs.umd.edu/hcil/treemap-history/",
+    "alt": "WinDirStat",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/jpeg",
+     "bytes": 7723,
+     "at": "2026-10-13",
+     "width": 190,
+     "height": 144
+    }
+   },
+   {
+    "url": "https://www.cs.umd.edu/hcil/treemap-history/index_files/image007.gif",
+    "page": "https://www.cs.umd.edu/hcil/treemap-history/",
+    "alt": "3D treemap for file browsing",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/gif",
+     "bytes": 17810,
+     "at": "2026-10-13",
+     "width": 243,
+     "height": 182
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://www.cs.umd.edu/hcil/treemap-history/",
+    "title": "Treemaps for space-constrained visualization of hierarchies",
+    "why": "Treemap 发展史页，配有 KDirStat、WinDirStat 等文件浏览类 treemap 截图",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Treemaps for space-constrained visualization of hierarchies"
+    }
+   },
+   {
+    "url": "https://www.cs.umd.edu/projects/hcil/treemap/index.shtml",
+    "title": "Treemap: Home page",
+    "why": "HCIL Treemap 项目主页，给出 treemap 的定义（空间受限地显示层级结构的可视化），并列出软件下载与 applet 入口",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Treemap: Home page"
+    }
+   }
+  ],
+  "not_found": [
+   "D3 官方 gallery（https://observablehq.com/@d3/-/collection/gallery）返回 429，未读到，未收录",
+   "HCIL Treemap 4.0 Demo（https://www.cs.umd.edu/projects/hcil/treemap/applet/index.shtml）页面可打开，但页面写明它是需要 Java 1.4 插件的 Java Applet，未能运行核对，故未收为 demo",
+   "未找到磁盘空间专用的在线 treemap 演示"
+  ]
+ },
+ "git-history": {
+  "demo": {
+   "url": "https://learngitbranching.js.org/",
+   "title": "Learn Git Branching",
+   "how": "第三方交互练习，非 Git 官方项目。页面可见文字为终端标题 “Terminal – Learn Git Branching”，带 “Git” 与 “Hg” 两个标签",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Learn Git Branching"
+   },
+   "seen": "弹出欢迎窗口，之后是终端加提交图的练习界面",
+   "render": {
+    "status": 200,
+    "final": "https://learngitbranching.js.org/",
+    "title": "Learn Git Branching",
+    "text_len": 1738,
+    "canvas": 0,
+    "svg": 2,
+    "img": 1,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [
+   {
+    "url": "https://git-scm.com/book/en/v2/images/branch-and-history.png",
+    "page": "https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell",
+    "alt": "A branch and its commit history",
+    "caption": "",
+    "kind": "diagram",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 59767,
+     "at": "2026-10-13",
+     "width": 1407,
+     "height": 756
+    }
+   },
+   {
+    "url": "https://git-scm.com/book/en/v2/images/commits-and-parents.png",
+    "page": "https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell",
+    "alt": "Commits and their parents",
+    "caption": "",
+    "kind": "diagram",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 138143,
+     "at": "2026-10-13",
+     "width": 2391,
+     "height": 792
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell",
+    "title": "Git - Branches in a Nutshell",
+    "why": "Pro Git 分支一节，用提交、父提交与分支指针的图示说明提交历史的结构",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Git - Branches in a Nutshell"
+    }
+   },
+   {
+    "url": "https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History",
+    "title": "Git - Viewing the Commit History",
+    "why": "Pro Git 讲查看提交历史的一节",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Git - Viewing the Commit History"
+    }
+   }
+  ],
+  "not_found": [
+   "git-scm.com 本身没有在线 playground 或示例库；git-scm.com/learn 与 doc/ext 外链中没有 Learn Git Branching 的链接，它是我找到的公开练习站"
+  ]
+ },
+ "flame-graph": {
+  "demo": {
+   "url": "https://www.brendangregg.com/FlameGraphs/cpu-mysql-updated.svg",
+   "title": "mysqld`page_align (97 samples, 0.03%)",
+   "how": "这是 SVG 文件，没有独立页面标题，上面的 title 是 SVG 内 <title> 元素的文字。SVG 内可见文字含 “Flame Graph”、“Reset Zoom”、“Search”；cpuflamegraphs 页说明 “mouse over the SVGs to reveal details, and click to zoom”。",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://www.brendangregg.com/FlameGraphs/cpu-mysql-updated.svg",
+    "title": "",
+    "text_len": 0,
+    "canvas": 0,
+    "svg": 1,
+    "img": 0,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [
+   {
+    "url": "https://www.brendangregg.com/FlameGraphs/cpu-bash-flamegraph.png",
+    "page": "https://www.brendangregg.com/FlameGraphs/cpuflamegraphs.html",
+    "alt": "",
+    "caption": "",
+    "kind": "figure",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 148268,
+     "at": "2026-10-13",
+     "width": 1078,
+     "height": 624
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://www.brendangregg.com/flamegraphs.html",
+    "title": "Flame Graphs",
+    "why": "火焰图的作者站点主页，是这个案例的官方入口页",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Flame Graphs"
+    }
+   },
+   {
+    "url": "https://www.brendangregg.com/FlameGraphs/cpuflamegraphs.html",
+    "title": "CPU Flame Graphs",
+    "why": "CPU 火焰图页，含用 perf 采样 bash 程序生成的火焰图示例，以及 MySQL 示例（“MySQL CPU Flame Graph”）",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "CPU Flame Graphs"
+    }
+   }
+  ],
+  "not_found": [
+   "thlorenz.com/flamegraph/web/（brendangregg.com 页面上标为 example 的链接）DNS 解析失败，未读到"
+  ]
+ },
+ "dsm": {
+  "images": [
+   {
+    "url": "https://dsmweb.org/wp-content/uploads/2019/04/readingadms_bild1.png",
+    "page": "https://dsmweb.org/reading-a-dsm/",
+    "alt": "",
+    "caption": "",
+    "kind": "diagram",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 2282,
+     "at": "2026-10-13",
+     "width": 180,
+     "height": 175
+    }
+   },
+   {
+    "url": "https://dsmweb.org/wp-content/uploads/2019/02/rtemagicc_bild13.png.png",
+    "page": "https://dsmweb.org/different-dsm-types/",
+    "alt": "",
+    "caption": "",
+    "kind": "diagram",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 54649,
+     "at": "2026-10-13",
+     "width": 500,
+     "height": 307
+    }
+   },
+   {
+    "url": "https://dsmweb.org/wp-content/uploads/2019/02/rtemagicc_bild14.png.png",
+    "page": "https://dsmweb.org/different-dsm-types/",
+    "alt": "",
+    "caption": "",
+    "kind": "diagram",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 57697,
+     "at": "2026-10-13",
+     "width": 500,
+     "height": 308
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://dsmweb.org/reading-a-dsm/",
+    "title": "Reading a DSM – The Dependency and Structure Modeling (DSM) Web",
+    "why": "讲怎样读 DSM 矩阵（行、列与标记的含义），配有六元素 DSM 示意图",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Reading a DSM – The Dependency and Structure Modeling (DSM) Web"
+    }
+   },
+   {
+    "url": "https://dsmweb.org/different-dsm-types/",
+    "title": "Different DSM Types – The Dependency and Structure Modeling (DSM) Web",
+    "why": "讲 DSM 的几种类型与各自的元素和关系，含多张矩阵示例图",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Different DSM Types – The Dependency and Structure Modeling (DSM) Web"
+    }
+   }
+  ],
+  "not_found": [
+   "dsmweb.org 的 DSM 工具页（https://dsmweb.org/dsm-tools/）列出的研究工具与商业工具中未找到在线演示入口；research-tools 与 training-tools 页面也没有 demo 或 online 链接",
+   "different-dsm-types 页面的图片没有 alt 与 caption，bild13、bild14 是按正文 “The DSM shown below … also shown below” 与页面图片顺序判断的，未逐张核对内容"
+  ]
+ },
+ "genealogical-graphs": {
+  "not_found": [
+   "demo：作者 DGP 页面 https://www.dgp.toronto.edu/~mjmcguff/research/genealogyVis/ 返回 403，按规则记为读不到，未换路径尝试；WebSearch 只显示作者旧主页说明已不再更新、新地址未出现在结果里，没有找到可用的在线演示",
+   "images：ETS 记录页 https://espace2.etsmtl.ca/id/eprint/22387/ 只有 logo 和图标，页面注明全文未托管在该服务器；DGP 页面 403 读不到，因此没有可收的图片",
+   "pages：week8.pdf（https://www.cs.ubc.ca/~tmm/courses/grad/slides/week8.pdf）是 PDF，脚本只拿到二进制内容，读不到正文，无法据此写出说明，未收；ETS 记录页只有书目信息，不能说明案例长什么样，未收",
+   "DOI https://doi.org/10.1109/INFVIS.2005.1532124 在本环境解析失败（域名无法解析）",
+   "WebSearch 结果中有一段 YouTube 讲座录像（https://www.youtube.com/watch?v=-FkRzDegzAo），不是官方页面也不是在线演示，未收"
+  ]
+ },
+ "universal-dependencies": {
+  "demo": {
+   "url": "https://universaldependencies.org/conllu_viewer.html",
+   "title": "CoNLL-U Viewer",
+   "how": "页面文字为 'CoNLL-U Viewer'，可用 'Load CoNLL-U File ...' 加载 CoNLL-U 文件。UD tools 页面把它列为工具，链接文字为 'Access here'",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "CoNLL-U Viewer"
+   },
+   "seen": "只有一个空的 CoNLL-U 文件加载框，要自己提供文件",
+   "render": {
+    "status": 200,
+    "final": "https://universaldependencies.org/conllu_viewer.html",
+    "title": "CoNLL-U Viewer",
+    "text_len": 49,
+    "canvas": 0,
+    "svg": 0,
+    "img": 0,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "pages": [
+   {
+    "url": "https://universaldependencies.org/u/overview/syntax.html",
+    "title": "Syntax",
+    "why": "页面说明句法标注是词与词之间带类型的依存关系，基础表示形成一棵树，句中恰有一个词是句子的中心词（head）。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Syntax"
+    }
+   },
+   {
+    "url": "https://universaldependencies.org/format.html",
+    "title": "CoNLL-U Format",
+    "why": "页面说明 UD 采用修订版 CoNLL-X 的 CoNLL-U 格式，用纯文本文件逐词标注词形与句法。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "CoNLL-U Format"
+    }
+   }
+  ],
+  "not_found": [
+   "images：introduction.html、format.html、syntax.html、conllu_viewer.html 中 imgs.py 都没有列出内容图片；universaldependencies.org 首页的图片是 logo、旗帜和星标，未收",
+   "demo：viewer 页面只读到静态文字，未能加载文件验证显示效果"
+  ]
+ },
+ "cmaptools": {
+  "demo": {
+   "url": "https://cmap.ihmc.us/docs/itinerary.php",
+   "title": "Cmap | Cmap Software",
+   "how": "学习页 https://cmap.ihmc.us/docs/learn.php 写：点击 'Click on this image to get started' 的图片进入 Beginner's Itinerary；概念图显示后，点击概念下方的图标可列出相关资源链接。itinerary.php 页面文字为 'View this tutorial video to learn how to open links form this Itinerary'",
+   "mode": "samples",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Cmap | Cmap Software"
+   },
+   "seen": "只渲染出页头和 “View this page on desktop or tablet”，概念图没有出现",
+   "render": {
+    "status": 200,
+    "final": "https://cmap.ihmc.us/docs/itinerary.php",
+    "title": "Cmap | Cmap Software",
+    "text_len": 517,
+    "canvas": 0,
+    "svg": 0,
+    "img": 19,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [
+   {
+    "url": "https://cmap.ihmc.us/docs/img/build-concept-maps.png",
+    "page": "https://cmap.ihmc.us/docs/learn.php",
+    "alt": "",
+    "caption": "",
+    "kind": "figure",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 241366,
+     "at": "2026-10-13",
+     "width": 640,
+     "height": 480
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://cmap.ihmc.us/cmap-cloud/",
+    "title": "Cmap Cloud & CmapTools in the Cloud | Cmap",
+    "why": "页面说明 Cmap Cloud 可用网页浏览器构建和分享概念图，CmapTools in the Cloud 是可在主流桌面浏览器运行的网页版，列出了拖放编辑、导出 CXL/JPG/SVG 等功能。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Cmap Cloud & CmapTools in the Cloud | Cmap"
+    }
+   },
+   {
+    "url": "https://cmap.ihmc.us/docs/learn.php",
+    "title": "Cmap | Cmap Software",
+    "why": "学习资源页，列出 Beginner's Itinerary、'Concept Map about Concept Maps' 等概念图和文档，并有可点击进入概念图的入口。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Cmap | Cmap Software"
+    }
+   }
+  ],
+  "not_found": [
+   "images：首页 cmap.ihmc.us 的三张小图（home-column-1 至 3.jpg，高 88）页面上下文没有说明文字，无法判断是否为案例截图，未收",
+   "images：build-concept-maps.png 只读到地址、尺寸和页面位置，未看到图片内容；kind 'figure' 是按它作为概念图入口的位置推测的",
+   "demo：itinerary.php 的概念图由脚本渲染，本次只读到静态文字，未能确认地图是否实际显示"
+  ]
+ },
+ "wikipedia-summary-style": {
+  "pages": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Wikipedia:Summary_style",
+    "title": "Wikipedia:Summary style - Wikipedia",
+    "why": "页面说明 summary style 的做法：长文章把各子主题分到子文章中，母文章对应小节写摘要，并用 'Main article' 类 hatnote 链到子文章。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Wikipedia:Summary style - Wikipedia"
+    }
+   },
+   {
+    "url": "https://en.wikipedia.org/wiki/Wikipedia:Article_size",
+    "title": "Wikipedia:Article size - Wikipedia",
+    "why": "页面给出可读正文长度的经验值，并说明超长文章通常会拆分为两篇或更多较小的文章。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Wikipedia:Article size - Wikipedia"
+    }
+   }
+  ],
+  "not_found": [
+   "demo：这是维基百科的写作方法指南，页面上没有可操作的在线演示，记为 null",
+   "images：页面中的图片都是维基的图标、品牌标识和小图标，没有案例内容图，未收",
+   "images：页面有 'World War II article in summary style' 的示例标题，但 imgs.py 没有列出对应图片，未收"
+  ]
+ },
+ "explorable-explanations": {
+  "demo": {
+   "url": "https://worrydream.com/TenBrighterIdeas/",
+   "title": "Ten Brighter Ideas? An Explorable Explanation",
+   "how": "页面写：'Mouse over each claim to read and play with an interactive analysis. Mouse over any statistic to see the source.'（鼠标移到每条主张上可阅读并操作交互分析，移到统计数字上可看来源）",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Ten Brighter Ideas? An Explorable Explanation"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://worrydream.com/TenBrighterIdeas/",
+    "title": "Ten Brighter Ideas? An Explorable Explanation",
+    "text_len": 2901,
+    "canvas": 0,
+    "svg": 0,
+    "img": 58,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [
+   {
+    "url": "https://worrydream.com/ExplorableExplanations/Media/IntroTenBrighterIdeas.png",
+    "page": "https://worrydream.com/ExplorableExplanations/",
+    "alt": "",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 14803,
+     "at": "2026-10-13",
+     "width": 195,
+     "height": 128
+    }
+   },
+   {
+    "url": "https://worrydream.com/ExplorableExplanations/Media/IntroFilter.png",
+    "page": "https://worrydream.com/ExplorableExplanations/",
+    "alt": "",
+    "caption": "",
+    "kind": "screenshot",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 9564,
+     "at": "2026-10-13",
+     "width": 195,
+     "height": 128
+    }
+   },
+   {
+    "url": "https://worrydream.com/ExplorableExplanations/Media/FilterRepresentations.png",
+    "page": "https://worrydream.com/ExplorableExplanations/",
+    "alt": "",
+    "caption": "",
+    "kind": "figure",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 11052,
+     "at": "2026-10-13",
+     "width": 571,
+     "height": 63
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://worrydream.com/ExplorableExplanations/",
+    "title": "Explorable Explanations",
+    "why": "作者 Bret Victor 的总文，用 Ten Brighter Ideas、滤波器示例和上下文信息三个例子说明可交互文章的形式，正文中有可调整的示例。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Explorable Explanations"
+    }
+   },
+   {
+    "url": "https://worrydream.com/Tangle/",
+    "title": "Tangle: a JavaScript library for reactive documents",
+    "why": "页面说明 Tangle 是用于做可交互文档（reactive documents）的 JavaScript 库，读者可以在文档中交互式地探索可能性、调整参数。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Tangle: a JavaScript library for reactive documents"
+    }
+   }
+  ],
+  "not_found": [
+   "images：IntroTenBrighterIdeas.png、IntroFilter.png 是 195x128 的缩略图，页面上没有说明文字；kind 'screenshot' 是按文件名和页面分节（1. Reactive Documents、2. Explorable Examples）推测的，未看到图片内容",
+   "images：FilterSchematic.png、FilterEquations.png、FilterFrequencyApprox.png 也是页面内图，因为上限 3 张未收；TenBrighterIcon.png 是图标，未收"
+  ]
+ },
+ "ladder-of-abstraction": {
+  "demo": {
+   "url": "https://worrydream.com/LadderOfAbstraction/",
+   "title": "Up and Down the Ladder of Abstraction",
+   "how": "文章本身就是交互页面。页面文字：'Click Tap to the right to find out how this algorithm behaves.'（点击或轻触右侧，查看算法的行为）；'Drag the slider at the right to control time explicitly.'（拖动右侧滑块显式控制时间）；'we can also mouse over touch the trajectory to see the car at that point.'（鼠标移到轨迹上，查看该点对应的车）。",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Up and Down the Ladder of Abstraction"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://worrydream.com/LadderOfAbstraction/",
+    "title": "Up and Down the Ladder of Abstraction",
+    "text_len": 39031,
+    "canvas": 44,
+    "svg": 0,
+    "img": 16,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [
+   {
+    "url": "https://worrydream.com/LadderOfAbstraction/Images/CubeDot.png",
+    "page": "https://worrydream.com/LadderOfAbstraction/",
+    "alt": "",
+    "caption": "",
+    "kind": "diagram",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 15643,
+     "at": "2026-10-13",
+     "width": 124,
+     "height": 91
+    }
+   },
+   {
+    "url": "https://worrydream.com/LadderOfAbstraction/Images/CubeLine.png",
+    "page": "https://worrydream.com/LadderOfAbstraction/",
+    "alt": "",
+    "caption": "",
+    "kind": "diagram",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 14109,
+     "at": "2026-10-13",
+     "width": 124,
+     "height": 84
+    }
+   },
+   {
+    "url": "https://worrydream.com/LadderOfAbstraction/Images/CubePlane.png",
+    "page": "https://worrydream.com/LadderOfAbstraction/",
+    "alt": "",
+    "caption": "",
+    "kind": "diagram",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 14526,
+     "at": "2026-10-13",
+     "width": 124,
+     "height": 84
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://worrydream.com/LadderOfAbstraction/",
+    "title": "Up and Down the Ladder of Abstraction",
+    "why": "页面自述为 'This interactive essay presents the ladder of abstraction'（交互式文章，介绍抽象阶梯），与上面的演示是同一页。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Up and Down the Ladder of Abstraction"
+    }
+   }
+  ],
+  "not_found": [
+   "页面其余静态图为 LadderIcon 系列小图标和 SwingEquation 公式图，未收。",
+   "CubePlaneLine.png 未收入（只收了 3 张）。CubeDot、CubeLine、CubePlane 在页面上所处的段落未能从页面文字确认，alt 与说明文字均为空，kind 为按图形判断。"
+  ]
+ },
+ "zettelkasten": {
+  "not_found": [
+   "Luhmann-Archiv 相关页面（首页、教程页 /bestand/zettelkasten/tutorial、检索页 /bestand/zettelkasten/suche、/nachlass/zettelkasten）均返回 200，但内容由脚本渲染，静态抓取只读到标题，读不到正文和图片，无法从页面文字确认它们展示什么，因此未收为展示页或页面。检索页是可能的展示候选（搜索摘要称可看 Zettel 影印件），需要人工打开核对。",
+   "已知的 Bielefeld 论文 PDF 返回 200，但脚本无法提取正文，图号未能确认；PDF 内的图片只在 PDF 里，没有独立地址，未收。",
+   "搜索结果中有一个第三方 3D/2D 卡片盒项目（托管在 GitHub，未访问，非官方），未收。"
+  ]
+ },
+ "markmap": {
+  "demo": {
+   "url": "https://markmap.js.org/repl",
+   "title": "",
+   "how": "官方首页页面文字 'Visualize your Markdown with mindmaps' 下有 'Try it out →' 入口，链接指向 /repl。",
+   "mode": "live",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://markmap.js.org/repl",
+    "title": "Try markmap",
+    "text_len": 1517,
+    "canvas": 0,
+    "svg": 1,
+    "img": 0,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "pages": [
+   {
+    "url": "https://markmap.js.org/",
+    "title": "markmap",
+    "why": "官方首页，页面文字为 'Visualize your Markdown with mindmaps'，并有 'Try it out →' 入口。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "markmap"
+    }
+   },
+   {
+    "url": "https://markmap.js.org/docs/markmap",
+    "title": "markmap - markmap docs",
+    "why": "文档的 'What is markmap?' 入门页，页面说明 markmap 是 Markdown 与思维导图的结合。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "markmap - markmap docs"
+    }
+   }
+  ],
+  "not_found": [
+   "首页、docs/markmap、docs/json-options、docs/magic-comments 的源码中没有找到 img 图片，官方截图未找到。",
+   "REPL 页面为脚本渲染，脚本读不到它的标题和正文，所以 demo.title 留空；只确认它返回 200 且无需登录。"
+  ]
+ },
+ "toulmin": {
+  "pages": [
+   {
+    "url": "https://www.blinn.edu/writing-centers/wide/toulmin-argument.html",
+    "title": "Toulmin Argument",
+    "why": "学院写作中心的说明页，用文字拆解 claim、data（grounds）、warrant，并以牙齿美白广告为例给出 'Example Toulmin Breakdown'。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Toulmin Argument"
+    }
+   }
+  ],
+  "not_found": [
+   "未找到官方在线演示。Toulmin 模型是论证分析框架；搜索只找到描述在线工具的 arXiv 论文（ARG，arXiv 1507.03682），未找到其站点地址，未核对，未收。",
+   "blinn 页面上的图片只有学院标识，没有图示，未收。",
+   "UTSA 写作中心 PDF（https://www.utsa.edu/twc/documents/Toulmin_Model_of_Argumentation.pdf）返回 200，脚本无法提取正文；其中的图示只在 PDF 内，没有独立地址，未收。"
+  ]
+ }
+}
