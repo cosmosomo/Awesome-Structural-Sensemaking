@@ -3,7 +3,7 @@
 > 本文件由 `scripts/build.py` 根据 `catalog/` 生成，请改 YAML，不要直接改这里。
 > 条目信息来自 2026-10 调研报告。展示页来自报告原文或事后的搜索结果，除标 ✓ 的外都没有实际访问过。
 
-共 83 个条目；有开源项目地址 81 个，有展示页 46 个（其中 0 个已访问核对，标 ✓）。
+共 85 个条目；有开源项目地址 83 个，有展示页 52 个（其中 0 个已访问核对，标 ✓）。
 
 “待补”表示开源项目地址缺失，“待收集”表示展示页缺失；商业产品、规范和刊物没有仓库，用“—”表示。
 
@@ -17,7 +17,7 @@
 | --- | --- | --- | --- | --- | --- |
 | [D3.js](https://github.com/d3/d3) | 底层数据驱动可视化工具集。<br>自定义视觉编码、层级、网络、布局与交互。 | [仓库](https://github.com/d3/d3) | [展示页](https://observablehq.com/collection/@d3/gallery) | — | — |
 | [Vega-Lite](https://github.com/vega/vega-lite) | 声明式可视化语法。<br>用结构化描述定义图表，而不是逐元素绘制。 | [仓库](https://github.com/vega/vega-lite) | [展示页](https://vega.github.io/vega-lite/examples/) | — | — |
-| [Apache ECharts](https://echarts.apache.org/) | 综合图表引擎。<br>图表类型、交互组件、大屏和业务看板。 | [仓库](https://github.com/apache/echarts) | 待收集 | [站点](https://echarts.apache.org/) | — |
+| [Apache ECharts](https://echarts.apache.org/) | 综合图表引擎。<br>图表类型、交互组件、大屏和业务看板。 | [仓库](https://github.com/apache/echarts) | [展示页](https://echarts.apache.org/examples) | [站点](https://echarts.apache.org/) | — |
 | [Plotly.js](https://github.com/plotly/plotly.js) | 数据探索与交互图表。<br>多维统计图、科学可视化、交互分析。 | [仓库](https://github.com/plotly/plotly.js) | [展示页](https://plotly.com/javascript/) | — | — |
 | [deck.gl](https://github.com/visgl/deck.gl) | GPU 加速的大数据可视化框架。<br>大规模数据、地图图层、多视角渲染。 | [仓库](https://github.com/visgl/deck.gl) | [展示页](https://deck.gl/gallery/) | — | — |
 
@@ -31,7 +31,7 @@
 | [React Flow](https://reactflow.dev/) | React 节点和边编辑器。<br>自定义节点、子流程、连线编辑、业务组件集成。更适合研究复杂节点编辑器与工作流应用。 | [仓库](https://github.com/xyflow/xyflow) | [展示页](https://reactflow.dev/examples) | [站点](https://reactflow.dev/) | 官方展开折叠等部分高级示例属于付费 Pro 内容。 |
 | [Cytoscape.js](https://js.cytoscape.org/) | 图模型、网络分析及扩展生态。<br>复合节点、图算法、复杂度管理。更适合研究复杂网络的结构呈现。 | [仓库](https://github.com/cytoscape/cytoscape.js) | [展示页](https://js.cytoscape.org/) | — | — |
 | [Sigma.js](https://www.sigmajs.org/) | 基于 WebGL 的网络图渲染。<br>较大关系网络、节点探索，常与 Graphology 配合。 | [仓库](https://github.com/jacomyal/sigma.js) | [展示页](https://www.sigmajs.org/examples/) | [站点](https://www.sigmajs.org/) | — |
-| [AntV X6](https://github.com/antvis/X6) | 图编辑引擎。<br>复杂节点编辑、连接桩、流程编辑器。 | [仓库](https://github.com/antvis/X6) | 待收集 | — | — |
+| [AntV X6](https://github.com/antvis/X6) | 图编辑引擎。<br>复杂节点编辑、连接桩、流程编辑器。 | [仓库](https://github.com/antvis/X6) | [展示页](https://x6.antv.antgroup.com/examples) | — | — |
 | [diagram-js](https://github.com/bpmn-io/diagram-js) | 图形编辑能力底座，bpmn-js 建立在其上。<br>编辑器组件；业务流程方向的 L1 代表。 | [仓库](https://github.com/bpmn-io/diagram-js) | 待收集 | — | 报告只在正文和跨层索引里提到，没有给出地址；仓库地址由整理者补充。 |
 
 ### 布局与复杂度管理算法
@@ -43,9 +43,10 @@
 | [ELK.js](https://github.com/kieler/elkjs) | 自动分层布局、连线布线、复合图布局。<br>复杂模块和任务 DAG。 | [仓库](https://github.com/kieler/elkjs) | [展示页](https://rtsys.informatik.uni-kiel.de/elklive/) | — | — |
 | [Dagre](https://github.com/dagrejs/dagre) | 有向图层次布局。<br>工作流、依赖图。 | [仓库](https://github.com/dagrejs/dagre) | [展示页](https://dagrejs.github.io/project/dagre-d3/latest/demo/interactive-demo.html) | — | 展示页属于 dagre-d3。 |
 | [Graphviz](https://graphviz.org/) | 多种图布局与渲染。<br>架构图、静态分析、依赖图。 | [仓库](https://gitlab.com/graphviz/graphviz) | [展示页](https://graphviz.org/gallery/) | [站点](https://graphviz.org/) | — |
-| [d3-force](https://github.com/d3/d3-force) | 力导向模拟。<br>自由关系网络、动态关系图。 | [仓库](https://github.com/d3/d3-force) | 待收集 | — | — |
+| [d3-force](https://github.com/d3/d3-force) | 力导向模拟。<br>自由关系网络、动态关系图。 | [仓库](https://github.com/d3/d3-force) | [展示页](https://observablehq.com/collection/@d3/d3-force) | — | — |
 | [Graphology](https://graphology.github.io/) | 图数据操作与算法生态。<br>关系分析、节点指标、图结构处理。 | [仓库](https://github.com/graphology/graphology) | 待收集 | [站点](https://graphology.github.io/) | — |
-| [Cytoscape Complexity Management](https://github.com/iVis-at-Bilkent/cytoscape.js-complexity-management) | 大型复合图的展开、折叠与关系管理（Cytoscape.js 扩展）。<br>层次化复杂网络；节点、边及聚合关系的管理。 | [仓库](https://github.com/iVis-at-Bilkent/cytoscape.js-complexity-management) | 待收集 | — | — |
+| [Cytoscape Complexity Management](https://github.com/iVis-at-Bilkent/cytoscape.js-complexity-management) | 大型复合图的展开、折叠与关系管理（Cytoscape.js 扩展）。<br>层次化复杂网络；节点、边及聚合关系的管理。 | [仓库](https://github.com/iVis-at-Bilkent/cytoscape.js-complexity-management) | 待收集 | — | README 带有演示链接，但地址没有拿到；需要 Cytoscape.js 3.2.0 以上以及 fcose、cmgm.js，README 称尚未发布到 npm 和 bower。 |
+| [Cytoscape Expand Collapse](https://github.com/iVis-at-Bilkent/cytoscape.js-expand-collapse) | 复合节点的展开与折叠（Cytoscape.js 扩展）。<br>折叠复合节点及其内部的边。README 提供三个演示：基础版、可撤销版、同时折叠边和节点。 | [仓库](https://github.com/iVis-at-Bilkent/cytoscape.js-expand-collapse) | 待收集 | — | 已停止维护；npm README 称仓库不再维护，并指向同一团队的 cytoscape.js-complexity-management（搜索结果摘要）。 |
 
 ### 图形描述语言与模型驱动技术
 
@@ -120,8 +121,9 @@
 | --- | --- | --- | --- | --- | --- |
 | [OpenTelemetry GenAI 语义约定](https://github.com/open-telemetry/semantic-conventions) | 规定如何描述 AI / Agent / 工具调用等遥测事件。<br>数据到可视化链条的起点：Span、事件、属性、父子关系。 | [仓库](https://github.com/open-telemetry/semantic-conventions) | 待收集 | [文档](https://opentelemetry.io/docs/specs/semconv/gen-ai/) | 生成式 AI 语义约定仍在演进。建库时记录具体版本和字段定义，不要当成永远稳定的统一标准。 |
 | [OpenLLMetry](https://github.com/traceloop/openllmetry) | 为 LLM 应用采集追踪数据。<br>数据采集端。 | [仓库](https://github.com/traceloop/openllmetry) | 待收集 | — | — |
-| [Jaeger](https://github.com/jaegertracing/jaeger) | 分布式 Trace 的采集、检索和可视化。<br>Trace 瀑布图等传统调用链视图。 | [仓库](https://github.com/jaegertracing/jaeger) | [展示页](https://www.jaegertracing.io/demo/) | — | — |
+| [Jaeger](https://github.com/jaegertracing/jaeger) | 分布式 Trace 的采集、检索和可视化。<br>Trace 瀑布图等传统调用链视图。 | [仓库](https://github.com/jaegertracing/jaeger) | [展示页](https://www.jaegertracing.io/demo/) | — | Jaeger v1 已于 2025-12-31 终止支持，应使用 v2（官网文档摘要）。 |
 | [Grafana Tempo](https://github.com/grafana/tempo) | Trace 后端，与服务图、指标视图整合。<br>Trace 与服务图、指标的联动。 | [仓库](https://github.com/grafana/tempo) | 待收集 | — | — |
+| [AeroGraph](https://github.com/sgcpu/aerograph) | 面向自主 AI 工作流的调试与观测层：本地优先、只追加、可安全回放的存储。<br>ReactFlow 的 Trace 图，支持逐步回放和失败高亮；可从任意 span 分叉出另一条时间线，并用 Myers diff 比较两次运行在哪里分岔；追踪循环和幻觉式的 Agent 交接。 | [仓库](https://github.com/sgcpu/aerograph) | 待收集 | — | 不在调研报告里，来自前期收集，信息取自搜索到的 GitHub README。是早期的小众项目，成熟度和循环检测的实现方式未核实。 |
 | [AgentEnsemble Viz](https://github.com/AgentEnsemble/agentensemble)<br>（主分类 L2/ai-and-multi-agent） | 任务依赖 DAG 与实际执行 Trace 的双视图。<br>Flow View 看任务依赖、并发层级、关键路径；Timeline View 看真实起止时间、LLM 和工具调用。分别导出计划依赖 DAG 与执行 Trace。值得研究同一任务在两张视图中的身份如何保持一致，以及点击任务如何进入工具调用或会话详情。 | [仓库](https://github.com/AgentEnsemble/agentensemble) | 待收集 | [文档](https://docs.agentensemble.net/guides/visualization/) | — |
 | [AgentPrism](https://github.com/evilmartians/agent-prism)<br>（主分类 L2/ai-and-multi-agent） | 可嵌入应用的 React Agent Trace UI 组件。<br>层次化调用树、执行时间、工具与模型调用；独立可复用的 Trace UI 设计。 | [仓库](https://github.com/evilmartians/agent-prism) | [展示页](https://agent-prism.evilmartians.io/) | [文档](https://evilmartians.com/chronicles/debug-ai-fast-agent-prism-open-source-library-visualize-agent-traces) | Alpha；项目公开标注为 Alpha。 |
 
@@ -133,7 +135,7 @@
 | --- | --- | --- | --- | --- | --- |
 | [Marquez](https://marquezproject.ai/) | 数据集、数据任务与血缘关系。<br>上下游关系、运行历史。 | [仓库](https://github.com/MarquezProject/marquez) | 待收集 | [站点](https://marquezproject.ai/) | — |
 | [DataHub](https://github.com/datahub-project/datahub)<br>（主分类 L3/data-and-infrastructure） | 数据发现、治理与影响分析。<br>数据集、字段、流水线的血缘；从资产详情进入上下游影响网络，支持字段级钻取和影响分析。 | [仓库](https://github.com/datahub-project/datahub) | [展示页](https://datahub.com/demos/data-lineage-with-datahub/) | [文档](https://docs.datahub.com/) | 该展示页是录制的血缘功能演示，不是开放试用。 |
-| [OpenMetadata](https://github.com/open-metadata/OpenMetadata)<br>（主分类 L3/data-and-infrastructure） | 数据资产管理与治理。<br>资产关系、字段级血缘；从数据目录导航到血缘关系。 | [仓库](https://github.com/open-metadata/OpenMetadata) | 待收集 | — | — |
+| [OpenMetadata](https://github.com/open-metadata/OpenMetadata)<br>（主分类 L3/data-and-infrastructure） | 数据资产管理与治理。<br>资产关系、字段级血缘；从数据目录导航到血缘关系。 | [仓库](https://github.com/open-metadata/OpenMetadata) | [展示页](https://sandbox.open-metadata.org/) | [文档](https://docs.open-metadata.org/latest/quick-start/sandbox) | 沙盒需要用 Google 账号登录。 |
 
 ### 系统服务拓扑与基础设施
 
@@ -155,7 +157,7 @@
 | [Understand Anything](https://understand-anything.com/)<br>（主分类 L2/software-architecture） | 文件、函数、类、调用关系与知识文档的交互知识图。<br>架构分层视图、业务领域视图、语义搜索、引导式理解、变更影响分析。对 Markdown 知识库先解析显式链接和类别，再借助模型发现隐式关系，生成带类型的知识网络。与“复杂认知地图”相关度高。 | [仓库](https://github.com/Egonex-AI/Understand-Anything) | [展示页](https://understand-anything.com/) | — | 以上能力来自项目文档的功能说明，未逐项做交互和输出准确率评测；据文档，结构事实部分采用 Tree-sitter 等确定性解析。 |
 | [AFFiNE](https://affine.pro/)<br>（主分类 L3/knowledge-workspaces） | 文档、知识库与无限白板。<br>将线性文本与空间组织结合。 | [仓库](https://github.com/toeverything/AFFiNE) | 待收集 | [站点](https://affine.pro/) | — |
 | [Logseq](https://github.com/logseq/logseq)<br>（主分类 L3/knowledge-workspaces） | 双向链接、页面及知识块。<br>大纲、链接和知识图导航。 | [仓库](https://github.com/logseq/logseq) | [展示页](https://demo.logseq.com/) | — | — |
-| [InfraNodus](https://infranodus.com/)<br>（主分类 L3/knowledge-workspaces） | 文本网络与结构探索。<br>文本与概念的网络、主题群落、结构空白分析。 | [仓库](https://github.com/noduslabs/infranodus) | 待收集 | [站点](https://infranodus.com/) | 商业产品；GitHub 公共仓库包含较早期代码，不能等同于当前商业产品的全部功能。 |
+| [InfraNodus](https://infranodus.com/)<br>（主分类 L3/knowledge-workspaces） | 文本网络与结构探索。<br>文本与概念的网络、主题群落、结构空白分析。 | [仓库](https://github.com/noduslabs/infranodus) | [展示页](https://infranodus.com/graphs) | [站点](https://infranodus.com/) | 商业产品；GitHub 公共仓库包含较早期代码，不能等同于当前商业产品的全部功能。 |
 
 ### 技术生态与商业产品地图
 
@@ -164,8 +166,8 @@
 | 项目 | 定位与值得研究 | 开源项目 | 展示页 | 站点 / 文档 | 备注 |
 | --- | --- | --- | --- | --- | --- |
 | [CNCF Landscape2](https://github.com/cncf/landscape2) | 基于结构化数据生成可筛选、可搜索的生态分类景观。<br>生态地图的数据组织和交互导航。 | [仓库](https://github.com/cncf/landscape2) | [展示页](https://landscape.cncf.io/) | — | — |
-| [Zalando Tech Radar](https://github.com/zalando/tech-radar) | 使用技术雷达表达技术采用阶段与类别。<br>技术决策状态的雷达表达。 | [仓库](https://github.com/zalando/tech-radar) | 待收集 | — | — |
-| [Build Your Own Radar](https://github.com/thoughtworks/build-your-own-radar) | 从结构化技术条目生成交互技术雷达。<br>技术雷达生成器。 | [仓库](https://github.com/thoughtworks/build-your-own-radar) | [展示页](https://radar.thoughtworks.com/) | — | — |
+| [Zalando Tech Radar](https://github.com/zalando/tech-radar) | 使用技术雷达表达技术采用阶段与类别。<br>技术决策状态的雷达表达。 | [仓库](https://github.com/zalando/tech-radar) | [展示页](https://opensource.zalando.com/tech-radar/) | — | — |
+| [Build Your Own Radar](https://github.com/thoughtworks/build-your-own-radar) | 从结构化技术条目生成交互技术雷达。<br>技术雷达生成器。 | [仓库](https://github.com/thoughtworks/build-your-own-radar) | [展示页](https://radar.thoughtworks.com/) | — | 官方托管版要求使用 Technology Radar 固定的象限和环名称，自定义名称需自行部署；据搜索结果为 AGPL 许可。 |
 
 ### 三维、高维与大规模关系探索
 
@@ -191,7 +193,7 @@
 | [Langflow](https://www.langflow.org/) | 构建和发布 Agent 工作流。<br>可视节点编排与执行测试；编辑、Playground、调试、API 发布的闭环。据官方文档可发布为 API 或 MCP 服务，并与可观测性平台集成。 | [仓库](https://github.com/langflow-ai/langflow) | 待收集 | [站点](https://www.langflow.org/) · [文档](https://docs.langflow.org/) | — |
 | [n8n](https://github.com/n8n-io/n8n) | 通用业务自动化及 AI 工作流。<br>自动化流程设计与执行诊断；节点编辑、运行历史、失败定位、重新执行。 | [仓库](https://github.com/n8n-io/n8n) | [展示页](https://n8n.io/workflows/) | — | 源码可见但有使用限制；官方明确将自身归为 fair-code / source-available，不是 OSI 意义上的开源软件。 |
 | [Node-RED](https://github.com/node-red/node-red) | 事件驱动流程与设备、服务集成。<br>消息流的可视编排；部署、调试、运行时数据观察。 | [仓库](https://github.com/node-red/node-red) | [展示页](https://flows.nodered.org/) | — | — |
-| [Flowise](https://github.com/FlowiseAI/Flowise) | LLM、工具与 Agent 流程构建。<br>Agentflow 图编辑器；条件、循环、状态与工具节点。 | [仓库](https://github.com/FlowiseAI/Flowise) | 待收集 | — | 维护状态待核查；报告称原始 GitHub 仓库存在归档状态，需核查当前版本和维护主体，不能把历史仓库与持续运营的服务直接等同。 |
+| [Flowise](https://flowiseai.com/) | LLM、工具与 Agent 流程构建。<br>Agentflow 图编辑器；条件、循环、状态与工具节点。 | [仓库](https://github.com/FlowiseAI/Flowise) | 待收集 | [站点](https://flowiseai.com/) · [文档](https://docs.flowiseai.com/) | 维护状态待核查；报告称原始 GitHub 仓库存在归档状态，需核查当前版本和维护主体，不能把历史仓库与持续运营的服务直接等同。 |
 
 ### Agent 开发、协作与管理平台
 
@@ -199,10 +201,10 @@
 
 | 项目 | 定位与值得研究 | 开源项目 | 展示页 | 站点 / 文档 | 备注 |
 | --- | --- | --- | --- | --- | --- |
-| [AgentScope 2.0](https://github.com/agentscope-ai/agentscope) | Agent 团队编排、运行和观测。<br>团队及执行信息进入 Web UI；Agent 团队运行与实时观察。 | [仓库](https://github.com/agentscope-ai/agentscope) | 待收集 | — | 旧版独立 AgentScope Studio 已不再单独维护，研究应以 2.0 的当前能力为主。 |
+| [AgentScope 2.0](https://github.com/agentscope-ai/agentscope) | Agent 团队编排、运行和观测。<br>团队及执行信息进入 Web UI；Agent 团队运行与实时观察。 | [仓库](https://github.com/agentscope-ai/agentscope) | 待收集 | [文档](https://docs.agentscope.io/observe-and-evaluate) | 旧版独立 AgentScope Studio 已不再单独维护，研究应以 2.0 的当前能力为主。搜索到的 AgentScope Studio 文档仍写“快速迭代中”，与报告“不再单独维护”的说法不一致，待核查。 |
 | [LangGraph / Studio](https://github.com/langchain-ai/langgraph) | 图状态、任务路由与 Agent 开发。<br>图结构与运行状态、调试会话之间的关联。 | [仓库](https://github.com/langchain-ai/langgraph) | 待收集 | [文档](https://docs.langchain.com/langsmith/studio) | LangGraph Studio / LangSmith Studio 有账号及运行环境要求。 |
 | [AgentEnsemble](https://agentensemble.github.io/agentensemble/) | 团队任务编排和执行分析。<br>DAG、时间图、通过事件流实时更新的执行看板，以及人工审核交互，把任务执行事件与人工干预放进同一过程。 | [仓库](https://github.com/AgentEnsemble/agentensemble) | 待收集 | [站点](https://agentensemble.github.io/agentensemble/) · [文档](https://docs.agentensemble.net/guides/visualization/) | — |
-| [AutoGen / AutoGen Studio](https://github.com/microsoft/autogen) | Agent 原型构建与团队交互。<br>智能体团队的可视化原型、运行测试；Studio 定位为原型，不是生产级应用。 | [仓库](https://github.com/microsoft/autogen) | 待收集 | — | — |
+| [AutoGen / AutoGen Studio](https://github.com/microsoft/autogen) | Agent 原型构建与团队交互。<br>智能体团队的可视化原型、运行测试；Studio 定位为原型，不是生产级应用。 | [仓库](https://github.com/microsoft/autogen) | 待收集 | [文档](https://microsoft.github.io/autogen/stable/user-guide/autogenstudio-user-guide/index.html) | — |
 
 ### LLM 与 Agent 可观测性平台
 
@@ -213,8 +215,8 @@
 | [Langfuse](https://github.com/langfuse/langfuse) | 追踪、评测、提示词管理、数据集及实验。<br>Trace、调用详情、耗时、Token、成本及评测。可从一次异常执行进入提示词、测试数据和评测过程，形成分析、修改、再验证的闭环。 | [仓库](https://github.com/langfuse/langfuse) | [展示页](https://langfuse.com/docs/demo) | — | — |
 | [Arize Phoenix](https://github.com/Arize-ai/phoenix) | AI 应用追踪与质量评测。<br>基于 OpenTelemetry 的调用轨迹、问题诊断、评测分析。 | [仓库](https://github.com/Arize-ai/phoenix) | [展示页](https://phoenix-demo.arize.com/) | — | — |
 | [Comet Opik](https://www.comet.com/site/products/opik/) | LLM / Agent 追踪、评测和监控。<br>多层调用、评测结果、运行监控。 | [仓库](https://github.com/comet-ml/opik) | 待收集 | [站点](https://www.comet.com/site/products/opik/) | — |
-| [AgentOps](https://github.com/AgentOps-AI/agentops) | Agent 执行记录、调试与成本观察。<br>会话回放、调用轨迹、成本。 | [仓库](https://github.com/AgentOps-AI/agentops) | 待收集 | — | — |
-| [LangWatch](https://github.com/langwatch/langwatch) | LLM 运行追踪、分析与评测。<br>Trace、质量指标与运行分析。 | [仓库](https://github.com/langwatch/langwatch) | 待收集 | — | — |
+| [AgentOps](https://www.agentops.ai/) | Agent 执行记录、调试与成本观察。<br>会话回放、调用轨迹、成本。 | [仓库](https://github.com/AgentOps-AI/agentops) | 待收集 | [站点](https://www.agentops.ai/) · [文档](https://docs.agentops.ai/v2/introduction) | — |
+| [LangWatch](https://langwatch.ai/) | LLM 运行追踪、分析与评测。<br>Trace、质量指标与运行分析。 | [仓库](https://github.com/langwatch/langwatch) | 待收集 | [站点](https://langwatch.ai/) | — |
 
 ### 软件架构、开发者平台与工程管理
 
@@ -235,7 +237,7 @@
 | 项目 | 定位与值得研究 | 开源项目 | 展示页 | 站点 / 文档 | 备注 |
 | --- | --- | --- | --- | --- | --- |
 | [DataHub](https://github.com/datahub-project/datahub) | 数据发现、治理与影响分析。<br>数据集、字段、流水线的血缘；从资产详情进入上下游影响网络，支持字段级钻取和影响分析。 | [仓库](https://github.com/datahub-project/datahub) | [展示页](https://datahub.com/demos/data-lineage-with-datahub/) | [文档](https://docs.datahub.com/) | 该展示页是录制的血缘功能演示，不是开放试用。 |
-| [OpenMetadata](https://github.com/open-metadata/OpenMetadata) | 数据资产管理与治理。<br>资产关系、字段级血缘；从数据目录导航到血缘关系。 | [仓库](https://github.com/open-metadata/OpenMetadata) | 待收集 | — | — |
+| [OpenMetadata](https://github.com/open-metadata/OpenMetadata) | 数据资产管理与治理。<br>资产关系、字段级血缘；从数据目录导航到血缘关系。 | [仓库](https://github.com/open-metadata/OpenMetadata) | [展示页](https://sandbox.open-metadata.org/) | [文档](https://docs.open-metadata.org/latest/quick-start/sandbox) | 沙盒需要用 Google 账号登录。 |
 | [Apache SkyWalking](https://skywalking.apache.org/) | 服务性能监控与故障诊断。<br>服务、实例、接口、部署等层级；从宏观服务拓扑进入监控、日志与 Trace，多视图联动。其生态中出现了基础设施三维可视化的探索。 | [仓库](https://github.com/apache/skywalking) | 待收集 | [站点](https://skywalking.apache.org/) · [文档](https://skywalking.apache.org/docs/skywalking-showcase/next/readme/) | 官网首页链接到在线 Demo（示例数据）；其 Horizon UI 有基础设施 3D 地图（官方博客 2026-06）。 |
 | [Kiali](https://github.com/kiali/kiali) | 服务网格运行观察。<br>流量图、服务关系、异常定位。 | [仓库](https://github.com/kiali/kiali) | 待收集 | [文档](https://kiali.io/docs/features/topology/) | — |
 | [Grafana](https://github.com/grafana/grafana) | 观测数据看板与分析。<br>指标、日志、Trace、服务关系。 | [仓库](https://github.com/grafana/grafana) | [展示页](https://play.grafana.org/) | — | — |
@@ -250,7 +252,7 @@
 | [diagrams.net / draw.io](https://www.drawio.com/) | 通用结构图创建与编辑。<br>手动构造架构图、流程图、认知图。 | [仓库](https://github.com/jgraph/drawio) | [展示页](https://www.drawio.com/docs/diagram-types/) | [站点](https://www.drawio.com/) | — |
 | [Kumu](https://kumu.io/) | 复杂系统、利益相关方和关系地图。<br>关系探索、视图定义、叙事展示。研究对象与软件流程编辑器明显不同。 | — | [展示页](https://kumu.io/tanyabeer/hewlett-foundation-madison-initiative) | [站点](https://kumu.io/) · [文档](https://docs.kumu.io/frequently-asked-questions/where-can-i-find-example-kumu-projects) | 商业产品；不能直接二次开发；作为可体验的交互案例收录。 |
 | [Logseq](https://github.com/logseq/logseq) | 双向链接、页面及知识块。<br>大纲、链接和知识图导航。 | [仓库](https://github.com/logseq/logseq) | [展示页](https://demo.logseq.com/) | — | — |
-| [InfraNodus](https://infranodus.com/) | 文本网络与结构探索。<br>文本与概念的网络、主题群落、结构空白分析。 | [仓库](https://github.com/noduslabs/infranodus) | 待收集 | [站点](https://infranodus.com/) | 商业产品；GitHub 公共仓库包含较早期代码，不能等同于当前商业产品的全部功能。 |
+| [InfraNodus](https://infranodus.com/) | 文本网络与结构探索。<br>文本与概念的网络、主题群落、结构空白分析。 | [仓库](https://github.com/noduslabs/infranodus) | [展示页](https://infranodus.com/graphs) | [站点](https://infranodus.com/) | 商业产品；GitHub 公共仓库包含较早期代码，不能等同于当前商业产品的全部功能。 |
 
 ### 生态地图与产业分析产品
 
@@ -291,7 +293,7 @@
 
 | 项目 | 定位与值得研究 | 开源项目 | 展示页 | 站点 / 文档 | 备注 |
 | --- | --- | --- | --- | --- | --- |
-| [Graphiti](https://github.com/getzep/graphiti) | 带时间属性的实体和关系，保留来源。<br>时间化事实、原始 Episode、增量知识更新、显式或学习得到的关系类型；能区分“过去成立”“现在成立”和“存在冲突”。 | [仓库](https://github.com/getzep/graphiti) | 待收集 | — | — |
+| [Graphiti](https://github.com/getzep/graphiti) | 带时间属性的实体和关系，保留来源。<br>时间化事实、原始 Episode、增量知识更新、显式或学习得到的关系类型；能区分“过去成立”“现在成立”和“存在冲突”。 | [仓库](https://github.com/getzep/graphiti) | 待收集 | [文档](https://help.getzep.com/graphiti/getting-started/overview) | — |
 
 ## 项目之间的关系
 
@@ -306,6 +308,7 @@
 | React Three Fiber | uses | Three.js | 报告：基于 Three.js。 |
 | Sigma.js | works-with | Graphology | 报告：Sigma.js 与 Graphology 配合。 |
 | LikeC4 | compares-with | Structurizr DSL | 报告：二者都把模型与视图分离。 |
+| Cytoscape Complexity Management | succeeds | Cytoscape Expand Collapse | expand-collapse 的 npm README 称不再维护，并指向 complexity-management（搜索结果摘要）。 |
 
 ## 上游 Awesome 清单
 
@@ -318,3 +321,5 @@
 | [Awesome LLM Observability](https://github.com/ContextJet-ai/awesome-llm-observability) | L2 / L3：LLM 运行与调试平台。 |
 | [Awesome Multi-Agent Projects](https://github.com/xxiaoxiong/awesome-multi-agent-projects) | L3：多 Agent 真实系统与案例。 |
 | [CNCF Landscape2](https://github.com/cncf/landscape2) | L2 / L3：技术生态地图。 |
+| [Awesome AI Agents（e2b）](https://github.com/e2b-dev/awesome-ai-agents) | L3：AI Agent 项目全景，开源与闭源分开列出。前期提到的 Awesome AI Agents（搜索得到，未核对是否同一份）。 |
+| [Awesome Multi-Agent Orchestrators](https://github.com/Agent-Analytics/awesome-multi-agent-orchestrators) | L3：多智能体编排器与运行时。搜索时找到，与前期提到的 Awesome Multi-Agent Workflows 不是同一份。 |

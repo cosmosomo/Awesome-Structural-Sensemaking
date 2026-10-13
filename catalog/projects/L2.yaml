@@ -141,6 +141,7 @@
   repo: https://github.com/jaegertracing/jaeger
   demo: https://www.jaegertracing.io/demo/
   demo_source: search
+  notes: "Jaeger v1 已于 2025-12-31 终止支持，应使用 v2（官网文档摘要）。"
 
 - id: grafana-tempo
   name: Grafana Tempo
@@ -196,6 +197,8 @@
   summary: "使用技术雷达表达技术采用阶段与类别。"
   focus: "技术决策状态的雷达表达。"
   repo: https://github.com/zalando/tech-radar
+  demo: https://opensource.zalando.com/tech-radar/
+  demo_source: search
 
 - id: build-your-own-radar
   name: Build Your Own Radar
@@ -207,6 +210,7 @@
   repo: https://github.com/thoughtworks/build-your-own-radar
   demo: https://radar.thoughtworks.com/
   demo_source: search
+  notes: "官方托管版要求使用 Technology Radar 固定的象限和环名称，自定义名称需自行部署；据搜索结果为 AGPL 许可。"
 
 # ---- 三维、高维与大规模关系探索 ----
 - id: pygraphistry
@@ -233,3 +237,14 @@
   demo_source: report
   repo: https://github.com/tensorflow/embedding-projector
   added_by_maintainer: [repo]
+
+- id: aerograph
+  name: AeroGraph
+  level: L2
+  category: traces-and-timelines
+  kind: tool
+  summary: "面向自主 AI 工作流的调试与观测层：本地优先、只追加、可安全回放的存储。"
+  focus: "ReactFlow 的 Trace 图，支持逐步回放和失败高亮；可从任意 span 分叉出另一条时间线，并用 Myers diff 比较两次运行在哪里分岔；追踪循环和幻觉式的 Agent 交接。"
+  repo: https://github.com/sgcpu/aerograph
+  added_by_maintainer: [repo]
+  notes: "不在调研报告里，来自前期收集，信息取自搜索到的 GitHub README。是早期的小众项目，成熟度和循环检测的实现方式未核实。"

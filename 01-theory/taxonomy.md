@@ -41,7 +41,7 @@
 | 一般关系网络 | 层级边捆绑图 | [Hierarchical edge bundling（D3）](https://observablehq.com/@d3/hierarchical-edge-bundling) |
 | 依赖与拓扑 | 有向依赖图 | [dependency-cruiser 3D 图演示](https://sverweij.github.io/dependency-cruiser-repro-repo/458/) |
 | 依赖与拓扑 | DAG 图 | [Dagre 交互演示](https://dagrejs.github.io/project/dagre-d3/latest/demo/interactive-demo.html) |
-| 依赖与拓扑 | 设计结构矩阵 | 待收集 |
+| 依赖与拓扑 | 设计结构矩阵 | [DSMweb：如何读 DSM](https://dsmweb.org/reading-a-dsm/) |
 | 流程与控制 | 流程图 | [Mermaid 流程图](https://mermaid.js.org/syntax/flowchart.html) |
 | 流程与控制 | BPMN | [bpmn.io 在线编辑器](https://demo.bpmn.io/) |
 | 流程与控制 | 泳道图 | [draw.io 泳道流程图](https://www.drawio.com/docs/diagram-types/swimlane-diagrams/) |
@@ -52,23 +52,23 @@
 | 时序与调用 | 火焰图 | [Brendan Gregg 火焰图](https://www.brendangregg.com/flamegraphs.html) |
 | 流量与转化 | 桑基图 | [d3-sankey 集合（D3）](https://observablehq.com/collection/@d3/d3-sankey) |
 | 流量与转化 | Alluvial 图 | 待收集 |
-| 流量与转化 | 漏斗图 | 待收集 |
+| 流量与转化 | 漏斗图 | [Funnel charts（Plotly）](https://plotly.com/javascript/funnel-charts/) |
 | 多维属性 | 散点矩阵 | [Scatterplot matrix（D3）](https://observablehq.com/@d3/splom/2)、[Brushable scatterplot matrix（D3）](https://observablehq.com/@d3/brushable-scatterplot-matrix) |
 | 多维属性 | 平行坐标 | [Parallel coordinates（D3）](https://observablehq.com/notebook-kit/ex/d3/parallel-coordinates)、[Parallel coordinates（Plotly）](https://plotly.com/javascript/parallel-coordinates-plot/) |
-| 多维属性 | 雷达图 | 待收集 |
+| 多维属性 | 雷达图 | [Radar charts（Plotly）](https://plotly.com/javascript/radar-chart/) |
 | 多维属性 | 热力图 | [D3.js Heatmap（社区笔记）](https://observablehq.com/@bbischof/d3-js-heatmap) |
 | 空间与地理 | 地图 | [deck.gl 图层示例](https://deck.gl/gallery/) |
 | 空间与地理 | 空间网络 | [3D force-directed graph](https://vasturiano.github.io/3d-force-graph/) |
 | 空间与地理 | 3D 场景 | [three.js 示例](https://threejs.org/examples/) |
 | 语义与知识 | 概念图 | 待收集 |
 | 语义与知识 | 知识图谱 | [Understand Anything 演示](https://understand-anything.com/) |
-| 语义与知识 | 论证地图 | 待收集 |
+| 语义与知识 | 论证地图 | [Argdown 第一个例子](https://argdown.org/guide/a-first-example.html) |
 | 动态与演化 | 动态网络 | [Temporal force-directed graph（D3）](https://observablehq.com/@d3/temporal-force-directed-graph) |
-| 动态与演化 | 事件时间线 | 待收集 |
-| 动态与演化 | 状态回放 | 待收集 |
+| 动态与演化 | 事件时间线 | [Mermaid 时间线](https://mermaid.js.org/syntax/timeline.html) |
+| 动态与演化 | 状态回放 | [21st.dev agent-trace 组件（时间线回放）](https://21st.dev/@n1m4mz/components/agent-trace) |
 | 多层与复合结构 | 嵌套复合图 | [Cytoscape.js 复合图布局演示](https://js.cytoscape.org/demos/cose-bilkent-layout-compound/) |
 | 多层与复合结构 | 多层网络 | 待收集 |
 | 多层与复合结构 | 多视图架构图 | [LikeC4 Big Bank 示例](https://likec4.dev/showcases/bigbank/)、[Structurizr C4 示例](https://docs.structurizr.com/example) |
 | 因果与反馈 | 因果回路图 | [Kumu 因果回路图项目](https://kumu.io/tanyabeer/hewlett-foundation-madison-initiative) |
-| 因果与反馈 | 存量流量图 | 待收集 |
+| 因果与反馈 | 存量流量图 | [Insight Maker 仿真模型（含浴缸、储蓄账户等存量流量例子）](https://www.insightmaker.com/tag/simulation?page=3) |
 <!-- /gen -->

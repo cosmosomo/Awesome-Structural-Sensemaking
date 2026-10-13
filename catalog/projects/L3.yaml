@@ -59,6 +59,8 @@
   repo: https://github.com/FlowiseAI/Flowise
   status: needs-check
   notes: "报告称原始 GitHub 仓库存在归档状态，需核查当前版本和维护主体，不能把历史仓库与持续运营的服务直接等同。"
+  site: https://flowiseai.com/
+  docs: https://docs.flowiseai.com/
 
 # ---- Agent 开发、协作与管理平台 ----
 - id: agentscope
@@ -69,7 +71,8 @@
   summary: "Agent 团队编排、运行和观测。"
   focus: "团队及执行信息进入 Web UI；Agent 团队运行与实时观察。"
   repo: https://github.com/agentscope-ai/agentscope
-  notes: "旧版独立 AgentScope Studio 已不再单独维护，研究应以 2.0 的当前能力为主。"
+  notes: "旧版独立 AgentScope Studio 已不再单独维护，研究应以 2.0 的当前能力为主。搜索到的 AgentScope Studio 文档仍写“快速迭代中”，与报告“不再单独维护”的说法不一致，待核查。"
+  docs: https://docs.agentscope.io/observe-and-evaluate
 
 - id: langgraph
   name: LangGraph / Studio
@@ -102,6 +105,7 @@
   summary: "Agent 原型构建与团队交互。"
   focus: "智能体团队的可视化原型、运行测试；Studio 定位为原型，不是生产级应用。"
   repo: https://github.com/microsoft/autogen
+  docs: https://microsoft.github.io/autogen/stable/user-guide/autogenstudio-user-guide/index.html
 
 # ---- LLM 与 Agent 可观测性平台 ----
 - id: langfuse
@@ -144,6 +148,8 @@
   summary: "Agent 执行记录、调试与成本观察。"
   focus: "会话回放、调用轨迹、成本。"
   repo: https://github.com/AgentOps-AI/agentops
+  site: https://www.agentops.ai/
+  docs: https://docs.agentops.ai/v2/introduction
 
 - id: langwatch
   name: LangWatch
@@ -153,6 +159,7 @@
   summary: "LLM 运行追踪、分析与评测。"
   focus: "Trace、质量指标与运行分析。"
   repo: https://github.com/langwatch/langwatch
+  site: https://langwatch.ai/
 
 # ---- 软件架构、开发者平台与工程管理 ----
 - id: nx
@@ -202,6 +209,10 @@
   summary: "数据资产管理与治理。"
   focus: "资产关系、字段级血缘；从数据目录导航到血缘关系。"
   repo: https://github.com/open-metadata/OpenMetadata
+  demo: https://sandbox.open-metadata.org/
+  demo_source: search
+  docs: https://docs.open-metadata.org/latest/quick-start/sandbox
+  notes: "沙盒需要用 Google 账号登录。"
 
 - id: skywalking
   name: Apache SkyWalking
@@ -300,6 +311,8 @@
   repo: https://github.com/noduslabs/infranodus
   access: commercial
   notes: "GitHub 公共仓库包含较早期代码，不能等同于当前商业产品的全部功能。"
+  demo: https://infranodus.com/graphs
+  demo_source: search
 
 # ---- 生态地图与产业分析产品 ----
 - id: cncf-landscape

@@ -53,7 +53,7 @@ Graphiti 把时间与原始来源纳入结构模型。例如某份资料曾说�
 <!-- gen:catalog:cognition/evolving-knowledge-structures -->
 | 项目 | 定位与值得研究 | 开源项目 | 展示页 | 站点 / 文档 | 备注 |
 | --- | --- | --- | --- | --- | --- |
-| [Graphiti](https://github.com/getzep/graphiti) | 带时间属性的实体和关系，保留来源。<br>时间化事实、原始 Episode、增量知识更新、显式或学习得到的关系类型；能区分“过去成立”“现在成立”和“存在冲突”。 | [仓库](https://github.com/getzep/graphiti) | 待收集 | — | — |
+| [Graphiti](https://github.com/getzep/graphiti) | 带时间属性的实体和关系，保留来源。<br>时间化事实、原始 Episode、增量知识更新、显式或学习得到的关系类型；能区分“过去成立”“现在成立”和“存在冲突”。 | [仓库](https://github.com/getzep/graphiti) | 待收集 | [文档](https://help.getzep.com/graphiti/getting-started/overview) | — |
 <!-- /gen -->
 
 ## 待展开的主题

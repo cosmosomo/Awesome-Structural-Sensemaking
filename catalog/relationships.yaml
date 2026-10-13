@@ -9,6 +9,7 @@ types:
   generates: "from 是生成框架，to 是用它得到的具体实例。"
   consumes: "from 支持消费 to 规定的数据格式。"
   works-with: "两者常配合使用，但不表示一方依赖另一方。"
+  succeeds: "from 取代 to，to 已停止维护或官方指向 from。"
 
 relations:
   - {from: bpmn-js, type: uses, to: diagram-js, evidence: "报告：存在已明确的技术继承关系。"}
@@ -18,3 +19,4 @@ relations:
   - {from: react-three-fiber, type: uses, to: three-js, evidence: "报告：基于 Three.js。"}
   - {from: sigma-js, type: works-with, to: graphology, evidence: "报告：Sigma.js 与 Graphology 配合。"}
   - {from: likec4, type: compares-with, to: structurizr-dsl, evidence: "报告：二者都把模型与视图分离。"}
+  - {from: cytoscape-complexity-management, type: succeeds, to: cytoscape-expand-collapse, evidence: "expand-collapse 的 npm README 称不再维护，并指向 complexity-management（搜索结果摘要）。"}

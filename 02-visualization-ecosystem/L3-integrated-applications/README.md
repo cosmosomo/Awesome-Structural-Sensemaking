@@ -18,7 +18,7 @@ Dify、Langflow、n8n、Node-RED 的重点已超出画图，进入完整的应�
 | [Langflow](https://www.langflow.org/) | 构建和发布 Agent 工作流。<br>可视节点编排与执行测试；编辑、Playground、调试、API 发布的闭环。据官方文档可发布为 API 或 MCP 服务，并与可观测性平台集成。 | [仓库](https://github.com/langflow-ai/langflow) | 待收集 | [站点](https://www.langflow.org/) · [文档](https://docs.langflow.org/) | — |
 | [n8n](https://github.com/n8n-io/n8n) | 通用业务自动化及 AI 工作流。<br>自动化流程设计与执行诊断；节点编辑、运行历史、失败定位、重新执行。 | [仓库](https://github.com/n8n-io/n8n) | [展示页](https://n8n.io/workflows/) | — | 源码可见但有使用限制；官方明确将自身归为 fair-code / source-available，不是 OSI 意义上的开源软件。 |
 | [Node-RED](https://github.com/node-red/node-red) | 事件驱动流程与设备、服务集成。<br>消息流的可视编排；部署、调试、运行时数据观察。 | [仓库](https://github.com/node-red/node-red) | [展示页](https://flows.nodered.org/) | — | — |
-| [Flowise](https://github.com/FlowiseAI/Flowise) | LLM、工具与 Agent 流程构建。<br>Agentflow 图编辑器；条件、循环、状态与工具节点。 | [仓库](https://github.com/FlowiseAI/Flowise) | 待收集 | — | 维护状态待核查；报告称原始 GitHub 仓库存在归档状态，需核查当前版本和维护主体，不能把历史仓库与持续运营的服务直接等同。 |
+| [Flowise](https://flowiseai.com/) | LLM、工具与 Agent 流程构建。<br>Agentflow 图编辑器；条件、循环、状态与工具节点。 | [仓库](https://github.com/FlowiseAI/Flowise) | 待收集 | [站点](https://flowiseai.com/) · [文档](https://docs.flowiseai.com/) | 维护状态待核查；报告称原始 GitHub 仓库存在归档状态，需核查当前版本和维护主体，不能把历史仓库与持续运营的服务直接等同。 |
 <!-- /gen -->
 
 ## Agent 开发、协作与管理平台
@@ -28,10 +28,10 @@ Dify、Langflow、n8n、Node-RED 的重点已超出画图，进入完整的应�
 <!-- gen:catalog:L3/agent-management -->
 | 项目 | 定位与值得研究 | 开源项目 | 展示页 | 站点 / 文档 | 备注 |
 | --- | --- | --- | --- | --- | --- |
-| [AgentScope 2.0](https://github.com/agentscope-ai/agentscope) | Agent 团队编排、运行和观测。<br>团队及执行信息进入 Web UI；Agent 团队运行与实时观察。 | [仓库](https://github.com/agentscope-ai/agentscope) | 待收集 | — | 旧版独立 AgentScope Studio 已不再单独维护，研究应以 2.0 的当前能力为主。 |
+| [AgentScope 2.0](https://github.com/agentscope-ai/agentscope) | Agent 团队编排、运行和观测。<br>团队及执行信息进入 Web UI；Agent 团队运行与实时观察。 | [仓库](https://github.com/agentscope-ai/agentscope) | 待收集 | [文档](https://docs.agentscope.io/observe-and-evaluate) | 旧版独立 AgentScope Studio 已不再单独维护，研究应以 2.0 的当前能力为主。搜索到的 AgentScope Studio 文档仍写“快速迭代中”，与报告“不再单独维护”的说法不一致，待核查。 |
 | [LangGraph / Studio](https://github.com/langchain-ai/langgraph) | 图状态、任务路由与 Agent 开发。<br>图结构与运行状态、调试会话之间的关联。 | [仓库](https://github.com/langchain-ai/langgraph) | 待收集 | [文档](https://docs.langchain.com/langsmith/studio) | LangGraph Studio / LangSmith Studio 有账号及运行环境要求。 |
 | [AgentEnsemble](https://agentensemble.github.io/agentensemble/) | 团队任务编排和执行分析。<br>DAG、时间图、通过事件流实时更新的执行看板，以及人工审核交互，把任务执行事件与人工干预放进同一过程。 | [仓库](https://github.com/AgentEnsemble/agentensemble) | 待收集 | [站点](https://agentensemble.github.io/agentensemble/) · [文档](https://docs.agentensemble.net/guides/visualization/) | — |
-| [AutoGen / AutoGen Studio](https://github.com/microsoft/autogen) | Agent 原型构建与团队交互。<br>智能体团队的可视化原型、运行测试；Studio 定位为原型，不是生产级应用。 | [仓库](https://github.com/microsoft/autogen) | 待收集 | — | — |
+| [AutoGen / AutoGen Studio](https://github.com/microsoft/autogen) | Agent 原型构建与团队交互。<br>智能体团队的可视化原型、运行测试；Studio 定位为原型，不是生产级应用。 | [仓库](https://github.com/microsoft/autogen) | 待收集 | [文档](https://microsoft.github.io/autogen/stable/user-guide/autogenstudio-user-guide/index.html) | — |
 <!-- /gen -->
 
 ## LLM 与 Agent 可观测性平台
@@ -44,8 +44,8 @@ Dify、Langflow、n8n、Node-RED 的重点已超出画图，进入完整的应�
 | [Langfuse](https://github.com/langfuse/langfuse) | 追踪、评测、提示词管理、数据集及实验。<br>Trace、调用详情、耗时、Token、成本及评测。可从一次异常执行进入提示词、测试数据和评测过程，形成分析、修改、再验证的闭环。 | [仓库](https://github.com/langfuse/langfuse) | [展示页](https://langfuse.com/docs/demo) | — | — |
 | [Arize Phoenix](https://github.com/Arize-ai/phoenix) | AI 应用追踪与质量评测。<br>基于 OpenTelemetry 的调用轨迹、问题诊断、评测分析。 | [仓库](https://github.com/Arize-ai/phoenix) | [展示页](https://phoenix-demo.arize.com/) | — | — |
 | [Comet Opik](https://www.comet.com/site/products/opik/) | LLM / Agent 追踪、评测和监控。<br>多层调用、评测结果、运行监控。 | [仓库](https://github.com/comet-ml/opik) | 待收集 | [站点](https://www.comet.com/site/products/opik/) | — |
-| [AgentOps](https://github.com/AgentOps-AI/agentops) | Agent 执行记录、调试与成本观察。<br>会话回放、调用轨迹、成本。 | [仓库](https://github.com/AgentOps-AI/agentops) | 待收集 | — | — |
-| [LangWatch](https://github.com/langwatch/langwatch) | LLM 运行追踪、分析与评测。<br>Trace、质量指标与运行分析。 | [仓库](https://github.com/langwatch/langwatch) | 待收集 | — | — |
+| [AgentOps](https://www.agentops.ai/) | Agent 执行记录、调试与成本观察。<br>会话回放、调用轨迹、成本。 | [仓库](https://github.com/AgentOps-AI/agentops) | 待收集 | [站点](https://www.agentops.ai/) · [文档](https://docs.agentops.ai/v2/introduction) | — |
+| [LangWatch](https://langwatch.ai/) | LLM 运行追踪、分析与评测。<br>Trace、质量指标与运行分析。 | [仓库](https://github.com/langwatch/langwatch) | 待收集 | [站点](https://langwatch.ai/) | — |
 <!-- /gen -->
 
 ## 软件架构、开发者平台与工程管理
@@ -71,7 +71,7 @@ Dify、Langflow、n8n、Node-RED 的重点已超出画图，进入完整的应�
 | 项目 | 定位与值得研究 | 开源项目 | 展示页 | 站点 / 文档 | 备注 |
 | --- | --- | --- | --- | --- | --- |
 | [DataHub](https://github.com/datahub-project/datahub) | 数据发现、治理与影响分析。<br>数据集、字段、流水线的血缘；从资产详情进入上下游影响网络，支持字段级钻取和影响分析。 | [仓库](https://github.com/datahub-project/datahub) | [展示页](https://datahub.com/demos/data-lineage-with-datahub/) | [文档](https://docs.datahub.com/) | 该展示页是录制的血缘功能演示，不是开放试用。 |
-| [OpenMetadata](https://github.com/open-metadata/OpenMetadata) | 数据资产管理与治理。<br>资产关系、字段级血缘；从数据目录导航到血缘关系。 | [仓库](https://github.com/open-metadata/OpenMetadata) | 待收集 | — | — |
+| [OpenMetadata](https://github.com/open-metadata/OpenMetadata) | 数据资产管理与治理。<br>资产关系、字段级血缘；从数据目录导航到血缘关系。 | [仓库](https://github.com/open-metadata/OpenMetadata) | [展示页](https://sandbox.open-metadata.org/) | [文档](https://docs.open-metadata.org/latest/quick-start/sandbox) | 沙盒需要用 Google 账号登录。 |
 | [Apache SkyWalking](https://skywalking.apache.org/) | 服务性能监控与故障诊断。<br>服务、实例、接口、部署等层级；从宏观服务拓扑进入监控、日志与 Trace，多视图联动。其生态中出现了基础设施三维可视化的探索。 | [仓库](https://github.com/apache/skywalking) | 待收集 | [站点](https://skywalking.apache.org/) · [文档](https://skywalking.apache.org/docs/skywalking-showcase/next/readme/) | 官网首页链接到在线 Demo（示例数据）；其 Horizon UI 有基础设施 3D 地图（官方博客 2026-06）。 |
 | [Kiali](https://github.com/kiali/kiali) | 服务网格运行观察。<br>流量图、服务关系、异常定位。 | [仓库](https://github.com/kiali/kiali) | 待收集 | [文档](https://kiali.io/docs/features/topology/) | — |
 | [Grafana](https://github.com/grafana/grafana) | 观测数据看板与分析。<br>指标、日志、Trace、服务关系。 | [仓库](https://github.com/grafana/grafana) | [展示页](https://play.grafana.org/) | — | — |
@@ -86,7 +86,7 @@ Dify、Langflow、n8n、Node-RED 的重点已超出画图，进入完整的应�
 | [diagrams.net / draw.io](https://www.drawio.com/) | 通用结构图创建与编辑。<br>手动构造架构图、流程图、认知图。 | [仓库](https://github.com/jgraph/drawio) | [展示页](https://www.drawio.com/docs/diagram-types/) | [站点](https://www.drawio.com/) | — |
 | [Kumu](https://kumu.io/) | 复杂系统、利益相关方和关系地图。<br>关系探索、视图定义、叙事展示。研究对象与软件流程编辑器明显不同。 | — | [展示页](https://kumu.io/tanyabeer/hewlett-foundation-madison-initiative) | [站点](https://kumu.io/) · [文档](https://docs.kumu.io/frequently-asked-questions/where-can-i-find-example-kumu-projects) | 商业产品；不能直接二次开发；作为可体验的交互案例收录。 |
 | [Logseq](https://github.com/logseq/logseq) | 双向链接、页面及知识块。<br>大纲、链接和知识图导航。 | [仓库](https://github.com/logseq/logseq) | [展示页](https://demo.logseq.com/) | — | — |
-| [InfraNodus](https://infranodus.com/) | 文本网络与结构探索。<br>文本与概念的网络、主题群落、结构空白分析。 | [仓库](https://github.com/noduslabs/infranodus) | 待收集 | [站点](https://infranodus.com/) | 商业产品；GitHub 公共仓库包含较早期代码，不能等同于当前商业产品的全部功能。 |
+| [InfraNodus](https://infranodus.com/) | 文本网络与结构探索。<br>文本与概念的网络、主题群落、结构空白分析。 | [仓库](https://github.com/noduslabs/infranodus) | [展示页](https://infranodus.com/graphs) | [站点](https://infranodus.com/) | 商业产品；GitHub 公共仓库包含较早期代码，不能等同于当前商业产品的全部功能。 |
 <!-- /gen -->
 
 ## 生态地图与产业分析产品

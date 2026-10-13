@@ -56,3 +56,11 @@ awesome_lists:
     title: "CNCF Landscape2"
     repo: https://github.com/cncf/landscape2
     use: "L2 / L3：技术生态地图。"
+  - id: awesome-ai-agents
+    title: "Awesome AI Agents（e2b）"
+    repo: https://github.com/e2b-dev/awesome-ai-agents
+    use: "L3：AI Agent 项目全景，开源与闭源分开列出。前期提到的 Awesome AI Agents（搜索得到，未核对是否同一份）。"
+  - id: awesome-multi-agent-orchestrators
+    title: "Awesome Multi-Agent Orchestrators"
+    repo: https://github.com/Agent-Analytics/awesome-multi-agent-orchestrators
+    use: "L3：多智能体编排器与运行时。搜索时找到，与前期提到的 Awesome Multi-Agent Workflows 不是同一份。"

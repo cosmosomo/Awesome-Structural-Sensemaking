@@ -27,7 +27,7 @@ families:
     forms:
       - {id: dependency-graph, name: 有向依赖图, demos: [{title: "dependency-cruiser 3D 图演示", url: "https://sverweij.github.io/dependency-cruiser-repro-repo/458/"}]}
       - {id: dag, name: DAG 图, demos: [{title: "Dagre 交互演示", url: "https://dagrejs.github.io/project/dagre-d3/latest/demo/interactive-demo.html"}]}
-      - {id: dsm, name: 设计结构矩阵}
+      - {id: dsm, name: 设计结构矩阵, demos: [{title: "DSMweb：如何读 DSM", url: "https://dsmweb.org/reading-a-dsm/"}]}
 
   - id: process
     title: 流程与控制
@@ -53,7 +53,7 @@ families:
     forms:
       - {id: sankey, name: 桑基图, demos: [{title: "d3-sankey 集合（D3）", url: "https://observablehq.com/collection/@d3/d3-sankey"}]}
       - {id: alluvial, name: Alluvial 图}
-      - {id: funnel, name: 漏斗图}
+      - {id: funnel, name: 漏斗图, demos: [{title: "Funnel charts（Plotly）", url: "https://plotly.com/javascript/funnel-charts/"}]}
 
   - id: multidimensional
     title: 多维属性
@@ -61,7 +61,7 @@ families:
     forms:
       - {id: scatterplot-matrix, name: 散点矩阵, demos: [{title: "Scatterplot matrix（D3）", url: "https://observablehq.com/@d3/splom/2"}, {title: "Brushable scatterplot matrix（D3）", url: "https://observablehq.com/@d3/brushable-scatterplot-matrix"}]}
       - {id: parallel-coordinates, name: 平行坐标, demos: [{title: "Parallel coordinates（D3）", url: "https://observablehq.com/notebook-kit/ex/d3/parallel-coordinates"}, {title: "Parallel coordinates（Plotly）", url: "https://plotly.com/javascript/parallel-coordinates-plot/"}]}
-      - {id: radar, name: 雷达图}
+      - {id: radar, name: 雷达图, demos: [{title: "Radar charts（Plotly）", url: "https://plotly.com/javascript/radar-chart/"}]}
       - {id: heatmap, name: 热力图, demos: [{title: "D3.js Heatmap（社区笔记）", url: "https://observablehq.com/@bbischof/d3-js-heatmap"}]}
 
   - id: spatial
@@ -78,15 +78,15 @@ families:
     forms:
       - {id: concept-map, name: 概念图}
       - {id: knowledge-graph, name: 知识图谱, demos: [{title: "Understand Anything 演示", url: "https://understand-anything.com/"}]}
-      - {id: argument-map, name: 论证地图}
+      - {id: argument-map, name: 论证地图, demos: [{title: "Argdown 第一个例子", url: "https://argdown.org/guide/a-first-example.html"}]}
 
   - id: dynamic
     title: 动态与演化
     question: 系统如何随时间变化？
     forms:
       - {id: dynamic-network, name: 动态网络, demos: [{title: "Temporal force-directed graph（D3）", url: "https://observablehq.com/@d3/temporal-force-directed-graph"}]}
-      - {id: event-timeline, name: 事件时间线}
-      - {id: state-replay, name: 状态回放}
+      - {id: event-timeline, name: 事件时间线, demos: [{title: "Mermaid 时间线", url: "https://mermaid.js.org/syntax/timeline.html"}]}
+      - {id: state-replay, name: 状态回放, demos: [{title: "21st.dev agent-trace 组件（时间线回放）", url: "https://21st.dev/@n1m4mz/components/agent-trace"}]}
 
   - id: multilevel
     title: 多层与复合结构
@@ -102,4 +102,4 @@ families:
     question: 变量之间如何相互影响？有哪些反馈环？
     forms:
       - {id: causal-loop, name: 因果回路图, demos: [{title: "Kumu 因果回路图项目", url: "https://kumu.io/tanyabeer/hewlett-foundation-madison-initiative"}]}
-      - {id: stock-flow, name: 存量流量图}
+      - {id: stock-flow, name: 存量流量图, demos: [{title: "Insight Maker 仿真模型（含浴缸、储蓄账户等存量流量例子）", url: "https://www.insightmaker.com/tag/simulation?page=3"}]}
