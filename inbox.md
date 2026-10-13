@@ -13,3 +13,14 @@
 
 - Awesome Multi-Agent Workflows：只找到相近的 Awesome Multi-Agent Orchestrators（已收）。
 - Awesome LLMOps Platforms：没有找到同名清单。
+
+## 图形范式相关的候选工具
+
+为给图形范式找展示页时遇到的工具，还没有建条目。下面的地址都在 2026-10-13 访问过，页面能打开，但仓库地址没有核对（需要 GitHub）。
+
+- Argdown：论证地图的文本标记语言和工具，[官方第一个例子](https://argdown.org/guide/a-first-example.html)带渲染出来的论证地图。属于“语义与知识”家族的论证地图。
+- Insight Maker：在线存量流量与因果回路模拟，[仿真模型库](https://www.insightmaker.com/tag/simulation?page=3)里有浴缸、储蓄账户等例子。属于“因果与反馈”家族。
+- DSMweb：设计结构矩阵（DSM）的资料站，[Reading a DSM](https://dsmweb.org/reading-a-dsm/) 讲怎么读矩阵，站内还列了 DSM 工具。属于“依赖与拓扑”家族。
+
+没有找到可用展示页的图形：冲积图、概念图、多层网络。搜索时看到的相关工具有 RAWGraphs、CmapTools、muxViz，都没有找到能确认的在线示例页。
+
