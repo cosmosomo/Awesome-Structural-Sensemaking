@@ -28,12 +28,13 @@
 
 | 想知道 | 去 |
 | --- | --- |
-| 某种结构该用什么图，图的适用边界 | [`01-theory/taxonomy.md`](01-theory/taxonomy.md) |
+| 某种结构该用什么图，图的适用边界 | [`01-theory/taxonomy.md`](01-theory/taxonomy.md)；按重点部分和任务选画法：[`01-theory/choosing-views.md`](01-theory/choosing-views.md) |
 | 折叠、钻取、多视角这些交互怎么分类 | [`01-theory/interaction-patterns.md`](01-theory/interaction-patterns.md) |
 | 某个研究方向在三个层级上各有什么代表 | [`02-visualization-ecosystem`](02-visualization-ecosystem/) 里的跨层索引 |
 | 全部项目的仓库和展示页 | [`catalog/INDEX.md`](catalog/INDEX.md) |
 | 项目之间怎么比较、怎么测试 | [`03-project-reviews`](03-project-reviews/) |
 | 怎么从信息里提炼结构、怎么分层 | [`04-structure-and-cognition`](04-structure-and-cognition/) |
+| 不同领域的案例：被当成什么数据结构、重点是哪一部分、怎么画、设计者怎么想 | [`04-structure-and-cognition/case-analysis.md`](04-structure-and-cognition/case-analysis.md) |
 | 怎么加一个条目 | [`CONTRIBUTING.md`](CONTRIBUTING.md) |
 
 ## 证据与核验

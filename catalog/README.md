@@ -42,6 +42,16 @@
 | `notes` | 否 | 使用边界、维护状态等需要提醒的事实。 |
 | `added_by_maintainer` | 否 | 列出由整理者补充、报告原文没有给出的地址字段。 |
 
+## 案例分析的数据
+
+| 文件 | 内容 |
+| --- | --- |
+| `cases.yaml` | 案例编码：领域、议题、数据结构类别、重点部分、弱化了什么、图形、层级处理。编码是整理者的判断；`ev` 指向依据的官方原文，`thinking` 指向设计者自己写的思路（why / alternative / limit）。 |
+| `case-vocab.yaml` | 编码用的词表：议题、结构类别、结构修饰、重点部分、层级处理方式。 |
+| `case-evidence.json` | 官方页面的原文摘录，按案例 id 和类目存放，每条有 `check`：`ok`（页面文字里找到了）、`missing`、`unreadable`、`unchecked`。 |
+
+`python3 scripts/check_quotes.py [--id 案例id] [--write]` 核对摘录：不靠模型，直接在页面文字里做子串比对。`MISSING` 不一定是抄错，也可能是页面排版或由 JS 渲染。生成的表格在 `04-structure-and-cognition/case-analysis.md` 和 `case-evidence.md`。
+
 ## 关于 `access`
 
 标为 `open-source` 的，依据是 npm / PyPI 上该包的许可证属于常见的 OSI 许可（MIT、Apache-2.0、BSD、ISC 等）。这说明的是这个包的许可，整个项目可能还有别的部分采用别的许可（例如平台的商业版）。包的许可证不是常见 OSI 许可的（Elastic-2.0、自定义许可），按实际情况标，并在备注里写明依据。

@@ -45,5 +45,7 @@
 - 改 `catalog/` 下的 YAML，不要直接改文档里 `<!-- gen:... -->` 之间的表格。改完运行 `python3 scripts/build.py`；CI 运行 `build.py --check`。
 - `python3 scripts/check_links.py`：访问展示页、文档、站点。
 - `python3 scripts/check_registries.py`：用 npm / PyPI 核对仓库、许可证、最近发布。
+- 案例分析：`catalog/cases.yaml`（编码，我的判断）、`catalog/case-vocab.yaml`（词表）、`catalog/case-evidence.json`（子智能体逐字摘录的官方原文）。加案例或改摘录后跑 `python3 scripts/check_quotes.py --write`，它把每条摘录拿到页面文字里比对，结果写回 `check` 字段。方法见 `04-structure-and-cognition/case-analysis-method.md`。
+- 用户说研究范围是“复杂信息、认知结构、背后的数据结构，以及大家的可视化思路”，不求全：不要为了覆盖面去扩领域，优先收设计者写了理由的案例。
 - 标记的含义：展示页的 ✓ 是页面能打开且标题相符；仓库的 ✓ 是官方来源（包元数据、官网或官方文档的源码链接、Go 模块代理）指向的仓库一致，依据写在 `package` 或 `repo_check_via`；“定位与值得研究”末尾的 ✓ / △ 是 `facts_checked` / `facts_gaps`（说明里的主要点是否在官方页面找到依据）。没有 ✓ 就是没核对。凭记忆补的地址用 `added_by_maintainer` 标出，并尽快核对。
 - 详细字段见 [catalog/README.md](catalog/README.md)，贡献规则见 [CONTRIBUTING.md](CONTRIBUTING.md)。

@@ -25,7 +25,56 @@ theory:
     url: https://doi.org/10.1109/INFVIS.2004.1
     summary: "比较节点连线图和矩阵在不同网络分析任务中的表现。"
     use: "研究图形选择，而不是只评价视觉效果。"
-    notes: "DOI 按报告原样记录，待核对。"
+    notes: "DOI 按报告原样记录，待核对。这一条很可能就是下面 Ghoniem 等人的那篇（InfoVis 2004 会议版，期刊版 2005），标题是整理者按主题对应的，没核对。"
+
+  - id: ghoniem-node-link-matrix
+    title: "A comparison of the readability of graphs using node-link and matrix-based representations（Ghoniem, Fekete, Castagliola）"
+    url: https://doi.org/10.1057/palgrave.ivs.9500092
+    summary: "受控实验：七类任务、三种规模与密度的随机图，比较节点连线图与矩阵。"
+    use: "选图时按规模、密度和任务取舍：小而稀疏的图和路径查找偏向节点连线图，大而稠密的图偏向矩阵。"
+    notes: "只读到 Munzner 和 Fekete 的课程材料对它的转述，没读到论文原文；期刊版 Information Visualization 4(2)，2005，114–135，DOI 取自检索结果，未核对。"
+
+  - id: brehmer-munzner-typology
+    title: "A Multi-Level Typology of Abstract Visualization Tasks（Brehmer, Munzner）"
+    url: https://www.cs.ubc.ca/labs/imager/tr/2013/MultiLevelTaskTypology/
+    summary: "用 why / how / what 三个问题描述任务；“找”按目标和位置是否已知分为 lookup、locate、browse、explore，“查询”分为 identify、compare、summarize。"
+    use: "给案例里的“议题”提供任务层面的对照词表。"
+    notes: "读了 TVCG 版 PDF 的任务部分。"
+
+  - id: segel-heer-narrative
+    title: "Narrative Visualization: Telling Stories with Data（Segel, Heer）"
+    url: https://homes.cs.washington.edu/~jheer/files/narrative.pdf
+    summary: "58 个叙事性可视化的设计空间分析；作者主导与读者主导的光谱；马提尼杯、交互式幻灯片、下钻故事三种混合结构。"
+    use: "分层写作与交互图结合时，怎样安排作者的路径与读者的探索。"
+    notes: "读了作者主页上的 PDF。"
+
+  - id: hogan-knowledge-graphs
+    title: "Knowledge Graphs（Hogan 等）"
+    url: https://arxiv.org/abs/2003.02320
+    summary: "知识图谱综述：图数据模型（有向边标签图、异质图、属性图、图数据集）、模式、标识、上下文、推理、归纳。"
+    use: "信息结构理论里“一般图”一节的校准：边的上下文（时间、来源）怎样进入模型。"
+    notes: "读了数据模型和上下文两节，其余没读。"
+
+  - id: mcgee-multilayer
+    title: "The State of the Art in Multilayer Network Visualization（McGee 等）"
+    url: https://arxiv.org/abs/1902.06815
+    summary: "多层网络的定义与相关图模型（二分图、多变量图、动态图）以及可视化手法与任务分类。"
+    use: "信息结构理论里“多层与复合”一节的校准：层不是子网络，也不只是属性。"
+    notes: "读了前四节的定义、相关模型和任务分类。"
+
+  - id: schulz-implicit-hierarchy
+    title: "The Design Space of Implicit Hierarchy Visualization: A Survey（Schulz, Hadlak, Schumann）"
+    url: https://tildeweb.au.dk/au597509/pdfs/tvsurvey.pdf
+    summary: "隐式层级可视化（treemap、冰柱图等）的设计空间；任何层级都可表示成嵌套集合。"
+    use: "解释层级为什么既可以用连线也可以用包含表达。"
+    notes: "读了摘要和引言，其余没读。"
+
+  - id: novak-canas-concept-maps
+    title: "The Theory Underlying Concept Maps and How to Construct and Use Them（Novak, Cañas）"
+    url: https://cmap.ihmc.us/Publications/ResearchPapers/TheoryUnderlyingConceptMaps.pdf
+    summary: "概念图的定义与构建流程：焦点问题、命题、层级、跨联。"
+    use: "第四板块里提炼层级的一个现成流程；层级取决于所问的问题。"
+    notes: "读了定义和构建部分。"
 
 awesome_lists:
   - id: awesome-dataviz
