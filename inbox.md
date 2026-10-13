@@ -16,34 +16,37 @@
 - Awesome LLM Observability
 - Awesome LLMOps Platforms
 
-## 候选：第 1 层（形式与技术）
+## 候选：第 1 层（展示形式）
+
+- 边捆绑（Hierarchical Edge Bundling）：D3 有交互 Demo，可作为这一形式的例子
+
+## 候选：第 2 层 a（底层可视化技术）
 
 - AntV G6：复杂关系图、嵌套分组、展开折叠
 - React Flow：节点图、自定义节点、子图分组
 - Cytoscape Expand Collapse：复合节点的展开折叠（已停止维护）
-- D3 Hierarchical Edge Bundling：边捆绑
 
-## 候选：第 2 层（领域 / 层级）
+## 候选：第 2 层 b（针对某类数据）
 
-架构视角：
+软件架构：
 
 - LikeC4：同一模型生成多视角架构图
 
 多智能体 · Trace 层：
 
-- Langfuse
-- Arize Phoenix
-- Comet Opik
-- AgentPrism
+- AgentPrism：可嵌入应用的 React Trace UI 组件
 - Agent Trace Canvas
 - AgentEnsemble Viz
 - AgentTrace
 - AeroGraph
 
-## 候选：第 3 层（项目索引）
+## 候选：第 2 层 c / 第 3 层（成熟应用，归属待定）
 
 - Langflow
 - Flowise
 - Dify
 - AutoGen Studio
 - AgentScope（旧 Studio 已不再单独维护，能力转向 2.0）
+- Langfuse：Trace 分析产品
+- Arize Phoenix
+- Comet Opik
