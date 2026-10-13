@@ -822,6 +822,8 @@
   abstraction: [aggregate]
   abstraction_note: "把上百亿事件聚合成仓库和集合层面的指标"
   ev: ["input_material:tracks over 10 billion GitHub events", "abstraction:grouped by technology domain", "questions:rankings and trends in technical fields"]
+  thinking: ["limit:Rankings that depend on those counts would be misleading"]
+  note: "官网首页（2026-10-13 打开）写明：基于 Star 的趋势榜已暂停——GitHub 公共事件流的分页方式变了，OSSInsight 的采集只读了第一段，2025 年年中以来的 Star、PR、Issue 事件被严重漏采；2025 年 5 月以前的历史、直接从 GitHub 同步的仓库总数和提交活动不受影响。这是“实时趋势”依赖原始数据完整性的一个实例。"
   confidence: medium
 
 - id: oss-compass

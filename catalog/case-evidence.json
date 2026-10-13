@@ -1408,7 +1408,21 @@
    "relations",
    "encodings"
   ],
-  "id": "oss-insight"
+  "id": "oss-insight",
+  "limit": [
+   {
+    "quote": "GitHub changed how its public events feed is paginated, and our ingestion read only the first slice, so star, pull request and issue events since mid-2025 were badly under-captured.",
+    "url": "https://ossinsight.io/",
+    "check": "ok",
+    "what": "首页公告：基于 Star 的排名已暂停"
+   },
+   {
+    "quote": "Rankings that depend on those counts would be misleading, so we pause them instead of publishing numbers we know are wrong.",
+    "url": "https://ossinsight.io/",
+    "check": "ok",
+    "what": "暂停排名的理由"
+   }
+  ]
  },
  "oss-compass": {
   "pages_read": [

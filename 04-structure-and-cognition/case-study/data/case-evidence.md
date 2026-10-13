@@ -1473,6 +1473,7 @@
 
 - 领域：开源生态；议题：了解 GitHub 上现在在发生什么，以及技术领域的排名与趋势
 - 编码：表与多维属性 + 序列与事件流；重点：总体分布、时间与演化、有什么；把握：页面信息支持，归类靠推断
+- 说明：官网首页（2026-10-13 打开）写明：基于 Star 的趋势榜已暂停——GitHub 公共事件流的分页方式变了，OSSInsight 的采集只读了第一段，2025 年年中以来的 Star、PR、Issue 事件被严重漏采；2025 年 5 月以前的历史、直接从 GitHub 同步的仓库总数和提交活动不受影响。这是“实时趋势”依赖原始数据完整性的一个实例。
 - 编码所依据的原文：
   - 处理的材料：“OSSInsight is a free analytics platform that tracks over 10 billion GitHub events in real time.” [✓](https://ossinsight.io/)
   - 抽象与层级：“grouped by technology domain” [✓](https://ossinsight.io/collections)
@@ -1492,6 +1493,8 @@
 - 回答的问题：“How does OSSInsight analyze repositories?” [✓](https://ossinsight.io/)
 - 回答的问题：“What data does OSSInsight use?” [✓](https://ossinsight.io/)
 - 抽象与层级：“with curated repository lists” [✓](https://ossinsight.io/)
+- 局限与代价：“GitHub changed how its public events feed is paginated, and our ingestion read only the first slice, so star, pull request and issue events since mid-2025 were badly under-captured.” [✓](https://ossinsight.io/)
+- 局限与代价：“Rankings that depend on those counts would be misleading, so we pause them instead of publishing numbers we know are wrong.” [✓](https://ossinsight.io/)
 
 </details>
 - 没读到：relations；encodings

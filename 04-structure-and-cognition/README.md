@@ -9,7 +9,7 @@
 | 目录 | 内容 | 性质 |
 | --- | --- | --- |
 | [`extraction/`](extraction/) | **结构怎么从信息里提炼、怎么分层、怎么写成文章**：提炼的七个层次，五种“分层”与抽象操作，分层写作。 | 讨论 |
-| [`case-study/`](case-study/) | **从 84+ 个案例归纳**：信息结构有哪些类别、可视化有哪几个流派，以及它们依据的案例编码、官方原文、展示页。 | 实证 |
+| [`case-study/`](case-study/) | **从全部案例归纳**：信息结构有哪些类别、可视化有哪几个流派，以及它们依据的案例编码、官方原文、展示页。 | 实证 |
 
 `extraction/` 里有三篇：[提炼的七个层次](extraction/extraction-layers.md)、[分层与颗粒度](extraction/abstraction-and-granularity.md)、[分层写作](extraction/layered-writing.md)。`case-study/` 的阅读顺序见它自己的 [README](case-study/README.md)。
 
