@@ -8,15 +8,15 @@
 
 | 案例 | 它怎么分层 |
 | --- | --- |
-| [Wikipedia 摘要式写作](case-evidence.md#wikipedia-summary-style) | 主文章 + 子文章：主文章里留摘要并链接下去，子文章有自己的导语并链回上级 |
-| [Explorable Explanations](case-evidence.md#explorable-explanations) | 文字里嵌可调的模型，读者改前提看后果；“可以按兴趣在多个层次上读” |
-| [Up and Down the Ladder of Abstraction](case-evidence.md#ladder-of-abstraction) | 从一次具体运行，到一组参数，到全局度量；每一步都能下去、上来 |
-| [CmapTools 概念图](case-evidence.md#cmaptools) | 围绕焦点问题把概念按一般到具体排，另标跨联 |
-| [Luhmann 的卡片盒](case-evidence.md#zettelkasten) | 一张卡一个单元，排序结构 + 引用 + 关键词索引 |
-| [Markmap](case-evidence.md#markmap) | 直接把 Markdown 的标题层级画成可折叠的导图 |
-| [图尔敏论证模型](case-evidence.md#toulmin) | 把一个论证拆成主张、依据、保证、支撑、限定词、反驳 |
-| [Argdown](case-evidence.md#argdown) | 用文本写论证，生成论证地图；地图隐藏逻辑细节，点“Source”看原文 |
-| [GraphRAG](case-evidence.md#graphrag) | 从文本抽图，层级聚类，各层社区摘要，自底向上 |
+| [Wikipedia 摘要式写作](../case-study/data/case-evidence.md#wikipedia-summary-style) | 主文章 + 子文章：主文章里留摘要并链接下去，子文章有自己的导语并链回上级 |
+| [Explorable Explanations](../case-study/data/case-evidence.md#explorable-explanations) | 文字里嵌可调的模型，读者改前提看后果；“可以按兴趣在多个层次上读” |
+| [Up and Down the Ladder of Abstraction](../case-study/data/case-evidence.md#ladder-of-abstraction) | 从一次具体运行，到一组参数，到全局度量；每一步都能下去、上来 |
+| [CmapTools 概念图](../case-study/data/case-evidence.md#cmaptools) | 围绕焦点问题把概念按一般到具体排，另标跨联 |
+| [Luhmann 的卡片盒](../case-study/data/case-evidence.md#zettelkasten) | 一张卡一个单元，排序结构 + 引用 + 关键词索引 |
+| [Markmap](../case-study/data/case-evidence.md#markmap) | 直接把 Markdown 的标题层级画成可折叠的导图 |
+| [图尔敏论证模型](../case-study/data/case-evidence.md#toulmin) | 把一个论证拆成主张、依据、保证、支撑、限定词、反驳 |
+| [Argdown](../case-study/data/case-evidence.md#argdown) | 用文本写论证，生成论证地图；地图隐藏逻辑细节，点“Source”看原文 |
+| [GraphRAG](../case-study/data/case-evidence.md#graphrag) | 从文本抽图，层级聚类，各层社区摘要，自底向上 |
 
 〔文〕另有 Segel 和 Heer 对叙事性可视化的设计空间分析（《Narrative Visualization: Telling Stories with Data》，IEEE TVCG 2010，读的是作者主页上的 PDF）。它把作者主导和读者主导看成一条光谱，并总结了三种常见的混合结构：马提尼杯（先走一条作者设计好的窄路径，再打开成读者自由探索）、交互式幻灯片（沿叙事一页页走，每页内允许交互）、下钻故事（先给总主题，读者选具体实例看细节）。
 
@@ -47,7 +47,7 @@
 〔案〕文章和结构图之间已有的衔接方式：
 
 - 文章的标题层级直接成为图（Markmap）：简单，但只剩层级。
-- 同一批内容块既能排成文档也能摆在画布上（[AFFiNE](case-evidence.md#affine)）：靠“同一对象”衔接。
+- 同一批内容块既能排成文档也能摆在画布上（[AFFiNE](../case-study/data/case-evidence.md#affine)）：靠“同一对象”衔接。
 - 论证从文本生成论证地图，地图再链回文本（Argdown）。
 - 图里的节点链到各自的详细页面（Wikipedia 的 Main 链接，Reactome 的子通路方框点进去是自己的图）。
 

@@ -15,14 +15,31 @@
 
 | 板块 | 目录 | 研究什么 |
 | --- | --- | --- |
-| 1 结构表示与可视化理论 | [`01-theory`](01-theory/) | 结构类型、图形流派、视觉编码、布局范式、交互原理，以及各种表示方式的适用边界。 |
-| 2 可视化技术与应用生态 | [`02-visualization-ecosystem`](02-visualization-ecosystem/) | 按技术抽象程度分三层：L1 底层可视化技术；L2 针对特定结构与数据的专项可视化项目；L3 成熟应用与综合交互系统。 |
-| 3 综合项目索引与横向评测 | [`03-project-reviews`](03-project-reviews/) | 真实项目的可视化覆盖范围、交互能力、优势、局限和使用场景，做可比较的评测。 |
-| 4 结构提炼与认知建模 | [`04-structure-and-cognition`](04-structure-and-cognition/) | 如何从信息和认知中识别结构、建立抽象层级、控制颗粒度；不同信息结构的理论讨论也在这里。 |
+| 1 结构表示与可视化理论 | [`01-theory`](01-theory) | 结构类型、图形流派、视觉编码、布局范式、交互原理，以及各种表示方式的适用边界。 |
+| 2 可视化技术与应用生态 | [`02-visualization-ecosystem`](02-visualization-ecosystem) | 按技术抽象程度分三层：L1 底层可视化技术；L2 针对特定结构与数据的专项可视化项目；L3 成熟应用与综合交互系统。 |
+| 3 综合项目索引与横向评测 | [`03-project-reviews`](03-project-reviews) | 真实项目的可视化覆盖范围、交互能力、优势、局限和使用场景，做可比较的评测。 |
+| 4 结构提炼与认知建模 | [`04-structure-and-cognition`](04-structure-and-cognition) | 如何从信息和认知中识别结构、建立抽象层级、控制颗粒度；不同信息结构的理论讨论也在这里。 |
 
-四个板块是四种不同的研究对象，不是从低到高的步骤，可以从任何一个进入。第二板块是最大的实证主体，但不替代其余三个：第一板块建立分类标准，第三板块做横向比较，第四板块研究信息如何变成可表达的认知结构。
+四个板块是四种不同的研究对象，不是从低到高的步骤，可以从任何一个进入。第一板块讲**怎么画**（图形、编码、布局、交互、怎么选）；信息结构有哪些类别、可视化有哪几个流派，是从案例归纳出来的，放在第四板块的 [`case-study`](04-structure-and-cognition/case-study)，第一板块的选图指南引用它。第二板块是最大的实证主体，但不替代其余三个：第一板块建立分类标准，第三板块做横向比较，第四板块研究信息如何变成可表达的认知结构。
 
-数据放在 [`catalog/`](catalog/)，文档里的项目表格由脚本从数据生成。
+数据放在 [`catalog/`](catalog)，文档里的项目表格由脚本从数据生成。
+
+## 目录地图
+
+文档分三层：**入口**（本页）→ **板块**（每个板块一个目录，自带 README 作索引）→ **专题**（板块下的子目录或文档）。生成的页面（表格、画廊）放在 `data/` 或 `catalog/INDEX.md`，不手改。
+
+```text
+README.md                              入口
+01-theory/                             板块 1：表示与可视化的理论（概念、分类、编码、布局、交互、评价、怎么选画法）
+02-visualization-ecosystem/            板块 2：L1 底层技术 / L2 专项项目 / L3 成熟应用
+03-project-reviews/                    板块 3：横向评测
+04-structure-and-cognition/            板块 4：结构提炼与认知建模
+  extraction/                            结构怎么提炼、怎么分层、怎么写成文章（讨论）
+  case-study/                            从案例归纳：信息结构类别、可视化流派（实证）
+    data/                                  生成的案例表、原文摘录、展示页画廊
+catalog/                               数据（YAML/JSON）与生成的总索引 INDEX.md
+scripts/                               校验、生成、核对脚本
+```
 
 ## 想找什么，去哪里
 
@@ -30,13 +47,11 @@
 | --- | --- |
 | 某种结构该用什么图，图的适用边界 | [`01-theory/taxonomy.md`](01-theory/taxonomy.md)；按重点部分和任务选画法：[`01-theory/choosing-views.md`](01-theory/choosing-views.md) |
 | 折叠、钻取、多视角这些交互怎么分类 | [`01-theory/interaction-patterns.md`](01-theory/interaction-patterns.md) |
-| 某个研究方向在三个层级上各有什么代表 | [`02-visualization-ecosystem`](02-visualization-ecosystem/) 里的跨层索引 |
+| 某个研究方向在三个层级上各有什么代表 | [`02-visualization-ecosystem`](02-visualization-ecosystem) 里的跨层索引 |
 | 全部项目的仓库和展示页 | [`catalog/INDEX.md`](catalog/INDEX.md) |
-| 项目之间怎么比较、怎么测试 | [`03-project-reviews`](03-project-reviews/) |
-| 怎么从信息里提炼结构、怎么分层 | [`04-structure-and-cognition`](04-structure-and-cognition/) |
-| 不同领域的案例：被当成什么数据结构、重点是哪一部分、怎么画、设计者怎么想 | [`04-structure-and-cognition/case-analysis.md`](04-structure-and-cognition/case-analysis.md) |
-| 同一份结构有哪几种画法（可视化流派），各自押注什么、放弃什么 | [`04-structure-and-cognition/visualization-schools.md`](04-structure-and-cognition/visualization-schools.md) |
-| 想一个个打开案例看是什么样子（展示页、官方图片、说明网页） | [`04-structure-and-cognition/case-gallery.md`](04-structure-and-cognition/case-gallery.md) |
+| 项目之间怎么比较、怎么测试 | [`03-project-reviews`](03-project-reviews) |
+| 怎么从信息里提炼结构、怎么分层 | [`04-structure-and-cognition`](04-structure-and-cognition) |
+| 信息结构有哪些类别、可视化有哪几个流派（从案例归纳），以及一个个打开案例看是什么样子 | [`04-structure-and-cognition/case-study`](04-structure-and-cognition/case-study) |
 | 怎么加一个条目 | [`CONTRIBUTING.md`](CONTRIBUTING.md) |
 
 ## 证据与核验
@@ -69,5 +84,4 @@ python3 scripts/check_registries.py # 用 npm / PyPI 的包元数据核对仓库
 
 ## 待定
 
-- 第一板块里的数据结构、语义结构讨论，和第四板块的“信息结构理论”如何分工，见 [`04-structure-and-cognition/information-structure-theory.md`](04-structure-and-cognition/information-structure-theory.md)。
 - 条目要不要增加“输入的结构”“采用的图形”“支持的交互”等字段，见 [`catalog/README.md`](catalog/README.md)。

@@ -4,7 +4,7 @@
 
 ## 这份文档怎么来的
 
-和 [信息结构理论](information-structure-theory.md) 一样，从案例归纳，不从图表手册演绎。2026-10-13 对全部 84 个案例做了第二轮编码（见 [案例分析的方法](case-analysis-method.md)）：在原来的“数据结构”“重点部分”之外，给每个案例加了两项——
+和 [信息结构理论](information-structure-theory.md) 一样，从案例归纳，不从图表手册演绎。2026-10-13 对全部 84 个案例做了第二轮编码（见 [案例分析的方法](method.md)）：在原来的“数据结构”“重点部分”之外，给每个案例加了两项——
 
 - **画法流派**（`schools`）：案例的视图主要用哪种方式把重点画出来，可以同时用几种，主要的放第一位；
 - **结构来源**（`source`）：这份结构是怎么进到系统里的。
@@ -98,62 +98,62 @@
 <details><summary>用到连线图的案例（加粗的是主流派）</summary>
 
 <!-- gen:schoolcases:link -->
-- **[dependency-cruiser](case-evidence.md#dependency-cruiser)**　软件工程 · 一般图与网络
-- **[Madge](case-evidence.md#madge)**　软件工程 · 一般图与网络
-- **[pydeps](case-evidence.md#pydeps)**　软件工程 · 一般图与网络
-- **[CodeBoarding](case-evidence.md#codeboarding)**　软件工程 · 层级与树+一般图与网络
-- **[Understand Anything](case-evidence.md#understand-anything)**　软件工程 · 一般图与网络+层级与树
-- [LikeC4](case-evidence.md#likec4)　软件工程 · 层级与树+一般图与网络 · 同时用：记法图
-- [bpmn-js](case-evidence.md#bpmn-js)　业务流程 · 一般图与网络 · 同时用：记法图
-- **[AgentEnsemble Viz](case-evidence.md#agentensemble-viz)**　AI Agent 开发 · 有向无环图+序列与事件流 · 同时用：时间轴条图
-- [Jaeger](case-evidence.md#jaeger)　分布式系统运维 · 层级与树+一般图与网络 · 同时用：时间轴条图
-- **[Grafana Tempo](case-evidence.md#grafana-tempo)**　分布式系统运维 · 层级与树+一般图与网络 · 同时用：时间轴条图
-- **[Marquez](case-evidence.md#marquez)**　数据工程 · 有向无环图
-- [NeoDash](case-evidence.md#neodash)　图数据库应用 · 一般图与网络 · 同时用：通道分配图
-- **[Dify](case-evidence.md#dify)**　AI Agent 开发 · 一般图与网络
-- **[Langflow](case-evidence.md#langflow)**　AI Agent 开发 · 一般图与网络
-- **[n8n](case-evidence.md#n8n)**　业务自动化 · 一般图与网络+序列与事件流 · 同时用：列表与文字
-- **[Node-RED](case-evidence.md#node-red)**　物联网与事件流 · 一般图与网络
-- **[Flowise](case-evidence.md#flowise)**　AI Agent 开发 · 一般图与网络
-- **[LangGraph / Studio](case-evidence.md#langgraph)**　AI Agent 开发 · 一般图与网络+序列与事件流
-- **[AgentEnsemble](case-evidence.md#agentensemble)**　AI Agent 开发 · 有向无环图+序列与事件流 · 同时用：时间轴条图
-- **[AutoGen / AutoGen Studio](case-evidence.md#autogen)**　AI Agent 开发 · 一般图与网络+序列与事件流
-- [Comet Opik](case-evidence.md#comet-opik)　AI 应用观测 · 层级与树+一般图与网络 · 同时用：时间轴条图
-- [LangWatch](case-evidence.md#langwatch)　AI 应用观测 · 层级与树+一般图与网络 · 同时用：时间轴条图、通道分配图
-- **[Nx](case-evidence.md#nx)**　软件工程 · 有向无环图+层级与树
-- **[Backstage](case-evidence.md#backstage)**　软件工程 · 一般图与网络 · 同时用：列表与文字
-- **[DataHub](case-evidence.md#datahub)**　数据工程 · 有向无环图
-- **[OpenMetadata](case-evidence.md#openmetadata)**　数据工程 · 有向无环图 · 同时用：列表与文字
-- **[Apache SkyWalking](case-evidence.md#skywalking)**　分布式系统运维 · 一般图与网络+层级与树+空间与几何 · 同时用：示意与隐喻图
-- **[Kiali](case-evidence.md#kiali)**　服务网格运维 · 一般图与网络
-- [Grafana](case-evidence.md#grafana)　基础设施运维 · 表与多维属性+一般图与网络 · 同时用：通道分配图
-- **[diagrams.net / draw.io](case-evidence.md#drawio)**　通用绘图 · 一般图与网络 · 同时用：记法图
-- **[Kumu](case-evidence.md#kumu)**　系统与关系分析 · 一般图与网络
-- **[InfraNodus](case-evidence.md#infranodus)**　文本分析与知识发现 · 一般图与网络
-- **[PyGraphistry](case-evidence.md#pygraphistry)**　数据分析 · 表与多维属性+一般图与网络
-- [Argdown](case-evidence.md#argdown)　论证与讨论 · 命题与论证 · 同时用：记法图
-- [Insight Maker](case-evidence.md#insightmaker)　系统建模 · 因果与反馈+流量网络 · 同时用：记法图
-- **[Docling Graph](case-evidence.md#docling-graph)**　文档处理 · 一般图与网络
-- **[Microsoft GraphRAG](case-evidence.md#graphrag)**　文本检索与知识建模 · 一般图与网络+层级与树
-- **[LightRAG](case-evidence.md#lightrag)**　文本检索与知识建模 · 一般图与网络
-- [伦敦地铁图（Beck）](case-evidence.md#tube-map)　交通 · 一般图与网络 · 同时用：示意与隐喻图
-- **[Nextstrain / Auspice](case-evidence.md#nextstrain)**　流行病与基因组 · 层级与树+空间与几何+序列与事件流 · 同时用：通道分配图
-- [OneZoom 生命之树](case-evidence.md#onezoom)　生物分类 · 层级与树 · 同时用：示意与隐喻图
-- **[Reactome 通路浏览器](case-evidence.md#reactome)**　分子生物学通路 · 层级与树+一般图与网络 · 同时用：列表与文字
-- [SBGN 系统生物学图形标记](case-evidence.md#sbgn)　分子生物学通路 · 一般图与网络 · 同时用：记法图
-- **[ICIJ Offshore Leaks 数据库](case-evidence.md#icij-offshore-leaks)**　调查报道与金融 · 一般图与网络 · 同时用：列表与文字
-- [VOWL / WebVOWL 本体可视化](case-evidence.md#vowl)　本体与语义网 · 一般图与网络 · 同时用：记法图
-- **[Gephi](case-evidence.md#gephi)**　通用网络分析 · 一般图与网络
-- [Git 提交历史](case-evidence.md#git-history)　版本控制 · 有向无环图 · 同时用：列表与文字
-- **[家谱图的交互可视化](case-evidence.md#genealogical-graphs)**　谱系与家族史 · 有向无环图
-- [Universal Dependencies 依存树](case-evidence.md#universal-dependencies)　语言学 · 层级与树 · 同时用：列表与文字
-- [CmapTools 概念图](case-evidence.md#cmaptools)　教育与知识建模 · 命题与论证+层级与树 · 同时用：记法图
-- **[Markmap](case-evidence.md#markmap)**　知识管理与写作 · 层级与树
+- **[dependency-cruiser](data/case-evidence.md#dependency-cruiser)**　软件工程 · 一般图与网络
+- **[Madge](data/case-evidence.md#madge)**　软件工程 · 一般图与网络
+- **[pydeps](data/case-evidence.md#pydeps)**　软件工程 · 一般图与网络
+- **[CodeBoarding](data/case-evidence.md#codeboarding)**　软件工程 · 层级与树+一般图与网络
+- **[Understand Anything](data/case-evidence.md#understand-anything)**　软件工程 · 一般图与网络+层级与树
+- [LikeC4](data/case-evidence.md#likec4)　软件工程 · 层级与树+一般图与网络 · 同时用：记法图
+- [bpmn-js](data/case-evidence.md#bpmn-js)　业务流程 · 一般图与网络 · 同时用：记法图
+- **[AgentEnsemble Viz](data/case-evidence.md#agentensemble-viz)**　AI Agent 开发 · 有向无环图+序列与事件流 · 同时用：时间轴条图
+- [Jaeger](data/case-evidence.md#jaeger)　分布式系统运维 · 层级与树+一般图与网络 · 同时用：时间轴条图
+- **[Grafana Tempo](data/case-evidence.md#grafana-tempo)**　分布式系统运维 · 层级与树+一般图与网络 · 同时用：时间轴条图
+- **[Marquez](data/case-evidence.md#marquez)**　数据工程 · 有向无环图
+- [NeoDash](data/case-evidence.md#neodash)　图数据库应用 · 一般图与网络 · 同时用：通道分配图
+- **[Dify](data/case-evidence.md#dify)**　AI Agent 开发 · 一般图与网络
+- **[Langflow](data/case-evidence.md#langflow)**　AI Agent 开发 · 一般图与网络
+- **[n8n](data/case-evidence.md#n8n)**　业务自动化 · 一般图与网络+序列与事件流 · 同时用：列表与文字
+- **[Node-RED](data/case-evidence.md#node-red)**　物联网与事件流 · 一般图与网络
+- **[Flowise](data/case-evidence.md#flowise)**　AI Agent 开发 · 一般图与网络
+- **[LangGraph / Studio](data/case-evidence.md#langgraph)**　AI Agent 开发 · 一般图与网络+序列与事件流
+- **[AgentEnsemble](data/case-evidence.md#agentensemble)**　AI Agent 开发 · 有向无环图+序列与事件流 · 同时用：时间轴条图
+- **[AutoGen / AutoGen Studio](data/case-evidence.md#autogen)**　AI Agent 开发 · 一般图与网络+序列与事件流
+- [Comet Opik](data/case-evidence.md#comet-opik)　AI 应用观测 · 层级与树+一般图与网络 · 同时用：时间轴条图
+- [LangWatch](data/case-evidence.md#langwatch)　AI 应用观测 · 层级与树+一般图与网络 · 同时用：时间轴条图、通道分配图
+- **[Nx](data/case-evidence.md#nx)**　软件工程 · 有向无环图+层级与树
+- **[Backstage](data/case-evidence.md#backstage)**　软件工程 · 一般图与网络 · 同时用：列表与文字
+- **[DataHub](data/case-evidence.md#datahub)**　数据工程 · 有向无环图
+- **[OpenMetadata](data/case-evidence.md#openmetadata)**　数据工程 · 有向无环图 · 同时用：列表与文字
+- **[Apache SkyWalking](data/case-evidence.md#skywalking)**　分布式系统运维 · 一般图与网络+层级与树+空间与几何 · 同时用：示意与隐喻图
+- **[Kiali](data/case-evidence.md#kiali)**　服务网格运维 · 一般图与网络
+- [Grafana](data/case-evidence.md#grafana)　基础设施运维 · 表与多维属性+一般图与网络 · 同时用：通道分配图
+- **[diagrams.net / draw.io](data/case-evidence.md#drawio)**　通用绘图 · 一般图与网络 · 同时用：记法图
+- **[Kumu](data/case-evidence.md#kumu)**　系统与关系分析 · 一般图与网络
+- **[InfraNodus](data/case-evidence.md#infranodus)**　文本分析与知识发现 · 一般图与网络
+- **[PyGraphistry](data/case-evidence.md#pygraphistry)**　数据分析 · 表与多维属性+一般图与网络
+- [Argdown](data/case-evidence.md#argdown)　论证与讨论 · 命题与论证 · 同时用：记法图
+- [Insight Maker](data/case-evidence.md#insightmaker)　系统建模 · 因果与反馈+流量网络 · 同时用：记法图
+- **[Docling Graph](data/case-evidence.md#docling-graph)**　文档处理 · 一般图与网络
+- **[Microsoft GraphRAG](data/case-evidence.md#graphrag)**　文本检索与知识建模 · 一般图与网络+层级与树
+- **[LightRAG](data/case-evidence.md#lightrag)**　文本检索与知识建模 · 一般图与网络
+- [伦敦地铁图（Beck）](data/case-evidence.md#tube-map)　交通 · 一般图与网络 · 同时用：示意与隐喻图
+- **[Nextstrain / Auspice](data/case-evidence.md#nextstrain)**　流行病与基因组 · 层级与树+空间与几何+序列与事件流 · 同时用：通道分配图
+- [OneZoom 生命之树](data/case-evidence.md#onezoom)　生物分类 · 层级与树 · 同时用：示意与隐喻图
+- **[Reactome 通路浏览器](data/case-evidence.md#reactome)**　分子生物学通路 · 层级与树+一般图与网络 · 同时用：列表与文字
+- [SBGN 系统生物学图形标记](data/case-evidence.md#sbgn)　分子生物学通路 · 一般图与网络 · 同时用：记法图
+- **[ICIJ Offshore Leaks 数据库](data/case-evidence.md#icij-offshore-leaks)**　调查报道与金融 · 一般图与网络 · 同时用：列表与文字
+- [VOWL / WebVOWL 本体可视化](data/case-evidence.md#vowl)　本体与语义网 · 一般图与网络 · 同时用：记法图
+- **[Gephi](data/case-evidence.md#gephi)**　通用网络分析 · 一般图与网络
+- [Git 提交历史](data/case-evidence.md#git-history)　版本控制 · 有向无环图 · 同时用：列表与文字
+- **[家谱图的交互可视化](data/case-evidence.md#genealogical-graphs)**　谱系与家族史 · 有向无环图
+- [Universal Dependencies 依存树](data/case-evidence.md#universal-dependencies)　语言学 · 层级与树 · 同时用：列表与文字
+- [CmapTools 概念图](data/case-evidence.md#cmaptools)　教育与知识建模 · 命题与论证+层级与树 · 同时用：记法图
+- **[Markmap](data/case-evidence.md#markmap)**　知识管理与写作 · 层级与树
 <!-- /gen -->
 
 </details>
 
-**亲眼看：** [Nx 示例项目图](https://nrwl-nx-examples-dep-graph.netlify.app/?focus=cart)、[Kumu 地图](https://kumu.io/tanyabeer/hewlett-foundation-madison-initiative)、[Jaeger 在线演示](https://demo.jaegertracing.io/jaeger/)（单次请求用时间轴条，服务依赖用连线图）。更多见 [案例画廊](case-gallery.md)。
+**亲眼看：** [Nx 示例项目图](https://nrwl-nx-examples-dep-graph.netlify.app/?focus=cart)、[Kumu 地图](https://kumu.io/tanyabeer/hewlett-foundation-madison-initiative)、[Jaeger 在线演示](https://demo.jaegertracing.io/jaeger/)（单次请求用时间轴条，服务依赖用连线图）。更多见 [案例画廊](data/case-gallery.md)。
 
 ### 包含与面积图
 
@@ -172,10 +172,10 @@
 <details><summary>用到包含与面积图的案例</summary>
 
 <!-- gen:schoolcases:enclosure -->
-- **[CNCF Landscape](case-evidence.md#cncf-landscape)**　技术生态 · 集合与分类
-- **[CodeCity](case-evidence.md#codecity)**　软件演化与度量 · 层级与树+表与多维属性 · 同时用：示意与隐喻图
-- **[Treemap（磁盘空间）](case-evidence.md#treemap-diskspace)**　文件系统与资源占用 · 层级与树
-- **[火焰图](case-evidence.md#flame-graph)**　性能剖析 · 层级与树
+- **[CNCF Landscape](data/case-evidence.md#cncf-landscape)**　技术生态 · 集合与分类
+- **[CodeCity](data/case-evidence.md#codecity)**　软件演化与度量 · 层级与树+表与多维属性 · 同时用：示意与隐喻图
+- **[Treemap（磁盘空间）](data/case-evidence.md#treemap-diskspace)**　文件系统与资源占用 · 层级与树
+- **[火焰图](data/case-evidence.md#flame-graph)**　性能剖析 · 层级与树
 <!-- /gen -->
 
 </details>
@@ -193,16 +193,16 @@
 <details><summary>用到时间轴条图的案例</summary>
 
 <!-- gen:schoolcases:timebar -->
-- [AgentEnsemble Viz](case-evidence.md#agentensemble-viz)　AI Agent 开发 · 有向无环图+序列与事件流 · 同时用：连线图
-- **[AgentPrism](case-evidence.md#agentprism)**　AI Agent 观测 · 层级与树+序列与事件流
-- **[Jaeger](case-evidence.md#jaeger)**　分布式系统运维 · 层级与树+一般图与网络 · 同时用：连线图
-- [Grafana Tempo](case-evidence.md#grafana-tempo)　分布式系统运维 · 层级与树+一般图与网络 · 同时用：连线图
-- [AgentEnsemble](case-evidence.md#agentensemble)　AI Agent 开发 · 有向无环图+序列与事件流 · 同时用：连线图
-- **[Langfuse](case-evidence.md#langfuse)**　AI 应用观测 · 层级与树+表与多维属性 · 同时用：通道分配图
-- **[Arize Phoenix](case-evidence.md#arize-phoenix)**　AI 应用观测 · 层级与树+序列与事件流
-- **[Comet Opik](case-evidence.md#comet-opik)**　AI 应用观测 · 层级与树+一般图与网络 · 同时用：连线图
-- **[AgentOps](case-evidence.md#agentops)**　AI 应用观测 · 层级与树+序列与事件流
-- **[LangWatch](case-evidence.md#langwatch)**　AI 应用观测 · 层级与树+一般图与网络 · 同时用：连线图、通道分配图
+- [AgentEnsemble Viz](data/case-evidence.md#agentensemble-viz)　AI Agent 开发 · 有向无环图+序列与事件流 · 同时用：连线图
+- **[AgentPrism](data/case-evidence.md#agentprism)**　AI Agent 观测 · 层级与树+序列与事件流
+- **[Jaeger](data/case-evidence.md#jaeger)**　分布式系统运维 · 层级与树+一般图与网络 · 同时用：连线图
+- [Grafana Tempo](data/case-evidence.md#grafana-tempo)　分布式系统运维 · 层级与树+一般图与网络 · 同时用：连线图
+- [AgentEnsemble](data/case-evidence.md#agentensemble)　AI Agent 开发 · 有向无环图+序列与事件流 · 同时用：连线图
+- **[Langfuse](data/case-evidence.md#langfuse)**　AI 应用观测 · 层级与树+表与多维属性 · 同时用：通道分配图
+- **[Arize Phoenix](data/case-evidence.md#arize-phoenix)**　AI 应用观测 · 层级与树+序列与事件流
+- **[Comet Opik](data/case-evidence.md#comet-opik)**　AI 应用观测 · 层级与树+一般图与网络 · 同时用：连线图
+- **[AgentOps](data/case-evidence.md#agentops)**　AI 应用观测 · 层级与树+序列与事件流
+- **[LangWatch](data/case-evidence.md#langwatch)**　AI 应用观测 · 层级与树+一般图与网络 · 同时用：连线图、通道分配图
 <!-- /gen -->
 
 </details>
@@ -222,17 +222,17 @@
 <details><summary>用到规则布局的案例</summary>
 
 <!-- gen:schoolcases:rulepos -->
-- **[Thoughtworks Technology Radar](case-evidence.md#thoughtworks-tech-radar)**　技术生态 · 集合与分类
-- **[Zalando Tech Radar](case-evidence.md#zalando-tech-radar)**　技术生态 · 集合与分类
-- **[Build Your Own Radar](case-evidence.md#build-your-own-radar)**　技术生态 · 表与多维属性+集合与分类
-- **[Circos](case-evidence.md#circos)**　比较基因组 · 空间与几何+一般图与网络
-- **[Hive Plot](case-evidence.md#hive-plot)**　网络分析（生物与社会网络） · 一般图与网络
-- **[设计结构矩阵 DSM](case-evidence.md#dsm)**　工程系统与产品架构 · 一般图与网络
+- **[Thoughtworks Technology Radar](data/case-evidence.md#thoughtworks-tech-radar)**　技术生态 · 集合与分类
+- **[Zalando Tech Radar](data/case-evidence.md#zalando-tech-radar)**　技术生态 · 集合与分类
+- **[Build Your Own Radar](data/case-evidence.md#build-your-own-radar)**　技术生态 · 表与多维属性+集合与分类
+- **[Circos](data/case-evidence.md#circos)**　比较基因组 · 空间与几何+一般图与网络
+- **[Hive Plot](data/case-evidence.md#hive-plot)**　网络分析（生物与社会网络） · 一般图与网络
+- **[设计结构矩阵 DSM](data/case-evidence.md#dsm)**　工程系统与产品架构 · 一般图与网络
 <!-- /gen -->
 
 </details>
 
-**亲眼看：** [Hive Plot（Bostock 的实现）](https://bost.ocks.org/mike/hive/)、[Zalando 技术雷达](https://opensource.zalando.com/tech-radar/)。设计结构矩阵的示例图见 [案例画廊](case-gallery.md) 里的 DSM 条目。
+**亲眼看：** [Hive Plot（Bostock 的实现）](https://bost.ocks.org/mike/hive/)、[Zalando 技术雷达](https://opensource.zalando.com/tech-radar/)。设计结构矩阵的示例图见 [案例画廊](data/case-gallery.md) 里的 DSM 条目。
 
 ### 通道分配图
 
@@ -245,19 +245,19 @@
 <details><summary>用到通道分配图的案例</summary>
 
 <!-- gen:schoolcases:channels -->
-- **[NeoDash](case-evidence.md#neodash)**　图数据库应用 · 一般图与网络 · 同时用：连线图
-- [Langfuse](case-evidence.md#langfuse)　AI 应用观测 · 层级与树+表与多维属性 · 同时用：时间轴条图
-- [LangWatch](case-evidence.md#langwatch)　AI 应用观测 · 层级与树+一般图与网络 · 同时用：时间轴条图、连线图
-- **[Grafana](case-evidence.md#grafana)**　基础设施运维 · 表与多维属性+一般图与网络 · 同时用：连线图
-- **[OSS Insight](case-evidence.md#oss-insight)**　开源生态 · 表与多维属性+序列与事件流
-- **[OSS Compass](case-evidence.md#oss-compass)**　开源生态 · 表与多维属性
-- **[Embedding Projector](case-evidence.md#embedding-projector)**　机器学习 · 空间与几何
-- [Nextstrain / Auspice](case-evidence.md#nextstrain)　流行病与基因组 · 层级与树+空间与几何+序列与事件流 · 同时用：连线图
-- **[LLNL 美国能源流向图](case-evidence.md#llnl-energy-flow)**　能源 · 流量网络
-- **[Wikidata Query Service 结果视图](case-evidence.md#wikidata-query-views)**　开放知识图谱 · 表与多维属性
-- **[Gapminder 气泡图](case-evidence.md#gapminder)**　国际发展统计 · 表与多维属性+序列与事件流
-- [Explorable Explanations](case-evidence.md#explorable-explanations)　交互式写作 · 因果与反馈 · 同时用：列表与文字
-- **[Up and Down the Ladder of Abstraction](case-evidence.md#ladder-of-abstraction)**　交互式写作与抽象 · 序列与事件流+因果与反馈
+- **[NeoDash](data/case-evidence.md#neodash)**　图数据库应用 · 一般图与网络 · 同时用：连线图
+- [Langfuse](data/case-evidence.md#langfuse)　AI 应用观测 · 层级与树+表与多维属性 · 同时用：时间轴条图
+- [LangWatch](data/case-evidence.md#langwatch)　AI 应用观测 · 层级与树+一般图与网络 · 同时用：时间轴条图、连线图
+- **[Grafana](data/case-evidence.md#grafana)**　基础设施运维 · 表与多维属性+一般图与网络 · 同时用：连线图
+- **[OSS Insight](data/case-evidence.md#oss-insight)**　开源生态 · 表与多维属性+序列与事件流
+- **[OSS Compass](data/case-evidence.md#oss-compass)**　开源生态 · 表与多维属性
+- **[Embedding Projector](data/case-evidence.md#embedding-projector)**　机器学习 · 空间与几何
+- [Nextstrain / Auspice](data/case-evidence.md#nextstrain)　流行病与基因组 · 层级与树+空间与几何+序列与事件流 · 同时用：连线图
+- **[LLNL 美国能源流向图](data/case-evidence.md#llnl-energy-flow)**　能源 · 流量网络
+- **[Wikidata Query Service 结果视图](data/case-evidence.md#wikidata-query-views)**　开放知识图谱 · 表与多维属性
+- **[Gapminder 气泡图](data/case-evidence.md#gapminder)**　国际发展统计 · 表与多维属性+序列与事件流
+- [Explorable Explanations](data/case-evidence.md#explorable-explanations)　交互式写作 · 因果与反馈 · 同时用：列表与文字
+- **[Up and Down the Ladder of Abstraction](data/case-evidence.md#ladder-of-abstraction)**　交互式写作与抽象 · 序列与事件流+因果与反馈
 <!-- /gen -->
 
 </details>
@@ -285,21 +285,21 @@
 <details><summary>用到列表与文字的案例</summary>
 
 <!-- gen:schoolcases:textlist -->
-- [n8n](case-evidence.md#n8n)　业务自动化 · 一般图与网络+序列与事件流 · 同时用：连线图
-- **[AgentScope 2.0](case-evidence.md#agentscope)**　AI Agent 开发 · 层级与树+序列与事件流
-- [Backstage](case-evidence.md#backstage)　软件工程 · 一般图与网络 · 同时用：连线图
-- [OpenMetadata](case-evidence.md#openmetadata)　数据工程 · 有向无环图 · 同时用：连线图
-- **[AFFiNE](case-evidence.md#affine)**　知识管理 · 层级与树+空间与几何
-- **[Tree-sitter](case-evidence.md#tree-sitter)**　软件工程 · 层级与树
-- **[Docling](case-evidence.md#docling)**　文档处理 · 层级与树
-- [Reactome 通路浏览器](case-evidence.md#reactome)　分子生物学通路 · 层级与树+一般图与网络 · 同时用：连线图
-- [ICIJ Offshore Leaks 数据库](case-evidence.md#icij-offshore-leaks)　调查报道与金融 · 一般图与网络 · 同时用：连线图
-- **[Kialo 论证树](case-evidence.md#kialo)**　论证与讨论 · 命题与论证+层级与树
-- **[Git 提交历史](case-evidence.md#git-history)**　版本控制 · 有向无环图 · 同时用：连线图
-- **[Universal Dependencies 依存树](case-evidence.md#universal-dependencies)**　语言学 · 层级与树 · 同时用：连线图
-- **[Wikipedia 摘要式写作](case-evidence.md#wikipedia-summary-style)**　百科写作 · 层级与树
-- **[Explorable Explanations](case-evidence.md#explorable-explanations)**　交互式写作 · 因果与反馈 · 同时用：通道分配图
-- **[Luhmann 的卡片盒](case-evidence.md#zettelkasten)**　知识管理与写作 · 一般图与网络+层级与树
+- [n8n](data/case-evidence.md#n8n)　业务自动化 · 一般图与网络+序列与事件流 · 同时用：连线图
+- **[AgentScope 2.0](data/case-evidence.md#agentscope)**　AI Agent 开发 · 层级与树+序列与事件流
+- [Backstage](data/case-evidence.md#backstage)　软件工程 · 一般图与网络 · 同时用：连线图
+- [OpenMetadata](data/case-evidence.md#openmetadata)　数据工程 · 有向无环图 · 同时用：连线图
+- **[AFFiNE](data/case-evidence.md#affine)**　知识管理 · 层级与树+空间与几何
+- **[Tree-sitter](data/case-evidence.md#tree-sitter)**　软件工程 · 层级与树
+- **[Docling](data/case-evidence.md#docling)**　文档处理 · 层级与树
+- [Reactome 通路浏览器](data/case-evidence.md#reactome)　分子生物学通路 · 层级与树+一般图与网络 · 同时用：连线图
+- [ICIJ Offshore Leaks 数据库](data/case-evidence.md#icij-offshore-leaks)　调查报道与金融 · 一般图与网络 · 同时用：连线图
+- **[Kialo 论证树](data/case-evidence.md#kialo)**　论证与讨论 · 命题与论证+层级与树
+- **[Git 提交历史](data/case-evidence.md#git-history)**　版本控制 · 有向无环图 · 同时用：连线图
+- **[Universal Dependencies 依存树](data/case-evidence.md#universal-dependencies)**　语言学 · 层级与树 · 同时用：连线图
+- **[Wikipedia 摘要式写作](data/case-evidence.md#wikipedia-summary-style)**　百科写作 · 层级与树
+- **[Explorable Explanations](data/case-evidence.md#explorable-explanations)**　交互式写作 · 因果与反馈 · 同时用：通道分配图
+- **[Luhmann 的卡片盒](data/case-evidence.md#zettelkasten)**　知识管理与写作 · 一般图与网络+层级与树
 <!-- /gen -->
 
 </details>
@@ -317,15 +317,15 @@
 <details><summary>用到记法图的案例</summary>
 
 <!-- gen:schoolcases:notation -->
-- **[LikeC4](case-evidence.md#likec4)**　软件工程 · 层级与树+一般图与网络 · 同时用：连线图
-- **[bpmn-js](case-evidence.md#bpmn-js)**　业务流程 · 一般图与网络 · 同时用：连线图
-- [diagrams.net / draw.io](case-evidence.md#drawio)　通用绘图 · 一般图与网络 · 同时用：连线图
-- **[Argdown](case-evidence.md#argdown)**　论证与讨论 · 命题与论证 · 同时用：连线图
-- **[Insight Maker](case-evidence.md#insightmaker)**　系统建模 · 因果与反馈+流量网络 · 同时用：连线图
-- **[SBGN 系统生物学图形标记](case-evidence.md#sbgn)**　分子生物学通路 · 一般图与网络 · 同时用：连线图
-- **[VOWL / WebVOWL 本体可视化](case-evidence.md#vowl)**　本体与语义网 · 一般图与网络 · 同时用：连线图
-- **[CmapTools 概念图](case-evidence.md#cmaptools)**　教育与知识建模 · 命题与论证+层级与树 · 同时用：连线图
-- **[图尔敏论证模型](case-evidence.md#toulmin)**　论证与写作 · 命题与论证
+- **[LikeC4](data/case-evidence.md#likec4)**　软件工程 · 层级与树+一般图与网络 · 同时用：连线图
+- **[bpmn-js](data/case-evidence.md#bpmn-js)**　业务流程 · 一般图与网络 · 同时用：连线图
+- [diagrams.net / draw.io](data/case-evidence.md#drawio)　通用绘图 · 一般图与网络 · 同时用：连线图
+- **[Argdown](data/case-evidence.md#argdown)**　论证与讨论 · 命题与论证 · 同时用：连线图
+- **[Insight Maker](data/case-evidence.md#insightmaker)**　系统建模 · 因果与反馈+流量网络 · 同时用：连线图
+- **[SBGN 系统生物学图形标记](data/case-evidence.md#sbgn)**　分子生物学通路 · 一般图与网络 · 同时用：连线图
+- **[VOWL / WebVOWL 本体可视化](data/case-evidence.md#vowl)**　本体与语义网 · 一般图与网络 · 同时用：连线图
+- **[CmapTools 概念图](data/case-evidence.md#cmaptools)**　教育与知识建模 · 命题与论证+层级与树 · 同时用：连线图
+- **[图尔敏论证模型](data/case-evidence.md#toulmin)**　论证与写作 · 命题与论证
 <!-- /gen -->
 
 </details>
@@ -433,4 +433,4 @@
 - **小流派不稳。** 示意与隐喻图只有 4 个案例，包含与面积图只有 4 个。
 - **边界有争议的：** 规则布局与通道分配图（技术雷达、散点算哪边）；记法图与连线图（记法画在连线上）；示意与隐喻图与包含与面积图（CodeCity 两边都占）。
 - **文献里常见、本库没有案例支撑的画法**，这里不下结论：地理地图、小多图、弧线图、弦图作为独立的案例、层次化的 UML 类图。需要的话要先收案例。
-- **“设计者为什么这样画”不是“这样画更好”的证据。** 画法效果的受控比较，本库只用到了节点连线图与矩阵那一组，而且读到的是转述（见 [怎么选画法](../01-theory/choosing-views.md)）。
+- **“设计者为什么这样画”不是“这样画更好”的证据。** 画法效果的受控比较，本库只用到了节点连线图与矩阵那一组，而且读到的是转述（见 [怎么选画法](../../01-theory/choosing-views.md)）。

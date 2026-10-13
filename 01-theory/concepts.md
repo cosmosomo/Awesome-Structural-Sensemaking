@@ -22,4 +22,4 @@
 
 ## 与第四板块的关系
 
-“数据结构”“语义结构”在这里是为了说明图形怎么选。关于信息结构本身的性质、能表达和不能表达什么，见 [信息结构理论](../04-structure-and-cognition/information-structure-theory.md)。两处的分工待定。
+“数据结构”“语义结构”在这里是为了说明图形怎么选。关于信息结构本身的性质、能表达和不能表达什么，见 [信息结构理论](../04-structure-and-cognition/case-study/information-structure-theory.md)。两处的分工待定。

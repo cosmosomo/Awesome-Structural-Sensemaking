@@ -4,17 +4,16 @@
 
 两个方向都收：从信息里提炼结构，以及这些结构本身是什么。
 
-| 文件 | 内容 |
-| --- | --- |
-| [`extraction-layers.md`](extraction-layers.md) | 结构提炼的七个研究层次。 |
-| [`abstraction-and-granularity.md`](abstraction-and-granularity.md) | 五种不同的“分层”，两类抽象操作，以及抽象时要保留什么。 |
-| [`information-structure-theory.md`](information-structure-theory.md) | 信息结构有哪些类别，每类回答什么议题、重点是哪一部分、怎么画、画不出什么。从案例归纳。 |
-| [`case-analysis-method.md`](case-analysis-method.md) | 案例分析的方法：怎么收案例、编码、核对摘录，以及限制。 |
-| [`visualization-schools.md`](visualization-schools.md) | 可视化流派：从案例归纳的八种画法，各自押注什么、放弃什么，和结构、重点、议题、结构来源的关系，常见搭配。 |
-| [`case-analysis.md`](case-analysis.md) | 84 个案例的编码表：领域、议题、数据结构、结构来源、重点部分、可视化与交互、画法流派、设计者的思路。 |
-| [`case-evidence.md`](case-evidence.md) | 每个案例编码所依据的官方原文摘录。 |
-| [`case-gallery.md`](case-gallery.md) | 案例画廊：每个案例的展示页、官方图片、说明网页，可以一个个点开看是什么样子。 |
-| [`layered-writing.md`](layered-writing.md) | 分层写作：别人怎么处理分层文本，以及能归纳出的做法。 |
+两条线，分在两个子目录里：
+
+| 目录 | 内容 | 性质 |
+| --- | --- | --- |
+| [`extraction/`](extraction/) | **结构怎么从信息里提炼、怎么分层、怎么写成文章**：提炼的七个层次，五种“分层”与抽象操作，分层写作。 | 讨论 |
+| [`case-study/`](case-study/) | **从 84+ 个案例归纳**：信息结构有哪些类别、可视化有哪几个流派，以及它们依据的案例编码、官方原文、展示页。 | 实证 |
+
+`extraction/` 里有三篇：[提炼的七个层次](extraction/extraction-layers.md)、[分层与颗粒度](extraction/abstraction-and-granularity.md)、[分层写作](extraction/layered-writing.md)。`case-study/` 的阅读顺序见它自己的 [README](case-study/README.md)。
+
+下面的“工具与项目”是本板块的项目表（由脚本生成）。
 
 ## 三类输入不能用同一套方法
 
@@ -64,7 +63,7 @@ Graphiti 把时间与原始来源纳入结构模型。例如某份资料曾说�
 
 ## 待展开的主题
 
-- 用户自己写“立体认知”文章的做法：需要用户的材料，见 [分层写作](layered-writing.md) 末尾。
-- 概念与关系建模：如何提炼概念、类别、实体、属性与关系。目前只有 [CmapTools 的构建流程](case-evidence.md#cmaptools)（焦点问题、15 到 25 个概念、停车场、初稿、找跨联、反复修订）可以参照。
+- 用户自己写“立体认知”文章的做法：需要用户的材料，见 [分层写作](extraction/layered-writing.md) 末尾。
+- 概念与关系建模：如何提炼概念、类别、实体、属性与关系。目前只有 [CmapTools 的构建流程](case-study/data/case-evidence.md#cmaptools)（焦点问题、15 到 25 个概念、停车场、初稿、找跨联、反复修订）可以参照。
 - 来源追溯与保真：从高层结构回到原始判断、细节和证据。案例里有 Docling、Graphiti、Wikipedia 摘要式写作的做法，还没有归纳成一套。
 - 更多“复杂信息与认知结构”类的案例，尤其是设计者写了理由的。

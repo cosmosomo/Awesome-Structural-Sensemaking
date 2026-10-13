@@ -28,6 +28,14 @@
 3. 文献只用来校准编码用的词表和解释规律，不能替代案例。理论文档里的每条结论要能回到具体案例。
 4. 案例里的事实（这个产品把什么建模成什么、画了什么）交给 Haiku 对照官方页面核验；编码本身（归类、重点部分）是我的判断，要标明。
 
+## 文档怎么放（用户 2026-10-13 要求：分层分目录，不要一直叠）
+
+- 三层：入口（根 README）→ 板块（目录 + 自带 README 索引）→ 专题（子目录或文档）。目录地图在根 README，改了目录结构要同步。
+- **加内容前先找已有文档合并**，不要因为多了一个话题就新开一个并列文件。确实要新建，放进对应的板块或子目录，并登记到那个目录的 README；一个目录的 README 里列的文件不超过一屏。
+- 生成的页面（案例表、原文摘录、画廊、INDEX）放在 `data/` 或 `catalog/INDEX.md`，不手改；手写的结论和讨论放在上一层。
+- 案例研究的材料都在 `04-structure-and-cognition/case-study/`：结论（两篇）→ 方法 → `data/` 依据。新增案例只改 `catalog/` 里的数据，文档靠 `build.py` 生成，不为新案例另写文档。
+- 用户发来的调研、文章是让我理解的材料，不原样存进仓库；能核实的事实进案例数据，其余写进 `inbox.md` 的待整理。
+
 ## 核对
 
 - 核对类工作（打开页面、对照官方文档、查软件包注册表）交给 Haiku 子智能体并行做。子智能体只读，不改仓库，引用必须是原文。
@@ -45,8 +53,8 @@
 - 改 `catalog/` 下的 YAML，不要直接改文档里 `<!-- gen:... -->` 之间的表格。改完运行 `python3 scripts/build.py`；CI 运行 `build.py --check`。
 - `python3 scripts/check_links.py`：访问展示页、文档、站点。
 - `python3 scripts/check_registries.py`：用 npm / PyPI 核对仓库、许可证、最近发布。
-- 案例分析：`catalog/cases.yaml`（编码，我的判断）、`catalog/case-vocab.yaml`（词表）、`catalog/case-evidence.json`（子智能体逐字摘录的官方原文）。加案例或改摘录后跑 `python3 scripts/check_quotes.py --write`，它把每条摘录拿到页面文字里比对，结果写回 `check` 字段。方法见 `04-structure-and-cognition/case-analysis-method.md`。
-- 案例画廊：`catalog/case-gallery.json`（展示页、官方图片、说明网页）生成 `04-structure-and-cognition/case-gallery.md`。采集交给 Haiku（只读、原样引用页面文字、图片只收官方页面上嵌的、不收 GitHub 域名的），我再过滤：宣传图、分享卡片、logo、首帧空白的动图、太小的图都不收，进库前自己看过缩略图。加了地址后跑 `python3 scripts/check_gallery.py`，展示页用 `scripts/render_check.js` 实际渲染一次。图片只存地址，不转存。
+- 案例分析：`catalog/cases.yaml`（编码，我的判断）、`catalog/case-vocab.yaml`（词表）、`catalog/case-evidence.json`（子智能体逐字摘录的官方原文）。加案例或改摘录后跑 `python3 scripts/check_quotes.py --write`，它把每条摘录拿到页面文字里比对，结果写回 `check` 字段。方法见 `04-structure-and-cognition/case-study/method.md`。
+- 案例画廊：`catalog/case-gallery.json`（展示页、官方图片、说明网页）生成 `04-structure-and-cognition/case-study/data/case-gallery.md`。采集交给 Haiku（只读、原样引用页面文字、图片只收官方页面上嵌的、不收 GitHub 域名的），我再过滤：宣传图、分享卡片、logo、首帧空白的动图、太小的图都不收，进库前自己看过缩略图。加了地址后跑 `python3 scripts/check_gallery.py`，展示页用 `scripts/render_check.js` 实际渲染一次。图片只存地址，不转存。
 - 第二轮编码（2026-10-13）：`cases.yaml` 里加了 `source`（结构来源）和 `schools`（画法流派），结构词表去掉 text、multilayer，新增 propositional；`dag` 只给关系本身排除环或页面明写 DAG 的案例，页面没写是否有环的流程画布编 `graph`。`modifiers` 里有 `derived` 就必须在 `source` 里有 `derived`（build.py 校验）。改过主类的案例留着 `structure_was`。盲编一致率：主类结构 κ 0.74、主流派 0.78、来源 0.79、首位重点部分 0.61（最不稳，依赖它的结论要打折扣）。理论文档是 `information-structure-theory.md`（数据结构）和 `visualization-schools.md`（画法流派）。
 - 用户说研究范围是“复杂信息、认知结构、背后的数据结构，以及大家的可视化思路”，不求全：不要为了覆盖面去扩领域，优先收设计者写了理由的案例。
 - 标记的含义：展示页的 ✓ 是页面能打开且标题相符；仓库的 ✓ 是官方来源（包元数据、官网或官方文档的源码链接、Go 模块代理）指向的仓库一致，依据写在 `package` 或 `repo_check_via`；“定位与值得研究”末尾的 ✓ / △ 是 `facts_checked` / `facts_gaps`（说明里的主要点是否在官方页面找到依据）。没有 ✓ 就是没核对。凭记忆补的地址用 `added_by_maintainer` 标出，并尽快核对。

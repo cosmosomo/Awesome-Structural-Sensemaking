@@ -305,7 +305,7 @@ def render_school_cases(d: dict, arg: str) -> str:
     for x in rows:
         mark = "**" if x["schools"][0] == arg else ""
         others = "、".join(v["schools"][s]["title"] for s in x["schools"] if s != arg)
-        out.append(f"- {mark}[{esc(case_name(x, projects))}](case-evidence.md#{x['id']}){mark}　{esc(x['domain'])} · "
+        out.append(f"- {mark}[{esc(case_name(x, projects))}](data/case-evidence.md#{x['id']}){mark}　{esc(x['domain'])} · "
                    f"{'+'.join(v['structures'][s]['title'] for s in x['structure'])}"
                    + (f" · 同时用：{others}" if others else ""))
     return "\n".join(out) + "\n"
