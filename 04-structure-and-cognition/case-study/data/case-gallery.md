@@ -2,14 +2,14 @@
 
 > 本页由 `scripts/build.py` 根据 `catalog/case-gallery.json` 生成，请改数据，不要直接改这里。
 
-每个案例收了三样东西：**展示页**（能直接看到或试一试的在线页面）、**图片**（官方页面上嵌的截图或示意图，点图片打开原图）、**网页**（最能说明它长什么样的官方页面）。图片只存地址，不转存，版权属于各自的来源。
+每个案例收了三样东西：**展示页**（能直接看到或试一试的在线页面）、**图片**（官方页面上嵌的、**这个案例画出来的那张视图本身**：主视图的截图或论文里的结果图，点图片打开原图；架构图、方法流程图、数据模型图、设置面板、聊天界面、表单、模板和宣传页不收，它们在数据里标了 `shows`，不显示）、**网页**（最能说明它长什么样的官方页面）。图片只存地址，不转存，版权属于各自的来源。
 
 - 展示页和网页由脚本逐个访问核对状态与标题（`scripts/check_gallery.py`）；图片核对了它真是图片、像素尺寸够大。
 - 展示页大多是 JS 渲染的，只看 HTTP 状态不够，所以另用无头 Chromium 真实打开（`scripts/render_check.js`），记下页面文字量和 canvas、svg 的数量。这只能说明“打开后有内容”，不等于“展示得好”。
 - 这些案例为什么这样归类、设计者怎么想，见 [案例表](case-analysis.md)；编码依据的官方原文见 [案例证据](case-evidence.md)。
 
 <!-- gen:gallerystats: -->
-84 个案例里，55 个有在线展示页（可操作 41、样例目录 10、视频或导览 1、需要登录 3），其中 55 个用无头 Chromium 实际打开过；53 个有官方图片，共 120 张。其余 29 个没找到在线展示页（命令行工具、规范、方法类，或官方页面读不到），原因写在各案例下。图片只存地址，不转存。
+97 个案例里，66 个有在线展示页（可操作 51、样例目录 11、视频或导览 1、需要登录 3），其中 66 个用无头 Chromium 实际打开过；49 个有官方图片，共 90 张。其余 31 个没找到在线展示页（命令行工具、规范、方法类，或官方页面读不到），原因写在各案例下。图片只存地址，不转存。
 <!-- /gen -->
 
 ## 总表
@@ -21,28 +21,29 @@
 |---|---|---|---|---|---|
 | [CNCF Landscape](https://landscape.cncf.io/) | 技术生态 | 集合与分类 | [可操作](https://landscape.cncf.io/) | 1 | 2 |
 | [Thoughtworks Technology Radar](https://www.thoughtworks.com/radar) | 技术生态 | 集合与分类 | [可操作](https://www.thoughtworks.com/radar) | — | 1 |
-| [Zalando Tech Radar](https://github.com/zalando/tech-radar) | 技术生态 | 集合与分类 | [可操作](https://opensource.zalando.com/tech-radar/) | 3 | 1 |
+| [Zalando Tech Radar](https://github.com/zalando/tech-radar) | 技术生态 | 集合与分类 | [可操作](https://opensource.zalando.com/tech-radar/) | 1 | 1 |
+| [Open Source AI Gap Map](https://www.aipotluck.org/map) | 开源生态评估 | 集合与分类 | [可操作](https://www.aipotluck.org/map/gap-map) | 2 | 2 |
 | [Grafana](https://github.com/grafana/grafana) | 基础设施运维 | 表与多维属性 | [可操作](https://play.grafana.org/) | — | 1 |
-| [Build Your Own Radar](https://github.com/thoughtworks/build-your-own-radar) | 技术生态 | 表与多维属性 | [可操作](https://radar.thoughtworks.com/) | 1 | 1 |
+| [Build Your Own Radar](https://github.com/thoughtworks/build-your-own-radar) | 技术生态 | 表与多维属性 | [可操作](https://radar.thoughtworks.com/) | — | 1 |
 | [OSS Insight](https://ossinsight.io/) | 开源生态 | 表与多维属性 | [可操作](https://ossinsight.io/) | 1 | 1 |
-| [OSS Compass](https://oss-compass.org/) | 开源生态 | 表与多维属性 | [可操作](https://oss-compass.org/os-situation) | 3 | 2 |
+| [OSS Compass](https://oss-compass.org/) | 开源生态 | 表与多维属性 | [可操作](https://oss-compass.org/os-situation) | 2 | 2 |
 | [PyGraphistry](https://github.com/graphistry/pygraphistry) | 数据分析 | 表与多维属性 | — | 3 | 2 |
 | [Wikidata Query Service 结果视图](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/Wikidata_Query_Help/Result_Views) | 开放知识图谱 | 表与多维属性 | [可操作](https://query.wikidata.org/) | 1 | 1 |
 | [Gapminder 气泡图](https://www.gapminder.org/tools/) | 国际发展统计 | 表与多维属性 | [可操作](https://www.gapminder.org/tools/) | — | 2 |
 | [CodeBoarding](https://codeboarding.org/) | 软件工程 | 层级与树 | [可操作](https://app.codeboarding.org/CodeBoarding/CodeBoarding) | 3 | 2 |
 | [LikeC4](https://likec4.dev/) | 软件工程 | 层级与树 | [可操作](https://playground.likec4.dev/w/bigbank/) | — | 1 |
-| [AgentPrism](https://evilmartians.com/chronicles/debug-ai-fast-agent-prism-open-source-library-visualize-agent-traces) | AI Agent 观测 | 层级与树 | [可操作](https://agent-prism.evilmartians.io/) | 3 | 1 |
+| [AgentPrism](https://evilmartians.com/chronicles/debug-ai-fast-agent-prism-open-source-library-visualize-agent-traces) | AI Agent 观测 | 层级与树 | [可操作](https://agent-prism.evilmartians.io/) | 2 | 1 |
 | [Jaeger](https://github.com/jaegertracing/jaeger) | 分布式系统运维 | 层级与树 | [可操作](https://demo.jaegertracing.io/jaeger/) | — | 2 |
 | [Grafana Tempo](https://github.com/grafana/tempo) | 分布式系统运维 | 层级与树 | — | — | 2 |
-| [AgentScope 2.0](https://docs.agentscope.io/) | AI Agent 开发 | 层级与树 | — | 2 | 2 |
+| [AgentScope 2.0](https://docs.agentscope.io/) | AI Agent 开发 | 层级与树 | — | 1 | 2 |
 | [Langfuse](https://github.com/langfuse/langfuse) | AI 应用观测 | 层级与树 | [可操作](https://langfuse.com/docs/demo) | 2 | 2 |
-| [Arize Phoenix](https://github.com/Arize-ai/phoenix) | AI 应用观测 | 层级与树 | [可操作](https://phoenix-demo.arize.com/) | 3 | 2 |
-| [Comet Opik](https://www.comet.com/site/products/opik/) | AI 应用观测 | 层级与树 | — | 3 | 2 |
-| [AgentOps](https://www.agentops.ai/) | AI 应用观测 | 层级与树 | — | 3 | 1 |
-| [LangWatch](https://langwatch.ai/) | AI 应用观测 | 层级与树 | [需登录](https://app.langwatch.ai/demo) | 1 | 1 |
-| [AFFiNE](https://affine.pro/) | 知识管理 | 层级与树 | [样例目录](https://affine.pro/templates) | 3 | 2 |
+| [Arize Phoenix](https://github.com/Arize-ai/phoenix) | AI 应用观测 | 层级与树 | [可操作](https://phoenix-demo.arize.com/) | 1 | 2 |
+| [Comet Opik](https://www.comet.com/site/products/opik/) | AI 应用观测 | 层级与树 | — | 2 | 2 |
+| [AgentOps](https://www.agentops.ai/) | AI 应用观测 | 层级与树 | — | 2 | 1 |
+| [LangWatch](https://langwatch.ai/) | AI 应用观测 | 层级与树 | [需登录](https://app.langwatch.ai/demo) | — | 1 |
+| [AFFiNE](https://affine.pro/) | 知识管理 | 层级与树 | [样例目录](https://affine.pro/templates) | — | 2 |
 | [Tree-sitter](https://github.com/tree-sitter/tree-sitter) | 软件工程 | 层级与树 | [可操作](https://tree-sitter.github.io/tree-sitter/7-playground.html) | — | 2 |
-| [Docling](https://github.com/docling-project/docling) | 文档处理 | 层级与树 | [可操作](https://huggingface.co/spaces/docling-project/SmolDocling-256M-Demo) | 3 | 2 |
+| [Docling](https://github.com/docling-project/docling) | 文档处理 | 层级与树 | [可操作](https://huggingface.co/spaces/docling-project/SmolDocling-256M-Demo) | — | 2 |
 | [Nextstrain / Auspice](https://docs.nextstrain.org/en/latest/learn/interpret/interacting-with-nextstrain.html) | 流行病与基因组 | 层级与树 | [可操作](https://nextstrain.org/ncov/open/global/6m) | 2 | 2 |
 | [OneZoom 生命之树](https://www.onezoom.org/introduction) | 生物分类 | 层级与树 | [可操作](https://www.onezoom.org/) | 2 | 2 |
 | [Reactome 通路浏览器](https://reactome.org/userguide/pathway-browser) | 分子生物学通路 | 层级与树 | — | 3 | 2 |
@@ -52,45 +53,55 @@
 | [Universal Dependencies 依存树](https://universaldependencies.org/introduction.html) | 语言学 | 层级与树 | [可操作](https://universaldependencies.org/conllu_viewer.html) | — | 2 |
 | [Wikipedia 摘要式写作](https://en.wikipedia.org/wiki/Wikipedia:Summary_style) | 百科写作 | 层级与树 | — | — | 2 |
 | [Markmap](https://markmap.js.org/docs/markmap) | 知识管理与写作 | 层级与树 | [可操作](https://markmap.js.org/repl) | — | 2 |
+| [ATLAS：用多个 LLM Agent 自动构建软件仓库分类体系](https://arxiv.org/abs/2606.21597) | 软件仓库分类 | 层级与树 | [可操作](https://atlas-taxonomy.netlify.app/) | — | 2 |
+| [Speculora](https://speculora.com/) | 市场需求分析 | 层级与树 | [可操作](https://speculora.com/) | — | 2 |
 | [AgentEnsemble Viz](https://docs.agentensemble.net/guides/visualization/) | AI Agent 开发 | 有向无环图 | — | — | 2 |
-| [Marquez](https://marquezproject.ai/) | 数据工程 | 有向无环图 | — | 3 | 2 |
+| [Marquez](https://marquezproject.ai/) | 数据工程 | 有向无环图 | — | 2 | 2 |
 | [AgentEnsemble](https://agentensemble.github.io/agentensemble/) | AI Agent 开发 | 有向无环图 | — | — | 2 |
 | [Nx](https://nx.dev/docs/features/explore-graph) | 软件工程 | 有向无环图 | [可操作](https://nrwl-nx-examples-dep-graph.netlify.app/?focus=cart) | — | 1 |
 | [DataHub](https://docs.datahub.com/) | 数据工程 | 有向无环图 | [视频/导览](https://datahub.com/demos/data-lineage-with-datahub/) | — | 1 |
-| [OpenMetadata](https://docs.open-metadata.org/latest/quick-start/sandbox) | 数据工程 | 有向无环图 | [需登录](https://sandbox.open-metadata.org/) | 3 | 1 |
-| [Git 提交历史](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell) | 版本控制 | 有向无环图 | [可操作](https://learngitbranching.js.org/) | 2 | 2 |
+| [OpenMetadata](https://docs.open-metadata.org/latest/quick-start/sandbox) | 数据工程 | 有向无环图 | [需登录](https://sandbox.open-metadata.org/) | 2 | 1 |
+| [Git 提交历史](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell) | 版本控制 | 有向无环图 | [可操作](https://learngitbranching.js.org/) | — | 2 |
 | [家谱图的交互可视化](https://www.cs.ubc.ca/~tmm/courses/grad/slides/week8.pdf) | 谱系与家族史 | 有向无环图 | — | — | — |
+| [Software Heritage Graph Dataset](https://registry.opendata.aws/software-heritage/) | 源代码历史图谱 | 有向无环图 | — | — | 2 |
 | [dependency-cruiser](https://sverweij.github.io/dependency-cruiser/) | 软件工程 | 一般图与网络 | [可操作](https://sverweij.github.io/dependency-cruiser-repro-repo/458/) | 1 | 1 |
 | [Madge](https://github.com/pahen/madge) | 软件工程 | 一般图与网络 | — | — | — |
 | [pydeps](https://github.com/thebjorn/pydeps) | 软件工程 | 一般图与网络 | — | — | 1 |
 | [Understand Anything](https://understand-anything.com/) | 软件工程 | 一般图与网络 | [可操作](https://understand-anything.com/) | — | — |
 | [bpmn-js](https://github.com/bpmn-io/bpmn-js) | 业务流程 | 一般图与网络 | [可操作](https://demo.bpmn.io/) | 2 | 2 |
 | [NeoDash](https://github.com/neo4j-labs/neodash) | 图数据库应用 | 一般图与网络 | — | 1 | 1 |
-| [Dify](https://dify.ai/) | AI Agent 开发 | 一般图与网络 | [样例目录](https://marketplace.dify.ai/templates) | 3 | 2 |
-| [Langflow](https://www.langflow.org/) | AI Agent 开发 | 一般图与网络 | [样例目录](https://www.langflow.org/templates/use-langflow-to-process-and-classify-call-transcripts/) | 3 | 2 |
+| [Dify](https://dify.ai/) | AI Agent 开发 | 一般图与网络 | [样例目录](https://marketplace.dify.ai/templates) | 2 | 2 |
+| [Langflow](https://www.langflow.org/) | AI Agent 开发 | 一般图与网络 | [样例目录](https://www.langflow.org/templates/use-langflow-to-process-and-classify-call-transcripts/) | 1 | 2 |
 | [n8n](https://github.com/n8n-io/n8n) | 业务自动化 | 一般图与网络 | [样例目录](https://n8n.io/workflows/) | — | 2 |
-| [Node-RED](https://github.com/node-red/node-red) | 物联网与事件流 | 一般图与网络 | [样例目录](https://flows.nodered.org/) | 2 | 2 |
+| [Node-RED](https://github.com/node-red/node-red) | 物联网与事件流 | 一般图与网络 | [样例目录](https://flows.nodered.org/) | 1 | 2 |
 | [Flowise](https://flowiseai.com/) | AI Agent 开发 | 一般图与网络 | — | 2 | 2 |
-| [LangGraph / Studio](https://docs.langchain.com/langsmith/studio) | AI Agent 开发 | 一般图与网络 | — | 1 | 2 |
+| [LangGraph / Studio](https://docs.langchain.com/langsmith/studio) | AI Agent 开发 | 一般图与网络 | — | — | 2 |
 | [AutoGen / AutoGen Studio](https://microsoft.github.io/autogen/stable/user-guide/autogenstudio-user-guide/index.html) | AI Agent 开发 | 一般图与网络 | — | — | 1 |
 | [Backstage](https://backstage.io/docs/next/getting-started/viewing-entity-relationships/) | 软件工程 | 一般图与网络 | [可操作](https://demo.backstage.io/catalog) | — | 1 |
 | [Apache SkyWalking](https://skywalking.apache.org/) | 分布式系统运维 | 一般图与网络 | [需登录](https://demo.skywalking.apache.org/) | — | 1 |
-| [Kiali](https://kiali.io/docs/features/topology/) | 服务网格运维 | 一般图与网络 | — | 3 | 2 |
+| [Kiali](https://kiali.io/docs/features/topology/) | 服务网格运维 | 一般图与网络 | — | 1 | 2 |
 | [diagrams.net / draw.io](https://www.drawio.com/) | 通用绘图 | 一般图与网络 | [可操作](https://app.diagrams.net/) | 3 | 2 |
-| [Kumu](https://kumu.io/) | 系统与关系分析 | 一般图与网络 | [可操作](https://kumu.io/tanyabeer/hewlett-foundation-madison-initiative) | 3 | 1 |
+| [Kumu](https://kumu.io/) | 系统与关系分析 | 一般图与网络 | [可操作](https://kumu.io/tanyabeer/hewlett-foundation-madison-initiative) | 2 | 1 |
 | [InfraNodus](https://infranodus.com/) | 文本分析与知识发现 | 一般图与网络 | [可操作](https://infranodus.com/live/hourlydailynews?background=default&most_influential=bc&maxnodes=150&demo=1&defaultlabelsize=14&labelsizeratio=2&demo=1) | 3 | 2 |
 | [Docling Graph](https://docling-project.github.io/docling-graph/) | 文档处理 | 一般图与网络 | [可操作](https://docling-project.github.io/docling-graph/usage/examples/) | — | 2 |
-| [Microsoft GraphRAG](https://microsoft.github.io/graphrag/) | 文本检索与知识建模 | 一般图与网络 | — | 3 | 2 |
+| [Microsoft GraphRAG](https://microsoft.github.io/graphrag/) | 文本检索与知识建模 | 一般图与网络 | — | 2 | 2 |
 | [LightRAG](https://github.com/HKUDS/LightRAG) | 文本检索与知识建模 | 一般图与网络 | — | — | 1 |
 | [Graphiti](https://help.getzep.com/graphiti/getting-started/overview) | Agent 记忆 | 一般图与网络 | [可操作](https://app.getzep.com/playground) | — | 2 |
 | [伦敦地铁图（Beck）](https://www.londonmuseum.org.uk/collections/london-stories/harry-beck-revolutionised-tube-map/) | 交通 | 一般图与网络 | — | 1 | 2 |
 | [SBGN 系统生物学图形标记](https://sbgn.github.io/specifications) | 分子生物学通路 | 一般图与网络 | [样例目录](https://sbgn.github.io/examples) | 3 | 2 |
-| [ICIJ Offshore Leaks 数据库](https://offshoreleaks.icij.org/pages/howtouse) | 调查报道与金融 | 一般图与网络 | [可操作](https://offshoreleaks.icij.org/) | 2 | 1 |
+| [ICIJ Offshore Leaks 数据库](https://offshoreleaks.icij.org/pages/howtouse) | 调查报道与金融 | 一般图与网络 | [可操作](https://offshoreleaks.icij.org/) | — | 1 |
 | [VOWL / WebVOWL 本体可视化](https://semantic-web-journal.net/content/visualizing-ontologies-vowl-0) | 本体与语义网 | 一般图与网络 | — | — | 2 |
-| [Hive Plot](https://mk.bcgsc.ca/linnet/) | 网络分析（生物与社会网络） | 一般图与网络 | [可操作](https://bost.ocks.org/mike/hive/) | 3 | 1 |
+| [Hive Plot](https://mk.bcgsc.ca/linnet/) | 网络分析（生物与社会网络） | 一般图与网络 | [可操作](https://bost.ocks.org/mike/hive/) | 2 | 1 |
 | [Gephi](https://gephi.org/desktop/) | 通用网络分析 | 一般图与网络 | [可操作](https://lite.gephi.org/) | 3 | 2 |
 | [设计结构矩阵 DSM](https://dsmweb.org/reading-a-dsm/) | 工程系统与产品架构 | 一般图与网络 | — | 3 | 2 |
 | [Luhmann 的卡片盒](https://www.uni-bielefeld.de/fakultaeten/soziologie/forschung/luhmann-archiv/pdf/jschmidt_zettelkasten-als-uberraschungsgenerator.pdf) | 知识管理与写作 | 一般图与网络 | — | — | — |
+| [Git.Top Atlas](https://git.top/atlas) | 开源生态导航 | 一般图与网络 | [可操作](https://git.top/atlas) | — | 2 |
+| [SemRepo](https://arxiv.org/abs/2605.13310) | 研究软件知识图谱 | 一般图与网络 | [可操作](https://semrepo.org/sparql) | — | 2 |
+| [MOSS（研究软件知识图谱）](https://pretalx.com/juliacon-2025/talk/3EVLR9/) | 研究软件知识图谱 | 一般图与网络 | — | — | 1 |
+| [Ecosyste.ms](https://packages.ecosyste.ms/) | 开源数据基础设施 | 一般图与网络 | [可操作](https://packages.ecosyste.ms/) | — | 1 |
+| [OpenDigger](https://open-digger.cn/en/) | 开源活动指标 | 一般图与网络 | [可操作](https://open-digger.cn/en/docs/user-docs/metrics/playground) | — | 2 |
+| [deps.dev（Open Source Insights）](https://docs.deps.dev/) | 软件供应链 | 一般图与网络 | [可操作](https://deps.dev/) | 1 | 2 |
+| [CodeGraph（面向源代码的开放分类知识图谱）](https://arxiv.org/abs/2609.29474) | 代码知识图谱 | 一般图与网络 | [样例目录](https://huggingface.co/datasets/halykoss/CodeGraph/viewer/) | 1 | 2 |
 | [Argdown](https://argdown.org/) | 论证与讨论 | 命题与论证 | [可操作](https://argdown.org/sandbox/) | 1 | 2 |
 | [Kialo 论证树](https://support.kialo.com/en/) | 论证与讨论 | 命题与论证 | [可操作](https://www.kialo.com/should-us-internet-platforms-be-able-to-remove-or-demote-speech-by-elected-public-figures-39863) | 1 | 2 |
 | [CmapTools 概念图](https://cmap.ihmc.us/) | 教育与知识建模 | 命题与论证 | [样例目录](https://cmap.ihmc.us/docs/itinerary.php) | 1 | 2 |
@@ -98,9 +109,11 @@
 | [OpenTelemetry GenAI 语义约定](https://opentelemetry.io/docs/specs/semconv/gen-ai/) | AI Agent 观测 | 序列与事件流 | — | — | — |
 | [OpenLLMetry](https://github.com/traceloop/openllmetry) | AI Agent 观测 | 序列与事件流 | — | 1 | 2 |
 | [Up and Down the Ladder of Abstraction](https://worrydream.com/LadderOfAbstraction/) | 交互式写作与抽象 | 序列与事件流 | [可操作](https://worrydream.com/LadderOfAbstraction/) | — | — |
-| [LLNL 美国能源流向图](https://flowcharts.llnl.gov/) | 能源 | 流量网络 | [样例目录](https://flowcharts.llnl.gov/commodities/energy) | 2 | 2 |
+| [LLNL 美国能源流向图](https://flowcharts.llnl.gov/) | 能源 | 流量网络 | [样例目录](https://flowcharts.llnl.gov/commodities/energy) | 1 | 2 |
 | [Embedding Projector](https://projector.tensorflow.org/) | 机器学习 | 空间与几何 | [可操作](https://projector.tensorflow.org/) | 3 | 2 |
 | [Circos](https://pmc.ncbi.nlm.nih.gov/articles/PMC2752132/) | 比较基因组 | 空间与几何 | — | 3 | 1 |
+| [Semantic Map of GitHub](https://stevenfazzio.com/semantic-github-map/) | 开源生态地图 | 空间与几何 | [可操作](https://stevenfazzio.com/semantic-github-map/) | — | 1 |
+| [Map of GitHub](https://anvaka.github.io/map-of-github/) | 开源生态地图 | 空间与几何 | [可操作](https://anvaka.github.io/map-of-github/) | — | — |
 | [Insight Maker](https://www.insightmaker.com/) | 系统建模 | 因果与反馈 | [样例目录](https://www.insightmaker.com/explore) | 3 | 2 |
 | [Explorable Explanations](https://worrydream.com/ExplorableExplanations/) | 交互式写作 | 因果与反馈 | [可操作](https://worrydream.com/TenBrighterIdeas/) | 2 | 2 |
 <!-- /gen -->
@@ -181,9 +194,9 @@
 - 网页：[Dify - The Platform for Production-Ready Agentic Workflows](https://dify.ai/)（官网首页，列出 Workflow Studio、Knowledge Pipeline 等产品模块，并附对应截图）
 - 网页：[Single Node - Dify Docs](https://docs.dify.ai/en/cloud/use-dify/debug/step-run)（单节点运行调试的文档页，内嵌节点运行输出相关截图（alt：'When You Run Nodes One at a Time, Their Outputs Are Cached in the Variable'））
 
-<a href="https://dify.ai/_astro/workflow.Dl7EY_X1_rPiFq.webp"><img src="https://dify.ai/_astro/workflow.Dl7EY_X1_rPiFq.webp" width="230" alt="Dify Workflow Studio canvas showing connected nodes for an AI workflow."></a> <a href="https://dify.ai/_astro/agent.Ba3STi-y_Z18Lowi.webp"><img src="https://dify.ai/_astro/agent.Ba3STi-y_Z18Lowi.webp" width="230" alt="Dify agent configuration with tools and memory."></a> <a href="https://dify.ai/_astro/knowledge.COlULHvU_Z1dyyjQ.webp"><img src="https://dify.ai/_astro/knowledge.COlULHvU_Z1dyyjQ.webp" width="230" alt="Dify Knowledge Pipeline turning documents into an indexed knowledge base."></a>
+<a href="https://dify.ai/_astro/workflow.Dl7EY_X1_rPiFq.webp"><img src="https://dify.ai/_astro/workflow.Dl7EY_X1_rPiFq.webp" width="230" alt="Dify Workflow Studio canvas showing connected nodes for an AI workflow."></a> <a href="https://dify.ai/_astro/knowledge.COlULHvU_Z1dyyjQ.webp"><img src="https://dify.ai/_astro/knowledge.COlULHvU_Z1dyyjQ.webp" width="230" alt="Dify Knowledge Pipeline turning documents into an indexed knowledge base."></a>
 
-<sub>图：Dify Workflow Studio canvas showing connected nodes for an AI workflow.（[来源页](https://dify.ai/)）；Dify agent configuration with tools and memory.（[来源页](https://dify.ai/)）；Dify Knowledge Pipeline turning documents into an indexed knowledge base.（[来源页](https://dify.ai/)）</sub>
+<sub>图：Dify Workflow Studio canvas showing connected nodes for an AI workflow.（[来源页](https://dify.ai/)）；Dify Knowledge Pipeline turning documents into an indexed knowledge base.（[来源页](https://dify.ai/)）</sub>
 
 <sub>[编码与原文摘录](case-evidence.md#dify)</sub>
 
@@ -195,9 +208,9 @@
 - 网页：[Test flows in the Playground \| Langflow Documentation](https://docs.langflow.org/concepts-playground)（Playground 功能页，说明可以实时测试基于 LLM 的流程的响应，页面内嵌 Playground 界面与 agent 回复的截图）
 - 网页：[What is Langflow? \| Langflow Documentation](https://docs.langflow.org/)（官方文档首页，内嵌 Basic Prompting 流程的截图）
 
-<a href="https://docs.langflow.org/assets/images/playground-34f869f8763b3c69ddcd4d365c96d0e6.png"><img src="https://docs.langflow.org/assets/images/playground-34f869f8763b3c69ddcd4d365c96d0e6.png" width="230" alt="The Langflow visual builder with the Playground active"></a> <a href="https://docs.langflow.org/assets/images/playground-with-agent-56fa39130f9a50d376ba5a226ae254f0.png"><img src="https://docs.langflow.org/assets/images/playground-with-agent-56fa39130f9a50d376ba5a226ae254f0.png" width="230" alt="Playground with agent response"></a> <a href="https://docs.langflow.org/assets/images/workspace-basic-prompting-c16e2f001725aa6dc1bc479f22aa11df.png"><img src="https://docs.langflow.org/assets/images/workspace-basic-prompting-c16e2f001725aa6dc1bc479f22aa11df.png" width="230" alt="Basic Prompting flow in Langflow"></a>
+<a href="https://docs.langflow.org/assets/images/workspace-basic-prompting-c16e2f001725aa6dc1bc479f22aa11df.png"><img src="https://docs.langflow.org/assets/images/workspace-basic-prompting-c16e2f001725aa6dc1bc479f22aa11df.png" width="230" alt="Basic Prompting flow in Langflow"></a>
 
-<sub>图：The Langflow visual builder with the Playground active（[来源页](https://docs.langflow.org/concepts-playground)）；Playground with agent response（[来源页](https://docs.langflow.org/concepts-playground)）；Basic Prompting flow in Langflow（[来源页](https://docs.langflow.org/)）</sub>
+<sub>图：Basic Prompting flow in Langflow（[来源页](https://docs.langflow.org/)）</sub>
 
 <sub>[编码与原文摘录](case-evidence.md#langflow)</sub>
 
@@ -219,9 +232,9 @@
 - 网页：[Editor Guide : Node-RED](https://nodered.org/docs/user-guide/editor/)（编辑器指南，目录包括 Workspace、Flows、Nodes、Wires、Groups、Subflows 等章节，并附编辑器窗口截图）
 - 网页：[Sidebar: Debug messages : Node-RED](https://nodered.org/docs/user-guide/editor/sidebar/debug)（调试消息侧边栏页，内嵌 Debug 侧边栏的截图）
 
-<a href="https://nodered.org/docs/user-guide/editor/images/editor-default.png"><img src="https://nodered.org/docs/user-guide/editor/images/editor-default.png" width="230" alt="Editor window"></a> <a href="https://nodered.org/docs/user-guide/editor/images/editor-sidebar-debug.png"><img src="https://nodered.org/docs/user-guide/editor/images/editor-sidebar-debug.png" width="230" alt="Debug messages Sidebar"></a>
+<a href="https://nodered.org/docs/user-guide/editor/images/editor-default.png"><img src="https://nodered.org/docs/user-guide/editor/images/editor-default.png" width="230" alt="Editor window"></a>
 
-<sub>图：Editor window（[来源页](https://nodered.org/docs/user-guide/editor/)）；Debug messages Sidebar（[来源页](https://nodered.org/docs/user-guide/editor/sidebar/debug)）</sub>
+<sub>图：Editor window（[来源页](https://nodered.org/docs/user-guide/editor/)）</sub>
 
 <sub>[编码与原文摘录](case-evidence.md#node-red)</sub>
 
@@ -244,10 +257,6 @@
 - 展示页：没有找到在线展示页<sub>（未找到 LangGraph Studio 的官方公开 demo。WebSearch 也没有找到官方 live demo。）</sub>
 - 网页：[LangSmith Studio - Docs by LangChain](https://docs.langchain.com/langsmith/studio)（页面介绍 Studio：'Studio is a specialized agent IDE that enables visualization, interaction, and debugging of agentic systems'，并说明 Graph mode 与 Chat mode。页面上没有截图。）
 - 网页：[Use the graph API - Docs by LangChain](https://docs.langchain.com/oss/python/langgraph/use-graph-api)（页面有多张图结构示意图（并行执行、条件分支等，alt 为页面原文），并说明 'LangGraph provides built-in utilities for visualizing your graph'。）
-
-<a href="https://mintcdn.com/langchain-5e9cc07a/dL5Sn6Cmy9pwtY0V/oss/images/re_play.png?fit=max&auto=format&n=dL5Sn6Cmy9pwtY0V&q=85&s=d7b34b85c106e55d181ae1f4afb50251"><img src="https://mintcdn.com/langchain-5e9cc07a/dL5Sn6Cmy9pwtY0V/oss/images/re_play.png?fit=max&auto=format&n=dL5Sn6Cmy9pwtY0V&q=85&s=d7b34b85c106e55d181ae1f4afb50251" width="230" alt="Replay"></a>
-
-<sub>图：Replay（[来源页](https://docs.langchain.com/oss/python/langgraph/use-time-travel)）</sub>
 
 <sub>[编码与原文摘录](case-evidence.md#langgraph)</sub>
 
@@ -286,9 +295,9 @@
 - 网页：[Topology \| Kiali](https://kiali.io/docs/features/topology/)（Kiali 拓扑图功能页，页内有拓扑图、命名空间概览和侧边栏等截图）
 - 网页：[Health \| Kiali](https://kiali.io/docs/features/health/)（Kiali 健康状态功能页，页内有健康概览、图上健康状态等截图）
 
-<a href="https://kiali.io/images/documentation/features/topology-graph.png"><img src="https://kiali.io/images/documentation/features/topology-graph.png" width="230" alt="Topology graph"></a> <a href="https://kiali.io/images/documentation/features/topology-overview.png"><img src="https://kiali.io/images/documentation/features/topology-overview.png" width="230" alt="Topology namespace overview"></a> <a href="https://kiali.io/images/documentation/features/topology-graph-sidepanel.png"><img src="https://kiali.io/images/documentation/features/topology-graph-sidepanel.png" width="230" alt="Topology graph side-panel app"></a>
+<a href="https://kiali.io/images/documentation/features/topology-graph.png"><img src="https://kiali.io/images/documentation/features/topology-graph.png" width="230" alt="Topology graph"></a>
 
-<sub>图：Topology graph（[来源页](https://kiali.io/docs/features/topology/)）；Topology namespace overview（[来源页](https://kiali.io/docs/features/topology/)）；Topology graph side-panel app（[来源页](https://kiali.io/docs/features/topology/)）</sub>
+<sub>图：Topology graph（[来源页](https://kiali.io/docs/features/topology/)）</sub>
 
 <sub>[编码与原文摘录](case-evidence.md#kiali)</sub>
 
@@ -313,9 +322,9 @@
 - 展示页（可直接操作）：[Hewlett Foundation Madison Initiative • Kumu](https://kumu.io/tanyabeer/hewlett-foundation-madison-initiative)<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 5899 字、canvas 24 个、svg 1 个</sub><sub> 打开后所见：打开是 “The Madison Initiative- 2016” 地图：左侧是文字说明，右侧是节点连线的关系图（节点按类型着色，图例在左下）</sub>
 - 网页：[Tour](https://kumu.io/tour)（页面用截图和动图介绍 Kumu 的制作、筛选与装饰功能，正文如 'Create maps by hand, or import existing data.'、'Style your maps with data-driven decorations.'、'Discover insights through automated calculations.'）
 
-<a href="https://assets.kumu.io/production/public/assets/marketing/screenshots/decorate-2b496ab4136d2d652d329f2ac54c8f6208aa9e7d8cd1416f9f5c3ea1838beb7b.jpg"><img src="https://assets.kumu.io/production/public/assets/marketing/screenshots/decorate-2b496ab4136d2d652d329f2ac54c8f6208aa9e7d8cd1416f9f5c3ea1838beb7b.jpg" width="230" alt="Decorate"></a> <a href="https://assets.kumu.io/production/public/assets/marketing/screenshots/metrics-2b9a140553c4460249a36275da807a638254ef01618fed5d4d1dcf298000c856.jpg"><img src="https://assets.kumu.io/production/public/assets/marketing/screenshots/metrics-2b9a140553c4460249a36275da807a638254ef01618fed5d4d1dcf298000c856.jpg" width="230" alt="Metrics"></a> <a href="https://assets.kumu.io/production/public/assets/marketing/screenshots/reid-hoffman-profile-d2e1e480844bd8ab603b39615f520bf90282cd3b3a690207985891f2c12894f4.jpg"><img src="https://assets.kumu.io/production/public/assets/marketing/screenshots/reid-hoffman-profile-d2e1e480844bd8ab603b39615f520bf90282cd3b3a690207985891f2c12894f4.jpg" width="230" alt="Reid hoffman profile"></a>
+<a href="https://assets.kumu.io/production/public/assets/marketing/screenshots/metrics-2b9a140553c4460249a36275da807a638254ef01618fed5d4d1dcf298000c856.jpg"><img src="https://assets.kumu.io/production/public/assets/marketing/screenshots/metrics-2b9a140553c4460249a36275da807a638254ef01618fed5d4d1dcf298000c856.jpg" width="230" alt="Metrics"></a> <a href="https://assets.kumu.io/production/public/assets/marketing/screenshots/reid-hoffman-profile-d2e1e480844bd8ab603b39615f520bf90282cd3b3a690207985891f2c12894f4.jpg"><img src="https://assets.kumu.io/production/public/assets/marketing/screenshots/reid-hoffman-profile-d2e1e480844bd8ab603b39615f520bf90282cd3b3a690207985891f2c12894f4.jpg" width="230" alt="Reid hoffman profile"></a>
 
-<sub>图：Decorate（[来源页](https://kumu.io/tour)）；Metrics（[来源页](https://kumu.io/tour)）；Reid hoffman profile（[来源页](https://kumu.io/tour)）</sub>
+<sub>图：Metrics（[来源页](https://kumu.io/tour)）；Reid hoffman profile（[来源页](https://kumu.io/tour)）</sub>
 
 <sub>[编码与原文摘录](case-evidence.md#kumu)</sub>
 
@@ -351,9 +360,9 @@
 - 网页：[Welcome - GraphRAG](https://microsoft.github.io/graphrag/)（官方首页，嵌有 Figure 1 知识图谱图，正文说明图中圆圈是实体、大小表示度数、颜色表示社区。）
 - 网页：[Visualization Guide - GraphRAG](https://microsoft.github.io/graphrag/visualization_guide/)（可视化指南，讲如何把输出的 graph.graphml 导入 Gephi，页面含 Gephi 界面截图。）
 
-<a href="https://microsoft.github.io/graphrag/img/GraphRag-Figure1.jpg"><img src="https://microsoft.github.io/graphrag/img/GraphRag-Figure1.jpg" width="230" alt="Figure 1: LLM-generated knowledge graph built from a private dataset using GPT-4 Turbo."></a> <a href="https://microsoft.github.io/graphrag/img/viz_guide/gephi-initial-graph-example.png"><img src="https://microsoft.github.io/graphrag/img/viz_guide/gephi-initial-graph-example.png" width="230" alt="A basic graph visualization by Gephi"></a> <a href="https://microsoft.github.io/graphrag/img/viz_guide/gephi-appearance-pane.png"><img src="https://microsoft.github.io/graphrag/img/viz_guide/gephi-appearance-pane.png" width="230" alt="A view of Gephi"></a>
+<a href="https://microsoft.github.io/graphrag/img/GraphRag-Figure1.jpg"><img src="https://microsoft.github.io/graphrag/img/GraphRag-Figure1.jpg" width="230" alt="Figure 1: LLM-generated knowledge graph built from a private dataset using GPT-4 Turbo."></a> <a href="https://microsoft.github.io/graphrag/img/viz_guide/gephi-initial-graph-example.png"><img src="https://microsoft.github.io/graphrag/img/viz_guide/gephi-initial-graph-example.png" width="230" alt="A basic graph visualization by Gephi"></a>
 
-<sub>图：Figure 1: An LLM-generated knowledge graph built using GPT-4 Turbo.（[来源页](https://microsoft.github.io/graphrag/)）；A basic graph visualization by Gephi（[来源页](https://microsoft.github.io/graphrag/visualization_guide/)）；A view of Gephi（[来源页](https://microsoft.github.io/graphrag/visualization_guide/)）</sub>
+<sub>图：Figure 1: An LLM-generated knowledge graph built using GPT-4 Turbo.（[来源页](https://microsoft.github.io/graphrag/)）；A basic graph visualization by Gephi（[来源页](https://microsoft.github.io/graphrag/visualization_guide/)）</sub>
 
 <sub>[编码与原文摘录](case-evidence.md#graphrag)</sub>
 
@@ -411,8 +420,6 @@
 - 展示页（可直接操作）：[ICIJ Offshore Leaks Database](https://offshoreleaks.icij.org/)（首页搜索框（页面示例：'British Virgin Islands \| Entity Name LLC \| Lima, Peru'）；'Explore the investigations' 可按 Pandora、Paradise、Panama、Bahamas、Offshore Leaks 调查浏览；how-to 页说明点击人名会出现连接关系的可视化）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 4058 字、svg 2 个</sub><sub> 打开后所见：先弹出使用声明，勾选同意并提交后才能搜索</sub>
 - 网页：[How to use the Offshore Leaks Database \| ICIJ Offshore Leaks Database](https://offshoreleaks.icij.org/pages/howtouse)（使用指南，按例子说明搜索人名或公司、按国家和司法辖区筛选，以及点击节点查看关系图）
 
-<a href="https://offshoreleaks.icij.org/vite/assets/how_to_1-3651839e.png"><img src="https://offshoreleaks.icij.org/vite/assets/how_to_1-3651839e.png" width="230" alt="icij-offshore-leaks"></a> <a href="https://offshoreleaks.icij.org/vite/assets/how_to_2-24a5f4e5.png"><img src="https://offshoreleaks.icij.org/vite/assets/how_to_2-24a5f4e5.png" width="230" alt="icij-offshore-leaks"></a>
-
 <sub>[编码与原文摘录](case-evidence.md#icij-offshore-leaks)</sub>
 
 #### [VOWL / WebVOWL 本体可视化](https://semantic-web-journal.net/content/visualizing-ontologies-vowl-0)
@@ -432,9 +439,9 @@
 - 展示页（可直接操作）：[Hive Plots](https://bost.ocks.org/mike/hive/)（页面正文写 'This hive plot, a type of node-link diagram, shows the dependency graph of the Flare visualization toolkit'，并提示 'Mouseover for more details'）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 2832 字、svg 1 个</sub><sub> 打开后所见：打开能看到 Flare 依赖图的 hive plot（三条轴之间的弧线）</sub>
 - 网页：[Hive Plots - Linear Layout for Network Visualization - Visually Interpreting Network Structure and Content Made Possible](https://mk.bcgsc.ca/linnet/)（hive plot 原作者 Martin Krzywinski 的主页，页面上有多张线性布局的网络图）
 
-<a href="https://mk.bcgsc.ca/linnet/img/hiveplot-ecoli.png"><img src="https://mk.bcgsc.ca/linnet/img/hiveplot-ecoli.png" width="230" alt="E. coli gene regulatory network visualized with the linear layout."></a> <a href="https://mk.bcgsc.ca/linnet/img/hiveplot-linux.png"><img src="https://mk.bcgsc.ca/linnet/img/hiveplot-linux.png" width="230" alt="Linux kernel function call network visualized with the linear layout."></a> <a href="https://mk.bcgsc.ca/linnet/img/hiveplot-undirected-01.png"><img src="https://mk.bcgsc.ca/linnet/img/hiveplot-undirected-01.png" width="230" alt="Application of the linear layout for network visualization to an undirected network (graph)."></a>
+<a href="https://mk.bcgsc.ca/linnet/img/hiveplot-ecoli.png"><img src="https://mk.bcgsc.ca/linnet/img/hiveplot-ecoli.png" width="230" alt="E. coli gene regulatory network visualized with the linear layout."></a> <a href="https://mk.bcgsc.ca/linnet/img/hiveplot-linux.png"><img src="https://mk.bcgsc.ca/linnet/img/hiveplot-linux.png" width="230" alt="Linux kernel function call network visualized with the linear layout."></a>
 
-<sub>图：E. coli gene regulatory network visualized with the linear layout.（[来源页](https://mk.bcgsc.ca/linnet/)）；Linux kernel function call network visualized with the linear layout.（[来源页](https://mk.bcgsc.ca/linnet/)）；Application of the linear layout for network visualization to an undirected network (graph).（[来源页](https://mk.bcgsc.ca/linnet/)）</sub>
+<sub>图：E. coli gene regulatory network visualized with the linear layout.（[来源页](https://mk.bcgsc.ca/linnet/)）；Linux kernel function call network visualized with the linear layout.（[来源页](https://mk.bcgsc.ca/linnet/)）</sub>
 
 <sub>[编码与原文摘录](case-evidence.md#hive-plot)</sub>
 
@@ -472,6 +479,82 @@
 
 <sub>[编码与原文摘录](case-evidence.md#zettelkasten)</sub>
 
+#### [Git.Top Atlas](https://git.top/atlas)
+
+<sub>开源生态导航 · 一般图与网络 · 重点：连通与邻域、对象上的度量</sub>　从一个生态（如 Cloudflare、MCP、RAG）进入，看里面的项目、替代方案、依赖和评分，做取舍
+
+- 展示页（可直接操作）：[Git.Top Atlas \| Open Source Ecosystem Map](https://git.top/atlas)（页面标注「Atlas Beta」「Open-source ecosystems as a map」，按生态列出地图卡片（Cloudflare、AI Agent、MCP、RAG、Browser AI、AI IDE、LLM Gateway、AI Observability、Workflow Automation 等），每张卡上有 Map、Open Projects、Graph 入口，页面显示「1216 projects loaded」。）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 36091 字</sub><sub> 打开后所见：打开是 “Open-source ecosystems as a map”：一排生态标签（Cloudflare、Agents、MCP、RAG 等）和每个生态一张带小关系图的卡片</sub>
+- 网页：[AI Agent Ecosystem \| Git.Top Atlas](https://git.top/atlas/agents)（一个生态地图的具体页面（AI Agent Ecosystem），列出该生态的代表项目和 Projects / Graph 等入口。）
+- 网页：[Atlas Guide \| Git.Top](https://git.top/topics/atlas-guide)（Atlas 使用指南，「How Atlas Works」一节说明从生态出发、查看代表项目、再到相关项目、比较、评分与搜索路径的流程。）
+
+<sub>[编码与原文摘录](case-evidence.md#git-top-atlas)</sub>
+
+#### [SemRepo](https://arxiv.org/abs/2605.13310)
+
+<sub>研究软件知识图谱 · 一般图与网络 · 重点：连通与邻域、关系上的类型与量</sub>　把研究软件和论文、作者连起来，回答哪些论文对应的仓库仍在维护、被广泛复用、背后是哪些研究者
+
+- 展示页（可直接操作）：[OpenLink Virtuoso SPARQL Query Editor](https://semrepo.org/sparql)（页面是 SPARQL 查询编辑器：Query Text 框里预填了 select distinct ?Concept where {[] a ?Concept} LIMIT 100，下方是 Result 结果区。）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 684 字</sub><sub> 打开后所见：打开是 OpenLink Virtuoso 的 SPARQL 查询编辑器，预填了一条查询，点 Execute Query 才有结果；页面本身没有图</sub>
+- 网页：[Ontology – SemRepo.org](https://semrepo.org/index.php/ontology/)（页面给出知识图谱的 schema 图（可点击放大），并附 OWL 本体、VoID、DCAT 描述文件的链接。）
+- 网页：[SemRepo: Knowledge Graph for Research Software - ScaDS.AI](https://scads.ai/semrepo-knowledge-graph-for-research-software/)（项目说明页，写明图谱含超过 8100 万个 RDF 三元组、描述近 20 万个研究相关 GitHub 仓库，并把仓库与论文、研究者、机构、数据集、实验相连。）
+
+<sub>[编码与原文摘录](case-evidence.md#semrepo)</sub>
+
+#### [MOSS（研究软件知识图谱）](https://pretalx.com/juliacon-2025/talk/3EVLR9/)
+
+<sub>研究软件知识图谱 · 一般图与网络 · 重点：连通与邻域</sub>　把 Julia 生态里的仓库、贡献者、论文、机构连成属性图，看谁贡献了什么、哪些包被哪些论文引用
+
+- 展示页：没有找到在线展示页<sub>（known 的 https://opensource.science/moss 与 https://www.opensource.science/moss 都返回 404…）</sub>
+- 网页：[Mapping the Julia Subsystem in Open Science: Use, Impact, Growth :: JuliaCon 2025 :: pretalx](https://pretalx.com/juliacon-2025/talk/3EVLR9/)（JuliaCon 2025 演讲摘要，介绍 MOSS 的数据来源（GitHub、OpenAlex、CrossRef 等）和知识图谱的节点类型（Repository、Paper、Person、Institution、Topic）。）
+
+<sub>[编码与原文摘录](case-evidence.md#moss)</sub>
+
+#### [Ecosyste.ms](https://packages.ecosyste.ms/)
+
+<sub>开源数据基础设施 · 一般图与网络 · 重点：连通与邻域</sub>　为开源项目提供跨托管平台的包、仓库、依赖、提交、Issue 数据的开放 API，支撑生态研究与维护
+
+- 展示页（可直接操作）：[Ecosyste.ms: Packages](https://packages.ecosyste.ms/)（官方的包服务首页，显示各注册表的包、版本、维护者等统计数字）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 6538 字、svg 4 个</sub><sub> 打开后所见：打开是 Ecosyste.ms: Packages 的统计页：各注册表的包、版本、维护者数量，没有可操作的图</sub>
+- 网页：[Swagger UI](https://packages.ecosyste.ms/docs/index.html)（官方 API 文档页（Swagger UI），可看到 Packages 服务提供的接口形式；页面正文由脚本渲染，文字里只读到标题。）
+
+<sub>[编码与原文摘录](case-evidence.md#ecosystems)</sub>
+
+#### [OpenDigger](https://open-digger.cn/en/)
+
+<sub>开源活动指标 · 一般图与网络 · 重点：对象上的度量、时间与演化</sub>　用统一的指标（活跃度、OpenRank 等）度量开源项目和开发者的活动与影响力随时间的变化
+
+- 展示页（可直接操作）：[Playground \| OpenDigger](https://open-digger.cn/en/docs/user-docs/metrics/playground)（页面写明：可以在 playground 页输入平台、仓库名或用户登录名，查看数据的可视化效果。页面上有三个 'Select...' 选择框、一个 'Search for a name...' 搜索框和 'Submit' 按钮。）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 659 字、canvas 1 个、svg 13 个</sub><sub> 打开后所见：打开是 Playground：选平台和类型、输入名字，提交后出柱线图（示例页是 X-lab2017/open-digger 的 Issue 指标）</sub>
+- 网页：[OpenRank Algorithm \| OpenDigger](https://open-digger.cn/en/docs/user-docs/metrics/openrank)（OpenRank 算法说明页（标题 'OpenRank Algorithm'），页内有一张 PageRank 示意图。）
+- 网页：[OpenDigger \| OpenDigger](https://open-digger.cn/en/)（官网首页，文字介绍 OpenDigger 是开源分析平台，实现了 CHAOSS 社区的多种指标。）
+
+<sub>[编码与原文摘录](case-evidence.md#opendigger)</sub>
+
+#### [deps.dev（Open Source Insights）](https://docs.deps.dev/)
+
+<sub>软件供应链 · 一般图与网络 · 重点：连通与邻域、对象上的度量</sub>　弄清一个包的完整依赖图、版本、许可证和安全公告，评估引入它会带来多大风险
+
+- 展示页（可直接操作）：[Open Source Insights](https://deps.dev/)（页面正文由脚本渲染，读到的页面文字只有标题 'Open Source Insights'，未能从页面文字确认具体可操作的位置。）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 3358 字</sub><sub> 打开后所见：打开是 Open Source Insights 首页：一个搜索框，右侧列出各包管理生态的包数量</sub>
+- 网页：[Announcing the deps.dev API \| Open Source Insights](https://blog.deps.dev/api/)（deps.dev API 发布文章，配有两张依赖图：理想与实际依赖图的对比，以及 react 15.0.0 的依赖图（用 GraphViz 渲染）。）
+- 网页：[Documentation \| Open Source Insights](https://docs.deps.dev/)（官方文档首页，文字说明 Open Source Insights 是 Google 开发和托管的服务，帮助开发者理解开源软件包的结构、构建和安全（页面无配图）。）
+
+<a href="https://blog.deps.dev/img/2023-04-11-api/dependency-graph-react.png"><img src="https://blog.deps.dev/img/2023-04-11-api/dependency-graph-react.png" width="230" alt="Dependency graph for react 15.0.0, fetched from the deps.dev API and rendered using GraphViz"></a>
+
+<sub>图：Dependency graph for react 15.0.0, fetched from the deps.dev API and rendered using GraphViz（[来源页](https://blog.deps.dev/api/)）</sub>
+
+<sub>[编码与原文摘录](case-evidence.md#deps-dev)</sub>
+
+#### [CodeGraph（面向源代码的开放分类知识图谱）](https://arxiv.org/abs/2609.29474)
+
+<sub>代码知识图谱 · 一般图与网络 · 重点：连通与邻域、包含与层次</sub>　用代码本身而不是标签，找到实现某个算法、遵循某种范式、属于某个应用领域的文件，并看同一算法跨领域的复用
+
+- 展示页（样例目录）：[halykoss/CodeGraph · Datasets at Hugging Face](https://huggingface.co/datasets/halykoss/CodeGraph/viewer/)（数据集页上的 Data Studio 标签指向本页；页面文字列出 15 个子集（Subset (15) files · 145M rows），如 concepts_algorithm_categories (268k rows)，可逐行浏览数据）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 9407 字、svg 104 个</sub>
+- 网页：[CodeGraph: Open-Taxonomy Knowledge Graph for Source Code with Wikidata Grounding](https://arxiv.org/html/2609.29474v1)（论文 HTML 版，含方法流程图（图 1）和跨领域复用热图（图 10））
+- 网页：[halykoss/CodeGraph · Datasets at Hugging Face](https://huggingface.co/datasets/halykoss/CodeGraph)（数据集卡片页，列出数据子集并链接到 Data Studio 浏览页）
+
+<a href="https://arxiv.org/html/2609.29474v1/algorithm_transfer_heatmap.png"><img src="https://arxiv.org/html/2609.29474v1/algorithm_transfer_heatmap.png" width="230" alt="Refer to caption"></a>
+
+<sub>图：Figure 10. Cross-domain reuse of computational techniques. Incidence of selected algorithms across representative application domains, illustrating the recurrence of shared techniques across substantively different domains.（[来源页](https://arxiv.org/html/2609.29474v1)）</sub>
+
+<sub>[编码与原文摘录](case-evidence.md#codegraph)</sub>
+
 <!-- /gen -->
 
 ## 层级与树
@@ -507,9 +590,9 @@
 - 展示页（可直接操作）：[AgentPrism - AI Observability Platform](https://agent-prism.evilmartians.io/)（首页显示一条示例 trace 的 span 树（页面文字中有 ChatCompletion、AgentExecutor、anonymized_search 等条目），页面写着 'Select a span to see the details'，点选 span 即可看详情）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 2604 字、svg 67 个</sub>
 - 网页：[Debug AI fast with this open source library to visualize agent traces—Martian Chronicles, Evil Martians’ team blog](https://evilmartians.com/chronicles/debug-ai-fast-agent-prism-open-source-library-visualize-agent-traces)（博文配有 Tree View 与 Timeline 组件、Span Details 的截图，说明 AgentPrism 的界面（图见 images））
 
-<a href="https://evilmartians.com/static/3c7e8a7abf1e378396cba6bc7e7447da/tree-view.png"><img src="https://evilmartians.com/static/3c7e8a7abf1e378396cba6bc7e7447da/tree-view.png" width="230" alt="Tree View and Timeline View Component"></a> <a href="https://evilmartians.com/static/ab1d0e50075794e438463803b1bb3008/quotient-demo.png"><img src="https://evilmartians.com/static/ab1d0e50075794e438463803b1bb3008/quotient-demo.png" width="230" alt="A demo of AgentPrism"></a> <a href="https://evilmartians.com/static/3c8643b78b5a0f96241f127f36ec2f40/details-4p.png"><img src="https://evilmartians.com/static/3c8643b78b5a0f96241f127f36ec2f40/details-4p.png" width="230" alt="Span Details"></a>
+<a href="https://evilmartians.com/static/3c7e8a7abf1e378396cba6bc7e7447da/tree-view.png"><img src="https://evilmartians.com/static/3c7e8a7abf1e378396cba6bc7e7447da/tree-view.png" width="230" alt="Tree View and Timeline View Component"></a> <a href="https://evilmartians.com/static/ab1d0e50075794e438463803b1bb3008/quotient-demo.png"><img src="https://evilmartians.com/static/ab1d0e50075794e438463803b1bb3008/quotient-demo.png" width="230" alt="A demo of AgentPrism"></a>
 
-<sub>图：Tree View on the left, Timeline on the right（[来源页](https://evilmartians.com/chronicles/debug-ai-fast-agent-prism-open-source-library-visualize-agent-traces)）；A demo of AgentPrism（[来源页](https://evilmartians.com/chronicles/debug-ai-fast-agent-prism-open-source-library-visualize-agent-traces)）；Span Details（[来源页](https://evilmartians.com/chronicles/debug-ai-fast-agent-prism-open-source-library-visualize-agent-traces)）</sub>
+<sub>图：Tree View on the left, Timeline on the right（[来源页](https://evilmartians.com/chronicles/debug-ai-fast-agent-prism-open-source-library-visualize-agent-traces)）；A demo of AgentPrism（[来源页](https://evilmartians.com/chronicles/debug-ai-fast-agent-prism-open-source-library-visualize-agent-traces)）</sub>
 
 <sub>[编码与原文摘录](case-evidence.md#agentprism)</sub>
 
@@ -541,9 +624,9 @@
 - 网页：[Agent Team - AgentScope](https://docs.agentscope.io/en/versions/2.0.9/deploy/agent-team)（页面用一张动图（alt 为 Agent team coordination demo）展示 leader agent 组队并协调 worker 的过程；图注取自页面正文：'A leader agent assembling a team and coordinating workers in the example web UI.'）
 - 网页：[Console - AgentScope](https://docs.agentscope.io/en/versions/2.0.9/building-blocks/console)（页面说明可以在终端里与智能体对话并查看完整事件流（'you can chat with it and inspect its full event stream directly in the terminal'）；页面上没有截图。）
 
-<a href="https://mintcdn.com/agentscope-ai-786677c7/c8Op3M8_8-WXpeVH/images/team.gif?s=604f394f94cca0dbca8fdeee75a0f7ff"><img src="https://mintcdn.com/agentscope-ai-786677c7/c8Op3M8_8-WXpeVH/images/team.gif?s=604f394f94cca0dbca8fdeee75a0f7ff" width="230" alt="Agent team coordination demo"></a> <a href="https://agentscope.io/images/agentscope2-ecosystem.svg"><img src="https://agentscope.io/images/agentscope2-ecosystem.svg" width="230" alt="AgentScope 2.0 ecosystem diagram"></a>
+<a href="https://agentscope.io/images/agentscope2-ecosystem.svg"><img src="https://agentscope.io/images/agentscope2-ecosystem.svg" width="230" alt="AgentScope 2.0 ecosystem diagram"></a>
 
-<sub>图：A leader agent assembling a team and coordinating workers in the example web UI.（[来源页](https://docs.agentscope.io/en/versions/2.0.9/deploy/agent-team)）；AgentScope 2.0 ecosystem diagram（[来源页](https://agentscope.io/)）</sub>
+<sub>图：AgentScope 2.0 ecosystem diagram（[来源页](https://agentscope.io/)）</sub>
 
 <sub>[编码与原文摘录](case-evidence.md#agentscope)</sub>
 
@@ -569,9 +652,7 @@
 - 网页：[Overview: Tracing - Phoenix](https://arize.com/docs/phoenix/tracing/llm-traces)（追踪功能页，嵌有一张没有 alt 和说明文字的图片。）
 - 网页：[Evaluation - Phoenix](https://arize.com/docs/phoenix/evaluation/llm-evals)（评估功能页，嵌有 evaluator trace 与 evaluator traces page 两张带 alt 的图片。）
 
-<a href="https://storage.googleapis.com/arize-phoenix-assets/assets/images/evaluator_traces_page.png"><img src="https://storage.googleapis.com/arize-phoenix-assets/assets/images/evaluator_traces_page.png" width="230" alt="Evaluator traces page"></a> <a href="https://storage.googleapis.com/arize-phoenix-assets/assets/images/evaluator_trace.png"><img src="https://storage.googleapis.com/arize-phoenix-assets/assets/images/evaluator_trace.png" width="230" alt="Evaluator trace detail"></a> <a href="https://storage.googleapis.com/arize-phoenix-assets/assets/images/phoenix-docs-images/15fe0366-image.jpeg"><img src="https://storage.googleapis.com/arize-phoenix-assets/assets/images/phoenix-docs-images/15fe0366-image.jpeg" width="230" alt="arize-phoenix"></a>
-
-<sub>图：Evaluator traces page（[来源页](https://arize.com/docs/phoenix/evaluation/llm-evals)）；Evaluator trace detail（[来源页](https://arize.com/docs/phoenix/evaluation/llm-evals)）</sub>
+<a href="https://storage.googleapis.com/arize-phoenix-assets/assets/images/phoenix-docs-images/15fe0366-image.jpeg"><img src="https://storage.googleapis.com/arize-phoenix-assets/assets/images/phoenix-docs-images/15fe0366-image.jpeg" width="230" alt="arize-phoenix"></a>
 
 <sub>[编码与原文摘录](case-evidence.md#arize-phoenix)</sub>
 
@@ -583,7 +664,7 @@
 - 网页：[Open-Source AI Observability Platform \| Opik by Comet](https://www.comet.com/site/products/opik/)（产品页，页面文字列出 LLM Observability & Evaluation、Experiment Management 等模块，并嵌有多张功能图片。）
 - 网页：[Debugging Agents with Ollie \| Opik Documentation](https://www.comet.com/docs/opik/tracing/debug-agents)（文档页，嵌有三张带 alt 的图片，alt 分别是 Ollie analyzing a trace and identifying the root cause、Ollie proposing a code fix with a diff view、Ollie running a test suite and showing pass/fail results。）
 
-<a href="https://www.comet.com/site/wp-content/uploads/2026/05/opik-llm-tracing.png"><img src="https://www.comet.com/site/wp-content/uploads/2026/05/opik-llm-tracing.png" width="230" alt="comet-opik"></a> <a href="https://www.comet.com/site/wp-content/uploads/2026/05/experiments-comparison-1024x557.png"><img src="https://www.comet.com/site/wp-content/uploads/2026/05/experiments-comparison-1024x557.png" width="230" alt="comet-opik"></a> <a href="https://www.comet.com/docs/opik/_fern-img/fe85b7f2855f7e02aa74fdccae736d557b71806abc45560e8b9dcffcf9c478b7.webp"><img src="https://www.comet.com/docs/opik/_fern-img/fe85b7f2855f7e02aa74fdccae736d557b71806abc45560e8b9dcffcf9c478b7.webp" width="230" alt="comet-opik"></a>
+<a href="https://www.comet.com/site/wp-content/uploads/2026/05/opik-llm-tracing.png"><img src="https://www.comet.com/site/wp-content/uploads/2026/05/opik-llm-tracing.png" width="230" alt="comet-opik"></a> <a href="https://www.comet.com/docs/opik/_fern-img/fe85b7f2855f7e02aa74fdccae736d557b71806abc45560e8b9dcffcf9c478b7.webp"><img src="https://www.comet.com/docs/opik/_fern-img/fe85b7f2855f7e02aa74fdccae736d557b71806abc45560e8b9dcffcf9c478b7.webp" width="230" alt="comet-opik"></a>
 
 <sub>[编码与原文摘录](case-evidence.md#comet-opik)</sub>
 
@@ -594,7 +675,7 @@
 - 展示页：没有找到在线展示页<sub>（未找到无需登录的在线展示页。主页的 Dashboard 按钮指向 https://app.agentops.ai/，这是账号控制台，未访问，不计为展示页。搜索也未找到公开演示。）</sub>
 - 网页：[Introduction - AgentOps](https://docs.agentops.ai/v2/introduction)（介绍页，嵌有 overview 截图以及 session-waterfall、session-drawer 两张动图，图片没有 alt 和说明文字。）
 
-<a href="https://mintcdn.com/agentops/lKHoIAF-8UF9BP18/images/overview.png?fit=max&auto=format&n=lKHoIAF-8UF9BP18&q=85&s=7eaf05b550f66df6c3ea493035a827b3"><img src="https://mintcdn.com/agentops/lKHoIAF-8UF9BP18/images/overview.png?fit=max&auto=format&n=lKHoIAF-8UF9BP18&q=85&s=7eaf05b550f66df6c3ea493035a827b3" width="230" alt="agentops"></a> <a href="https://mintcdn.com/agentops/lKHoIAF-8UF9BP18/images/session-waterfall.gif?s=dc65c7b9a11e84ba14105811b1eaa1e5"><img src="https://mintcdn.com/agentops/lKHoIAF-8UF9BP18/images/session-waterfall.gif?s=dc65c7b9a11e84ba14105811b1eaa1e5" width="230" alt="agentops"></a> <a href="https://mintcdn.com/agentops/lKHoIAF-8UF9BP18/images/session-drawer.gif?s=6831798a3bb0401e0c416c4ade17822a"><img src="https://mintcdn.com/agentops/lKHoIAF-8UF9BP18/images/session-drawer.gif?s=6831798a3bb0401e0c416c4ade17822a" width="230" alt="agentops"></a>
+<a href="https://mintcdn.com/agentops/lKHoIAF-8UF9BP18/images/overview.png?fit=max&auto=format&n=lKHoIAF-8UF9BP18&q=85&s=7eaf05b550f66df6c3ea493035a827b3"><img src="https://mintcdn.com/agentops/lKHoIAF-8UF9BP18/images/overview.png?fit=max&auto=format&n=lKHoIAF-8UF9BP18&q=85&s=7eaf05b550f66df6c3ea493035a827b3" width="230" alt="agentops"></a> <a href="https://mintcdn.com/agentops/lKHoIAF-8UF9BP18/images/session-waterfall.gif?s=dc65c7b9a11e84ba14105811b1eaa1e5"><img src="https://mintcdn.com/agentops/lKHoIAF-8UF9BP18/images/session-waterfall.gif?s=dc65c7b9a11e84ba14105811b1eaa1e5" width="230" alt="agentops"></a>
 
 <sub>[编码与原文摘录](case-evidence.md#agentops)</sub>
 
@@ -605,10 +686,6 @@
 - 展示页（需要登录）：[LangWatch](https://app.langwatch.ai/demo)<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 335 字、canvas 1 个、svg 7 个</sub><sub> 打开后所见：打开后跳转到登录页（/auth/signin?callbackUrl=/demo）</sub>
 - 网页：[Observability & Tracing](https://langwatch.ai/docs/observability/overview.md)（可观测性概览页，页面文字说明接入 SDK 后可在仪表盘实时查看调用，并可点入 trace 调试；嵌有 Observability Dashboard 图。）
 
-<a href="https://mintcdn.com/langwatch/CYVXWbKFuujxTm5z/images/llm-observability/overview.webp?fit=max&auto=format&n=CYVXWbKFuujxTm5z&q=85&s=7a4b821ffba7245468439d747524247a"><img src="https://mintcdn.com/langwatch/CYVXWbKFuujxTm5z/images/llm-observability/overview.webp?fit=max&auto=format&n=CYVXWbKFuujxTm5z&q=85&s=7a4b821ffba7245468439d747524247a" width="230" alt="LangWatch Observability Dashboard"></a>
-
-<sub>图：LangWatch Observability Dashboard（[来源页](https://langwatch.ai/docs/observability/overview.md)）</sub>
-
 <sub>[编码与原文摘录](case-evidence.md#langwatch)</sub>
 
 #### [AFFiNE](https://affine.pro/)
@@ -618,10 +695,6 @@
 - 展示页（样例目录）：[Free Templates for Notes, Planning & Whiteboards \| AFFiNE](https://affine.pro/templates)（页面是模板目录，列出多个模板的链接（如 'Free Blank Checklist Template with a Filled Example'、'Case Brief Example: Facts, Issues, Holding, Reasoning'），每条指向单独的模板页；未逐个打开模板页核对。）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 18918 字、svg 40 个</sub>
 - 网页：[Online Whiteboard for Brainstorming and Planning \| AFFiNE](https://affine.pro/whiteboard)（页面围绕在线白板（Edgeless 画布），正文有 'Draw, Plan, and Share Ideas Seamlessly'、'Endless Possibilities with the Edgeless Canvas' 等句子，并列出 Monthly Weekly Planner、Cornell Notes Template、Habit Tracker 等白板模板。）
 - 网页：[Collaborative Docs for Notes and Structured Writing \| AFFiNE](https://affine.pro/pagedoc)（页面围绕 Page Docs 文档编辑，正文标题为 'Beyond Text: Build Rich, Interactive Documents'，列出 Blocks、Table、PDF Preview、Image & Videos 等内容块。）
-
-<a href="https://affine.pro/edgeless/monthly-weekly-planner-slide.webp"><img src="https://affine.pro/edgeless/monthly-weekly-planner-slide.webp" width="230" alt="Monthly Weekly Planner — Stay Organized, Achieve More"></a> <a href="https://affine.pro/edgeless/cornell-notes-template-slide.webp"><img src="https://affine.pro/edgeless/cornell-notes-template-slide.webp" width="230" alt="Cornell Notes Template — Write, Draw all in one Template"></a> <a href="https://affine.pro/edgeless/habit-tracker-slide.webp"><img src="https://affine.pro/edgeless/habit-tracker-slide.webp" width="230" alt="Habit Tracker — Monitor Habits, Boost Motivation"></a>
-
-<sub>图：Monthly Weekly Planner — Stay Organized, Achieve More（[来源页](https://affine.pro/whiteboard)）；Cornell Notes Template — Write, Draw all in one Template（[来源页](https://affine.pro/whiteboard)）；Habit Tracker — Monitor Habits, Boost Motivation（[来源页](https://affine.pro/whiteboard)）</sub>
 
 <sub>[编码与原文摘录](case-evidence.md#affine)</sub>
 
@@ -642,10 +715,6 @@
 - 展示页（可直接操作）：[SmolDocling - a Hugging Face Space by docling-project](https://huggingface.co/spaces/docling-project/SmolDocling-256M-Demo)<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 108 字、svg 16 个</sub><sub> 打开后所见：打开是 SmolDocling-256M 的 Hugging Face Space：一个聊天框加几个示例提示（Convert this page to docling 等），要上传图片才能转换</sub>
 - 网页：[Architecture - Docling](https://docling-project.github.io/docling/concepts/architecture/)（页面标题为 Architecture，并嵌有架构图 docling_arch.png。）
 - 网页：[Docling document - Docling](https://docling-project.github.io/docling/concepts/docling_document/)（概念页，标题为 Docling document，嵌有两张文档层级图。）
-
-<a href="https://docling-project.github.io/docling/assets/docling_arch.png"><img src="https://docling-project.github.io/docling/assets/docling_arch.png" width="230" alt="docling_architecture"></a> <a href="https://docling-project.github.io/docling/assets/docling_doc_hierarchy_1.png"><img src="https://docling-project.github.io/docling/assets/docling_doc_hierarchy_1.png" width="230" alt="doc_hierarchy_1"></a> <a href="https://docling-project.github.io/docling/assets/docling_doc_hierarchy_2.png"><img src="https://docling-project.github.io/docling/assets/docling_doc_hierarchy_2.png" width="230" alt="doc_hierarchy_2"></a>
-
-<sub>图：docling_architecture（[来源页](https://docling-project.github.io/docling/concepts/architecture/)）；doc_hierarchy_1（[来源页](https://docling-project.github.io/docling/concepts/docling_document/)）；doc_hierarchy_2（[来源页](https://docling-project.github.io/docling/concepts/docling_document/)）</sub>
 
 <sub>[编码与原文摘录](case-evidence.md#docling)</sub>
 
@@ -756,6 +825,26 @@
 
 <sub>[编码与原文摘录](case-evidence.md#markmap)</sub>
 
+#### [ATLAS：用多个 LLM Agent 自动构建软件仓库分类体系](https://arxiv.org/abs/2606.21597)
+
+<sub>软件仓库分类 · 层级与树 · 重点：包含与层次、有什么</sub>　给五万多个 GitHub 仓库建一棵带定义和拆分理由的多层分类树，用来按任意粒度检索、找功能等价的替代项目、看生态趋势
+
+- 展示页（可直接操作）：[ATLAS: Hierarchical Taxonomy of 54k GitHub Repositories](https://atlas-taxonomy.netlify.app/)（页面标题下是「Rank-Aligned View」视图，顶部统计 Nodes、Leaves、Inserted、Depth Changed、Repos（如「54390 Repos」）；控件包括 Rank Levels（D0–D7）、Node Markers、Inserted (Passthrough)、Sub-layer、Depth Changed、Search，以及 Expand All / Collapse All 和 Highlight Inserted / Highlight Sub-layer / Highlight Depth Changed / Clear Highlight。）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 5064 字、svg 4 个</sub><sub> 打开后所见：打开是左侧控件、右侧从左到右展开的分类树（各分支按语义层级对齐成列），顶部统计 36,986 个节点、54,390 个仓库</sub>
+- 网页：[ATLAS: Agentic Taxonomy of LArge-Scale Software Ecosystems](https://arxiv.org/html/2606.21597v1)（论文 HTML 版（实验性），含框架架构图 Figure 1（见 images）。）
+- 网页：[ATLAS: Agentic Taxonomy of LArge-Scale Software Ecosystems \| Zenodo](https://zenodo.org/records/21160280)（配套复现包的 Zenodo 记录页，页面说明包内含 54,387 个仓库的完整分类结果（output/atlas_54k/，含每个节点的仓库归属），可不运行代码直接使用。）
+
+<sub>[编码与原文摘录](case-evidence.md#atlas-taxonomy)</sub>
+
+#### [Speculora](https://speculora.com/)
+
+<sub>市场需求分析 · 层级与树 · 重点：对象上的度量、有什么</sub>　让独立开发者看到软件需求在哪里拥挤、哪里有可用的缺口
+
+- 展示页（可直接操作）：[Speculora — real demand & saturation data for software ideas](https://speculora.com/)（首页文字写 'Explore the live, interactive map above, or jump into a domain'（交互地图在页面上方）；/info 页的 'Open the live map →' 链接也指向首页）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 3792 字、svg 5 个</sub><sub> 打开后所见：打开是深色界面的任务列表，按机会分数排序，每项标缺口等级和投诉数；顶部有 Top gaps、Full tree、Treemap、Trending 等标签</sub>
+- 网页：[What is Speculora? The demand × saturation × gap map for software \| Speculora](https://speculora.com/info)（产品说明页，列出六个缺口等级（Prime Gap、Lacks Features、Poorly Executed、Too Expensive、Undersupplied、Fully Served）及各自的建议动作）
+- 网页：[Shopping & Deals — software gaps & app opportunities \| Speculora](https://speculora.com/domain/shopping-deals-694)（领域页样例，按机会分数列出任务，每项标注缺口等级、应用数和用户反馈数（如 Track package deliveries：Opportunity 100/100 · 54 apps · 332 user reports））
+
+<sub>[编码与原文摘录](case-evidence.md#speculora)</sub>
+
 <!-- /gen -->
 
 ## 有向无环图
@@ -779,7 +868,7 @@
 - 网页：[Marquez Project \| Marquez Project](https://marquezproject.ai/)（首页的 'Unified visual graph' 一节写明：通过网页界面提供可视化的依赖关系图，可查看每个 job 的输入输出，并追踪 dataset 的血缘。）
 - 网页：[Quickstart \| Marquez Project](https://marquezproject.ai/docs/quickstart/)（快速开始页写明在 http://localhost:3000 打开 UI，可通过 lineage graph 查看 job 与 dataset 的依赖，并可搜索 job 查看运行元数据。）
 
-<a href="https://marquezproject.ai/img/marquez_caps_couple.svg"><img src="https://marquezproject.ai/img/marquez_caps_couple.svg" width="230" alt="Marquez UI Screencaps"></a> <a href="https://marquezproject.ai/assets/images/search-view-job-99ec2f2497f982774ce92482b7e18c30.png"><img src="https://marquezproject.ai/assets/images/search-view-job-99ec2f2497f982774ce92482b7e18c30.png" width="230" alt="marquez"></a> <a href="https://marquezproject.ai/assets/images/tab-view-job-metadata-3607d299e6f085e60a500067694614e2.png"><img src="https://marquezproject.ai/assets/images/tab-view-job-metadata-3607d299e6f085e60a500067694614e2.png" width="230" alt="marquez"></a>
+<a href="https://marquezproject.ai/img/marquez_caps_couple.svg"><img src="https://marquezproject.ai/img/marquez_caps_couple.svg" width="230" alt="Marquez UI Screencaps"></a> <a href="https://marquezproject.ai/assets/images/search-view-job-99ec2f2497f982774ce92482b7e18c30.png"><img src="https://marquezproject.ai/assets/images/search-view-job-99ec2f2497f982774ce92482b7e18c30.png" width="230" alt="marquez"></a>
 
 <sub>图：Marquez UI Screencaps（[来源页](https://marquezproject.ai/)）</sub>
 
@@ -820,9 +909,9 @@
 - 展示页（需要登录）：[OpenMetadata](https://sandbox.open-metadata.org/)（官方沙盒（项目表里已有的展示页））<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 121 字；内容很少，可能需要交互或登录</sub><sub> 打开后所见：打开是 “Welcome to OpenMetadata”，只有 Sign in with Google</sub>
 - 网页：[Explore the Lineage View \| Official Documentation - OpenMetadata Documentation](https://docs.open-metadata.org/v2.0.x/how-to-guides/data-lineage/explore)（官方血缘视图操作页，页内有列级血缘、数据库与管道血缘、影响分析等界面截图）
 
-<a href="https://mintcdn.com/openmetadata/ukveY9QLJfPEF8DI/public/images/how-to-guides/lineage/lineage1.png?fit=max&auto=format&n=ukveY9QLJfPEF8DI&q=85&s=7fcc8275a83d82a45203e001310d0ca9"><img src="https://mintcdn.com/openmetadata/ukveY9QLJfPEF8DI/public/images/how-to-guides/lineage/lineage1.png?fit=max&auto=format&n=ukveY9QLJfPEF8DI&q=85&s=7fcc8275a83d82a45203e001310d0ca9" width="230" alt="Column-Level Data Lineage in OpenMetadata"></a> <a href="https://mintcdn.com/openmetadata/ukveY9QLJfPEF8DI/public/images/how-to-guides/lineage/pipeline.png?fit=max&auto=format&n=ukveY9QLJfPEF8DI&q=85&s=5abc1aee0d0145744ea87894b2970473"><img src="https://mintcdn.com/openmetadata/ukveY9QLJfPEF8DI/public/images/how-to-guides/lineage/pipeline.png?fit=max&auto=format&n=ukveY9QLJfPEF8DI&q=85&s=5abc1aee0d0145744ea87894b2970473" width="230" alt="Database and Pipeline Lineage"></a> <a href="https://mintcdn.com/openmetadata/ukveY9QLJfPEF8DI/public/images/how-to-guides/lineage/lineage2.png?fit=max&auto=format&n=ukveY9QLJfPEF8DI&q=85&s=c8b0b3f9715d54623184bd5a6586ca21"><img src="https://mintcdn.com/openmetadata/ukveY9QLJfPEF8DI/public/images/how-to-guides/lineage/lineage2.png?fit=max&auto=format&n=ukveY9QLJfPEF8DI&q=85&s=c8b0b3f9715d54623184bd5a6586ca21" width="230" alt="Quick Glance at the Data Asset from Lineage View"></a>
+<a href="https://mintcdn.com/openmetadata/ukveY9QLJfPEF8DI/public/images/how-to-guides/lineage/lineage1.png?fit=max&auto=format&n=ukveY9QLJfPEF8DI&q=85&s=7fcc8275a83d82a45203e001310d0ca9"><img src="https://mintcdn.com/openmetadata/ukveY9QLJfPEF8DI/public/images/how-to-guides/lineage/lineage1.png?fit=max&auto=format&n=ukveY9QLJfPEF8DI&q=85&s=7fcc8275a83d82a45203e001310d0ca9" width="230" alt="Column-Level Data Lineage in OpenMetadata"></a> <a href="https://mintcdn.com/openmetadata/ukveY9QLJfPEF8DI/public/images/how-to-guides/lineage/pipeline.png?fit=max&auto=format&n=ukveY9QLJfPEF8DI&q=85&s=5abc1aee0d0145744ea87894b2970473"><img src="https://mintcdn.com/openmetadata/ukveY9QLJfPEF8DI/public/images/how-to-guides/lineage/pipeline.png?fit=max&auto=format&n=ukveY9QLJfPEF8DI&q=85&s=5abc1aee0d0145744ea87894b2970473" width="230" alt="Database and Pipeline Lineage"></a>
 
-<sub>图：Column-Level Data Lineage in OpenMetadata（[来源页](https://docs.open-metadata.org/v2.0.x/how-to-guides/data-lineage/explore)）；Database and Pipeline Lineage（[来源页](https://docs.open-metadata.org/v2.0.x/how-to-guides/data-lineage/explore)）；Quick Glance at the Data Asset from Lineage View（[来源页](https://docs.open-metadata.org/v2.0.x/how-to-guides/data-lineage/explore)）</sub>
+<sub>图：Column-Level Data Lineage in OpenMetadata（[来源页](https://docs.open-metadata.org/v2.0.x/how-to-guides/data-lineage/explore)）；Database and Pipeline Lineage（[来源页](https://docs.open-metadata.org/v2.0.x/how-to-guides/data-lineage/explore)）</sub>
 
 <sub>[编码与原文摘录](case-evidence.md#openmetadata)</sub>
 
@@ -834,10 +923,6 @@
 - 网页：[Git - Branches in a Nutshell](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)（Pro Git 分支一节，用提交、父提交与分支指针的图示说明提交历史的结构）
 - 网页：[Git - Viewing the Commit History](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History)（Pro Git 讲查看提交历史的一节）
 
-<a href="https://git-scm.com/book/en/v2/images/branch-and-history.png"><img src="https://git-scm.com/book/en/v2/images/branch-and-history.png" width="230" alt="A branch and its commit history"></a> <a href="https://git-scm.com/book/en/v2/images/commits-and-parents.png"><img src="https://git-scm.com/book/en/v2/images/commits-and-parents.png" width="230" alt="Commits and their parents"></a>
-
-<sub>图：A branch and its commit history（[来源页](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)）；Commits and their parents（[来源页](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)）</sub>
-
 <sub>[编码与原文摘录](case-evidence.md#git-history)</sub>
 
 #### [家谱图的交互可视化](https://www.cs.ubc.ca/~tmm/courses/grad/slides/week8.pdf)
@@ -847,6 +932,16 @@
 - 展示页：没有找到在线展示页<sub>（demo：作者 DGP 页面 https://www.dgp.toronto.edu/~mjmcguff/research/genealogyVis/ 返回 403，按规则记为读不到，未换路径尝试…）</sub>
 
 <sub>[编码与原文摘录](case-evidence.md#genealogical-graphs)</sub>
+
+#### [Software Heritage Graph Dataset](https://registry.opendata.aws/software-heritage/)
+
+<sub>源代码历史图谱 · 有向无环图 · 重点：先后与依赖方向、来源与证据</sub>　跨项目、跨托管平台追踪同一份源码和它的开发历史，研究公开软件开发的长尾
+
+- 展示页：没有找到在线展示页<sub>（未找到官方在线可视化演示。WebSearch 只返回 Athena 查询入口和文档中的示例页（docs.softwareheritage.org/devel/swh-graph/example-dataset.html…）</sub>
+- 网页：[Software Heritage Graph Dataset - Registry of Open Data on AWS](https://registry.opendata.aws/software-heritage/)（AWS 开放数据登记页，给出数据集描述，并链接到官方的图数据集使用文档）
+- 网页：[The Software Heritage Graph Dataset:Large-scale Analysis of Public Software Development History](https://arxiv.org/html/2011.07824)（论文 HTML 版，图 2 为数据模型示意（统一的 Merkle DAG），图 3 为数据集的简化 schema）
+
+<sub>[编码与原文摘录](case-evidence.md#software-heritage-graph)</sub>
 
 <!-- /gen -->
 
@@ -868,8 +963,6 @@
 
 - 展示页（可直接操作）：[Build your own Radar（页面 title 标签为空，此为页面可见文字）](https://radar.thoughtworks.com/)（页面有输入框 'Enter the URL of your Google Sheet, CSV or JSON file below…'，填入表格或 CSV/JSON 地址即可生成雷达；页面文字写有 'Once you've created your Radar you can use this service to generate an interactive version of your Technology Radar'。）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 1135 字、svg 4 个</sub><sub> 打开后所见：只有一个输入框：要填自己的 Google Sheet、CSV 或 JSON 地址才会生成雷达，没有现成的雷达可看</sub>
 - 网页：[Build your Own Radar \| Thoughtworks](https://www.thoughtworks.com/radar/byor)（官方说明页，讲如何用 Google Sheet / CSV / JSON 数据生成雷达，页内列出数据要求（例如象限名称须为四个）和 'Is my data public?' 等问答。）
-
-<a href="https://www.thoughtworks.com/content/dam/thoughtworks/images/photography/inline-image/insights/radar/in_radar_byor.png"><img src="https://www.thoughtworks.com/content/dam/thoughtworks/images/photography/inline-image/insights/radar/in_radar_byor.png" width="230" alt="build-your-own-radar"></a>
 
 <sub>[编码与原文摘录](case-evidence.md#build-your-own-radar)</sub>
 
@@ -894,7 +987,7 @@
 - 网页：[Open Source Trend Insights Service \| OSS compass](https://oss-compass.org/docs/docs/service-guide/open-source-insights/)（服务指南中的开源态势洞察服务页。页面文字说明它通过分析全球开源项目，提供进出口、社区、技术领域、开发者、编程语言和许可证等方面的洞察；页内有 5 张配图。）
 - 网页：[Open Source Software Selection Evaluation Service \| OSS compass](https://oss-compass.org/docs/docs/service-guide/software-selection/)（服务指南中的软件选型评估服务页。页面文字说明它提供三项功能：评估已知软件、推荐候选软件、查找相似功能的替代软件；页内有 8 张配图。）
 
-<a href="https://oss-compass.org/assets/images/image5-eeec3a8851a9c3caf04d198db5ccbd2a.png"><img src="https://oss-compass.org/assets/images/image5-eeec3a8851a9c3caf04d198db5ccbd2a.png" width="230" alt="oss-compass"></a> <a href="https://oss-compass.org/assets/images/image3-dabc48d9448b2017cddd137359482846.png"><img src="https://oss-compass.org/assets/images/image3-dabc48d9448b2017cddd137359482846.png" width="230" alt="oss-compass"></a> <a href="https://oss-compass.org/assets/images/image10-96a1ea5d656d9187b2903beadef6315b.png"><img src="https://oss-compass.org/assets/images/image10-96a1ea5d656d9187b2903beadef6315b.png" width="230" alt="oss-compass"></a>
+<a href="https://oss-compass.org/assets/images/image5-eeec3a8851a9c3caf04d198db5ccbd2a.png"><img src="https://oss-compass.org/assets/images/image5-eeec3a8851a9c3caf04d198db5ccbd2a.png" width="230" alt="oss-compass"></a> <a href="https://oss-compass.org/assets/images/image3-dabc48d9448b2017cddd137359482846.png"><img src="https://oss-compass.org/assets/images/image3-dabc48d9448b2017cddd137359482846.png" width="230" alt="oss-compass"></a>
 
 <sub>[编码与原文摘录](case-evidence.md#oss-compass)</sub>
 
@@ -1009,9 +1102,23 @@
 - 展示页（可直接操作）：[Zalando Tech Radar](https://opensource.zalando.com/tech-radar/)（页面正文是 'What is the Tech Radar?' 和四个环（ADOPT / TRIAL / ASSESS / HOLD）的说明；末尾写有 'generate this visualization'（生成这一可视化的代码已开源），说明页面上有雷达可视化，但页面文字没有描述具体交互方式。）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 4367 字、svg 1 个</sub>
 - 网页：[Building a Better Tech Radar](https://engineering.zalando.com/posts/2018/01/building-tech-radar.html)（官方工程博客，讲 Tech Radar 的自动布局（力导向布局加笛卡尔与极坐标包围盒），文中嵌有一张自动生成的雷达截图。）
 
-<a href="https://img01.ztat.net/engineering-blog/posts/2018/01/images/75793f677142d5be65cd880d33eaee13ea5594c5_screen-shot-2018-01-25-at-11.16.16.png?imwidth=1320"><img src="https://img01.ztat.net/engineering-blog/posts/2018/01/images/75793f677142d5be65cd880d33eaee13ea5594c5_screen-shot-2018-01-25-at-11.16.16.png?imwidth=1320" width="230" alt="zalando-tech-radar"></a> <a href="https://img01.ztat.net/engineering-blog/posts/2018/01/images/548edf261441e52cf3d159b67e0a0e6ec71a5112_box_cartesian.jpg?imwidth=1320"><img src="https://img01.ztat.net/engineering-blog/posts/2018/01/images/548edf261441e52cf3d159b67e0a0e6ec71a5112_box_cartesian.jpg?imwidth=1320" width="230" alt="zalando-tech-radar"></a> <a href="https://img01.ztat.net/engineering-blog/posts/2018/01/images/e8f6161a9fddebfef558a60dffa6243e23745965_box_polar.jpg?imwidth=1320"><img src="https://img01.ztat.net/engineering-blog/posts/2018/01/images/e8f6161a9fddebfef558a60dffa6243e23745965_box_polar.jpg?imwidth=1320" width="230" alt="zalando-tech-radar"></a>
+<a href="https://img01.ztat.net/engineering-blog/posts/2018/01/images/75793f677142d5be65cd880d33eaee13ea5594c5_screen-shot-2018-01-25-at-11.16.16.png?imwidth=1320"><img src="https://img01.ztat.net/engineering-blog/posts/2018/01/images/75793f677142d5be65cd880d33eaee13ea5594c5_screen-shot-2018-01-25-at-11.16.16.png?imwidth=1320" width="230" alt="zalando-tech-radar"></a>
 
 <sub>[编码与原文摘录](case-evidence.md#zalando-tech-radar)</sub>
+
+#### [Open Source AI Gap Map](https://www.aipotluck.org/map)
+
+<sub>开源生态评估 · 集合与分类 · 重点：对象上的度量、有什么</sub>　看开源 AI 生态里哪些类别已经成熟、哪里还有缺口，好决定资金和精力投向哪里
+
+- 展示页（可直接操作）：[Explore the Gap Map – AI Potluck](https://www.aipotluck.org/map/gap-map)（页面有「Explore the Gap Map」区块，列出 Total products、Assessed products、Open(ish) products、Gaps found 等数字；下面按「Model components」与「Product / UX」两组列出各类别，每行有成熟度（如「3 /5」）、Gaps found 标记和 open(ish) 产品数；页面上有「Legend」「How to read the map」入口。）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 3518 字、svg 215 个</sub><sub> 打开后所见：打开是 “Explore the Gap Map”：顶部四个数字（62,538 个产品、1,133 个已评估、879、38 个缺口），下面按 Model components 等页签列出类别，每行有成熟度徽章、缺口标记和开放产品的色块</sub>
+- 网页：[Open Source AI Stack Gap Map – AI Potluck](https://www.aipotluck.org/map)（项目主页，页面上嵌有 Gap Map 图表图（alt 为「The Gap Map chart, showing overall scores across the open source AI stack」），并有对地图的简短介绍。）
+- 网页：[Introducing the Gap Map v0.1](https://www.currentai.org/blogs/introducing-the-gap-map-v0-1)（v0.1 发布博文，正文介绍 Gap Map 的目的与覆盖范围，并嵌有多张图片（见 images）。）
+
+<a href="https://content.aipotluck.org/gap-map-banner.png"><img src="https://content.aipotluck.org/gap-map-banner.png" width="230" alt="The Gap Map chart, showing overall scores across the open source AI stack"></a> <a href="https://cdn.prod.website-files.com/683836d22e82afa0e5494c4b/6a44fcbc2068be16addd28c5_gap-map-dashboard.webp"><img src="https://cdn.prod.website-files.com/683836d22e82afa0e5494c4b/6a44fcbc2068be16addd28c5_gap-map-dashboard.webp" width="230" alt="oss-ai-gap-map"></a>
+
+<sub>图：The Gap Map chart, showing overall scores across the open source AI stack（[来源页](https://www.aipotluck.org/map)）</sub>
+
+<sub>[编码与原文摘录](case-evidence.md#oss-ai-gap-map)</sub>
 
 <!-- /gen -->
 
@@ -1042,6 +1149,23 @@
 <sub>图：Copy number whole-genome profiles of five follicular lymphoma tumor samples generated from the Affymetrix Mapping 500K array. Samples are represented in each of the five histograms in tracks A–E. (后文省略)（[来源页](https://pmc.ncbi.nlm.nih.gov/articles/PMC2752132/)）；Copy number profiles for chromosomes 6 and 17 of five follicular lymphoma tumor samples generated from the Affymetrix Mapping 500K array. Probe values were averaged across 20 adjacent probes. (后文省略)（[来源页](https://pmc.ncbi.nlm.nih.gov/articles/PMC2752132/)）；Copy number profiles for chromosomes 6 and 17 of five follicular lymphoma tumor samples generated from the Affymetrix Mapping 500K array. Regions of interest A and B on chromosomes 6 and J and K on chromosomes 17 (后文省略)（[来源页](https://pmc.ncbi.nlm.nih.gov/articles/PMC2752132/)）</sub>
 
 <sub>[编码与原文摘录](case-evidence.md#circos)</sub>
+
+#### [Semantic Map of GitHub](https://stevenfazzio.com/semantic-github-map/)
+
+<sub>开源生态地图 · 空间与几何 · 重点：空间位置、群落与相似</sub>　看高 Star 仓库按 README 语义自然聚成哪些主题，每个仓库在地图上和谁相邻
+
+- 展示页（可直接操作）：[Semantic Map of GitHub](https://stevenfazzio.com/semantic-github-map/)（页面副标题「Top 10,000 most-starred repositories, mapped by README similarity」；顶部有 Visualization / Methodology 切换，工具栏有 Advanced Filters、Reset、Display（Labels、Edge Graph、Legend）和 Point / Label / Meta / Colormap Data 的百分比控件。）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 155 字、canvas 1 个</sub><sub> 打开后所见：打开是一张彩色点云地图，带 Speech Recognition、AI Agents、Web Components 等主题标签，左侧有搜索和 Advanced Filters，底部可选 Clusters 着色</sub>
+- 网页：[Methodology — Semantic Map of GitHub](https://stevenfazzio.com/semantic-github-map/methodology.html)（方法页，含「Using the Visualization」一节与字段定义（Field Definitions），说明这个可视化怎么用。）
+
+<sub>[编码与原文摘录](case-evidence.md#semantic-map-github)</sub>
+
+#### [Map of GitHub](https://anvaka.github.io/map-of-github/)
+
+<sub>开源生态地图 · 空间与几何 · 重点：群落与相似、空间位置</sub>　看 GitHub 上几十万个项目在“被同一批人点 Star”的空间里怎样分布成一块块“国家”，找到相邻的项目
+
+- 展示页（可直接操作）：[Map of GitHub](https://anvaka.github.io/map-of-github/)（页面文字只有加载提示「Website load sequence initiated...」，地图由脚本渲染，页面文字里看不到操作说明；未能从页面文字确认可交互的界面细节。）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 15 字、canvas 1 个、svg 1 个</sub><sub> 打开后所见：打开是深色背景的点团地图，每个团有名字（如 Frozen Esclave），左上角有 Find Project 搜索框</sub>
+
+<sub>[编码与原文摘录](case-evidence.md#map-of-github)</sub>
 
 <!-- /gen -->
 
@@ -1087,9 +1211,9 @@
 - 网页：[Energy Flow Charts \| Lawrence Livermore National Laboratory](https://flowcharts.llnl.gov/)（首页说明流向图（也称 Sankey 图）是单页参考图，并给出 2024 年美国能源流向图）
 - 网页：[Energy Flow Charts \| STAR](https://star.llnl.gov/energy-homeland-security/energy-security/energy-flow-charts)（STAR 站的能源流向图页，说明这些图用来呈现国家尺度能源系统的结构）
 
-<a href="https://flowcharts.llnl.gov/sites/flowcharts/files/2026-08/2024-us-energy-flowchart-homepage.jpg"><img src="https://flowcharts.llnl.gov/sites/flowcharts/files/2026-08/2024-us-energy-flowchart-homepage.jpg" width="230" alt="A sankey chart showing U.S. energy consumption in 2024."></a> <a href="https://flowcharts.llnl.gov/sites/flowcharts/files/styles/scaled_220w/public/2026-08/energy-2024-united-states-california.png?itok=rvZzmtck"><img src="https://flowcharts.llnl.gov/sites/flowcharts/files/styles/scaled_220w/public/2026-08/energy-2024-united-states-california.png?itok=rvZzmtck" width="230" alt="Sankey diagram for California's energy usage in 2024."></a>
+<a href="https://flowcharts.llnl.gov/sites/flowcharts/files/2026-08/2024-us-energy-flowchart-homepage.jpg"><img src="https://flowcharts.llnl.gov/sites/flowcharts/files/2026-08/2024-us-energy-flowchart-homepage.jpg" width="230" alt="A sankey chart showing U.S. energy consumption in 2024."></a>
 
-<sub>图：A sankey chart showing U.S. energy consumption in 2024.（[来源页](https://flowcharts.llnl.gov/)）；Sankey diagram for California's energy usage in 2024.（[来源页](https://flowcharts.llnl.gov/commodities/energy)）</sub>
+<sub>图：A sankey chart showing U.S. energy consumption in 2024.（[来源页](https://flowcharts.llnl.gov/)）</sub>
 
 <sub>[编码与原文摘录](case-evidence.md#llnl-energy-flow)</sub>
 

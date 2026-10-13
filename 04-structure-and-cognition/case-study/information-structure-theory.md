@@ -12,11 +12,11 @@
 - 〔文〕来自我读过的文献，标了出处。
 - 〔推〕整理者的推断，没有直接证据，需要再找案例验证。
 
-语料的偏向要先说在前面：84 个案例里，56 个来自本库收的软件、AI、数据平台项目，28 个来自其他领域（交通、生物、能源、金融、语言学、论证、写作等）。工程工具偏多，所以关于“软件和运行观测”的结论比关于其他领域的结论更扎实。
+语料的偏向要先说在前面：97 个案例里，69 个来自软件、AI、数据平台和开源生态（其中 56 个是本库收的项目，13 个是最后补入的开源生态地图、分类与知识图谱），28 个来自其他领域（交通、生物、能源、金融、语言学、论证、写作等）。工程工具偏多，所以关于“软件和运行观测”的结论比关于其他领域的结论更扎实。
 
 ## 第二轮编码改了什么
 
-2026-10-13 把 84 个案例整体重编了一遍。第一轮留下的结论哪些站得住、哪些要改，下面都标出来。
+2026-10-13 把当时的 84 个案例整体重编了一遍；之后新增的 13 个案例按同一词表编码（也做了盲编），现在共 97 个。下文的数字都是 97 个案例的。第一轮留下的结论哪些站得住、哪些要改，下面都标出来。
 
 | 改动 | 原因 | 影响 |
 | --- | --- | --- |
@@ -26,33 +26,34 @@
 | “有向无环图”定义收紧 | 一致性检查发现：Dify、Langflow、n8n 的页面没写是否有环，却编成了 DAG，而 Flowise、Node-RED 编成了一般图。现在规则是：只有关系本身排除环（任务依赖、血缘、提交历史、谱系）或页面明写，才编 DAG；其余流程画布编一般图 | 3 个案例从 DAG 改为一般图 |
 | 新增 `source`（结构来源） | 见下文“结构从哪来” | 全部案例都编了 |
 | 新增 `schools`（画法流派） | 见 [可视化流派](visualization-schools.md) | 全部案例都编了 |
-| 一次盲编 | Haiku 只看官方摘录和词表，对全部案例独立编码。主类结构 κ = 0.74，首位重点部分 κ = 0.61，主流派 κ = 0.78，首位来源 κ = 0.79 | 找出 5 处错并改正；**重点部分是最不稳的一项** |
+| 一次盲编 | Haiku 只看官方摘录和词表，对前 84 个案例独立编码（后补的 13 个另做，见 [可视化流派](visualization-schools.md)）。主类结构 κ = 0.74，首位重点部分 κ = 0.61，主流派 κ = 0.78，首位来源 κ = 0.79 | 找出 5 处错并改正；**重点部分是最不稳的一项** |
 
 ## 四个总的发现
 
-**一、单一结构不够用〔案〕。** 84 个案例里有 36 个要用两种以上的结构才描述得准（第一轮是 44 个：“文本”“多层”不再算结构，少了 9 个；Kialo 新增了一个次类，多了 1 个）。最常见的叠加：
+**一、单一结构不够用〔案〕。** 97 个案例里有 42 个要用两种以上的结构才描述得准（第一轮 84 个案例里是 44 个；第二轮 84 个里是 36 个：“文本”“多层”不再算结构，少了 9 个，Kialo 新增了一个次类，多了 1 个；后补的 13 个里有 6 个是多结构）。最常见的叠加：
 
 | 叠加 | 案例数 | 例子 |
 | --- | --- | --- |
-| 层级 + 图（复合） | 11 | [CodeBoarding](data/case-evidence.md#codeboarding)（组件层级 + 组件关系）、[Jaeger](data/case-evidence.md#jaeger)（span 树 + 服务依赖图）、[Reactome](data/case-evidence.md#reactome)（通路层级 + 反应图）、[LikeC4](data/case-evidence.md#likec4)、[SkyWalking](data/case-evidence.md#skywalking) |
+| 层级 + 图（复合） | 12 | [CodeBoarding](data/case-evidence.md#codeboarding)（组件层级 + 组件关系）、[Jaeger](data/case-evidence.md#jaeger)（span 树 + 服务依赖图）、[Reactome](data/case-evidence.md#reactome)（通路层级 + 反应图）、[LikeC4](data/case-evidence.md#likec4)、[CodeGraph](data/case-evidence.md#codegraph)（文件—概念图加沿 Wikidata 父类的层级）、[SkyWalking](data/case-evidence.md#skywalking) |
 | 层级 + 序列 | 5 | [AgentPrism](data/case-evidence.md#agentprism)、[AgentOps](data/case-evidence.md#agentops)、[Arize Phoenix](data/case-evidence.md#arize-phoenix)、[AgentScope](data/case-evidence.md#agentscope)、[Nextstrain](data/case-evidence.md#nextstrain) |
-| 图 + 序列 | 4 | [n8n](data/case-evidence.md#n8n)、[LangGraph](data/case-evidence.md#langgraph)、[AutoGen Studio](data/case-evidence.md#autogen)、[Graphiti](data/case-evidence.md#graphiti) |
+| 图 + 序列 | 6 | [n8n](data/case-evidence.md#n8n)、[LangGraph](data/case-evidence.md#langgraph)、[AutoGen Studio](data/case-evidence.md#autogen)、[Graphiti](data/case-evidence.md#graphiti)、[Ecosyste.ms](data/case-evidence.md#ecosystems)、[OpenDigger](data/case-evidence.md#opendigger) |
 | 层级 + 空间 | 3 | [SkyWalking](data/case-evidence.md#skywalking)（三维基础设施地图）、[AFFiNE](data/case-evidence.md#affine)（文档块 + 白板）、[Nextstrain](data/case-evidence.md#nextstrain)（树 + 地图） |
 | 有向无环图 + 序列 | 2 | [AgentEnsemble Viz](data/case-evidence.md#agentensemble-viz)（计划 DAG 与执行 Trace）、[AgentEnsemble](data/case-evidence.md#agentensemble) |
-| 层级 + 表、图 + 表、序列 + 表、层级 + 命题 | 各 2 | [Langfuse](data/case-evidence.md#langfuse)、[CodeCity](data/case-evidence.md#codecity)；[Grafana](data/case-evidence.md#grafana)、[PyGraphistry](data/case-evidence.md#pygraphistry)；[Gapminder](data/case-evidence.md#gapminder)；[Kialo](data/case-evidence.md#kialo)、[CmapTools](data/case-evidence.md#cmaptools) |
+| 层级 + 表 | 3 | [Langfuse](data/case-evidence.md#langfuse)、[CodeCity](data/case-evidence.md#codecity)、[Speculora](data/case-evidence.md#speculora) |
+| 图 + 表、序列 + 表、集合 + 表、层级 + 命题 | 各 2 | [Grafana](data/case-evidence.md#grafana)、[PyGraphistry](data/case-evidence.md#pygraphistry)；[Gapminder](data/case-evidence.md#gapminder)；[Kialo](data/case-evidence.md#kialo)、[CmapTools](data/case-evidence.md#cmaptools) |
 
 这意味着给一份材料归类时，问的不该是“它是树还是图”，而是“它的底座是哪种结构、叠了什么”。〔案〕
 
-**二、材料不是结构；结构常常是算出来的〔案〕。** 第一轮把“文本”当成一类结构，第二轮发现这不对：文本、代码、日志、表都是**原料**，要看它被当成了什么。84 个案例的结构来源（可多选）：手工建构 29 个、运行记录 23 个、算出来的 27 个、现成数据 16 个。“算出来的”这 27 个里，4 个把文本抽成图（[InfraNodus](data/case-evidence.md#infranodus)、[GraphRAG](data/case-evidence.md#graphrag)、[Docling Graph](data/case-evidence.md#docling-graph)、[LightRAG](data/case-evidence.md#lightrag)），3 个从代码里解析出依赖（[dependency-cruiser](data/case-evidence.md#dependency-cruiser)、[Madge](data/case-evidence.md#madge)、[pydeps](data/case-evidence.md#pydeps)），还有从表构造图、从样本合并调用栈、从向量投影等。结构是算出来的时候，视觉通道承载的是算法的输出（中心性、社区、度数），而不是原始数据，这一点见下文“原料”一节。
+**二、材料不是结构；结构常常是算出来的〔案〕。** 第一轮把“文本”当成一类结构，第二轮发现这不对：文本、代码、日志、表都是**原料**，要看它被当成了什么。97 个案例的结构来源（可多选）：手工建构 30 个、运行记录 24 个、算出来的 38 个、现成数据 18 个。“算出来的”这 38 个里，4 个把文本抽成图（[InfraNodus](data/case-evidence.md#infranodus)、[GraphRAG](data/case-evidence.md#graphrag)、[Docling Graph](data/case-evidence.md#docling-graph)、[LightRAG](data/case-evidence.md#lightrag)），3 个从代码里解析出依赖（[dependency-cruiser](data/case-evidence.md#dependency-cruiser)、[Madge](data/case-evidence.md#madge)、[pydeps](data/case-evidence.md#pydeps)），还有从表构造图、从样本合并调用栈、从向量投影等；后补的开源生态案例几乎都是这一类：[ATLAS](data/case-evidence.md#atlas-taxonomy) 用多个 LLM Agent 把仓库归成分类树，[CodeGraph](data/case-evidence.md#codegraph) 从代码文件里抽出算法、范式、设计模式、应用领域并对齐到 Wikidata，[Semantic Map of GitHub](data/case-evidence.md#semantic-map-github) 从 README 算出位置。结构是算出来的时候，视觉通道承载的是算法的输出（中心性、社区、度数），而不是原始数据，这一点见下文“原料”一节。这批案例还显示出一点：**“相近”是由哪种关系算出来的，是这类结构最关键的设计选择**，同一批仓库换一种算法，分出来的组就不同（见“空间与几何”一节）。
 
-**三、画法不由结构决定，结构和重点都只能解释一部分〔案〕。** 第一轮写的“重点部分比结构类别更决定画法”，第二轮没能复现。用留一法拿主类结构、首位重点去预测主流派，正确率都是 0.54，随便猜“连线图”是 0.43（详见 [可视化流派](visualization-schools.md)）。在“一般图”这一类里，重点是连通的 15 个有视图的案例里 12 个画成连线图，重点是先后的 8 个里 5 个画成连线图、2 个画成记法图；不同重点之间的画法差别没有第一轮写的那么大。能站住的是更窄的几条：
+**三、画法不由结构决定，结构和重点都只能解释一部分〔案〕。** 第一轮写的“重点部分比结构类别更决定画法”，第二轮没能复现。用留一法拿主类结构、首位重点去预测主流派，正确率在前 84 个案例里都是 0.54，随便猜“连线图”是 0.43；补入 13 个开源生态案例后（共 97 个）降到主类结构 0.44、首位重点 0.48，随便猜是 0.42（详见 [可视化流派](visualization-schools.md)）。在“一般图”这一类里，重点是连通的 19 个有视图的案例里 14 个画成连线图，重点是先后的 8 个里 5 个画成连线图、2 个画成记法图；不同重点之间的画法差别没有第一轮写的那么大。能站住的是更窄的几条：
 
-- 重点是对象上的度量时（8 个案例），画法是通道分配图（5 个）或规则布局（3 个，技术雷达），没有连线图。〔案〕
+- 重点是对象上的度量时（11 个案例），画法是通道分配图（7 个）或规则布局（3 个，技术雷达），另 1 个是排序列表，没有连线图。〔案〕
 - 重点是时间时（5 个案例），画法是时间轴条图（4 个）。〔案〕
-- 重点是包含与层次时（17 个案例），画法分散在六种里：**层级是画法最不唯一的一类结构**。〔案〕
+- 重点是包含与层次时（18 个案例），画法分散在六种里：**层级是画法最不唯一的一类结构**。〔案〕
 - 同样是重点在“环”的案例，做法各有不同：[pydeps](data/case-evidence.md#pydeps) 单独提供“只显示导入环”的选项，并把环用蓝色框标出；[设计结构矩阵](data/case-evidence.md#dsm)靠重排行列让反馈标记集中。〔案〕
 
-**四、一个视图是对结构的有损投影；丢掉的那一部分，常由同一系统里的另一个视图补上〔案〕。** 84 个案例里有 26 个提供了多个视图。设计者常常明说自己丢了什么：
+**四、一个视图是对结构的有损投影；丢掉的那一部分，常由同一系统里的另一个视图补上〔案〕。** 97 个案例里有 27 个提供了多个视图。设计者常常明说自己丢了什么：
 
 - 地铁图丢掉真实的地理形状和距离。〔案：[伦敦地铁图](data/case-evidence.md#tube-map)〕
 - 火焰图丢掉时间顺序：“The x-axis shows the stack profile population, sorted alphabetically (it is not the passage of time)”。同一页还讲了把时间放回 x 轴的火焰图表（flame chart）。〔案：[火焰图](data/case-evidence.md#flame-graph)〕
@@ -66,13 +67,13 @@
 
 下面每一类先说本库里的用法，再说案例里它回答什么议题、常见的重点部分、画法和画不出的东西。数字是该类作为“主类”的案例数；议题和重点取案例编码里排第一位的那一项。画法的名字（连线图、时间轴条图等）见 [可视化流派](visualization-schools.md)。
 
-### 层级与树（23）
+### 层级与树（25）
 
 **用法。** 每个对象至多有一个上级，关系是包含或父子。〔文〕任何层级都可以表示成嵌套集合：“since any hierarchy can be represented by nested sets”（Schulz 等，《The Design Space of Implicit Hierarchy Visualization》引言）。所以层级既可以用连线表达（显式），也可以用包含和重叠表达（隐式）。
 
 **回答什么议题。** 最多的是定位异常（9 个，几乎都是运行追踪和资源占用）、建立全貌（5 个）、构建编辑（3 个）、探索发现（3 个）。〔案〕
 
-**重点部分。** 首位重点是包含与层次（15 个）和时间（4 个）。〔案〕
+**重点部分。** 首位重点是包含与层次（16 个）和时间（4 个）。〔案〕
 
 **三种常见变体。**
 
@@ -80,15 +81,17 @@
 2. 节点带时间：缩进表达嵌套，横条表达起止时间。[Jaeger](data/case-evidence.md#jaeger)、[AgentPrism](data/case-evidence.md#agentprism)、[AgentOps](data/case-evidence.md#agentops)、[LangWatch](data/case-evidence.md#langwatch)、[Comet Opik](data/case-evidence.md#comet-opik)。这是运行观测里最常见的一种。〔案〕
 3. 只关心导航：目录列表、折叠展开、连续缩放。[Kialo](data/case-evidence.md#kialo)（按支持和反对分栏）、[Reactome](data/case-evidence.md#reactome)（层级列表加总览加详图）、[OneZoom](data/case-evidence.md#onezoom)（把整棵树放在一页，用地图式缩放）。〔案〕
 
+**第四种变体：分类树（taxonomy）。** [ATLAS](data/case-evidence.md#atlas-taxonomy) 用多个 LLM Agent 给 54,387 个仓库建了一棵 9 层的树，每个节点带名称、定义、纳入标准和拆分维度。作者说为什么不用标签或聚类：“these capabilities require structured hierarchies with explicit definitions and splitting criteria, not merely tag matching or embedding similarity”，而 GitHub Topics “is flat, inconsistent, and covers only 67% of projects”。它的局限也写明了：一个仓库只归一个主要功能角色，活跃度、许可证、安全不进分类。[Speculora](data/case-evidence.md#speculora) 是领域、子领域、任务三级，任务上挂需求与供给信号。〔案〕
+
 **画不出的东西。** 横向联系。[Markmap](data/case-evidence.md#markmap) 把 Markdown 的标题层级变成导图，只用了层级这一种关系，文章里的论证和跨节联系不会出现。〔案+推〕CmapTools 的作者把跨联（cross-link）看得很重：“In the creation of new knowledge, cross-links often represent creative leaps”。纯树状的视图都丢了它。〔案：[CmapTools](data/case-evidence.md#cmaptools)〕
 
-### 有向无环图（8）
+### 有向无环图（9）
 
 **用法。** 关系是先后、依赖或来源，环在语义上不可能或不被允许；一个对象可以有多个上游或下游。第二轮收紧了定义：只有关系本身排除环（任务依赖、血缘、提交历史、谱系）或页面明写“DAG”，才编成这一类。Dify、Langflow、n8n、Node-RED、Flowise、bpmn-js 这类流程画布的页面没有写是否允许环，一律编成一般图。〔案〕
 
-**回答什么议题。** 影响范围（3）、追踪流向（2），其余各 1。〔案〕
+**回答什么议题。** 影响范围（3）、追踪流向（3），其余各 1。〔案〕
 
-**重点部分。** 先后与依赖方向（7 个）；时间在 6 个 DAG 案例里也是重点之一。〔案〕
+**重点部分。** 先后与依赖方向（8 个）；时间在 6 个 DAG 案例里也是重点之一。〔案〕
 
 **常见画法。** 从左到右或从上到下的分层有向图，边带方向；规模一大就聚合并支持“原地展开”：Nx 的组合节点（“Composite nodes are essential to navigate a graph of even a moderate size”）、DataHub 把数据管道画成装着任务的盒子、表级血缘里展开字段级血缘。〔案：[Nx](data/case-evidence.md#nx)、[DataHub](data/case-evidence.md#datahub)、[OpenMetadata](data/case-evidence.md#openmetadata)〕
 
@@ -96,15 +99,17 @@
 
 **一个反例：默认视图不是图。** [Git 提交历史](data/case-evidence.md#git-history)的数据结构是 DAG（合并提交有多个父提交），但默认视图是按时间倒序的一维列表，要加 `--graph` 才画出分叉和合并。〔案〕
 
+**一个页面明写的 DAG：** [Software Heritage Graph](data/case-evidence.md#software-heritage-graph)（“a uniform Merkle DAG containing source code artifacts and their development history”）：内容、目录、修订、发布、快照五层，目录项指向内容或别的目录，修订指向根目录和父修订，相同的节点被共享，用密码学哈希作标识，所以环不可能出现。论文里只有数据模型图，没有交互视图。〔案〕
+
 **家谱也是 DAG。** [McGuffin 等](data/case-evidence.md#genealogical-graphs)的做法是不画整张图，而是每次只看以当前人为中心的“祖先树 + 后代树”两棵树，并用折叠展开做拓扑导航：“convinced us to focus on visualizing only a subset of the graph at a time”。〔案〕
 
-### 一般图与网络（31）
+### 一般图与网络（38）
 
 **用法。** 对象和关系；可以有环、可以无向；对象和关系可分类型，点和边可带属性。〔文〕Hogan 等对知识图谱的综述把常见的图数据模型分为有向边标签图、异质图、属性图、图数据集，并指出：当需要给边加上时间、来源等上下文时，可以把边变成节点，或使用“reification”（对边再做陈述）。
 
-**回答什么议题。** 构建编辑（9）、定位异常（7）、建立全貌（6）、探索发现（5）。〔案〕
+**回答什么议题。** 构建编辑（9）、探索发现（8）、定位异常（7）、建立全貌（6）。〔案〕
 
-**重点部分。** 连通与邻域（16）、先后与依赖方向（8）、环（2）、群落（2）。其中先后与依赖方向的 8 个，6 个是流程画布（bpmn-js、Dify、Langflow、Flowise、LangGraph、AutoGen Studio），另外两个是 SBGN 和设计结构矩阵；环的 2 个是依赖分析工具。〔案〕
+**重点部分。** 连通与邻域（22）、先后与依赖方向（8）、环（2）、对象上的度量（2）、群落（2）。其中先后与依赖方向的 8 个，6 个是流程画布（bpmn-js、Dify、Langflow、Flowise、LangGraph、AutoGen Studio），另外两个是 SBGN 和设计结构矩阵；环的 2 个是依赖分析工具。〔案〕
 
 **规模问题的三种回应。** 设计者对节点连线图在大规模时的失败说得很直白：“In a hairball, data is subordinate to layout”（Hive Plot）、“graph visualizations are only viable up to a certain size”（VOWL）、“Viewing the entire graph can be unmanageable even for smaller repositories”（Nx）。案例里看到三种不同的回应：〔案〕
 
@@ -128,7 +133,7 @@
 
 ### 序列与事件流（3 个主类，但作为叠加出现很多）
 
-84 个案例里 16 个把序列当作主类或次类。序列几乎总是叠加在别的结构上：运行追踪是“树加时间”，计划与执行是“DAG 加时间”。作为主类的 3 个里，两个是没有图形界面的规范和采集库（[OpenTelemetry 生成式 AI 语义约定](data/case-evidence.md#otel-genai-semconv)、[OpenLLMetry](data/case-evidence.md#openllmetry)），一个是 [Ladder of Abstraction](data/case-evidence.md#ladder-of-abstraction)。[Graphiti](data/case-evidence.md#graphiti) 是一个只有数据模型、没有图形界面的案例：它的边带双时间元数据，可以失效，保留来源。它说明时间有效期和来源要先进数据模型，否则图只能画出“现在”。〔案〕
+97 个案例里 18 个把序列当作主类或次类。序列几乎总是叠加在别的结构上：运行追踪是“树加时间”，计划与执行是“DAG 加时间”。作为主类的 3 个里，两个是没有图形界面的规范和采集库（[OpenTelemetry 生成式 AI 语义约定](data/case-evidence.md#otel-genai-semconv)、[OpenLLMetry](data/case-evidence.md#openllmetry)），一个是 [Ladder of Abstraction](data/case-evidence.md#ladder-of-abstraction)。[Graphiti](data/case-evidence.md#graphiti) 是一个只有数据模型、没有图形界面的案例：它的边带双时间元数据，可以失效，保留来源。它说明时间有效期和来源要先进数据模型，否则图只能画出“现在”。〔案〕
 
 ### 表与多维属性（7）
 
@@ -143,17 +148,19 @@
 
 〔推〕这提示一种选图的办法：先看每个视图需要哪些“角色槽”（位置、大小、颜色、层级、时间），再看数据的列能不能填进去。[Gapminder](data/case-evidence.md#gapminder) 把五个变量分到位置（两个）、大小、颜色、时间五个通道，一张图同时回答“关系”和“变化”。
 
-### 集合与分类（3）
+### 集合与分类（4）
 
-只有成员和类别，没有成员之间的关系：[CNCF Landscape](data/case-evidence.md#cncf-landscape)、两个技术雷达。回答“哪类里有谁”，盲区正好是项目之间的依赖。〔案〕
+只有成员和类别，没有成员之间的关系：[CNCF Landscape](data/case-evidence.md#cncf-landscape)、两个技术雷达、[Open Source AI Gap Map](data/case-evidence.md#oss-ai-gap-map)（产品归入类别，类别归入三个层次）。回答“哪类里有谁”，盲区正好是项目之间的依赖。Gap Map 的一个设计值得记：“Maturity is a property of a category, not an individual product.”——成熟度、缺口是**类别**的属性，不是产品的属性，产品只带得分和开放程度。〔案〕
 
 ### 流量网络（1）
 
 [LLNL 能源流向图](data/case-evidence.md#llnl-energy-flow)：边上的量守恒，从资源分到四类终端用途和“被拒绝的能量”（废热）。线宽正比于能量，颜色表示能量形式。设计者说选桑基图是“for its versatility in displaying quantitative information visually”。适合看总体分配，不适合看单个设备或随时间的变化。〔案〕只有一个案例，不足以归纳。
 
-### 空间与几何（2）
+### 空间与几何（4）
 
-[Embedding Projector](data/case-evidence.md#embedding-projector)：高维向量投影到二维或三维，重点是群落和位置；设计者承认静态视图不够，要加最近邻列表来检查“nearby points are semantically related”。[Circos](data/case-evidence.md#circos)：位置本身是含义（基因组坐标）。〔案〕
+[Embedding Projector](data/case-evidence.md#embedding-projector)：高维向量投影到二维或三维，重点是群落和位置；设计者承认静态视图不够，要加最近邻列表来检查“nearby points are semantically related”。[Circos](data/case-evidence.md#circos)：位置本身是含义（基因组坐标）。
+
+后补的两张 GitHub 地图是这一类的新例子：[Semantic Map of GitHub](data/case-evidence.md#semantic-map-github)（约 1 万个高 Star 仓库，位置由 README 向量降维得到）和 [Map of GitHub](data/case-evidence.md#map-of-github)（约 69 万个项目，两点靠近是因为“multiple users frequently gave stars to both projects”）。它们说明：**位置在这里不是给定的，是按某种关系算出来的，换一种关系就换一张地图。** Semantic Map 的方法页自己写了：用内容算和用关注关系算，“The two approaches produce meaningfully different groupings”；还提醒“inter-cluster distances should not be read as precise measurements of dissimilarity”。〔案〕
 
 ### 因果与反馈（2）
 
@@ -167,7 +174,7 @@
 - 提取出图：[InfraNodus](data/case-evidence.md#infranodus) 把词当节点、共现当边，节点大小是介数中心性，颜色是话题群，最后找“结构空白”；[Docling Graph](data/case-evidence.md#docling-graph) 约束关系类型并保留来源；[GraphRAG](data/case-evidence.md#graphrag) 提取实体、关系、主张，再做层级聚类并生成各层摘要。代码也一样：[dependency-cruiser](data/case-evidence.md#dependency-cruiser)、[Madge](data/case-evidence.md#madge)、[pydeps](data/case-evidence.md#pydeps) 从源码里解析出依赖图。
 - 提取出论证：[Argdown](data/case-evidence.md#argdown)（用文本写论证，地图由文本生成）。〔案〕
 
-**一个规律。** 结构是算出来的时候，视觉通道承载的是算法的输出（中心性、社区、度数），而不是原始数据。InfraNodus 的作者特意说：“The result is not a word cloud: it is a map of relations”。GraphRAG 的社区层级是算法聚类，我读到的官方页面没有说它对应认知上的逻辑层级。〔案〕首位来源是“算出来的”的 22 个案例里，15 个主流派是连线图。〔案〕
+**一个规律。** 结构是算出来的时候，视觉通道承载的是算法的输出（中心性、社区、度数），而不是原始数据。InfraNodus 的作者特意说：“The result is not a word cloud: it is a map of relations”。GraphRAG 的社区层级是算法聚类，我读到的官方页面没有说它对应认知上的逻辑层级。〔案〕首位来源是“算出来的”的 33 个案例里，18 个主流派是连线图。〔案〕
 
 **一个提醒。** 盲编帮我改正了一处过于保守的编码：DataHub 的官方页面写“SQL query parsing that automatically extracts transformation logic and column-level dependencies”，血缘是解析出来的，不是现成数据。OpenMetadata 同理（“Lineage first comes from the metadata ingested from the databases”）。〔案〕
 
@@ -186,4 +193,5 @@
 - 语料偏工程工具。想检验结论是否站得住，需要更多“复杂信息和认知结构”类的案例，尤其是非软件领域里设计者写下了理由的案例。
 - “重点部分”的词表（13 项）是我按案例归纳出来的，没有被别人用过。盲编一致率里它最低（κ = 0.61，主类结构 0.74）：换一个人来编码，同一个案例有三分之一的可能落在不同的重点上。所以凡是依赖“重点部分”的结论（第三个发现里的几条窄规则）都要打折扣。
 - “命题与论证”只有 4 个案例，其中 1 个盲编者没有认同；是否站得住为一类，需要更多案例（辩论、论文论证、法律推理等）。
+- 后补的 13 个开源生态案例里，官方文字大多不写“画成什么样”，我是打开页面看了才编的画法（盲编一致率只有 κ = 0.41）。把它们放进来，让“结构预测画法”的正确率下降了一截；这个下降是真实的信号，还是这批案例编码不稳造成的，现在分不清。
 - 没有读到论文原文的：Ghoniem 等的受控实验、McGuffin 的家谱图论文（读到的是作者主页的 PDF，课程材料只用作旁证）。

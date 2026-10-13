@@ -1639,3 +1639,277 @@
   fit_note: "把“为什么这条依据能推出这个主张”这个常被省略的连接（保证）变成必须写明的一个对象——这是整理者对原文的概括"
   ev: ["entities:WARRANT – logical and persuasive connection", "attributes:Toulmin says that the weakest part of any argument", "relations:The warrant is the assumption on which the claim and the evidence depend", "questions:Second, test and critique your own argument"]
   confidence: high
+
+# ───────── 开源生态的地图、分类与知识图谱（用户 2026-10-13 发来的一份调研里提到的项目；事实只取官方页面，调研里的说法逐条核对过，见各案例 note）─────────
+- id: oss-ai-gap-map
+  origin: external
+  name: Open Source AI Gap Map
+  urls: ["https://www.aipotluck.org/map", "https://www.currentai.org/blogs/introducing-the-gap-map-v0-1"]
+  domain: 开源生态评估
+  issue: 看开源 AI 生态里哪些类别已经成熟、哪里还有缺口，好决定资金和精力投向哪里
+  issue_types: [decide-status, understand-whole]
+  structure: [set, table]
+  modifiers: [typed, weighted]
+  source: [authored, given]
+  structure_note: "产品归入类别，类别归入三个层次（模型组件、产品与用户体验、基础设施）；产品带开放程度、能力、采用程度，打 1 到 5 分；成熟度阶段和缺口是类别的属性，不是产品的属性"
+  focus: [node_attr, membership]
+  schools: [channels, textlist]
+  views_note: "按层次分页签的类别列表：每行一个类别，列出成熟度阶段、发现的缺口（字母标记）和该类别下的开放产品（色块，得分高的实心、其余只画轮廓）"
+  dropped: "不比较开源与闭源生态谁领先，只说开源生态还缺什么"
+  abstraction: [aggregate, separate-views]
+  abstraction_note: "类别的成熟度由其中完全开放的产品推进；三个层次分页签"
+  ev: ["abstraction:Maturity is a property of a category", "attributes:Every product carries a score on a 1–5 scale", "questions:What layers are overinvested in", "encodings:Products scoring 4.5 or above", "relations:Only fully open products advance"]
+  thinking: ["why:compare closed versus open AI ecosystems", "alternative:Repository stars can provide a useful signal", "limit:The map is a curated view of a fast-moving ecosystem"]
+  confidence: medium
+  note: "调研里的“62,538 个收录条目、1,133 个已评分、v0.5.0、2026-10-13 更新、三个层次”，官方页面都找到了原文（页面写 Version 0.5.0 - Last update: 13 Oct 2026）；已评分占比约 1.8% 是调研按这两个数算的。官方方法页写明这是“curated view … not a complete census”。"
+
+- id: atlas-taxonomy
+  origin: external
+  name: ATLAS：用多个 LLM Agent 自动构建软件仓库分类体系
+  urls: ["https://arxiv.org/abs/2606.21597", "https://atlas-taxonomy.netlify.app/"]
+  domain: 软件仓库分类
+  issue: 给五万多个 GitHub 仓库建一棵带定义和拆分理由的多层分类树，用来按任意粒度检索、找功能等价的替代项目、看生态趋势
+  issue_types: [retrieve, explore-discover]
+  structure: [hierarchy]
+  modifiers: [derived, nested]
+  source: [derived]
+  structure_note: "分类树：每个节点有名称、定义、纳入标准、拆分维度、层级、父子关系和归入的仓库；54k 版本有 9 个顶层领域、9 层、36,000 个节点；一个仓库只归入一个主要功能角色"
+  focus: [containment, membership]
+  schools: [link]
+  views_note: "探索器（Rank-Aligned View）：把各分支按语义层级对齐的树，可展开、折叠，高亮后插入的子层和深度被调整的节点"
+  dropped: "活跃度、许可证、安全等维度不进分类；不做多标签"
+  abstraction: [fold-drill, aggregate]
+  abstraction_note: "层级越深越具体；构建后做“层级对齐”，让不同分支的粒度一致；从粗类进入逐层下钻"
+  ev: ["abstraction:tree depth encodes increasing specificity", "abstraction:After construction, a Level Alignment phase", "interactions:Expand All Collapse All", "attributes:every category carries a name"]
+  thinking: ["why:GitHub Topics, the dominant organizational mechanism, is flat", "alternative:Embedding-based clustering groups repositories", "limit:ATLAS assigns each repository a single dominant functional role"]
+  confidence: high
+  note: "调研里的“54,387 个仓库、36,000 个节点、9 层 9 个顶层领域、Star 至少 1,000、数据含定义与纳入标准、85.71% 的 Top-1 精度”五条，官方 Zenodo 页都找到了原文。85.71% 是作者在替代项目发现任务上的实验精度，不是现实产品推荐的已验证准确率（调研也这样提醒）。"
+
+- id: semantic-map-github
+  origin: external
+  name: Semantic Map of GitHub
+  urls: ["https://stevenfazzio.com/semantic-github-map/", "https://stevenfazzio.com/semantic-github-map/methodology.html"]
+  domain: 开源生态地图
+  issue: 看高 Star 仓库按 README 语义自然聚成哪些主题，每个仓库在地图上和谁相邻
+  issue_types: [explore-discover, understand-whole]
+  structure: [spatial]
+  modifiers: [derived, typed]
+  source: [derived]
+  structure_note: "每个仓库是一个点；位置由 README 的向量经降维得到，语义相近的挨在一起；多层级主题标签由层次密度聚类生成；每个仓库另有大模型从 README 提取的标题、摘要、标语、项目类型、目标读者"
+  focus: [position, cluster]
+  schools: [channels, schematic]
+  views_note: "交互 HTML 地图（DataMapPlot）：悬停看标题、标语、类型、语言、Star；可换颜色（创建时间、最近推送、簇）；可搜索、过滤、点击跳转"
+  dropped: "页面写明簇与簇之间的距离不宜读作差异大小的精确度量；README 短于 200 字符的仓库不收"
+  abstraction: [zoom, aggregate]
+  abstraction_note: "主题标签分多个细节层级，从大类到子主题，缩放时出现"
+  ev: ["encodings:Repositories with similar descriptions", "abstraction:Cluster labels appear on the map at multiple levels", "attributes:Each README is processed by Claude Haiku"]
+  thinking: ["alternative:This project instead uses a content-based signal", "why:result cap and non-deterministic ordering", "limit:Selection bias"]
+  confidence: high
+  note: "调研里的“约 1 万个高 Star 仓库、README 转向量、UMAP 降维、公开处理脚本”，官方方法页都找到了原文（向量 512 维，用 Cohere embed-v4.0；降维到二维）。调研说“地图距离来自 README 语义，不是经过验证的产品定位”，方法页的局限一节也写了：README 稀疏或有误导会被放错位置。"
+
+- id: map-of-github
+  origin: external
+  name: Map of GitHub
+  urls: ["https://anvaka.github.io/map-of-github/"]
+  domain: 开源生态地图
+  issue: 看 GitHub 上几十万个项目在“被同一批人点 Star”的空间里怎样分布成一块块“国家”，找到相邻的项目
+  issue_types: [explore-discover]
+  structure: [spatial]
+  modifiers: [derived, weighted]
+  source: [derived]
+  structure_note: "点是项目；两点靠得近，是因为多个用户同时给两者点过 Star；约 69 万个项目聚成约 1,500 个“国家”；点的大小是 Star 数"
+  focus: [cluster, position]
+  schools: [schematic, channels]
+  views_note: "二维地图：点按共同 Star 的用户聚成团，团有名字（国家）；可缩放、搜索项目、与 ChatGPT 对话。地图风格的国家、地区隐喻是页面自己的说法"
+  abstraction: [aggregate, zoom]
+  abstraction_note: "约 69 万个项目聚成约 1,500 个国家；缩放到一定程度才看得到单个项目（无结果时页面提示 Try zooming in?）"
+  ev: ["abstraction:The map has approximately 690,000 projects", "relations:Two dots within the same cluster", "attributes:The size of the dot"]
+  confidence: medium
+  note: "调研里的“约 69 万个项目、约 1,500 个聚类、用共同 Star 的用户重合度算距离、数据到 2025 年 5 月前”，官方页面（About 文字在页面加载的脚本里）都找到了原文；页面写的是 Star 数据到 2025 年 4 月底，没写发布日期。“揭示的是开发者兴趣结构，不是产品需求结构”是调研的判断，页面只写“多个用户同时给两者点 Star”。官方页没有设计思路类的说明，所以没有 thinking。"
+
+- id: git-top-atlas
+  origin: external
+  name: Git.Top Atlas
+  urls: ["https://git.top/atlas", "https://git.top/topics/atlas-guide"]
+  domain: 开源生态导航
+  issue: 从一个生态（如 Cloudflare、MCP、RAG）进入，看里面的项目、替代方案、依赖和评分，做取舍
+  issue_types: [explore-discover, decide-status, compare]
+  structure: [graph, set]
+  modifiers: [typed, weighted, derived, provenance]
+  source: [derived]
+  structure_note: "生态里的项目是节点；替代、部署、依赖、用例、类别变成可复用的图边；项目带质量分和代理分（分开），回答附来源元数据、分类证据和置信度"
+  focus: [connectivity, node_attr]
+  schools: [link, textlist]
+  views_note: "Atlas 页：每个生态一张卡片，卡片里是该生态的小关系图；点进去按生态、项目、关系图与评分逐步收窄；另提供 Atlas JSON"
+  abstraction: [fold-drill, filter-scope]
+  abstraction_note: "“Start broad in Cloudflare Ecosystem, then narrow to one project with score and graph evidence”"
+  ev: ["abstraction:Start broad in Cloudflare Ecosystem", "relations:Alternatives, deployments, dependencies, use cases, and categories become reusable graph edges", "attributes:Quality score and agent score are separate", "attributes:Responses include source metadata"]
+  thinking: ["why:Atlas is the Git.Top map layer", "alternative:Navigate ecosystems as connected project maps instead of isolated lists"]
+  confidence: medium
+  note: "调研里的“Beta、覆盖 Agent/MCP/RAG/浏览器 AI/AI IDE/LLM Gateway、从类别进项目看关系图替代方案评分、项目约一千多个”，官方页面都找到了原文（页面写 1216 projects loaded）。页面没有写评分怎么算，所以评分的依据没核实。"
+
+- id: semrepo
+  origin: external
+  name: SemRepo
+  urls: ["https://arxiv.org/abs/2605.13310", "https://scads.ai/semrepo-knowledge-graph-for-research-software/"]
+  domain: 研究软件知识图谱
+  issue: 把研究软件和论文、作者连起来，回答哪些论文对应的仓库仍在维护、被广泛复用、背后是哪些研究者
+  issue_types: [retrieve, explore-discover]
+  structure: [graph]
+  modifiers: [typed, derived, provenance]
+  source: [derived, given]
+  structure_note: "以仓库为中心的本体：仓库、人（作者、贡献者、点赞者等角色）、Issue、编程语言引用、论文；贡献量和语言占比用中间节点（ContributorReference、LanguageReference）带上提交数和占比；作者链到 SemOpenAlex，仓库链到 LPWC 论文"
+  focus: [connectivity, edge_attr]
+  schools: []
+  views_note: "没有图形界面：以 RDF 转储和公开 SPARQL 端点提供，读到的页面里没有可视化（端点页是一个查询编辑器）"
+  abstraction: [none-stated]
+  ev: ["entities:At the center of the ontology is the class Repository", "relations:sr:ContributorReference, which acts as an intermediate node", "interactions:(b) We deploy the dataset in triple store"]
+  thinking: ["why:cannot be adequately represented by a simple binary predicate", "alternative:links to implementations are often buried in unstructured text", "limit:we acknowledge that it inherits structural biases"]
+  confidence: high
+  note: "调研里的“约 19.8 万个仓库的元数据、Issue、开发者与论文关联、SPARQL、约半年更新一次”，官方论文都找到了原文（197,566 个唯一仓库地址；approx. twice per year）。整理者的读法〔推〕：把“贡献”做成带提交数的中间节点，是给边加属性的一种做法（Hogan 等综述里叫 reification），和本库“一般图”一节讲的一致。"
+
+- id: moss
+  origin: external
+  name: MOSS（研究软件知识图谱）
+  urls: ["https://pretalx.com/juliacon-2025/talk/3EVLR9/", "https://numfocus.org/open-source-science-initiative-ossci"]
+  domain: 研究软件知识图谱
+  issue: 把 Julia 生态里的仓库、贡献者、论文、机构连成属性图，看谁贡献了什么、哪些包被哪些论文引用
+  issue_types: [explore-discover, understand-whole]
+  structure: [graph]
+  modifiers: [typed, derived]
+  source: [derived]
+  structure_note: "属性图：节点类型有仓库、论文、人、机构、主题，由关系连接；数据来自 GitHub、OpenAlex、CrossRef 等，经转换层统一字段、合并冲突、解析别名"
+  focus: [connectivity]
+  schools: []
+  views_note: "读到的页面只说“可视化代码贡献、论文与机构的关系”，没写画法；演讲页给的在线地址 opensource.science/moss 在这次访问里返回 404"
+  abstraction: [none-stated]
+  ev: ["entities:The resulting property graph uses well-defined node types", "input_material:a system that consolidates data from GitHub"]
+  thinking: ["why:Our goal with MOSS is to unify disparate data streams", "alternative:While the Julia ecosystem has grown impressively"]
+  confidence: low
+  note: "只读到 JuliaCon 2025 的演讲介绍页和 NumFOCUS 的项目页，没有读到项目自己的文档。调研里的三条说法——“把仓库、作者、机构、出版物、依赖关系连起来”“记录关系的发现来源”“代码最近一次更新停留在 2025 年 7 月”——在这两页里都没找到（演讲页没提依赖关系和来源记录；更新时间要看 GitHub，没有访问），**未核实**。"
+
+- id: ecosystems
+  origin: external
+  name: Ecosyste.ms
+  urls: ["https://packages.ecosyste.ms/", "https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html"]
+  domain: 开源数据基础设施
+  issue: 为开源项目提供跨托管平台的包、仓库、依赖、提交、Issue 数据的开放 API，支撑生态研究与维护
+  issue_types: [explore-discover]
+  structure: [graph, sequence]
+  modifiers: [typed, temporal, derived]
+  source: [derived]
+  structure_note: "多个服务各管一块：包（含版本、命名空间、维护者）、仓库（含标签、清单、依赖）、Issue 与 PR、提交、时间线事件、论文与软件项目的映射；依赖是包之间的关系"
+  focus: [connectivity]
+  schools: []
+  views_note: "读到的是服务列表和规模数字，没有视图的描述"
+  abstraction: [none-stated]
+  ev: ["entities:Hosts: 784", "relations:Dependencies: 14,051,505,152"]
+  thinking: ["why:16 significant services", "limit:We also used up the majority of our grant"]
+  confidence: low
+  note: "只读到作者 Andrew Nesbitt 2023 年 12 月的年终博客，所有数字是 2023 年底的；官方文档站（各服务的 API 文档）这次没有读。调研里“跨托管平台整合仓库、包、依赖、Issue、提交和历史事件、开放 API”，博客里能对上（784 个托管平台、74.3 亿条事件、各服务都是开放 API）。"
+
+- id: opendigger
+  origin: external
+  name: OpenDigger
+  urls: ["https://open-digger.cn/en/", "https://open-digger.cn/en/docs/user-docs/metrics/openrank", "https://open-digger.cn/en/docs/user-docs/metrics/playground"]
+  domain: 开源活动指标
+  issue: 用统一的指标（活跃度、OpenRank 等）度量开源项目和开发者的活动与影响力随时间的变化
+  issue_types: [decide-status, explore-discover]
+  structure: [graph, sequence]
+  modifiers: [weighted, temporal, derived, typed]
+  source: [derived]
+  structure_note: "协作网络：开发者、仓库、Issue、合并的 PR 是节点，归属与活动是带权边；OpenRank 沿网络迭代并继承上个月的值；指标按月、季、年出时间序列"
+  focus: [node_attr, time, edge_attr]
+  schools: [channels]
+  views_note: "Playground：输入平台、仓库或用户名，看指标的柱线图；另有 OpenLeaderboard 和浏览器插件 HyperCRX 里的 Perceptor 标签"
+  abstraction: [aggregate]
+  abstraction_note: "开发者活跃度求和成仓库活跃度；仓库的 OpenRank 平均分给它的 Issue 与 PR；指标按月、季、年汇总"
+  ev: ["questions:OpenRank aims to explore the flow of value", "abstraction:The repository's OpenRank is evenly distributed", "views:In this playground page", "relations:transferred to its repository"]
+  thinking: ["why:OpenRank was introduced to address the widespread observer effect", "alternative:such as the alienation behavior and community damage caused by metrics like the number of stars", "limit:OpenDigger does not export metrics data for all repositories and users"]
+  confidence: high
+  note: "调研里的“项目活动、开发者参与、OpenRank、历史序列”，官方文档能对上（指标文件按月、季、年存成 JSON）；“社区演化”页面没有这个词。官方文档自己写了几条局限：GitHub 数据源有缺失，Community OpenRank 算法实现尚未开源，活跃度只算有实质贡献的协作行为、不算 Star 和 Fork。"
+
+- id: deps-dev
+  origin: external
+  name: deps.dev（Open Source Insights）
+  urls: ["https://docs.deps.dev/", "https://blog.deps.dev/api/"]
+  domain: 软件供应链
+  issue: 弄清一个包的完整依赖图、版本、许可证和安全公告，评估引入它会带来多大风险
+  issue_types: [impact, understand-whole, locate-anomaly]
+  structure: [graph]
+  modifiers: [directed, typed, versioned, derived]
+  source: [derived]
+  structure_note: "包、版本、依赖、许可证、安全公告、项目托管构成的图；传递依赖图按各包管理器自己的算法算出，不只是清单里声明的"
+  focus: [connectivity, node_attr]
+  schools: [link]
+  views_note: "网站：搜索包、可视化依赖、比较版本、看安全公告；API 博客里的依赖图用 GraphViz 渲染"
+  abstraction: [aggregate]
+  abstraction_note: "收集并聚合数据，再推出传递依赖图和安全公告的影响报告"
+  ev: ["relations:a full dependency graph computed using the same algorithms", "views:Search for open source packages, visualize dependencies", "questions:How many dependencies does this package have"]
+  thinking: ["why:The goal is to provide developers with a picture of how their software is put together", "alternative:The deps.dev dependency data is not just what a package declares", "limit:The service currently indexes the Cargo, Go, Maven"]
+  confidence: high
+  note: "调研里的“包、版本、依赖、安全公告”，官方文档与博客都找到了原文；“关系以软件供应链为主”，官方博客写 understand the risks in their software supply chains。"
+
+- id: codegraph
+  origin: external
+  name: CodeGraph（面向源代码的开放分类知识图谱）
+  urls: ["https://arxiv.org/abs/2609.29474"]
+  domain: 代码知识图谱
+  issue: 用代码本身而不是标签，找到实现某个算法、遵循某种范式、属于某个应用领域的文件，并看同一算法跨领域的复用
+  issue_types: [retrieve, explore-discover]
+  structure: [graph, hierarchy]
+  modifiers: [typed, derived, provenance, nested]
+  source: [derived]
+  structure_note: "文件节点连到抽取出的概念节点（算法、范式、设计模式、应用领域），边带类型和来源；概念再对齐到 Wikidata，并沿 Wikidata 的父类关系向上汇总；约 6.3 万个概念实体，1.449 亿个文件节点"
+  focus: [connectivity, containment, provenance]
+  schools: [channels]
+  views_note: "没有图探索界面：论文里是方法流程图、组成统计图和“算法 × 应用领域”热图（用颜色表示出现次数）；数据在 Hugging Face 上以表格浏览"
+  abstraction: [aggregate, summarize]
+  abstraction_note: "hierarchy-rollup：引入 Wikidata 的父类闭包，把细粒度概念汇总到任意层级"
+  ev: ["abstraction:enabling aggregation of fine-grained concepts at arbitrary levels", "relations:the same algorithm node dynamic programming", "entities:about 63,000 extracted concept entities"]
+  thinking: ["why:The taxonomy is deliberately open", "alternative:Classical static-analysis tools dissect code with high precision", "limit:The two values therefore bracket the range of plausible precision estimates"]
+  confidence: high
+  note: "调研里的“把算法、设计模式、编程范式和应用领域连接起来”“约 1.449 亿个代码文件”，论文都找到了原文（144,910,008 个文件节点，来自 167M 文件语料去掉约 2200 万个标记语言文件）。论文自己写了抽取精度的范围：保守下限 68%、宽松上限 88%，设计模式和范式的标注不够可靠、不能单独支持强的定量结论。"
+
+- id: software-heritage-graph
+  origin: external
+  name: Software Heritage Graph Dataset
+  urls: ["https://registry.opendata.aws/software-heritage/", "https://arxiv.org/abs/2011.07824"]
+  domain: 源代码历史图谱
+  issue: 跨项目、跨托管平台追踪同一份源码和它的开发历史，研究公开软件开发的长尾
+  issue_types: [trace-flow, explore-discover]
+  structure: [dag]
+  modifiers: [directed, versioned, provenance]
+  source: [recorded]
+  structure_note: "统一的 Merkle DAG，五个逻辑层：内容（叶子）、目录、修订（提交）、发布、快照；目录项指向内容、修订或别的目录，修订指向根目录和父修订；相同节点被共享，用密码学哈希作标识"
+  focus: [precedence, provenance, identity]
+  schools: []
+  views_note: "没有交互视图：论文里是数据模型图（图 2）和简化 schema；数据以关系表提供，可用 SQL 查询。官方文档站被反机器人页拦住，没读到"
+  abstraction: [aggregate]
+  abstraction_note: "去重：所有相同的节点被共享；跨版本控制系统和包管理器，给出规范的表示"
+  ev: ["entities:point-in-time captures of the entire source tree", "relations:Each revision points to the root directory", "abstraction:As shown in Figure 2, the Software Heritage DAG is organized in five logical layers", "views:Figure 2: Data model"]
+  thinking: ["why:exploits the fact that source code artifacts are massively duplicated", "alternative:This approach has limitations in scope", "limit:The dataset captures the state of the Software Heritage archive on September 25th 2018"]
+  confidence: high
+  note: "证据主要来自 2020 年的论文（数据截至 2018 年 9 月）和 AWS 开放数据登记页（写数据每年更新）。调研里“保存源代码对象、目录、版本和历史来源之间的关系”，登记页找到了原文；“是理解开源软件历史谱系的基础”是调研的判断，页面没有这样写。"
+
+- id: speculora
+  origin: external
+  name: Speculora
+  urls: ["https://speculora.com/", "https://speculora.com/info"]
+  domain: 市场需求分析
+  issue: 让独立开发者看到软件需求在哪里拥挤、哪里有可用的缺口
+  issue_types: [decide-status, explore-discover, compare]
+  structure: [hierarchy, table]
+  modifiers: [typed, weighted, derived, temporal]
+  source: [derived]
+  structure_note: "15 个领域，下分子领域，下面是“任务”（人想完成的一件具体事）；每个任务带需求、供给、质量、价格信号，算出缺口等级和机会分；证据来自应用商店评论和技术论坛"
+  focus: [node_attr, membership]
+  schools: [textlist, enclosure]
+  views_note: "首页是交互地图；领域页是按机会分数排序的任务列表，每项标缺口等级、应用数和用户反馈数；无头浏览器打开首页还看到 Top gaps、Full tree、Treemap 等标签（整理者所见，官方文字没有说明）"
+  dropped: "以“任务”而不是“市场”为单位"
+  abstraction: [fold-drill, aggregate]
+  abstraction_note: "领域、子领域、任务三级；缺口等级把多项信号合成一个状态"
+  ev: ["abstraction:The unit is a task, not a market", "relations:Each task carries demand, supply, quality, and price signals", "views:Explore the live, interactive map above", "input_material:real user reviews mined from the app stores"]
+  thinking: ["why:It is not another idea generator", "alternative:There has been no systematic way for a solo builder", "limit:And gaps decay, so freshness matters"]
+  confidence: medium
+  note: "调研里的“15 个领域、对任务按需求/竞争/现有产品的不足打分、证据来自 App Store、Google Play、Hacker News、Stack Exchange”，官方首页都找到了原文。“指标缺独立效果验证”是调研的判断，官方页面没有相关说明；官方写数据每周重算。"

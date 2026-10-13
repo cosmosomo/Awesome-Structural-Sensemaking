@@ -112,6 +112,8 @@ def validate_cases(c: dict, project_ids: set[str], form_ids: set[str]) -> list[s
             urls.append(im.get("url"))
             if im.get("kind") not in ("screenshot", "diagram", "figure", "banner"):
                 errs.append(f"画廊 {gid}: 图片 kind 不合法: {im.get('kind')}")
+            if im.get("shows") not in ("view", "ui", "method", "schema", "concept", "other"):
+                errs.append(f"画廊 {gid}: 图片要标 shows（view / ui / method / schema / concept / other）: {im.get('url')}")
         for u in urls:
             if not (isinstance(u, str) and u.startswith("https://") and " " not in u):
                 errs.append(f"画廊 {gid}: 地址不合法: {u}")
@@ -374,9 +376,12 @@ def render_evidence(d: dict, _arg: str) -> str:
 
 
 def gallery_images(g: dict) -> list[dict]:
-    """能展示的图片：核对过是图片；位图宽不小于 180、高不小于 100（更小的看不清）。"""
+    """能展示的图片：展示的是这个案例画出来的视图（shows 为 view）；核对过是图片；位图宽不小于 180、高不小于 100（更小的看不清）。
+    界面设置面板、架构与方法图、数据模型图、概念示意、模板和宣传页（shows 为别的值）留在数据里，不显示。"""
     out = []
     for im in g.get("images", []):
+        if im.get("shows") != "view":
+            continue
         ck = im.get("check") or {}
         if ck.get("status") != 200 or not str(ck.get("content_type", "")).startswith("image/"):
             continue

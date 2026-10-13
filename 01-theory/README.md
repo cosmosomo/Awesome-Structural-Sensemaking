@@ -9,7 +9,7 @@
 | [`interaction-patterns.md`](interaction-patterns.md) | 交互流派的分类，以及折叠这个具体问题。 |
 | [`multiscale-and-multiview.md`](multiscale-and-multiview.md) | 多尺度与多视图：模型层次与展示层次，对象身份，聚合与展开，静态结构与运行轨迹。 |
 | [`visual-encoding-and-layout.md`](visual-encoding-and-layout.md) | 视觉编码与布局：位置、连线、颜色承载什么，布局家族，聚合与布局的区别，布局稳定性。（初稿，材料有限） |
-| [`choosing-views.md`](choosing-views.md) | 怎么选画法：按结构、重点部分和任务选图，每条建议标证据等级，附设计者写下的代价。从 84 个案例归纳。 |
+| [`choosing-views.md`](choosing-views.md) | 怎么选画法：按结构、重点部分和任务选图，每条建议标证据等级，附设计者写下的代价。从案例归纳。 |
 | [`evaluation-theory.md`](evaluation-theory.md) | 评价理论：结构复杂度与理解难度是两个独立维度。 |
 | [`references.md`](references.md) | 经典研究。 |
 

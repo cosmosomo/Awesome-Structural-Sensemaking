@@ -3,7 +3,7 @@
 > 表格由 `scripts/build.py` 根据 `catalog/cases.yaml` 生成，请改数据，不要直接改表格。编码（归类、重点部分的判断）是整理者做的，不是项目官方的说法；每条编码后面的“摘录”是官方页面里的原文。
 
 <!-- gen:casestats: -->
-共 84 个案例：目录内项目 56 个，其他领域 28 个；覆盖 50 个领域标签。编码把握：高 44、中 30、低 10。
+共 97 个案例：目录内项目 56 个，其他领域 41 个；覆盖 61 个领域标签。编码把握：高 51、中 34、低 12。
 <!-- /gen -->
 
 ## 按主类结构分
@@ -44,6 +44,13 @@
 | [Gephi](https://gephi.org/desktop/) | 通用网络分析<br>探索网络、检验假设、发现复杂关系数据里的模式<br><sub>探索发现</sub> | 一般图与网络<br><sub>边或点带数值、对象或关系分类型、有方向</sub><br>节点表和边表；可以计算度量（介数、PageRank 等）和社区<br><sub>来源：现成数据；画法：连线图</sub> | 连通与邻域、群落与相似、对象上的度量 | 力导向图、节点连线图<br>图窗口、数据表、预览导出<br><sub>层级处理：</sub>按拓扑或属性实时过滤；按排名或分区数据设置颜色和大小；社区检测<br><sub>匹配与盲区：</sub>把“计算出的度量”映射到颜色和大小——图形上的重点由分析结果决定 | — | [摘录](case-evidence.md#gephi)<br><sub>把握：中</sub> |
 | [设计结构矩阵 DSM](https://dsmweb.org/reading-a-dsm/) | 工程系统与产品架构<br>看清一个系统里元素之间的依赖，决定怎样分组与排序（团队、模块、先后）<br><sub>建立全貌、影响范围</sub> | 一般图与网络<br><sub>有方向、对象或关系分类型、两类对象互相连接</sub><br>同一类元素的方阵：行是输出，列是输入，非对角格里的标记是依赖；也可以是两个域之间的矩阵<br><sub>来源：手工建构；画法：规则布局</sub> | 先后与依赖方向、环与反馈、群落与相似 | 设计结构矩阵、邻接矩阵<br>矩阵；排序（sequencing）使反馈标记集中，聚类（clustering）找模块，分带（banding）标出可并行的活动<br><sub>层级处理：</sub>聚类把大部分交互吸收到簇内；“域”是系统的一个特定视角，一张 DSM 只含一个域<br><sub>匹配与盲区：</sub>矩阵适合稠密依赖，并且重排行列就能暴露环（反馈）和模块——这是节点连线图做不到的 | <sub>为什么</sub> “The matrix provides a highly compact, easily scalable, and intuitively readable representation of a system architecture.”<br><sub>为什么</sub> “It is important that a DSM contains only one relationship type, as only then the analyses will make sense.”<br><sub>局限</sub> “A DSM always only contains elements from one domain.” | [摘录](case-evidence.md#dsm)<br><sub>把握：高</sub> |
 | [Luhmann 的卡片盒](https://www.uni-bielefeld.de/fakultaeten/soziologie/forschung/luhmann-archiv/pdf/jschmidt_zettelkasten-als-uberraschungsgenerator.pdf) | 知识管理与写作<br>让积累的笔记自己产生不显而易见的联想（“卡片盒为什么能发展出自己的创造力”）<br><sub>探索发现、构建编辑</sub> | 一般图与网络 + 层级与树<br><sub>对象或关系分类型、有版本或有效期</sub><br>每张卡片是一个单元；编号给出类似提纲或书籍目录的层级位置；卡片之间有引用，一张卡最多可列二十五个引用；另有关键词索引，同一个主题可以从不同入口进入（多重存放）<br><sub>来源：手工建构；画法：列表与文字</sub> | 连通与邻域、跨视图的同一对象<br>弱化：没有全局视图：只能沿引用和索引一步步走 | 实体卡片，没有画出来的图；但数据结构是图加层级加索引<br><sub>匹配与盲区：</sub>层级编号决定卡片放在哪里，引用建立横向联系，索引提供多个入口：同一个对象有多条到达路径。这里的“多条路径”是整理者对原文的概括 | — | [摘录](case-evidence.md#zettelkasten)<br><sub>把握：中</sub> |
+| [Git.Top Atlas](https://git.top/atlas) | 开源生态导航<br>从一个生态（如 Cloudflare、MCP、RAG）进入，看里面的项目、替代方案、依赖和评分，做取舍<br><sub>探索发现、决策与状态、比较</sub> | 一般图与网络 + 集合与分类<br><sub>对象或关系分类型、边或点带数值、派生（结构由别的材料推出，不是原始给定）、保留来源与证据</sub><br>生态里的项目是节点；替代、部署、依赖、用例、类别变成可复用的图边；项目带质量分和代理分（分开），回答附来源元数据、分类证据和置信度<br><sub>来源：算出来的；画法：连线图、列表与文字</sub> | 连通与邻域、对象上的度量 | Atlas 页：每个生态一张卡片，卡片里是该生态的小关系图；点进去按生态、项目、关系图与评分逐步收窄；另提供 Atlas JSON<br><sub>层级处理：</sub>“Start broad in Cloudflare Ecosystem, then narrow to one project with score and graph evidence” | <sub>为什么</sub> “Atlas is the Git.Top map layer: a way to move from ecosystem to project, graph, alternatives, and score without starting from a repository name.”<br><sub>原来的问题</sub> “Navigate ecosystems as connected project maps instead of isolated lists.” | [摘录](case-evidence.md#git-top-atlas)<br><sub>把握：中</sub> |
+| [SemRepo](https://arxiv.org/abs/2605.13310) | 研究软件知识图谱<br>把研究软件和论文、作者连起来，回答哪些论文对应的仓库仍在维护、被广泛复用、背后是哪些研究者<br><sub>检索召回、探索发现</sub> | 一般图与网络<br><sub>对象或关系分类型、派生（结构由别的材料推出，不是原始给定）、保留来源与证据</sub><br>以仓库为中心的本体：仓库、人（作者、贡献者、点赞者等角色）、Issue、编程语言引用、论文；贡献量和语言占比用中间节点（ContributorReference、LanguageReference）带上提交数和占比；作者链到 SemOpenAlex，仓库链到 LPWC 论文<br><sub>来源：算出来的、现成数据</sub> | 连通与邻域、关系上的类型与量 | 没有图形界面：以 RDF 转储和公开 SPARQL 端点提供，读到的页面里没有可视化（端点页是一个查询编辑器） | <sub>为什么</sub> “cannot be adequately represented by a simple binary predicate (e.g., hasContributor), as it must also encode the extent of the contribution”<br><sub>原来的问题</sub> “links to implementations are often buried in unstructured text, represented inconsistently, or missing altogether”<br><sub>局限</sub> “we acknowledge that it inherits structural biases and coverage limitations from upstream sources, i.e., uneven representation across languages, regions, and research communities.” | [摘录](case-evidence.md#semrepo)<br><sub>把握：高</sub> |
+| [MOSS（研究软件知识图谱）](https://pretalx.com/juliacon-2025/talk/3EVLR9/) | 研究软件知识图谱<br>把 Julia 生态里的仓库、贡献者、论文、机构连成属性图，看谁贡献了什么、哪些包被哪些论文引用<br><sub>探索发现、建立全貌</sub> | 一般图与网络<br><sub>对象或关系分类型、派生（结构由别的材料推出，不是原始给定）</sub><br>属性图：节点类型有仓库、论文、人、机构、主题，由关系连接；数据来自 GitHub、OpenAlex、CrossRef 等，经转换层统一字段、合并冲突、解析别名<br><sub>来源：算出来的</sub> | 连通与邻域 | 读到的页面只说“可视化代码贡献、论文与机构的关系”，没写画法；演讲页给的在线地址 opensource.science/moss 在这次访问里返回 404 | <sub>为什么</sub> “Our goal with MOSS is to unify disparate data streams, enabling a comprehensive understanding of the ecosystem’s evolution, areas of collaboration, academic influence”<br><sub>原来的问题</sub> “While the Julia ecosystem has grown impressively in recent years it remains challenging to identify use, impact, and relationships throughout the ecosystem.” | [摘录](case-evidence.md#moss)<br><sub>把握：低</sub> |
+| [Ecosyste.ms](https://packages.ecosyste.ms/) | 开源数据基础设施<br>为开源项目提供跨托管平台的包、仓库、依赖、提交、Issue 数据的开放 API，支撑生态研究与维护<br><sub>探索发现</sub> | 一般图与网络 + 序列与事件流<br><sub>对象或关系分类型、带时间、派生（结构由别的材料推出，不是原始给定）</sub><br>多个服务各管一块：包（含版本、命名空间、维护者）、仓库（含标签、清单、依赖）、Issue 与 PR、提交、时间线事件、论文与软件项目的映射；依赖是包之间的关系<br><sub>来源：算出来的</sub> | 连通与邻域 | 读到的是服务列表和规模数字，没有视图的描述 | <sub>为什么</sub> “we’ve designed, built, deployed and maintained 16 significant services to support, sustain, and secure critical digital infrastructure.”<br><sub>局限</sub> “We also used up the majority of our grant from Plaintext group and are exploring ways to continue funding further development of features” | [摘录](case-evidence.md#ecosystems)<br><sub>把握：低</sub> |
+| [OpenDigger](https://open-digger.cn/en/) | 开源活动指标<br>用统一的指标（活跃度、OpenRank 等）度量开源项目和开发者的活动与影响力随时间的变化<br><sub>决策与状态、探索发现</sub> | 一般图与网络 + 序列与事件流<br><sub>边或点带数值、带时间、派生（结构由别的材料推出，不是原始给定）、对象或关系分类型</sub><br>协作网络：开发者、仓库、Issue、合并的 PR 是节点，归属与活动是带权边；OpenRank 沿网络迭代并继承上个月的值；指标按月、季、年出时间序列<br><sub>来源：算出来的；画法：通道分配图</sub> | 对象上的度量、时间与演化、关系上的类型与量 | Playground：输入平台、仓库或用户名，看指标的柱线图；另有 OpenLeaderboard 和浏览器插件 HyperCRX 里的 Perceptor 标签<br><sub>层级处理：</sub>开发者活跃度求和成仓库活跃度；仓库的 OpenRank 平均分给它的 Issue 与 PR；指标按月、季、年汇总 | <sub>为什么</sub> “OpenRank was introduced to address the widespread observer effect in statistical indicators”<br><sub>原来的问题</sub> “such as the alienation behavior and community damage caused by metrics like the number of stars and contributors in open source projects”<br><sub>局限</sub> “OpenDigger does not export metrics data for all repositories and users.” | [摘录](case-evidence.md#opendigger)<br><sub>把握：高</sub> |
+| [deps.dev（Open Source Insights）](https://docs.deps.dev/) | 软件供应链<br>弄清一个包的完整依赖图、版本、许可证和安全公告，评估引入它会带来多大风险<br><sub>影响范围、建立全貌、定位异常</sub> | 一般图与网络<br><sub>有方向、对象或关系分类型、有版本或有效期、派生（结构由别的材料推出，不是原始给定）</sub><br>包、版本、依赖、许可证、安全公告、项目托管构成的图；传递依赖图按各包管理器自己的算法算出，不只是清单里声明的<br><sub>来源：算出来的；画法：连线图</sub> | 连通与邻域、对象上的度量 | 网站：搜索包、可视化依赖、比较版本、看安全公告；API 博客里的依赖图用 GraphViz 渲染<br><sub>层级处理：</sub>收集并聚合数据，再推出传递依赖图和安全公告的影响报告 | <sub>为什么</sub> “The goal is to provide developers with a picture of how their software is put together”<br><sub>原来的问题</sub> “The deps.dev dependency data is not just what a package declares (its manifests, lock files, etc.)”<br><sub>局限</sub> “The service currently indexes the Cargo, Go, Maven, npm, NuGet, PyPI, and RubyGems package ecosystems” | [摘录](case-evidence.md#deps-dev)<br><sub>把握：高</sub> |
+| [CodeGraph（面向源代码的开放分类知识图谱）](https://arxiv.org/abs/2609.29474) | 代码知识图谱<br>用代码本身而不是标签，找到实现某个算法、遵循某种范式、属于某个应用领域的文件，并看同一算法跨领域的复用<br><sub>检索召回、探索发现</sub> | 一般图与网络 + 层级与树<br><sub>对象或关系分类型、派生（结构由别的材料推出，不是原始给定）、保留来源与证据、嵌套（复合）</sub><br>文件节点连到抽取出的概念节点（算法、范式、设计模式、应用领域），边带类型和来源；概念再对齐到 Wikidata，并沿 Wikidata 的父类关系向上汇总；约 6.3 万个概念实体，1.449 亿个文件节点<br><sub>来源：算出来的；画法：通道分配图</sub> | 连通与邻域、包含与层次、来源与证据 | 没有图探索界面：论文里是方法流程图、组成统计图和“算法 × 应用领域”热图（用颜色表示出现次数）；数据在 Hugging Face 上以表格浏览<br><sub>层级处理：</sub>hierarchy-rollup：引入 Wikidata 的父类闭包，把细粒度概念汇总到任意层级 | <sub>为什么</sub> “The taxonomy is deliberately open: rather than constraining labels to a predefined taxonomy, the model generates free-form concept names that are reconciled a posteriori”<br><sub>原来的问题</sub> “Classical static-analysis tools dissect code with high precision but operate at a syntactic level that rarely captures what a program does or why it was designed in a certain way”<br><sub>局限</sub> “The two values therefore bracket the range of plausible precision estimates: 68% as a conservative lower bound and 88% as a loose upper bound” | [摘录](case-evidence.md#codegraph)<br><sub>把握：高</sub> |
 <!-- /gen -->
 
 ### 层级与树
@@ -74,6 +81,8 @@
 | [Universal Dependencies 依存树](https://universaldependencies.org/introduction.html) | 语言学<br>用同一套标注描述多种语言的句子结构，方便比较和训练解析器<br><sub>讲解传达、比较</sub> | 层级与树<br><sub>对象或关系分类型、有方向</sub><br>句子里每个词有一个中心词（HEAD）和一个依存关系类型（DEPREL）；另有增强依存图以容纳多中心词<br><sub>来源：手工建构；画法：列表与文字、连线图</sub> | 关系上的类型与量、包含与层次 | 纯文本格式（CoNLL-U）；另有简单的文件查看器<br><sub>层级处理：</sub>通用类别清单，加上语言专属扩展<br><sub>匹配与盲区：</sub>数据格式几乎就是结构的定义：每行一个词，两列表达“指向谁、什么关系” | — | [摘录](case-evidence.md#universal-dependencies)<br><sub>把握：中</sub> |
 | [Wikipedia 摘要式写作](https://en.wikipedia.org/wiki/Wikipedia:Summary_style) | 百科写作<br>一个大主题的文章太长，如何拆分又不让读者迷路<br><sub>讲解传达</sub> | 层级与树<br><sub>嵌套（复合）</sub><br>主文章加子文章；主文章里留下每个子主题的摘要段，并链接到子文章；子文章有自己的导语，与主文章里的摘要相近，并链回父文章<br><sub>来源：手工建构；画法：列表与文字</sub> | 包含与层次、跨视图的同一对象 | 文字，用小标题下的“主条目”链接连接上下两层<br><sub>层级处理：</sub>语义概括（摘要）加链接钻取；要求在子文章里先开发新内容，再概括回父文章<br><sub>匹配与盲区：</sub>摘要与全文共存，读者一次点击切换层级；同步问题（摘要与子文章不一致）靠模板标记 | <sub>原来的问题</sub> “Articles over a certain size might not cover their topic in a way that is easy to find or read.”<br><sub>为什么</sub> “Summary style keeps the reader from being overwhelmed by too much information up front, by summarizing main points and going into more details on particular points (subtopics) in separate articles.”<br><sub>局限</sub> “If the child article changes considerably without updating the parent article, the summary of the child article in the parent article will need to be rewritten to do it justice.” | [摘录](case-evidence.md#wikipedia-summary-style)<br><sub>把握：高</sub> |
 | [Markmap](https://markmap.js.org/docs/markmap) | 知识管理与写作<br>把一篇 Markdown 文档的层级直接看成一张可折叠的思维导图<br><sub>建立全貌、讲解传达</sub> | 层级与树<br><sub>派生（结构由别的材料推出，不是原始给定）、嵌套（复合）</sub><br>Markdown 的标题和列表被解析成树，再渲染成 SVG 思维导图；文字和导图共用一份源<br><sub>来源：算出来的；画法：连线图</sub> | 包含与层次<br>弱化：只用到层级这一种关系；文章里的论证、引用、跨节联系不会出现在导图里（整理者判断） | 树状图<br>可缩放、平移、折叠的思维导图；分支颜色按祖先冻结<br><sub>层级处理：</sub>初始展开层数可设置；折叠一个节点和它的所有后代<br><sub>匹配与盲区：</sub>把分层文章和结构图连起来最直接的一例，但连的只是“层级”这一种关系 | — | [摘录](case-evidence.md#markmap)<br><sub>把握：高</sub> |
+| [ATLAS：用多个 LLM Agent 自动构建软件仓库分类体系](https://arxiv.org/abs/2606.21597) | 软件仓库分类<br>给五万多个 GitHub 仓库建一棵带定义和拆分理由的多层分类树，用来按任意粒度检索、找功能等价的替代项目、看生态趋势<br><sub>检索召回、探索发现</sub> | 层级与树<br><sub>派生（结构由别的材料推出，不是原始给定）、嵌套（复合）</sub><br>分类树：每个节点有名称、定义、纳入标准、拆分维度、层级、父子关系和归入的仓库；54k 版本有 9 个顶层领域、9 层、36,000 个节点；一个仓库只归入一个主要功能角色<br><sub>来源：算出来的；画法：连线图</sub> | 包含与层次、有什么<br>弱化：活跃度、许可证、安全等维度不进分类；不做多标签 | 探索器（Rank-Aligned View）：把各分支按语义层级对齐的树，可展开、折叠，高亮后插入的子层和深度被调整的节点<br><sub>层级处理：</sub>层级越深越具体；构建后做“层级对齐”，让不同分支的粒度一致；从粗类进入逐层下钻 | <sub>为什么</sub> “GitHub Topics, the dominant organizational mechanism, is flat, inconsistent, and covers only 67% of projects.”<br><sub>原来的问题</sub> “Embedding-based clustering groups repositories by pairwise similarity but lacks the top-down semantic knowledge to choose meaningful splitting criteria at each level”<br><sub>局限</sub> “ATLAS assigns each repository a single dominant functional role, and multi-label classification is outside its current scope.” | [摘录](case-evidence.md#atlas-taxonomy)<br><sub>把握：高</sub> |
+| [Speculora](https://speculora.com/) | 市场需求分析<br>让独立开发者看到软件需求在哪里拥挤、哪里有可用的缺口<br><sub>决策与状态、探索发现、比较</sub> | 层级与树 + 表与多维属性<br><sub>对象或关系分类型、边或点带数值、派生（结构由别的材料推出，不是原始给定）、带时间</sub><br>15 个领域，下分子领域，下面是“任务”（人想完成的一件具体事）；每个任务带需求、供给、质量、价格信号，算出缺口等级和机会分；证据来自应用商店评论和技术论坛<br><sub>来源：算出来的；画法：列表与文字、包含与面积图</sub> | 对象上的度量、有什么<br>弱化：以“任务”而不是“市场”为单位 | 首页是交互地图；领域页是按机会分数排序的任务列表，每项标缺口等级、应用数和用户反馈数；无头浏览器打开首页还看到 Top gaps、Full tree、Treemap 等标签（整理者所见，官方文字没有说明）<br><sub>层级处理：</sub>领域、子领域、任务三级；缺口等级把多项信号合成一个状态 | <sub>为什么</sub> “It is not another idea generator.”<br><sub>原来的问题</sub> “There has been no systematic way for a solo builder to see where demand is crowded versus where exploitable gaps sit.”<br><sub>局限</sub> “And gaps decay, so freshness matters.” | [摘录](case-evidence.md#speculora)<br><sub>把握：中</sub> |
 <!-- /gen -->
 
 ### 有向无环图
@@ -89,6 +98,7 @@
 | [OpenMetadata](https://docs.open-metadata.org/latest/quick-start/sandbox) | 数据工程<br>发现数据资产，并追踪数据怎么变换、在哪被使用<br><sub>追踪流向、影响范围、探索发现</sub> | 有向无环图<br><sub>有方向、对象或关系分类型、带时间、有版本或有效期、派生（结构由别的材料推出，不是原始给定）</sub><br>表、主题、仪表盘、管道等资产是节点，边带 SQL 与字段级血缘；资产元数据有版本<br><sub>来源：算出来的；画法：连线图、列表与文字</sub> | 先后与依赖方向、关系上的类型与量、时间与演化 | DAG 图<br>血缘图与影响分析表并列：同一批上下游资产，一个画成图，一个列成表<br><sub>层级处理：</sub>节点可展开上下游与字段；多个探索层（字段层、服务层、领域层、数据产品层）；日历控件按时间限定边 | <sub>为什么</sub> “a table that lists the same upstream and downstream assets as rows instead of nodes on a graph, which is easier to scan, search, and sort when an asset has a large number of dependencies.”<br><sub>局限</sub> “If an edge falls outside the selected window, the graph excludes every asset reachable only through that edge, even if later edges fall inside the window.” | [摘录](case-evidence.md#openmetadata)<br><sub>把握：高</sub> |
 | [Git 提交历史](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell) | 版本控制<br>回看发生过什么，分支怎样分叉与合并<br><sub>追踪流向、比较</sub> | 有向无环图<br><sub>有方向、带时间、有版本或有效期</sub><br>提交对象指向父提交（零个、一个或多个），分支只是指向某个提交的可移动指针<br><sub>来源：运行记录；画法：列表与文字、连线图</sub> | 先后与依赖方向、时间与演化 | git log 按时间倒序列出；--graph 在日志旁画分支与合并的 ASCII 图<br><sub>层级处理：</sub>oneline、stat、shortstat 等汇总选项把每个提交压缩成一行或几个数字<br><sub>匹配与盲区：</sub>数据结构是 DAG（合并提交有多个父亲），默认视图却是按时间排的一维列表，需要 --graph 才露出分叉结构 | — | [摘录](case-evidence.md#git-history)<br><sub>把握：高</sub> |
 | [家谱图的交互可视化](https://www.cs.ubc.ca/~tmm/courses/grad/slides/week8.pdf) | 谱系与家族史<br>在家谱里按自己的关系去探索，不迷路<br><sub>探索发现</sub> | 有向无环图<br><sub>有方向</sub><br>家谱是图，不是树：一个人有祖先树和后代树，婚姻连接两棵树；世代是天然的层<br><sub>来源：现成数据；画法：连线图</sub> | 连通与邻域、包含与层次 | 树状图<br>节点按世代排序，无交叉；祖先树与后代树结合（双树）<br><sub>层级处理：</sub>选中后折叠展开做拓扑导航；预览点标示可展开处<br><sub>匹配与盲区：</sub>这里的方法是把图看成以当前人为根的两棵树，再让交互承担拓扑导航 | <sub>原来的问题</sub> “conventional charts of large, extended families inevitably contain at least some long edges or nodes displaced far away from their close relatives, to make room for other nodes”<br><sub>为什么</sub> “convinced us to focus on visualizing only a subset of the graph at a time, and therefore to identify which subset might be best.”<br><sub>局限</sub> “Dual-trees can show many generations vertically, but have a horizontal extent limited to ancestors or descendants of 2 root nodes.” | [摘录](case-evidence.md#genealogical-graphs)<br><sub>把握：低</sub> |
+| [Software Heritage Graph Dataset](https://registry.opendata.aws/software-heritage/) | 源代码历史图谱<br>跨项目、跨托管平台追踪同一份源码和它的开发历史，研究公开软件开发的长尾<br><sub>追踪流向、探索发现</sub> | 有向无环图<br><sub>有方向、有版本或有效期、保留来源与证据</sub><br>统一的 Merkle DAG，五个逻辑层：内容（叶子）、目录、修订（提交）、发布、快照；目录项指向内容、修订或别的目录，修订指向根目录和父修订；相同节点被共享，用密码学哈希作标识<br><sub>来源：运行记录</sub> | 先后与依赖方向、来源与证据、跨视图的同一对象 | 没有交互视图：论文里是数据模型图（图 2）和简化 schema；数据以关系表提供，可用 SQL 查询。官方文档站被反机器人页拦住，没读到<br><sub>层级处理：</sub>去重：所有相同的节点被共享；跨版本控制系统和包管理器，给出规范的表示 | <sub>为什么</sub> “The Software Heritage Graph Dataset exploits the fact that source code artifacts are massively duplicated across hosts and projects [12] to enable tracking of software artifacts across projects”<br><sub>原来的问题</sub> “This approach has limitations in scope: (1) it works on subsets of the complete corpus of publicly available software, (2) it makes cross-repository history analysis hard”<br><sub>局限</sub> “The dataset captures the state of the Software Heritage archive on September 25th 2018” | [摘录](case-evidence.md#software-heritage-graph)<br><sub>把握：高</sub> |
 <!-- /gen -->
 
 ### 表与多维属性
@@ -134,6 +144,7 @@
 | [CNCF Landscape](https://landscape.cncf.io/) | 技术生态<br>在云原生生态里找到某类项目，并查看具体项目的信息<br><sub>探索发现、建立全貌</sub> | 集合与分类<br><sub>对象或关系分类型</sub><br>项目归入分类；分类是几层的目录，项目带成熟度等属性；没有项目之间的关系<br><sub>来源：现成数据；画法：包含与面积图</sub> | 有什么、对象上的度量 | 按类别分块的景观图，带筛选<br><sub>层级处理：</sub>筛选；点项目看详情；状态可以通过网址分享 | — | [摘录](case-evidence.md#cncf-landscape)<br><sub>把握：中</sub> |
 | [Thoughtworks Technology Radar](https://www.thoughtworks.com/radar) | 技术生态<br>判断每项技术或做法现在是否推荐采用<br><sub>决策与状态</sub> | 集合与分类<br><sub>对象或关系分类型、带时间</sub><br>每条技术（blip）有象限（种类）和环（推荐程度）两个类别属性，还标记本期新增或移动<br><sub>来源：手工建构；画法：规则布局</sub> | 对象上的度量、时间与演化<br>弱化：技术之间的关系完全不表达 | 雷达：象限分种类，环由内到外表示采用建议<br><sub>层级处理：</sub>按象限查看 | — | [摘录](case-evidence.md#thoughtworks-tech-radar)<br><sub>把握：高</sub> |
 | [Zalando Tech Radar](https://github.com/zalando/tech-radar) | 技术生态<br>帮工程团队为新项目选技术，并跟踪技术决策的演变<br><sub>决策与状态</sub> | 集合与分类<br><sub>对象或关系分类型</sub><br>一张技术清单，每项带“环”（ring assignment）这一评估结果<br><sub>来源：手工建构；画法：规则布局</sub> | 对象上的度量<br>弱化：技术之间的关系不表达 | 雷达 | — | [摘录](case-evidence.md#zalando-tech-radar)<br><sub>把握：中</sub> |
+| [Open Source AI Gap Map](https://www.aipotluck.org/map) | 开源生态评估<br>看开源 AI 生态里哪些类别已经成熟、哪里还有缺口，好决定资金和精力投向哪里<br><sub>决策与状态、建立全貌</sub> | 集合与分类 + 表与多维属性<br><sub>对象或关系分类型、边或点带数值</sub><br>产品归入类别，类别归入三个层次（模型组件、产品与用户体验、基础设施）；产品带开放程度、能力、采用程度，打 1 到 5 分；成熟度阶段和缺口是类别的属性，不是产品的属性<br><sub>来源：手工建构、现成数据；画法：通道分配图、列表与文字</sub> | 对象上的度量、有什么<br>弱化：不比较开源与闭源生态谁领先，只说开源生态还缺什么 | 按层次分页签的类别列表：每行一个类别，列出成熟度阶段、发现的缺口（字母标记）和该类别下的开放产品（色块，得分高的实心、其余只画轮廓）<br><sub>层级处理：</sub>类别的成熟度由其中完全开放的产品推进；三个层次分页签 | <sub>为什么</sub> “we intentionally don’t compare closed versus open AI ecosystems, or point to where open source AI leads or lags. Instead, the Gap Map illustrates what’s needed to build the system we want.”<br><sub>原来的问题</sub> “Repository stars can provide a useful signal when better data is unavailable, but they are not treated as equivalent to real usage.”<br><sub>局限</sub> “The map is a curated view of a fast-moving ecosystem, not a complete census.” | [摘录](case-evidence.md#oss-ai-gap-map)<br><sub>把握：中</sub> |
 <!-- /gen -->
 
 ### 空间与几何
@@ -143,6 +154,8 @@
 | --- | --- | --- | --- | --- | --- | --- |
 | [Embedding Projector](https://projector.tensorflow.org/) | 机器学习<br>检查相近的点是否在语义上真的相关，并在高维空间里找有意义的方向<br><sub>探索发现、定位异常</sub> | 空间与几何<br><sub>派生（结构由别的材料推出，不是原始给定）</sub><br>每个词（或样本）是高维向量，被投影到二维或三维；点带标签<br><sub>来源：算出来的；画法：通道分配图</sub> | 群落与相似、空间位置<br>弱化：投影以外的维度和精确距离；全局形状靠投影方法保留多少 | 二维/三维散点（投影视图）+ 右侧检视面板（搜索、最近邻）<br><sub>层级处理：</sub>缩放旋转平移；选取一个球；“隔离点”只分析选中的 | <sub>原来的问题</sub> “Unfortunately, these static views are generally inadequate for exploring high-dimensional data”<br><sub>为什么</sub> “it is customized for the kinds of tasks faced by machine learning developers and researchers”<br><sub>局限</sub> “it could be useful to visually compare two embeddings. Doing so would require nontrivial additions to the current visualizations.” | [摘录](case-evidence.md#embedding-projector)<br><sub>把握：高</sub> |
 | [Circos](https://pmc.ncbi.nlm.nih.gov/articles/PMC2752132/) | 比较基因组<br>比较基因组，显示基因组位置对之间的关系<br><sub>比较、探索发现</sub> | 空间与几何 + 一般图与网络<br><sub>边或点带数值</sub><br>基因组位置（线性坐标上的区间）和位置之间的对应关系（比对、重排）<br><sub>来源：现成数据；画法：规则布局</sub> | 空间位置、连通与邻域 | 弦图<br>环形 ideogram + 彩带（ribbon）：位置、大小、方向；外圈叠加散点、直方图、热图等轨道<br><sub>层级处理：</sub>全基因组视图放不下小尺度事件，用密度图聚合；坐标轴断开后聚焦感兴趣的区域<br><sub>匹配与盲区：</sub>环形把线性坐标首尾相接，腾出圆内空间给位置对之间的连线 | <sub>原来的问题</sub> “In such figures, multitudes of lines transgress unrelated ideograms and make patterns very difficult to discern.”<br><sub>为什么</sub> “we require instructive and clear visualizations that (1) adapt to the density and dynamic range of the data, (2) maintain complexity and detail in the data”<br><sub>局限</sub> “The resolution of a whole-genome view precludes the display of individual small-scale events at their native scale.” | [摘录](case-evidence.md#circos)<br><sub>把握：中</sub> |
+| [Semantic Map of GitHub](https://stevenfazzio.com/semantic-github-map/) | 开源生态地图<br>看高 Star 仓库按 README 语义自然聚成哪些主题，每个仓库在地图上和谁相邻<br><sub>探索发现、建立全貌</sub> | 空间与几何<br><sub>派生（结构由别的材料推出，不是原始给定）、对象或关系分类型</sub><br>每个仓库是一个点；位置由 README 的向量经降维得到，语义相近的挨在一起；多层级主题标签由层次密度聚类生成；每个仓库另有大模型从 README 提取的标题、摘要、标语、项目类型、目标读者<br><sub>来源：算出来的；画法：通道分配图、示意与隐喻图</sub> | 空间位置、群落与相似<br>弱化：页面写明簇与簇之间的距离不宜读作差异大小的精确度量；README 短于 200 字符的仓库不收 | 交互 HTML 地图（DataMapPlot）：悬停看标题、标语、类型、语言、Star；可换颜色（创建时间、最近推送、簇）；可搜索、过滤、点击跳转<br><sub>层级处理：</sub>主题标签分多个细节层级，从大类到子主题，缩放时出现 | <sub>原来的问题</sub> “This project instead uses a content-based signal.”<br><sub>为什么</sub> “This avoids the Search API's 1,000-result cap and non-deterministic ordering.”<br><sub>局限</sub> “Selection bias. The map includes only the top 10,000 repositories by star count.” | [摘录](case-evidence.md#semantic-map-github)<br><sub>把握：高</sub> |
+| [Map of GitHub](https://anvaka.github.io/map-of-github/) | 开源生态地图<br>看 GitHub 上几十万个项目在“被同一批人点 Star”的空间里怎样分布成一块块“国家”，找到相邻的项目<br><sub>探索发现</sub> | 空间与几何<br><sub>派生（结构由别的材料推出，不是原始给定）、边或点带数值</sub><br>点是项目；两点靠得近，是因为多个用户同时给两者点过 Star；约 69 万个项目聚成约 1,500 个“国家”；点的大小是 Star 数<br><sub>来源：算出来的；画法：示意与隐喻图、通道分配图</sub> | 群落与相似、空间位置 | 二维地图：点按共同 Star 的用户聚成团，团有名字（国家）；可缩放、搜索项目、与 ChatGPT 对话。地图风格的国家、地区隐喻是页面自己的说法<br><sub>层级处理：</sub>约 69 万个项目聚成约 1,500 个国家；缩放到一定程度才看得到单个项目（无结果时页面提示 Try zooming in?） | — | [摘录](case-evidence.md#map-of-github)<br><sub>把握：中</sub> |
 <!-- /gen -->
 
 ### 因果与反馈
@@ -170,16 +183,16 @@
 | 主要重点 \ 主类结构 | 集合与分类 | 表与多维属性 | 层级与树 | 有向无环图 | 一般图与网络 | 命题与论证 | 序列与事件流 | 流量网络 | 空间与几何 | 因果与反馈 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 有什么 | CNCF Landscape | · | · | · | · | · | · | · | · | · |
-| 包含与层次 | · | · | CodeBoarding、LikeC4、AgentPrism、AgentScope 2.0、Arize Phoenix、Comet Opik、Tree-sitter、Docling、OneZoom 生命之树、Reactome 通路浏览器、CodeCity、Treemap（磁盘空间）、火焰图、Wikipedia 摘要式写作、Markmap | · | · | Kialo 论证树、CmapTools 概念图 | OpenLLMetry | · | · | · |
-| 连通与邻域 | · | PyGraphistry | Grafana Tempo | 家谱图的交互可视化 | dependency-cruiser、Understand Anything、Node-RED、Backstage、Apache SkyWalking、Kiali、diagrams.net / draw.io、Kumu、Docling Graph、LightRAG、伦敦地铁图（Beck）、ICIJ Offshore Leaks 数据库、VOWL / WebVOWL 本体可视化、Hive Plot、Gephi、Luhmann 的卡片盒 | Argdown | · | · | · | · |
-| 先后与依赖方向 | · | · | · | AgentEnsemble Viz、Marquez、AgentEnsemble、Nx、DataHub、OpenMetadata、Git 提交历史 | bpmn-js、Dify、Langflow、Flowise、LangGraph / Studio、AutoGen / AutoGen Studio、SBGN 系统生物学图形标记、设计结构矩阵 DSM | · | · | · | · | · |
+| 包含与层次 | · | · | CodeBoarding、LikeC4、AgentPrism、AgentScope 2.0、Arize Phoenix、Comet Opik、Tree-sitter、Docling、OneZoom 生命之树、Reactome 通路浏览器、CodeCity、Treemap（磁盘空间）、火焰图、Wikipedia 摘要式写作、Markmap、ATLAS：用多个 LLM Agent 自动构建软件仓库分类体系 | · | · | Kialo 论证树、CmapTools 概念图 | OpenLLMetry | · | · | · |
+| 连通与邻域 | · | PyGraphistry | Grafana Tempo | 家谱图的交互可视化 | dependency-cruiser、Understand Anything、Node-RED、Backstage、Apache SkyWalking、Kiali、diagrams.net / draw.io、Kumu、Docling Graph、LightRAG、伦敦地铁图（Beck）、ICIJ Offshore Leaks 数据库、VOWL / WebVOWL 本体可视化、Hive Plot、Gephi、Luhmann 的卡片盒、Git.Top Atlas、SemRepo、MOSS（研究软件知识图谱）、Ecosyste.ms、deps.dev（Open Source Insights）、CodeGraph（面向源代码的开放分类知识图谱） | Argdown | · | · | · | · |
+| 先后与依赖方向 | · | · | · | AgentEnsemble Viz、Marquez、AgentEnsemble、Nx、DataHub、OpenMetadata、Git 提交历史、Software Heritage Graph Dataset | bpmn-js、Dify、Langflow、Flowise、LangGraph / Studio、AutoGen / AutoGen Studio、SBGN 系统生物学图形标记、设计结构矩阵 DSM | · | · | · | · | · |
 | 环与反馈 | · | · | · | · | Madge、pydeps | · | · | · | · | Insight Maker |
-| 对象上的度量 | Thoughtworks Technology Radar、Zalando Tech Radar | Grafana、Build Your Own Radar、OSS Compass、Wikidata Query Service 结果视图、Gapminder 气泡图 | · | · | NeoDash | · | OpenTelemetry GenAI 语义约定 | · | · | · |
+| 对象上的度量 | Thoughtworks Technology Radar、Zalando Tech Radar、Open Source AI Gap Map | Grafana、Build Your Own Radar、OSS Compass、Wikidata Query Service 结果视图、Gapminder 气泡图 | Speculora | · | NeoDash、OpenDigger | · | OpenTelemetry GenAI 语义约定 | · | · | · |
 | 关系上的类型与量 | · | · | Universal Dependencies 依存树 | · | · | 图尔敏论证模型 | · | LLNL 美国能源流向图 | · | Explorable Explanations |
 | 时间与演化 | · | · | Jaeger、Langfuse、AgentOps、LangWatch | · | Graphiti | · | Up and Down the Ladder of Abstraction | · | · | · |
 | 跨视图的同一对象 | · | · | AFFiNE、Nextstrain / Auspice | · | n8n | · | · | · | · | · |
-| 群落与相似 | · | · | · | · | InfraNodus、Microsoft GraphRAG | · | · | · | Embedding Projector | · |
-| 空间位置 | · | · | · | · | · | · | · | · | Circos | · |
+| 群落与相似 | · | · | · | · | InfraNodus、Microsoft GraphRAG | · | · | · | Embedding Projector、Map of GitHub | · |
+| 空间位置 | · | · | · | · | · | · | · | · | Circos、Semantic Map of GitHub | · |
 | 总体分布 | · | OSS Insight | · | · | · | · | · | · | · | · |
 <!-- /gen -->
 
@@ -189,17 +202,17 @@
 | 议题（首位） \ 主类结构 | 集合与分类 | 表与多维属性 | 层级与树 | 有向无环图 | 一般图与网络 | 命题与论证 | 序列与事件流 | 流量网络 | 空间与几何 | 因果与反馈 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 定位异常 | · | · | AgentPrism、Jaeger、Langfuse、Arize Phoenix、Comet Opik、AgentOps、LangWatch、Treemap（磁盘空间）、火焰图 | · | dependency-cruiser、Madge、pydeps、n8n、LangGraph / Studio、Apache SkyWalking、Kiali | · | · | · | · | · |
-| 影响范围 | · | · | CodeBoarding | Marquez、Nx、DataHub | · | · | · | · | · | · |
+| 影响范围 | · | · | CodeBoarding | Marquez、Nx、DataHub | deps.dev（Open Source Insights） | · | · | · | · | · |
 | 建立全貌 | · | · | LikeC4、Grafana Tempo、AgentScope 2.0、CodeCity、Markmap | AgentEnsemble Viz | Understand Anything、Backstage、Kumu、Microsoft GraphRAG、伦敦地铁图（Beck）、设计结构矩阵 DSM | · | · | · | · | · |
-| 追踪流向 | · | · | · | OpenMetadata、Git 提交历史 | · | · | · | LLNL 美国能源流向图 | · | · |
+| 追踪流向 | · | · | · | OpenMetadata、Git 提交历史、Software Heritage Graph Dataset | · | · | · | LLNL 美国能源流向图 | · | · |
 | 比较 | · | · | · | · | · | · | · | · | Circos | · |
-| 决策与状态 | Thoughtworks Technology Radar、Zalando Tech Radar | Build Your Own Radar、OSS Compass | · | · | · | · | · | · | · | · |
-| 探索发现 | CNCF Landscape | Grafana、OSS Insight、PyGraphistry、Wikidata Query Service 结果视图、Gapminder 气泡图 | Nextstrain / Auspice、OneZoom 生命之树、Reactome 通路浏览器 | 家谱图的交互可视化 | InfraNodus、ICIJ Offshore Leaks 数据库、Hive Plot、Gephi、Luhmann 的卡片盒 | · | Up and Down the Ladder of Abstraction | · | Embedding Projector | · |
+| 决策与状态 | Thoughtworks Technology Radar、Zalando Tech Radar、Open Source AI Gap Map | Build Your Own Radar、OSS Compass | Speculora | · | OpenDigger | · | · | · | · | · |
+| 探索发现 | CNCF Landscape | Grafana、OSS Insight、PyGraphistry、Wikidata Query Service 结果视图、Gapminder 气泡图 | Nextstrain / Auspice、OneZoom 生命之树、Reactome 通路浏览器 | 家谱图的交互可视化 | InfraNodus、ICIJ Offshore Leaks 数据库、Hive Plot、Gephi、Luhmann 的卡片盒、Git.Top Atlas、MOSS（研究软件知识图谱）、Ecosyste.ms | · | Up and Down the Ladder of Abstraction | · | Embedding Projector、Semantic Map of GitHub、Map of GitHub | · |
 | 论证推理 | · | · | · | · | · | Argdown、Kialo 论证树、图尔敏论证模型 | · | · | · | · |
 | 推演仿真 | · | · | · | · | · | · | · | · | · | Insight Maker |
 | 构建编辑 | · | · | AFFiNE、Tree-sitter、Docling | AgentEnsemble | bpmn-js、NeoDash、Dify、Langflow、Node-RED、Flowise、AutoGen / AutoGen Studio、diagrams.net / draw.io、Docling Graph | CmapTools 概念图 | · | · | · | · |
 | 讲解传达 | · | · | Universal Dependencies 依存树、Wikipedia 摘要式写作 | · | SBGN 系统生物学图形标记、VOWL / WebVOWL 本体可视化 | · | · | · | · | Explorable Explanations |
-| 检索召回 | · | · | · | · | LightRAG、Graphiti | · | · | · | · | · |
+| 检索召回 | · | · | ATLAS：用多个 LLM Agent 自动构建软件仓库分类体系 | · | LightRAG、Graphiti、SemRepo、CodeGraph（面向源代码的开放分类知识图谱） | · | · | · | · | · |
 <!-- /gen -->
 
 ### 画法流派 × 主类结构
@@ -209,13 +222,13 @@
 <!-- gen:schoolcount:structure -->
 | 主流派 \ 主类结构 | 集合与分类 | 表与多维属性 | 层级与树 | 有向无环图 | 一般图与网络 | 命题与论证 | 序列与事件流 | 流量网络 | 空间与几何 | 因果与反馈 | 合计 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 连线图 | · | 1 | 5 | 7 | 22 | · | · | · | · | · | 35 |
+| 连线图 | · | 1 | 6 | 7 | 24 | · | · | · | · | · | 38 |
 | 包含与面积图 | 1 | · | 3 | · | · | · | · | · | · | · | 4 |
 | 时间轴条图 | · | · | 7 | · | · | · | · | · | · | · | 7 |
 | 规则布局 | 2 | 1 | · | · | 2 | · | · | · | 1 | · | 6 |
-| 通道分配图 | · | 5 | · | · | 1 | · | 1 | 1 | 1 | · | 9 |
-| 示意与隐喻图 | · | · | 1 | · | 1 | · | · | · | · | · | 2 |
-| 列表与文字 | · | · | 6 | 1 | 1 | 1 | · | · | · | 1 | 10 |
+| 通道分配图 | 1 | 5 | · | · | 3 | · | 1 | 1 | 2 | · | 13 |
+| 示意与隐喻图 | · | · | 1 | · | 1 | · | · | · | 1 | · | 3 |
+| 列表与文字 | · | · | 7 | 1 | 1 | 1 | · | · | · | 1 | 11 |
 | 记法图 | · | · | 1 | · | 3 | 3 | · | · | · | 1 | 8 |
 <!-- /gen -->
 
@@ -224,13 +237,13 @@
 <!-- gen:schoolcount:source -->
 | 主流派 \ 首位来源 | 手工建构 | 运行记录 | 算出来的 | 现成数据 | 合计 |
 | --- | --- | --- | --- | --- | --- |
-| 连线图 | 11 | 5 | 15 | 4 | 35 |
+| 连线图 | 11 | 5 | 18 | 4 | 38 |
 | 包含与面积图 | · | · | 2 | 2 | 4 |
 | 时间轴条图 | · | 7 | · | · | 7 |
 | 规则布局 | 3 | · | · | 3 | 6 |
-| 通道分配图 | 1 | 2 | 2 | 4 | 9 |
-| 示意与隐喻图 | 1 | · | · | 1 | 2 |
-| 列表与文字 | 6 | 2 | 2 | · | 10 |
+| 通道分配图 | 2 | 2 | 5 | 4 | 13 |
+| 示意与隐喻图 | 1 | · | 1 | 1 | 3 |
+| 列表与文字 | 6 | 2 | 3 | · | 11 |
 | 记法图 | 7 | · | · | 1 | 8 |
 <!-- /gen -->
 
@@ -239,14 +252,14 @@
 <!-- gen:caseforms: -->
 | 主类结构 | 案例数 | 用到的图形（图形×案例数） | 没有对应图形库条目的视图 |
 | --- | --- | --- | --- |
-| 集合与分类 | 3 | — | 3 个案例只有文字描述的视图 |
+| 集合与分类 | 4 | — | 4 个案例只有文字描述的视图 |
 | 表与多维属性 | 7 | 有向依赖图×1、节点连线图×1、散点矩阵×1 | 4 个案例只有文字描述的视图 |
-| 层级与树 | 23 | Trace 瀑布图×5、树状图×3、嵌套复合图×2、有向依赖图×2、火焰图×2、多视图架构图×1、UML 时序图×1、地图×1、3D 场景×1、矩形树图×1、冰柱图×1 | 6 个案例只有文字描述的视图 |
-| 有向无环图 | 8 | DAG 图×6、甘特图×2、有向依赖图×1、树状图×1 | 1 个案例只有文字描述的视图 |
-| 一般图与网络 | 31 | 有向依赖图×6、流程图×6、知识图谱×4、节点连线图×4、概念图×2、力导向图×2、BPMN×1、3D 场景×1、因果回路图×1、设计结构矩阵×1、邻接矩阵×1 | 10 个案例只有文字描述的视图 |
+| 层级与树 | 25 | Trace 瀑布图×5、树状图×3、嵌套复合图×2、有向依赖图×2、火焰图×2、多视图架构图×1、UML 时序图×1、地图×1、3D 场景×1、矩形树图×1、冰柱图×1 | 8 个案例只有文字描述的视图 |
+| 有向无环图 | 9 | DAG 图×6、甘特图×2、有向依赖图×1、树状图×1 | 2 个案例只有文字描述的视图 |
+| 一般图与网络 | 38 | 有向依赖图×6、流程图×6、知识图谱×4、节点连线图×4、概念图×2、力导向图×2、BPMN×1、3D 场景×1、因果回路图×1、设计结构矩阵×1、邻接矩阵×1 | 17 个案例只有文字描述的视图 |
 | 命题与论证 | 4 | 论证地图×2、概念图×1 | 1 个案例只有文字描述的视图 |
 | 序列与事件流 | 3 | — | 1 个案例只有文字描述的视图 |
 | 流量网络 | 1 | 桑基图×1 | 0 个案例只有文字描述的视图 |
-| 空间与几何 | 2 | 弦图×1 | 1 个案例只有文字描述的视图 |
+| 空间与几何 | 4 | 弦图×1 | 3 个案例只有文字描述的视图 |
 | 因果与反馈 | 2 | 存量流量图×1、因果回路图×1 | 1 个案例只有文字描述的视图 |
 <!-- /gen -->

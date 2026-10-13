@@ -1349,7 +1349,7 @@
 - 视图：“laid out with Force-Atlas so related ideas sit close together” [✓](https://infranodus.com/tutorial/create-your-first-knowledge-graph)
 - 视图：“1 Topics View 2 Concepts View” [✓](https://infranodus.com/tutorial/create-your-first-knowledge-graph)
 - 交互：“create the graph manually with a plain text editor” [✓](https://infranodus.com/use-case/text-network-analysis)
-- 交互：“You can use the powerful filters to perform sentiment analysis” [✓](https://infranodus.com/)
+- 交互：“You can use the powerful filters to perform sentiment analysis” [？](https://infranodus.com/)
 - 交互：“Use the network representation to find the structural gaps in your discourse.” [✓](https://infranodus.com/use-case/text-network-analysis)
 - 回答的问题：“Generate better insights and steer your LLM's reasoning.” [✓](https://infranodus.com/)
 - 回答的问题：“Then apply the built-in AI to generate research questions to bridge those gaps.” [✓](https://infranodus.com/use-case/text-network-analysis)
@@ -2951,4 +2951,507 @@
 
 </details>
 - 没读到：encodings
+
+<a id="oss-ai-gap-map"></a>
+
+### Open Source AI Gap Map
+
+- 领域：开源生态评估；议题：看开源 AI 生态里哪些类别已经成熟、哪里还有缺口，好决定资金和精力投向哪里
+- 编码：集合与分类 + 表与多维属性；重点：对象上的度量、有什么；把握：页面信息支持，归类靠推断
+- 说明：调研里的“62,538 个收录条目、1,133 个已评分、v0.5.0、2026-10-13 更新、三个层次”，官方页面都找到了原文（页面写 Version 0.5.0 - Last update: 13 Oct 2026）；已评分占比约 1.8% 是调研按这两个数算的。官方方法页写明这是“curated view … not a complete census”。
+- 编码所依据的原文：
+  - 抽象与层级：“Maturity is a property of a category, not an individual product.” [✓](https://www.aipotluck.org/map/methodology)
+  - 属性与度量：“Every product carries a score on a 1–5 scale, blending capability and adoption.” [✓](https://www.aipotluck.org/map/gap-map)
+  - 回答的问题：“What layers are overinvested in, or underfunded?” [✓](https://www.currentai.org/blogs/introducing-the-gap-map-v0-1)
+  - 编码：“Products scoring 4.5 or above are leading, those from 4.0 to 4.5 are strong, and everything below is shown outlined.” [✓](https://www.aipotluck.org/map/gap-map)
+  - 关系：“Only fully open products advance a category's Maturity Stage.” [✓](https://www.aipotluck.org/map/methodology)
+<details><summary>本案例读到的其他原文摘录</summary>
+
+- 处理的材料：“We draw on large-scale software supply-chain data from Open Source Observer, along with GitHub, Hugging Face, package registries” [✓](https://www.aipotluck.org/map/methodology)
+- 处理的材料：“We identified and evaluated over 24,600 projects from foundation models through inference backends” [✓](https://www.currentai.org/blogs/introducing-the-gap-map-v0-1)
+- 对象：“The map scores products and categories separately, using different criteria for each.” [✓](https://www.aipotluck.org/map/methodology)
+- 关系：“We research prominent products in depth, classify them into the map's categories, and evaluate them against the three axes.” [✓](https://www.aipotluck.org/map/methodology)
+- 属性与度量：“Open-ish: Important components are available, but meaningful restrictions or missing pieces remain.” [✓](https://www.aipotluck.org/map/methodology)
+- 属性与度量：“Each category receives a Maturity Stage from 0 (Void) to 5 (Mature), along with one or more gaps describing what its open ecosystem still lacks.” [✓](https://www.aipotluck.org/map/methodology)
+- 视图：“created a map based on the three core pillars of building an AI system.” [✓](https://www.aipotluck.org/map)
+- 视图：“Maturity stage Gaps found Category Open(ish) products” [✓](https://www.aipotluck.org/map/gap-map)
+- 编码：“c Capability gap a Adoption gap r Resiliency gap o Openness gap d Disclosure gap” [✓](https://www.aipotluck.org/map/gap-map)
+- 交互：“Interact with the Gap Map at map.currentai.org. Click through it to explore the ecosystem.” [✓](https://www.currentai.org/blogs/introducing-the-gap-map-v0-1)
+- 交互：“More information about stages and gaps can be found on the Methodology page” [✓](https://www.aipotluck.org/map/gap-map)
+- 回答的问题：“What projects exist across the various layers of the stack?” [✓](https://www.currentai.org/blogs/introducing-the-gap-map-v0-1)
+- 回答的问题：“Where are open source options lagging because of adoption, maturity, or capability?” [✓](https://www.currentai.org/blogs/introducing-the-gap-map-v0-1)
+- 回答的问题：“What building blocks are missing for creating completely open source AI products?” [✓](https://www.currentai.org/blogs/introducing-the-gap-map-v0-1)
+- 抽象与层级：“These products are organized into 14 categories across 3 layers of the stack (model components, product / UX, and infrastructure).” [✓](https://www.currentai.org/blogs/introducing-the-gap-map-v0-1)
+- 为什么这样画：“we intentionally don’t compare closed versus open AI ecosystems, or point to where open source AI leads or lags. Instead, the Gap Map illustrates what’s needed to build the system we want.” [✓](https://www.currentai.org/blogs/introducing-the-gap-map-v0-1)
+- 为什么这样画：“we’ve tried to strike the right balance between making it easy to understand (to funders, policymakers, designers, and business people)” [✓](https://www.currentai.org/blogs/introducing-the-gap-map-v0-1)
+- 为什么这样画：“If we see the gaps, we can prioritize them, and then we can collectively direct energy and funding to closing them.” [✓](https://www.currentai.org/blogs/introducing-the-gap-map-v0-1)
+- 原来的问题：“Repository stars can provide a useful signal when better data is unavailable, but they are not treated as equivalent to real usage.” [✓](https://www.aipotluck.org/map/methodology)
+- 原来的问题：“We prefer direct usage signals — such as package downloads, model downloads, active users, or deployments — over measures of attention or popularity.” [✓](https://www.aipotluck.org/map/methodology)
+- 局限与代价：“The map is a curated view of a fast-moving ecosystem, not a complete census.” [✓](https://www.aipotluck.org/map/methodology)
+- 局限与代价：“Adoption measures are imperfect proxies and can change with reporting methods.” [✓](https://www.aipotluck.org/map/methodology)
+- 局限与代价：“Some classifications require editorial judgment where external standards do not provide a definitive answer.” [✓](https://www.aipotluck.org/map/methodology)
+- 局限与代价：“This map only shows the first 2 types.” [✓](https://www.aipotluck.org/map/gap-map)
+
+</details>
+
+<a id="atlas-taxonomy"></a>
+
+### ATLAS：用多个 LLM Agent 自动构建软件仓库分类体系
+
+- 领域：软件仓库分类；议题：给五万多个 GitHub 仓库建一棵带定义和拆分理由的多层分类树，用来按任意粒度检索、找功能等价的替代项目、看生态趋势
+- 编码：层级与树；重点：包含与层次、有什么；把握：官方页面直接写了
+- 说明：调研里的“54,387 个仓库、36,000 个节点、9 层 9 个顶层领域、Star 至少 1,000、数据含定义与纳入标准、85.71% 的 Top-1 精度”五条，官方 Zenodo 页都找到了原文。85.71% 是作者在替代项目发现任务上的实验精度，不是现实产品推荐的已验证准确率（调研也这样提醒）。
+- 编码所依据的原文：
+  - 抽象与层级：“tree depth encodes increasing specificity” [✓](https://arxiv.org/html/2606.21597v1)
+  - 抽象与层级：“After construction, a Level Alignment phase establishes a unified semantic rank system across branches, ensuring cross-branch granularity consistency.” [✓](https://arxiv.org/html/2606.21597v1)
+  - 交互：“Expand All Collapse All Highlight Inserted Highlight Sub-layer Highlight Depth Changed Clear Highlight” [✓](https://atlas-taxonomy.netlify.app/)
+  - 属性与度量：“every category carries a name, definition, and splitting rationale” [✓](https://arxiv.org/html/2606.21597v1)
+<details><summary>本案例读到的其他原文摘录</summary>
+
+- 处理的材料：“each with full_name, description, stars, language, topics, created_at, html_url, license_name, and an LLM-generated summary.” [✓](https://zenodo.org/records/21160280)
+- 处理的材料：“ATLAS requires repositories with sufficient textual metadata for meaningful classification.” [✓](https://arxiv.org/html/2606.21597v1)
+- 对象：“every node carries name, definition, criteria, its splitting dimension, level, parent_id / children_ids, and the classified repo_ids” [✓](https://zenodo.org/records/21160280)
+- 关系：“alternative discovery (finding functionally equivalent projects as siblings in the same category)” [✓](https://arxiv.org/html/2606.21597v1)
+- 属性与度量：“the L1 artifact type dimension (Library, Application, Platform, etc.)” [✓](https://arxiv.org/html/2606.21597v1)
+- 属性与度量：“36986 Nodes 28632 Leaves 986 Inserted 18560 Depth Changed 54390 Repos” [✓](https://atlas-taxonomy.netlify.app/)
+- 视图：“ATLAS: Hierarchical Taxonomy of 54k GitHub Repositories — Rank-Aligned View” [✓](https://atlas-taxonomy.netlify.app/)
+- 视图：“Fig. 4 (a) shows L1 domain proportions by repository creation year.” [✓](https://arxiv.org/html/2606.21597v1)
+- 交互：“the multi-rank hierarchy with per-node definitions lets a developer enter at a coarse category and drill down” [✓](https://arxiv.org/html/2606.21597v1)
+- 回答的问题：“so a developer replacing one tool retrieves genuine alternatives” [✓](https://arxiv.org/html/2606.21597v1)
+- 回答的问题：“multi-granularity retrieval (searching at any level of specificity), alternative discovery (finding functionally equivalent projects as siblings in the same category), and ecosystem analysis (revealing structural trends across domains and time)” [✓](https://arxiv.org/html/2606.21597v1)
+- 抽象与层级：“The 54k taxonomy contains 36,000 nodes over 9 levels under 9 top-level domains.” [✓](https://zenodo.org/records/21160280)
+- 为什么这样画：“GitHub Topics, the dominant organizational mechanism, is flat, inconsistent, and covers only 67% of projects.” [✓](https://arxiv.org/html/2606.21597v1)
+- 为什么这样画：“these capabilities require structured hierarchies with explicit definitions and splitting criteria, not merely tag matching or embedding similarity” [✓](https://arxiv.org/html/2606.21597v1)
+- 为什么这样画：“classification failures are not noise to be discarded, but diagnostic signals that reveal how the current design is deficient” [✓](https://arxiv.org/html/2606.21597v1)
+- 原来的问题：“GitHub Topics, the ecosystem’s only organizational mechanism, assigns flat, user-defined tags with no hierarchy, no normalization (e.g., machine-learning vs. ml), and no coverage guarantee” [✓](https://arxiv.org/html/2606.21597v1)
+- 原来的问题：“build taxonomies from pure LLM knowledge without grounding in actual data, producing well-organized structures that nevertheless fail to accommodate real repositories.” [✓](https://arxiv.org/html/2606.21597v1)
+- 原来的问题：“Embedding-based clustering groups repositories by pairwise similarity but lacks the top-down semantic knowledge to choose meaningful splitting criteria at each level” [✓](https://arxiv.org/html/2606.21597v1)
+- 局限与代价：“which may not generalize to other ecosystems or below-threshold repositories.” [✓](https://arxiv.org/html/2606.21597v1)
+- 局限与代价：“ATLAS assigns each repository a single dominant functional role, and multi-label classification is outside its current scope.” [✓](https://arxiv.org/html/2606.21597v1)
+- 局限与代价：“Assessing maintenance risk, license compatibility, or security posture draws on activity, license, or vulnerability axes that a functional taxonomy does not encode, and these fall outside our scope.” [✓](https://arxiv.org/html/2606.21597v1)
+- 局限与代价：“The summary pipeline depends on DeepWiki, a third-party service whose long-term availability we cannot guarantee.” [✓](https://arxiv.org/html/2606.21597v1)
+
+</details>
+- 没读到：encodings
+
+<a id="semantic-map-github"></a>
+
+### Semantic Map of GitHub
+
+- 领域：开源生态地图；议题：看高 Star 仓库按 README 语义自然聚成哪些主题，每个仓库在地图上和谁相邻
+- 编码：空间与几何；重点：空间位置、群落与相似；把握：官方页面直接写了
+- 说明：调研里的“约 1 万个高 Star 仓库、README 转向量、UMAP 降维、公开处理脚本”，官方方法页都找到了原文（向量 512 维，用 Cohere embed-v4.0；降维到二维）。调研说“地图距离来自 README 语义，不是经过验证的产品定位”，方法页的局限一节也写了：README 稀疏或有误导会被放错位置。
+- 编码所依据的原文：
+  - 编码：“Repositories with similar descriptions and purposes appear near each other” [✓](https://stevenfazzio.com/semantic-github-map/methodology.html)
+  - 抽象与层级：“Cluster labels appear on the map at multiple levels of detail, from broad categories down to specific sub-topics.” [✓](https://stevenfazzio.com/semantic-github-map/methodology.html)
+  - 属性与度量：“Each README is processed by Claude Haiku to extract five fields: a project title, a 2–3 sentence summary, a short tagline, a project type classification, and a target audience label.” [✓](https://stevenfazzio.com/semantic-github-map/methodology.html)
+<details><summary>本案例读到的其他原文摘录</summary>
+
+- 处理的材料：“each candidate is looked up via the GitHub GraphQL API (batched 25–50 per request), collecting metadata (name, stars, language, license, creation date) and the full README content.” [✓](https://stevenfazzio.com/semantic-github-map/methodology.html)
+- 对象：“maps the top 10,000 most-starred GitHub repositories onto a 2D plane” [✓](https://stevenfazzio.com/semantic-github-map/methodology.html)
+- 关系：“positioned by the semantic similarity of their README files.” [✓](https://stevenfazzio.com/semantic-github-map/methodology.html)
+- 属性与度量：“Hover: Hover over any point to see the project title, owner, tagline, project type, primary language, star and fork counts, and a short summary.” [✓](https://stevenfazzio.com/semantic-github-map/methodology.html)
+- 视图：“Combines coordinates, labels, and metadata into an interactive HTML map using DataMapPlot, with multiple colormaps, search, hover tooltips, and click-to-open functionality.” [✓](https://stevenfazzio.com/semantic-github-map/methodology.html)
+- 编码：“Older repos appear in darker tones; newer repos appear brighter.” [✓](https://stevenfazzio.com/semantic-github-map/methodology.html)
+- 编码：“Green indicates recent activity; red indicates staleness.” [✓](https://stevenfazzio.com/semantic-github-map/methodology.html)
+- 编码：“inter-cluster distances should not be read as precise measurements of dissimilarity.” [✓](https://stevenfazzio.com/semantic-github-map/methodology.html)
+- 交互：“Pan and zoom: Click and drag to pan; scroll to zoom in and out.” [✓](https://stevenfazzio.com/semantic-github-map/methodology.html)
+- 交互：“Search: Use the search box to find specific repositories by name.” [✓](https://stevenfazzio.com/semantic-github-map/methodology.html)
+- 交互：“Filter panel: Open the sidebar to narrow the visible points with range sliders” [✓](https://stevenfazzio.com/semantic-github-map/methodology.html)
+- 交互：“Click: Click any point to open the repository on GitHub in a new tab.” [✓](https://stevenfazzio.com/semantic-github-map/methodology.html)
+- 回答的问题：“revealing natural clusters of related projects across the open-source ecosystem” [✓](https://stevenfazzio.com/semantic-github-map/methodology.html)
+- 抽象与层级：“Uses the Toponymy library for hierarchical density-based clustering” [✓](https://stevenfazzio.com/semantic-github-map/methodology.html)
+- 为什么这样画：“This avoids the Search API's 1,000-result cap and non-deterministic ordering.” [✓](https://stevenfazzio.com/semantic-github-map/methodology.html)
+- 为什么这样画：“These choices were made for quality and convenience” [✓](https://stevenfazzio.com/semantic-github-map/methodology.html)
+- 原来的问题：“This project instead uses a content-based signal.” [✓](https://stevenfazzio.com/semantic-github-map/methodology.html)
+- 原来的问题：“The two approaches produce meaningfully different groupings” [✓](https://stevenfazzio.com/semantic-github-map/methodology.html)
+- 局限与代价：“Selection bias. The map includes only the top 10,000 repositories by star count.” [✓](https://stevenfazzio.com/semantic-github-map/methodology.html)
+- 局限与代价：“A repository with a sparse or misleading README will be misplaced, and READMEs shorter than 200 characters are excluded entirely.” [✓](https://stevenfazzio.com/semantic-github-map/methodology.html)
+- 局限与代价：“Point-in-time snapshot. The map reflects a single moment.” [✓](https://stevenfazzio.com/semantic-github-map/methodology.html)
+- 局限与代价：“Proprietary tooling. There is some irony in using proprietary, closed-source tools” [✓](https://stevenfazzio.com/semantic-github-map/methodology.html)
+
+</details>
+
+<a id="map-of-github"></a>
+
+### Map of GitHub
+
+- 领域：开源生态地图；议题：看 GitHub 上几十万个项目在“被同一批人点 Star”的空间里怎样分布成一块块“国家”，找到相邻的项目
+- 编码：空间与几何；重点：群落与相似、空间位置；把握：页面信息支持，归类靠推断
+- 说明：调研里的“约 69 万个项目、约 1,500 个聚类、用共同 Star 的用户重合度算距离、数据到 2025 年 5 月前”，官方页面（About 文字在页面加载的脚本里）都找到了原文；页面写的是 Star 数据到 2025 年 4 月底，没写发布日期。“揭示的是开发者兴趣结构，不是产品需求结构”是调研的判断，页面只写“多个用户同时给两者点 Star”。官方页没有设计思路类的说明，所以没有 thinking。
+- 编码所依据的原文：
+  - 抽象与层级：“The map has approximately 690,000 projects, clustered into 1,500 countries.” [✓](https://anvaka.github.io/map-of-github/assets/startVue-168cc34e.js)
+  - 关系：“Two dots within the same cluster are usually close to each other if multiple users frequently gave stars to both projects.” [✓](https://anvaka.github.io/map-of-github/assets/startVue-168cc34e.js)
+  - 属性与度量：“The size of the dot indicates the number of stars the project has received.” [✓](https://anvaka.github.io/map-of-github/assets/startVue-168cc34e.js)
+<details><summary>本案例读到的其他原文摘录</summary>
+
+- 处理的材料：“The map is build based on 500 million stars given to GitHub projects between 2011 and end of April, 2025.” [✓](https://anvaka.github.io/map-of-github/assets/startVue-168cc34e.js)
+- 对象：“Each dot is a GitHub project.” [✓](https://anvaka.github.io/map-of-github/assets/startVue-168cc34e.js)
+- 编码：“The size of the dot indicates the number of stars the project has received.” [✓](https://anvaka.github.io/map-of-github/assets/startVue-168cc34e.js)
+- 编码：“Two dots within the same cluster are usually close to each other if multiple users frequently gave stars to both projects.” [✓](https://anvaka.github.io/map-of-github/assets/startVue-168cc34e.js)
+- 交互：“Chat with ChatGPT” [✓](https://anvaka.github.io/map-of-github/assets/startVue-168cc34e.js)
+- 交互：“No repositories found. Try zooming in?” [✓](https://anvaka.github.io/map-of-github/assets/startVue-168cc34e.js)
+- 局限与代价：“Two dots within the same cluster are usually close to each other if multiple users frequently gave stars to both projects.” [✓](https://anvaka.github.io/map-of-github/assets/startVue-168cc34e.js)
+- 局限与代价：“The map is build based on 500 million stars given to GitHub projects between 2011 and end of April, 2025.” [✓](https://anvaka.github.io/map-of-github/assets/startVue-168cc34e.js)
+
+</details>
+- 没读到：questions；why；alternative；views
+
+<a id="git-top-atlas"></a>
+
+### Git.Top Atlas
+
+- 领域：开源生态导航；议题：从一个生态（如 Cloudflare、MCP、RAG）进入，看里面的项目、替代方案、依赖和评分，做取舍
+- 编码：一般图与网络 + 集合与分类；重点：连通与邻域、对象上的度量；把握：页面信息支持，归类靠推断
+- 说明：调研里的“Beta、覆盖 Agent/MCP/RAG/浏览器 AI/AI IDE/LLM Gateway、从类别进项目看关系图替代方案评分、项目约一千多个”，官方页面都找到了原文（页面写 1216 projects loaded）。页面没有写评分怎么算，所以评分的依据没核实。
+- 编码所依据的原文：
+  - 抽象与层级：“Start broad in Cloudflare Ecosystem, then narrow to one project with score and graph evidence.” [✓](https://git.top/atlas)
+  - 关系：“Alternatives, deployments, dependencies, use cases, and categories become reusable graph edges.” [✓](https://git.top/)
+  - 属性与度量：“Quality score and agent score are separate.” [✓](https://git.top/)
+  - 属性与度量：“Responses include source metadata, classification evidence, and signal confidence.” [✓](https://git.top/)
+<details><summary>本案例读到的其他原文摘录</summary>
+
+- 处理的材料：“Data source: d1 / d1_query” [✓](https://git.top/atlas)
+- 对象：“Explore open-source ecosystems as maps of projects, alternatives, dependencies, and journeys.” [✓](https://git.top/topics/atlas-guide)
+- 对象：“Edge-native AI and agent projects connected to Workers, D1, R2, Durable Objects, and AI Gateway.” [✓](https://git.top/atlas)
+- 关系：“Inspect relationships around cloudflare/agents.” [✓](https://git.top/atlas)
+- 视图：“Atlas is the Git.Top map layer: a way to move from ecosystem to project, graph, alternatives, and score without starting from a repository name.” [✓](https://git.top/atlas)
+- 视图：“Explore open-source ecosystems as maps of projects, alternatives, dependencies, and journeys.” [✓](https://git.top/topics/atlas-guide)
+- 交互：“Browse indexed projects around Cloudflare Ecosystem.” [✓](https://git.top/atlas)
+- 交互：“Compare the strongest indexed projects in Cloudflare Ecosystem before choosing a default.” [✓](https://git.top/atlas)
+- 交互：“Find replacements and adjacent options for cloudflare/agents.” [✓](https://git.top/atlas)
+- 交互：“Inspect relationships around cloudflare/agents.” [✓](https://git.top/atlas)
+- 回答的问题：“Use Atlas when the user wants a map of a space such as Cloudflare, MCP, RAG, or AI agents rather than a single project recommendation.” [✓](https://git.top/topics/atlas-guide)
+- 回答的问题：“Move from open-source ecosystem maps to ordered journeys, comparison paths, and decision-ready project shortlists.” [✓](https://git.top/topics/atlas-journey-guide)
+- 抽象与层级：“Explore project clusters, deployment targets, dependencies, and related tools.” [✓](https://git.top/)
+- 为什么这样画：“Atlas is the Git.Top map layer: a way to move from ecosystem to project, graph, alternatives, and score without starting from a repository name.” [✓](https://git.top/atlas)
+- 为什么这样画：“GitHub provides the code. Git.Top provides the knowledge: project meaning, alternatives, dependencies, ecosystems, scores, and agent-readable recommendations.” [✓](https://git.top/)
+- 原来的问题：“Navigate ecosystems as connected project maps instead of isolated lists.” [✓](https://git.top/)
+- 原来的问题：“rather than a single project recommendation.” [✓](https://git.top/topics/atlas-guide)
+- 局限与代价：“Atlas Beta Open-source ecosystems as a map” [✓](https://git.top/atlas)
+
+</details>
+- 没读到：encodings
+
+<a id="semrepo"></a>
+
+### SemRepo
+
+- 领域：研究软件知识图谱；议题：把研究软件和论文、作者连起来，回答哪些论文对应的仓库仍在维护、被广泛复用、背后是哪些研究者
+- 编码：一般图与网络；重点：连通与邻域、关系上的类型与量；把握：官方页面直接写了
+- 说明：调研里的“约 19.8 万个仓库的元数据、Issue、开发者与论文关联、SPARQL、约半年更新一次”，官方论文都找到了原文（197,566 个唯一仓库地址；approx. twice per year）。整理者的读法〔推〕：把“贡献”做成带提交数的中间节点，是给边加属性的一种做法（Hogan 等综述里叫 reification），和本库“一般图”一节讲的一致。
+- 编码所依据的原文：
+  - 对象：“At the center of the ontology is the class Repository, representing code artifacts.” [✓](https://arxiv.org/pdf/2605.13310)
+  - 关系：“sr:ContributorReference, which acts as an intermediate node linking a repository and a contributor while storing commit counts.” [✓](https://arxiv.org/pdf/2605.13310)
+  - 交互：“(b) We deploy the dataset in triple store and expose a SPARQL endpoint (see Page 1) for direct querying and integration with external systems.” [✓](https://arxiv.org/pdf/2605.13310)
+<details><summary>本案例读到的其他原文摘录</summary>
+
+- 处理的材料：“We started by extracting all GitHub repository links from the LPWC [11].” [✓](https://arxiv.org/pdf/2605.13310)
+- 处理的材料：“We retrieved and consolidated metadata for the identified repositories from GitHub over a fixed collection period (21 days).” [✓](https://arxiv.org/pdf/2605.13310)
+- 对象：“specialized subclasses capturing distinct roles within the software lifecycle, including Author, Contributor, Stargazer, Watcher, Forker, and IssueAuthor.” [✓](https://arxiv.org/pdf/2605.13310)
+- 对象：“Repository activity is captured through several entities, importantly Issue, ContributorReference, and LanguageReference,” [✓](https://arxiv.org/pdf/2605.13310)
+- 关系：“repository authors are linked to their profiles in SemOpenAlex, repositories are connected to scholarly publications in LPWC” [✓](https://arxiv.org/pdf/2605.13310)
+- 关系：“hasSoaUrl linking to author profiles in SemOpenAlex, hasLpwcUrl linking to entries in LPWC, and hasMlseaUrl connecting to software entities in MLSea.” [✓](https://arxiv.org/pdf/2605.13310)
+- 关系：“We model this using the class sr:LanguageReference, which connects a repository to a programming language and annotates the relationship with its usage share.” [✓](https://arxiv.org/pdf/2605.13310)
+- 属性与度量：“encodes key activity indicators (e.g., number of contributors, commits, stars, forks, and issues, issue states and interaction metadata, and dependency usage) via class Package.” [✓](https://arxiv.org/pdf/2605.13310)
+- 属性与度量：“as it must also encode the extent of the contribution (e.g., number of commits)” [✓](https://arxiv.org/pdf/2605.13310)
+- 交互：“Accessibility is supported via RDF dumps and a public SPARQL endpoint, enabling both bulk download and query-based access.” [✓](https://arxiv.org/pdf/2605.13310)
+- 交互：“We enable URI resolution within the Linked Open Data Cloud.” [✓](https://arxiv.org/pdf/2605.13310)
+- 回答的问题：“Which repositories linked to influential papers are still actively maintained, widely reused, and who are the researchers behind them?” [✓](https://arxiv.org/pdf/2605.13310)
+- 回答的问题：“Which institutions contribute most to open research software?” [✓](https://scads.ai/semrepo-knowledge-graph-for-research-software/)
+- 回答的问题：“Which research communities build sustainable software ecosystems?” [✓](https://scads.ai/semrepo-knowledge-graph-for-research-software/)
+- 回答的问题：“the systematic identification of risks to research reproducibility and software sustainability” [✓](https://arxiv.org/pdf/2605.13310)
+- 抽象与层级：“We model human actors through a general Person class, with specialized subclasses capturing distinct roles within the software lifecycle” [✓](https://arxiv.org/pdf/2605.13310)
+- 抽象与层级：“This role-based hierarchy enables fine-grained analysis of participation patterns and community engagement.” [✓](https://arxiv.org/pdf/2605.13310)
+- 为什么这样画：“One of the key objectives of SemRepo is to bridge the fragmentation between research software and its surrounding scholarly ecosystem.” [✓](https://arxiv.org/pdf/2605.13310)
+- 为什么这样画：“cannot be adequately represented by a simple binary predicate (e.g., hasContributor), as it must also encode the extent of the contribution” [✓](https://arxiv.org/pdf/2605.13310)
+- 为什么这样画：“SemRepo provides this missing semantic layer.” [✓](https://scads.ai/semrepo-knowledge-graph-for-research-software/)
+- 原来的问题：“links to implementations are often buried in unstructured text, represented inconsistently, or missing altogether” [✓](https://arxiv.org/pdf/2605.13310)
+- 原来的问题：“these resources largely stop at the level of scholarly communication and do not explicitly capture downstream software artifacts.” [✓](https://arxiv.org/pdf/2605.13310)
+- 原来的问题：“these links remain shallow: Repositories are not semantically modeled with contributors, issues, dependencies, licences, and language composition as first-class entities” [✓](https://arxiv.org/pdf/2605.13310)
+- 局限与代价：“we acknowledge that it inherits structural biases and coverage limitations from upstream sources, i.e., uneven representation across languages, regions, and research communities.” [✓](https://arxiv.org/pdf/2605.13310)
+- 局限与代价：“Future work will extend SemRepo beyond GitHub by incorporating platforms such as GitLab and Bitbucket” [✓](https://arxiv.org/pdf/2605.13310)
+- 局限与代价：“Subject to the availability of upstream data sources and infrastructure constraints.” [✓](https://arxiv.org/pdf/2605.13310)
+
+</details>
+- 没读到：views；encodings
+
+<a id="moss"></a>
+
+### MOSS（研究软件知识图谱）
+
+- 领域：研究软件知识图谱；议题：把 Julia 生态里的仓库、贡献者、论文、机构连成属性图，看谁贡献了什么、哪些包被哪些论文引用
+- 编码：一般图与网络；重点：连通与邻域；把握：证据很少
+- 说明：只读到 JuliaCon 2025 的演讲介绍页和 NumFOCUS 的项目页，没有读到项目自己的文档。调研里的三条说法——“把仓库、作者、机构、出版物、依赖关系连起来”“记录关系的发现来源”“代码最近一次更新停留在 2025 年 7 月”——在这两页里都没找到（演讲页没提依赖关系和来源记录；更新时间要看 GitHub，没有访问），**未核实**。
+- 编码所依据的原文：
+  - 对象：“The resulting property graph uses well-defined node types such as Repository, Paper, Person, Institution, and Topic, each linked by relationships.” [✓](https://pretalx.com/juliacon-2025/talk/3EVLR9/)
+  - 处理的材料：“a system that consolidates data from GitHub, OpenAlex, CrossRef, and other scholarly sources to build an integrated knowledge graph” [✓](https://pretalx.com/juliacon-2025/talk/3EVLR9/)
+<details><summary>本案例读到的其他原文摘录</summary>
+
+- 处理的材料：“GitHub: Repositories, contributors, pull requests, issues, and CITATION.cff files that contain DOIs to relevant academic publications.” [✓](https://pretalx.com/juliacon-2025/talk/3EVLR9/)
+- 处理的材料：“Scholarly APIs (OpenAlex, CrossRef, Semantic Scholar): Paper metadata, references, citations, and institutional affiliations.” [✓](https://pretalx.com/juliacon-2025/talk/3EVLR9/)
+- 关系：“the dynamic relationships—who contributed to which package, which institutions are tied to key Julia projects, and how academic citations reference these repositories” [✓](https://pretalx.com/juliacon-2025/talk/3EVLR9/)
+- 关系：“Automatically linking Julia repositories with the papers they implement or reference.” [✓](https://pretalx.com/juliacon-2025/talk/3EVLR9/)
+- 属性与度量：“capturing not only static metadata (e.g., repository descriptions or paper titles)” [✓](https://pretalx.com/juliacon-2025/talk/3EVLR9/)
+- 视图：“By visualizing the interplay between code contributions, scholarly publications, and institutional relationships” [✓](https://pretalx.com/juliacon-2025/talk/3EVLR9/)
+- 交互：“how MOSS can be configured to zero in on the Julia community” [✓](https://pretalx.com/juliacon-2025/talk/3EVLR9/)
+- 交互：“Explore our early mappings at https://opensource.science/moss” [✓](https://pretalx.com/juliacon-2025/talk/3EVLR9/)
+- 回答的问题：“Developers can discover underexplored collaborations, researchers can trace code dependencies in scientific papers” [✓](https://pretalx.com/juliacon-2025/talk/3EVLR9/)
+- 回答的问题：“Quantifying how often key Julia packages are cited in academic works, and in which fields they hold the most influence.” [✓](https://pretalx.com/juliacon-2025/talk/3EVLR9/)
+- 回答的问题：“identify needs and gaps where new projects are required or existing projects should be extended or integrated with other OSS projects.” [✓](https://numfocus.org/open-source-science-initiative-ossci)
+- 抽象与层级：“A data transformation layer standardizes fields, merges conflicting information, and resolves aliases.” [✓](https://pretalx.com/juliacon-2025/talk/3EVLR9/)
+- 为什么这样画：“Our goal with MOSS is to unify disparate data streams, enabling a comprehensive understanding of the ecosystem’s evolution, areas of collaboration, academic influence” [✓](https://pretalx.com/juliacon-2025/talk/3EVLR9/)
+- 为什么这样画：“We systematically map all areas of science to the OSS projects used to advance those areas” [✓](https://numfocus.org/open-source-science-initiative-ossci)
+- 原来的问题：“While the Julia ecosystem has grown impressively in recent years it remains challenging to identify use, impact, and relationships throughout the ecosystem.” [✓](https://pretalx.com/juliacon-2025/talk/3EVLR9/)
+- 局限与代价：“Integration with additional scholarly sources (e.g., ORCID for contributor disambiguation).” [✓](https://pretalx.com/juliacon-2025/talk/3EVLR9/)
+- 局限与代价：“Explore our early mappings at https://opensource.science/moss” [✓](https://pretalx.com/juliacon-2025/talk/3EVLR9/)
+
+</details>
+- 没读到：encodings
+
+<a id="ecosystems"></a>
+
+### Ecosyste.ms
+
+- 领域：开源数据基础设施；议题：为开源项目提供跨托管平台的包、仓库、依赖、提交、Issue 数据的开放 API，支撑生态研究与维护
+- 编码：一般图与网络 + 序列与事件流；重点：连通与邻域；把握：证据很少
+- 说明：只读到作者 Andrew Nesbitt 2023 年 12 月的年终博客，所有数字是 2023 年底的；官方文档站（各服务的 API 文档）这次没有读。调研里“跨托管平台整合仓库、包、依赖、Issue、提交和历史事件、开放 API”，博客里能对上（784 个托管平台、74.3 亿条事件、各服务都是开放 API）。
+- 编码所依据的原文：
+  - 对象：“Hosts: 784 Repositories: 183,755,645 Owners: 10,543,833 Tags: 188,198,256 Manifests: 190,349,152 Dependencies: 14,051,505,152” [✓](https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html)
+  - 关系：“Dependencies: 14,051,505,152” [✓](https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html)
+<details><summary>本案例读到的其他原文摘录</summary>
+
+- 处理的材料：“the pure amount of data being indexed (over 10TB of data across all services)” [✓](https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html)
+- 处理的材料：“Registries: 59 Packages: 8,647,405” [✓](https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html)
+- 对象：“Versions: 93,009,665 Namespaces: 1,284,530 Maintainers: 1,412,065” [✓](https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html)
+- 对象：“Events: 7.43 Billion” [✓](https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html)
+- 关系：“An open API service providing mapping between scientific papers and software projects that are mentioned in them.” [✓](https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html)
+- 属性与度量：“An open API service for providing issue and pull request metadata for open source projects.” [✓](https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html)
+- 属性与度量：“An open API service providing commit metadata for open source projects.” [✓](https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html)
+- 属性与度量：“An open API service providing dependency metadata for docker projects.” [✓](https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html)
+- 交互：“An open API service for producing an overview of a list of open source projects.” [✓](https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html)
+- 交互：“An open API service for discovering and reviewing projects for opensustain.tech.” [✓](https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html)
+- 抽象与层级：“An open API service for producing an overview of a list of open source projects.” [✓](https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html)
+- 为什么这样画：“we’ve designed, built, deployed and maintained 16 significant services to support, sustain, and secure critical digital infrastructure.” [✓](https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html)
+- 局限与代价：“required upgrades and changes to infrastructure to keep it running well” [✓](https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html)
+- 局限与代价：“We also used up the majority of our grant from Plaintext group and are exploring ways to continue funding further development of features” [✓](https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html)
+- 局限与代价：“Dec 21, 2023” [✓](https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html)
+
+</details>
+- 没读到：views；encodings；questions；alternative
+
+<a id="opendigger"></a>
+
+### OpenDigger
+
+- 领域：开源活动指标；议题：用统一的指标（活跃度、OpenRank 等）度量开源项目和开发者的活动与影响力随时间的变化
+- 编码：一般图与网络 + 序列与事件流；重点：对象上的度量、时间与演化、关系上的类型与量；把握：官方页面直接写了
+- 说明：调研里的“项目活动、开发者参与、OpenRank、历史序列”，官方文档能对上（指标文件按月、季、年存成 JSON）；“社区演化”页面没有这个词。官方文档自己写了几条局限：GitHub 数据源有缺失，Community OpenRank 算法实现尚未开源，活跃度只算有实质贡献的协作行为、不算 Star 和 Fork。
+- 编码所依据的原文：
+  - 回答的问题：“OpenRank aims to explore the flow of value in social collaborative networks” [✓](https://open-digger.cn/en/docs/user-docs/metrics/openrank)
+  - 抽象与层级：“The repository's OpenRank is evenly distributed among all its Issues/PRs” [✓](https://open-digger.cn/en/docs/user-docs/metrics/community-openrank)
+  - 视图：“In this playground page, you can input the platform, repo name or user login to check out the visualization effect of the data.” [✓](https://open-digger.cn/en/docs/user-docs/metrics/playground)
+  - 关系：“How much of an Issue's/PR's OpenRank is transferred to its repository” [✓](https://open-digger.cn/en/docs/user-docs/metrics/community-openrank)
+<details><summary>本案例读到的其他原文摘录</summary>
+
+- 处理的材料：“OpenDigger is an open source analysis platform for all open source data initiated by X-lab” [✓](https://open-digger.cn/en/docs/user-docs/intro)
+- 处理的材料：“Due to the existence of missing data in OpenDigger's GitHub data source” [✓](https://open-digger.cn/en/docs/user-docs/metrics/metrics-usage-guide)
+- 对象：“The default OpenRank value for developers and repositories in the network, such as new community members or new repositories” [✓](https://open-digger.cn/en/docs/user-docs/metrics/community-openrank)
+- 对象：“The default OpenRank value for Issue nodes in the network” [✓](https://open-digger.cn/en/docs/user-docs/metrics/community-openrank)
+- 对象：“The default OpenRank value for merged PR nodes in the network” [✓](https://open-digger.cn/en/docs/user-docs/metrics/community-openrank)
+- 关系：“How much of an Issue's/PR's OpenRank is transferred to its contributing developers” [✓](https://open-digger.cn/en/docs/user-docs/metrics/community-openrank)
+- 关系：“The weights assigned to different event types when calculating activity edge weights” [✓](https://open-digger.cn/en/docs/user-docs/metrics/community-openrank)
+- 属性与度量：“the activity of a specific developer in a specific repository for a month is the square root of the weighted sum of all collaborative behaviors of that developer in that month” [✓](https://open-digger.cn/en/docs/user-docs/metrics/activity)
+- 属性与度量：“The proportion of a developer's/repository's OpenRank inherited from last month's historical OpenRank or initial OpenRank” [✓](https://open-digger.cn/en/docs/user-docs/metrics/community-openrank)
+- 属性与度量：“The proportion of an Issue's/PR's OpenRank inherited from last month's historical OpenRank or initial OpenRank” [✓](https://open-digger.cn/en/docs/user-docs/metrics/community-openrank)
+- 属性与度量：“The weights of reactions used to calculate the initial OpenRank of Issues/PRs” [✓](https://open-digger.cn/en/docs/user-docs/metrics/community-openrank)
+- 视图：“The following example has been implemented in HyperCRX, which can be seen in the Perceptor tab of the repository page after installing the HyperCRX plugin.” [✓](https://open-digger.cn/en/docs/user-docs/metrics/activity)
+- 视图：“OpenLeaderboard: An open source leaderboard of open source world with labeled data.” [✓](https://open-digger.cn/en/docs/user-docs/intro)
+- 交互：“The search components for various repositories and users on the OpenDigger official webpage use these two files for local browsing.” [✓](https://open-digger.cn/en/docs/user-docs/metrics/metrics-usage-guide)
+- 交互：“you can input the platform, repo name or user login to check out the visualization effect of the data” [✓](https://open-digger.cn/en/docs/user-docs/metrics/playground)
+- 回答的问题：“to help everyone better understand and participate in open source” [✓](https://open-digger.cn/en/docs/user-docs/intro)
+- 回答的问题：“this indicator is very important for identifying the activity level of the repository” [✓](https://open-digger.cn/en/docs/user-docs/metrics/activity)
+- 抽象与层级：“The activity of the repository is the sum of the activity of all developers in the repository for that month” [✓](https://open-digger.cn/en/docs/user-docs/metrics/activity)
+- 抽象与层级：“with keys representing monthly, quarterly, and yearly values corresponding to the metric data” [✓](https://open-digger.cn/en/docs/user-docs/metrics/metrics-usage-guide)
+- 为什么这样画：“OpenRank was introduced to address the widespread observer effect in statistical indicators” [✓](https://open-digger.cn/en/docs/user-docs/metrics/openrank)
+- 为什么这样画：“The OpenRank algorithm solidifies community institutional design in algorithmic form, integrating measurement with behavioral impact” [✓](https://open-digger.cn/en/docs/user-docs/metrics/openrank)
+- 为什么这样画：“The introduction of initial values for nodes allows, in practical applications, for the centrality of nodes to inherit historical data, thus maintaining good temporal continuity” [✓](https://open-digger.cn/en/docs/user-docs/metrics/openrank)
+- 原来的问题：“such as the alienation behavior and community damage caused by metrics like the number of stars and contributors in open source projects” [✓](https://open-digger.cn/en/docs/user-docs/metrics/openrank)
+- 局限与代价：“OpenDigger does not export metrics data for all repositories and users.” [✓](https://open-digger.cn/en/docs/user-docs/metrics/metrics-usage-guide)
+- 局限与代价：“Due to the existence of missing data in OpenDigger's GitHub data source” [✓](https://open-digger.cn/en/docs/user-docs/metrics/metrics-usage-guide)
+- 局限与代价：“The Community OpenRank algorithm implementation has not yet been open-sourced in OpenDigger.” [✓](https://open-digger.cn/en/docs/user-docs/metrics/community-openrank)
+- 局限与代价：“The activity indicator only considers collaborative behaviors that have substantial contributions to the repository and does not consider behaviors such as Star, Fork, etc.” [✓](https://open-digger.cn/en/docs/user-docs/metrics/activity)
+
+</details>
+- 没读到：encodings
+
+<a id="deps-dev"></a>
+
+### deps.dev（Open Source Insights）
+
+- 领域：软件供应链；议题：弄清一个包的完整依赖图、版本、许可证和安全公告，评估引入它会带来多大风险
+- 编码：一般图与网络；重点：连通与邻域、对象上的度量；把握：官方页面直接写了
+- 说明：调研里的“包、版本、依赖、安全公告”，官方文档与博客都找到了原文；“关系以软件供应链为主”，官方博客写 understand the risks in their software supply chains。
+- 编码所依据的原文：
+  - 关系：“a full dependency graph computed using the same algorithms as the packaging tools (Maven, npm, Pip, Go, Cargo)” [✓](https://blog.deps.dev/api/)
+  - 视图：“Search for open source packages, visualize dependencies, compare versions, investigate security advisories and more.” [✓](https://docs.deps.dev/)
+  - 回答的问题：“How many dependencies does this package have? What are they?” [✓](https://blog.deps.dev/api/)
+<details><summary>本案例读到的其他原文摘录</summary>
+
+- 处理的材料：“The service currently indexes the Cargo, Go, Maven, npm, NuGet, PyPI, and RubyGems package ecosystems, the GitHub, GitLab, and Bitbucket project hosts, and the security advisories from OSV.” [✓](https://docs.deps.dev/)
+- 处理的材料：“The deps.dev data set is continuously updated from a range of sources: package registries, the Open Source Vulnerability database, code hosts such as GitHub and GitLab” [✓](https://blog.deps.dev/api/)
+- 对象：“The service examines each package, constructs a full, detailed graph of its dependencies and their properties” [✓](https://docs.deps.dev/)
+- 对象：“for more than 50 million open source package versions” [✓](https://blog.deps.dev/api/)
+- 关系：“We collect and aggregate this data and derive transitive dependency graphs, advisory impact reports, OpenSSF Security Scorecard information, and more.” [✓](https://blog.deps.dev/api/)
+- 关系：“A single API call to list all the GHSA advisories affecting a specific version of log4j” [✓](https://blog.deps.dev/api/)
+- 属性与度量：“security metadata, including dependencies, licenses, advisories, and other critical health and security signals” [✓](https://blog.deps.dev/api/)
+- 属性与度量：“The license information is taken from the PackageVersionsLatest view.” [✓](https://docs.deps.dev/bigquery/v1/)
+- 视图：“Visualizations to help you discover what your dependency graph actually looks like” [✓](https://blog.deps.dev/api/)
+- 视图：“Dependency graph for react 15.0.0, fetched from the deps.dev API and rendered using GraphViz” [✓](https://blog.deps.dev/api/)
+- 交互：“you can look up the hash of a file's contents and find all the package versions that contain that file” [✓](https://blog.deps.dev/api/)
+- 交互：“This example demonstrates searching for advisories that disclose vulnerabilities in a set of package versions” [✓](https://docs.deps.dev/bigquery/v1/)
+- 交互：“This example demonstrates searching for a set of licenses used by a set of package versions” [✓](https://docs.deps.dev/bigquery/v1/)
+- 回答的问题：“What versions are available for this package?” [✓](https://blog.deps.dev/api/)
+- 回答的问题：“how much risk would this dependency add to my project?” [✓](https://blog.deps.dev/api/)
+- 抽象与层级：“We collect and aggregate this data and derive transitive dependency graphs” [✓](https://blog.deps.dev/api/)
+- 抽象与层级：“It is intended to demonstrate simple ecosystem-wide analysis with the deps.dev dataset.” [✓](https://docs.deps.dev/bigquery/v1/)
+- 为什么这样画：“help developers better understand the structure, construction, and security of open source software packages” [✓](https://docs.deps.dev/)
+- 为什么这样画：“We hope the deps.dev API will help the community make sense of complex dependency data” [✓](https://blog.deps.dev/api/)
+- 为什么这样画：“The goal is to provide developers with a picture of how their software is put together” [✓](https://docs.deps.dev/)
+- 原来的问题：“The deps.dev dependency data is not just what a package declares (its manifests, lock files, etc.)” [✓](https://blog.deps.dev/api/)
+- 原来的问题：“which is useful when a package changes but the developer doesn't update the lock file” [✓](https://blog.deps.dev/api/)
+- 局限与代价：“This generated data is available under a CC-BY 4.0 license.” [✓](https://docs.deps.dev/bigquery/v1/)
+- 局限与代价：“The service currently indexes the Cargo, Go, Maven, npm, NuGet, PyPI, and RubyGems package ecosystems” [✓](https://docs.deps.dev/)
+- 局限与代价：“It updates the data regularly to keep the information up-to-date and relevant” [✓](https://docs.deps.dev/)
+
+</details>
+- 没读到：encodings
+
+<a id="codegraph"></a>
+
+### CodeGraph（面向源代码的开放分类知识图谱）
+
+- 领域：代码知识图谱；议题：用代码本身而不是标签，找到实现某个算法、遵循某种范式、属于某个应用领域的文件，并看同一算法跨领域的复用
+- 编码：一般图与网络 + 层级与树；重点：连通与邻域、包含与层次、来源与证据；把握：官方页面直接写了
+- 说明：调研里的“把算法、设计模式、编程范式和应用领域连接起来”“约 1.449 亿个代码文件”，论文都找到了原文（144,910,008 个文件节点，来自 167M 文件语料去掉约 2200 万个标记语言文件）。论文自己写了抽取精度的范围：保守下限 68%、宽松上限 88%，设计模式和范式的标注不够可靠、不能单独支持强的定量结论。
+- 编码所依据的原文：
+  - 抽象与层级：“enabling aggregation of fine-grained concepts at arbitrary levels of abstraction” [✓](https://arxiv.org/html/2609.29474v1)
+  - 关系：“the same algorithm node dynamic programming can be connected through IMPLEMENTS edges to files in competitive programming, RNA secondary-structure prediction, and financial option pricing alike” [✓](https://arxiv.org/html/2609.29474v1)
+  - 对象：“about 63,000 extracted concept entities (such as algorithms, paradigms, design patterns, and application domains)” [✓](https://arxiv.org/abs/2609.29474)
+<details><summary>本案例读到的其他原文摘录</summary>
+
+- 处理的材料：“We applied our pipeline to the 167 million files of the Stack-Edu corpus” [✓](https://arxiv.org/abs/2609.29474)
+- 处理的材料：“processes whole source files through a code-specialised mixture-of-experts model” [✓](https://arxiv.org/html/2609.29474v1)
+- 对象：“:File nodes represent source artifacts and are linked to the semantic concepts extracted from them” [✓](https://arxiv.org/html/2609.29474v1)
+- 对象：“roughly 19,800 grounded Wikidata entities” [✓](https://arxiv.org/abs/2609.29474)
+- 关系：“connected through explicit WIKIDATA_PARENT edges” [✓](https://arxiv.org/html/2609.29474v1)
+- 关系：“source files coexist with concept nodes and typed, provenance-carrying edges” [✓](https://arxiv.org/html/2609.29474v1)
+- 属性与度量：“is independently re-evaluated and tagged Okay or NotOkay” [✓](https://arxiv.org/html/2609.29474v1)
+- 属性与度量：“:Algorithm nodes are grouped under :AlgorithmCategory parents that encode standard taxonomies of algorithmic techniques.” [✓](https://arxiv.org/html/2609.29474v1)
+- 属性与度量：“Both the extractor annotation and the verifier decision are preserved in the released graph” [✓](https://arxiv.org/html/2609.29474v1)
+- 视图：“Core CodeGraph property-graph schema.” [✓](https://arxiv.org/html/2609.29474v1)
+- 视图：“Graph composition by entity type and Wikidata coverage.” [✓](https://arxiv.org/html/2609.29474v1)
+- 视图：“Top application domains by file count (Wikidata-grounded).” [✓](https://arxiv.org/html/2609.29474v1)
+- 视图：“Incidence of selected algorithms across representative application domains” [✓](https://arxiv.org/html/2609.29474v1)
+- 交互：“developers and researchers can retrieve or filter code snippets by the algorithms, paradigms, or design patterns they embody” [✓](https://arxiv.org/html/2609.29474v1)
+- 交互：“navigate the Wikidata layer to broaden or narrow the results of a query along the concept hierarchy” [✓](https://arxiv.org/html/2609.29474v1)
+- 交互：“following its IMPLEMENTS edges, optionally navigating the hierarchy” [✓](https://arxiv.org/html/2609.29474v1)
+- 回答的问题：“choosing the right algorithm for a given problem instance is itself a learning problem” [✓](https://arxiv.org/html/2609.29474v1)
+- 回答的问题：“the algorithms they implement, the paradigms they follow, the patterns they instantiate, and the application domains they serve” [✓](https://arxiv.org/abs/2609.29474)
+- 抽象与层级：“a hierarchy-rollup stage imports the parent-of closure of each resolved Wikidata identifier” [✓](https://arxiv.org/abs/2609.29474)
+- 抽象与层级：“enabling analyses to roll fine-grained labels up to broader semantic concepts when needed” [✓](https://arxiv.org/html/2609.29474v1)
+- 抽象与层级：“This gives CodeGraph a dual conceptual layer: a local, corpus-defined vocabulary of extracted concepts and a global, Wikidata-grounded taxonomy” [✓](https://arxiv.org/html/2609.29474v1)
+- 为什么这样画：“The taxonomy is deliberately open: rather than constraining labels to a predefined taxonomy, the model generates free-form concept names that are reconciled a posteriori” [✓](https://arxiv.org/html/2609.29474v1)
+- 为什么这样画：“Delegating only the hard cases to an LLM keeps the grounding step deterministic wherever possible” [✓](https://arxiv.org/html/2609.29474v1)
+- 为什么这样画：“rather than by just lexical matches on identifiers or comments” [✓](https://arxiv.org/html/2609.29474v1)
+- 原来的问题：“Classical static-analysis tools dissect code with high precision but operate at a syntactic level that rarely captures what a program does or why it was designed in a certain way” [✓](https://arxiv.org/html/2609.29474v1)
+- 原来的问题：“Supervised learning offers more generality but requires hand-labelled data on an impractical scale for hundreds of millions of heterogeneous files” [✓](https://arxiv.org/html/2609.29474v1)
+- 原来的问题：“current tools are constrained to syntactic and token-level analysis” [✓](https://arxiv.org/abs/2609.29474)
+- 局限与代价：“The human gold set (127 stratified source files; see Section 5) is small in absolute terms” [✓](https://arxiv.org/html/2609.29474v1)
+- 局限与代价：“design pattern and paradigm are not reliable enough to support strong quantitative claims on their own” [✓](https://arxiv.org/html/2609.29474v1)
+- 局限与代价：“The two values therefore bracket the range of plausible precision estimates: 68% as a conservative lower bound and 88% as a loose upper bound” [✓](https://arxiv.org/html/2609.29474v1)
+- 局限与代价：“Stack-Edu is distributed under the access terms of the BigCode (HuggingFace) project and requires explicit acceptance of the corresponding license and opt-out checks for download” [✓](https://arxiv.org/html/2609.29474v1)
+
+</details>
+- 没读到：encodings
+
+<a id="software-heritage-graph"></a>
+
+### Software Heritage Graph Dataset
+
+- 领域：源代码历史图谱；议题：跨项目、跨托管平台追踪同一份源码和它的开发历史，研究公开软件开发的长尾
+- 编码：有向无环图；重点：先后与依赖方向、来源与证据、跨视图的同一对象；把握：官方页面直接写了
+- 说明：证据主要来自 2020 年的论文（数据截至 2018 年 9 月）和 AWS 开放数据登记页（写数据每年更新）。调研里“保存源代码对象、目录、版本和历史来源之间的关系”，登记页找到了原文；“是理解开源软件历史谱系的基础”是调研的判断，页面没有这样写。
+- 编码所依据的原文：
+  - 对象：“Revisions (or “commits”) are point-in-time captures of the entire source tree of a development project.” [✓](https://arxiv.org/pdf/2011.07824)
+  - 关系：“Each revision points to the root directory of the project source tree, and a list of its parent revisions.” [✓](https://arxiv.org/pdf/2011.07824)
+  - 抽象与层级：“As shown in Figure 2, the Software Heritage DAG is organized in five logical layers, which we describe from bottom to top.” [✓](https://arxiv.org/pdf/2011.07824)
+  - 视图：“Figure 2: Data model: a uniform Merkle DAG containing source code artifacts and their development history” [✓](https://arxiv.org/pdf/2011.07824)
+<details><summary>本案例读到的其他原文摘录</summary>
+
+- 处理的材料：“The dataset’s contents come from major development forges (including GitHub and GitLab), FOSS distributions (e.g., Debian), and language-specific package managers (e.g., PyPI).” [✓](https://registry.opendata.aws/software-heritage/)
+- 对象：“Contents (or “blobs”) form the graph’s leaves, and contain the raw content of source code files, not including their filenames” [✓](https://arxiv.org/pdf/2011.07824)
+- 对象：“Directories are lists of named directory entries.” [✓](https://arxiv.org/pdf/2011.07824)
+- 对象：“Snapshots are point-in-time captures of the full state of a project development repository.” [✓](https://arxiv.org/pdf/2011.07824)
+- 关系：“Each entry can point to content objects (“file entries”), revisions (“revision entries”), or other directories (“directory entries”).” [✓](https://arxiv.org/pdf/2011.07824)
+- 关系：“Each release points to a revision and might include additional descriptive metadata.” [✓](https://arxiv.org/pdf/2011.07824)
+- 关系：“snapshots capture the state of all branches in a repository and allow to deduplicate unmodified forks across the archive.” [✓](https://arxiv.org/pdf/2011.07824)
+- 属性与度量：“the dataset also contains crawling information, as a set of triples capturing where (an origin url) and when (a timestamp) a given snapshot has been encountered.” [✓](https://arxiv.org/pdf/2011.07824)
+- 属性与度量：“The dataset contains cryptographic checksums for all contents though, that can be used to retrieve the actual files from any Software Heritage mirror using a Web api” [✓](https://arxiv.org/pdf/2011.07824)
+- 属性与度量：“Author and committer information is anonymized.” [✓](https://registry.opendata.aws/software-heritage/)
+- 属性与度量：“By using persistent, cryptographically-strong hashes as node identifiers” [✓](https://arxiv.org/pdf/2011.07824)
+- 视图：“The Merkle dag is encoded in the dataset as a set of relational tables.” [✓](https://arxiv.org/pdf/2011.07824)
+- 视图：“Figure 3: Simplified schema of the Software Heritage Graph Dataset and the number of artifacts in it” [✓](https://arxiv.org/pdf/2011.07824)
+- 交互：“some sample sql queries that can be executed with the dataset on aws Athena.” [✓](https://arxiv.org/pdf/2011.07824)
+- 交互：“cross-reference files encountered in the wild, including other datasets.” [✓](https://arxiv.org/pdf/2011.07824)
+- 回答的问题：“allows to explore a number of research questions on the long tail of public software development” [✓](https://arxiv.org/abs/2011.07824)
+- 回答的问题：“Graph structure: How tightly coupled are the different layers of the graph?” [✓](https://arxiv.org/pdf/2011.07824)
+- 抽象与层级：“the graph is deduplicated by sharing all identical nodes.” [✓](https://arxiv.org/pdf/2011.07824)
+- 抽象与层级：“it abstracts over VCS and package differences, offering a canonical representation (see Section C) of source code artifacts.” [✓](https://arxiv.org/pdf/2011.07824)
+- 为什么这样画：“The Software Heritage Graph Dataset exploits the fact that source code artifacts are massively duplicated across hosts and projects [12] to enable tracking of software artifacts across projects” [✓](https://arxiv.org/pdf/2011.07824)
+- 原来的问题：“This approach has limitations in scope: (1) it works on subsets of the complete corpus of publicly available software, (2) it makes cross-repository history analysis hard” [✓](https://arxiv.org/pdf/2011.07824)
+- 局限与代价：“The dataset captures the state of the Software Heritage archive on September 25th 2018” [✓](https://arxiv.org/pdf/2011.07824)
+- 局限与代价：“Data is updated yearly” [✓](https://registry.opendata.aws/software-heritage/)
+- 局限与代价：“The term "Software Heritage Graph Dataset" designates the internal structure of the Software Heritage archive, and explicitly excludes the file contents.” [✓](https://registry.opendata.aws/software-heritage/)
+- 局限与代价：“The "Software Heritage Graph Dataset" is distributed under the Creative Commons Attribution 4.0 International license.” [✓](https://registry.opendata.aws/software-heritage/)
+
+</details>
+- 没读到：encodings；（读取说明：docs.softwareheritage.org 文档页为 Anubis 人机验证页，没读到；www.softwareheritage.org 证书校验失败，没读到。事实主要来自 2020 年论文与 AWS 登记页。）
+
+<a id="speculora"></a>
+
+### Speculora
+
+- 领域：市场需求分析；议题：让独立开发者看到软件需求在哪里拥挤、哪里有可用的缺口
+- 编码：层级与树 + 表与多维属性；重点：对象上的度量、有什么；把握：页面信息支持，归类靠推断
+- 说明：调研里的“15 个领域、对任务按需求/竞争/现有产品的不足打分、证据来自 App Store、Google Play、Hacker News、Stack Exchange”，官方首页都找到了原文。“指标缺独立效果验证”是调研的判断，官方页面没有相关说明；官方写数据每周重算。
+- 编码所依据的原文：
+  - 抽象与层级：“The unit is a task, not a market” [✓](https://speculora.com/)
+  - 关系：“Each task carries demand, supply, quality, and price signals, from which a gap state and an opportunity score are derived.” [✓](https://speculora.com/info)
+  - 视图：“Explore the live, interactive map above, or jump into a domain” [✓](https://speculora.com/)
+  - 处理的材料：“real user reviews mined from the app stores, the problems developers raise on technical forums, and each incumbent app’s rating, review count, and price” [✓](https://speculora.com/)
+<details><summary>本案例读到的其他原文摘录</summary>
+
+- 对象：“a discrete job a person wants done, such as “split a restaurant bill among friends”” [✓](https://speculora.com/info)
+- 对象：“The opportunity map — 15 domains” [✓](https://speculora.com/)
+- 对象：“Sub-areas Delivery Tracking · Deals & Savings · Checkout & Payments · Discovery · Buy & Sell · Lists & Wishlists” [✓](https://speculora.com/domain/shopping-deals-694)
+- 关系：“Each task is scored on demand, competition, and how badly the existing apps serve it.” [✓](https://speculora.com/)
+- 属性与度量：“each incumbent app’s rating, review count, and price” [✓](https://speculora.com/)
+- 属性与度量：“Opportunity 100/100 · 54 apps · 332 user reports” [✓](https://speculora.com/domain/shopping-deals-694)
+- 属性与度量：“Heavily used and done badly” [✓](https://speculora.com/info)
+- 视图：“Tasks in Shopping & Deals, ranked by opportunity” [✓](https://speculora.com/domain/shopping-deals-694)
+- 交互：“Browse the ranked gaps →” [✓](https://speculora.com/info)
+- 交互：“Open the live map →” [✓](https://speculora.com/info)
+- 回答的问题：“It shows solo developers and indie hackers where software demand is crowded versus where exploitable gaps sit.” [✓](https://speculora.com/)
+- 抽象与层级：“Speculora breaks software down into discrete tasks — concrete things people want done, like “split a restaurant bill among friends” or “track a budget across multiple bank accounts.”” [✓](https://speculora.com/)
+- 为什么这样画：“It is not another idea generator.” [✓](https://speculora.com/)
+- 为什么这样画：“refreshed weekly and shown raw, quotes and counts included, so the picture never goes stale.” [✓](https://speculora.com/)
+- 为什么这样画：“Saturated doesn't mean no opportunity, and empty doesn't mean opportunity.” [✓](https://speculora.com/info)
+- 原来的问题：“There has been no systematic way for a solo builder to see where demand is crowded versus where exploitable gaps sit.” [✓](https://speculora.com/info)
+- 原来的问题：“AI and modern tooling have flooded the market with apps, most chasing the same saturated niches.” [✓](https://speculora.com/info)
+- 局限与代价：“And gaps decay, so freshness matters.” [✓](https://speculora.com/info)
+- 局限与代价：“Data refreshed October 12, 2026 · recomputed weekly.” [✓](https://speculora.com/domain/shopping-deals-694)
+
+</details>
+- 没读到：encodings；（读取说明：只读了首页、/info 与一个领域页；未找到单独的方法说明页，没有读到方法文档。）
 <!-- /gen -->

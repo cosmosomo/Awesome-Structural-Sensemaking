@@ -985,7 +985,7 @@
    {
     "quote": "You can use the powerful filters to perform sentiment analysis",
     "url": "https://infranodus.com/",
-    "check": "ok",
+    "check": "missing",
     "what": "filters"
    },
    {
@@ -13183,5 +13183,2402 @@
    "encodings"
   ],
   "id": "toulmin"
+ },
+ "oss-ai-gap-map": {
+  "pages_read": [
+   "https://www.aipotluck.org/map",
+   "https://www.aipotluck.org/map/methodology",
+   "https://www.aipotluck.org/map/gap-map",
+   "https://www.currentai.org/blogs/introducing-the-gap-map-v0-1"
+  ],
+  "retrieved": "2026-10-13",
+  "input_material": [
+   {
+    "quote": "We draw on large-scale software supply-chain data from Open Source Observer, along with GitHub, Hugging Face, package registries",
+    "url": "https://www.aipotluck.org/map/methodology",
+    "check": "ok",
+    "what": "discovery 数据来源"
+   },
+   {
+    "quote": "We identified and evaluated over 24,600 projects from foundation models through inference backends",
+    "url": "https://www.currentai.org/blogs/introducing-the-gap-map-v0-1",
+    "check": "ok",
+    "what": "评估的项目（v0.1）"
+   }
+  ],
+  "entities": [
+   {
+    "quote": "The map scores products and categories separately, using different criteria for each.",
+    "url": "https://www.aipotluck.org/map/methodology",
+    "check": "ok",
+    "what": "products 与 categories"
+   }
+  ],
+  "relations": [
+   {
+    "quote": "We research prominent products in depth, classify them into the map's categories, and evaluate them against the three axes.",
+    "url": "https://www.aipotluck.org/map/methodology",
+    "check": "ok",
+    "what": "products 归入 categories"
+   },
+   {
+    "quote": "Only fully open products advance a category's Maturity Stage.",
+    "url": "https://www.aipotluck.org/map/methodology",
+    "check": "ok",
+    "what": "fully open 产品与 maturity"
+   }
+  ],
+  "attributes": [
+   {
+    "quote": "Open-ish: Important components are available, but meaningful restrictions or missing pieces remain.",
+    "url": "https://www.aipotluck.org/map/methodology",
+    "check": "ok",
+    "what": "openness 三档"
+   },
+   {
+    "quote": "Every product carries a score on a 1–5 scale, blending capability and adoption.",
+    "url": "https://www.aipotluck.org/map/gap-map",
+    "check": "ok",
+    "what": "Product score"
+   },
+   {
+    "quote": "Each category receives a Maturity Stage from 0 (Void) to 5 (Mature), along with one or more gaps describing what its open ecosystem still lacks.",
+    "url": "https://www.aipotluck.org/map/methodology",
+    "check": "ok",
+    "what": "Maturity Stage"
+   }
+  ],
+  "views": [
+   {
+    "quote": "created a map based on the three core pillars of building an AI system.",
+    "url": "https://www.aipotluck.org/map",
+    "check": "ok",
+    "what": "three core pillars"
+   },
+   {
+    "quote": "Maturity stage Gaps found Category Open(ish) products",
+    "url": "https://www.aipotluck.org/map/gap-map",
+    "check": "ok",
+    "what": "类别列表的列"
+   }
+  ],
+  "encodings": [
+   {
+    "quote": "Products scoring 4.5 or above are leading, those from 4.0 to 4.5 are strong, and everything below is shown outlined.",
+    "url": "https://www.aipotluck.org/map/gap-map",
+    "check": "ok",
+    "what": "分数分档与轮廓"
+   },
+   {
+    "quote": "c Capability gap a Adoption gap r Resiliency gap o Openness gap d Disclosure gap",
+    "url": "https://www.aipotluck.org/map/gap-map",
+    "check": "ok",
+    "what": "缺口字母标记"
+   }
+  ],
+  "interactions": [
+   {
+    "quote": "Interact with the Gap Map at map.currentai.org. Click through it to explore the ecosystem.",
+    "url": "https://www.currentai.org/blogs/introducing-the-gap-map-v0-1",
+    "check": "ok",
+    "what": "点击浏览"
+   },
+   {
+    "quote": "More information about stages and gaps can be found on the Methodology page",
+    "url": "https://www.aipotluck.org/map/gap-map",
+    "check": "ok",
+    "what": "进入方法说明"
+   }
+  ],
+  "questions": [
+   {
+    "quote": "What projects exist across the various layers of the stack?",
+    "url": "https://www.currentai.org/blogs/introducing-the-gap-map-v0-1",
+    "check": "ok",
+    "what": "What projects exist across the various layers of t"
+   },
+   {
+    "quote": "What layers are overinvested in, or underfunded?",
+    "url": "https://www.currentai.org/blogs/introducing-the-gap-map-v0-1",
+    "check": "ok",
+    "what": "What layers are overinvested in, or underfunded?"
+   },
+   {
+    "quote": "Where are open source options lagging because of adoption, maturity, or capability?",
+    "url": "https://www.currentai.org/blogs/introducing-the-gap-map-v0-1",
+    "check": "ok",
+    "what": "Where are open source options lagging because of a"
+   },
+   {
+    "quote": "What building blocks are missing for creating completely open source AI products?",
+    "url": "https://www.currentai.org/blogs/introducing-the-gap-map-v0-1",
+    "check": "ok",
+    "what": "What building blocks are missing for creating comp"
+   }
+  ],
+  "abstraction": [
+   {
+    "quote": "These products are organized into 14 categories across 3 layers of the stack (model components, product / UX, and infrastructure).",
+    "url": "https://www.currentai.org/blogs/introducing-the-gap-map-v0-1",
+    "check": "ok",
+    "what": "3 layers of the stack（v0.1）"
+   },
+   {
+    "quote": "Maturity is a property of a category, not an individual product.",
+    "url": "https://www.aipotluck.org/map/methodology",
+    "check": "ok",
+    "what": "maturity 属于 category"
+   }
+  ],
+  "why": [
+   {
+    "quote": "we intentionally don’t compare closed versus open AI ecosystems, or point to where open source AI leads or lags. Instead, the Gap Map illustrates what’s needed to build the system we want.",
+    "url": "https://www.currentai.org/blogs/introducing-the-gap-map-v0-1",
+    "check": "ok",
+    "what": "we intentionally don’t compare closed versus open "
+   },
+   {
+    "quote": "we’ve tried to strike the right balance between making it easy to understand (to funders, policymakers, designers, and business people)",
+    "url": "https://www.currentai.org/blogs/introducing-the-gap-map-v0-1",
+    "check": "ok",
+    "what": "we’ve tried to strike the right balance between ma"
+   },
+   {
+    "quote": "If we see the gaps, we can prioritize them, and then we can collectively direct energy and funding to closing them.",
+    "url": "https://www.currentai.org/blogs/introducing-the-gap-map-v0-1",
+    "check": "ok",
+    "what": "If we see the gaps, we can prioritize them, and th"
+   }
+  ],
+  "alternative": [
+   {
+    "quote": "Repository stars can provide a useful signal when better data is unavailable, but they are not treated as equivalent to real usage.",
+    "url": "https://www.aipotluck.org/map/methodology",
+    "check": "ok",
+    "what": "Repository stars can provide a useful signal when "
+   },
+   {
+    "quote": "We prefer direct usage signals — such as package downloads, model downloads, active users, or deployments — over measures of attention or popularity.",
+    "url": "https://www.aipotluck.org/map/methodology",
+    "check": "ok",
+    "what": "We prefer direct usage signals — such as package d"
+   }
+  ],
+  "limit": [
+   {
+    "quote": "The map is a curated view of a fast-moving ecosystem, not a complete census.",
+    "url": "https://www.aipotluck.org/map/methodology",
+    "check": "ok",
+    "what": "The map is a curated view of a fast-moving ecosyst"
+   },
+   {
+    "quote": "Adoption measures are imperfect proxies and can change with reporting methods.",
+    "url": "https://www.aipotluck.org/map/methodology",
+    "check": "ok",
+    "what": "Adoption measures are imperfect proxies and can ch"
+   },
+   {
+    "quote": "Some classifications require editorial judgment where external standards do not provide a definitive answer.",
+    "url": "https://www.aipotluck.org/map/methodology",
+    "check": "ok",
+    "what": "Some classifications require editorial judgment wh"
+   },
+   {
+    "quote": "This map only shows the first 2 types.",
+    "url": "https://www.aipotluck.org/map/gap-map",
+    "check": "ok",
+    "what": "This map only shows the first 2 types."
+   }
+  ],
+  "not_stated": [],
+  "id": "oss-ai-gap-map"
+ },
+ "atlas-taxonomy": {
+  "pages_read": [
+   "https://arxiv.org/abs/2606.21597",
+   "https://arxiv.org/html/2606.21597v1",
+   "https://zenodo.org/records/21160280",
+   "https://atlas-taxonomy.netlify.app/"
+  ],
+  "retrieved": "2026-10-13",
+  "input_material": [
+   {
+    "quote": "each with full_name, description, stars, language, topics, created_at, html_url, license_name, and an LLM-generated summary.",
+    "url": "https://zenodo.org/records/21160280",
+    "check": "ok",
+    "what": "仓库元数据（语料）"
+   },
+   {
+    "quote": "ATLAS requires repositories with sufficient textual metadata for meaningful classification.",
+    "url": "https://arxiv.org/html/2606.21597v1",
+    "check": "ok",
+    "what": "textual metadata"
+   }
+  ],
+  "entities": [
+   {
+    "quote": "every node carries name, definition, criteria, its splitting dimension, level, parent_id / children_ids, and the classified repo_ids",
+    "url": "https://zenodo.org/records/21160280",
+    "check": "ok",
+    "what": "nodes（分类节点）"
+   }
+  ],
+  "relations": [
+   {
+    "quote": "alternative discovery (finding functionally equivalent projects as siblings in the same category)",
+    "url": "https://arxiv.org/html/2606.21597v1",
+    "check": "ok",
+    "what": "siblings（同一类别）"
+   }
+  ],
+  "attributes": [
+   {
+    "quote": "every category carries a name, definition, and splitting rationale",
+    "url": "https://arxiv.org/html/2606.21597v1",
+    "check": "ok",
+    "what": "类别的 name、definition、splitting rationale"
+   },
+   {
+    "quote": "the L1 artifact type dimension (Library, Application, Platform, etc.)",
+    "url": "https://arxiv.org/html/2606.21597v1",
+    "check": "ok",
+    "what": "L1 artifact type dimension"
+   },
+   {
+    "quote": "36986 Nodes 28632 Leaves 986 Inserted 18560 Depth Changed 54390 Repos",
+    "url": "https://atlas-taxonomy.netlify.app/",
+    "check": "ok",
+    "what": "探索器页面统计（Rank-Aligned View）"
+   }
+  ],
+  "views": [
+   {
+    "quote": "ATLAS: Hierarchical Taxonomy of 54k GitHub Repositories — Rank-Aligned View",
+    "url": "https://atlas-taxonomy.netlify.app/",
+    "check": "ok",
+    "what": "Rank-Aligned View"
+   },
+   {
+    "quote": "Fig. 4 (a) shows L1 domain proportions by repository creation year.",
+    "url": "https://arxiv.org/html/2606.21597v1",
+    "check": "ok",
+    "what": "L1 proportions 随创建年份"
+   }
+  ],
+  "encodings": [],
+  "interactions": [
+   {
+    "quote": "Expand All Collapse All Highlight Inserted Highlight Sub-layer Highlight Depth Changed Clear Highlight",
+    "url": "https://atlas-taxonomy.netlify.app/",
+    "check": "ok",
+    "what": "探索器控件"
+   },
+   {
+    "quote": "the multi-rank hierarchy with per-node definitions lets a developer enter at a coarse category and drill down",
+    "url": "https://arxiv.org/html/2606.21597v1",
+    "check": "ok",
+    "what": "逐层深入（drill down）"
+   }
+  ],
+  "questions": [
+   {
+    "quote": "so a developer replacing one tool retrieves genuine alternatives",
+    "url": "https://arxiv.org/html/2606.21597v1",
+    "check": "ok",
+    "what": "so a developer replacing one tool retrieves genuin"
+   },
+   {
+    "quote": "multi-granularity retrieval (searching at any level of specificity), alternative discovery (finding functionally equivalent projects as siblings in the same category), and ecosystem analysis (revealing structural trends across domains and time)",
+    "url": "https://arxiv.org/html/2606.21597v1",
+    "check": "ok",
+    "what": "multi-granularity retrieval (searching at any leve"
+   }
+  ],
+  "abstraction": [
+   {
+    "quote": "tree depth encodes increasing specificity",
+    "url": "https://arxiv.org/html/2606.21597v1",
+    "check": "ok",
+    "what": "tree depth"
+   },
+   {
+    "quote": "The 54k taxonomy contains 36,000 nodes over 9 levels under 9 top-level domains.",
+    "url": "https://zenodo.org/records/21160280",
+    "check": "ok",
+    "what": "9 levels / 9 top-level domains"
+   },
+   {
+    "quote": "After construction, a Level Alignment phase establishes a unified semantic rank system across branches, ensuring cross-branch granularity consistency.",
+    "url": "https://arxiv.org/html/2606.21597v1",
+    "check": "ok",
+    "what": "unified semantic rank system"
+   }
+  ],
+  "why": [
+   {
+    "quote": "GitHub Topics, the dominant organizational mechanism, is flat, inconsistent, and covers only 67% of projects.",
+    "url": "https://arxiv.org/html/2606.21597v1",
+    "check": "ok",
+    "what": "GitHub Topics, the dominant organizational mechani"
+   },
+   {
+    "quote": "these capabilities require structured hierarchies with explicit definitions and splitting criteria, not merely tag matching or embedding similarity",
+    "url": "https://arxiv.org/html/2606.21597v1",
+    "check": "ok",
+    "what": "these capabilities require structured hierarchies "
+   },
+   {
+    "quote": "classification failures are not noise to be discarded, but diagnostic signals that reveal how the current design is deficient",
+    "url": "https://arxiv.org/html/2606.21597v1",
+    "check": "ok",
+    "what": "classification failures are not noise to be discar"
+   }
+  ],
+  "alternative": [
+   {
+    "quote": "GitHub Topics, the ecosystem’s only organizational mechanism, assigns flat, user-defined tags with no hierarchy, no normalization (e.g., machine-learning vs. ml), and no coverage guarantee",
+    "url": "https://arxiv.org/html/2606.21597v1",
+    "check": "ok",
+    "what": "GitHub Topics, the ecosystem’s only organizational"
+   },
+   {
+    "quote": "build taxonomies from pure LLM knowledge without grounding in actual data, producing well-organized structures that nevertheless fail to accommodate real repositories.",
+    "url": "https://arxiv.org/html/2606.21597v1",
+    "check": "ok",
+    "what": "build taxonomies from pure LLM knowledge without g"
+   },
+   {
+    "quote": "Embedding-based clustering groups repositories by pairwise similarity but lacks the top-down semantic knowledge to choose meaningful splitting criteria at each level",
+    "url": "https://arxiv.org/html/2606.21597v1",
+    "check": "ok",
+    "what": "Embedding-based clustering groups repositories by "
+   }
+  ],
+  "limit": [
+   {
+    "quote": "which may not generalize to other ecosystems or below-threshold repositories.",
+    "url": "https://arxiv.org/html/2606.21597v1",
+    "check": "ok",
+    "what": "which may not generalize to other ecosystems or be"
+   },
+   {
+    "quote": "ATLAS assigns each repository a single dominant functional role, and multi-label classification is outside its current scope.",
+    "url": "https://arxiv.org/html/2606.21597v1",
+    "check": "ok",
+    "what": "ATLAS assigns each repository a single dominant fu"
+   },
+   {
+    "quote": "Assessing maintenance risk, license compatibility, or security posture draws on activity, license, or vulnerability axes that a functional taxonomy does not encode, and these fall outside our scope.",
+    "url": "https://arxiv.org/html/2606.21597v1",
+    "check": "ok",
+    "what": "Assessing maintenance risk, license compatibility,"
+   },
+   {
+    "quote": "The summary pipeline depends on DeepWiki, a third-party service whose long-term availability we cannot guarantee.",
+    "url": "https://arxiv.org/html/2606.21597v1",
+    "check": "ok",
+    "what": "The summary pipeline depends on DeepWiki, a third-"
+   }
+  ],
+  "not_stated": [
+   "encodings"
+  ],
+  "id": "atlas-taxonomy"
+ },
+ "semantic-map-github": {
+  "pages_read": [
+   "https://stevenfazzio.com/semantic-github-map/",
+   "https://stevenfazzio.com/semantic-github-map/methodology.html"
+  ],
+  "retrieved": "2026-10-13",
+  "input_material": [
+   {
+    "quote": "each candidate is looked up via the GitHub GraphQL API (batched 25–50 per request), collecting metadata (name, stars, language, license, creation date) and the full README content.",
+    "url": "https://stevenfazzio.com/semantic-github-map/methodology.html",
+    "check": "ok",
+    "what": "each candidate is looked up via the GitHub GraphQL"
+   }
+  ],
+  "entities": [
+   {
+    "quote": "maps the top 10,000 most-starred GitHub repositories onto a 2D plane",
+    "url": "https://stevenfazzio.com/semantic-github-map/methodology.html",
+    "check": "ok",
+    "what": "仓库（地图上的点）"
+   }
+  ],
+  "relations": [
+   {
+    "quote": "positioned by the semantic similarity of their README files.",
+    "url": "https://stevenfazzio.com/semantic-github-map/methodology.html",
+    "check": "ok",
+    "what": "README 语义相似（决定位置）"
+   }
+  ],
+  "attributes": [
+   {
+    "quote": "Each README is processed by Claude Haiku to extract five fields: a project title, a 2–3 sentence summary, a short tagline, a project type classification, and a target audience label.",
+    "url": "https://stevenfazzio.com/semantic-github-map/methodology.html",
+    "check": "ok",
+    "what": "LLM 提取的五个字段"
+   },
+   {
+    "quote": "Hover: Hover over any point to see the project title, owner, tagline, project type, primary language, star and fork counts, and a short summary.",
+    "url": "https://stevenfazzio.com/semantic-github-map/methodology.html",
+    "check": "ok",
+    "what": "悬停显示的字段"
+   }
+  ],
+  "views": [
+   {
+    "quote": "Combines coordinates, labels, and metadata into an interactive HTML map using DataMapPlot, with multiple colormaps, search, hover tooltips, and click-to-open functionality.",
+    "url": "https://stevenfazzio.com/semantic-github-map/methodology.html",
+    "check": "ok",
+    "what": "交互式 HTML 地图（DataMapPlot）"
+   }
+  ],
+  "encodings": [
+   {
+    "quote": "Repositories with similar descriptions and purposes appear near each other",
+    "url": "https://stevenfazzio.com/semantic-github-map/methodology.html",
+    "check": "ok",
+    "what": "位置=README 语义相近"
+   },
+   {
+    "quote": "Older repos appear in darker tones; newer repos appear brighter.",
+    "url": "https://stevenfazzio.com/semantic-github-map/methodology.html",
+    "check": "ok",
+    "what": "颜色=仓库创建时间"
+   },
+   {
+    "quote": "Green indicates recent activity; red indicates staleness.",
+    "url": "https://stevenfazzio.com/semantic-github-map/methodology.html",
+    "check": "ok",
+    "what": "颜色=最近推送"
+   },
+   {
+    "quote": "inter-cluster distances should not be read as precise measurements of dissimilarity.",
+    "url": "https://stevenfazzio.com/semantic-github-map/methodology.html",
+    "check": "ok",
+    "what": "距离=簇间距离（页面说明不宜精确读作差异）"
+   }
+  ],
+  "interactions": [
+   {
+    "quote": "Pan and zoom: Click and drag to pan; scroll to zoom in and out.",
+    "url": "https://stevenfazzio.com/semantic-github-map/methodology.html",
+    "check": "ok",
+    "what": "平移与缩放"
+   },
+   {
+    "quote": "Search: Use the search box to find specific repositories by name.",
+    "url": "https://stevenfazzio.com/semantic-github-map/methodology.html",
+    "check": "ok",
+    "what": "搜索"
+   },
+   {
+    "quote": "Filter panel: Open the sidebar to narrow the visible points with range sliders",
+    "url": "https://stevenfazzio.com/semantic-github-map/methodology.html",
+    "check": "ok",
+    "what": "筛选"
+   },
+   {
+    "quote": "Click: Click any point to open the repository on GitHub in a new tab.",
+    "url": "https://stevenfazzio.com/semantic-github-map/methodology.html",
+    "check": "ok",
+    "what": "点击进入仓库"
+   }
+  ],
+  "questions": [
+   {
+    "quote": "revealing natural clusters of related projects across the open-source ecosystem",
+    "url": "https://stevenfazzio.com/semantic-github-map/methodology.html",
+    "check": "ok",
+    "what": "revealing natural clusters of related projects acr"
+   }
+  ],
+  "abstraction": [
+   {
+    "quote": "Cluster labels appear on the map at multiple levels of detail, from broad categories down to specific sub-topics.",
+    "url": "https://stevenfazzio.com/semantic-github-map/methodology.html",
+    "check": "ok",
+    "what": "多层级主题标签"
+   },
+   {
+    "quote": "Uses the Toponymy library for hierarchical density-based clustering",
+    "url": "https://stevenfazzio.com/semantic-github-map/methodology.html",
+    "check": "ok",
+    "what": "层次密度聚类（Toponymy）"
+   }
+  ],
+  "why": [
+   {
+    "quote": "This avoids the Search API's 1,000-result cap and non-deterministic ordering.",
+    "url": "https://stevenfazzio.com/semantic-github-map/methodology.html",
+    "check": "ok",
+    "what": "This avoids the Search API's 1,000-result cap and "
+   },
+   {
+    "quote": "These choices were made for quality and convenience",
+    "url": "https://stevenfazzio.com/semantic-github-map/methodology.html",
+    "check": "ok",
+    "what": "These choices were made for quality and convenienc"
+   }
+  ],
+  "alternative": [
+   {
+    "quote": "This project instead uses a content-based signal.",
+    "url": "https://stevenfazzio.com/semantic-github-map/methodology.html",
+    "check": "ok",
+    "what": "This project instead uses a content-based signal."
+   },
+   {
+    "quote": "The two approaches produce meaningfully different groupings",
+    "url": "https://stevenfazzio.com/semantic-github-map/methodology.html",
+    "check": "ok",
+    "what": "The two approaches produce meaningfully different "
+   }
+  ],
+  "limit": [
+   {
+    "quote": "Selection bias. The map includes only the top 10,000 repositories by star count.",
+    "url": "https://stevenfazzio.com/semantic-github-map/methodology.html",
+    "check": "ok",
+    "what": "Selection bias. The map includes only the top 10,0"
+   },
+   {
+    "quote": "A repository with a sparse or misleading README will be misplaced, and READMEs shorter than 200 characters are excluded entirely.",
+    "url": "https://stevenfazzio.com/semantic-github-map/methodology.html",
+    "check": "ok",
+    "what": "A repository with a sparse or misleading README wi"
+   },
+   {
+    "quote": "Point-in-time snapshot. The map reflects a single moment.",
+    "url": "https://stevenfazzio.com/semantic-github-map/methodology.html",
+    "check": "ok",
+    "what": "Point-in-time snapshot. The map reflects a single "
+   },
+   {
+    "quote": "Proprietary tooling. There is some irony in using proprietary, closed-source tools",
+    "url": "https://stevenfazzio.com/semantic-github-map/methodology.html",
+    "check": "ok",
+    "what": "Proprietary tooling. There is some irony in using "
+   }
+  ],
+  "not_stated": [],
+  "id": "semantic-map-github"
+ },
+ "map-of-github": {
+  "pages_read": [
+   "https://anvaka.github.io/map-of-github/",
+   "https://anvaka.github.io/map-of-github/assets/startVue-168cc34e.js"
+  ],
+  "retrieved": "2026-10-13",
+  "input_material": [
+   {
+    "quote": "The map is build based on 500 million stars given to GitHub projects between 2011 and end of April, 2025.",
+    "url": "https://anvaka.github.io/map-of-github/assets/startVue-168cc34e.js",
+    "check": "ok",
+    "what": "The map is build based on 500 million stars given "
+   }
+  ],
+  "entities": [
+   {
+    "quote": "Each dot is a GitHub project.",
+    "url": "https://anvaka.github.io/map-of-github/assets/startVue-168cc34e.js",
+    "check": "ok",
+    "what": "GitHub 项目（点）"
+   }
+  ],
+  "relations": [
+   {
+    "quote": "Two dots within the same cluster are usually close to each other if multiple users frequently gave stars to both projects.",
+    "url": "https://anvaka.github.io/map-of-github/assets/startVue-168cc34e.js",
+    "check": "ok",
+    "what": "多个用户共同 star（决定点的邻近）"
+   }
+  ],
+  "attributes": [
+   {
+    "quote": "The size of the dot indicates the number of stars the project has received.",
+    "url": "https://anvaka.github.io/map-of-github/assets/startVue-168cc34e.js",
+    "check": "ok",
+    "what": "星数"
+   }
+  ],
+  "views": [],
+  "encodings": [
+   {
+    "quote": "The size of the dot indicates the number of stars the project has received.",
+    "url": "https://anvaka.github.io/map-of-github/assets/startVue-168cc34e.js",
+    "check": "ok",
+    "what": "大小=星数"
+   },
+   {
+    "quote": "Two dots within the same cluster are usually close to each other if multiple users frequently gave stars to both projects.",
+    "url": "https://anvaka.github.io/map-of-github/assets/startVue-168cc34e.js",
+    "check": "ok",
+    "what": "距离=共同 star 程度（同簇内通常较近）"
+   }
+  ],
+  "interactions": [
+   {
+    "quote": "Chat with ChatGPT",
+    "url": "https://anvaka.github.io/map-of-github/assets/startVue-168cc34e.js",
+    "check": "ok",
+    "what": "与 ChatGPT 对话（页面面板）"
+   },
+   {
+    "quote": "No repositories found. Try zooming in?",
+    "url": "https://anvaka.github.io/map-of-github/assets/startVue-168cc34e.js",
+    "check": "ok",
+    "what": "缩放查找（无结果时的提示）"
+   }
+  ],
+  "questions": [],
+  "abstraction": [
+   {
+    "quote": "The map has approximately 690,000 projects, clustered into 1,500 countries.",
+    "url": "https://anvaka.github.io/map-of-github/assets/startVue-168cc34e.js",
+    "check": "ok",
+    "what": "聚类为“国家”"
+   }
+  ],
+  "why": [],
+  "alternative": [],
+  "limit": [
+   {
+    "quote": "Two dots within the same cluster are usually close to each other if multiple users frequently gave stars to both projects.",
+    "url": "https://anvaka.github.io/map-of-github/assets/startVue-168cc34e.js",
+    "check": "ok",
+    "what": "Two dots within the same cluster are usually close"
+   },
+   {
+    "quote": "The map is build based on 500 million stars given to GitHub projects between 2011 and end of April, 2025.",
+    "url": "https://anvaka.github.io/map-of-github/assets/startVue-168cc34e.js",
+    "check": "ok",
+    "what": "The map is build based on 500 million stars given "
+   }
+  ],
+  "not_stated": [
+   "questions",
+   "why",
+   "alternative",
+   "views"
+  ],
+  "id": "map-of-github"
+ },
+ "git-top-atlas": {
+  "pages_read": [
+   "https://git.top/",
+   "https://git.top/atlas",
+   "https://git.top/topics/atlas-guide",
+   "https://git.top/topics/atlas-journey-guide",
+   "https://git.top/atlas/agents"
+  ],
+  "retrieved": "2026-10-13",
+  "input_material": [
+   {
+    "quote": "Data source: d1 / d1_query",
+    "url": "https://git.top/atlas",
+    "check": "ok",
+    "what": "Data source: d1 / d1_query"
+   }
+  ],
+  "entities": [
+   {
+    "quote": "Explore open-source ecosystems as maps of projects, alternatives, dependencies, and journeys.",
+    "url": "https://git.top/topics/atlas-guide",
+    "check": "ok",
+    "what": "生态（ecosystem）与项目（project）"
+   },
+   {
+    "quote": "Edge-native AI and agent projects connected to Workers, D1, R2, Durable Objects, and AI Gateway.",
+    "url": "https://git.top/atlas",
+    "check": "ok",
+    "what": "生态中的项目节点（如 cloudflare/agents）"
+   }
+  ],
+  "relations": [
+   {
+    "quote": "Alternatives, deployments, dependencies, use cases, and categories become reusable graph edges.",
+    "url": "https://git.top/",
+    "check": "ok",
+    "what": "项目之间的图边（替代、部署、依赖、用例、类别）"
+   },
+   {
+    "quote": "Inspect relationships around cloudflare/agents.",
+    "url": "https://git.top/atlas",
+    "check": "ok",
+    "what": "项目关系图"
+   }
+  ],
+  "attributes": [
+   {
+    "quote": "Quality score and agent score are separate.",
+    "url": "https://git.top/",
+    "check": "ok",
+    "what": "质量分与代理分（分开）"
+   },
+   {
+    "quote": "Responses include source metadata, classification evidence, and signal confidence.",
+    "url": "https://git.top/",
+    "check": "ok",
+    "what": "证据与置信度"
+   }
+  ],
+  "views": [
+   {
+    "quote": "Atlas is the Git.Top map layer: a way to move from ecosystem to project, graph, alternatives, and score without starting from a repository name.",
+    "url": "https://git.top/atlas",
+    "check": "ok",
+    "what": "生态地图层"
+   },
+   {
+    "quote": "Explore open-source ecosystems as maps of projects, alternatives, dependencies, and journeys.",
+    "url": "https://git.top/topics/atlas-guide",
+    "check": "ok",
+    "what": "生态即地图"
+   }
+  ],
+  "encodings": [],
+  "interactions": [
+   {
+    "quote": "Browse indexed projects around Cloudflare Ecosystem.",
+    "url": "https://git.top/atlas",
+    "check": "ok",
+    "what": "在生态内浏览项目（搜索）"
+   },
+   {
+    "quote": "Compare the strongest indexed projects in Cloudflare Ecosystem before choosing a default.",
+    "url": "https://git.top/atlas",
+    "check": "ok",
+    "what": "对比"
+   },
+   {
+    "quote": "Find replacements and adjacent options for cloudflare/agents.",
+    "url": "https://git.top/atlas",
+    "check": "ok",
+    "what": "查找替代方案"
+   },
+   {
+    "quote": "Inspect relationships around cloudflare/agents.",
+    "url": "https://git.top/atlas",
+    "check": "ok",
+    "what": "查看关系图"
+   }
+  ],
+  "questions": [
+   {
+    "quote": "Use Atlas when the user wants a map of a space such as Cloudflare, MCP, RAG, or AI agents rather than a single project recommendation.",
+    "url": "https://git.top/topics/atlas-guide",
+    "check": "ok",
+    "what": "Use Atlas when the user wants a map of a space suc"
+   },
+   {
+    "quote": "Move from open-source ecosystem maps to ordered journeys, comparison paths, and decision-ready project shortlists.",
+    "url": "https://git.top/topics/atlas-journey-guide",
+    "check": "ok",
+    "what": "Move from open-source ecosystem maps to ordered jo"
+   }
+  ],
+  "abstraction": [
+   {
+    "quote": "Explore project clusters, deployment targets, dependencies, and related tools.",
+    "url": "https://git.top/",
+    "check": "ok",
+    "what": "生态内的项目聚类"
+   },
+   {
+    "quote": "Start broad in Cloudflare Ecosystem, then narrow to one project with score and graph evidence.",
+    "url": "https://git.top/atlas",
+    "check": "ok",
+    "what": "由宽到窄的分层路径"
+   }
+  ],
+  "why": [
+   {
+    "quote": "Atlas is the Git.Top map layer: a way to move from ecosystem to project, graph, alternatives, and score without starting from a repository name.",
+    "url": "https://git.top/atlas",
+    "check": "ok",
+    "what": "Atlas is the Git.Top map layer: a way to move from"
+   },
+   {
+    "quote": "GitHub provides the code. Git.Top provides the knowledge: project meaning, alternatives, dependencies, ecosystems, scores, and agent-readable recommendations.",
+    "url": "https://git.top/",
+    "check": "ok",
+    "what": "GitHub provides the code. Git.Top provides the kno"
+   }
+  ],
+  "alternative": [
+   {
+    "quote": "Navigate ecosystems as connected project maps instead of isolated lists.",
+    "url": "https://git.top/",
+    "check": "ok",
+    "what": "Navigate ecosystems as connected project maps inst"
+   },
+   {
+    "quote": "rather than a single project recommendation.",
+    "url": "https://git.top/topics/atlas-guide",
+    "check": "ok",
+    "what": "rather than a single project recommendation."
+   }
+  ],
+  "limit": [
+   {
+    "quote": "Atlas Beta Open-source ecosystems as a map",
+    "url": "https://git.top/atlas",
+    "check": "ok",
+    "what": "Atlas Beta Open-source ecosystems as a map"
+   }
+  ],
+  "not_stated": [
+   "encodings"
+  ],
+  "id": "git-top-atlas"
+ },
+ "semrepo": {
+  "pages_read": [
+   "https://arxiv.org/pdf/2605.13310",
+   "https://zenodo.org/records/20084784",
+   "https://scads.ai/semrepo-knowledge-graph-for-research-software/",
+   "https://semrepo.org/sparql"
+  ],
+  "retrieved": "2026-10-13",
+  "input_material": [
+   {
+    "quote": "We started by extracting all GitHub repository links from the LPWC [11].",
+    "url": "https://arxiv.org/pdf/2605.13310",
+    "check": "ok",
+    "what": "We started by extracting all GitHub repository lin"
+   },
+   {
+    "quote": "We retrieved and consolidated metadata for the identified repositories from GitHub over a fixed collection period (21 days).",
+    "url": "https://arxiv.org/pdf/2605.13310",
+    "check": "ok",
+    "what": "We retrieved and consolidated metadata for the ide"
+   }
+  ],
+  "entities": [
+   {
+    "quote": "At the center of the ontology is the class Repository, representing code artifacts.",
+    "url": "https://arxiv.org/pdf/2605.13310",
+    "check": "ok",
+    "what": "Repository"
+   },
+   {
+    "quote": "specialized subclasses capturing distinct roles within the software lifecycle, including Author, Contributor, Stargazer, Watcher, Forker, and IssueAuthor.",
+    "url": "https://arxiv.org/pdf/2605.13310",
+    "check": "ok",
+    "what": "Person subclasses"
+   },
+   {
+    "quote": "Repository activity is captured through several entities, importantly Issue, ContributorReference, and LanguageReference,",
+    "url": "https://arxiv.org/pdf/2605.13310",
+    "check": "ok",
+    "what": "Issue, ContributorReference, LanguageReference"
+   }
+  ],
+  "relations": [
+   {
+    "quote": "repository authors are linked to their profiles in SemOpenAlex, repositories are connected to scholarly publications in LPWC",
+    "url": "https://arxiv.org/pdf/2605.13310",
+    "check": "ok",
+    "what": "repository authors to SemOpenAlex; repositories to LPWC publications"
+   },
+   {
+    "quote": "hasSoaUrl linking to author profiles in SemOpenAlex, hasLpwcUrl linking to entries in LPWC, and hasMlseaUrl connecting to software entities in MLSea.",
+    "url": "https://arxiv.org/pdf/2605.13310",
+    "check": "ok",
+    "what": "object properties hasSoaUrl, hasLpwcUrl, hasMlseaUrl"
+   },
+   {
+    "quote": "sr:ContributorReference, which acts as an intermediate node linking a repository and a contributor while storing commit counts.",
+    "url": "https://arxiv.org/pdf/2605.13310",
+    "check": "ok",
+    "what": "ContributorReference"
+   },
+   {
+    "quote": "We model this using the class sr:LanguageReference, which connects a repository to a programming language and annotates the relationship with its usage share.",
+    "url": "https://arxiv.org/pdf/2605.13310",
+    "check": "ok",
+    "what": "LanguageReference"
+   }
+  ],
+  "attributes": [
+   {
+    "quote": "encodes key activity indicators (e.g., number of contributors, commits, stars, forks, and issues, issue states and interaction metadata, and dependency usage) via class Package.",
+    "url": "https://arxiv.org/pdf/2605.13310",
+    "check": "ok",
+    "what": "activity indicators via class Package"
+   },
+   {
+    "quote": "as it must also encode the extent of the contribution (e.g., number of commits)",
+    "url": "https://arxiv.org/pdf/2605.13310",
+    "check": "ok",
+    "what": "commit count on contributor relation"
+   }
+  ],
+  "views": [],
+  "encodings": [],
+  "interactions": [
+   {
+    "quote": "(b) We deploy the dataset in triple store and expose a SPARQL endpoint (see Page 1) for direct querying and integration with external systems.",
+    "url": "https://arxiv.org/pdf/2605.13310",
+    "check": "ok",
+    "what": "SPARQL endpoint"
+   },
+   {
+    "quote": "Accessibility is supported via RDF dumps and a public SPARQL endpoint, enabling both bulk download and query-based access.",
+    "url": "https://arxiv.org/pdf/2605.13310",
+    "check": "ok",
+    "what": "bulk download and query-based access"
+   },
+   {
+    "quote": "We enable URI resolution within the Linked Open Data Cloud.",
+    "url": "https://arxiv.org/pdf/2605.13310",
+    "check": "ok",
+    "what": "URI resolution"
+   }
+  ],
+  "questions": [
+   {
+    "quote": "Which repositories linked to influential papers are still actively maintained, widely reused, and who are the researchers behind them?",
+    "url": "https://arxiv.org/pdf/2605.13310",
+    "check": "ok",
+    "what": "Which repositories linked to influential papers ar"
+   },
+   {
+    "quote": "Which institutions contribute most to open research software?",
+    "url": "https://scads.ai/semrepo-knowledge-graph-for-research-software/",
+    "check": "ok",
+    "what": "Which institutions contribute most to open researc"
+   },
+   {
+    "quote": "Which research communities build sustainable software ecosystems?",
+    "url": "https://scads.ai/semrepo-knowledge-graph-for-research-software/",
+    "check": "ok",
+    "what": "Which research communities build sustainable softw"
+   },
+   {
+    "quote": "the systematic identification of risks to research reproducibility and software sustainability",
+    "url": "https://arxiv.org/pdf/2605.13310",
+    "check": "ok",
+    "what": "the systematic identification of risks to research"
+   }
+  ],
+  "abstraction": [
+   {
+    "quote": "We model human actors through a general Person class, with specialized subclasses capturing distinct roles within the software lifecycle",
+    "url": "https://arxiv.org/pdf/2605.13310",
+    "check": "ok",
+    "what": "We model human actors through a general Person cla"
+   },
+   {
+    "quote": "This role-based hierarchy enables fine-grained analysis of participation patterns and community engagement.",
+    "url": "https://arxiv.org/pdf/2605.13310",
+    "check": "ok",
+    "what": "This role-based hierarchy enables fine-grained ana"
+   }
+  ],
+  "why": [
+   {
+    "quote": "One of the key objectives of SemRepo is to bridge the fragmentation between research software and its surrounding scholarly ecosystem.",
+    "url": "https://arxiv.org/pdf/2605.13310",
+    "check": "ok",
+    "what": "One of the key objectives of SemRepo is to bridge "
+   },
+   {
+    "quote": "cannot be adequately represented by a simple binary predicate (e.g., hasContributor), as it must also encode the extent of the contribution",
+    "url": "https://arxiv.org/pdf/2605.13310",
+    "check": "ok",
+    "what": "cannot be adequately represented by a simple binar"
+   },
+   {
+    "quote": "SemRepo provides this missing semantic layer.",
+    "url": "https://scads.ai/semrepo-knowledge-graph-for-research-software/",
+    "check": "ok",
+    "what": "SemRepo provides this missing semantic layer."
+   }
+  ],
+  "alternative": [
+   {
+    "quote": "links to implementations are often buried in unstructured text, represented inconsistently, or missing altogether",
+    "url": "https://arxiv.org/pdf/2605.13310",
+    "check": "ok",
+    "what": "links to implementations are often buried in unstr"
+   },
+   {
+    "quote": "these resources largely stop at the level of scholarly communication and do not explicitly capture downstream software artifacts.",
+    "url": "https://arxiv.org/pdf/2605.13310",
+    "check": "ok",
+    "what": "these resources largely stop at the level of schol"
+   },
+   {
+    "quote": "these links remain shallow: Repositories are not semantically modeled with contributors, issues, dependencies, licences, and language composition as first-class entities",
+    "url": "https://arxiv.org/pdf/2605.13310",
+    "check": "ok",
+    "what": "these links remain shallow: Repositories are not s"
+   }
+  ],
+  "limit": [
+   {
+    "quote": "we acknowledge that it inherits structural biases and coverage limitations from upstream sources, i.e., uneven representation across languages, regions, and research communities.",
+    "url": "https://arxiv.org/pdf/2605.13310",
+    "check": "ok",
+    "what": "we acknowledge that it inherits structural biases "
+   },
+   {
+    "quote": "Future work will extend SemRepo beyond GitHub by incorporating platforms such as GitLab and Bitbucket",
+    "url": "https://arxiv.org/pdf/2605.13310",
+    "check": "ok",
+    "what": "Future work will extend SemRepo beyond GitHub by i"
+   },
+   {
+    "quote": "Subject to the availability of upstream data sources and infrastructure constraints.",
+    "url": "https://arxiv.org/pdf/2605.13310",
+    "check": "ok",
+    "what": "Subject to the availability of upstream data sourc"
+   }
+  ],
+  "not_stated": [
+   "views",
+   "encodings"
+  ],
+  "id": "semrepo"
+ },
+ "moss": {
+  "pages_read": [
+   "https://pretalx.com/juliacon-2025/talk/3EVLR9/",
+   "https://numfocus.org/open-source-science-initiative-ossci"
+  ],
+  "retrieved": "2026-10-13",
+  "input_material": [
+   {
+    "quote": "a system that consolidates data from GitHub, OpenAlex, CrossRef, and other scholarly sources to build an integrated knowledge graph",
+    "url": "https://pretalx.com/juliacon-2025/talk/3EVLR9/",
+    "check": "ok",
+    "what": "a system that consolidates data from GitHub, OpenA"
+   },
+   {
+    "quote": "GitHub: Repositories, contributors, pull requests, issues, and CITATION.cff files that contain DOIs to relevant academic publications.",
+    "url": "https://pretalx.com/juliacon-2025/talk/3EVLR9/",
+    "check": "ok",
+    "what": "GitHub: Repositories, contributors, pull requests,"
+   },
+   {
+    "quote": "Scholarly APIs (OpenAlex, CrossRef, Semantic Scholar): Paper metadata, references, citations, and institutional affiliations.",
+    "url": "https://pretalx.com/juliacon-2025/talk/3EVLR9/",
+    "check": "ok",
+    "what": "Scholarly APIs (OpenAlex, CrossRef, Semantic Schol"
+   }
+  ],
+  "entities": [
+   {
+    "quote": "The resulting property graph uses well-defined node types such as Repository, Paper, Person, Institution, and Topic, each linked by relationships.",
+    "url": "https://pretalx.com/juliacon-2025/talk/3EVLR9/",
+    "check": "ok",
+    "what": "node types"
+   }
+  ],
+  "relations": [
+   {
+    "quote": "the dynamic relationships—who contributed to which package, which institutions are tied to key Julia projects, and how academic citations reference these repositories",
+    "url": "https://pretalx.com/juliacon-2025/talk/3EVLR9/",
+    "check": "ok",
+    "what": "dynamic relationships"
+   },
+   {
+    "quote": "Automatically linking Julia repositories with the papers they implement or reference.",
+    "url": "https://pretalx.com/juliacon-2025/talk/3EVLR9/",
+    "check": "ok",
+    "what": "automatic linking of repositories and papers"
+   }
+  ],
+  "attributes": [
+   {
+    "quote": "capturing not only static metadata (e.g., repository descriptions or paper titles)",
+    "url": "https://pretalx.com/juliacon-2025/talk/3EVLR9/",
+    "check": "ok",
+    "what": "static metadata"
+   }
+  ],
+  "views": [
+   {
+    "quote": "By visualizing the interplay between code contributions, scholarly publications, and institutional relationships",
+    "url": "https://pretalx.com/juliacon-2025/talk/3EVLR9/",
+    "check": "ok",
+    "what": "visualizing"
+   }
+  ],
+  "encodings": [],
+  "interactions": [
+   {
+    "quote": "how MOSS can be configured to zero in on the Julia community",
+    "url": "https://pretalx.com/juliacon-2025/talk/3EVLR9/",
+    "check": "ok",
+    "what": "configured to focus on Julia community"
+   },
+   {
+    "quote": "Explore our early mappings at https://opensource.science/moss",
+    "url": "https://pretalx.com/juliacon-2025/talk/3EVLR9/",
+    "check": "ok",
+    "what": "explore early mappings"
+   }
+  ],
+  "questions": [
+   {
+    "quote": "Developers can discover underexplored collaborations, researchers can trace code dependencies in scientific papers",
+    "url": "https://pretalx.com/juliacon-2025/talk/3EVLR9/",
+    "check": "ok",
+    "what": "Developers can discover underexplored collaboratio"
+   },
+   {
+    "quote": "Quantifying how often key Julia packages are cited in academic works, and in which fields they hold the most influence.",
+    "url": "https://pretalx.com/juliacon-2025/talk/3EVLR9/",
+    "check": "ok",
+    "what": "Quantifying how often key Julia packages are cited"
+   },
+   {
+    "quote": "identify needs and gaps where new projects are required or existing projects should be extended or integrated with other OSS projects.",
+    "url": "https://numfocus.org/open-source-science-initiative-ossci",
+    "check": "ok",
+    "what": "identify needs and gaps where new projects are req"
+   }
+  ],
+  "abstraction": [
+   {
+    "quote": "A data transformation layer standardizes fields, merges conflicting information, and resolves aliases.",
+    "url": "https://pretalx.com/juliacon-2025/talk/3EVLR9/",
+    "check": "ok",
+    "what": "A data transformation layer standardizes fields, m"
+   }
+  ],
+  "why": [
+   {
+    "quote": "Our goal with MOSS is to unify disparate data streams, enabling a comprehensive understanding of the ecosystem’s evolution, areas of collaboration, academic influence",
+    "url": "https://pretalx.com/juliacon-2025/talk/3EVLR9/",
+    "check": "ok",
+    "what": "Our goal with MOSS is to unify disparate data stre"
+   },
+   {
+    "quote": "We systematically map all areas of science to the OSS projects used to advance those areas",
+    "url": "https://numfocus.org/open-source-science-initiative-ossci",
+    "check": "ok",
+    "what": "We systematically map all areas of science to the "
+   }
+  ],
+  "alternative": [
+   {
+    "quote": "While the Julia ecosystem has grown impressively in recent years it remains challenging to identify use, impact, and relationships throughout the ecosystem.",
+    "url": "https://pretalx.com/juliacon-2025/talk/3EVLR9/",
+    "check": "ok",
+    "what": "While the Julia ecosystem has grown impressively i"
+   }
+  ],
+  "limit": [
+   {
+    "quote": "Integration with additional scholarly sources (e.g., ORCID for contributor disambiguation).",
+    "url": "https://pretalx.com/juliacon-2025/talk/3EVLR9/",
+    "check": "ok",
+    "what": "Integration with additional scholarly sources (e.g"
+   },
+   {
+    "quote": "Explore our early mappings at https://opensource.science/moss",
+    "url": "https://pretalx.com/juliacon-2025/talk/3EVLR9/",
+    "check": "ok",
+    "what": "Explore our early mappings at https://opensource.s"
+   }
+  ],
+  "not_stated": [
+   "encodings"
+  ],
+  "id": "moss"
+ },
+ "ecosystems": {
+  "pages_read": [
+   "https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html"
+  ],
+  "retrieved": "2026-10-13",
+  "input_material": [
+   {
+    "quote": "the pure amount of data being indexed (over 10TB of data across all services)",
+    "url": "https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html",
+    "check": "ok",
+    "what": "the pure amount of data being indexed (over 10TB o"
+   },
+   {
+    "quote": "Registries: 59 Packages: 8,647,405",
+    "url": "https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html",
+    "check": "ok",
+    "what": "Registries: 59 Packages: 8,647,405"
+   }
+  ],
+  "entities": [
+   {
+    "quote": "Versions: 93,009,665 Namespaces: 1,284,530 Maintainers: 1,412,065",
+    "url": "https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html",
+    "check": "ok",
+    "what": "Packages service objects"
+   },
+   {
+    "quote": "Hosts: 784 Repositories: 183,755,645 Owners: 10,543,833 Tags: 188,198,256 Manifests: 190,349,152 Dependencies: 14,051,505,152",
+    "url": "https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html",
+    "check": "ok",
+    "what": "Repos service objects"
+   },
+   {
+    "quote": "Events: 7.43 Billion",
+    "url": "https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html",
+    "check": "ok",
+    "what": "Timeline events"
+   }
+  ],
+  "relations": [
+   {
+    "quote": "Dependencies: 14,051,505,152",
+    "url": "https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html",
+    "check": "ok",
+    "what": "Dependencies"
+   },
+   {
+    "quote": "An open API service providing mapping between scientific papers and software projects that are mentioned in them.",
+    "url": "https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html",
+    "check": "ok",
+    "what": "An open API service providing mapping between scie"
+   }
+  ],
+  "attributes": [
+   {
+    "quote": "An open API service for providing issue and pull request metadata for open source projects.",
+    "url": "https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html",
+    "check": "ok",
+    "what": "issue and pull request metadata"
+   },
+   {
+    "quote": "An open API service providing commit metadata for open source projects.",
+    "url": "https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html",
+    "check": "ok",
+    "what": "commit metadata"
+   },
+   {
+    "quote": "An open API service providing dependency metadata for docker projects.",
+    "url": "https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html",
+    "check": "ok",
+    "what": "dependency metadata for docker projects"
+   }
+  ],
+  "views": [],
+  "encodings": [],
+  "interactions": [
+   {
+    "quote": "An open API service for producing an overview of a list of open source projects.",
+    "url": "https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html",
+    "check": "ok",
+    "what": "overview of a list of projects"
+   },
+   {
+    "quote": "An open API service for discovering and reviewing projects for opensustain.tech.",
+    "url": "https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html",
+    "check": "ok",
+    "what": "discovering and reviewing projects"
+   }
+  ],
+  "questions": [],
+  "abstraction": [
+   {
+    "quote": "An open API service for producing an overview of a list of open source projects.",
+    "url": "https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html",
+    "check": "ok",
+    "what": "An open API service for producing an overview of a"
+   }
+  ],
+  "why": [
+   {
+    "quote": "we’ve designed, built, deployed and maintained 16 significant services to support, sustain, and secure critical digital infrastructure.",
+    "url": "https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html",
+    "check": "ok",
+    "what": "we’ve designed, built, deployed and maintained 16 "
+   }
+  ],
+  "alternative": [],
+  "limit": [
+   {
+    "quote": "required upgrades and changes to infrastructure to keep it running well",
+    "url": "https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html",
+    "check": "ok",
+    "what": "required upgrades and changes to infrastructure to"
+   },
+   {
+    "quote": "We also used up the majority of our grant from Plaintext group and are exploring ways to continue funding further development of features",
+    "url": "https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html",
+    "check": "ok",
+    "what": "We also used up the majority of our grant from Pla"
+   },
+   {
+    "quote": "Dec 21, 2023",
+    "url": "https://nesbitt.io/2023/12/21/2023-ecosystems-end-of-year-update.html",
+    "check": "ok",
+    "what": "Dec 21, 2023"
+   }
+  ],
+  "not_stated": [
+   "views",
+   "encodings",
+   "questions",
+   "alternative"
+  ],
+  "id": "ecosystems"
+ },
+ "opendigger": {
+  "pages_read": [
+   "https://open-digger.cn/en/",
+   "https://open-digger.cn/en/docs/user-docs/intro",
+   "https://open-digger.cn/en/docs/user-docs/metrics/metrics-usage-guide",
+   "https://open-digger.cn/en/docs/user-docs/metrics/openrank",
+   "https://open-digger.cn/en/docs/user-docs/metrics/community-openrank",
+   "https://open-digger.cn/en/docs/user-docs/metrics/activity",
+   "https://open-digger.cn/en/docs/user-docs/metrics/playground"
+  ],
+  "retrieved": "2026-10-13",
+  "input_material": [
+   {
+    "quote": "OpenDigger is an open source analysis platform for all open source data initiated by X-lab",
+    "url": "https://open-digger.cn/en/docs/user-docs/intro",
+    "check": "ok",
+    "what": "OpenDigger is an open source analysis platform for"
+   },
+   {
+    "quote": "Due to the existence of missing data in OpenDigger's GitHub data source",
+    "url": "https://open-digger.cn/en/docs/user-docs/metrics/metrics-usage-guide",
+    "check": "ok",
+    "what": "Due to the existence of missing data in OpenDigger"
+   }
+  ],
+  "entities": [
+   {
+    "quote": "The default OpenRank value for developers and repositories in the network, such as new community members or new repositories",
+    "url": "https://open-digger.cn/en/docs/user-docs/metrics/community-openrank",
+    "check": "ok",
+    "what": "Developer/Repo"
+   },
+   {
+    "quote": "The default OpenRank value for Issue nodes in the network",
+    "url": "https://open-digger.cn/en/docs/user-docs/metrics/community-openrank",
+    "check": "ok",
+    "what": "Issue nodes"
+   },
+   {
+    "quote": "The default OpenRank value for merged PR nodes in the network",
+    "url": "https://open-digger.cn/en/docs/user-docs/metrics/community-openrank",
+    "check": "ok",
+    "what": "merged PR nodes"
+   }
+  ],
+  "relations": [
+   {
+    "quote": "How much of an Issue's/PR's OpenRank is transferred to its repository",
+    "url": "https://open-digger.cn/en/docs/user-docs/metrics/community-openrank",
+    "check": "ok",
+    "what": "belong edge"
+   },
+   {
+    "quote": "How much of an Issue's/PR's OpenRank is transferred to its contributing developers",
+    "url": "https://open-digger.cn/en/docs/user-docs/metrics/community-openrank",
+    "check": "ok",
+    "what": "activity edge"
+   },
+   {
+    "quote": "The weights assigned to different event types when calculating activity edge weights",
+    "url": "https://open-digger.cn/en/docs/user-docs/metrics/community-openrank",
+    "check": "ok",
+    "what": "activity edge weights"
+   }
+  ],
+  "attributes": [
+   {
+    "quote": "the activity of a specific developer in a specific repository for a month is the square root of the weighted sum of all collaborative behaviors of that developer in that month",
+    "url": "https://open-digger.cn/en/docs/user-docs/metrics/activity",
+    "check": "ok",
+    "what": "activity"
+   },
+   {
+    "quote": "The proportion of a developer's/repository's OpenRank inherited from last month's historical OpenRank or initial OpenRank",
+    "url": "https://open-digger.cn/en/docs/user-docs/metrics/community-openrank",
+    "check": "ok",
+    "what": "Developer/Repo Inheritance Ratio"
+   },
+   {
+    "quote": "The proportion of an Issue's/PR's OpenRank inherited from last month's historical OpenRank or initial OpenRank",
+    "url": "https://open-digger.cn/en/docs/user-docs/metrics/community-openrank",
+    "check": "ok",
+    "what": "Issue/PR Inheritance Ratio"
+   },
+   {
+    "quote": "The weights of reactions used to calculate the initial OpenRank of Issues/PRs",
+    "url": "https://open-digger.cn/en/docs/user-docs/metrics/community-openrank",
+    "check": "ok",
+    "what": "Weights for reactions"
+   }
+  ],
+  "views": [
+   {
+    "quote": "In this playground page, you can input the platform, repo name or user login to check out the visualization effect of the data.",
+    "url": "https://open-digger.cn/en/docs/user-docs/metrics/playground",
+    "check": "ok",
+    "what": "Playground visualization"
+   },
+   {
+    "quote": "The following example has been implemented in HyperCRX, which can be seen in the Perceptor tab of the repository page after installing the HyperCRX plugin.",
+    "url": "https://open-digger.cn/en/docs/user-docs/metrics/activity",
+    "check": "ok",
+    "what": "Perceptor tab in HyperCRX"
+   },
+   {
+    "quote": "OpenLeaderboard: An open source leaderboard of open source world with labeled data.",
+    "url": "https://open-digger.cn/en/docs/user-docs/intro",
+    "check": "ok",
+    "what": "OpenLeaderboard"
+   }
+  ],
+  "encodings": [],
+  "interactions": [
+   {
+    "quote": "The search components for various repositories and users on the OpenDigger official webpage use these two files for local browsing.",
+    "url": "https://open-digger.cn/en/docs/user-docs/metrics/metrics-usage-guide",
+    "check": "ok",
+    "what": "search components"
+   },
+   {
+    "quote": "you can input the platform, repo name or user login to check out the visualization effect of the data",
+    "url": "https://open-digger.cn/en/docs/user-docs/metrics/playground",
+    "check": "ok",
+    "what": "input the platform, repo name or user login"
+   }
+  ],
+  "questions": [
+   {
+    "quote": "to help everyone better understand and participate in open source",
+    "url": "https://open-digger.cn/en/docs/user-docs/intro",
+    "check": "ok",
+    "what": "to help everyone better understand and participate"
+   },
+   {
+    "quote": "OpenRank aims to explore the flow of value in social collaborative networks",
+    "url": "https://open-digger.cn/en/docs/user-docs/metrics/openrank",
+    "check": "ok",
+    "what": "OpenRank aims to explore the flow of value in soci"
+   },
+   {
+    "quote": "this indicator is very important for identifying the activity level of the repository",
+    "url": "https://open-digger.cn/en/docs/user-docs/metrics/activity",
+    "check": "ok",
+    "what": "this indicator is very important for identifying t"
+   }
+  ],
+  "abstraction": [
+   {
+    "quote": "The activity of the repository is the sum of the activity of all developers in the repository for that month",
+    "url": "https://open-digger.cn/en/docs/user-docs/metrics/activity",
+    "check": "ok",
+    "what": "activity sum (developers to repository)"
+   },
+   {
+    "quote": "The repository's OpenRank is evenly distributed among all its Issues/PRs",
+    "url": "https://open-digger.cn/en/docs/user-docs/metrics/community-openrank",
+    "check": "ok",
+    "what": "Repo OpenRank flowing to Issue/PR"
+   },
+   {
+    "quote": "with keys representing monthly, quarterly, and yearly values corresponding to the metric data",
+    "url": "https://open-digger.cn/en/docs/user-docs/metrics/metrics-usage-guide",
+    "check": "ok",
+    "what": "monthly, quarterly, and yearly values"
+   }
+  ],
+  "why": [
+   {
+    "quote": "OpenRank was introduced to address the widespread observer effect in statistical indicators",
+    "url": "https://open-digger.cn/en/docs/user-docs/metrics/openrank",
+    "check": "ok",
+    "what": "OpenRank was introduced to address the widespread "
+   },
+   {
+    "quote": "The OpenRank algorithm solidifies community institutional design in algorithmic form, integrating measurement with behavioral impact",
+    "url": "https://open-digger.cn/en/docs/user-docs/metrics/openrank",
+    "check": "ok",
+    "what": "The OpenRank algorithm solidifies community instit"
+   },
+   {
+    "quote": "The introduction of initial values for nodes allows, in practical applications, for the centrality of nodes to inherit historical data, thus maintaining good temporal continuity",
+    "url": "https://open-digger.cn/en/docs/user-docs/metrics/openrank",
+    "check": "ok",
+    "what": "The introduction of initial values for nodes allow"
+   }
+  ],
+  "alternative": [
+   {
+    "quote": "such as the alienation behavior and community damage caused by metrics like the number of stars and contributors in open source projects",
+    "url": "https://open-digger.cn/en/docs/user-docs/metrics/openrank",
+    "check": "ok",
+    "what": "such as the alienation behavior and community dama"
+   }
+  ],
+  "limit": [
+   {
+    "quote": "OpenDigger does not export metrics data for all repositories and users.",
+    "url": "https://open-digger.cn/en/docs/user-docs/metrics/metrics-usage-guide",
+    "check": "ok",
+    "what": "OpenDigger does not export metrics data for all re"
+   },
+   {
+    "quote": "Due to the existence of missing data in OpenDigger's GitHub data source",
+    "url": "https://open-digger.cn/en/docs/user-docs/metrics/metrics-usage-guide",
+    "check": "ok",
+    "what": "Due to the existence of missing data in OpenDigger"
+   },
+   {
+    "quote": "The Community OpenRank algorithm implementation has not yet been open-sourced in OpenDigger.",
+    "url": "https://open-digger.cn/en/docs/user-docs/metrics/community-openrank",
+    "check": "ok",
+    "what": "The Community OpenRank algorithm implementation ha"
+   },
+   {
+    "quote": "The activity indicator only considers collaborative behaviors that have substantial contributions to the repository and does not consider behaviors such as Star, Fork, etc.",
+    "url": "https://open-digger.cn/en/docs/user-docs/metrics/activity",
+    "check": "ok",
+    "what": "The activity indicator only considers collaborativ"
+   }
+  ],
+  "not_stated": [
+   "encodings"
+  ],
+  "id": "opendigger"
+ },
+ "deps-dev": {
+  "pages_read": [
+   "https://docs.deps.dev/",
+   "https://blog.deps.dev/api/",
+   "https://docs.deps.dev/bigquery/v1/"
+  ],
+  "retrieved": "2026-10-13",
+  "input_material": [
+   {
+    "quote": "The service currently indexes the Cargo, Go, Maven, npm, NuGet, PyPI, and RubyGems package ecosystems, the GitHub, GitLab, and Bitbucket project hosts, and the security advisories from OSV.",
+    "url": "https://docs.deps.dev/",
+    "check": "ok",
+    "what": "The service currently indexes the Cargo, Go, Maven"
+   },
+   {
+    "quote": "The deps.dev data set is continuously updated from a range of sources: package registries, the Open Source Vulnerability database, code hosts such as GitHub and GitLab",
+    "url": "https://blog.deps.dev/api/",
+    "check": "ok",
+    "what": "The deps.dev data set is continuously updated from"
+   }
+  ],
+  "entities": [
+   {
+    "quote": "The service examines each package, constructs a full, detailed graph of its dependencies and their properties",
+    "url": "https://docs.deps.dev/",
+    "check": "ok",
+    "what": "package"
+   },
+   {
+    "quote": "for more than 50 million open source package versions",
+    "url": "https://blog.deps.dev/api/",
+    "check": "ok",
+    "what": "package versions"
+   }
+  ],
+  "relations": [
+   {
+    "quote": "We collect and aggregate this data and derive transitive dependency graphs, advisory impact reports, OpenSSF Security Scorecard information, and more.",
+    "url": "https://blog.deps.dev/api/",
+    "check": "ok",
+    "what": "transitive dependency graphs"
+   },
+   {
+    "quote": "a full dependency graph computed using the same algorithms as the packaging tools (Maven, npm, Pip, Go, Cargo)",
+    "url": "https://blog.deps.dev/api/",
+    "check": "ok",
+    "what": "full dependency graph"
+   },
+   {
+    "quote": "A single API call to list all the GHSA advisories affecting a specific version of log4j",
+    "url": "https://blog.deps.dev/api/",
+    "check": "ok",
+    "what": "advisories affecting a version"
+   }
+  ],
+  "attributes": [
+   {
+    "quote": "security metadata, including dependencies, licenses, advisories, and other critical health and security signals",
+    "url": "https://blog.deps.dev/api/",
+    "check": "ok",
+    "what": "dependencies, licenses, advisories, health and security signals"
+   },
+   {
+    "quote": "The license information is taken from the PackageVersionsLatest view.",
+    "url": "https://docs.deps.dev/bigquery/v1/",
+    "check": "ok",
+    "what": "license information"
+   }
+  ],
+  "views": [
+   {
+    "quote": "Search for open source packages, visualize dependencies, compare versions, investigate security advisories and more.",
+    "url": "https://docs.deps.dev/",
+    "check": "ok",
+    "what": "visualize dependencies"
+   },
+   {
+    "quote": "Visualizations to help you discover what your dependency graph actually looks like",
+    "url": "https://blog.deps.dev/api/",
+    "check": "ok",
+    "what": "dependency graph"
+   },
+   {
+    "quote": "Dependency graph for react 15.0.0, fetched from the deps.dev API and rendered using GraphViz",
+    "url": "https://blog.deps.dev/api/",
+    "check": "ok",
+    "what": "dependency graph for react 15.0.0"
+   }
+  ],
+  "encodings": [],
+  "interactions": [
+   {
+    "quote": "you can look up the hash of a file's contents and find all the package versions that contain that file",
+    "url": "https://blog.deps.dev/api/",
+    "check": "ok",
+    "what": "hash queries"
+   },
+   {
+    "quote": "This example demonstrates searching for advisories that disclose vulnerabilities in a set of package versions",
+    "url": "https://docs.deps.dev/bigquery/v1/",
+    "check": "ok",
+    "what": "find advisories by package version"
+   },
+   {
+    "quote": "This example demonstrates searching for a set of licenses used by a set of package versions",
+    "url": "https://docs.deps.dev/bigquery/v1/",
+    "check": "ok",
+    "what": "find licenses by package version"
+   }
+  ],
+  "questions": [
+   {
+    "quote": "What versions are available for this package?",
+    "url": "https://blog.deps.dev/api/",
+    "check": "ok",
+    "what": "What versions are available for this package?"
+   },
+   {
+    "quote": "How many dependencies does this package have? What are they?",
+    "url": "https://blog.deps.dev/api/",
+    "check": "ok",
+    "what": "How many dependencies does this package have? What"
+   },
+   {
+    "quote": "how much risk would this dependency add to my project?",
+    "url": "https://blog.deps.dev/api/",
+    "check": "ok",
+    "what": "how much risk would this dependency add to my proj"
+   }
+  ],
+  "abstraction": [
+   {
+    "quote": "We collect and aggregate this data and derive transitive dependency graphs",
+    "url": "https://blog.deps.dev/api/",
+    "check": "ok",
+    "what": "collect and aggregate"
+   },
+   {
+    "quote": "It is intended to demonstrate simple ecosystem-wide analysis with the deps.dev dataset.",
+    "url": "https://docs.deps.dev/bigquery/v1/",
+    "check": "ok",
+    "what": "ecosystem-wide analysis"
+   }
+  ],
+  "why": [
+   {
+    "quote": "help developers better understand the structure, construction, and security of open source software packages",
+    "url": "https://docs.deps.dev/",
+    "check": "ok",
+    "what": "help developers better understand the structure, c"
+   },
+   {
+    "quote": "We hope the deps.dev API will help the community make sense of complex dependency data",
+    "url": "https://blog.deps.dev/api/",
+    "check": "ok",
+    "what": "We hope the deps.dev API will help the community m"
+   },
+   {
+    "quote": "The goal is to provide developers with a picture of how their software is put together",
+    "url": "https://docs.deps.dev/",
+    "check": "ok",
+    "what": "The goal is to provide developers with a picture o"
+   }
+  ],
+  "alternative": [
+   {
+    "quote": "The deps.dev dependency data is not just what a package declares (its manifests, lock files, etc.)",
+    "url": "https://blog.deps.dev/api/",
+    "check": "ok",
+    "what": "The deps.dev dependency data is not just what a pa"
+   },
+   {
+    "quote": "which is useful when a package changes but the developer doesn't update the lock file",
+    "url": "https://blog.deps.dev/api/",
+    "check": "ok",
+    "what": "which is useful when a package changes but the dev"
+   }
+  ],
+  "limit": [
+   {
+    "quote": "This generated data is available under a CC-BY 4.0 license.",
+    "url": "https://docs.deps.dev/bigquery/v1/",
+    "check": "ok",
+    "what": "This generated data is available under a CC-BY 4.0"
+   },
+   {
+    "quote": "The service currently indexes the Cargo, Go, Maven, npm, NuGet, PyPI, and RubyGems package ecosystems",
+    "url": "https://docs.deps.dev/",
+    "check": "ok",
+    "what": "The service currently indexes the Cargo, Go, Maven"
+   },
+   {
+    "quote": "It updates the data regularly to keep the information up-to-date and relevant",
+    "url": "https://docs.deps.dev/",
+    "check": "ok",
+    "what": "It updates the data regularly to keep the informat"
+   }
+  ],
+  "not_stated": [
+   "encodings"
+  ],
+  "id": "deps-dev"
+ },
+ "codegraph": {
+  "pages_read": [
+   "https://arxiv.org/abs/2609.29474",
+   "https://arxiv.org/html/2609.29474v1",
+   "https://huggingface.co/datasets/halykoss/CodeGraph"
+  ],
+  "retrieved": "2026-10-13",
+  "input_material": [
+   {
+    "quote": "We applied our pipeline to the 167 million files of the Stack-Edu corpus",
+    "url": "https://arxiv.org/abs/2609.29474",
+    "check": "ok",
+    "what": "We applied our pipeline to the 167 million files o"
+   },
+   {
+    "quote": "processes whole source files through a code-specialised mixture-of-experts model",
+    "url": "https://arxiv.org/html/2609.29474v1",
+    "check": "ok",
+    "what": "processes whole source files through a code-specia"
+   }
+  ],
+  "entities": [
+   {
+    "quote": "about 63,000 extracted concept entities (such as algorithms, paradigms, design patterns, and application domains)",
+    "url": "https://arxiv.org/abs/2609.29474",
+    "check": "ok",
+    "what": "concept entities"
+   },
+   {
+    "quote": ":File nodes represent source artifacts and are linked to the semantic concepts extracted from them",
+    "url": "https://arxiv.org/html/2609.29474v1",
+    "check": "ok",
+    "what": "File nodes"
+   },
+   {
+    "quote": "roughly 19,800 grounded Wikidata entities",
+    "url": "https://arxiv.org/abs/2609.29474",
+    "check": "ok",
+    "what": "Wikidata entities"
+   }
+  ],
+  "relations": [
+   {
+    "quote": "the same algorithm node dynamic programming can be connected through IMPLEMENTS edges to files in competitive programming, RNA secondary-structure prediction, and financial option pricing alike",
+    "url": "https://arxiv.org/html/2609.29474v1",
+    "check": "ok",
+    "what": "IMPLEMENTS edges"
+   },
+   {
+    "quote": "connected through explicit WIKIDATA_PARENT edges",
+    "url": "https://arxiv.org/html/2609.29474v1",
+    "check": "ok",
+    "what": "WIKIDATA_PARENT edges"
+   },
+   {
+    "quote": "source files coexist with concept nodes and typed, provenance-carrying edges",
+    "url": "https://arxiv.org/html/2609.29474v1",
+    "check": "ok",
+    "what": "typed, provenance-carrying edges"
+   }
+  ],
+  "attributes": [
+   {
+    "quote": "is independently re-evaluated and tagged Okay or NotOkay",
+    "url": "https://arxiv.org/html/2609.29474v1",
+    "check": "ok",
+    "what": "Okay / NotOkay"
+   },
+   {
+    "quote": ":Algorithm nodes are grouped under :AlgorithmCategory parents that encode standard taxonomies of algorithmic techniques.",
+    "url": "https://arxiv.org/html/2609.29474v1",
+    "check": "ok",
+    "what": ":Algorithm nodes are grouped under :AlgorithmCateg"
+   },
+   {
+    "quote": "Both the extractor annotation and the verifier decision are preserved in the released graph",
+    "url": "https://arxiv.org/html/2609.29474v1",
+    "check": "ok",
+    "what": "extractor annotation and verifier decision"
+   }
+  ],
+  "views": [
+   {
+    "quote": "Core CodeGraph property-graph schema.",
+    "url": "https://arxiv.org/html/2609.29474v1",
+    "check": "ok",
+    "what": "property-graph schema"
+   },
+   {
+    "quote": "Graph composition by entity type and Wikidata coverage.",
+    "url": "https://arxiv.org/html/2609.29474v1",
+    "check": "ok",
+    "what": "composition by entity type"
+   },
+   {
+    "quote": "Top application domains by file count (Wikidata-grounded).",
+    "url": "https://arxiv.org/html/2609.29474v1",
+    "check": "ok",
+    "what": "Top application domains by file count"
+   },
+   {
+    "quote": "Incidence of selected algorithms across representative application domains",
+    "url": "https://arxiv.org/html/2609.29474v1",
+    "check": "ok",
+    "what": "Incidence of selected algorithms"
+   }
+  ],
+  "encodings": [],
+  "interactions": [
+   {
+    "quote": "developers and researchers can retrieve or filter code snippets by the algorithms, paradigms, or design patterns they embody",
+    "url": "https://arxiv.org/html/2609.29474v1",
+    "check": "ok",
+    "what": "retrieve or filter"
+   },
+   {
+    "quote": "navigate the Wikidata layer to broaden or narrow the results of a query along the concept hierarchy",
+    "url": "https://arxiv.org/html/2609.29474v1",
+    "check": "ok",
+    "what": "navigate the Wikidata layer"
+   },
+   {
+    "quote": "following its IMPLEMENTS edges, optionally navigating the hierarchy",
+    "url": "https://arxiv.org/html/2609.29474v1",
+    "check": "ok",
+    "what": "following its IMPLEMENTS edges"
+   }
+  ],
+  "questions": [
+   {
+    "quote": "choosing the right algorithm for a given problem instance is itself a learning problem",
+    "url": "https://arxiv.org/html/2609.29474v1",
+    "check": "ok",
+    "what": "choosing the right algorithm for a given problem i"
+   },
+   {
+    "quote": "the algorithms they implement, the paradigms they follow, the patterns they instantiate, and the application domains they serve",
+    "url": "https://arxiv.org/abs/2609.29474",
+    "check": "ok",
+    "what": "the algorithms they implement, the paradigms they "
+   }
+  ],
+  "abstraction": [
+   {
+    "quote": "a hierarchy-rollup stage imports the parent-of closure of each resolved Wikidata identifier",
+    "url": "https://arxiv.org/abs/2609.29474",
+    "check": "ok",
+    "what": "hierarchy-rollup"
+   },
+   {
+    "quote": "enabling analyses to roll fine-grained labels up to broader semantic concepts when needed",
+    "url": "https://arxiv.org/html/2609.29474v1",
+    "check": "ok",
+    "what": "roll fine-grained labels up"
+   },
+   {
+    "quote": "enabling aggregation of fine-grained concepts at arbitrary levels of abstraction",
+    "url": "https://arxiv.org/html/2609.29474v1",
+    "check": "ok",
+    "what": "arbitrary levels of abstraction"
+   },
+   {
+    "quote": "This gives CodeGraph a dual conceptual layer: a local, corpus-defined vocabulary of extracted concepts and a global, Wikidata-grounded taxonomy",
+    "url": "https://arxiv.org/html/2609.29474v1",
+    "check": "ok",
+    "what": "dual conceptual layer"
+   }
+  ],
+  "why": [
+   {
+    "quote": "The taxonomy is deliberately open: rather than constraining labels to a predefined taxonomy, the model generates free-form concept names that are reconciled a posteriori",
+    "url": "https://arxiv.org/html/2609.29474v1",
+    "check": "ok",
+    "what": "The taxonomy is deliberately open: rather than con"
+   },
+   {
+    "quote": "Delegating only the hard cases to an LLM keeps the grounding step deterministic wherever possible",
+    "url": "https://arxiv.org/html/2609.29474v1",
+    "check": "ok",
+    "what": "Delegating only the hard cases to an LLM keeps the"
+   },
+   {
+    "quote": "rather than by just lexical matches on identifiers or comments",
+    "url": "https://arxiv.org/html/2609.29474v1",
+    "check": "ok",
+    "what": "rather than by just lexical matches on identifiers"
+   }
+  ],
+  "alternative": [
+   {
+    "quote": "Classical static-analysis tools dissect code with high precision but operate at a syntactic level that rarely captures what a program does or why it was designed in a certain way",
+    "url": "https://arxiv.org/html/2609.29474v1",
+    "check": "ok",
+    "what": "Classical static-analysis tools dissect code with "
+   },
+   {
+    "quote": "Supervised learning offers more generality but requires hand-labelled data on an impractical scale for hundreds of millions of heterogeneous files",
+    "url": "https://arxiv.org/html/2609.29474v1",
+    "check": "ok",
+    "what": "Supervised learning offers more generality but req"
+   },
+   {
+    "quote": "current tools are constrained to syntactic and token-level analysis",
+    "url": "https://arxiv.org/abs/2609.29474",
+    "check": "ok",
+    "what": "current tools are constrained to syntactic and tok"
+   }
+  ],
+  "limit": [
+   {
+    "quote": "The human gold set (127 stratified source files; see Section 5) is small in absolute terms",
+    "url": "https://arxiv.org/html/2609.29474v1",
+    "check": "ok",
+    "what": "The human gold set (127 stratified source files; s"
+   },
+   {
+    "quote": "design pattern and paradigm are not reliable enough to support strong quantitative claims on their own",
+    "url": "https://arxiv.org/html/2609.29474v1",
+    "check": "ok",
+    "what": "design pattern and paradigm are not reliable enoug"
+   },
+   {
+    "quote": "The two values therefore bracket the range of plausible precision estimates: 68% as a conservative lower bound and 88% as a loose upper bound",
+    "url": "https://arxiv.org/html/2609.29474v1",
+    "check": "ok",
+    "what": "The two values therefore bracket the range of plau"
+   },
+   {
+    "quote": "Stack-Edu is distributed under the access terms of the BigCode (HuggingFace) project and requires explicit acceptance of the corresponding license and opt-out checks for download",
+    "url": "https://arxiv.org/html/2609.29474v1",
+    "check": "ok",
+    "what": "Stack-Edu is distributed under the access terms of"
+   }
+  ],
+  "not_stated": [
+   "encodings"
+  ],
+  "id": "codegraph"
+ },
+ "software-heritage-graph": {
+  "pages_read": [
+   "https://registry.opendata.aws/software-heritage/",
+   "https://arxiv.org/abs/2011.07824",
+   "https://arxiv.org/pdf/2011.07824"
+  ],
+  "retrieved": "2026-10-13",
+  "input_material": [
+   {
+    "quote": "The dataset’s contents come from major development forges (including GitHub and GitLab), FOSS distributions (e.g., Debian), and language-specific package managers (e.g., PyPI).",
+    "url": "https://registry.opendata.aws/software-heritage/",
+    "check": "ok",
+    "what": "The dataset’s contents come from major development"
+   }
+  ],
+  "entities": [
+   {
+    "quote": "Contents (or “blobs”) form the graph’s leaves, and contain the raw content of source code files, not including their filenames",
+    "url": "https://arxiv.org/pdf/2011.07824",
+    "check": "ok",
+    "what": "contents (blobs)"
+   },
+   {
+    "quote": "Directories are lists of named directory entries.",
+    "url": "https://arxiv.org/pdf/2011.07824",
+    "check": "ok",
+    "what": "directories"
+   },
+   {
+    "quote": "Revisions (or “commits”) are point-in-time captures of the entire source tree of a development project.",
+    "url": "https://arxiv.org/pdf/2011.07824",
+    "check": "ok",
+    "what": "revisions (or “commits”)"
+   },
+   {
+    "quote": "Snapshots are point-in-time captures of the full state of a project development repository.",
+    "url": "https://arxiv.org/pdf/2011.07824",
+    "check": "ok",
+    "what": "snapshots"
+   }
+  ],
+  "relations": [
+   {
+    "quote": "Each entry can point to content objects (“file entries”), revisions (“revision entries”), or other directories (“directory entries”).",
+    "url": "https://arxiv.org/pdf/2011.07824",
+    "check": "ok",
+    "what": "directory entries"
+   },
+   {
+    "quote": "Each revision points to the root directory of the project source tree, and a list of its parent revisions.",
+    "url": "https://arxiv.org/pdf/2011.07824",
+    "check": "ok",
+    "what": "revision"
+   },
+   {
+    "quote": "Each release points to a revision and might include additional descriptive metadata.",
+    "url": "https://arxiv.org/pdf/2011.07824",
+    "check": "ok",
+    "what": "release"
+   },
+   {
+    "quote": "snapshots capture the state of all branches in a repository and allow to deduplicate unmodified forks across the archive.",
+    "url": "https://arxiv.org/pdf/2011.07824",
+    "check": "ok",
+    "what": "snapshot"
+   }
+  ],
+  "attributes": [
+   {
+    "quote": "the dataset also contains crawling information, as a set of triples capturing where (an origin url) and when (a timestamp) a given snapshot has been encountered.",
+    "url": "https://arxiv.org/pdf/2011.07824",
+    "check": "ok",
+    "what": "crawling information (origin url, timestamp)"
+   },
+   {
+    "quote": "The dataset contains cryptographic checksums for all contents though, that can be used to retrieve the actual files from any Software Heritage mirror using a Web api",
+    "url": "https://arxiv.org/pdf/2011.07824",
+    "check": "ok",
+    "what": "cryptographic checksums"
+   },
+   {
+    "quote": "Author and committer information is anonymized.",
+    "url": "https://registry.opendata.aws/software-heritage/",
+    "check": "ok",
+    "what": "author and committer information"
+   },
+   {
+    "quote": "By using persistent, cryptographically-strong hashes as node identifiers",
+    "url": "https://arxiv.org/pdf/2011.07824",
+    "check": "ok",
+    "what": "node identifiers"
+   }
+  ],
+  "views": [
+   {
+    "quote": "Figure 2: Data model: a uniform Merkle DAG containing source code artifacts and their development history",
+    "url": "https://arxiv.org/pdf/2011.07824",
+    "check": "ok",
+    "what": "Figure 2 (data model)"
+   },
+   {
+    "quote": "The Merkle dag is encoded in the dataset as a set of relational tables.",
+    "url": "https://arxiv.org/pdf/2011.07824",
+    "check": "ok",
+    "what": "relational tables"
+   },
+   {
+    "quote": "Figure 3: Simplified schema of the Software Heritage Graph Dataset and the number of artifacts in it",
+    "url": "https://arxiv.org/pdf/2011.07824",
+    "check": "ok",
+    "what": "Figure 3 (simplified schema)"
+   }
+  ],
+  "encodings": [],
+  "interactions": [
+   {
+    "quote": "some sample sql queries that can be executed with the dataset on aws Athena.",
+    "url": "https://arxiv.org/pdf/2011.07824",
+    "check": "ok",
+    "what": "SQL queries on Athena"
+   },
+   {
+    "quote": "cross-reference files encountered in the wild, including other datasets.",
+    "url": "https://arxiv.org/pdf/2011.07824",
+    "check": "ok",
+    "what": "cross-reference by checksum"
+   }
+  ],
+  "questions": [
+   {
+    "quote": "allows to explore a number of research questions on the long tail of public software development",
+    "url": "https://arxiv.org/abs/2011.07824",
+    "check": "ok",
+    "what": "allows to explore a number of research questions o"
+   },
+   {
+    "quote": "Graph structure: How tightly coupled are the different layers of the graph?",
+    "url": "https://arxiv.org/pdf/2011.07824",
+    "check": "ok",
+    "what": "Graph structure: How tightly coupled are the diffe"
+   }
+  ],
+  "abstraction": [
+   {
+    "quote": "As shown in Figure 2, the Software Heritage DAG is organized in five logical layers, which we describe from bottom to top.",
+    "url": "https://arxiv.org/pdf/2011.07824",
+    "check": "ok",
+    "what": "five layers"
+   },
+   {
+    "quote": "the graph is deduplicated by sharing all identical nodes.",
+    "url": "https://arxiv.org/pdf/2011.07824",
+    "check": "ok",
+    "what": "deduplication"
+   },
+   {
+    "quote": "it abstracts over VCS and package differences, offering a canonical representation (see Section C) of source code artifacts.",
+    "url": "https://arxiv.org/pdf/2011.07824",
+    "check": "ok",
+    "what": "VCS and package abstraction"
+   }
+  ],
+  "why": [
+   {
+    "quote": "The Software Heritage Graph Dataset exploits the fact that source code artifacts are massively duplicated across hosts and projects [12] to enable tracking of software artifacts across projects",
+    "url": "https://arxiv.org/pdf/2011.07824",
+    "check": "ok",
+    "what": "The Software Heritage Graph Dataset exploits the f"
+   }
+  ],
+  "alternative": [
+   {
+    "quote": "This approach has limitations in scope: (1) it works on subsets of the complete corpus of publicly available software, (2) it makes cross-repository history analysis hard",
+    "url": "https://arxiv.org/pdf/2011.07824",
+    "check": "ok",
+    "what": "This approach has limitations in scope: (1) it wor"
+   }
+  ],
+  "limit": [
+   {
+    "quote": "The dataset captures the state of the Software Heritage archive on September 25th 2018",
+    "url": "https://arxiv.org/pdf/2011.07824",
+    "check": "ok",
+    "what": "The dataset captures the state of the Software Her"
+   },
+   {
+    "quote": "Data is updated yearly",
+    "url": "https://registry.opendata.aws/software-heritage/",
+    "check": "ok",
+    "what": "Data is updated yearly"
+   },
+   {
+    "quote": "The term \"Software Heritage Graph Dataset\" designates the internal structure of the Software Heritage archive, and explicitly excludes the file contents.",
+    "url": "https://registry.opendata.aws/software-heritage/",
+    "check": "ok",
+    "what": "The term \"Software Heritage Graph Dataset\" designa"
+   },
+   {
+    "quote": "The \"Software Heritage Graph Dataset\" is distributed under the Creative Commons Attribution 4.0 International license.",
+    "url": "https://registry.opendata.aws/software-heritage/",
+    "check": "ok",
+    "what": "The \"Software Heritage Graph Dataset\" is distribut"
+   }
+  ],
+  "not_stated": [
+   "encodings",
+   "（读取说明：docs.softwareheritage.org 文档页为 Anubis 人机验证页，没读到；www.softwareheritage.org 证书校验失败，没读到。事实主要来自 2020 年论文与 AWS 登记页。）"
+  ],
+  "id": "software-heritage-graph"
+ },
+ "speculora": {
+  "pages_read": [
+   "https://speculora.com/",
+   "https://speculora.com/info",
+   "https://speculora.com/domain/shopping-deals-694"
+  ],
+  "retrieved": "2026-10-13",
+  "input_material": [
+   {
+    "quote": "real user reviews mined from the app stores, the problems developers raise on technical forums, and each incumbent app’s rating, review count, and price",
+    "url": "https://speculora.com/",
+    "check": "ok",
+    "what": "real user reviews mined from the app stores, the p"
+   }
+  ],
+  "entities": [
+   {
+    "quote": "a discrete job a person wants done, such as “split a restaurant bill among friends”",
+    "url": "https://speculora.com/info",
+    "check": "ok",
+    "what": "task"
+   },
+   {
+    "quote": "The opportunity map — 15 domains",
+    "url": "https://speculora.com/",
+    "check": "ok",
+    "what": "domain"
+   },
+   {
+    "quote": "Sub-areas Delivery Tracking · Deals & Savings · Checkout & Payments · Discovery · Buy & Sell · Lists & Wishlists",
+    "url": "https://speculora.com/domain/shopping-deals-694",
+    "check": "ok",
+    "what": "sub-areas"
+   }
+  ],
+  "relations": [
+   {
+    "quote": "Each task carries demand, supply, quality, and price signals, from which a gap state and an opportunity score are derived.",
+    "url": "https://speculora.com/info",
+    "check": "ok",
+    "what": "signals → gap state and opportunity score"
+   },
+   {
+    "quote": "Each task is scored on demand, competition, and how badly the existing apps serve it.",
+    "url": "https://speculora.com/",
+    "check": "ok",
+    "what": "demand, competition, incumbent service → score"
+   }
+  ],
+  "attributes": [
+   {
+    "quote": "each incumbent app’s rating, review count, and price",
+    "url": "https://speculora.com/",
+    "check": "ok",
+    "what": "incumbent app rating, review count, price"
+   },
+   {
+    "quote": "Opportunity 100/100 · 54 apps · 332 user reports",
+    "url": "https://speculora.com/domain/shopping-deals-694",
+    "check": "ok",
+    "what": "opportunity, apps, user reports"
+   },
+   {
+    "quote": "Heavily used and done badly",
+    "url": "https://speculora.com/info",
+    "check": "ok",
+    "what": "gap state"
+   }
+  ],
+  "views": [
+   {
+    "quote": "Explore the live, interactive map above, or jump into a domain",
+    "url": "https://speculora.com/",
+    "check": "ok",
+    "what": "live, interactive map"
+   },
+   {
+    "quote": "Tasks in Shopping & Deals, ranked by opportunity",
+    "url": "https://speculora.com/domain/shopping-deals-694",
+    "check": "ok",
+    "what": "ranked list within a domain"
+   }
+  ],
+  "encodings": [],
+  "interactions": [
+   {
+    "quote": "Browse the ranked gaps →",
+    "url": "https://speculora.com/info",
+    "check": "ok",
+    "what": "browse ranked gaps"
+   },
+   {
+    "quote": "Open the live map →",
+    "url": "https://speculora.com/info",
+    "check": "ok",
+    "what": "open live map"
+   }
+  ],
+  "questions": [
+   {
+    "quote": "It shows solo developers and indie hackers where software demand is crowded versus where exploitable gaps sit.",
+    "url": "https://speculora.com/",
+    "check": "ok",
+    "what": "It shows solo developers and indie hackers where s"
+   }
+  ],
+  "abstraction": [
+   {
+    "quote": "The unit is a task, not a market",
+    "url": "https://speculora.com/",
+    "check": "ok",
+    "what": "unit is a task"
+   },
+   {
+    "quote": "Speculora breaks software down into discrete tasks — concrete things people want done, like “split a restaurant bill among friends” or “track a budget across multiple bank accounts.”",
+    "url": "https://speculora.com/",
+    "check": "ok",
+    "what": "discrete tasks"
+   }
+  ],
+  "why": [
+   {
+    "quote": "It is not another idea generator.",
+    "url": "https://speculora.com/",
+    "check": "ok",
+    "what": "It is not another idea generator."
+   },
+   {
+    "quote": "refreshed weekly and shown raw, quotes and counts included, so the picture never goes stale.",
+    "url": "https://speculora.com/",
+    "check": "ok",
+    "what": "refreshed weekly and shown raw, quotes and counts "
+   },
+   {
+    "quote": "Saturated doesn't mean no opportunity, and empty doesn't mean opportunity.",
+    "url": "https://speculora.com/info",
+    "check": "ok",
+    "what": "Saturated doesn't mean no opportunity, and empty d"
+   }
+  ],
+  "alternative": [
+   {
+    "quote": "There has been no systematic way for a solo builder to see where demand is crowded versus where exploitable gaps sit.",
+    "url": "https://speculora.com/info",
+    "check": "ok",
+    "what": "There has been no systematic way for a solo builde"
+   },
+   {
+    "quote": "AI and modern tooling have flooded the market with apps, most chasing the same saturated niches.",
+    "url": "https://speculora.com/info",
+    "check": "ok",
+    "what": "AI and modern tooling have flooded the market with"
+   }
+  ],
+  "limit": [
+   {
+    "quote": "And gaps decay, so freshness matters.",
+    "url": "https://speculora.com/info",
+    "check": "ok",
+    "what": "And gaps decay, so freshness matters."
+   },
+   {
+    "quote": "Data refreshed October 12, 2026 · recomputed weekly.",
+    "url": "https://speculora.com/domain/shopping-deals-694",
+    "check": "ok",
+    "what": "Data refreshed October 12, 2026 · recomputed weekl"
+   }
+  ],
+  "not_stated": [
+   "encodings",
+   "（读取说明：只读了首页、/info 与一个领域页；未找到单独的方法说明页，没有读到方法文档。）"
+  ],
+  "id": "speculora"
  }
 }
