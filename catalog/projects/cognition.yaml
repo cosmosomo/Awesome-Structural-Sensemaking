@@ -16,6 +16,7 @@
   package: npm:web-tree-sitter
   repo_checked: "2026-10-13"
   access: open-source
+  facts_checked: "2026-10-13"
 
 - id: docling
   name: Docling
@@ -31,6 +32,7 @@
   package: pypi:docling
   repo_checked: "2026-10-13"
   access: open-source
+  facts_checked: "2026-10-13"
 
 - id: docling-graph
   name: Docling Graph
@@ -44,6 +46,7 @@
   package: pypi:docling-graph
   repo_checked: "2026-10-13"
   access: open-source
+  facts_checked: "2026-10-13"
 
 # ---- 多层知识建模 ----
 - id: graphrag
@@ -62,6 +65,7 @@
   package: pypi:graphrag
   repo_checked: "2026-10-13"
   access: open-source
+  facts_checked: "2026-10-13"
 
 - id: lightrag
   name: LightRAG
@@ -90,3 +94,5 @@
   package: pypi:graphiti-core
   repo_checked: "2026-10-13"
   access: open-source
+  facts_checked: "2026-10-13"
+  facts_gaps: ["学习得到的关系类型"]

@@ -31,7 +31,10 @@
 | `docs` / `site` | 否 | 文档、官方站点。 |
 | `demo_source` | 有 `demo` 时必填 | 展示页从哪里来：`report` / `search` / `maintainer`。 |
 | `package` | 否 | `npm:名称` 或 `pypi:名称`。写了它，`scripts/check_registries.py` 就能用包元数据核对仓库、许可证和最近一次发布。 |
-| `repo_checked` | 否 | 包作者声明的仓库与 `repo` 一致的日期，索引里标 ✓。没有它就表示没核对。 |
+| `repo_checked` | 否 | 官方来源指向的仓库与 `repo` 一致的日期，索引里标 ✓。没有它就表示没核对。 |
+| `repo_check_via` | 有 `repo_checked` 且没有 `package` 时必填 | 核对依据，写成一句话（例如“项目官网的 GitHub 链接”“Go 模块代理返回的模块来源”）。鼠标悬停在 ✓ 上能看到。依据是官方站点、官方文档或软件包与发行渠道的元数据，不用第三方评测和聚合站。 |
+| `facts_checked` | 否 | `summary` 和 `focus` 对照官方页面核对过的日期。索引里“定位与值得研究”一列末尾标 ✓（主要点都有官方依据）或 △（有 `facts_gaps`）。没有它就表示没核对。 |
+| `facts_gaps` | 否 | 字符串列表：核对时在官方页面里没找到依据的点，会写进备注。官方页面由 JS 渲染读不到的也记在这里，并注明原因；只是整理者评价性判断的话（“更适合研究……”“不等于……”）不记。找不到依据不等于说法有误。 |
 | `demo_none` | 否 | 这个条目本身不存在展示页的原因（规范、采集库、命令行工具等）。有它就不会列入“待收集”。 |
 | `demo_checked` | 否 | 展示页访问并确认内容相符的日期，索引里标 ✓。没有它就表示没打开过。 |
 | `access` | 否 | `open-source` / `custom-license` / `source-available` / `commercial` / `research-prototype` / `archived` / `unchecked`。默认按 `unchecked` 处理，不表示闭源。 |
@@ -65,4 +68,6 @@
 
 - 2026-10-13：`scripts/check_links.py --fields demo docs site` 访问了 161 个地址（项目的展示页、文档、站点，加图形范式的展示页和理论资料；不含 GitHub 仓库页）。143 个返回 2xx 或 3xx，18 个没有：observablehq.com 返回 429（15 个）或超时（1 个），ELK Live 返回 502，doi.org 在该环境里解析不了。
 - 这一轮之后，项目展示页标 ✓ 的有 53 个，图形范式展示页标 ✓ 的有 28 个。
+- 2026-10-13：说明和仓库地址交给 Haiku 子智能体对照官方页面核对（12 批，每批只读、逐字引用原文、不访问 GitHub 页面），之后由主会话复核：说明核对 87 条，其中 45 条标 ✓、37 条标 △（Haiku 判为 partly 的条目里，只有整理者评价性判断没找到依据的，按 ✓ 处理），5 条没读到有效内容（dagre、aerograph、LightRAG、CNCF Landscape2、OpenTelemetry GenAI 约定页），保持无标记；复核时抽查了 10 条引用，对照原页面都能找到；对 Haiku 判为 contradicted 或与现有数据不一致的点，主会话自己重新读了页面（NeoDash 的状态、Flowise 的停运、D2 和 Structurizr 的仓库地址）。仓库地址新增 25 个标 ✓（官网或官方文档里的源码链接、Go 模块代理、Homebrew 记录的下载来源）。仓库没有核对出结果的（CNCF Landscape2、CNCF Landscape、infranodus、oss-compass、embedding-projector、D2、Structurizr DSL）不标 ✓。
+- 复核中改正了一处我之前写错的内容：NeoDash 的备注原写“Labs 页面写明已毕业为 Neo4j Dashboards”，页面上并没有这句，实际写的是该文档对应 Labs 里不受官方支持的版本、受支持的版本见 NeoDash commercial。
 - 2026-10-13：`scripts/check_registries.py` 查了 55 个带 package 的条目，51 个仓库地址与包声明一致。另外 4 个不一致：Flowise、AutoGen、LangWatch 的包元数据没有声明仓库；Argdown 是凭记忆写错了地址，按包声明改正后一致。现在共 52 个条目标 ✓。

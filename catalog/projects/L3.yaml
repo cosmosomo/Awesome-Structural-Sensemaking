@@ -16,6 +16,10 @@
   demo: https://marketplace.dify.ai/
   demo_source: search
   demo_checked: "2026-10-13"
+  repo_checked: "2026-10-13"
+  repo_check_via: "官网 dify.ai 的 GitHub 链接"
+  facts_checked: "2026-10-13"
+  facts_gaps: ["节点结果检查"]
 
 - id: langflow
   name: Langflow
@@ -34,6 +38,8 @@
   package: pypi:langflow
   repo_checked: "2026-10-13"
   access: open-source
+  facts_checked: "2026-10-13"
+  facts_gaps: ["与可观测性平台集成", "调试"]
 
 - id: n8n
   name: n8n
@@ -50,6 +56,8 @@
   demo_checked: "2026-10-13"
   package: npm:n8n
   repo_checked: "2026-10-13"
+  facts_checked: "2026-10-13"
+  facts_gaps: ["AI 工作流"]
 
 - id: node-red
   name: Node-RED
@@ -65,6 +73,8 @@
   package: npm:node-red
   repo_checked: "2026-10-13"
   access: open-source
+  facts_checked: "2026-10-13"
+  facts_gaps: ["服务集成"]
 
 - id: flowise
   name: Flowise
@@ -80,6 +90,9 @@
   docs: https://docs.flowiseai.com/
   access: open-source
   package: npm:flowise
+  repo_checked: "2026-10-13"
+  repo_check_via: "官网 flowiseai.com 的 GitHub 链接"
+  facts_checked: "2026-10-13"
 
 # ---- Agent 开发、协作与管理平台 ----
 - id: agentscope
@@ -97,6 +110,7 @@
   package: pypi:agentscope
   repo_checked: "2026-10-13"
   access: open-source
+  facts_checked: "2026-10-13"
 
 - id: langgraph
   name: LangGraph / Studio
@@ -112,6 +126,8 @@
   package: pypi:langgraph
   repo_checked: "2026-10-13"
   access: open-source
+  facts_checked: "2026-10-13"
+  facts_gaps: ["任务路由"]
 
 - id: agentensemble
   name: AgentEnsemble
@@ -125,6 +141,10 @@
   repo: https://github.com/AgentEnsemble/agentensemble
   added_by_maintainer: [site]
   demo_none: "Live Dashboard 在本地运行（localhost:7329），没有托管的公开演示"
+  repo_checked: "2026-10-13"
+  repo_check_via: "官方文档站 docs.agentensemble.net 的 GitHub 链接"
+  facts_checked: "2026-10-13"
+  facts_gaps: ["任务执行事件与人工干预放进同一过程"]
 
 - id: autogen
   name: AutoGen / AutoGen Studio
@@ -138,6 +158,9 @@
   demo_none: "AutoGen Studio 在本地运行，没有托管的公开演示"
   package: pypi:autogen-agentchat
   notes: "PyPI 上 autogen-agentchat 最近一次发布是 2025-09-30（v0.7.5），查询于 2026-10-13；包元数据没有声明仓库地址。"
+  repo_checked: "2026-10-13"
+  repo_check_via: "AutoGen Studio 官方文档页的 GitHub 链接"
+  facts_checked: "2026-10-13"
 
 # ---- LLM 与 Agent 可观测性平台 ----
 - id: langfuse
@@ -151,6 +174,10 @@
   demo: https://langfuse.com/docs/demo
   demo_source: search
   demo_checked: "2026-10-13"
+  repo_checked: "2026-10-13"
+  repo_check_via: "官网文档页的 GitHub 链接"
+  facts_checked: "2026-10-13"
+  facts_gaps: ["从一次异常执行进入提示词"]
 
 - id: arize-phoenix
   name: Arize Phoenix
@@ -167,6 +194,7 @@
   repo_checked: "2026-10-13"
   access: source-available
   notes: "PyPI 上 arize-phoenix 的许可证是 Elastic-2.0，不是 OSI 意义上的开源许可（2026-10-13 核对）。"
+  facts_checked: "2026-10-13"
 
 - id: comet-opik
   name: Comet Opik
@@ -180,6 +208,8 @@
   package: pypi:opik
   repo_checked: "2026-10-13"
   access: open-source
+  facts_checked: "2026-10-13"
+  facts_gaps: ["多层（嵌套）调用"]
 
 - id: agentops
   name: AgentOps
@@ -196,6 +226,7 @@
   repo_checked: "2026-10-13"
   access: open-source
   notes: "PyPI 上 agentops 最近一次发布是 2025-08-29（v0.4.21），查询于 2026-10-13。"
+  facts_checked: "2026-10-13"
 
 - id: langwatch
   name: LangWatch
@@ -210,6 +241,9 @@
   demo_source: search
   notes: "展示页由前端渲染，内容以及是否免登录都没有确认。"
   package: pypi:langwatch
+  repo_checked: "2026-10-13"
+  repo_check_via: "官网 langwatch.ai 的 GitHub 链接"
+  facts_checked: "2026-10-13"
 
 # ---- 软件架构、开发者平台与工程管理 ----
 - id: nx
@@ -227,6 +261,7 @@
   package: npm:nx
   repo_checked: "2026-10-13"
   access: open-source
+  facts_checked: "2026-10-13"
 
 - id: backstage
   name: Backstage
@@ -244,6 +279,8 @@
   package: npm:@backstage/cli
   repo_checked: "2026-10-13"
   access: open-source
+  facts_checked: "2026-10-13"
+  facts_gaps: ["图中节点与实体详情联动"]
 
 # ---- 数据平台与基础设施管理 ----
 - id: datahub
@@ -263,6 +300,8 @@
   package: pypi:acryl-datahub
   repo_checked: "2026-10-13"
   access: open-source
+  facts_checked: "2026-10-13"
+  facts_gaps: ["从资产详情进入上下游影响网络"]
 
 - id: openmetadata
   name: OpenMetadata
@@ -280,6 +319,7 @@
   demo_checked: "2026-10-13"
   package: pypi:openmetadata-ingestion
   repo_checked: "2026-10-13"
+  facts_checked: "2026-10-13"
 
 - id: skywalking
   name: Apache SkyWalking
@@ -296,6 +336,10 @@
   docs: https://skywalking.apache.org/docs/skywalking-showcase/next/readme/
   notes: "官网首页链接到在线 Demo（Horizon UI，示例数据）和一个独立的 3D 基础设施地图交互演示（2026-10-13 访问）。"
   demo_checked: "2026-10-13"
+  repo_checked: "2026-10-13"
+  repo_check_via: "官网 skywalking.apache.org 的 GitHub Issue Tracker 链接"
+  facts_checked: "2026-10-13"
+  facts_gaps: ["“部署”层级", "多视图联动"]
 
 - id: kiali
   name: Kiali
@@ -307,6 +351,9 @@
   focus: "流量图、服务关系、异常定位。"
   repo: https://github.com/kiali/kiali
   docs: https://kiali.io/docs/features/topology/
+  repo_checked: "2026-10-13"
+  repo_check_via: "官方文档页的“Create project issue”链接指向该仓库"
+  facts_checked: "2026-10-13"
 
 - id: grafana
   name: Grafana
@@ -322,6 +369,8 @@
   package: npm:@grafana/data
   repo_checked: "2026-10-13"
   access: open-source
+  facts_checked: "2026-10-13"
+  facts_gaps: ["服务关系（play.grafana.org 由 JS 渲染，读不到）"]
 
 # ---- 知识组织、概念地图与认知工具 ----
 - id: affine
@@ -338,6 +387,9 @@
   demo_source: search
   notes: "展示页是模板库页面，不是在线试用；没有找到免登录的在线版本。"
   demo_checked: "2026-10-13"
+  repo_checked: "2026-10-13"
+  repo_check_via: "官网 affine.pro 的 GitHub 与 License 链接"
+  facts_checked: "2026-10-13"
 
 - id: drawio
   name: diagrams.net / draw.io
@@ -351,6 +403,9 @@
   demo_source: search
   site: https://www.drawio.com/
   demo_checked: "2026-10-13"
+  repo_checked: "2026-10-13"
+  repo_check_via: "官网 drawio.com 的 GitHub 链接"
+  facts_checked: "2026-10-13"
 
 - id: kumu
   name: Kumu
@@ -367,6 +422,7 @@
   demo_source: search
   docs: https://docs.kumu.io/frequently-asked-questions/where-can-i-find-example-kumu-projects
   demo_checked: "2026-10-13"
+  facts_checked: "2026-10-13"
 
 - id: logseq
   name: Logseq
@@ -380,6 +436,10 @@
   demo: https://demo.logseq.com/
   demo_source: search
   demo_checked: "2026-10-13"
+  repo_checked: "2026-10-13"
+  repo_check_via: "Homebrew cask 记录的下载来源（github.com/logseq/logseq/releases）"
+  facts_checked: "2026-10-13"
+  facts_gaps: ["大纲、知识图导航（官网由 JS 渲染，读不到）"]
 
 - id: infranodus
   name: InfraNodus
@@ -396,6 +456,7 @@
   demo: https://infranodus.com/graphs
   demo_source: search
   demo_checked: "2026-10-13"
+  facts_checked: "2026-10-13"
 
 # ---- 生态地图与产业分析产品 ----
 - id: cncf-landscape
@@ -410,6 +471,9 @@
   repo: https://github.com/cncf/landscape
   demo_source: report
   demo_checked: "2026-10-13"
+  facts_checked: "2026-10-13"
+  facts_gaps: ["实际展示案例、浏览功能（landscape 页面由 JS 渲染，读不到）"]
+  notes: "仓库地址未核实：landscape.cncf.io 由 JS 渲染，读不到源码链接。"
 
 - id: thoughtworks-tech-radar
   name: Thoughtworks Technology Radar
@@ -422,6 +486,7 @@
   demo: https://www.thoughtworks.com/radar
   demo_source: report
   demo_checked: "2026-10-13"
+  facts_checked: "2026-10-13"
 
 - id: oss-insight
   name: OSS Insight
@@ -435,6 +500,9 @@
   demo: https://ossinsight.io/
   demo_source: report
   demo_checked: "2026-10-13"
+  repo_checked: "2026-10-13"
+  repo_check_via: "官网 About 页的 GitHub 链接"
+  facts_checked: "2026-10-13"
 
 - id: oss-compass
   name: OSS Compass
@@ -448,3 +516,5 @@
   demo: https://oss-compass.org/
   demo_source: report
   demo_checked: "2026-10-13"
+  facts_checked: "2026-10-13"
+  notes: "官网 About 页只链到 GitHub 组织 github.com/oss-compass，具体到 compass-web 这个仓库未核实。"

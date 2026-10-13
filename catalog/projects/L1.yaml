@@ -17,6 +17,7 @@
   package: npm:d3
   repo_checked: "2026-10-13"
   access: open-source
+  facts_checked: "2026-10-13"
 
 - id: vega-lite
   name: Vega-Lite
@@ -32,6 +33,7 @@
   package: npm:vega-lite
   repo_checked: "2026-10-13"
   access: open-source
+  facts_checked: "2026-10-13"
 
 - id: echarts
   name: Apache ECharts
@@ -48,6 +50,8 @@
   package: npm:echarts
   repo_checked: "2026-10-13"
   access: open-source
+  facts_checked: "2026-10-13"
+  facts_gaps: ["业务看板"]
 
 - id: plotly-js
   name: Plotly.js
@@ -63,6 +67,8 @@
   package: npm:plotly.js
   repo_checked: "2026-10-13"
   access: open-source
+  facts_checked: "2026-10-13"
+  facts_gaps: ["数据探索", "交互", "多维"]
 
 - id: deck-gl
   name: deck.gl
@@ -79,6 +85,7 @@
   package: npm:deck.gl
   repo_checked: "2026-10-13"
   access: open-source
+  facts_checked: "2026-10-13"
 
 # ---- 关系图与节点交互引擎 ----
 - id: antv-g6
@@ -97,6 +104,8 @@
   package: npm:@antv/g6
   repo_checked: "2026-10-13"
   access: open-source
+  facts_checked: "2026-10-13"
+  facts_gaps: ["聚合"]
 
 - id: react-flow
   name: React Flow
@@ -115,6 +124,8 @@
   package: npm:@xyflow/react
   repo_checked: "2026-10-13"
   access: open-source
+  facts_checked: "2026-10-13"
+  facts_gaps: ["业务组件集成"]
 
 - id: cytoscape-js
   name: Cytoscape.js
@@ -132,6 +143,8 @@
   package: npm:cytoscape
   repo_checked: "2026-10-13"
   access: open-source
+  facts_checked: "2026-10-13"
+  facts_gaps: ["复杂度管理"]
 
 - id: sigma-js
   name: Sigma.js
@@ -149,6 +162,7 @@
   package: npm:sigma
   repo_checked: "2026-10-13"
   access: open-source
+  facts_checked: "2026-10-13"
 
 - id: antv-x6
   name: AntV X6
@@ -164,6 +178,7 @@
   package: npm:@antv/x6
   repo_checked: "2026-10-13"
   access: open-source
+  facts_checked: "2026-10-13"
 
 - id: diagram-js
   name: diagram-js
@@ -179,6 +194,7 @@
   package: npm:diagram-js
   repo_checked: "2026-10-13"
   access: open-source
+  facts_checked: "2026-10-13"
 
 # ---- 布局与复杂度管理算法 ----
 - id: elkjs
@@ -194,6 +210,8 @@
   package: npm:elkjs
   repo_checked: "2026-10-13"
   access: open-source
+  facts_checked: "2026-10-13"
+  facts_gaps: ["分层（layered）布局", "连线布线", "复杂模块和任务 DAG 场景"]
 
 - id: dagre
   name: Dagre
@@ -224,6 +242,10 @@
   repo: https://gitlab.com/graphviz/graphviz
   added_by_maintainer: [repo]
   demo_checked: "2026-10-13"
+  repo_checked: "2026-10-13"
+  repo_check_via: "项目官网 graphviz.org 页面里的 GitLab 链接"
+  facts_checked: "2026-10-13"
+  facts_gaps: ["架构图", "静态分析", "依赖图"]
 
 - id: d3-force
   name: d3-force
@@ -238,6 +260,7 @@
   package: npm:d3-force
   repo_checked: "2026-10-13"
   access: open-source
+  facts_checked: "2026-10-13"
 
 - id: graphology
   name: Graphology
@@ -252,6 +275,8 @@
   package: npm:graphology
   repo_checked: "2026-10-13"
   access: open-source
+  facts_checked: "2026-10-13"
+  facts_gaps: ["关系分析"]
 
 - id: cytoscape-complexity-management
   name: Cytoscape Complexity Management
@@ -265,6 +290,10 @@
   demo: https://ivis-at-bilkent.github.io/cytoscape.js-complexity-management/demo/demo.html
   demo_source: search
   demo_checked: "2026-10-13"
+  repo_checked: "2026-10-13"
+  repo_check_via: "npm 包 cytoscape-complexity-management 的 homepage 字段"
+  facts_checked: "2026-10-13"
+  facts_gaps: ["大型", "层次化", "聚合关系"]
 
 # ---- 图形描述语言与模型驱动技术 ----
 - id: mermaid
@@ -283,6 +312,7 @@
   package: npm:mermaid
   repo_checked: "2026-10-13"
   access: open-source
+  facts_checked: "2026-10-13"
 
 - id: plantuml
   name: PlantUML
@@ -294,6 +324,10 @@
   site: https://plantuml.com/
   repo: https://github.com/plantuml/plantuml
   added_by_maintainer: [repo]
+  repo_checked: "2026-10-13"
+  repo_check_via: "plantuml.com/download 页面里的源码与发布链接"
+  facts_checked: "2026-10-13"
+  facts_gaps: ["架构图（页面里只有导航条目 Archimate）"]
 
 - id: d2
   name: D2
@@ -305,9 +339,11 @@
   site: https://d2lang.com/
   demo: https://play.d2lang.com/
   demo_source: search
-  repo: https://github.com/terrastruct/d2
+  repo: https://github.com/d2lang/d2
   added_by_maintainer: [repo]
   demo_checked: "2026-10-13"
+  facts_checked: "2026-10-13"
+  notes: "仓库原写 terrastruct/d2；Homebrew 的 d2 公式（2026-10-13）已指向 d2lang/d2，npm 包 @terrastruct/d2 仍声明旧地址 terrastruct/d2。哪个是现在的主地址没能在项目官方页面里核实，所以仓库不标 ✓。"
 
 - id: structurizr-dsl
   name: Structurizr DSL
@@ -321,6 +357,9 @@
   demo: https://docs.structurizr.com/example
   demo_source: search
   demo_checked: "2026-10-13"
+  facts_checked: "2026-10-13"
+  facts_gaps: ["模型与视图分离"]
+  notes: "官方文档站页脚的 GitHub 链接指向 structurizr/structurizr（整个产品），没有单独写 DSL 的仓库；这里的 structurizr/dsl 是否仍是主仓库未核实。"
 
 # ---- 二维无限画布与三维空间技术 ----
 - id: excalidraw
@@ -338,6 +377,8 @@
   package: npm:@excalidraw/excalidraw
   repo_checked: "2026-10-13"
   access: open-source
+  facts_checked: "2026-10-13"
+  facts_gaps: ["“无限”画布", "构思与注释"]
 
 - id: tldraw
   name: tldraw
@@ -354,6 +395,7 @@
   demo_checked: "2026-10-13"
   package: npm:tldraw
   repo_checked: "2026-10-13"
+  facts_checked: "2026-10-13"
 
 - id: three-js
   name: Three.js
@@ -369,6 +411,7 @@
   package: npm:three
   repo_checked: "2026-10-13"
   access: open-source
+  facts_checked: "2026-10-13"
 
 - id: react-three-fiber
   name: React Three Fiber
@@ -384,6 +427,7 @@
   package: npm:@react-three/fiber
   repo_checked: "2026-10-13"
   access: open-source
+  facts_checked: "2026-10-13"
 
 - id: react-force-graph
   name: React Force Graph
@@ -400,6 +444,7 @@
   package: npm:react-force-graph
   repo_checked: "2026-10-13"
   access: open-source
+  facts_checked: "2026-10-13"
 
 - id: cosmos-gl
   name: Cosmos.gl
@@ -417,6 +462,7 @@
   package: npm:@cosmos.gl/graph
   repo_checked: "2026-10-13"
   access: open-source
+  facts_checked: "2026-10-13"
 
 - id: cytoscape-expand-collapse
   name: Cytoscape Expand Collapse
@@ -435,3 +481,4 @@
   package: npm:cytoscape-expand-collapse
   repo_checked: "2026-10-13"
   access: open-source
+  facts_checked: "2026-10-13"
