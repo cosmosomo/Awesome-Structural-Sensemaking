@@ -30,7 +30,7 @@
 | [Cytoscape.js](https://js.cytoscape.org/) | 图模型、网络分析及扩展生态。<br>复合节点、图算法、复杂度管理。更适合研究复杂网络的结构呈现。 | [仓库](https://github.com/cytoscape/cytoscape.js) | [展示页](https://js.cytoscape.org/) | — | — |
 | [Sigma.js](https://www.sigmajs.org/) | 基于 WebGL 的网络图渲染。<br>较大关系网络、节点探索，常与 Graphology 配合。 | [仓库](https://github.com/jacomyal/sigma.js) | [展示页](https://www.sigmajs.org/examples/) | [站点](https://www.sigmajs.org/) | — |
 | [AntV X6](https://github.com/antvis/X6) | 图编辑引擎。<br>复杂节点编辑、连接桩、流程编辑器。 | [仓库](https://github.com/antvis/X6) | [展示页](https://x6.antv.antgroup.com/examples) | — | — |
-| [diagram-js](https://github.com/bpmn-io/diagram-js) | 图形编辑能力底座，bpmn-js 建立在其上。<br>编辑器组件；业务流程方向的 L1 代表。 | [仓库](https://github.com/bpmn-io/diagram-js) | 待收集 | — | 报告只在正文和跨层索引里提到，没有给出地址；仓库地址由整理者补充。 |
+| [diagram-js](https://github.com/bpmn-io/diagram-js) | 图形编辑能力底座，bpmn-js 建立在其上。<br>编辑器组件；业务流程方向的 L1 代表。 | [仓库](https://github.com/bpmn-io/diagram-js) | 无：底层库，演示见 bpmn-js | — | 报告只在正文和跨层索引里提到，没有给出地址；仓库地址由整理者补充。 |
 <!-- /gen -->
 
 ## 布局与复杂度管理算法
@@ -44,7 +44,7 @@
 | [Dagre](https://github.com/dagrejs/dagre) | 有向图层次布局。<br>工作流、依赖图。 | [仓库](https://github.com/dagrejs/dagre) | [展示页](https://dagrejs.github.io/project/dagre-d3/latest/demo/interactive-demo.html) | — | 展示页属于 dagre-d3。 |
 | [Graphviz](https://graphviz.org/) | 多种图布局与渲染。<br>架构图、静态分析、依赖图。 | [仓库](https://gitlab.com/graphviz/graphviz) | [展示页](https://graphviz.org/gallery/) | [站点](https://graphviz.org/) | — |
 | [d3-force](https://github.com/d3/d3-force) | 力导向模拟。<br>自由关系网络、动态关系图。 | [仓库](https://github.com/d3/d3-force) | [展示页](https://observablehq.com/collection/@d3/d3-force) | — | — |
-| [Graphology](https://graphology.github.io/) | 图数据操作与算法生态。<br>关系分析、节点指标、图结构处理。 | [仓库](https://github.com/graphology/graphology) | 待收集 | [站点](https://graphology.github.io/) | — |
+| [Graphology](https://graphology.github.io/) | 图数据操作与算法生态。<br>关系分析、节点指标、图结构处理。 | [仓库](https://github.com/graphology/graphology) | 无：数据结构库，没有可视化界面 | [站点](https://graphology.github.io/) | — |
 | [Cytoscape Complexity Management](https://github.com/iVis-at-Bilkent/cytoscape.js-complexity-management) | 大型复合图的展开、折叠与关系管理（Cytoscape.js 扩展）。<br>层次化复杂网络；节点、边及聚合关系的管理。 | [仓库](https://github.com/iVis-at-Bilkent/cytoscape.js-complexity-management) | 待收集 | — | README 带有演示链接，但地址没有拿到；需要 Cytoscape.js 3.2.0 以上以及 fcose、cmgm.js，README 称尚未发布到 npm 和 bower。 |
 | [Cytoscape Expand Collapse](https://github.com/iVis-at-Bilkent/cytoscape.js-expand-collapse) | 复合节点的展开与折叠（Cytoscape.js 扩展）。<br>折叠复合节点及其内部的边。README 提供三个演示：基础版、可撤销版、同时折叠边和节点。 | [仓库](https://github.com/iVis-at-Bilkent/cytoscape.js-expand-collapse) | 待收集 | — | 已停止维护；npm README 称仓库不再维护，并指向同一团队的 cytoscape.js-complexity-management（搜索结果摘要）。 |
 <!-- /gen -->

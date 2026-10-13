@@ -23,6 +23,7 @@
   summary: "JavaScript 模块引用分析。"
   focus: "自动生成依赖关系图、发现循环依赖。"
   repo: https://github.com/pahen/madge
+  demo_none: "命令行工具，输出静态图"
 
 - id: pydeps
   name: pydeps
@@ -32,6 +33,7 @@
   summary: "Python 模块导入分析。"
   focus: "导入网络、模块聚类、依赖结构。"
   repo: https://github.com/thebjorn/pydeps
+  demo_none: "命令行工具，输出静态图"
 
 # ---- 软件架构与代码理解 ----
 - id: codeboarding
@@ -121,6 +123,7 @@
   notes: "生成式 AI 语义约定仍在演进。建库时记录具体版本和字段定义，不要当成永远稳定的统一标准。"
   repo: https://github.com/open-telemetry/semantic-conventions
   added_by_maintainer: [repo]
+  demo_none: "规范文档，本身没有可视化"
 
 - id: openllmetry
   name: OpenLLMetry
@@ -130,6 +133,7 @@
   summary: "为 LLM 应用采集追踪数据。"
   focus: "数据采集端。"
   repo: https://github.com/traceloop/openllmetry
+  demo_none: "数据采集库，没有界面"
 
 - id: jaeger
   name: Jaeger
@@ -151,6 +155,7 @@
   summary: "Trace 后端，与服务图、指标视图整合。"
   focus: "Trace 与服务图、指标的联动。"
   repo: https://github.com/grafana/tempo
+  demo_none: "后端服务，界面由 Grafana 提供"
 
 # ---- 数据血缘 ----
 - id: marquez

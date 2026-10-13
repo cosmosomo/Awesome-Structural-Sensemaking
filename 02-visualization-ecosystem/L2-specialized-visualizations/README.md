@@ -12,8 +12,8 @@ L1 回答“图形能够怎样绘制、组织和交互”，L2 回答：给定�
 | 项目 | 定位与值得研究 | 开源项目 | 展示页 | 站点 / 文档 | 备注 |
 | --- | --- | --- | --- | --- | --- |
 | [dependency-cruiser](https://sverweij.github.io/dependency-cruiser/) | JavaScript/TypeScript 模块依赖分析。<br>依赖图、架构边界规则、违规依赖诊断。 | [仓库](https://github.com/sverweij/dependency-cruiser) | [展示页](https://sverweij.github.io/dependency-cruiser-repro-repo/458/) | [站点](https://sverweij.github.io/dependency-cruiser/) | 展示页是作者的 3D 图报告插件演示（issue 458），用它自己的源码和 React 仓库生成。 |
-| [Madge](https://github.com/pahen/madge) | JavaScript 模块引用分析。<br>自动生成依赖关系图、发现循环依赖。 | [仓库](https://github.com/pahen/madge) | 待收集 | — | — |
-| [pydeps](https://github.com/thebjorn/pydeps) | Python 模块导入分析。<br>导入网络、模块聚类、依赖结构。 | [仓库](https://github.com/thebjorn/pydeps) | 待收集 | — | — |
+| [Madge](https://github.com/pahen/madge) | JavaScript 模块引用分析。<br>自动生成依赖关系图、发现循环依赖。 | [仓库](https://github.com/pahen/madge) | 无：命令行工具，输出静态图 | — | — |
+| [pydeps](https://github.com/thebjorn/pydeps) | Python 模块导入分析。<br>导入网络、模块聚类、依赖结构。 | [仓库](https://github.com/thebjorn/pydeps) | 无：命令行工具，输出静态图 | — | — |
 <!-- /gen -->
 
 ## 软件架构与代码理解
@@ -84,10 +84,10 @@ AgentEnsemble 的双视图值得细看：分别导出计划依赖 DAG 和执行 
 <!-- gen:catalog:L2/traces-and-timelines -->
 | 项目 | 定位与值得研究 | 开源项目 | 展示页 | 站点 / 文档 | 备注 |
 | --- | --- | --- | --- | --- | --- |
-| [OpenTelemetry GenAI 语义约定](https://github.com/open-telemetry/semantic-conventions) | 规定如何描述 AI / Agent / 工具调用等遥测事件。<br>数据到可视化链条的起点：Span、事件、属性、父子关系。 | [仓库](https://github.com/open-telemetry/semantic-conventions) | 待收集 | [文档](https://opentelemetry.io/docs/specs/semconv/gen-ai/) | 生成式 AI 语义约定仍在演进。建库时记录具体版本和字段定义，不要当成永远稳定的统一标准。 |
-| [OpenLLMetry](https://github.com/traceloop/openllmetry) | 为 LLM 应用采集追踪数据。<br>数据采集端。 | [仓库](https://github.com/traceloop/openllmetry) | 待收集 | — | — |
+| [OpenTelemetry GenAI 语义约定](https://github.com/open-telemetry/semantic-conventions) | 规定如何描述 AI / Agent / 工具调用等遥测事件。<br>数据到可视化链条的起点：Span、事件、属性、父子关系。 | [仓库](https://github.com/open-telemetry/semantic-conventions) | 无：规范文档，本身没有可视化 | [文档](https://opentelemetry.io/docs/specs/semconv/gen-ai/) | 生成式 AI 语义约定仍在演进。建库时记录具体版本和字段定义，不要当成永远稳定的统一标准。 |
+| [OpenLLMetry](https://github.com/traceloop/openllmetry) | 为 LLM 应用采集追踪数据。<br>数据采集端。 | [仓库](https://github.com/traceloop/openllmetry) | 无：数据采集库，没有界面 | — | — |
 | [Jaeger](https://github.com/jaegertracing/jaeger) | 分布式 Trace 的采集、检索和可视化。<br>Trace 瀑布图等传统调用链视图。 | [仓库](https://github.com/jaegertracing/jaeger) | [展示页](https://www.jaegertracing.io/demo/) | — | Jaeger v1 已于 2025-12-31 终止支持，应使用 v2（官网文档摘要）。 |
-| [Grafana Tempo](https://github.com/grafana/tempo) | Trace 后端，与服务图、指标视图整合。<br>Trace 与服务图、指标的联动。 | [仓库](https://github.com/grafana/tempo) | 待收集 | — | — |
+| [Grafana Tempo](https://github.com/grafana/tempo) | Trace 后端，与服务图、指标视图整合。<br>Trace 与服务图、指标的联动。 | [仓库](https://github.com/grafana/tempo) | 无：后端服务，界面由 Grafana 提供 | — | — |
 | [AeroGraph](https://github.com/sgcpu/aerograph) | 面向自主 AI 工作流的调试与观测层：本地优先、只追加、可安全回放的存储。<br>ReactFlow 的 Trace 图，支持逐步回放和失败高亮；可从任意 span 分叉出另一条时间线，并用 Myers diff 比较两次运行在哪里分岔；追踪循环和幻觉式的 Agent 交接。 | [仓库](https://github.com/sgcpu/aerograph) | 待收集 | — | 不在调研报告里，来自前期收集，信息取自搜索到的 GitHub README。是早期的小众项目，成熟度和循环检测的实现方式未核实。 |
 | [AgentEnsemble Viz](https://github.com/AgentEnsemble/agentensemble)<br>（主分类 L2/ai-and-multi-agent） | 任务依赖 DAG 与实际执行 Trace 的双视图。<br>Flow View 看任务依赖、并发层级、关键路径；Timeline View 看真实起止时间、LLM 和工具调用。分别导出计划依赖 DAG 与执行 Trace。值得研究同一任务在两张视图中的身份如何保持一致，以及点击任务如何进入工具调用或会话详情。 | [仓库](https://github.com/AgentEnsemble/agentensemble) | 待收集 | [文档](https://docs.agentensemble.net/guides/visualization/) | — |
 | [AgentPrism](https://github.com/evilmartians/agent-prism)<br>（主分类 L2/ai-and-multi-agent） | 可嵌入应用的 React Agent Trace UI 组件。<br>层次化调用树、执行时间、工具与模型调用；独立可复用的 Trace UI 设计。 | [仓库](https://github.com/evilmartians/agent-prism) | [展示页](https://agent-prism.evilmartians.io/) | [文档](https://evilmartians.com/chronicles/debug-ai-fast-agent-prism-open-source-library-visualize-agent-traces) | Alpha；项目公开标注为 Alpha。 |

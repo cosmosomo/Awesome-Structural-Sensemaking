@@ -42,7 +42,7 @@ GraphRAG 的路径是：文本片段，实体、关系与声明提取，图社�
 <!-- gen:catalog:cognition/multilevel-knowledge-modeling -->
 | 项目 | 定位与值得研究 | 开源项目 | 展示页 | 站点 / 文档 | 备注 |
 | --- | --- | --- | --- | --- | --- |
-| [Microsoft GraphRAG](https://microsoft.github.io/graphrag/) | 对非结构化文本做实体关系抽取、社区分层、社区摘要。<br>路径：文本片段、实体关系与声明提取、图社区发现与层级聚类、各层级社区摘要、全局与局部检索。图社区层级不等于认知的逻辑抽象层级，只能作为辅助，不能替代语义分层。 | [仓库](https://github.com/microsoft/graphrag) | 待收集 | [站点](https://microsoft.github.io/graphrag/) · [文档](https://microsoft.github.io/graphrag/visualization_guide/) | 维护模式；官方文档显示仓库主要处于维护模式，适合作为研究参考，不能默认仍在持续扩展新功能。官方可视化指南建议把图导出为 GraphML 后用 Gephi 查看，没有专门的可视化器。 |
+| [Microsoft GraphRAG](https://microsoft.github.io/graphrag/) | 对非结构化文本做实体关系抽取、社区分层、社区摘要。<br>路径：文本片段、实体关系与声明提取、图社区发现与层级聚类、各层级社区摘要、全局与局部检索。图社区层级不等于认知的逻辑抽象层级，只能作为辅助，不能替代语义分层。 | [仓库](https://github.com/microsoft/graphrag) | 无：命令行流水线，官方建议导出后用 Gephi 查看 | [站点](https://microsoft.github.io/graphrag/) · [文档](https://microsoft.github.io/graphrag/visualization_guide/) | 维护模式；官方文档显示仓库主要处于维护模式，适合作为研究参考，不能默认仍在持续扩展新功能。官方可视化指南建议把图导出为 GraphML 后用 Gephi 查看，没有专门的可视化器。 |
 | [LightRAG](https://github.com/HKUDS/LightRAG) | 图结构检索与知识网络可视化。<br>检索结构与认知模型并不完全相同。 | [仓库](https://github.com/HKUDS/LightRAG) | 待收集 | — | — |
 <!-- /gen -->
 

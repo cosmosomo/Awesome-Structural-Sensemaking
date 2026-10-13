@@ -30,6 +30,7 @@
 | `demo` | 否 | 展示页地址。 |
 | `docs` / `site` | 否 | 文档、官方站点。 |
 | `demo_source` | 有 `demo` 时必填 | 展示页从哪里来：`report` / `search` / `maintainer`。 |
+| `demo_none` | 否 | 这个条目本身不存在展示页的原因（规范、采集库、命令行工具等）。有它就不会列入“待收集”。 |
 | `demo_checked` | 否 | 展示页访问并确认内容相符的日期，索引里标 ✓。没有它就表示没打开过。 |
 | `access` | 否 | `open-source` / `custom-license` / `source-available` / `commercial` / `research-prototype` / `archived` / `unchecked`。默认按 `unchecked` 处理，不表示闭源。 |
 | `status` | 否 | `alpha` / `maintenance-mode` / `deprecated` / `needs-check`。 |

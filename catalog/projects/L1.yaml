@@ -136,6 +136,7 @@
   notes: "报告只在正文和跨层索引里提到，没有给出地址；仓库地址由整理者补充。"
   repo: https://github.com/bpmn-io/diagram-js
   added_by_maintainer: [repo]
+  demo_none: "底层库，演示见 bpmn-js"
 
 # ---- 布局与复杂度管理算法 ----
 - id: elkjs
@@ -194,6 +195,7 @@
   focus: "关系分析、节点指标、图结构处理。"
   repo: https://github.com/graphology/graphology
   site: https://graphology.github.io/
+  demo_none: "数据结构库，没有可视化界面"
 
 - id: cytoscape-complexity-management
   name: Cytoscape Complexity Management

@@ -3,9 +3,9 @@
 > 本文件由 `scripts/build.py` 根据 `catalog/` 生成，请改 YAML，不要直接改这里。
 > 条目信息来自 2026-10 调研报告。展示页来自报告原文或事后的搜索结果，除标 ✓ 的外都没有实际访问过。
 
-共 85 个条目；有开源项目地址 83 个，有展示页 52 个（其中 0 个已访问核对，标 ✓）。
+共 85 个条目；有开源项目地址 83 个，有展示页 52 个（其中 0 个已访问核对，标 ✓）；另有 8 个本身没有展示页。
 
-“待补”表示开源项目地址缺失，“待收集”表示展示页缺失；商业产品、规范和刊物没有仓库，用“—”表示。
+“待补”表示开源项目地址缺失，“待收集”表示展示页缺失或还没找到；“无：…”表示这个条目本身不存在展示页（如规范、采集库、命令行工具）；商业产品、规范和刊物没有仓库，用“—”表示。
 
 ## L1 底层可视化技术
 
@@ -32,7 +32,7 @@
 | [Cytoscape.js](https://js.cytoscape.org/) | 图模型、网络分析及扩展生态。<br>复合节点、图算法、复杂度管理。更适合研究复杂网络的结构呈现。 | [仓库](https://github.com/cytoscape/cytoscape.js) | [展示页](https://js.cytoscape.org/) | — | — |
 | [Sigma.js](https://www.sigmajs.org/) | 基于 WebGL 的网络图渲染。<br>较大关系网络、节点探索，常与 Graphology 配合。 | [仓库](https://github.com/jacomyal/sigma.js) | [展示页](https://www.sigmajs.org/examples/) | [站点](https://www.sigmajs.org/) | — |
 | [AntV X6](https://github.com/antvis/X6) | 图编辑引擎。<br>复杂节点编辑、连接桩、流程编辑器。 | [仓库](https://github.com/antvis/X6) | [展示页](https://x6.antv.antgroup.com/examples) | — | — |
-| [diagram-js](https://github.com/bpmn-io/diagram-js) | 图形编辑能力底座，bpmn-js 建立在其上。<br>编辑器组件；业务流程方向的 L1 代表。 | [仓库](https://github.com/bpmn-io/diagram-js) | 待收集 | — | 报告只在正文和跨层索引里提到，没有给出地址；仓库地址由整理者补充。 |
+| [diagram-js](https://github.com/bpmn-io/diagram-js) | 图形编辑能力底座，bpmn-js 建立在其上。<br>编辑器组件；业务流程方向的 L1 代表。 | [仓库](https://github.com/bpmn-io/diagram-js) | 无：底层库，演示见 bpmn-js | — | 报告只在正文和跨层索引里提到，没有给出地址；仓库地址由整理者补充。 |
 
 ### 布局与复杂度管理算法
 
@@ -44,7 +44,7 @@
 | [Dagre](https://github.com/dagrejs/dagre) | 有向图层次布局。<br>工作流、依赖图。 | [仓库](https://github.com/dagrejs/dagre) | [展示页](https://dagrejs.github.io/project/dagre-d3/latest/demo/interactive-demo.html) | — | 展示页属于 dagre-d3。 |
 | [Graphviz](https://graphviz.org/) | 多种图布局与渲染。<br>架构图、静态分析、依赖图。 | [仓库](https://gitlab.com/graphviz/graphviz) | [展示页](https://graphviz.org/gallery/) | [站点](https://graphviz.org/) | — |
 | [d3-force](https://github.com/d3/d3-force) | 力导向模拟。<br>自由关系网络、动态关系图。 | [仓库](https://github.com/d3/d3-force) | [展示页](https://observablehq.com/collection/@d3/d3-force) | — | — |
-| [Graphology](https://graphology.github.io/) | 图数据操作与算法生态。<br>关系分析、节点指标、图结构处理。 | [仓库](https://github.com/graphology/graphology) | 待收集 | [站点](https://graphology.github.io/) | — |
+| [Graphology](https://graphology.github.io/) | 图数据操作与算法生态。<br>关系分析、节点指标、图结构处理。 | [仓库](https://github.com/graphology/graphology) | 无：数据结构库，没有可视化界面 | [站点](https://graphology.github.io/) | — |
 | [Cytoscape Complexity Management](https://github.com/iVis-at-Bilkent/cytoscape.js-complexity-management) | 大型复合图的展开、折叠与关系管理（Cytoscape.js 扩展）。<br>层次化复杂网络；节点、边及聚合关系的管理。 | [仓库](https://github.com/iVis-at-Bilkent/cytoscape.js-complexity-management) | 待收集 | — | README 带有演示链接，但地址没有拿到；需要 Cytoscape.js 3.2.0 以上以及 fcose、cmgm.js，README 称尚未发布到 npm 和 bower。 |
 | [Cytoscape Expand Collapse](https://github.com/iVis-at-Bilkent/cytoscape.js-expand-collapse) | 复合节点的展开与折叠（Cytoscape.js 扩展）。<br>折叠复合节点及其内部的边。README 提供三个演示：基础版、可撤销版、同时折叠边和节点。 | [仓库](https://github.com/iVis-at-Bilkent/cytoscape.js-expand-collapse) | 待收集 | — | 已停止维护；npm README 称仓库不再维护，并指向同一团队的 cytoscape.js-complexity-management（搜索结果摘要）。 |
 
@@ -82,8 +82,8 @@
 | 项目 | 定位与值得研究 | 开源项目 | 展示页 | 站点 / 文档 | 备注 |
 | --- | --- | --- | --- | --- | --- |
 | [dependency-cruiser](https://sverweij.github.io/dependency-cruiser/) | JavaScript/TypeScript 模块依赖分析。<br>依赖图、架构边界规则、违规依赖诊断。 | [仓库](https://github.com/sverweij/dependency-cruiser) | [展示页](https://sverweij.github.io/dependency-cruiser-repro-repo/458/) | [站点](https://sverweij.github.io/dependency-cruiser/) | 展示页是作者的 3D 图报告插件演示（issue 458），用它自己的源码和 React 仓库生成。 |
-| [Madge](https://github.com/pahen/madge) | JavaScript 模块引用分析。<br>自动生成依赖关系图、发现循环依赖。 | [仓库](https://github.com/pahen/madge) | 待收集 | — | — |
-| [pydeps](https://github.com/thebjorn/pydeps) | Python 模块导入分析。<br>导入网络、模块聚类、依赖结构。 | [仓库](https://github.com/thebjorn/pydeps) | 待收集 | — | — |
+| [Madge](https://github.com/pahen/madge) | JavaScript 模块引用分析。<br>自动生成依赖关系图、发现循环依赖。 | [仓库](https://github.com/pahen/madge) | 无：命令行工具，输出静态图 | — | — |
+| [pydeps](https://github.com/thebjorn/pydeps) | Python 模块导入分析。<br>导入网络、模块聚类、依赖结构。 | [仓库](https://github.com/thebjorn/pydeps) | 无：命令行工具，输出静态图 | — | — |
 
 ### 软件架构与代码理解
 
@@ -119,10 +119,10 @@
 
 | 项目 | 定位与值得研究 | 开源项目 | 展示页 | 站点 / 文档 | 备注 |
 | --- | --- | --- | --- | --- | --- |
-| [OpenTelemetry GenAI 语义约定](https://github.com/open-telemetry/semantic-conventions) | 规定如何描述 AI / Agent / 工具调用等遥测事件。<br>数据到可视化链条的起点：Span、事件、属性、父子关系。 | [仓库](https://github.com/open-telemetry/semantic-conventions) | 待收集 | [文档](https://opentelemetry.io/docs/specs/semconv/gen-ai/) | 生成式 AI 语义约定仍在演进。建库时记录具体版本和字段定义，不要当成永远稳定的统一标准。 |
-| [OpenLLMetry](https://github.com/traceloop/openllmetry) | 为 LLM 应用采集追踪数据。<br>数据采集端。 | [仓库](https://github.com/traceloop/openllmetry) | 待收集 | — | — |
+| [OpenTelemetry GenAI 语义约定](https://github.com/open-telemetry/semantic-conventions) | 规定如何描述 AI / Agent / 工具调用等遥测事件。<br>数据到可视化链条的起点：Span、事件、属性、父子关系。 | [仓库](https://github.com/open-telemetry/semantic-conventions) | 无：规范文档，本身没有可视化 | [文档](https://opentelemetry.io/docs/specs/semconv/gen-ai/) | 生成式 AI 语义约定仍在演进。建库时记录具体版本和字段定义，不要当成永远稳定的统一标准。 |
+| [OpenLLMetry](https://github.com/traceloop/openllmetry) | 为 LLM 应用采集追踪数据。<br>数据采集端。 | [仓库](https://github.com/traceloop/openllmetry) | 无：数据采集库，没有界面 | — | — |
 | [Jaeger](https://github.com/jaegertracing/jaeger) | 分布式 Trace 的采集、检索和可视化。<br>Trace 瀑布图等传统调用链视图。 | [仓库](https://github.com/jaegertracing/jaeger) | [展示页](https://www.jaegertracing.io/demo/) | — | Jaeger v1 已于 2025-12-31 终止支持，应使用 v2（官网文档摘要）。 |
-| [Grafana Tempo](https://github.com/grafana/tempo) | Trace 后端，与服务图、指标视图整合。<br>Trace 与服务图、指标的联动。 | [仓库](https://github.com/grafana/tempo) | 待收集 | — | — |
+| [Grafana Tempo](https://github.com/grafana/tempo) | Trace 后端，与服务图、指标视图整合。<br>Trace 与服务图、指标的联动。 | [仓库](https://github.com/grafana/tempo) | 无：后端服务，界面由 Grafana 提供 | — | — |
 | [AeroGraph](https://github.com/sgcpu/aerograph) | 面向自主 AI 工作流的调试与观测层：本地优先、只追加、可安全回放的存储。<br>ReactFlow 的 Trace 图，支持逐步回放和失败高亮；可从任意 span 分叉出另一条时间线，并用 Myers diff 比较两次运行在哪里分岔；追踪循环和幻觉式的 Agent 交接。 | [仓库](https://github.com/sgcpu/aerograph) | 待收集 | — | 不在调研报告里，来自前期收集，信息取自搜索到的 GitHub README。是早期的小众项目，成熟度和循环检测的实现方式未核实。 |
 | [AgentEnsemble Viz](https://github.com/AgentEnsemble/agentensemble)<br>（主分类 L2/ai-and-multi-agent） | 任务依赖 DAG 与实际执行 Trace 的双视图。<br>Flow View 看任务依赖、并发层级、关键路径；Timeline View 看真实起止时间、LLM 和工具调用。分别导出计划依赖 DAG 与执行 Trace。值得研究同一任务在两张视图中的身份如何保持一致，以及点击任务如何进入工具调用或会话详情。 | [仓库](https://github.com/AgentEnsemble/agentensemble) | 待收集 | [文档](https://docs.agentensemble.net/guides/visualization/) | — |
 | [AgentPrism](https://github.com/evilmartians/agent-prism)<br>（主分类 L2/ai-and-multi-agent） | 可嵌入应用的 React Agent Trace UI 组件。<br>层次化调用树、执行时间、工具与模型调用；独立可复用的 Trace UI 设计。 | [仓库](https://github.com/evilmartians/agent-prism) | [展示页](https://agent-prism.evilmartians.io/) | [文档](https://evilmartians.com/chronicles/debug-ai-fast-agent-prism-open-source-library-visualize-agent-traces) | Alpha；项目公开标注为 Alpha。 |
@@ -284,7 +284,7 @@
 
 | 项目 | 定位与值得研究 | 开源项目 | 展示页 | 站点 / 文档 | 备注 |
 | --- | --- | --- | --- | --- | --- |
-| [Microsoft GraphRAG](https://microsoft.github.io/graphrag/) | 对非结构化文本做实体关系抽取、社区分层、社区摘要。<br>路径：文本片段、实体关系与声明提取、图社区发现与层级聚类、各层级社区摘要、全局与局部检索。图社区层级不等于认知的逻辑抽象层级，只能作为辅助，不能替代语义分层。 | [仓库](https://github.com/microsoft/graphrag) | 待收集 | [站点](https://microsoft.github.io/graphrag/) · [文档](https://microsoft.github.io/graphrag/visualization_guide/) | 维护模式；官方文档显示仓库主要处于维护模式，适合作为研究参考，不能默认仍在持续扩展新功能。官方可视化指南建议把图导出为 GraphML 后用 Gephi 查看，没有专门的可视化器。 |
+| [Microsoft GraphRAG](https://microsoft.github.io/graphrag/) | 对非结构化文本做实体关系抽取、社区分层、社区摘要。<br>路径：文本片段、实体关系与声明提取、图社区发现与层级聚类、各层级社区摘要、全局与局部检索。图社区层级不等于认知的逻辑抽象层级，只能作为辅助，不能替代语义分层。 | [仓库](https://github.com/microsoft/graphrag) | 无：命令行流水线，官方建议导出后用 Gephi 查看 | [站点](https://microsoft.github.io/graphrag/) · [文档](https://microsoft.github.io/graphrag/visualization_guide/) | 维护模式；官方文档显示仓库主要处于维护模式，适合作为研究参考，不能默认仍在持续扩展新功能。官方可视化指南建议把图导出为 GraphML 后用 Gephi 查看，没有专门的可视化器。 |
 | [LightRAG](https://github.com/HKUDS/LightRAG) | 图结构检索与知识网络可视化。<br>检索结构与认知模型并不完全相同。 | [仓库](https://github.com/HKUDS/LightRAG) | 待收集 | — | — |
 
 ### 动态与演化的知识结构
