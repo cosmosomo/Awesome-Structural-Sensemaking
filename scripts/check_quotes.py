@@ -61,6 +61,10 @@ def page_text(url: str) -> tuple[str, str]:
         return f"HTTP {e.code}", ""
     except Exception as e:
         return f"{type(e).__name__}", ""
+    if re.search(r"\.(js|mjs|json|css|txt|md)(\?|$)", url):
+        # 脚本和纯文本不是标签文档：去标签会让 `i < n` 吞掉后面的内容；但脚本里的字符串又可能夹着 <p> 之类的标签。两种文字都留着，哪边找到都算
+        stripped = re.sub(r"<[^>]+>", " ", raw)
+        return "ok", norm(raw) + " \n " + norm(stripped)
     raw = re.sub(r"(?is)<(script|style|noscript)[^>]*>.*?</\1>", " ", raw)
     raw = re.sub(r"<[^>]+>", " ", raw)
     return "ok", norm(raw)

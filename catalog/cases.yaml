@@ -1669,6 +1669,63 @@
   confidence: medium
   note: "调研里的“Beta、覆盖 Agent/MCP/RAG/浏览器 AI/AI IDE/LLM Gateway、从类别进项目看关系图替代方案评分、项目约一千多个”，官方页面都找到了原文（页面写 1216 projects loaded）。页面没有写评分怎么算，所以评分的依据没核实。"
 
+- id: state-of-agentic-ai
+  origin: external
+  name: The State of Open Source Agentic AI
+  urls:
+  - https://stateofagenticai.reiuk.co.uk/
+  domain: 开源生态地图
+  field: ecosystem
+  issue: 看两万个开源 Agent 仓库实际在做什么、为什么存在：聚成哪些区域，哪些区域是新长出来的，哪些只是宣传大于实质
+  issue_types:
+  - explore-discover
+  - understand-whole
+  structure:
+  - spatial
+  - hierarchy
+  - table
+  modifiers:
+  - derived
+  - typed
+  - nested
+  - temporal
+  - weighted
+  source:
+  - derived
+  - given
+  structure_note: 对象是 20,393 个仓库，每个仓库一张卡片：能力描述（实际做什么）、问题描述（为什么存在）、构建方式、层、类型、活跃度，加上 GitHub 的 Star、日期、语言、许可证和最近邻。位置来自对能力描述做向量嵌入后降到二维；178 个微簇向上并成 25 个命名区域；另有一套 120 个问题聚类，按问题描述单独聚类。卡片上的属性（构建方式、类型、层、活跃度、语言）是着色和筛选的维度，故事里的大多数小节是按属性分组的数量（按年份、Star 区间、语言），再点亮在地图上的位置
+  focus:
+  - distribution
+  - cluster
+  - position
+  schools:
+  - channels
+  - schematic
+  views_note: 整页是一篇 21 节加附录的滚动叙事，背后是同一张 WebGL 点云地图：每一节把镜头停在某个区域，并“点亮”满足某个条件的仓库（如 2025 年 7 月以后新建的、AI 辅助构建的、Star 不到 10 个的），配一张可点的条形图（点一根条只点亮那一组）。另有探索模式：自由平移缩放，按区域、微簇、构建方式、活跃度、语言、问题聚类、文件数着色，分面筛选，搜索，点开仓库卡片。点的大小随 Star 数取对数（来自站点源码）
+  dropped: 页面写明二维位置是投影、距离会失真（最近邻按完整向量空间算）；只覆盖选定领域，不是全部 AI 开源；单个仓库只带类型标签，不做逐个仓库的评判；Star 数被怀疑注水的只标出 39 个，不修正
+  abstraction:
+  - aggregate
+  - fold-drill
+  - zoom
+  - separate-views
+  abstraction_note: 178 个微簇自底向上并成 25 个命名区域；悬停区域高亮、点击固定并展开子簇；问题聚类是另一套独立的分法，和能力区域分开看；slop 在自己的空间里算位置，再投影到主地图边缘；平移缩放换尺度
+  ev:
+  - encodings:Those descriptions were embedded and clustered
+  - encodings:each hue is one of 120 shared reasons to build
+  - encodings:every repository our read classified as an AI-assisted build
+  - encodings:Math.log10(D.stars[i] + 1)
+  - abstraction:178 capability clusters rolled into 25 named regions
+  - interactions:Hover a region to light it up
+  - attributes:producing a capability description
+  - views:Click a bar to light a single year
+  thinking:
+  - why:No taxonomy was imposed
+  - alternative:Most writing about this ecosystem covers the starred end
+  - limit:2-D positions are projections, so distances distort
+  - limit:this is a census of a chosen territory
+  confidence: high
+  note: 用户 2026-10-13 补给的链接（官网和 GitHub 仓库）。调研里关于它的 7 句说法：20,393 个仓库、2026 年 7 月、178 个能力聚类与 120 个问题聚类与 25 个区域、读 README 文件树和源码、数据截至 2026-07-01、作者承认分类有误差，官网页面都找到了原文。“展示代码 MIT、数据 CC BY-NC-ND 4.0”页面没写，写在仓库的 README 和 LICENSE-DATA.md 里（读的是仓库克隆，不是页面核对）；数据许可证不允许修改后再分发，所以本库只引用说明，不拷贝它的数据。“可按能力类别、问题类别、语言、项目类型切换颜色”不完全一致：着色方式是区域、微簇、构建方式、活跃度、语言、问题聚类、文件数（站点源码 explore.js），项目类型和层是筛选，不是着色。“最接近项目语义地图的第一名”是调研的排名，页面没有这句话。点大小、着色方式取自站点 JS，已与仓库里的同名文件对过一致。单案例盲编（Haiku 只看摘录）：结构、流派、来源三项和我编的一致；首位重点部分不一致（我编 distribution，盲编写 cluster），页面里两样都有，先后拿不准
+
 - id: semrepo
   origin: external
   name: SemRepo

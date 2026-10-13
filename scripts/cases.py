@@ -8,7 +8,7 @@
 from __future__ import annotations
 
 import json
-from collections import defaultdict
+from collections import Counter, defaultdict
 from pathlib import Path
 
 import yaml
@@ -307,6 +307,37 @@ def render_school_count(d: dict, arg: str) -> str:
     return _count_matrix(rows, lambda x: x["schools"][0], spec[0], v["schools"], spec[1], spec[2])
 
 
+def render_school_loo(d: dict, _arg: str) -> str:
+    """留一法：拿一个案例的某些编码去预测它的主流派，只用其余案例统计。平局取其余案例里整体更常见的流派，结果与案例顺序无关。"""
+    rows = [x for x in d["cases"]["cases"] if x.get("schools") and x.get("focus") and x.get("issue_types")]
+    predictors = [
+        ("不用任何信息，总猜最常见的流派", lambda c: 0),
+        ("首位议题", lambda c: c["issue_types"][0]),
+        ("结构来源（首位）", lambda c: c["source"][0]),
+        ("主类结构", lambda c: c["structure"][0]),
+        ("首位重点部分", lambda c: c["focus"][0]),
+        ("重点 + 议题", lambda c: (c["focus"][0], c["issue_types"][0])),
+        ("结构 + 来源", lambda c: (c["structure"][0], c["source"][0])),
+        ("结构 + 议题", lambda c: (c["structure"][0], c["issue_types"][0])),
+    ]
+    prime = [r["schools"][0] for r in rows]
+    out = ["| 用什么预测主流派 | 留一法预测正确率 |", "| --- | --- |"]
+    for label, key in predictors:
+        groups: dict = defaultdict(list)
+        for i, r in enumerate(rows):
+            groups[key(r)].append(i)
+        hit = 0
+        for i, r in enumerate(rows):
+            others = [prime[j] for j in groups[key(r)] if j != i] or [prime[j] for j in range(len(rows)) if j != i]
+            cnt = Counter(others)
+            base = Counter(prime[j] for j in range(len(rows)) if j != i)
+            hit += max(cnt, key=lambda s: (cnt[s], base[s])) == prime[i]
+        out.append(f"| {label} | {hit / len(rows):.2f} |")
+    out.append("")
+    out.append(f"n = {len(rows)}（有视图、有重点和议题编码的案例）。")
+    return "\n".join(out) + "\n"
+
+
 def render_school_cases(d: dict, arg: str) -> str:
     """用到某个流派的案例（主流派是它的加粗）。"""
     c, v = d["cases"], d["cases"]["vocab"]
@@ -522,6 +553,7 @@ CASE_RENDERERS = {
     "schoolcount": render_school_count,
     "schoolcases": render_school_cases,
     "schoolpairs": render_school_pairs,
+    "schoolloo": render_school_loo,
     "gallery": render_gallery,
     "gallerystats": render_gallery_stats,
     "galleryindex": render_gallery_index,

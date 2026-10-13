@@ -11,7 +11,7 @@
 
 ## 先问四件事
 
-1. **底座是什么结构、叠了什么。** 见 [信息结构理论](../04-structure-and-cognition/case-study/information-structure-theory.md)。97 个案例里 42 个不止一种结构，所以常常需要不止一个视图。
+1. **底座是什么结构、叠了什么。** 见 [信息结构理论](../04-structure-and-cognition/case-study/information-structure-theory.md)。98 个案例里 43 个不止一种结构，所以常常需要不止一个视图。
 2. **视图要回答结构的哪一部分。** 连通、先后、环、包含、量、时间、来源……重点不同，画法常常不同。例如同一批调用栈样本，要看“哪些路径出现得最多”就画火焰图（丢掉时间顺序）；要看“什么时候发生”就画火焰图表（flame chart，时间在 x 轴）。不过第二轮的统计显示，结构类别和重点部分都只能解释画法的一部分（见 [可视化流派](../04-structure-and-cognition/case-study/visualization-schools.md)），所以下表是“案例里常见的选择和理由”，不是唯一解。
 3. **使用者的任务。** 〔文〕Brehmer 和 Munzner 的任务分类把“找”分成四种：目标和位置都已知（lookup）、目标已知位置未知（locate）、目标未知但位置已知（browse）、两者都未知（explore）；找到之后再 identify（识别）、compare（比较）或 summarize（概括）。同一种结构，任务不同，合适的画法也不同（见下面节点连线图与矩阵）。
 4. **规模，以及要丢掉什么。** 先想清楚这个视图会丢掉结构的哪一部分，再决定另配哪个视图补上。

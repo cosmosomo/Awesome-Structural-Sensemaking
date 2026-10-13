@@ -15580,5 +15580,358 @@
    "（读取说明：只读了首页、/info 与一个领域页；未找到单独的方法说明页，没有读到方法文档。）"
   ],
   "id": "speculora"
+ },
+ "state-of-agentic-ai": {
+  "pages_read": [
+   "https://stateofagenticai.reiuk.co.uk/",
+   "https://stateofagenticai.reiuk.co.uk/js/mapview.js",
+   "https://stateofagenticai.reiuk.co.uk/js/explore.js"
+  ],
+  "retrieved": "2026-10-13",
+  "input_material": [
+   {
+    "quote": "We read each repository's README, file tree, and source, and wrote down what it actually builds.",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "quote": "Every repository's README (up to 6k characters), full file tree, and one or two entry-point source files were fetched and read by a frontier model against a fixed rubric",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "quote": "The census. 20,393 GitHub repositories gathered over seven passes (June–July 2026)",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   }
+  ],
+  "entities": [
+   {
+    "what": "any point",
+    "quote": "Hover any point to identify it; click for the full card.",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "what": "25 named regions",
+    "quote": "The map has 25 named regions.",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "what": "genres",
+    "quote": "7.9% of the territory is slop, in 63 genres.",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   }
+  ],
+  "relations": [
+   {
+    "what": "sit near each other",
+    "quote": "Those descriptions were embedded and clustered, so two repositories sit near each other when they do similar things.",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "what": "near-duplicates",
+    "quote": "The redundancy census calls two repos near-duplicates at cosine ≥ 0.95 in that space",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "what": "connect different owners",
+    "quote": "98% of duplicate pairs connect different owners.",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "what": "names",
+    "quote": "When a repository's own description names a coding agent, it marks what the project is built for, on, or around.",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   }
+  ],
+  "attributes": [
+   {
+    "what": "stars, dates, language, license",
+    "quote": "Metadata (stars, dates, language, license) is a 2026-07-01 snapshot.",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "what": "stars",
+    "quote": "the 1,173 repositories above 10,000 stars, 5.8% of the corpus, hold 77.7% of its 47.9 million stars.",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "what": "pulse",
+    "quote": "our pulse measure needs months of inactivity, a bar no repo created this year can meet yet.",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "what": "drive-by",
+    "quote": "A drive-by repo's entire observed life, last commit minus creation, fits inside seven days.",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "what": "capability description, problem statement, classifications",
+    "quote": "producing a capability description (what it actually does), a problem statement (why it exists), and classifications (construction, layer, kind, liveness).",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "what": "construction",
+    "quote": "We classified each repo's construction from its bones: tree shape, tests, CI, the fingerprints agent workflows leave.",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "what": "nearest-neighbor lists in each card",
+    "quote": "the nearest-neighbor lists in each card are computed in the full-dimensional space.",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "what": "public data payload",
+    "quote": "The public data payload carries only the fields shown here.",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   }
+  ],
+  "views": [
+   {
+    "what": "Click a bar",
+    "quote": "Click a bar to light a single year.",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "what": "most-scattered first",
+    "quote": "Here is every problem we measured, most-scattered first:",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "what": "camera",
+    "quote": "The camera is parked on the harness region; its three big neighborhoods are Rust runtimes (503), Go runtimes (403), and DIY terminal CLIs (142).",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "what": "Browse all 120 problem clusters",
+    "quote": "Browse all 120 problem clusters",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   }
+  ],
+  "encodings": [
+   {
+    "what": "sit near each other",
+    "quote": "Those descriptions were embedded and clustered, so two repositories sit near each other when they do similar things.",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "what": "recolored by language",
+    "quote": "On the map, points are recolored by language:",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "what": "each hue is one of 120 shared reasons",
+    "quote": "The map is recolored by problem: each hue is one of 120 shared reasons to build.",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "what": "Lit on the map",
+    "quote": "Lit on the map: every repository our read classified as an AI-assisted build.",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "quote": "radii[i] = 1.35 + Math.log10(D.stars[i] + 1) * 1.05;",
+    "url": "https://stateofagenticai.reiuk.co.uk/js/mapview.js",
+    "what": "点的半径随 Star 数取对数变大（站点源码，页面文字里没写）",
+    "check": "ok"
+   },
+   {
+    "quote": "weight ramp: single blue hue, dim→bright by log-bucketed file count",
+    "url": "https://stateofagenticai.reiuk.co.uk/js/explore.js",
+    "what": "“Weight”着色：亮度随文件数分档（站点源码）",
+    "check": "ok"
+   },
+   {
+    "quote": "construction: { label: 'Construction', fn: i => EFF_C[D.eff[i]] }",
+    "url": "https://stateofagenticai.reiuk.co.uk/js/explore.js",
+    "what": "着色方式之一：构建方式（站点源码）",
+    "check": "ok"
+   },
+   {
+    "quote": "problem: { label: 'Problem lens', fn: i => (D.pcl[i] >= 0 ? pclRgb[D.pcl[i]] : GREY) }",
+    "url": "https://stateofagenticai.reiuk.co.uk/js/explore.js",
+    "what": "着色方式之一：问题聚类（站点源码）",
+    "check": "ok"
+   }
+  ],
+  "interactions": [
+   {
+    "what": "pan-and-zoom",
+    "quote": "the full pan-and-zoom map wants a desktop.",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "what": "Hover a region / click to pin",
+    "quote": "Hover a region to light it up; click to pin it and unfold its sub-clusters.",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "what": "FILTERS",
+    "quote": "FILTERS CONSTRUCTION KIND LAYER PULSE LANGUAGE",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "what": "SEARCH",
+    "quote": "also search descriptions (loads ~8 MB)",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   }
+  ],
+  "questions": [
+   {
+    "quote": "What problems does the ecosystem fixate on?",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "quote": "Watching which problems scatter and which converge is watching the ecosystem decide what its products will be.",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   }
+  ],
+  "abstraction": [
+   {
+    "what": "clusters rolled into regions",
+    "quote": "178 capability clusters rolled into 25 named regions, a separate 120-cluster lens over the problem statements",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "what": "regions emerged",
+    "quote": "Twenty-five regions emerged, built from 178 finer sub-clusters, running from coding-agent harnesses to voice cloning.",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "what": "stratum",
+    "quote": "Slop is a stratum, not an accusation.",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "what": "own space",
+    "quote": "mapped in its own space and projected in as the violet fringe.",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   }
+  ],
+  "why": [
+   {
+    "quote": "No taxonomy was imposed; the categories are the ecosystem's own structure.",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "quote": "Genre labels distinguish them; individual repositories carry only their genre, never a per-repo judgment.",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "quote": "Every repo also told us why it exists, and the whys cluster differently than the whats.",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   }
+  ],
+  "alternative": [
+   {
+    "quote": "Stars are the industry's default quality signal; they can be manufactured at six-figure scale.",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "quote": "Most writing about this ecosystem covers the starred end; most of what is being attempted sits below ten stars.",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "quote": "We mapped them rather than deleting them, and they sort into genres:",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   }
+  ],
+  "limit": [
+   {
+    "quote": "A snapshot like this dates quickly, which is why we published the map and not just the story.",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "quote": "Read the smaller counts loosely: further down the table, agents are often named only in passing lists (“works with Claude Code, Codex, and others”).",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "quote": "Read the count with some care: memory systems are also the easiest agentic infrastructure to attempt",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "what": "slop judgment",
+    "quote": "The slop boundary agrees with a blind second reading 85% of the time and errs one-directionally (real code behind deceptive READMEs gets over-called as slop: about 40% of sampled slop).",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "what": "AI-assisted vs human-built boundary",
+    "quote": "The human-built ↔ AI-assisted boundary is soft (~67% exact agreement); we treat the two as one stratum wherever it matters and draw the split only with an error band.",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "what": "star inflation",
+    "quote": "A small number of star counts (39 flagged) show suspected inflation; one exhibit exceeds 190,000 stars.",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "what": "distance distortion",
+    "quote": "2-D positions are projections, so distances distort; the nearest-neighbor lists in each card are computed in the full-dimensional space.",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "check": "ok"
+   },
+   {
+    "quote": "this is a census of a chosen territory, not of all AI open source",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "what": "只覆盖选定的领域",
+    "check": "ok"
+   },
+   {
+    "quote": "75.2% of repos entered through a single discovery path.",
+    "url": "https://stateofagenticai.reiuk.co.uk/",
+    "what": "75.2% 的仓库来自同一条发现路径",
+    "check": "ok"
+   }
+  ],
+  "not_stated": [
+   "页面文字没有写点大小和亮度各代表什么，这两项取自站点 JS 源码（mapview.js、explore.js），已和 GitHub 上公开的同名文件对过一致",
+   "页面文字里没有写许可证；MIT 与 CC BY-NC-ND 4.0 写在用户给的 GitHub 仓库 README 里（读了克隆，不是页面核对）"
+  ],
+  "id": "state-of-agentic-ai"
  }
 }

@@ -2855,6 +2855,75 @@
 </details>
 - 没读到：encodings
 
+<a id="state-of-agentic-ai"></a>
+
+### The State of Open Source Agentic AI
+
+- 领域：开源生态地图；议题：看两万个开源 Agent 仓库实际在做什么、为什么存在：聚成哪些区域，哪些区域是新长出来的，哪些只是宣传大于实质
+- 编码：空间与几何 + 层级与树、表与多维属性；重点：总体分布、群落与相似、空间位置；把握：官方页面直接写了
+- 说明：用户 2026-10-13 补给的链接（官网和 GitHub 仓库）。调研里关于它的 7 句说法：20,393 个仓库、2026 年 7 月、178 个能力聚类与 120 个问题聚类与 25 个区域、读 README 文件树和源码、数据截至 2026-07-01、作者承认分类有误差，官网页面都找到了原文。“展示代码 MIT、数据 CC BY-NC-ND 4.0”页面没写，写在仓库的 README 和 LICENSE-DATA.md 里（读的是仓库克隆，不是页面核对）；数据许可证不允许修改后再分发，所以本库只引用说明，不拷贝它的数据。“可按能力类别、问题类别、语言、项目类型切换颜色”不完全一致：着色方式是区域、微簇、构建方式、活跃度、语言、问题聚类、文件数（站点源码 explore.js），项目类型和层是筛选，不是着色。“最接近项目语义地图的第一名”是调研的排名，页面没有这句话。点大小、着色方式取自站点 JS，已与仓库里的同名文件对过一致。单案例盲编（Haiku 只看摘录）：结构、流派、来源三项和我编的一致；首位重点部分不一致（我编 distribution，盲编写 cluster），页面里两样都有，先后拿不准
+- 编码所依据的原文：
+  - 编码：“Those descriptions were embedded and clustered, so two repositories sit near each other when they do similar things.” [✓](https://stateofagenticai.reiuk.co.uk/)
+  - 编码：“The map is recolored by problem: each hue is one of 120 shared reasons to build.” [✓](https://stateofagenticai.reiuk.co.uk/)
+  - 编码：“Lit on the map: every repository our read classified as an AI-assisted build.” [✓](https://stateofagenticai.reiuk.co.uk/)
+  - 编码：“radii[i] = 1.35 + Math.log10(D.stars[i] + 1) * 1.05;” [✓](https://stateofagenticai.reiuk.co.uk/js/mapview.js)
+  - 抽象与层级：“178 capability clusters rolled into 25 named regions, a separate 120-cluster lens over the problem statements” [✓](https://stateofagenticai.reiuk.co.uk/)
+  - 交互：“Hover a region to light it up; click to pin it and unfold its sub-clusters.” [✓](https://stateofagenticai.reiuk.co.uk/)
+  - 属性与度量：“producing a capability description (what it actually does), a problem statement (why it exists), and classifications (construction, layer, kind, liveness).” [✓](https://stateofagenticai.reiuk.co.uk/)
+  - 视图：“Click a bar to light a single year.” [✓](https://stateofagenticai.reiuk.co.uk/)
+<details><summary>本案例读到的其他原文摘录</summary>
+
+- 处理的材料：“We read each repository's README, file tree, and source, and wrote down what it actually builds.” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 处理的材料：“Every repository's README (up to 6k characters), full file tree, and one or two entry-point source files were fetched and read by a frontier model against a fixed rubric” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 处理的材料：“The census. 20,393 GitHub repositories gathered over seven passes (June–July 2026)” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 对象：“Hover any point to identify it; click for the full card.” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 对象：“The map has 25 named regions.” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 对象：“7.9% of the territory is slop, in 63 genres.” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 关系：“Those descriptions were embedded and clustered, so two repositories sit near each other when they do similar things.” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 关系：“The redundancy census calls two repos near-duplicates at cosine ≥ 0.95 in that space” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 关系：“98% of duplicate pairs connect different owners.” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 关系：“When a repository's own description names a coding agent, it marks what the project is built for, on, or around.” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 属性与度量：“Metadata (stars, dates, language, license) is a 2026-07-01 snapshot.” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 属性与度量：“the 1,173 repositories above 10,000 stars, 5.8% of the corpus, hold 77.7% of its 47.9 million stars.” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 属性与度量：“our pulse measure needs months of inactivity, a bar no repo created this year can meet yet.” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 属性与度量：“A drive-by repo's entire observed life, last commit minus creation, fits inside seven days.” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 属性与度量：“We classified each repo's construction from its bones: tree shape, tests, CI, the fingerprints agent workflows leave.” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 属性与度量：“the nearest-neighbor lists in each card are computed in the full-dimensional space.” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 属性与度量：“The public data payload carries only the fields shown here.” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 视图：“Here is every problem we measured, most-scattered first:” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 视图：“The camera is parked on the harness region; its three big neighborhoods are Rust runtimes (503), Go runtimes (403), and DIY terminal CLIs (142).” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 视图：“Browse all 120 problem clusters” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 编码：“On the map, points are recolored by language:” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 编码：“weight ramp: single blue hue, dim→bright by log-bucketed file count” [✓](https://stateofagenticai.reiuk.co.uk/js/explore.js)
+- 编码：“construction: { label: 'Construction', fn: i => EFF_C[D.eff[i]] }” [✓](https://stateofagenticai.reiuk.co.uk/js/explore.js)
+- 编码：“problem: { label: 'Problem lens', fn: i => (D.pcl[i] >= 0 ? pclRgb[D.pcl[i]] : GREY) }” [✓](https://stateofagenticai.reiuk.co.uk/js/explore.js)
+- 交互：“the full pan-and-zoom map wants a desktop.” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 交互：“FILTERS CONSTRUCTION KIND LAYER PULSE LANGUAGE” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 交互：“also search descriptions (loads ~8 MB)” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 回答的问题：“What problems does the ecosystem fixate on?” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 回答的问题：“Watching which problems scatter and which converge is watching the ecosystem decide what its products will be.” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 抽象与层级：“Twenty-five regions emerged, built from 178 finer sub-clusters, running from coding-agent harnesses to voice cloning.” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 抽象与层级：“Slop is a stratum, not an accusation.” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 抽象与层级：“mapped in its own space and projected in as the violet fringe.” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 为什么这样画：“No taxonomy was imposed; the categories are the ecosystem's own structure.” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 为什么这样画：“Genre labels distinguish them; individual repositories carry only their genre, never a per-repo judgment.” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 为什么这样画：“Every repo also told us why it exists, and the whys cluster differently than the whats.” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 原来的问题：“Stars are the industry's default quality signal; they can be manufactured at six-figure scale.” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 原来的问题：“Most writing about this ecosystem covers the starred end; most of what is being attempted sits below ten stars.” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 原来的问题：“We mapped them rather than deleting them, and they sort into genres:” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 局限与代价：“A snapshot like this dates quickly, which is why we published the map and not just the story.” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 局限与代价：“Read the smaller counts loosely: further down the table, agents are often named only in passing lists (“works with Claude Code, Codex, and others”).” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 局限与代价：“Read the count with some care: memory systems are also the easiest agentic infrastructure to attempt” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 局限与代价：“The slop boundary agrees with a blind second reading 85% of the time and errs one-directionally (real code behind deceptive READMEs gets over-called as slop: about 40% of sampled slop).” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 局限与代价：“The human-built ↔ AI-assisted boundary is soft (~67% exact agreement); we treat the two as one stratum wherever it matters and draw the split only with an error band.” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 局限与代价：“A small number of star counts (39 flagged) show suspected inflation; one exhibit exceeds 190,000 stars.” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 局限与代价：“2-D positions are projections, so distances distort; the nearest-neighbor lists in each card are computed in the full-dimensional space.” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 局限与代价：“this is a census of a chosen territory, not of all AI open source” [✓](https://stateofagenticai.reiuk.co.uk/)
+- 局限与代价：“75.2% of repos entered through a single discovery path.” [✓](https://stateofagenticai.reiuk.co.uk/)
+
+</details>
+- 没读到：页面文字没有写点大小和亮度各代表什么，这两项取自站点 JS 源码（mapview.js、explore.js），已和 GitHub 上公开的同名文件对过一致；页面文字里没有写许可证；MIT 与 CC BY-NC-ND 4.0 写在用户给的 GitHub 仓库 README 里（读了克隆，不是页面核对）
+
 <a id="semrepo"></a>
 
 ### SemRepo

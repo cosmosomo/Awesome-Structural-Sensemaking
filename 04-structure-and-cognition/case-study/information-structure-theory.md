@@ -12,11 +12,11 @@
 - 〔文〕来自我读过的文献，标了出处。
 - 〔推〕整理者的推断，没有直接证据，需要再找案例验证。
 
-语料的偏向要先说在前面：97 个案例里，69 个来自软件、AI、数据平台和开源生态（其中 56 个是本库收的项目，13 个是最后补入的开源生态地图、分类与知识图谱），28 个来自其他领域（交通、生物、能源、金融、语言学、论证、写作等）。工程工具偏多，所以关于“软件和运行观测”的结论比关于其他领域的结论更扎实。
+语料的偏向要先说在前面：98 个案例里，70 个来自软件、AI、数据平台和开源生态（其中 56 个是本库收的项目，14 个是后补入的开源生态地图、分类与知识图谱），28 个来自其他领域（交通、生物、能源、金融、语言学、论证、写作等）。工程工具偏多，所以关于“软件和运行观测”的结论比关于其他领域的结论更扎实。
 
 ## 第二轮编码改了什么
 
-2026-10-13 把当时的 84 个案例整体重编了一遍；之后新增的 13 个案例按同一词表编码（也做了盲编），现在共 97 个。下文的数字都是 97 个案例的。第一轮留下的结论哪些站得住、哪些要改，下面都标出来。
+2026-10-13 把当时的 84 个案例整体重编了一遍；之后新增的 14 个案例按同一词表编码（也做了盲编），现在共 98 个。下文的数字都是 98 个案例的。第一轮留下的结论哪些站得住、哪些要改，下面都标出来。
 
 | 改动 | 原因 | 影响 |
 | --- | --- | --- |
@@ -30,7 +30,7 @@
 
 ## 四个总的发现
 
-**一、单一结构不够用〔案〕。** 97 个案例里有 42 个要用两种以上的结构才描述得准（第一轮 84 个案例里是 44 个；第二轮 84 个里是 36 个：“文本”“多层”不再算结构，少了 9 个，Kialo 新增了一个次类，多了 1 个；后补的 13 个里有 6 个是多结构）。最常见的叠加：
+**一、单一结构不够用〔案〕。** 98 个案例里有 43 个要用两种以上的结构才描述得准（第一轮 84 个案例里是 44 个；第二轮 84 个里是 36 个：“文本”“多层”不再算结构，少了 9 个，Kialo 新增了一个次类，多了 1 个；后补的 14 个里有 7 个是多结构）。最常见的叠加：
 
 | 叠加 | 案例数 | 例子 |
 | --- | --- | --- |
@@ -44,16 +44,16 @@
 
 这意味着给一份材料归类时，问的不该是“它是树还是图”，而是“它的底座是哪种结构、叠了什么”。〔案〕
 
-**二、材料不是结构；结构常常是算出来的〔案〕。** 第一轮把“文本”当成一类结构，第二轮发现这不对：文本、代码、日志、表都是**原料**，要看它被当成了什么。97 个案例的结构来源（可多选）：手工建构 30 个、运行记录 24 个、算出来的 38 个、现成数据 18 个。“算出来的”这 38 个里，4 个把文本抽成图（[InfraNodus](data/case-evidence.md#infranodus)、[GraphRAG](data/case-evidence.md#graphrag)、[Docling Graph](data/case-evidence.md#docling-graph)、[LightRAG](data/case-evidence.md#lightrag)），3 个从代码里解析出依赖（[dependency-cruiser](data/case-evidence.md#dependency-cruiser)、[Madge](data/case-evidence.md#madge)、[pydeps](data/case-evidence.md#pydeps)），还有从表构造图、从样本合并调用栈、从向量投影等；后补的开源生态案例几乎都是这一类：[ATLAS](data/case-evidence.md#atlas-taxonomy) 用多个 LLM Agent 把仓库归成分类树，[CodeGraph](data/case-evidence.md#codegraph) 从代码文件里抽出算法、范式、设计模式、应用领域并对齐到 Wikidata，[Semantic Map of GitHub](data/case-evidence.md#semantic-map-github) 从 README 算出位置。结构是算出来的时候，视觉通道承载的是算法的输出（中心性、社区、度数），而不是原始数据，这一点见下文“原料”一节。这批案例还显示出一点：**“相近”是由哪种关系算出来的，是这类结构最关键的设计选择**，同一批仓库换一种算法，分出来的组就不同（见“空间与几何”一节）。
+**二、材料不是结构；结构常常是算出来的〔案〕。** 第一轮把“文本”当成一类结构，第二轮发现这不对：文本、代码、日志、表都是**原料**，要看它被当成了什么。98 个案例的结构来源（可多选）：手工建构 30 个、运行记录 24 个、算出来的 39 个、现成数据 19 个。“算出来的”这 39 个里，4 个把文本抽成图（[InfraNodus](data/case-evidence.md#infranodus)、[GraphRAG](data/case-evidence.md#graphrag)、[Docling Graph](data/case-evidence.md#docling-graph)、[LightRAG](data/case-evidence.md#lightrag)），3 个从代码里解析出依赖（[dependency-cruiser](data/case-evidence.md#dependency-cruiser)、[Madge](data/case-evidence.md#madge)、[pydeps](data/case-evidence.md#pydeps)），还有从表构造图、从样本合并调用栈、从向量投影等；后补的开源生态案例几乎都是这一类：[ATLAS](data/case-evidence.md#atlas-taxonomy) 用多个 LLM Agent 把仓库归成分类树，[CodeGraph](data/case-evidence.md#codegraph) 从代码文件里抽出算法、范式、设计模式、应用领域并对齐到 Wikidata，[Semantic Map of GitHub](data/case-evidence.md#semantic-map-github) 从 README 算出位置，[State of Open Source Agentic AI](data/case-evidence.md#state-of-agentic-ai) 让大模型读完每个仓库的 README、文件树和源码、写下它做什么，再把描述向量化、聚类成区域。结构是算出来的时候，视觉通道承载的是算法的输出（中心性、社区、度数），而不是原始数据，这一点见下文“原料”一节。这批案例还显示出一点：**“相近”是由哪种关系算出来的，是这类结构最关键的设计选择**，同一批仓库换一种算法，分出来的组就不同（见“空间与几何”一节）。
 
-**三、画法不由结构决定，结构和重点都只能解释一部分〔案〕。** 第一轮写的“重点部分比结构类别更决定画法”，第二轮没能复现。用留一法拿主类结构、首位重点去预测主流派，正确率在前 84 个案例里都是 0.54，随便猜“连线图”是 0.43；补入 13 个开源生态案例后（共 97 个）降到主类结构 0.44、首位重点 0.48，随便猜是 0.42（详见 [可视化流派](visualization-schools.md)）。在“一般图”这一类里，重点是连通的 19 个有视图的案例里 14 个画成连线图，重点是先后的 8 个里 5 个画成连线图、2 个画成记法图；不同重点之间的画法差别没有第一轮写的那么大。能站住的是更窄的几条：
+**三、画法不由结构决定，结构和重点都只能解释一部分〔案〕。** 第一轮写的“重点部分比结构类别更决定画法”，第二轮看不出来。用留一法拿主类结构、首位重点去预测主流派，正确率在前 84 个案例里是 0.48 和 0.57，全部 98 个案例里是 0.46 和 0.52，随便猜“连线图”是 0.42 到 0.43：重点略高于结构，但只差几个案例；两者单用都只比瞎猜好一点（算法和修订记录见 [可视化流派](visualization-schools.md)；这里早先写的 0.54、0.44 来自依赖案例顺序的平局规则，已改）。在“一般图”这一类里，重点是连通的 19 个有视图的案例里 14 个画成连线图，重点是先后的 8 个里 5 个画成连线图、2 个画成记法图；不同重点之间的画法差别没有第一轮写的那么大。能站住的是更窄的几条：
 
 - 重点是对象上的度量时（11 个案例），画法是通道分配图（7 个）或规则布局（3 个，技术雷达），另 1 个是排序列表，没有连线图。〔案〕
 - 重点是时间时（5 个案例），画法是时间轴条图（4 个）。〔案〕
 - 重点是包含与层次时（18 个案例），画法分散在六种里：**层级是画法最不唯一的一类结构**。〔案〕
 - 同样是重点在“环”的案例，做法各有不同：[pydeps](data/case-evidence.md#pydeps) 单独提供“只显示导入环”的选项，并把环用蓝色框标出；[设计结构矩阵](data/case-evidence.md#dsm)靠重排行列让反馈标记集中。〔案〕
 
-**四、一个视图是对结构的有损投影；丢掉的那一部分，常由同一系统里的另一个视图补上〔案〕。** 97 个案例里有 27 个提供了多个视图。设计者常常明说自己丢了什么：
+**四、一个视图是对结构的有损投影；丢掉的那一部分，常由同一系统里的另一个视图补上〔案〕。** 98 个案例里有 28 个提供了多个视图。设计者常常明说自己丢了什么：
 
 - 地铁图丢掉真实的地理形状和距离。〔案：[伦敦地铁图](data/case-evidence.md#tube-map)〕
 - 火焰图丢掉时间顺序：“The x-axis shows the stack profile population, sorted alphabetically (it is not the passage of time)”。同一页还讲了把时间放回 x 轴的火焰图表（flame chart）。〔案：[火焰图](data/case-evidence.md#flame-graph)〕
@@ -133,7 +133,7 @@
 
 ### 序列与事件流（3 个主类，但作为叠加出现很多）
 
-97 个案例里 18 个把序列当作主类或次类。序列几乎总是叠加在别的结构上：运行追踪是“树加时间”，计划与执行是“DAG 加时间”。作为主类的 3 个里，两个是没有图形界面的规范和采集库（[OpenTelemetry 生成式 AI 语义约定](data/case-evidence.md#otel-genai-semconv)、[OpenLLMetry](data/case-evidence.md#openllmetry)），一个是 [Ladder of Abstraction](data/case-evidence.md#ladder-of-abstraction)。[Graphiti](data/case-evidence.md#graphiti) 是一个只有数据模型、没有图形界面的案例：它的边带双时间元数据，可以失效，保留来源。它说明时间有效期和来源要先进数据模型，否则图只能画出“现在”。〔案〕
+98 个案例里 18 个把序列当作主类或次类。序列几乎总是叠加在别的结构上：运行追踪是“树加时间”，计划与执行是“DAG 加时间”。作为主类的 3 个里，两个是没有图形界面的规范和采集库（[OpenTelemetry 生成式 AI 语义约定](data/case-evidence.md#otel-genai-semconv)、[OpenLLMetry](data/case-evidence.md#openllmetry)），一个是 [Ladder of Abstraction](data/case-evidence.md#ladder-of-abstraction)。[Graphiti](data/case-evidence.md#graphiti) 是一个只有数据模型、没有图形界面的案例：它的边带双时间元数据，可以失效，保留来源。它说明时间有效期和来源要先进数据模型，否则图只能画出“现在”。〔案〕
 
 ### 表与多维属性（7）
 
@@ -156,11 +156,11 @@
 
 [LLNL 能源流向图](data/case-evidence.md#llnl-energy-flow)：边上的量守恒，从资源分到四类终端用途和“被拒绝的能量”（废热）。线宽正比于能量，颜色表示能量形式。设计者说选桑基图是“for its versatility in displaying quantitative information visually”。适合看总体分配，不适合看单个设备或随时间的变化。〔案〕只有一个案例，不足以归纳。
 
-### 空间与几何（4）
+### 空间与几何（5）
 
 [Embedding Projector](data/case-evidence.md#embedding-projector)：高维向量投影到二维或三维，重点是群落和位置；设计者承认静态视图不够，要加最近邻列表来检查“nearby points are semantically related”。[Circos](data/case-evidence.md#circos)：位置本身是含义（基因组坐标）。
 
-后补的两张 GitHub 地图是这一类的新例子：[Semantic Map of GitHub](data/case-evidence.md#semantic-map-github)（约 1 万个高 Star 仓库，位置由 README 向量降维得到）和 [Map of GitHub](data/case-evidence.md#map-of-github)（约 69 万个项目，两点靠近是因为“multiple users frequently gave stars to both projects”）。它们说明：**位置在这里不是给定的，是按某种关系算出来的，换一种关系就换一张地图。** Semantic Map 的方法页自己写了：用内容算和用关注关系算，“The two approaches produce meaningfully different groupings”；还提醒“inter-cluster distances should not be read as precise measurements of dissimilarity”。〔案〕
+后补的三张开源生态地图是这一类的新例子：[Semantic Map of GitHub](data/case-evidence.md#semantic-map-github)（约 1 万个高 Star 仓库，位置由 README 向量降维得到）、[Map of GitHub](data/case-evidence.md#map-of-github)（约 69 万个项目，两点靠近是因为“multiple users frequently gave stars to both projects”）和 [State of Open Source Agentic AI](data/case-evidence.md#state-of-agentic-ai)（2 万个仓库，由大模型读完 README、文件树和源码后写下的“实际做什么”描述算出位置）。它们说明：**位置在这里不是给定的，是按某种关系算出来的，换一种关系就换一张地图。** Semantic Map 的方法页自己写了：用内容算和用关注关系算，“The two approaches produce meaningfully different groupings”；还提醒“inter-cluster distances should not be read as precise measurements of dissimilarity”。第三张地图把同一批仓库分了两次：按“做什么”聚成区域，按“为什么存在”另聚一套问题簇，作者自己写：“the whys cluster differently than the whats”；它同样承认二维位置会让距离失真，最近邻要回到完整向量空间里算。〔案〕
 
 ### 因果与反馈（2）
 
@@ -193,5 +193,5 @@
 - 语料偏工程工具。想检验结论是否站得住，需要更多“复杂信息和认知结构”类的案例，尤其是非软件领域里设计者写下了理由的案例。
 - “重点部分”的词表（13 项）是我按案例归纳出来的，没有被别人用过。盲编一致率里它最低（κ = 0.61，主类结构 0.74）：换一个人来编码，同一个案例有三分之一的可能落在不同的重点上。所以凡是依赖“重点部分”的结论（第三个发现里的几条窄规则）都要打折扣。
 - “命题与论证”只有 4 个案例，其中 1 个盲编者没有认同；是否站得住为一类，需要更多案例（辩论、论文论证、法律推理等）。
-- 后补的 13 个开源生态案例里，官方文字大多不写“画成什么样”，我是打开页面看了才编的画法（盲编一致率只有 κ = 0.41）。把它们放进来，让“结构预测画法”的正确率下降了一截；这个下降是真实的信号，还是这批案例编码不稳造成的，现在分不清。
+- 后补的 14 个开源生态案例里，官方文字大多不写“画成什么样”，我是打开页面看了才编的画法（前 13 个盲编一致率只有 κ = 0.41）。它们的流派编码比前 84 个更依赖我的判断。
 - 没有读到论文原文的：Ghoniem 等的受控实验、McGuffin 的家谱图论文（读到的是作者主页的 PDF，课程材料只用作旁证）。

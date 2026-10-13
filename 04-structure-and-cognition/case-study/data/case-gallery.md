@@ -9,7 +9,7 @@
 - 这些案例为什么这样归类、设计者怎么想，见 [案例表](case-analysis.md)；编码依据的官方原文见 [案例证据](case-evidence.md)。
 
 <!-- gen:gallerystats: -->
-97 个案例里，66 个有在线展示页（可操作 51、样例目录 11、视频或导览 1、需要登录 3），其中 66 个用无头 Chromium 实际打开过；49 个有官方图片，共 90 张。其余 31 个没找到在线展示页（命令行工具、规范、方法类，或官方页面读不到），原因写在各案例下。图片只存地址，不转存。
+98 个案例里，67 个有在线展示页（可操作 52、样例目录 11、视频或导览 1、需要登录 3），其中 67 个用无头 Chromium 实际打开过；50 个有官方图片，共 91 张。其余 31 个没找到在线展示页（命令行工具、规范、方法类，或官方页面读不到），原因写在各案例下。图片只存地址，不转存。
 <!-- /gen -->
 
 ## 总表
@@ -113,6 +113,7 @@
 | [Embedding Projector](https://projector.tensorflow.org/) | 机器学习 | 空间与几何 | [可操作](https://projector.tensorflow.org/) | 3 | 2 |
 | [Semantic Map of GitHub](https://stevenfazzio.com/semantic-github-map/) | 开源生态地图 | 空间与几何 | [可操作](https://stevenfazzio.com/semantic-github-map/) | — | 1 |
 | [Map of GitHub](https://anvaka.github.io/map-of-github/) | 开源生态地图 | 空间与几何 | [可操作](https://anvaka.github.io/map-of-github/) | — | — |
+| [The State of Open Source Agentic AI](https://stateofagenticai.reiuk.co.uk/) | 开源生态地图 | 空间与几何 | [可操作](https://stateofagenticai.reiuk.co.uk/) | 1 | — |
 | [Circos](https://pmc.ncbi.nlm.nih.gov/articles/PMC2752132/) | 比较基因组 | 空间与几何 | — | 3 | 1 |
 | [Insight Maker](https://www.insightmaker.com/) | 系统建模 | 因果与反馈 | [样例目录](https://www.insightmaker.com/explore) | 3 | 2 |
 | [Explorable Explanations](https://worrydream.com/ExplorableExplanations/) | 交互式写作 | 因果与反馈 | [可操作](https://worrydream.com/TenBrighterIdeas/) | 2 | 2 |
@@ -1153,6 +1154,18 @@
 - 展示页（可直接操作）：[Map of GitHub](https://anvaka.github.io/map-of-github/)（页面文字只有加载提示「Website load sequence initiated...」，地图由脚本渲染，页面文字里看不到操作说明；未能从页面文字确认可交互的界面细节。）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 15 字、canvas 1 个、svg 1 个</sub><sub> 打开后所见：打开是深色背景的点团地图，每个团有名字（如 Frozen Esclave），左上角有 Find Project 搜索框</sub>
 
 <sub>[编码与原文摘录](case-evidence.md#map-of-github)</sub>
+
+#### [The State of Open Source Agentic AI](https://stateofagenticai.reiuk.co.uk/)
+
+<sub>开源生态地图 · 空间与几何 · 重点：总体分布、群落与相似</sub>　看两万个开源 Agent 仓库实际在做什么、为什么存在：聚成哪些区域，哪些区域是新长出来的，哪些只是宣传大于实质
+
+- 展示页（可直接操作）：[The State of Open Source Agentic AI · July 2026](https://stateofagenticai.reiuk.co.uk/)（一篇滚动叙事：首屏是 20,393 个仓库的点云，标题压在上面，页首有 Methodology 和 Explore the map 两个按钮；往下滚，每一节让镜头停在某个区域并点亮一组仓库，配条形图。页面最下面有 Appendix（方法和误差））<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 22041 字、canvas 1 个、svg 16 个</sub><sub> 打开后所见：打开是黑底的彩色点云（按区域上色），标题、仓库数和日期压在中间，左侧一列小圆点是章节导航；与用户 2026-10-13 在自己浏览器里的截图一致。只看了首屏，没有点进探索模式</sub>
+
+<a href="https://stateofagenticai.reiuk.co.uk/docs/hero.png"><img src="https://stateofagenticai.reiuk.co.uk/docs/hero.png" width="230" alt="The map: 20,393 repositories as a point cloud"></a>
+
+<sub>图：页面的 og:image：地图的首屏，标题压在点云上（[来源页](https://stateofagenticai.reiuk.co.uk/)）</sub>
+
+<sub>[编码与原文摘录](case-evidence.md#state-of-agentic-ai)</sub>
 
 #### [Circos](https://pmc.ncbi.nlm.nih.gov/articles/PMC2752132/)
 

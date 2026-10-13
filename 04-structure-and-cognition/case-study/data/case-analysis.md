@@ -3,7 +3,7 @@
 > 表格由 `scripts/build.py` 根据 `catalog/cases.yaml` 生成，请改数据，不要直接改表格。编码（归类、重点部分的判断）是整理者做的，不是项目官方的说法；每条编码后面的“摘录”是官方页面里的原文。
 
 <!-- gen:casestats: -->
-共 97 个案例，归在 10 个领域大类里（细标签 61 个）；来源：目录内项目 56 个，补收的 41 个。编码把握：高 51、中 34、低 12。
+共 98 个案例，归在 10 个领域大类里（细标签 61 个）；来源：目录内项目 56 个，补收的 42 个。编码把握：高 52、中 34、低 12。
 <!-- /gen -->
 
 ## 按领域大类分
@@ -20,7 +20,7 @@
 | **数据、元数据与分析工具**<br><sub>数据血缘、元数据目录、图数据库看板、网络与嵌入分析；使用者是数据工程师和分析师</sub> | 8 | [Marquez](https://marquezproject.ai/)（有向无环图）、[DataHub](https://docs.datahub.com/)（有向无环图）、[OpenMetadata](https://docs.open-metadata.org/latest/quick-start/sandbox)（有向无环图）、[NeoDash](https://github.com/neo4j-labs/neodash)（一般图与网络）、[PyGraphistry](https://github.com/graphistry/pygraphistry)（表与多维属性）、[Embedding Projector](https://projector.tensorflow.org/)（空间与几何）、[Gephi](https://gephi.org/desktop/)（一般图与网络）、[Hive Plot](https://mk.bcgsc.ca/linnet/)（一般图与网络） |
 | **知识抽取、知识图谱与本体**<br><sub>从文本、文档、语料里抽出结构，或查询和展示已有的知识图谱与本体</sub> | 9 | [InfraNodus](https://infranodus.com/)（一般图与网络）、[Docling](https://github.com/docling-project/docling)（层级与树）、[Docling Graph](https://docling-project.github.io/docling-graph/)（一般图与网络）、[Microsoft GraphRAG](https://microsoft.github.io/graphrag/)（一般图与网络）、[LightRAG](https://github.com/HKUDS/LightRAG)（一般图与网络）、[Graphiti](https://help.getzep.com/graphiti/getting-started/overview)（一般图与网络）、[Wikidata Query Service 结果视图](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/Wikidata_Query_Help/Result_Views)（表与多维属性）、[VOWL / WebVOWL 本体可视化](https://semantic-web-journal.net/content/visualizing-ontologies-vowl-0)（一般图与网络）、[Universal Dependencies 依存树](https://universaldependencies.org/introduction.html)（层级与树） |
 | **认知、写作与教育**<br><sub>笔记、导图、论证、讲解与写作；材料是人的想法，结构是理解本身</sub> | 10 | [AFFiNE](https://affine.pro/)（层级与树）、[Luhmann 的卡片盒](https://www.uni-bielefeld.de/fakultaeten/soziologie/forschung/luhmann-archiv/pdf/jschmidt_zettelkasten-als-uberraschungsgenerator.pdf)（一般图与网络）、[Markmap](https://markmap.js.org/docs/markmap)（层级与树）、[CmapTools 概念图](https://cmap.ihmc.us/)（命题与论证）、[Argdown](https://argdown.org/)（命题与论证）、[Kialo 论证树](https://support.kialo.com/en/)（命题与论证）、[图尔敏论证模型](https://www.blinn.edu/writing-centers/wide/toulmin-argument.html)（命题与论证）、[Wikipedia 摘要式写作](https://en.wikipedia.org/wiki/Wikipedia:Summary_style)（层级与树）、[Explorable Explanations](https://worrydream.com/ExplorableExplanations/)（因果与反馈）、[Up and Down the Ladder of Abstraction](https://worrydream.com/LadderOfAbstraction/)（序列与事件流） |
-| **开源与技术生态**<br><sub>技术选型的地图与雷达、开源仓库的度量、依赖与知识图谱、仓库的分类与语义地图</sub> | 19 | [CNCF Landscape](https://landscape.cncf.io/)（集合与分类）、[Thoughtworks Technology Radar](https://www.thoughtworks.com/radar)（集合与分类）、[Zalando Tech Radar](https://github.com/zalando/tech-radar)（集合与分类）、[Build Your Own Radar](https://github.com/thoughtworks/build-your-own-radar)（表与多维属性）、[Open Source AI Gap Map](https://www.aipotluck.org/map)（集合与分类）、[OSS Insight](https://ossinsight.io/)（表与多维属性）、[OSS Compass](https://oss-compass.org/)（表与多维属性）、[OpenDigger](https://open-digger.cn/en/)（一般图与网络）、[Ecosyste.ms](https://packages.ecosyste.ms/)（一般图与网络）、[deps.dev（Open Source Insights）](https://docs.deps.dev/)（一般图与网络）、[ATLAS：用多个 LLM Agent 自动构建软件仓库分类体系](https://arxiv.org/abs/2606.21597)（层级与树）、[Semantic Map of GitHub](https://stevenfazzio.com/semantic-github-map/)（空间与几何）、[Map of GitHub](https://anvaka.github.io/map-of-github/)（空间与几何）、[Git.Top Atlas](https://git.top/atlas)（一般图与网络）、[SemRepo](https://arxiv.org/abs/2605.13310)（一般图与网络）、[MOSS（研究软件知识图谱）](https://pretalx.com/juliacon-2025/talk/3EVLR9/)（一般图与网络）、[CodeGraph（面向源代码的开放分类知识图谱）](https://arxiv.org/abs/2609.29474)（一般图与网络）、[Software Heritage Graph Dataset](https://registry.opendata.aws/software-heritage/)（有向无环图）、[Speculora](https://speculora.com/)（层级与树） |
+| **开源与技术生态**<br><sub>技术选型的地图与雷达、开源仓库的度量、依赖与知识图谱、仓库的分类与语义地图</sub> | 20 | [CNCF Landscape](https://landscape.cncf.io/)（集合与分类）、[Thoughtworks Technology Radar](https://www.thoughtworks.com/radar)（集合与分类）、[Zalando Tech Radar](https://github.com/zalando/tech-radar)（集合与分类）、[Build Your Own Radar](https://github.com/thoughtworks/build-your-own-radar)（表与多维属性）、[Open Source AI Gap Map](https://www.aipotluck.org/map)（集合与分类）、[OSS Insight](https://ossinsight.io/)（表与多维属性）、[OSS Compass](https://oss-compass.org/)（表与多维属性）、[OpenDigger](https://open-digger.cn/en/)（一般图与网络）、[Ecosyste.ms](https://packages.ecosyste.ms/)（一般图与网络）、[deps.dev（Open Source Insights）](https://docs.deps.dev/)（一般图与网络）、[ATLAS：用多个 LLM Agent 自动构建软件仓库分类体系](https://arxiv.org/abs/2606.21597)（层级与树）、[Semantic Map of GitHub](https://stevenfazzio.com/semantic-github-map/)（空间与几何）、[Map of GitHub](https://anvaka.github.io/map-of-github/)（空间与几何）、[Git.Top Atlas](https://git.top/atlas)（一般图与网络）、[The State of Open Source Agentic AI](https://stateofagenticai.reiuk.co.uk/)（空间与几何）、[SemRepo](https://arxiv.org/abs/2605.13310)（一般图与网络）、[MOSS（研究软件知识图谱）](https://pretalx.com/juliacon-2025/talk/3EVLR9/)（一般图与网络）、[CodeGraph（面向源代码的开放分类知识图谱）](https://arxiv.org/abs/2609.29474)（一般图与网络）、[Software Heritage Graph Dataset](https://registry.opendata.aws/software-heritage/)（有向无环图）、[Speculora](https://speculora.com/)（层级与树） |
 | **生命科学**<br><sub>基因组、物种、分子通路与流行病；材料是科学数据，使用者是研究者</sub> | 5 | [Nextstrain / Auspice](https://docs.nextstrain.org/en/latest/learn/interpret/interacting-with-nextstrain.html)（层级与树）、[OneZoom 生命之树](https://www.onezoom.org/introduction)（层级与树）、[Circos](https://pmc.ncbi.nlm.nih.gov/articles/PMC2752132/)（空间与几何）、[Reactome 通路浏览器](https://reactome.org/userguide/pathway-browser)（层级与树）、[SBGN 系统生物学图形标记](https://sbgn.github.io/specifications)（一般图与网络） |
 | **社会、经济与公共数据**<br><sub>交通、能源、金融、国际统计与家族谱系；材料来自公共或行业数据</sub> | 5 | [伦敦地铁图（Beck）](https://www.londonmuseum.org.uk/collections/london-stories/harry-beck-revolutionised-tube-map/)（一般图与网络）、[LLNL 美国能源流向图](https://flowcharts.llnl.gov/)（流量网络）、[ICIJ Offshore Leaks 数据库](https://offshoreleaks.icij.org/pages/howtouse)（一般图与网络）、[Gapminder 气泡图](https://www.gapminder.org/tools/)（表与多维属性）、[家谱图的交互可视化](https://www.cs.ubc.ca/~tmm/courses/grad/slides/week8.pdf)（有向无环图） |
 <!-- /gen -->
@@ -174,6 +174,7 @@
 | [Embedding Projector](https://projector.tensorflow.org/) | 机器学习<br>检查相近的点是否在语义上真的相关，并在高维空间里找有意义的方向<br><sub>探索发现、定位异常</sub> | 空间与几何<br><sub>派生（结构由别的材料推出，不是原始给定）</sub><br>每个词（或样本）是高维向量，被投影到二维或三维；点带标签<br><sub>来源：算出来的；画法：通道分配图</sub> | 群落与相似、空间位置<br>弱化：投影以外的维度和精确距离；全局形状靠投影方法保留多少 | 二维/三维散点（投影视图）+ 右侧检视面板（搜索、最近邻）<br><sub>层级处理：</sub>缩放旋转平移；选取一个球；“隔离点”只分析选中的 | <sub>原来的问题</sub> “Unfortunately, these static views are generally inadequate for exploring high-dimensional data”<br><sub>为什么</sub> “it is customized for the kinds of tasks faced by machine learning developers and researchers”<br><sub>局限</sub> “it could be useful to visually compare two embeddings. Doing so would require nontrivial additions to the current visualizations.” | [摘录](case-evidence.md#embedding-projector)<br><sub>把握：高</sub> |
 | [Semantic Map of GitHub](https://stevenfazzio.com/semantic-github-map/) | 开源生态地图<br>看高 Star 仓库按 README 语义自然聚成哪些主题，每个仓库在地图上和谁相邻<br><sub>探索发现、建立全貌</sub> | 空间与几何<br><sub>派生（结构由别的材料推出，不是原始给定）、对象或关系分类型</sub><br>每个仓库是一个点；位置由 README 的向量经降维得到，语义相近的挨在一起；多层级主题标签由层次密度聚类生成；每个仓库另有大模型从 README 提取的标题、摘要、标语、项目类型、目标读者<br><sub>来源：算出来的；画法：通道分配图、示意与隐喻图</sub> | 空间位置、群落与相似<br>弱化：页面写明簇与簇之间的距离不宜读作差异大小的精确度量；README 短于 200 字符的仓库不收 | 交互 HTML 地图（DataMapPlot）：悬停看标题、标语、类型、语言、Star；可换颜色（创建时间、最近推送、簇）；可搜索、过滤、点击跳转<br><sub>层级处理：</sub>主题标签分多个细节层级，从大类到子主题，缩放时出现 | <sub>原来的问题</sub> “This project instead uses a content-based signal.”<br><sub>为什么</sub> “This avoids the Search API's 1,000-result cap and non-deterministic ordering.”<br><sub>局限</sub> “Selection bias. The map includes only the top 10,000 repositories by star count.” | [摘录](case-evidence.md#semantic-map-github)<br><sub>把握：高</sub> |
 | [Map of GitHub](https://anvaka.github.io/map-of-github/) | 开源生态地图<br>看 GitHub 上几十万个项目在“被同一批人点 Star”的空间里怎样分布成一块块“国家”，找到相邻的项目<br><sub>探索发现</sub> | 空间与几何<br><sub>派生（结构由别的材料推出，不是原始给定）、边或点带数值</sub><br>点是项目；两点靠得近，是因为多个用户同时给两者点过 Star；约 69 万个项目聚成约 1,500 个“国家”；点的大小是 Star 数<br><sub>来源：算出来的；画法：示意与隐喻图、通道分配图</sub> | 群落与相似、空间位置 | 二维地图：点按共同 Star 的用户聚成团，团有名字（国家）；可缩放、搜索项目、与 ChatGPT 对话。地图风格的国家、地区隐喻是页面自己的说法<br><sub>层级处理：</sub>约 69 万个项目聚成约 1,500 个国家；缩放到一定程度才看得到单个项目（无结果时页面提示 Try zooming in?） | — | [摘录](case-evidence.md#map-of-github)<br><sub>把握：中</sub> |
+| [The State of Open Source Agentic AI](https://stateofagenticai.reiuk.co.uk/) | 开源生态地图<br>看两万个开源 Agent 仓库实际在做什么、为什么存在：聚成哪些区域，哪些区域是新长出来的，哪些只是宣传大于实质<br><sub>探索发现、建立全貌</sub> | 空间与几何 + 层级与树、表与多维属性<br><sub>派生（结构由别的材料推出，不是原始给定）、对象或关系分类型、嵌套（复合）、带时间、边或点带数值</sub><br>对象是 20,393 个仓库，每个仓库一张卡片：能力描述（实际做什么）、问题描述（为什么存在）、构建方式、层、类型、活跃度，加上 GitHub 的 Star、日期、语言、许可证和最近邻。位置来自对能力描述做向量嵌入后降到二维；178 个微簇向上并成 25 个命名区域；另有一套 120 个问题聚类，按问题描述单独聚类。卡片上的属性（构建方式、类型、层、活跃度、语言）是着色和筛选的维度，故事里的大多数小节是按属性分组的数量（按年份、Star 区间、语言），再点亮在地图上的位置<br><sub>来源：算出来的、现成数据；画法：通道分配图、示意与隐喻图</sub> | 总体分布、群落与相似、空间位置<br>弱化：页面写明二维位置是投影、距离会失真（最近邻按完整向量空间算）；只覆盖选定领域，不是全部 AI 开源；单个仓库只带类型标签，不做逐个仓库的评判；Star 数被怀疑注水的只标出 39 个，不修正 | 整页是一篇 21 节加附录的滚动叙事，背后是同一张 WebGL 点云地图：每一节把镜头停在某个区域，并“点亮”满足某个条件的仓库（如 2025 年 7 月以后新建的、AI 辅助构建的、Star 不到 10 个的），配一张可点的条形图（点一根条只点亮那一组）。另有探索模式：自由平移缩放，按区域、微簇、构建方式、活跃度、语言、问题聚类、文件数着色，分面筛选，搜索，点开仓库卡片。点的大小随 Star 数取对数（来自站点源码）<br><sub>层级处理：</sub>178 个微簇自底向上并成 25 个命名区域；悬停区域高亮、点击固定并展开子簇；问题聚类是另一套独立的分法，和能力区域分开看；slop 在自己的空间里算位置，再投影到主地图边缘；平移缩放换尺度 | <sub>为什么</sub> “No taxonomy was imposed; the categories are the ecosystem's own structure.”<br><sub>原来的问题</sub> “Most writing about this ecosystem covers the starred end; most of what is being attempted sits below ten stars.”<br><sub>局限</sub> “2-D positions are projections, so distances distort; the nearest-neighbor lists in each card are computed in the full-dimensional space.”<br><sub>局限</sub> “this is a census of a chosen territory, not of all AI open source” | [摘录](case-evidence.md#state-of-agentic-ai)<br><sub>把握：高</sub> |
 | [Circos](https://pmc.ncbi.nlm.nih.gov/articles/PMC2752132/) | 比较基因组<br>比较基因组，显示基因组位置对之间的关系<br><sub>比较、探索发现</sub> | 空间与几何 + 一般图与网络<br><sub>边或点带数值</sub><br>基因组位置（线性坐标上的区间）和位置之间的对应关系（比对、重排）<br><sub>来源：现成数据；画法：规则布局</sub> | 空间位置、连通与邻域 | 弦图<br>环形 ideogram + 彩带（ribbon）：位置、大小、方向；外圈叠加散点、直方图、热图等轨道<br><sub>层级处理：</sub>全基因组视图放不下小尺度事件，用密度图聚合；坐标轴断开后聚焦感兴趣的区域<br><sub>匹配与盲区：</sub>环形把线性坐标首尾相接，腾出圆内空间给位置对之间的连线 | <sub>原来的问题</sub> “In such figures, multitudes of lines transgress unrelated ideograms and make patterns very difficult to discern.”<br><sub>为什么</sub> “we require instructive and clear visualizations that (1) adapt to the density and dynamic range of the data, (2) maintain complexity and detail in the data”<br><sub>局限</sub> “The resolution of a whole-genome view precludes the display of individual small-scale events at their native scale.” | [摘录](case-evidence.md#circos)<br><sub>把握：中</sub> |
 <!-- /gen -->
 
@@ -212,7 +213,7 @@
 | 跨视图的同一对象 | · | · | AFFiNE、Nextstrain / Auspice | · | n8n | · | · | · | · | · |
 | 群落与相似 | · | · | · | · | InfraNodus、Microsoft GraphRAG | · | · | · | Embedding Projector、Map of GitHub | · |
 | 空间位置 | · | · | · | · | · | · | · | · | Semantic Map of GitHub、Circos | · |
-| 总体分布 | · | OSS Insight | · | · | · | · | · | · | · | · |
+| 总体分布 | · | OSS Insight | · | · | · | · | · | · | The State of Open Source Agentic AI | · |
 <!-- /gen -->
 
 ### 议题（首位）× 主类结构
@@ -226,7 +227,7 @@
 | 追踪流向 | · | · | · | Git 提交历史、OpenMetadata、Software Heritage Graph Dataset | · | · | · | LLNL 美国能源流向图 | · | · |
 | 比较 | · | · | · | · | · | · | · | · | Circos | · |
 | 决策与状态 | Thoughtworks Technology Radar、Zalando Tech Radar、Open Source AI Gap Map | Build Your Own Radar、OSS Compass | Speculora | · | OpenDigger | · | · | · | · | · |
-| 探索发现 | CNCF Landscape | Grafana、PyGraphistry、Wikidata Query Service 结果视图、OSS Insight、Gapminder 气泡图 | Nextstrain / Auspice、OneZoom 生命之树、Reactome 通路浏览器 | 家谱图的交互可视化 | Gephi、Hive Plot、InfraNodus、Luhmann 的卡片盒、Ecosyste.ms、Git.Top Atlas、MOSS（研究软件知识图谱）、ICIJ Offshore Leaks 数据库 | · | Up and Down the Ladder of Abstraction | · | Embedding Projector、Semantic Map of GitHub、Map of GitHub | · |
+| 探索发现 | CNCF Landscape | Grafana、PyGraphistry、Wikidata Query Service 结果视图、OSS Insight、Gapminder 气泡图 | Nextstrain / Auspice、OneZoom 生命之树、Reactome 通路浏览器 | 家谱图的交互可视化 | Gephi、Hive Plot、InfraNodus、Luhmann 的卡片盒、Ecosyste.ms、Git.Top Atlas、MOSS（研究软件知识图谱）、ICIJ Offshore Leaks 数据库 | · | Up and Down the Ladder of Abstraction | · | Embedding Projector、Semantic Map of GitHub、Map of GitHub、The State of Open Source Agentic AI | · |
 | 论证推理 | · | · | · | · | · | Argdown、Kialo 论证树、图尔敏论证模型 | · | · | · | · |
 | 推演仿真 | · | · | · | · | · | · | · | · | · | Insight Maker |
 | 构建编辑 | · | · | Tree-sitter、Docling、AFFiNE | AgentEnsemble | Dify、Langflow、Flowise、Node-RED、bpmn-js、AutoGen / AutoGen Studio、diagrams.net / draw.io、NeoDash、Docling Graph | CmapTools 概念图 | · | · | · | · |
@@ -245,7 +246,7 @@
 | 包含与面积图 | 1 | · | 3 | · | · | · | · | · | · | · | 4 |
 | 时间轴条图 | · | · | 7 | · | · | · | · | · | · | · | 7 |
 | 规则布局 | 2 | 1 | · | · | 2 | · | · | · | 1 | · | 6 |
-| 通道分配图 | 1 | 5 | · | · | 3 | · | 1 | 1 | 2 | · | 13 |
+| 通道分配图 | 1 | 5 | · | · | 3 | · | 1 | 1 | 3 | · | 14 |
 | 示意与隐喻图 | · | · | 1 | · | 1 | · | · | · | 1 | · | 3 |
 | 列表与文字 | · | · | 7 | 1 | 1 | 1 | · | · | · | 1 | 11 |
 | 记法图 | · | · | 1 | · | 3 | 3 | · | · | · | 1 | 8 |
@@ -260,7 +261,7 @@
 | 包含与面积图 | · | · | 2 | 2 | 4 |
 | 时间轴条图 | · | 7 | · | · | 7 |
 | 规则布局 | 3 | · | · | 3 | 6 |
-| 通道分配图 | 2 | 2 | 5 | 4 | 13 |
+| 通道分配图 | 2 | 2 | 6 | 4 | 14 |
 | 示意与隐喻图 | 1 | · | 1 | 1 | 3 |
 | 列表与文字 | 6 | 2 | 3 | · | 11 |
 | 记法图 | 7 | · | · | 1 | 8 |
@@ -279,6 +280,6 @@
 | 命题与论证 | 4 | 论证地图×2、概念图×1 | 1 个案例只有文字描述的视图 |
 | 序列与事件流 | 3 | — | 1 个案例只有文字描述的视图 |
 | 流量网络 | 1 | 桑基图×1 | 0 个案例只有文字描述的视图 |
-| 空间与几何 | 4 | 弦图×1 | 3 个案例只有文字描述的视图 |
+| 空间与几何 | 5 | 弦图×1 | 4 个案例只有文字描述的视图 |
 | 因果与反馈 | 2 | 存量流量图×1、因果回路图×1 | 1 个案例只有文字描述的视图 |
 <!-- /gen -->

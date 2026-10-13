@@ -51,7 +51,7 @@
 | `case-evidence.json` | 官方页面的原文摘录，按案例 id 和类目存放，每条有 `check`：`ok`（页面文字里找到了）、`missing`、`unreadable`、`unchecked`。 |
 | `case-gallery.json` | 每个案例的展示页（`demo`，带 `mode`：`live` 可操作 / `samples` 样例目录 / `video` 视频或导览）、官方图片（`images`，只存地址）、说明网页（`pages`），以及没找到什么（`not_found`）。每个地址有 `check`；展示页另有 `render`（无头 Chromium 打开后的情况）。 |
 
-`python3 scripts/check_gallery.py [--id 案例id]` 逐个访问画廊里的地址，写回状态、标题、图片的类型和像素尺寸；`NODE_PATH=$(npm root -g) node scripts/render_check.js urls.json out.json 截图目录` 用无头 Chromium 打开展示页，再用 `check_gallery.py --render out.json` 合并进来。图片不转存，不收 GitHub 域名上的图（按会话的访问范围）。生成的页面是 `04-structure-and-cognition/case-study/data/case-gallery.md`。
+`python3 scripts/check_gallery.py [--id 案例id]` 逐个访问画廊里的地址，写回状态、标题、图片的类型和像素尺寸；`NODE_PATH=$(npm root -g) node scripts/render_check.js urls.json out.json 截图目录` 用无头 Chromium 打开展示页，再用 `check_gallery.py --render out.json` 合并进来。图片不转存，不收 GitHub 域名上的图（按会话的访问范围）。生成的页面是 `04-structure-and-cognition/case-study/data/case-gallery.md`。 `python3 scripts/case_numbers.py` 重算案例编码的统计（理论文档里手写的数字从这里对）。
 
 `python3 scripts/check_quotes.py [--id 案例id] [--write]` 核对摘录：不靠模型，直接在页面文字里做子串比对。`MISSING` 不一定是抄错，也可能是页面排版或由 JS 渲染。生成的表格在 `04-structure-and-cognition/case-study/data/case-analysis.md` 和 `case-evidence.md`。
 
