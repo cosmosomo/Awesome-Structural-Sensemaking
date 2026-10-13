@@ -1,0 +1,41 @@
+# 分类词表：层级与分类键。条目里的 level / category 必须出现在这里。
+levels:
+  L1:
+    title: 底层可视化技术
+    categories:
+      chart-and-visualization-engines: 通用图形与数据可视化
+      graph-and-node-engines: 关系图与节点交互引擎
+      layouts-and-graph-algorithms: 布局与复杂度管理算法
+      diagram-languages: 图形描述语言与模型驱动技术
+      canvas-2d-and-3d: 二维无限画布与三维空间技术
+  L2:
+    title: 特定结构与数据的专项可视化项目
+    categories:
+      code-dependencies: 代码依赖与模块解耦
+      software-architecture: 软件架构与代码理解
+      workflows-and-state-machines: 流程、状态机与任务依赖
+      ai-and-multi-agent: Agent 与多智能体协作
+      traces-and-timelines: Trace、调用链与执行过程
+      data-lineage: 数据血缘
+      infrastructure-topology: 系统服务拓扑与基础设施
+      knowledge-and-cognition: 知识、文档与认知地图
+      technology-landscapes: 技术生态与商业产品地图
+      spatial-and-high-dimensional: 三维、高维与大规模关系探索
+  L3:
+    title: 成熟应用与综合交互系统
+    categories:
+      ai-development-platforms: AI 应用与工作流开发平台
+      agent-management: Agent 开发、协作与管理平台
+      observability-platforms: LLM 与 Agent 可观测性平台
+      software-engineering-platforms: 软件架构、开发者平台与工程管理
+      data-and-infrastructure: 数据平台与基础设施管理
+      knowledge-workspaces: 知识组织、概念地图与认知工具
+      market-and-ecosystem-platforms: 生态地图与产业分析产品
+
+# 第四板块的工具与项目分类（条目里写 section: cognition）
+cognition:
+  title: 结构提炼与认知建模
+  categories:
+    information-extraction: 结构提取
+    multilevel-knowledge-modeling: 多层知识建模
+    evolving-knowledge-structures: 动态与演化的知识结构

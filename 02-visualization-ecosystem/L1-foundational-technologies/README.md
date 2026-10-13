@@ -1,0 +1,94 @@
+# L1 底层可视化技术
+
+不能简单地把所有库并列。至少要区分图形渲染、关系图框架、布局计算、图形描述语言、空间引擎、交互画布六类。
+
+> 项目事实和判断来自 2026-10 调研报告，未逐项核验。标 ✓ 的展示页已访问核对。
+
+## 通用图形与数据可视化
+
+区别主要在抽象程度。D3 给开发者较大的可视化设计自由；Vega-Lite 强调把可视化描述为声明式规格；ECharts、Plotly 提供大量现成图表；deck.gl 关注大数据规模下的图层组合与高性能渲染。
+
+<!-- gen:catalog:L1/chart-and-visualization-engines -->
+| 项目 | 定位与值得研究 | 开源项目 | 展示页 | 站点 / 文档 | 备注 |
+| --- | --- | --- | --- | --- | --- |
+| [D3.js](https://github.com/d3/d3) | 底层数据驱动可视化工具集。<br>自定义视觉编码、层级、网络、布局与交互。 | [仓库](https://github.com/d3/d3) | [展示页](https://observablehq.com/collection/@d3/gallery) | — | — |
+| [Vega-Lite](https://github.com/vega/vega-lite) | 声明式可视化语法。<br>用结构化描述定义图表，而不是逐元素绘制。 | [仓库](https://github.com/vega/vega-lite) | [展示页](https://vega.github.io/vega-lite/examples/) | — | — |
+| [Apache ECharts](https://echarts.apache.org/) | 综合图表引擎。<br>图表类型、交互组件、大屏和业务看板。 | [仓库](https://github.com/apache/echarts) | 待收集 | [站点](https://echarts.apache.org/) | — |
+| [Plotly.js](https://github.com/plotly/plotly.js) | 数据探索与交互图表。<br>多维统计图、科学可视化、交互分析。 | [仓库](https://github.com/plotly/plotly.js) | [展示页](https://plotly.com/javascript/) | — | — |
+| [deck.gl](https://github.com/visgl/deck.gl) | GPU 加速的大数据可视化框架。<br>大规模数据、地图图层、多视角渲染。 | [仓库](https://github.com/visgl/deck.gl) | [展示页](https://deck.gl/gallery/) | — | — |
+<!-- /gen -->
+
+## 关系图与节点交互引擎
+
+与“复杂认知地图”关系最密切的一组。报告的初步判断：G6、Cytoscape.js 更值得用于研究复杂网络的结构呈现；React Flow、X6 更适合研究复杂节点编辑器与工作流应用；Sigma.js 是大型网络展示与探索的重要参考。这是按设计方向的归类，不是性能排名。
+
+<!-- gen:catalog:L1/graph-and-node-engines -->
+| 项目 | 定位与值得研究 | 开源项目 | 展示页 | 站点 / 文档 | 备注 |
+| --- | --- | --- | --- | --- | --- |
+| [AntV G6](https://g6.antv.antgroup.com/) | 通用关系图引擎：图布局、分组、交互。<br>Combo 嵌套、聚合、折叠，复杂关系布局。适合研究复杂网络的结构呈现。 | [仓库](https://github.com/antvis/G6) | [展示页](https://g6.antv.antgroup.com/manual/behavior/collapse-expand) | [站点](https://g6.antv.antgroup.com/) | — |
+| [React Flow](https://reactflow.dev/) | React 节点和边编辑器。<br>自定义节点、子流程、连线编辑、业务组件集成。更适合研究复杂节点编辑器与工作流应用。 | [仓库](https://github.com/xyflow/xyflow) | [展示页](https://reactflow.dev/examples) | [站点](https://reactflow.dev/) | 官方展开折叠等部分高级示例属于付费 Pro 内容。 |
+| [Cytoscape.js](https://js.cytoscape.org/) | 图模型、网络分析及扩展生态。<br>复合节点、图算法、复杂度管理。更适合研究复杂网络的结构呈现。 | [仓库](https://github.com/cytoscape/cytoscape.js) | [展示页](https://js.cytoscape.org/) | — | — |
+| [Sigma.js](https://www.sigmajs.org/) | 基于 WebGL 的网络图渲染。<br>较大关系网络、节点探索，常与 Graphology 配合。 | [仓库](https://github.com/jacomyal/sigma.js) | [展示页](https://www.sigmajs.org/examples/) | [站点](https://www.sigmajs.org/) | — |
+| [AntV X6](https://github.com/antvis/X6) | 图编辑引擎。<br>复杂节点编辑、连接桩、流程编辑器。 | [仓库](https://github.com/antvis/X6) | 待收集 | — | — |
+| [diagram-js](https://github.com/bpmn-io/diagram-js) | 图形编辑能力底座，bpmn-js 建立在其上。<br>编辑器组件；业务流程方向的 L1 代表。 | [仓库](https://github.com/bpmn-io/diagram-js) | 待收集 | — | 报告只在正文和跨层索引里提到，没有给出地址；仓库地址由整理者补充。 |
+<!-- /gen -->
+
+## 布局与复杂度管理算法
+
+这一组经常被忽略，但对复杂认知地图可能比换一个渲染器更重要。要把结构聚合算法与视觉布局算法区分开：前者决定显示哪些对象、合并哪些关系，后者决定这些对象显示在哪里。
+
+<!-- gen:catalog:L1/layouts-and-graph-algorithms -->
+| 项目 | 定位与值得研究 | 开源项目 | 展示页 | 站点 / 文档 | 备注 |
+| --- | --- | --- | --- | --- | --- |
+| [ELK.js](https://github.com/kieler/elkjs) | 自动分层布局、连线布线、复合图布局。<br>复杂模块和任务 DAG。 | [仓库](https://github.com/kieler/elkjs) | [展示页](https://rtsys.informatik.uni-kiel.de/elklive/) | — | — |
+| [Dagre](https://github.com/dagrejs/dagre) | 有向图层次布局。<br>工作流、依赖图。 | [仓库](https://github.com/dagrejs/dagre) | [展示页](https://dagrejs.github.io/project/dagre-d3/latest/demo/interactive-demo.html) | — | 展示页属于 dagre-d3。 |
+| [Graphviz](https://graphviz.org/) | 多种图布局与渲染。<br>架构图、静态分析、依赖图。 | [仓库](https://gitlab.com/graphviz/graphviz) | [展示页](https://graphviz.org/gallery/) | [站点](https://graphviz.org/) | — |
+| [d3-force](https://github.com/d3/d3-force) | 力导向模拟。<br>自由关系网络、动态关系图。 | [仓库](https://github.com/d3/d3-force) | 待收集 | — | — |
+| [Graphology](https://graphology.github.io/) | 图数据操作与算法生态。<br>关系分析、节点指标、图结构处理。 | [仓库](https://github.com/graphology/graphology) | 待收集 | [站点](https://graphology.github.io/) | — |
+| [Cytoscape Complexity Management](https://github.com/iVis-at-Bilkent/cytoscape.js-complexity-management) | 大型复合图的展开、折叠与关系管理（Cytoscape.js 扩展）。<br>层次化复杂网络；节点、边及聚合关系的管理。 | [仓库](https://github.com/iVis-at-Bilkent/cytoscape.js-complexity-management) | 待收集 | — | — |
+<!-- /gen -->
+
+## 图形描述语言与模型驱动技术
+
+LikeC4 和 Structurizr 不只是“画图语言”，更重要的是把模型与视图分离：一份结构模型可以定义多张不同视角的图。
+
+<!-- gen:catalog:L1/diagram-languages -->
+| 项目 | 定位与值得研究 | 开源项目 | 展示页 | 站点 / 文档 | 备注 |
+| --- | --- | --- | --- | --- | --- |
+| [Mermaid](https://mermaid.js.org/) | 文本生成流程、时序、状态、结构图，适合 Markdown 文档。<br>快速将结构化文本转换为可读图形。 | [仓库](https://github.com/mermaid-js/mermaid) | [展示页](https://mermaid.live/) | [站点](https://mermaid.js.org/) | — |
+| [PlantUML](https://plantuml.com/) | UML、时序、架构、组件等软件工程图。<br>软件工程图的文本描述。 | [仓库](https://github.com/plantuml/plantuml) | 待收集 | [站点](https://plantuml.com/) | — |
+| [D2](https://d2lang.com/) | 声明式图形描述、容器嵌套、自动布局。<br>容器嵌套的文本描述。 | [仓库](https://github.com/terrastruct/d2) | [展示页](https://play.d2lang.com/) | [站点](https://d2lang.com/) | — |
+| [Structurizr DSL](https://github.com/structurizr/dsl) | 统一 C4 架构模型及多视角定义。<br>把模型与视图分离：一份结构模型可以定义多张不同视角的图。 | [仓库](https://github.com/structurizr/dsl) | [展示页](https://docs.structurizr.com/example) | — | — |
+| [LikeC4](https://likec4.dev/)<br>（主分类 L2/software-architecture） | 不限固定层级的架构模型、视角投影与交互展示。<br>模型与视图分离：一份结构模型生成不同范围、不同视角的图，可分层钻取。既有建模语言，也有架构可视化和完整的交互查看器。 | [仓库](https://github.com/likec4/likec4) | [展示页](https://likec4.dev/showcases/bigbank/) | [站点](https://likec4.dev/) | — |
+<!-- /gen -->
+
+## 二维无限画布与三维空间技术
+
+二维与三维应当归入表达载体，而不是认知层次。
+
+<!-- gen:catalog:L1/canvas-2d-and-3d -->
+| 项目 | 定位与值得研究 | 开源项目 | 展示页 | 站点 / 文档 | 备注 |
+| --- | --- | --- | --- | --- | --- |
+| [Excalidraw](https://github.com/excalidraw/excalidraw) | 可嵌入、可编辑的二维无限白板。<br>偏向人工绘图、自由表达、构思与注释。 | [仓库](https://github.com/excalidraw/excalidraw) | [展示页](https://excalidraw.com/) | — | — |
+| [tldraw](https://github.com/tldraw/tldraw) | 无限画布 SDK：自定义对象、多人协作。<br>无限画布上的自定义对象与协作。 | [仓库](https://github.com/tldraw/tldraw) | [展示页](https://examples.tldraw.com/) | — | 含附加条件的许可证；SDK 生产使用需符合其专有许可条件。 |
+| [Three.js](https://github.com/mrdoob/three.js) | 通用三维场景渲染。<br>结构语义、布局和交互需自行构建。 | [仓库](https://github.com/mrdoob/three.js) | [展示页](https://threejs.org/examples/) | — | — |
+| [React Three Fiber](https://github.com/pmndrs/react-three-fiber) | React 三维组件开发，基于 Three.js。<br>用 React 组织三维场景。 | [仓库](https://github.com/pmndrs/react-three-fiber) | [展示页](https://r3f.docs.pmnd.rs/getting-started/examples) | — | — |
+| [React Force Graph](https://github.com/vasturiano/react-force-graph) | 2D、3D、VR、AR 关系图。<br>官方示例含点击展开折叠、相机聚焦、方向箭头、动态数据和不同空间模式，对复杂图的空间交互有参考价值。 | [仓库](https://github.com/vasturiano/react-force-graph) | [展示页](https://vasturiano.github.io/react-force-graph/) | — | — |
+| [Cosmos.gl](https://github.com/cosmosgl/graph) | GPU 加速的力导向图。<br>使用 GPU 做布局计算与图形渲染，面向大规模网络。 | [仓库](https://github.com/cosmosgl/graph) | 待收集 | [文档](https://openjsf.org/blog/introducing-cosmos-gl) | — |
+<!-- /gen -->
+
+## 支撑技术：结构的存储、提取与视图转换
+
+一个能支持跨视角、跨粒度的复杂可视化系统，除了前端绘图和交互，还需要数据模型和数据处理能力。前端画布可能只是最后的表达层，核心能力往往在数据建模、结构提取、图查询和视图生成里。如果这些基础没有区分清楚，容易出现“换一种视角便要重新组织全部数据”的问题。
+
+| 支撑能力 | 研究内容 | 代表技术 |
+| --- | --- | --- |
+| 结构化数据模型 | 如何统一表示实体、属性、类型与关系 | 属性图、RDF、JSON Graph |
+| 图查询与分析 | 如何获取邻居、路径、子图、聚类和指标 | NetworkX、Graphology、Neo4j |
+| 结构提取 | 如何将代码、文档、事件转为结构数据 | Tree-sitter、Docling、LLM 提取 |
+| 跨层映射 | 如何保留父子层级、成员归属和跨模块关系 | 层级图模型、复合图、架构模型 |
+| 视图生成 | 如何从统一模型生成不同的结构投影 | C4 / LikeC4 范式、图查询与视图配置 |
+| 时序与事件 | 如何关联结构及其运行历史 | Trace、事件日志、时间属性图 |
+| 证据追溯 | 如何让每个关系返回原始来源 | Provenance、引用、代码位置、运行记录 |
+
+其中 Graphology、Tree-sitter、Docling 在目录里有条目；其余是技术名称，尚未建条目。

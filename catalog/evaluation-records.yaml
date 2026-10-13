@@ -1,0 +1,22 @@
+# 项目评测记录。
+# evidence 取值：
+#   report  = 调研报告依据官方文档做的归纳，本库未复核
+#   docs    = 本库核对过官方文档
+#   code    = 本库核对过源码
+#   demo    = 本库体验过公开 Demo
+#   hands-on = 本库亲自安装并实测
+# 第一轮定位（报告 3.2）全部是 report 级别，不是实测排名。
+# “to_verify”不表示该能力缺失，只表示资料不足以判断。
+records:
+  - {project: antv-g6, round: positioning-1, evidence: report, strengths: 嵌套图、分组与交互, scope: 复杂关系及子图, to_verify: 大图展开时的布局稳定性}
+  - {project: likec4, round: positioning-1, evidence: report, strengths: 统一模型、多视角, scope: 软件架构认知, to_verify: 跨视图对象定位、复杂模型导航}
+  - {project: nx, round: positioning-1, evidence: report, strengths: 项目图与任务图分离, scope: 工程依赖与执行, to_verify: 更复杂跨层关系的表达能力}
+  - {project: backstage, round: positioning-1, evidence: report, strengths: 关系图融入实体管理, scope: 开发者门户, to_verify: 多层展开、密集关系处理}
+  - {project: understand-anything, round: positioning-1, evidence: report, strengths: 源码提炼与交互理解, scope: 代码库、知识文档, to_verify: 自动提炼结果的语义保真性}
+  - {project: agentensemble, round: positioning-1, evidence: report, strengths: DAG 与 Trace 时间图切换, scope: 多 Agent 任务, to_verify: 跨层身份同步、复杂协作规模}
+  - {project: agentprism, round: positioning-1, evidence: report, strengths: 独立 Trace 组件设计, scope: Agent 运行详情, to_verify: 扩展性、复杂运行与嵌套性能}
+  - {project: langfuse, round: positioning-1, evidence: report, strengths: Trace 融入工程闭环, scope: AI 应用观测, to_verify: 宏观组织结构与 Trace 的关联能力}
+  - {project: datahub, round: positioning-1, evidence: report, strengths: 血缘和上下游影响, scope: 数据资产关系, to_verify: 复杂子图、跨层影响呈现}
+  - {project: skywalking, round: positioning-1, evidence: report, strengths: 拓扑与监控、Trace 联动, scope: 分布式系统, to_verify: 复杂层级与空间视图的使用成本}
+  - {project: cncf-landscape, round: positioning-1, evidence: report, strengths: 大规模生态分类与搜索, scope: 技术、产品生态, to_verify: 跨类别关系网络的表达能力}
+  - {project: kumu, round: positioning-1, evidence: report, strengths: 复杂关系与叙事视图, scope: 系统映射、知识表达, to_verify: 自动结构提取和多层语义管理}

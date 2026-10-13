@@ -1,0 +1,20 @@
+# 项目之间有类型的关系。
+# 只记录报告或官方文档明确说明的关系。“可能适用”是研究判断，不能记成真实的技术依赖。
+types:
+  part-of: "from 是 to 的一部分（组件属于产品）。"
+  uses: "from 实际依赖 to，需有源码或官方文档证据。"
+  visualizes: "from 用于展示 to 所代表的一种结构。"
+  implements: "from 实现 to 所代表的一种可视化范式。"
+  compares-with: "两者存在可比较关系。"
+  generates: "from 是生成框架，to 是用它得到的具体实例。"
+  consumes: "from 支持消费 to 规定的数据格式。"
+  works-with: "两者常配合使用，但不表示一方依赖另一方。"
+
+relations:
+  - {from: bpmn-js, type: uses, to: diagram-js, evidence: "报告：存在已明确的技术继承关系。"}
+  - {from: cncf-landscape2, type: generates, to: cncf-landscape, evidence: "报告：生成框架与具体景观实例之间的关系。"}
+  - {from: agentprism, type: consumes, to: otel-genai-semconv, evidence: "报告：AgentPrism 支持消费相关格式的数据。"}
+  - {from: agentensemble-viz, type: part-of, to: agentensemble, evidence: "报告：AgentEnsemble 的可视化组件。"}
+  - {from: react-three-fiber, type: uses, to: three-js, evidence: "报告：基于 Three.js。"}
+  - {from: sigma-js, type: works-with, to: graphology, evidence: "报告：Sigma.js 与 Graphology 配合。"}
+  - {from: likec4, type: compares-with, to: structurizr-dsl, evidence: "报告：二者都把模型与视图分离。"}

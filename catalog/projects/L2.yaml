@@ -1,0 +1,235 @@
+# L2 特定结构与数据的专项可视化项目。
+# 信息来自 2026-10 调研报告，未逐项核验。字段含义见 catalog/README.md。
+
+# ---- 代码依赖与模块解耦 ----
+- id: dependency-cruiser
+  name: dependency-cruiser
+  level: L2
+  category: code-dependencies
+  kind: tool
+  summary: "JavaScript/TypeScript 模块依赖分析。"
+  focus: "依赖图、架构边界规则、违规依赖诊断。"
+  repo: https://github.com/sverweij/dependency-cruiser
+  demo: https://sverweij.github.io/dependency-cruiser-repro-repo/458/
+  demo_source: search
+  site: https://sverweij.github.io/dependency-cruiser/
+  notes: "展示页是作者的 3D 图报告插件演示（issue 458），用它自己的源码和 React 仓库生成。"
+
+- id: madge
+  name: Madge
+  level: L2
+  category: code-dependencies
+  kind: tool
+  summary: "JavaScript 模块引用分析。"
+  focus: "自动生成依赖关系图、发现循环依赖。"
+  repo: https://github.com/pahen/madge
+
+- id: pydeps
+  name: pydeps
+  level: L2
+  category: code-dependencies
+  kind: tool
+  summary: "Python 模块导入分析。"
+  focus: "导入网络、模块聚类、依赖结构。"
+  repo: https://github.com/thebjorn/pydeps
+
+# ---- 软件架构与代码理解 ----
+- id: codeboarding
+  name: CodeBoarding
+  level: L2
+  category: software-architecture
+  kind: tool
+  summary: "源码结构及架构语义分析。"
+  focus: "自动归纳组件，形成分层架构解释与可视化。"
+  repo: https://github.com/CodeBoarding/CodeBoarding
+
+- id: understand-anything
+  name: Understand Anything
+  level: L2
+  category: software-architecture
+  also: [L2/knowledge-and-cognition, L3/software-engineering-platforms, cognition/information-extraction]
+  kind: tool
+  summary: "文件、函数、类、调用关系与知识文档的交互知识图。"
+  focus: "架构分层视图、业务领域视图、语义搜索、引导式理解、变更影响分析。对 Markdown 知识库先解析显式链接和类别，再借助模型发现隐式关系，生成带类型的知识网络。与“复杂认知地图”相关度高。"
+  site: https://understand-anything.com/
+  demo: https://understand-anything.com/
+  repo: https://github.com/Egonex-AI/Understand-Anything
+  notes: "以上能力来自项目文档的功能说明，未逐项做交互和输出准确率评测；据文档，结构事实部分采用 Tree-sitter 等确定性解析。"
+  demo_source: report
+
+- id: likec4
+  name: LikeC4
+  level: L2
+  category: software-architecture
+  also: [L1/diagram-languages, L3/software-engineering-platforms]
+  kind: tool
+  summary: "不限固定层级的架构模型、视角投影与交互展示。"
+  focus: "模型与视图分离：一份结构模型生成不同范围、不同视角的图，可分层钻取。既有建模语言，也有架构可视化和完整的交互查看器。"
+  site: https://likec4.dev/
+  repo: https://github.com/likec4/likec4
+  demo: https://likec4.dev/showcases/bigbank/
+  demo_source: search
+
+# ---- 流程、状态机与任务依赖 ----
+- id: bpmn-js
+  name: bpmn-js
+  level: L2
+  category: workflows-and-state-machines
+  kind: library
+  summary: "BPMN 流程模型的查看、编辑与扩展。"
+  focus: "建立在 diagram-js 之上，可通过扩展机制增加覆盖层、标记和自定义交互。"
+  repo: https://github.com/bpmn-io/bpmn-js
+  demo: https://demo.bpmn.io/
+  demo_source: search
+
+# ---- Agent 与多智能体协作 ----
+- id: agentensemble-viz
+  name: AgentEnsemble Viz
+  level: L2
+  category: ai-and-multi-agent
+  also: [L2/traces-and-timelines, L2/workflows-and-state-machines]
+  kind: tool
+  summary: "任务依赖 DAG 与实际执行 Trace 的双视图。"
+  focus: "Flow View 看任务依赖、并发层级、关键路径；Timeline View 看真实起止时间、LLM 和工具调用。分别导出计划依赖 DAG 与执行 Trace。值得研究同一任务在两张视图中的身份如何保持一致，以及点击任务如何进入工具调用或会话详情。"
+  docs: https://docs.agentensemble.net/guides/visualization/
+  repo: https://github.com/AgentEnsemble/agentensemble
+
+- id: agentprism
+  name: AgentPrism
+  level: L2
+  category: ai-and-multi-agent
+  also: [L2/traces-and-timelines]
+  kind: library
+  summary: "可嵌入应用的 React Agent Trace UI 组件。"
+  focus: "层次化调用树、执行时间、工具与模型调用；独立可复用的 Trace UI 设计。"
+  repo: https://github.com/evilmartians/agent-prism
+  status: alpha
+  notes: "项目公开标注为 Alpha。"
+  demo: https://agent-prism.evilmartians.io/
+  demo_source: search
+  docs: https://evilmartians.com/chronicles/debug-ai-fast-agent-prism-open-source-library-visualize-agent-traces
+
+# ---- Trace、调用链与执行过程 ----
+- id: otel-genai-semconv
+  name: OpenTelemetry GenAI 语义约定
+  level: L2
+  category: traces-and-timelines
+  kind: spec
+  summary: "规定如何描述 AI / Agent / 工具调用等遥测事件。"
+  focus: "数据到可视化链条的起点：Span、事件、属性、父子关系。"
+  docs: https://opentelemetry.io/docs/specs/semconv/gen-ai/
+  notes: "生成式 AI 语义约定仍在演进。建库时记录具体版本和字段定义，不要当成永远稳定的统一标准。"
+  repo: https://github.com/open-telemetry/semantic-conventions
+  added_by_maintainer: [repo]
+
+- id: openllmetry
+  name: OpenLLMetry
+  level: L2
+  category: traces-and-timelines
+  kind: library
+  summary: "为 LLM 应用采集追踪数据。"
+  focus: "数据采集端。"
+  repo: https://github.com/traceloop/openllmetry
+
+- id: jaeger
+  name: Jaeger
+  level: L2
+  category: traces-and-timelines
+  kind: platform
+  summary: "分布式 Trace 的采集、检索和可视化。"
+  focus: "Trace 瀑布图等传统调用链视图。"
+  repo: https://github.com/jaegertracing/jaeger
+  demo: https://www.jaegertracing.io/demo/
+  demo_source: search
+
+- id: grafana-tempo
+  name: Grafana Tempo
+  level: L2
+  category: traces-and-timelines
+  kind: platform
+  summary: "Trace 后端，与服务图、指标视图整合。"
+  focus: "Trace 与服务图、指标的联动。"
+  repo: https://github.com/grafana/tempo
+
+# ---- 数据血缘 ----
+- id: marquez
+  name: Marquez
+  level: L2
+  category: data-lineage
+  kind: platform
+  summary: "数据集、数据任务与血缘关系。"
+  focus: "上下游关系、运行历史。"
+  repo: https://github.com/MarquezProject/marquez
+  site: https://marquezproject.ai/
+
+# ---- 知识、文档与认知地图 ----
+- id: neodash
+  name: NeoDash
+  level: L2
+  category: knowledge-and-cognition
+  kind: tool
+  summary: "使用 Neo4j 图数据库查询构建交互看板。"
+  focus: "图数据查询驱动的看板。"
+  repo: https://github.com/neo4j-contrib/neodash
+  status: needs-check
+  notes: "相关仓库存在维护状态变化，需要明确标注。"
+  demo: https://neodash-gallery.graphapp.io/
+  demo_source: search
+
+# ---- 技术生态与商业产品地图 ----
+- id: cncf-landscape2
+  name: CNCF Landscape2
+  level: L2
+  category: technology-landscapes
+  kind: tool
+  summary: "基于结构化数据生成可筛选、可搜索的生态分类景观。"
+  focus: "生态地图的数据组织和交互导航。"
+  repo: https://github.com/cncf/landscape2
+  demo: https://landscape.cncf.io/
+  demo_source: report
+
+- id: zalando-tech-radar
+  name: Zalando Tech Radar
+  level: L2
+  category: technology-landscapes
+  kind: tool
+  summary: "使用技术雷达表达技术采用阶段与类别。"
+  focus: "技术决策状态的雷达表达。"
+  repo: https://github.com/zalando/tech-radar
+
+- id: build-your-own-radar
+  name: Build Your Own Radar
+  level: L2
+  category: technology-landscapes
+  kind: tool
+  summary: "从结构化技术条目生成交互技术雷达。"
+  focus: "技术雷达生成器。"
+  repo: https://github.com/thoughtworks/build-your-own-radar
+  demo: https://radar.thoughtworks.com/
+  demo_source: search
+
+# ---- 三维、高维与大规模关系探索 ----
+- id: pygraphistry
+  name: PyGraphistry
+  level: L2
+  category: spatial-and-high-dimensional
+  kind: library
+  summary: "将图分析数据接入 GPU 图探索环境。"
+  focus: "GPU 图探索。"
+  repo: https://github.com/graphistry/pygraphistry
+  demo: https://pygraphistry.readthedocs.io/en/latest/demos/for_analysis.html
+  demo_source: search
+
+- id: embedding-projector
+  name: Embedding Projector
+  level: L2
+  category: spatial-and-high-dimensional
+  kind: web-app
+  summary: "将高维向量降维到二维、三维，探索相似性与聚类。"
+  focus: "高维结构投影后哪些信息被保留、哪些被扭曲。"
+  site: https://projector.tensorflow.org/
+  demo: https://projector.tensorflow.org/
+  notes: "三维位置来自降维计算，不应理解为概念在原始高维语义空间中的真实坐标。"
+  demo_source: report
+  repo: https://github.com/tensorflow/embedding-projector
+  added_by_maintainer: [repo]

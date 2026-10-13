@@ -1,0 +1,56 @@
+# 研究方向 × 层级的跨层索引（报告 2.5）。
+# 三列表示同一方向在不同抽象层级上的代表，不代表右侧产品一定使用左侧项目的源码。
+# 每个单元格是 ref（引用 projects 里的 id）或 text（泛称，不是具体项目）。
+- id: software-architecture
+  title: 软件架构
+  L1: [{ref: antv-g6}, {ref: elkjs}, {ref: graphviz}]
+  L2: [{ref: dependency-cruiser}, {ref: codeboarding}]
+  L3: [{ref: nx}, {ref: likec4}, {ref: backstage}]
+
+- id: business-process
+  title: 业务流程
+  L1: [{ref: diagram-js}, {ref: react-flow}, {ref: antv-x6}]
+  L2: [{ref: bpmn-js}, {text: 流程运行视图}]
+  L3: [{ref: node-red}, {ref: n8n}, {ref: dify}]
+
+- id: agent-collaboration
+  title: Agent 协作
+  L1: [{text: 图引擎}, {text: 布局}, {text: 事件流}]
+  L2: [{ref: agentensemble-viz}, {ref: agentprism}]
+  L3: [{ref: agentscope}, {ref: langgraph}]
+
+- id: trace
+  title: Trace
+  L1: [{text: 时间线组件}, {text: 数据查询与渲染}]
+  L2: [{ref: agentprism}, {text: 任务执行时间图}]
+  L3: [{ref: langfuse}, {ref: arize-phoenix}, {ref: comet-opik}, {ref: jaeger}]
+
+- id: data-lineage
+  title: 数据血缘
+  L1: [{text: 图引擎}, {text: 矩阵}, {text: 布局算法}]
+  L2: [{text: 字段血缘图}, {text: 数据依赖查看器}]
+  L3: [{ref: datahub}, {ref: openmetadata}]
+
+- id: service-topology
+  title: 服务拓扑
+  L1: [{text: 图布局}, {text: GPU 渲染}]
+  L2: [{text: 流量拓扑}, {text: 服务关系视图}]
+  L3: [{ref: kiali}, {ref: skywalking}]
+
+- id: knowledge-map
+  title: 知识地图
+  L1: [{ref: d3}, {ref: sigma-js}, {text: 无限画布}]
+  L2: [{text: 文本知识网络}, {text: 概念抽取}]
+  L3: [{ref: affine}, {ref: kumu}, {ref: logseq}]
+
+- id: ecosystem-map
+  title: 生态地图
+  L1: [{ref: d3}, {ref: echarts}, {text: 筛选组件}]
+  L2: [{ref: cncf-landscape2}, {ref: build-your-own-radar}]
+  L3: [{ref: cncf-landscape}, {ref: oss-insight}]
+
+- id: high-dimensional
+  title: 高维关系探索
+  L1: [{ref: three-js}, {text: WebGL}, {text: GPU 图计算}]
+  L2: [{ref: react-force-graph}, {ref: embedding-projector}]
+  L3: [{text: 专业图探索与 AI 分析平台}]

@@ -1,0 +1,350 @@
+# L3 成熟应用与综合交互系统。研究可视化在完整产品里的作用。
+# 信息来自 2026-10 调研报告，未逐项核验。字段含义见 catalog/README.md。
+
+# ---- AI 应用与工作流开发平台 ----
+- id: dify
+  name: Dify
+  level: L3
+  category: ai-development-platforms
+  kind: platform
+  summary: "构建、发布、运行 AI 应用。"
+  focus: "工作流、知识检索及执行观察；节点编辑、测试、节点结果检查、应用管理。"
+  repo: https://github.com/langgenius/dify
+  access: custom-license
+  notes: "使用定制许可证，不能简单标为标准 Apache-2.0。"
+  site: https://dify.ai/
+
+- id: langflow
+  name: Langflow
+  level: L3
+  category: ai-development-platforms
+  kind: platform
+  summary: "构建和发布 Agent 工作流。"
+  focus: "可视节点编排与执行测试；编辑、Playground、调试、API 发布的闭环。据官方文档可发布为 API 或 MCP 服务，并与可观测性平台集成。"
+  repo: https://github.com/langflow-ai/langflow
+  site: https://www.langflow.org/
+  docs: https://docs.langflow.org/
+
+- id: n8n
+  name: n8n
+  level: L3
+  category: ai-development-platforms
+  kind: platform
+  summary: "通用业务自动化及 AI 工作流。"
+  focus: "自动化流程设计与执行诊断；节点编辑、运行历史、失败定位、重新执行。"
+  repo: https://github.com/n8n-io/n8n
+  access: source-available
+  notes: "官方明确将自身归为 fair-code / source-available，不是 OSI 意义上的开源软件。"
+  demo: https://n8n.io/workflows/
+  demo_source: search
+
+- id: node-red
+  name: Node-RED
+  level: L3
+  category: ai-development-platforms
+  kind: platform
+  summary: "事件驱动流程与设备、服务集成。"
+  focus: "消息流的可视编排；部署、调试、运行时数据观察。"
+  repo: https://github.com/node-red/node-red
+  demo: https://flows.nodered.org/
+  demo_source: search
+
+- id: flowise
+  name: Flowise
+  level: L3
+  category: ai-development-platforms
+  kind: platform
+  summary: "LLM、工具与 Agent 流程构建。"
+  focus: "Agentflow 图编辑器；条件、循环、状态与工具节点。"
+  repo: https://github.com/FlowiseAI/Flowise
+  status: needs-check
+  notes: "报告称原始 GitHub 仓库存在归档状态，需核查当前版本和维护主体，不能把历史仓库与持续运营的服务直接等同。"
+
+# ---- Agent 开发、协作与管理平台 ----
+- id: agentscope
+  name: AgentScope 2.0
+  level: L3
+  category: agent-management
+  kind: platform
+  summary: "Agent 团队编排、运行和观测。"
+  focus: "团队及执行信息进入 Web UI；Agent 团队运行与实时观察。"
+  repo: https://github.com/agentscope-ai/agentscope
+  notes: "旧版独立 AgentScope Studio 已不再单独维护，研究应以 2.0 的当前能力为主。"
+
+- id: langgraph
+  name: LangGraph / Studio
+  level: L3
+  category: agent-management
+  kind: platform
+  summary: "图状态、任务路由与 Agent 开发。"
+  focus: "图结构与运行状态、调试会话之间的关联。"
+  repo: https://github.com/langchain-ai/langgraph
+  notes: "LangGraph Studio / LangSmith Studio 有账号及运行环境要求。"
+  docs: https://docs.langchain.com/langsmith/studio
+
+- id: agentensemble
+  name: AgentEnsemble
+  level: L3
+  category: agent-management
+  kind: platform
+  summary: "团队任务编排和执行分析。"
+  focus: "DAG、时间图、通过事件流实时更新的执行看板，以及人工审核交互，把任务执行事件与人工干预放进同一过程。"
+  site: https://agentensemble.github.io/agentensemble/
+  docs: https://docs.agentensemble.net/guides/visualization/
+  repo: https://github.com/AgentEnsemble/agentensemble
+  added_by_maintainer: [site]
+
+- id: autogen
+  name: AutoGen / AutoGen Studio
+  level: L3
+  category: agent-management
+  kind: platform
+  summary: "Agent 原型构建与团队交互。"
+  focus: "智能体团队的可视化原型、运行测试；Studio 定位为原型，不是生产级应用。"
+  repo: https://github.com/microsoft/autogen
+
+# ---- LLM 与 Agent 可观测性平台 ----
+- id: langfuse
+  name: Langfuse
+  level: L3
+  category: observability-platforms
+  kind: platform
+  summary: "追踪、评测、提示词管理、数据集及实验。"
+  focus: "Trace、调用详情、耗时、Token、成本及评测。可从一次异常执行进入提示词、测试数据和评测过程，形成分析、修改、再验证的闭环。"
+  repo: https://github.com/langfuse/langfuse
+  demo: https://langfuse.com/docs/demo
+  demo_source: search
+
+- id: arize-phoenix
+  name: Arize Phoenix
+  level: L3
+  category: observability-platforms
+  kind: platform
+  summary: "AI 应用追踪与质量评测。"
+  focus: "基于 OpenTelemetry 的调用轨迹、问题诊断、评测分析。"
+  repo: https://github.com/Arize-ai/phoenix
+  demo: https://phoenix-demo.arize.com/
+  demo_source: search
+
+- id: comet-opik
+  name: Comet Opik
+  level: L3
+  category: observability-platforms
+  kind: platform
+  summary: "LLM / Agent 追踪、评测和监控。"
+  focus: "多层调用、评测结果、运行监控。"
+  repo: https://github.com/comet-ml/opik
+  site: https://www.comet.com/site/products/opik/
+
+- id: agentops
+  name: AgentOps
+  level: L3
+  category: observability-platforms
+  kind: platform
+  summary: "Agent 执行记录、调试与成本观察。"
+  focus: "会话回放、调用轨迹、成本。"
+  repo: https://github.com/AgentOps-AI/agentops
+
+- id: langwatch
+  name: LangWatch
+  level: L3
+  category: observability-platforms
+  kind: platform
+  summary: "LLM 运行追踪、分析与评测。"
+  focus: "Trace、质量指标与运行分析。"
+  repo: https://github.com/langwatch/langwatch
+
+# ---- 软件架构、开发者平台与工程管理 ----
+- id: nx
+  name: Nx
+  level: L3
+  category: software-engineering-platforms
+  kind: platform
+  summary: "Monorepo 构建与任务管理。"
+  focus: "把组成结构和任务结构分开：Project Graph 表示项目间依赖，Task Graph 表示实际构建任务及执行依赖。可聚焦项目、查看邻近项目、按文件夹分组、分析影响范围、导出图数据。"
+  docs: https://nx.dev/docs/features/explore-graph
+  repo: https://github.com/nrwl/nx
+
+- id: backstage
+  name: Backstage
+  level: L3
+  category: software-engineering-platforms
+  kind: platform
+  summary: "开发者门户与软件服务目录。"
+  focus: "Catalog Graph：实体中心视角，按关系和实体类别筛选，控制展开深度、方向和连线合并，并与实体详情联动。"
+  docs: https://backstage.io/docs/next/getting-started/viewing-entity-relationships/
+  repo: https://github.com/backstage/backstage
+  notes: "官方强调服务目录反映的是便于人理解的组织与软件模型，而不是所有实时关系的唯一真实来源。公开 Demo 站点上是否启用了关系图未确认。"
+  demo: https://demo.backstage.io/catalog
+  demo_source: search
+
+# ---- 数据平台与基础设施管理 ----
+- id: datahub
+  name: DataHub
+  level: L3
+  category: data-and-infrastructure
+  also: [L2/data-lineage]
+  kind: platform
+  summary: "数据发现、治理与影响分析。"
+  focus: "数据集、字段、流水线的血缘；从资产详情进入上下游影响网络，支持字段级钻取和影响分析。"
+  docs: https://docs.datahub.com/
+  repo: https://github.com/datahub-project/datahub
+  demo: https://datahub.com/demos/data-lineage-with-datahub/
+  demo_source: search
+  notes: "该展示页是录制的血缘功能演示，不是开放试用。"
+
+- id: openmetadata
+  name: OpenMetadata
+  level: L3
+  category: data-and-infrastructure
+  also: [L2/data-lineage]
+  kind: platform
+  summary: "数据资产管理与治理。"
+  focus: "资产关系、字段级血缘；从数据目录导航到血缘关系。"
+  repo: https://github.com/open-metadata/OpenMetadata
+
+- id: skywalking
+  name: Apache SkyWalking
+  level: L3
+  category: data-and-infrastructure
+  also: [L2/infrastructure-topology]
+  kind: platform
+  summary: "服务性能监控与故障诊断。"
+  focus: "服务、实例、接口、部署等层级；从宏观服务拓扑进入监控、日志与 Trace，多视图联动。其生态中出现了基础设施三维可视化的探索。"
+  repo: https://github.com/apache/skywalking
+  site: https://skywalking.apache.org/
+  docs: https://skywalking.apache.org/docs/skywalking-showcase/next/readme/
+  notes: "官网首页链接到在线 Demo（示例数据）；其 Horizon UI 有基础设施 3D 地图（官方博客 2026-06）。"
+
+- id: kiali
+  name: Kiali
+  level: L3
+  category: data-and-infrastructure
+  also: [L2/infrastructure-topology]
+  kind: platform
+  summary: "服务网格运行观察。"
+  focus: "流量图、服务关系、异常定位。"
+  repo: https://github.com/kiali/kiali
+  docs: https://kiali.io/docs/features/topology/
+
+- id: grafana
+  name: Grafana
+  level: L3
+  category: data-and-infrastructure
+  kind: platform
+  summary: "观测数据看板与分析。"
+  focus: "指标、日志、Trace、服务关系。"
+  repo: https://github.com/grafana/grafana
+  demo: https://play.grafana.org/
+  demo_source: search
+
+# ---- 知识组织、概念地图与认知工具 ----
+- id: affine
+  name: AFFiNE
+  level: L3
+  category: knowledge-workspaces
+  also: [L2/knowledge-and-cognition]
+  kind: platform
+  summary: "文档、知识库与无限白板。"
+  focus: "将线性文本与空间组织结合。"
+  repo: https://github.com/toeverything/AFFiNE
+  site: https://affine.pro/
+
+- id: drawio
+  name: diagrams.net / draw.io
+  level: L3
+  category: knowledge-workspaces
+  kind: tool
+  summary: "通用结构图创建与编辑。"
+  focus: "手动构造架构图、流程图、认知图。"
+  repo: https://github.com/jgraph/drawio
+  demo: https://www.drawio.com/docs/diagram-types/
+  demo_source: search
+  site: https://www.drawio.com/
+
+- id: kumu
+  name: Kumu
+  level: L3
+  category: knowledge-workspaces
+  kind: platform
+  summary: "复杂系统、利益相关方和关系地图。"
+  focus: "关系探索、视图定义、叙事展示。研究对象与软件流程编辑器明显不同。"
+  site: https://kumu.io/
+  access: commercial
+  notes: "不能直接二次开发；作为可体验的交互案例收录。"
+  demo: https://kumu.io/tanyabeer/hewlett-foundation-madison-initiative
+  demo_source: search
+  docs: https://docs.kumu.io/frequently-asked-questions/where-can-i-find-example-kumu-projects
+
+- id: logseq
+  name: Logseq
+  level: L3
+  category: knowledge-workspaces
+  also: [L2/knowledge-and-cognition]
+  kind: platform
+  summary: "双向链接、页面及知识块。"
+  focus: "大纲、链接和知识图导航。"
+  repo: https://github.com/logseq/logseq
+  demo: https://demo.logseq.com/
+  demo_source: search
+
+- id: infranodus
+  name: InfraNodus
+  level: L3
+  category: knowledge-workspaces
+  also: [L2/knowledge-and-cognition]
+  kind: platform
+  summary: "文本网络与结构探索。"
+  focus: "文本与概念的网络、主题群落、结构空白分析。"
+  site: https://infranodus.com/
+  repo: https://github.com/noduslabs/infranodus
+  access: commercial
+  notes: "GitHub 公共仓库包含较早期代码，不能等同于当前商业产品的全部功能。"
+
+# ---- 生态地图与产业分析产品 ----
+- id: cncf-landscape
+  name: CNCF Landscape
+  level: L3
+  category: market-and-ecosystem-platforms
+  kind: platform
+  summary: "大型生态分类数据与实际展示案例。"
+  focus: "浏览技术类别、生态参与者、项目属性；表达分类与生态分布，不擅长展示大量跨类别依赖。"
+  site: https://landscape.cncf.io/
+  demo: https://landscape.cncf.io/
+  repo: https://github.com/cncf/landscape
+  demo_source: report
+
+- id: thoughtworks-tech-radar
+  name: Thoughtworks Technology Radar
+  level: L3
+  category: market-and-ecosystem-platforms
+  kind: publication
+  summary: "技术采用建议与趋势。"
+  focus: "表达经过研究者判断的技术采用建议，而不是技术、产品、需求之间的完整关系。"
+  site: https://www.thoughtworks.com/radar
+  demo: https://www.thoughtworks.com/radar
+  demo_source: report
+
+- id: oss-insight
+  name: OSS Insight
+  level: L3
+  category: market-and-ecosystem-platforms
+  kind: platform
+  summary: "GitHub 项目和开发生态数据分析。"
+  focus: "研究 GitHub 活跃度、生态指标及时间变化。"
+  site: https://ossinsight.io/
+  repo: https://github.com/pingcap/ossinsight
+  demo: https://ossinsight.io/
+  demo_source: report
+
+- id: oss-compass
+  name: OSS Compass
+  level: L3
+  category: market-and-ecosystem-platforms
+  kind: platform
+  summary: "开源项目健康与生态指标分析。"
+  focus: "多指标比较开源项目的生态表现。"
+  site: https://oss-compass.org/
+  repo: https://github.com/oss-compass/compass-web
+  demo: https://oss-compass.org/
+  demo_source: report

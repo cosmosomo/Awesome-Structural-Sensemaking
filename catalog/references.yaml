@@ -1,0 +1,58 @@
+# 理论资料与上游 Awesome 清单。信息来自 2026-10 调研报告，未逐项核验。
+# 理论资料放在 01-theory/references.md；上游清单是采集来源。
+
+theory:
+  - id: munzner-vad
+    title: "Visualization Analysis and Design"
+    url: https://www.routledge.com/Visualization-Analysis-and-Design/Munzner/p/book/9781466508910
+    summary: "从数据、任务、视觉表达和算法等层次设计可视化。"
+    use: "建立统一分类和评价框架。方法：先明确领域问题和用户任务，再做数据抽象、视觉设计与算法实现，而不是直接选图形库。"
+
+  - id: shneiderman-eyes-have-it
+    title: "The Eyes Have It"
+    url: https://drum.lib.umd.edu/items/155a868e-fb83-4115-9899-9187ea8c0498
+    summary: "按数据类型与交互任务分类，提出“先看全貌，再筛选缩放，按需查看细节”。"
+    use: "研究层级探索、导航与信息获取。"
+
+  - id: brehmer-munzner-why-vis
+    title: "Why Visualization? (task abstraction for analysis and design)"
+    url: https://www.microsoft.com/en-us/research/publication/why-visualization-task-abstraction-for-analysis-and-design-3/
+    summary: "将不同领域的可视化任务抽象成可比较的问题。"
+    use: "让跨领域案例共用一套分类。"
+
+  - id: node-link-vs-matrix
+    title: "Node-Link vs. Matrix Comparison"
+    url: https://doi.org/10.1109/INFVIS.2004.1
+    summary: "比较节点连线图和矩阵在不同网络分析任务中的表现。"
+    use: "研究图形选择，而不是只评价视觉效果。"
+    notes: "DOI 按报告原样记录，待核对。"
+
+awesome_lists:
+  - id: awesome-dataviz
+    title: "Awesome Dataviz"
+    repo: https://github.com/hal9ai/awesome-dataviz
+    use: "板块 1：图表范式、视觉技术。"
+  - id: awesome-node-based-uis
+    title: "Awesome Node-Based UIs"
+    repo: https://github.com/xyflow/awesome-node-based-uis
+    use: "板块 2 L1：节点图、编辑器与图交互。"
+  - id: awesome-architecture-diagrams
+    title: "Awesome Architecture Diagrams"
+    repo: https://github.com/hudsonkit/awesome-architecture-diagrams
+    use: "板块 1 与 L2：架构表达。"
+  - id: awesome-agent-observability
+    title: "Awesome Agent Observability"
+    repo: https://github.com/anhermon/awesome-agent-observability
+    use: "L2 / L3：Agent Trace 与可观测性。"
+  - id: awesome-llm-observability
+    title: "Awesome LLM Observability"
+    repo: https://github.com/ContextJet-ai/awesome-llm-observability
+    use: "L2 / L3：LLM 运行与调试平台。"
+  - id: awesome-multi-agent-projects
+    title: "Awesome Multi-Agent Projects"
+    repo: https://github.com/xxiaoxiong/awesome-multi-agent-projects
+    use: "L3：多 Agent 真实系统与案例。"
+  - id: cncf-landscape2-list
+    title: "CNCF Landscape2"
+    repo: https://github.com/cncf/landscape2
+    use: "L2 / L3：技术生态地图。"
