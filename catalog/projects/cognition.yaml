@@ -13,6 +13,9 @@
   demo: https://tree-sitter.github.io/tree-sitter/7-playground.html
   demo_source: search
   demo_checked: "2026-10-13"
+  package: npm:web-tree-sitter
+  repo_checked: "2026-10-13"
+  access: open-source
 
 - id: docling
   name: Docling
@@ -25,6 +28,9 @@
   demo: https://huggingface.co/spaces/docling-project/SmolDocling-256M-Demo
   demo_source: search
   notes: "展示页是 SmolDocling 视觉语言模型的演示，不是 Docling 库本身。"
+  package: pypi:docling
+  repo_checked: "2026-10-13"
+  access: open-source
 
 - id: docling-graph
   name: Docling Graph
@@ -35,6 +41,9 @@
   focus: "需要约束关系类型和语义准确性。"
   repo: https://github.com/docling-project/docling-graph
   docs: https://docling-project.github.io/docling-graph/
+  package: pypi:docling-graph
+  repo_checked: "2026-10-13"
+  access: open-source
 
 # ---- 多层知识建模 ----
 - id: graphrag
@@ -50,6 +59,9 @@
   site: https://microsoft.github.io/graphrag/
   docs: https://microsoft.github.io/graphrag/visualization_guide/
   demo_none: "命令行流水线，官方建议导出后用 Gephi 查看"
+  package: pypi:graphrag
+  repo_checked: "2026-10-13"
+  access: open-source
 
 - id: lightrag
   name: LightRAG
@@ -60,6 +72,9 @@
   focus: "检索结构与认知模型并不完全相同。"
   repo: https://github.com/HKUDS/LightRAG
   demo_none: "WebUI 需自行部署，没有公开在线演示"
+  package: pypi:lightrag-hku
+  repo_checked: "2026-10-13"
+  access: open-source
 
 # ---- 动态与演化的知识结构 ----
 - id: graphiti
@@ -72,3 +87,6 @@
   repo: https://github.com/getzep/graphiti
   docs: https://help.getzep.com/graphiti/getting-started/overview
   demo_none: "开源库本身没有可视化界面，图浏览器在需账号的 Zep 控制台里"
+  package: pypi:graphiti-core
+  repo_checked: "2026-10-13"
+  access: open-source

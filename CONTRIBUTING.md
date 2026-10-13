@@ -26,3 +26,4 @@
 - **关系要有证据**。`uses` 只在源码或官方文档确认时记录。“技术上可以配合使用”是研究判断，不是真实依赖，可以写进说明，不要写进 `relationships.yaml`。
 - **标明使用边界**。许可证有限制、仍是 Alpha、已归档或维护状态不明的，用 `access`、`status`、`notes` 记录。
 - **不确定就留空**。留空会在索引里显示“待补”或“待收集”，比填一个猜的地址好。
+- **仓库地址优先用包元数据核对**。项目发布在 npm 或 PyPI 上的，在条目里写 `package`，运行 `python3 scripts/check_registries.py`，仓库一致再加 `repo_checked`。不要凭记忆写仓库地址；凭记忆补的要用 `added_by_maintainer` 标出，并尽快核对。

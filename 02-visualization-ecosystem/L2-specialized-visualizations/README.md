@@ -11,9 +11,9 @@ L1 回答“图形能够怎样绘制、组织和交互”，L2 回答：给定�
 <!-- gen:catalog:L2/code-dependencies -->
 | 项目 | 定位与值得研究 | 开源项目 | 展示页 | 站点 / 文档 | 备注 |
 | --- | --- | --- | --- | --- | --- |
-| [dependency-cruiser](https://sverweij.github.io/dependency-cruiser/) | JavaScript/TypeScript 模块依赖分析。<br>依赖图、架构边界规则、违规依赖诊断。 | [仓库](https://github.com/sverweij/dependency-cruiser) | [展示页](https://sverweij.github.io/dependency-cruiser-repro-repo/458/) ✓ | [站点](https://sverweij.github.io/dependency-cruiser/) | 展示页是作者的 3D 图报告插件演示（issue 458），用它自己的源码和 React 仓库生成。 |
-| [Madge](https://github.com/pahen/madge) | JavaScript 模块引用分析。<br>自动生成依赖关系图、发现循环依赖。 | [仓库](https://github.com/pahen/madge) | 无：命令行工具，输出静态图 | — | — |
-| [pydeps](https://github.com/thebjorn/pydeps) | Python 模块导入分析。<br>导入网络、模块聚类、依赖结构。 | [仓库](https://github.com/thebjorn/pydeps) | 无：命令行工具，输出静态图 | — | — |
+| [dependency-cruiser](https://sverweij.github.io/dependency-cruiser/) | JavaScript/TypeScript 模块依赖分析。<br>依赖图、架构边界规则、违规依赖诊断。 | [仓库](https://github.com/sverweij/dependency-cruiser) ✓ | [展示页](https://sverweij.github.io/dependency-cruiser-repro-repo/458/) ✓ | [站点](https://sverweij.github.io/dependency-cruiser/) | 开源；展示页是作者的 3D 图报告插件演示（issue 458），用它自己的源码和 React 仓库生成。 |
+| [Madge](https://github.com/pahen/madge) | JavaScript 模块引用分析。<br>自动生成依赖关系图、发现循环依赖。 | [仓库](https://github.com/pahen/madge) ✓ | 无：命令行工具，输出静态图 | — | 开源；npm 上 madge 最近一次发布是 2024-08-05（v8.0.0），查询于 2026-10-13。 |
+| [pydeps](https://github.com/thebjorn/pydeps) | Python 模块导入分析。<br>导入网络、模块聚类、依赖结构。 | [仓库](https://github.com/thebjorn/pydeps) ✓ | 无：命令行工具，输出静态图 | — | 开源 |
 <!-- /gen -->
 
 ## 软件架构与代码理解
@@ -29,9 +29,9 @@ L1 回答“图形能够怎样绘制、组织和交互”，L2 回答：给定�
 <!-- gen:catalog:L2/software-architecture -->
 | 项目 | 定位与值得研究 | 开源项目 | 展示页 | 站点 / 文档 | 备注 |
 | --- | --- | --- | --- | --- | --- |
-| [CodeBoarding](https://codeboarding.org/) | 源码结构及架构语义分析。<br>自动归纳组件，形成分层架构解释与可视化。 | [仓库](https://github.com/CodeBoarding/CodeBoarding) | 待收集 | [站点](https://codeboarding.org/) | — |
+| [CodeBoarding](https://codeboarding.org/) | 源码结构及架构语义分析。<br>自动归纳组件，形成分层架构解释与可视化。 | [仓库](https://github.com/CodeBoarding/CodeBoarding) ✓ | 待收集 | [站点](https://codeboarding.org/) | 开源 |
 | [Understand Anything](https://understand-anything.com/) | 文件、函数、类、调用关系与知识文档的交互知识图。<br>架构分层视图、业务领域视图、语义搜索、引导式理解、变更影响分析。对 Markdown 知识库先解析显式链接和类别，再借助模型发现隐式关系，生成带类型的知识网络。与“复杂认知地图”相关度高。 | [仓库](https://github.com/Egonex-AI/Understand-Anything) | [展示页](https://understand-anything.com/) ✓ | — | 以上能力来自项目文档的功能说明，未逐项做交互和输出准确率评测；据文档，结构事实部分采用 Tree-sitter 等确定性解析。 |
-| [LikeC4](https://likec4.dev/) | 不限固定层级的架构模型、视角投影与交互展示。<br>模型与视图分离：一份结构模型生成不同范围、不同视角的图，可分层钻取。既有建模语言，也有架构可视化和完整的交互查看器。 | [仓库](https://github.com/likec4/likec4) | [展示页](https://likec4.dev/showcases/bigbank/) ✓ | [站点](https://likec4.dev/) | — |
+| [LikeC4](https://likec4.dev/) | 不限固定层级的架构模型、视角投影与交互展示。<br>模型与视图分离：一份结构模型生成不同范围、不同视角的图，可分层钻取。既有建模语言，也有架构可视化和完整的交互查看器。 | [仓库](https://github.com/likec4/likec4) ✓ | [展示页](https://likec4.dev/showcases/bigbank/) ✓ | [站点](https://likec4.dev/) | 开源 |
 <!-- /gen -->
 
 ## 流程、状态机与任务依赖
@@ -41,7 +41,7 @@ L1 回答“图形能够怎样绘制、组织和交互”，L2 回答：给定�
 <!-- gen:catalog:L2/workflows-and-state-machines -->
 | 项目 | 定位与值得研究 | 开源项目 | 展示页 | 站点 / 文档 | 备注 |
 | --- | --- | --- | --- | --- | --- |
-| [bpmn-js](https://github.com/bpmn-io/bpmn-js) | BPMN 流程模型的查看、编辑与扩展。<br>建立在 diagram-js 之上，可通过扩展机制增加覆盖层、标记和自定义交互。 | [仓库](https://github.com/bpmn-io/bpmn-js) | [展示页](https://demo.bpmn.io/) ✓ | — | — |
+| [bpmn-js](https://github.com/bpmn-io/bpmn-js) | BPMN 流程模型的查看、编辑与扩展。<br>建立在 diagram-js 之上，可通过扩展机制增加覆盖层、标记和自定义交互。 | [仓库](https://github.com/bpmn-io/bpmn-js) ✓ | [展示页](https://demo.bpmn.io/) ✓ | — | 含附加条件的许可证；bpmn.io License（bpmn.io/license，2026-10-13 访问）：类似 MIT，但要求渲染出的图里指向 bpmn.io 的水印不得移除或改动，在网站或应用中必须完整可见、不被其他元素遮挡。 |
 | [AgentEnsemble Viz](https://github.com/AgentEnsemble/agentensemble)<br>（主分类 L2/ai-and-multi-agent） | 任务依赖 DAG 与实际执行 Trace 的双视图。<br>Flow View 看任务依赖、并发层级、关键路径；Timeline View 看真实起止时间、LLM 和工具调用。分别导出计划依赖 DAG 与执行 Trace。值得研究同一任务在两张视图中的身份如何保持一致，以及点击任务如何进入工具调用或会话详情。 | [仓库](https://github.com/AgentEnsemble/agentensemble) | 无：Live Dashboard 在本地运行（localhost:7329），没有托管的公开演示 | [文档](https://docs.agentensemble.net/guides/visualization/) | — |
 <!-- /gen -->
 
@@ -66,7 +66,7 @@ AgentEnsemble 的双视图值得细看：分别导出计划依赖 DAG 和执行 
 | 项目 | 定位与值得研究 | 开源项目 | 展示页 | 站点 / 文档 | 备注 |
 | --- | --- | --- | --- | --- | --- |
 | [AgentEnsemble Viz](https://github.com/AgentEnsemble/agentensemble) | 任务依赖 DAG 与实际执行 Trace 的双视图。<br>Flow View 看任务依赖、并发层级、关键路径；Timeline View 看真实起止时间、LLM 和工具调用。分别导出计划依赖 DAG 与执行 Trace。值得研究同一任务在两张视图中的身份如何保持一致，以及点击任务如何进入工具调用或会话详情。 | [仓库](https://github.com/AgentEnsemble/agentensemble) | 无：Live Dashboard 在本地运行（localhost:7329），没有托管的公开演示 | [文档](https://docs.agentensemble.net/guides/visualization/) | — |
-| [AgentPrism](https://github.com/evilmartians/agent-prism) | 可嵌入应用的 React Agent Trace UI 组件。<br>层次化调用树、执行时间、工具与模型调用；独立可复用的 Trace UI 设计。 | [仓库](https://github.com/evilmartians/agent-prism) | [展示页](https://agent-prism.evilmartians.io/) ✓ | [文档](https://evilmartians.com/chronicles/debug-ai-fast-agent-prism-open-source-library-visualize-agent-traces) | Alpha；报告称项目公开标注为 Alpha。evilmartians.com 的博客、项目页和演示站正文里没有找到 Alpha 标注；搜索结果摘要称 GitHub README 标为 alpha，未核实。 |
+| [AgentPrism](https://github.com/evilmartians/agent-prism) | 可嵌入应用的 React Agent Trace UI 组件。<br>层次化调用树、执行时间、工具与模型调用；独立可复用的 Trace UI 设计。 | [仓库](https://github.com/evilmartians/agent-prism) ✓ | [展示页](https://agent-prism.evilmartians.io/) ✓ | [文档](https://evilmartians.com/chronicles/debug-ai-fast-agent-prism-open-source-library-visualize-agent-traces) | Alpha；报告称项目公开标注为 Alpha。evilmartians.com 的博客、项目页和演示站正文里没有找到 Alpha 标注；搜索结果摘要称 GitHub README 标为 alpha，未核实。 |
 <!-- /gen -->
 
 ## Trace、调用链和执行过程
@@ -85,12 +85,12 @@ AgentEnsemble 的双视图值得细看：分别导出计划依赖 DAG 和执行 
 | 项目 | 定位与值得研究 | 开源项目 | 展示页 | 站点 / 文档 | 备注 |
 | --- | --- | --- | --- | --- | --- |
 | [OpenTelemetry GenAI 语义约定](https://github.com/open-telemetry/semantic-conventions-genai) | 规定如何描述 AI / Agent / 工具调用等遥测事件。<br>数据到可视化链条的起点：Span、事件、属性、父子关系。 | [仓库](https://github.com/open-telemetry/semantic-conventions-genai) | 无：规范文档，本身没有可视化 | [文档](https://opentelemetry.io/docs/specs/semconv/gen-ai/) | 官方页面已写明 GenAI 语义约定迁到 open-telemetry/semantic-conventions-genai 仓库，opentelemetry.io 上的旧页面只剩迁移说明（2026-10-13 访问）。该约定仍在演进，建库时记录具体版本和字段定义，不要当成永远稳定的统一标准。 |
-| [OpenLLMetry](https://github.com/traceloop/openllmetry) | 为 LLM 应用采集追踪数据。<br>数据采集端。 | [仓库](https://github.com/traceloop/openllmetry) | 无：数据采集库，没有界面 | — | — |
+| [OpenLLMetry](https://github.com/traceloop/openllmetry) | 为 LLM 应用采集追踪数据。<br>数据采集端。 | [仓库](https://github.com/traceloop/openllmetry) ✓ | 无：数据采集库，没有界面 | — | 开源 |
 | [Jaeger](https://github.com/jaegertracing/jaeger) | 分布式 Trace 的采集、检索和可视化。<br>Trace 瀑布图等传统调用链视图。 | [仓库](https://github.com/jaegertracing/jaeger) | [展示页](https://www.jaegertracing.io/demo/) ✓ | — | 官网下载页写明 Jaeger v1 已于 2025-12-31 终止支持，v2 是基于 OpenTelemetry Collector 的新主版本（2026-10-13 核对）。 |
 | [Grafana Tempo](https://github.com/grafana/tempo) | Trace 后端，与服务图、指标视图整合。<br>Trace 与服务图、指标的联动。 | [仓库](https://github.com/grafana/tempo) | 无：后端服务，界面由 Grafana 提供 | — | — |
 | [AeroGraph](https://github.com/sgcpu/aerograph) | 面向自主 AI 工作流的调试与观测层：本地优先、只追加、可安全回放的存储。<br>ReactFlow 的 Trace 图，支持逐步回放和失败高亮；可从任意 span 分叉出另一条时间线，并用 Myers diff 比较两次运行在哪里分岔；追踪循环和幻觉式的 Agent 交接。 | [仓库](https://github.com/sgcpu/aerograph) | 待收集 | — | 不在调研报告里，来自前期收集，信息取自搜索到的 GitHub README。是早期的小众项目，成熟度和循环检测的实现方式未核实。 |
 | [AgentEnsemble Viz](https://github.com/AgentEnsemble/agentensemble)<br>（主分类 L2/ai-and-multi-agent） | 任务依赖 DAG 与实际执行 Trace 的双视图。<br>Flow View 看任务依赖、并发层级、关键路径；Timeline View 看真实起止时间、LLM 和工具调用。分别导出计划依赖 DAG 与执行 Trace。值得研究同一任务在两张视图中的身份如何保持一致，以及点击任务如何进入工具调用或会话详情。 | [仓库](https://github.com/AgentEnsemble/agentensemble) | 无：Live Dashboard 在本地运行（localhost:7329），没有托管的公开演示 | [文档](https://docs.agentensemble.net/guides/visualization/) | — |
-| [AgentPrism](https://github.com/evilmartians/agent-prism)<br>（主分类 L2/ai-and-multi-agent） | 可嵌入应用的 React Agent Trace UI 组件。<br>层次化调用树、执行时间、工具与模型调用；独立可复用的 Trace UI 设计。 | [仓库](https://github.com/evilmartians/agent-prism) | [展示页](https://agent-prism.evilmartians.io/) ✓ | [文档](https://evilmartians.com/chronicles/debug-ai-fast-agent-prism-open-source-library-visualize-agent-traces) | Alpha；报告称项目公开标注为 Alpha。evilmartians.com 的博客、项目页和演示站正文里没有找到 Alpha 标注；搜索结果摘要称 GitHub README 标为 alpha，未核实。 |
+| [AgentPrism](https://github.com/evilmartians/agent-prism)<br>（主分类 L2/ai-and-multi-agent） | 可嵌入应用的 React Agent Trace UI 组件。<br>层次化调用树、执行时间、工具与模型调用；独立可复用的 Trace UI 设计。 | [仓库](https://github.com/evilmartians/agent-prism) ✓ | [展示页](https://agent-prism.evilmartians.io/) ✓ | [文档](https://evilmartians.com/chronicles/debug-ai-fast-agent-prism-open-source-library-visualize-agent-traces) | Alpha；报告称项目公开标注为 Alpha。evilmartians.com 的博客、项目页和演示站正文里没有找到 Alpha 标注；搜索结果摘要称 GitHub README 标为 alpha，未核实。 |
 <!-- /gen -->
 
 ## 数据血缘
@@ -101,8 +101,8 @@ AgentEnsemble 的双视图值得细看：分别导出计划依赖 DAG 和执行 
 | 项目 | 定位与值得研究 | 开源项目 | 展示页 | 站点 / 文档 | 备注 |
 | --- | --- | --- | --- | --- | --- |
 | [Marquez](https://marquezproject.ai/) | 数据集、数据任务与血缘关系。<br>上下游关系、运行历史。 | [仓库](https://github.com/MarquezProject/marquez) | 待收集 | [站点](https://marquezproject.ai/) | — |
-| [DataHub](https://github.com/datahub-project/datahub)<br>（主分类 L3/data-and-infrastructure） | 数据发现、治理与影响分析。<br>数据集、字段、流水线的血缘；从资产详情进入上下游影响网络，支持字段级钻取和影响分析。 | [仓库](https://github.com/datahub-project/datahub) | [展示页](https://datahub.com/demos/data-lineage-with-datahub/) ✓ | [文档](https://docs.datahub.com/) | 该展示页是录制的血缘功能演示，不是开放试用。 |
-| [OpenMetadata](https://github.com/open-metadata/OpenMetadata)<br>（主分类 L3/data-and-infrastructure） | 数据资产管理与治理。<br>资产关系、字段级血缘；从数据目录导航到血缘关系。 | [仓库](https://github.com/open-metadata/OpenMetadata) | [展示页](https://sandbox.open-metadata.org/) ✓ | [文档](https://docs.open-metadata.org/latest/quick-start/sandbox) | 沙盒需要用 Google 账号登录。 |
+| [DataHub](https://github.com/datahub-project/datahub)<br>（主分类 L3/data-and-infrastructure） | 数据发现、治理与影响分析。<br>数据集、字段、流水线的血缘；从资产详情进入上下游影响网络，支持字段级钻取和影响分析。 | [仓库](https://github.com/datahub-project/datahub) ✓ | [展示页](https://datahub.com/demos/data-lineage-with-datahub/) ✓ | [文档](https://docs.datahub.com/) | 开源；该展示页是录制的血缘功能演示，不是开放试用。 |
+| [OpenMetadata](https://github.com/open-metadata/OpenMetadata)<br>（主分类 L3/data-and-infrastructure） | 数据资产管理与治理。<br>资产关系、字段级血缘；从数据目录导航到血缘关系。 | [仓库](https://github.com/open-metadata/OpenMetadata) ✓ | [展示页](https://sandbox.open-metadata.org/) ✓ | [文档](https://docs.open-metadata.org/latest/quick-start/sandbox) | 沙盒需要用 Google 账号登录。PyPI 上 openmetadata-ingestion 的许可证标为 Collate Community License Agreement（2026-10-13 核对）；整个项目的许可证未核实。 |
 <!-- /gen -->
 
 ## 系统服务拓扑与基础设施
@@ -130,7 +130,8 @@ SkyWalking 能从宏观服务拓扑进入监控、日志与 Trace；Kiali 围绕
 | 项目 | 定位与值得研究 | 开源项目 | 展示页 | 站点 / 文档 | 备注 |
 | --- | --- | --- | --- | --- | --- |
 | [NeoDash](https://github.com/neo4j-contrib/neodash) | 使用 Neo4j 图数据库查询构建交互看板。<br>图数据查询驱动的看板。 | [仓库](https://github.com/neo4j-contrib/neodash) | [展示页](https://neodash-gallery.graphapp.io/) ✓ | — | 维护状态待核查；Neo4j Labs 页面写明 NeoDash 已“毕业”为 Neo4j Dashboards，并入 Neo4j Desktop、Aura Console 和 Enterprise Studio（2026-10-13 核对）；独立的 NeoDash 仓库后续状态需核实。 |
-| [Excalidraw](https://github.com/excalidraw/excalidraw)<br>（主分类 L1/canvas-2d-and-3d） | 可嵌入、可编辑的二维无限白板。<br>偏向人工绘图、自由表达、构思与注释。 | [仓库](https://github.com/excalidraw/excalidraw) | [展示页](https://excalidraw.com/) ✓ | — | — |
+| [Argdown](https://argdown.org/) | 论证地图的文本标记语言及工具链。<br>用文本写出论证的前提与结论，渲染成论证地图；命令行工具可导出 SVG、DOT、HTML、JSON，另有 VS Code 扩展（据搜索结果摘要）。属于“语义与知识”家族里的论证地图。 | [仓库](https://github.com/argdown/argdown) ✓ | [展示页](https://argdown.org/guide/a-first-example.html) ✓ | [站点](https://argdown.org/) | 不在调研报告里，是核对图形范式展示页时发现的。 |
+| [Excalidraw](https://github.com/excalidraw/excalidraw)<br>（主分类 L1/canvas-2d-and-3d） | 可嵌入、可编辑的二维无限白板。<br>偏向人工绘图、自由表达、构思与注释。 | [仓库](https://github.com/excalidraw/excalidraw) ✓ | [展示页](https://excalidraw.com/) ✓ | — | 开源 |
 | [Understand Anything](https://understand-anything.com/)<br>（主分类 L2/software-architecture） | 文件、函数、类、调用关系与知识文档的交互知识图。<br>架构分层视图、业务领域视图、语义搜索、引导式理解、变更影响分析。对 Markdown 知识库先解析显式链接和类别，再借助模型发现隐式关系，生成带类型的知识网络。与“复杂认知地图”相关度高。 | [仓库](https://github.com/Egonex-AI/Understand-Anything) | [展示页](https://understand-anything.com/) ✓ | — | 以上能力来自项目文档的功能说明，未逐项做交互和输出准确率评测；据文档，结构事实部分采用 Tree-sitter 等确定性解析。 |
 | [AFFiNE](https://affine.pro/)<br>（主分类 L3/knowledge-workspaces） | 文档、知识库与无限白板。<br>将线性文本与空间组织结合。 | [仓库](https://github.com/toeverything/AFFiNE) | [展示页](https://affine.pro/templates) ✓ | [站点](https://affine.pro/) | 展示页是模板库页面，不是在线试用；没有找到免登录的在线版本。 |
 | [Logseq](https://github.com/logseq/logseq)<br>（主分类 L3/knowledge-workspaces） | 双向链接、页面及知识块。<br>大纲、链接和知识图导航。 | [仓库](https://github.com/logseq/logseq) | [展示页](https://demo.logseq.com/) ✓ | — | — |
@@ -169,9 +170,21 @@ SkyWalking 能从宏观服务拓扑进入监控、日志与 Trace；Kiali 围绕
 <!-- gen:catalog:L2/spatial-and-high-dimensional -->
 | 项目 | 定位与值得研究 | 开源项目 | 展示页 | 站点 / 文档 | 备注 |
 | --- | --- | --- | --- | --- | --- |
-| [PyGraphistry](https://github.com/graphistry/pygraphistry) | 将图分析数据接入 GPU 图探索环境。<br>GPU 图探索。 | [仓库](https://github.com/graphistry/pygraphistry) | [展示页](https://pygraphistry.readthedocs.io/en/latest/demos/for_analysis.html) ✓ | — | — |
+| [PyGraphistry](https://github.com/graphistry/pygraphistry) | 将图分析数据接入 GPU 图探索环境。<br>GPU 图探索。 | [仓库](https://github.com/graphistry/pygraphistry) ✓ | [展示页](https://pygraphistry.readthedocs.io/en/latest/demos/for_analysis.html) ✓ | — | 开源 |
 | [Embedding Projector](https://projector.tensorflow.org/) | 将高维向量降维到二维、三维，探索相似性与聚类。<br>高维结构投影后哪些信息被保留、哪些被扭曲。 | [仓库](https://github.com/tensorflow/embedding-projector) | [展示页](https://projector.tensorflow.org/) | — | 三维位置来自降维计算，不应理解为概念在原始高维语义空间中的真实坐标。 |
-| [deck.gl](https://github.com/visgl/deck.gl)<br>（主分类 L1/chart-and-visualization-engines） | GPU 加速的大数据可视化框架。<br>大规模数据、地图图层、多视角渲染。 | [仓库](https://github.com/visgl/deck.gl) | [展示页](https://deck.gl/gallery/) ✓ | — | — |
-| [React Force Graph](https://github.com/vasturiano/react-force-graph)<br>（主分类 L1/canvas-2d-and-3d） | 2D、3D、VR、AR 关系图。<br>官方示例含点击展开折叠、相机聚焦、方向箭头、动态数据和不同空间模式，对复杂图的空间交互有参考价值。 | [仓库](https://github.com/vasturiano/react-force-graph) | [展示页](https://vasturiano.github.io/react-force-graph/) ✓ | — | — |
-| [Cosmos.gl](https://github.com/cosmosgl/graph)<br>（主分类 L1/canvas-2d-and-3d） | GPU 加速的力导向图。<br>使用 GPU 做布局计算与图形渲染，面向大规模网络。 | [仓库](https://github.com/cosmosgl/graph) | [展示页](https://cosmos.gl/) | [文档](https://openjsf.org/blog/introducing-cosmos-gl) | 展示页是 Storybook 示例站，页面标题是通用的 Storybook 标题，具体示例未确认。 |
+| [deck.gl](https://github.com/visgl/deck.gl)<br>（主分类 L1/chart-and-visualization-engines） | GPU 加速的大数据可视化框架。<br>大规模数据、地图图层、多视角渲染。 | [仓库](https://github.com/visgl/deck.gl) ✓ | [展示页](https://deck.gl/gallery/) ✓ | — | 开源 |
+| [React Force Graph](https://github.com/vasturiano/react-force-graph)<br>（主分类 L1/canvas-2d-and-3d） | 2D、3D、VR、AR 关系图。<br>官方示例含点击展开折叠、相机聚焦、方向箭头、动态数据和不同空间模式，对复杂图的空间交互有参考价值。 | [仓库](https://github.com/vasturiano/react-force-graph) ✓ | [展示页](https://vasturiano.github.io/react-force-graph/) ✓ | — | 开源 |
+| [Cosmos.gl](https://github.com/cosmosgl/graph)<br>（主分类 L1/canvas-2d-and-3d） | GPU 加速的力导向图。<br>使用 GPU 做布局计算与图形渲染，面向大规模网络。 | [仓库](https://github.com/cosmosgl/graph) ✓ | [展示页](https://cosmos.gl/) | [文档](https://openjsf.org/blog/introducing-cosmos-gl) | 开源；展示页是 Storybook 示例站，页面标题是通用的 Storybook 标题，具体示例未确认。 |
 <!-- /gen -->
+
+## 系统动力学与因果建模
+
+调研报告没有覆盖这个方向。这里收录的是核对图形范式展示页时遇到的工具，对应“因果与反馈”这一结构家族（见[结构与图形范式的分类](../../01-theory/taxonomy.md)）。Kumu 也能画因果回路图，主分类在 L3。
+
+<!-- gen:catalog:L2/systems-modeling -->
+| 项目 | 定位与值得研究 | 开源项目 | 展示页 | 站点 / 文档 | 备注 |
+| --- | --- | --- | --- | --- | --- |
+| [Insight Maker](https://www.insightmaker.com/) | 在线的系统动力学与仿真建模：存量流量图、因果回路、基于主体的模型。<br>在浏览器里搭建并运行存量流量模型；公开的仿真模型库里有浴缸、储蓄账户等例子（据搜索结果摘要）。属于“因果与反馈”家族。 | 待补 | [展示页](https://www.insightmaker.com/tag/simulation?page=3) ✓ | [站点](https://www.insightmaker.com/) | 不在调研报告里，是核对图形范式展示页时发现的。是否开源、仓库地址未核实。 |
+| [Kumu](https://kumu.io/)<br>（主分类 L3/knowledge-workspaces） | 复杂系统、利益相关方和关系地图。<br>关系探索、视图定义、叙事展示。研究对象与软件流程编辑器明显不同。 | — | [展示页](https://kumu.io/tanyabeer/hewlett-foundation-madison-initiative) ✓ | [站点](https://kumu.io/) · [文档](https://docs.kumu.io/frequently-asked-questions/where-can-i-find-example-kumu-projects) | 商业产品；不能直接二次开发；作为可体验的交互案例收录。 |
+<!-- /gen -->
+

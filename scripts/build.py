@@ -50,7 +50,7 @@ URL_FIELDS = ("repo", "demo", "docs", "site")
 ALLOWED_KEYS = {
     "id", "name", "section", "level", "category", "also", "kind", "summary",
     "focus", "notes", "access", "status", "added_by_maintainer", "demo_checked",
-    "demo_source", "demo_none", *URL_FIELDS,
+    "demo_source", "demo_none", "package", "repo_checked", *URL_FIELDS,
 }
 DEMO_SOURCES = {"report", "search", "maintainer"}
 BLOCK = re.compile(r"(<!-- gen:(\w+):([^ ]*) -->\n)(.*?)(<!-- /gen -->)", re.S)
@@ -143,6 +143,10 @@ def validate(d: dict) -> list[str]:
             errs.append(f"{i}: 有 demo_source 但没有 demo")
         if e.get("demo_none") and e.get("demo"):
             errs.append(f"{i}: demo 和 demo_none 不能同时存在")
+        if e.get("package") and not re.fullmatch(r"(npm|pypi):[A-Za-z0-9@._/-]+", str(e["package"])):
+            errs.append(f"{i}: package 要写成 npm:名称 或 pypi:名称")
+        if e.get("repo_checked") and not e.get("repo"):
+            errs.append(f"{i}: 有 repo_checked 但没有 repo")
 
     for r in d["rels"]["relations"]:
         for end in ("from", "to"):
@@ -202,7 +206,7 @@ def title_link(e: dict) -> str:
 
 def cell_repo(e: dict) -> str:
     if e.get("repo"):
-        return a("仓库", e["repo"])
+        return a("仓库", e["repo"]) + (" ✓" if e.get("repo_checked") else "")
     return "—" if e.get("access") == "commercial" or e.get("kind") in ("spec", "publication") else "待补"
 
 
@@ -325,6 +329,7 @@ def stats(d: dict) -> dict:
         "repo": sum(1 for e in ps if e.get("repo")),
         "demo": sum(1 for e in ps if e.get("demo")),
         "demo_none": sum(1 for e in ps if e.get("demo_none")),
+        "repo_checked": sum(1 for e in ps if e.get("repo_checked")),
         "demo_checked": sum(1 for e in ps if e.get("demo_checked")),
     }
 
@@ -339,6 +344,7 @@ def render_index(d: dict) -> str:
         "",
         f"共 {s['total']} 个条目；有开源项目地址 {s['repo']} 个，有展示页 {s['demo']} 个"
         f"（其中 {s['demo_checked']} 个已访问核对，标 ✓）；另有 {s['demo_none']} 个本身没有展示页。",
+        f"有 {s['repo_checked']} 个开源项目地址已通过 npm / PyPI 上的包元数据核对（标 ✓）：包声明的仓库与这里一致。其余没有核对，GitHub 页面本身没有访问。",
         "",
         "“待补”表示开源项目地址缺失，“待收集”表示展示页缺失或还没找到；“无：…”表示这个条目本身不存在展示页（如规范、采集库、命令行工具）；商业产品、规范和刊物没有仓库，用“—”表示。",
         "",
@@ -427,7 +433,7 @@ def main() -> int:
             if not check:
                 path.write_text(text, encoding="utf-8")
     s = stats(d)
-    print(f"校验通过: {s['total']} 个条目，开源项目 {s['repo']}，展示页 {s['demo']}（已核对 {s['demo_checked']}）")
+    print(f"校验通过: {s['total']} 个条目，开源项目 {s['repo']}（已核对 {s['repo_checked']}），展示页 {s['demo']}（已核对 {s['demo_checked']}）")
     if changed:
         verb = "已过期（请运行 python3 scripts/build.py）" if check else "已更新"
         for c in changed:

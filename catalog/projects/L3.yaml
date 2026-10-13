@@ -31,6 +31,9 @@
   demo_source: search
   notes: "展示页是官网模板页之一；模板总览页 /templates 返回 404。"
   demo_checked: "2026-10-13"
+  package: pypi:langflow
+  repo_checked: "2026-10-13"
+  access: open-source
 
 - id: n8n
   name: n8n
@@ -45,6 +48,8 @@
   demo: https://n8n.io/workflows/
   demo_source: search
   demo_checked: "2026-10-13"
+  package: npm:n8n
+  repo_checked: "2026-10-13"
 
 - id: node-red
   name: Node-RED
@@ -57,6 +62,9 @@
   demo: https://flows.nodered.org/
   demo_source: search
   demo_checked: "2026-10-13"
+  package: npm:node-red
+  repo_checked: "2026-10-13"
+  access: open-source
 
 - id: flowise
   name: Flowise
@@ -71,6 +79,7 @@
   site: https://flowiseai.com/
   docs: https://docs.flowiseai.com/
   access: open-source
+  package: npm:flowise
 
 # ---- Agent 开发、协作与管理平台 ----
 - id: agentscope
@@ -85,6 +94,9 @@
   docs: https://docs.agentscope.io/
   demo_none: "Studio 在本地运行，没有公开在线演示"
   status: needs-check
+  package: pypi:agentscope
+  repo_checked: "2026-10-13"
+  access: open-source
 
 - id: langgraph
   name: LangGraph / Studio
@@ -97,6 +109,9 @@
   notes: "LangGraph Studio / LangSmith Studio 有账号及运行环境要求。"
   docs: https://docs.langchain.com/langsmith/studio
   demo_none: "Studio 需账号或在本地运行，没有公开演示"
+  package: pypi:langgraph
+  repo_checked: "2026-10-13"
+  access: open-source
 
 - id: agentensemble
   name: AgentEnsemble
@@ -121,6 +136,8 @@
   repo: https://github.com/microsoft/autogen
   docs: https://microsoft.github.io/autogen/stable/user-guide/autogenstudio-user-guide/index.html
   demo_none: "AutoGen Studio 在本地运行，没有托管的公开演示"
+  package: pypi:autogen-agentchat
+  notes: "PyPI 上 autogen-agentchat 最近一次发布是 2025-09-30（v0.7.5），查询于 2026-10-13；包元数据没有声明仓库地址。"
 
 # ---- LLM 与 Agent 可观测性平台 ----
 - id: langfuse
@@ -146,6 +163,10 @@
   demo: https://phoenix-demo.arize.com/
   demo_source: search
   demo_checked: "2026-10-13"
+  package: pypi:arize-phoenix
+  repo_checked: "2026-10-13"
+  access: source-available
+  notes: "PyPI 上 arize-phoenix 的许可证是 Elastic-2.0，不是 OSI 意义上的开源许可（2026-10-13 核对）。"
 
 - id: comet-opik
   name: Comet Opik
@@ -156,6 +177,9 @@
   focus: "多层调用、评测结果、运行监控。"
   repo: https://github.com/comet-ml/opik
   site: https://www.comet.com/site/products/opik/
+  package: pypi:opik
+  repo_checked: "2026-10-13"
+  access: open-source
 
 - id: agentops
   name: AgentOps
@@ -168,6 +192,10 @@
   site: https://www.agentops.ai/
   docs: https://docs.agentops.ai/v2/introduction
   demo_none: "控制台需登录（app.agentops.ai 跳转到登录页），没有找到免登录的公开示例"
+  package: pypi:agentops
+  repo_checked: "2026-10-13"
+  access: open-source
+  notes: "PyPI 上 agentops 最近一次发布是 2025-08-29（v0.4.21），查询于 2026-10-13。"
 
 - id: langwatch
   name: LangWatch
@@ -181,6 +209,7 @@
   demo: https://app.langwatch.ai/demo
   demo_source: search
   notes: "展示页由前端渲染，内容以及是否免登录都没有确认。"
+  package: pypi:langwatch
 
 # ---- 软件架构、开发者平台与工程管理 ----
 - id: nx
@@ -195,6 +224,9 @@
   demo: https://nx.dev/docs/features/explore-graph
   demo_source: search
   notes: "展示页是官方文档页，据检索页面内嵌可交互的项目图示例，由 JS 加载，渲染情况未确认。"
+  package: npm:nx
+  repo_checked: "2026-10-13"
+  access: open-source
 
 - id: backstage
   name: Backstage
@@ -209,6 +241,9 @@
   demo: https://demo.backstage.io/catalog
   demo_source: search
   demo_checked: "2026-10-13"
+  package: npm:@backstage/cli
+  repo_checked: "2026-10-13"
+  access: open-source
 
 # ---- 数据平台与基础设施管理 ----
 - id: datahub
@@ -225,6 +260,9 @@
   demo_source: search
   notes: "该展示页是录制的血缘功能演示，不是开放试用。"
   demo_checked: "2026-10-13"
+  package: pypi:acryl-datahub
+  repo_checked: "2026-10-13"
+  access: open-source
 
 - id: openmetadata
   name: OpenMetadata
@@ -238,8 +276,10 @@
   demo: https://sandbox.open-metadata.org/
   demo_source: search
   docs: https://docs.open-metadata.org/latest/quick-start/sandbox
-  notes: "沙盒需要用 Google 账号登录。"
+  notes: "沙盒需要用 Google 账号登录。PyPI 上 openmetadata-ingestion 的许可证标为 Collate Community License Agreement（2026-10-13 核对）；整个项目的许可证未核实。"
   demo_checked: "2026-10-13"
+  package: pypi:openmetadata-ingestion
+  repo_checked: "2026-10-13"
 
 - id: skywalking
   name: Apache SkyWalking
@@ -279,6 +319,9 @@
   demo: https://play.grafana.org/
   demo_source: search
   demo_checked: "2026-10-13"
+  package: npm:@grafana/data
+  repo_checked: "2026-10-13"
+  access: open-source
 
 # ---- 知识组织、概念地图与认知工具 ----
 - id: affine
@@ -313,6 +356,7 @@
   name: Kumu
   level: L3
   category: knowledge-workspaces
+  also: [L2/systems-modeling]
   kind: platform
   summary: "复杂系统、利益相关方和关系地图。"
   focus: "关系探索、视图定义、叙事展示。研究对象与软件流程编辑器明显不同。"

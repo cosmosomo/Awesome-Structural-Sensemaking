@@ -30,12 +30,18 @@
 | `demo` | 否 | 展示页地址。 |
 | `docs` / `site` | 否 | 文档、官方站点。 |
 | `demo_source` | 有 `demo` 时必填 | 展示页从哪里来：`report` / `search` / `maintainer`。 |
+| `package` | 否 | `npm:名称` 或 `pypi:名称`。写了它，`scripts/check_registries.py` 就能用包元数据核对仓库、许可证和最近一次发布。 |
+| `repo_checked` | 否 | 包作者声明的仓库与 `repo` 一致的日期，索引里标 ✓。没有它就表示没核对。 |
 | `demo_none` | 否 | 这个条目本身不存在展示页的原因（规范、采集库、命令行工具等）。有它就不会列入“待收集”。 |
 | `demo_checked` | 否 | 展示页访问并确认内容相符的日期，索引里标 ✓。没有它就表示没打开过。 |
 | `access` | 否 | `open-source` / `custom-license` / `source-available` / `commercial` / `research-prototype` / `archived` / `unchecked`。默认按 `unchecked` 处理，不表示闭源。 |
 | `status` | 否 | `alpha` / `maintenance-mode` / `deprecated` / `needs-check`。 |
 | `notes` | 否 | 使用边界、维护状态等需要提醒的事实。 |
 | `added_by_maintainer` | 否 | 列出由整理者补充、报告原文没有给出的地址字段。 |
+
+## 关于 `access`
+
+标为 `open-source` 的，依据是 npm / PyPI 上该包的许可证属于常见的 OSI 许可（MIT、Apache-2.0、BSD、ISC 等）。这说明的是这个包的许可，整个项目可能还有别的部分采用别的许可（例如平台的商业版）。包的许可证不是常见 OSI 许可的（Elastic-2.0、自定义许可），按实际情况标，并在备注里写明依据。
 
 ## 与统一索引问题的对应
 
@@ -59,3 +65,4 @@
 
 - 2026-10-13：`scripts/check_links.py --fields demo docs site` 访问了 161 个地址（项目的展示页、文档、站点，加图形范式的展示页和理论资料；不含 GitHub 仓库页）。143 个返回 2xx 或 3xx，18 个没有：observablehq.com 返回 429（15 个）或超时（1 个），ELK Live 返回 502，doi.org 在该环境里解析不了。
 - 这一轮之后，项目展示页标 ✓ 的有 53 个，图形范式展示页标 ✓ 的有 28 个。
+- 2026-10-13：`scripts/check_registries.py` 查了 55 个带 package 的条目，51 个仓库地址与包声明一致。另外 4 个不一致：Flowise、AutoGen、LangWatch 的包元数据没有声明仓库；Argdown 是凭记忆写错了地址，按包声明改正后一致。现在共 52 个条目标 ✓。

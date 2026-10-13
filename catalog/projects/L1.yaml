@@ -14,6 +14,9 @@
   repo: https://github.com/d3/d3
   demo: https://observablehq.com/collection/@d3/gallery
   demo_source: search
+  package: npm:d3
+  repo_checked: "2026-10-13"
+  access: open-source
 
 - id: vega-lite
   name: Vega-Lite
@@ -26,6 +29,9 @@
   demo: https://vega.github.io/vega-lite/examples/
   demo_source: search
   demo_checked: "2026-10-13"
+  package: npm:vega-lite
+  repo_checked: "2026-10-13"
+  access: open-source
 
 - id: echarts
   name: Apache ECharts
@@ -39,6 +45,9 @@
   demo: https://echarts.apache.org/examples
   demo_source: search
   demo_checked: "2026-10-13"
+  package: npm:echarts
+  repo_checked: "2026-10-13"
+  access: open-source
 
 - id: plotly-js
   name: Plotly.js
@@ -51,6 +60,9 @@
   demo: https://plotly.com/javascript/
   demo_source: search
   demo_checked: "2026-10-13"
+  package: npm:plotly.js
+  repo_checked: "2026-10-13"
+  access: open-source
 
 - id: deck-gl
   name: deck.gl
@@ -64,6 +76,9 @@
   demo: https://deck.gl/gallery/
   demo_source: search
   demo_checked: "2026-10-13"
+  package: npm:deck.gl
+  repo_checked: "2026-10-13"
+  access: open-source
 
 # ---- 关系图与节点交互引擎 ----
 - id: antv-g6
@@ -79,6 +94,9 @@
   added_by_maintainer: [repo]
   demo_source: report
   demo_checked: "2026-10-13"
+  package: npm:@antv/g6
+  repo_checked: "2026-10-13"
+  access: open-source
 
 - id: react-flow
   name: React Flow
@@ -94,6 +112,9 @@
   notes: "官方 Pro Examples 页面把 Expand and Collapse 等高级示例列为 Pro 示例（2026-10-13 核对）。"
   demo_source: report
   demo_checked: "2026-10-13"
+  package: npm:@xyflow/react
+  repo_checked: "2026-10-13"
+  access: open-source
 
 - id: cytoscape-js
   name: Cytoscape.js
@@ -108,6 +129,9 @@
   added_by_maintainer: [repo]
   demo_source: report
   demo_checked: "2026-10-13"
+  package: npm:cytoscape
+  repo_checked: "2026-10-13"
+  access: open-source
 
 - id: sigma-js
   name: Sigma.js
@@ -122,6 +146,9 @@
   demo: https://www.sigmajs.org/examples/
   demo_source: search
   demo_checked: "2026-10-13"
+  package: npm:sigma
+  repo_checked: "2026-10-13"
+  access: open-source
 
 - id: antv-x6
   name: AntV X6
@@ -134,6 +161,9 @@
   demo: https://x6.antv.antgroup.com/examples
   demo_source: search
   demo_checked: "2026-10-13"
+  package: npm:@antv/x6
+  repo_checked: "2026-10-13"
+  access: open-source
 
 - id: diagram-js
   name: diagram-js
@@ -146,6 +176,9 @@
   repo: https://github.com/bpmn-io/diagram-js
   added_by_maintainer: [repo]
   demo_none: "底层库，演示见 bpmn-js"
+  package: npm:diagram-js
+  repo_checked: "2026-10-13"
+  access: open-source
 
 # ---- 布局与复杂度管理算法 ----
 - id: elkjs
@@ -158,6 +191,9 @@
   repo: https://github.com/kieler/elkjs
   demo: https://rtsys.informatik.uni-kiel.de/elklive/
   demo_source: search
+  package: npm:elkjs
+  repo_checked: "2026-10-13"
+  access: open-source
 
 - id: dagre
   name: Dagre
@@ -171,6 +207,9 @@
   demo_source: search
   notes: "展示页属于 dagre-d3。"
   demo_checked: "2026-10-13"
+  package: npm:@dagrejs/dagre
+  repo_checked: "2026-10-13"
+  access: open-source
 
 - id: graphviz
   name: Graphviz
@@ -196,6 +235,9 @@
   repo: https://github.com/d3/d3-force
   demo: https://observablehq.com/collection/@d3/d3-force
   demo_source: search
+  package: npm:d3-force
+  repo_checked: "2026-10-13"
+  access: open-source
 
 - id: graphology
   name: Graphology
@@ -207,6 +249,9 @@
   repo: https://github.com/graphology/graphology
   site: https://graphology.github.io/
   demo_none: "数据结构库，没有可视化界面"
+  package: npm:graphology
+  repo_checked: "2026-10-13"
+  access: open-source
 
 - id: cytoscape-complexity-management
   name: Cytoscape Complexity Management
@@ -235,6 +280,9 @@
   repo: https://github.com/mermaid-js/mermaid
   added_by_maintainer: [repo]
   demo_checked: "2026-10-13"
+  package: npm:mermaid
+  repo_checked: "2026-10-13"
+  access: open-source
 
 - id: plantuml
   name: PlantUML
@@ -287,6 +335,9 @@
   demo: https://excalidraw.com/
   demo_source: search
   demo_checked: "2026-10-13"
+  package: npm:@excalidraw/excalidraw
+  repo_checked: "2026-10-13"
+  access: open-source
 
 - id: tldraw
   name: tldraw
@@ -301,6 +352,8 @@
   demo: https://examples.tldraw.com/
   demo_source: search
   demo_checked: "2026-10-13"
+  package: npm:tldraw
+  repo_checked: "2026-10-13"
 
 - id: three-js
   name: Three.js
@@ -313,6 +366,9 @@
   demo: https://threejs.org/examples/
   demo_source: search
   demo_checked: "2026-10-13"
+  package: npm:three
+  repo_checked: "2026-10-13"
+  access: open-source
 
 - id: react-three-fiber
   name: React Three Fiber
@@ -325,6 +381,9 @@
   demo: https://r3f.docs.pmnd.rs/getting-started/examples
   demo_source: search
   demo_checked: "2026-10-13"
+  package: npm:@react-three/fiber
+  repo_checked: "2026-10-13"
+  access: open-source
 
 - id: react-force-graph
   name: React Force Graph
@@ -338,6 +397,9 @@
   demo: https://vasturiano.github.io/react-force-graph/
   demo_source: search
   demo_checked: "2026-10-13"
+  package: npm:react-force-graph
+  repo_checked: "2026-10-13"
+  access: open-source
 
 - id: cosmos-gl
   name: Cosmos.gl
@@ -352,6 +414,9 @@
   demo: https://cosmos.gl/
   demo_source: search
   notes: "展示页是 Storybook 示例站，页面标题是通用的 Storybook 标题，具体示例未确认。"
+  package: npm:@cosmos.gl/graph
+  repo_checked: "2026-10-13"
+  access: open-source
 
 - id: cytoscape-expand-collapse
   name: Cytoscape Expand Collapse
@@ -367,3 +432,6 @@
   demo: https://ivis-at-bilkent.github.io/cytoscape.js-expand-collapse/demo/demo-compounds-collapsed.html
   demo_source: search
   demo_checked: "2026-10-13"
+  package: npm:cytoscape-expand-collapse
+  repo_checked: "2026-10-13"
+  access: open-source
