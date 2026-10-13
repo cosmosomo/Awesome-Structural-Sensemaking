@@ -35,6 +35,7 @@
 | 项目之间怎么比较、怎么测试 | [`03-project-reviews`](03-project-reviews/) |
 | 怎么从信息里提炼结构、怎么分层 | [`04-structure-and-cognition`](04-structure-and-cognition/) |
 | 不同领域的案例：被当成什么数据结构、重点是哪一部分、怎么画、设计者怎么想 | [`04-structure-and-cognition/case-analysis.md`](04-structure-and-cognition/case-analysis.md) |
+| 同一份结构有哪几种画法（可视化流派），各自押注什么、放弃什么 | [`04-structure-and-cognition/visualization-schools.md`](04-structure-and-cognition/visualization-schools.md) |
 | 想一个个打开案例看是什么样子（展示页、官方图片、说明网页） | [`04-structure-and-cognition/case-gallery.md`](04-structure-and-cognition/case-gallery.md) |
 | 怎么加一个条目 | [`CONTRIBUTING.md`](CONTRIBUTING.md) |
 

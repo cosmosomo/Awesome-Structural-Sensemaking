@@ -74,6 +74,14 @@ def validate_cases(c: dict, project_ids: set[str], form_ids: set[str]) -> list[s
             for x in case.get(key, []):
                 if x not in v[vocab_key]:
                     errs.append(f"案例 {i}: {key} 里的 {x} 不在词表 {vocab_key} 里")
+        for key, vocab_key in (("schools", "schools"), ("source", "sources")):
+            if key not in case:
+                errs.append(f"案例 {i}: 缺少 {key}（没有视图的案例 schools 写 []）")
+            for x in case.get(key, []):
+                if x not in v[vocab_key]:
+                    errs.append(f"案例 {i}: {key} 里的 {x} 不在词表 {vocab_key} 里")
+        if ("derived" in case.get("modifiers", [])) != ("derived" in case.get("source", [])):
+            errs.append(f"案例 {i}: modifiers 里有没有 derived，要和 source 里有没有 derived 一致")
         for x in case.get("forms", []):
             if x not in form_ids:
                 errs.append(f"案例 {i}: forms 里的 {x} 不在 diagram-types.yaml 里")
@@ -150,6 +158,13 @@ def structure_cell(case: dict, v: dict) -> str:
         out += f"<br><sub>{esc(mods)}</sub>"
     if case.get("structure_note"):
         out += f"<br>{esc(case['structure_note'])}"
+    bits = []
+    if case.get("source"):
+        bits.append("来源：" + "、".join(v["sources"][x]["title"] for x in case["source"]))
+    if case.get("schools"):
+        bits.append("画法：" + "、".join(v["schools"][x]["title"] for x in case["schools"]))
+    if bits:
+        out += f"<br><sub>{esc('；'.join(bits))}</sub>"
     return out
 
 
@@ -252,6 +267,63 @@ def render_forms_by_structure(d: dict, _arg: str) -> str:
         used = "、".join(f"{forms[f]}×{n}" for f, n in sorted(cnt.items(), key=lambda t: -t[1])) or "—"
         other = sum(1 for x in rows if x.get("views_note") and not x.get("forms"))
         out.append(f"| {sv['title']} | {len(rows)} | {used} | {other} 个案例只有文字描述的视图 |")
+    return "\n".join(out) + "\n"
+
+
+def _count_matrix(rows, rowkey, colkey, row_vocab, col_vocab, corner):
+    """行是流派（取案例的主流派），列是另一个维度的取值；格里是案例数。"""
+    cols = [k for k in col_vocab if any(colkey(x) == k for x in rows)]
+    out = [f"| {corner} | " + " | ".join(col_vocab[k]["title"] for k in cols) + " | 合计 |", "| --- |" + " --- |" * (len(cols) + 1)]
+    for rk, rv in row_vocab.items():
+        sub = [x for x in rows if rowkey(x) == rk]
+        if not sub:
+            continue
+        cells = [str(sum(1 for x in sub if colkey(x) == k) or "·") for k in cols]
+        out.append(f"| {rv['title']} | " + " | ".join(cells) + f" | {len(sub)} |")
+    return "\n".join(out) + "\n"
+
+
+def render_school_count(d: dict, arg: str) -> str:
+    """流派（主流派）与结构、重点、议题、来源的交叉计数。arg: structure / focus / issue / source"""
+    v = d["cases"]["vocab"]
+    rows = [x for x in d["cases"]["cases"] if x.get("schools")]
+    spec = {
+        "structure": (lambda x: x["structure"][0], v["structures"], "主流派 \\ 主类结构"),
+        "focus": (lambda x: (x.get("focus") or [None])[0], v["focus_parts"], "主流派 \\ 首位重点"),
+        "issue": (lambda x: (x.get("issue_types") or [None])[0], v["issue_types"], "主流派 \\ 首位议题"),
+        "source": (lambda x: x["source"][0], v["sources"], "主流派 \\ 首位来源"),
+    }[arg]
+    return _count_matrix(rows, lambda x: x["schools"][0], spec[0], v["schools"], spec[1], spec[2])
+
+
+def render_school_cases(d: dict, arg: str) -> str:
+    """用到某个流派的案例（主流派是它的加粗）。"""
+    c, v = d["cases"], d["cases"]["vocab"]
+    projects = {p["id"]: p for p in d["projects"]}
+    rows = [x for x in c["cases"] if arg in x.get("schools", [])]
+    out = []
+    for x in rows:
+        mark = "**" if x["schools"][0] == arg else ""
+        others = "、".join(v["schools"][s]["title"] for s in x["schools"] if s != arg)
+        out.append(f"- {mark}[{esc(case_name(x, projects))}](case-evidence.md#{x['id']}){mark}　{esc(x['domain'])} · "
+                   f"{'+'.join(v['structures'][s]['title'] for s in x['structure'])}"
+                   + (f" · 同时用：{others}" if others else ""))
+    return "\n".join(out) + "\n"
+
+
+def render_school_pairs(d: dict, _arg: str) -> str:
+    """同一个案例里一起出现的流派对（说明哪些画法常常搭配）。"""
+    from itertools import combinations
+    c, v = d["cases"], d["cases"]["vocab"]
+    projects = {p["id"]: p for p in d["projects"]}
+    pairs: dict[tuple[str, str], list[str]] = defaultdict(list)
+    order = list(v["schools"])
+    for x in c["cases"]:
+        for a, b in combinations(sorted(set(x.get("schools", [])), key=order.index), 2):
+            pairs[(a, b)].append(case_name(x, projects))
+    out = ["| 搭配 | 案例数 | 案例 |", "| --- | --- | --- |"]
+    for (a, b), names in sorted(pairs.items(), key=lambda t: -len(t[1])):
+        out.append(f"| {v['schools'][a]['title']} + {v['schools'][b]['title']} | {len(names)} | " + "、".join(esc(n) for n in names) + " |")
     return "\n".join(out) + "\n"
 
 
@@ -419,6 +491,9 @@ def render_gallery_stats(d: dict, _arg: str) -> str:
 
 
 CASE_RENDERERS = {
+    "schoolcount": render_school_count,
+    "schoolcases": render_school_cases,
+    "schoolpairs": render_school_pairs,
     "gallery": render_gallery,
     "gallerystats": render_gallery_stats,
     "galleryindex": render_gallery_index,

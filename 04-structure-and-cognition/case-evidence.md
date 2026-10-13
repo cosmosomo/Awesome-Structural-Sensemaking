@@ -425,7 +425,7 @@
 ### Dify
 
 - 领域：AI Agent 开发；议题：搭建 AI 工作流，并逐节点测试、检查数据怎么流过去
-- 编码：有向无环图；重点：先后与依赖方向、对象上的度量；把握：官方页面直接写了
+- 编码：一般图与网络；重点：先后与依赖方向、对象上的度量；把握：官方页面直接写了
 - 编码所依据的原文：
   - 属性与度量：“After testing, click “Last run” to see execution details including inputs, outputs, timing, and any error messages.” [✓](https://docs.dify.ai/en/cloud/use-dify/debug/step-run)
   - 视图：“The Variable Inspector shows you all the data flowing through your workflow.” [✓](https://docs.dify.ai/en/cloud/use-dify/debug/variable-inspect)
@@ -457,7 +457,7 @@
 ### Langflow
 
 - 领域：AI Agent 开发；议题：用拖拽组件搭 AI 流程，并在 Playground 里实时测试
-- 编码：有向无环图；重点：先后与依赖方向；把握：页面信息支持，归类靠推断
+- 编码：一般图与网络；重点：先后与依赖方向；把握：页面信息支持，归类靠推断
 - 编码所依据的原文：
   - 视图：“The visual editor simplifies prototyping of application” [✓](https://docs.langflow.org/)
   - 交互：“You can use the Playground to test flows without having to build your entire application stack.” [✓](https://docs.langflow.org/)
@@ -492,7 +492,7 @@
 ### n8n
 
 - 领域：业务自动化；议题：工作流在生产中失败后，把当时的执行数据带回编辑器里调试
-- 编码：有向无环图 + 序列与事件流；重点：跨视图的同一对象、时间与演化；把握：页面信息支持，归类靠推断
+- 编码：一般图与网络 + 序列与事件流；重点：跨视图的同一对象、时间与演化；把握：页面信息支持，归类靠推断
 - 说明：“Debug in editor”把运行时的一条记录接回设计时的图——两种结构靠对象身份连起来。
 - 编码所依据的原文：
   - 对象：“An execution is a single run of a workflow.” [✓](https://docs.n8n.io/build/understand-workflows/understand-executions)
@@ -877,7 +877,7 @@
 ### LangWatch
 
 - 领域：AI 应用观测；议题：找出一次运行的瓶颈，并看全局的成本、延迟与话题分布
-- 编码：层级与树 + 一般图与网络、文本与文档；重点：时间与演化、连通与邻域、群落与相似；把握：官方页面直接写了
+- 编码：层级与树 + 一般图与网络；重点：时间与演化、连通与邻域、群落与相似；把握：官方页面直接写了
 - 说明：四种视图读的是同一次运行，各自强调不同部分：瀑布看时间，火焰看栈内占比，拓扑看连接，时序看消息顺序。
 - 编码所依据的原文：
   - 视图：“Waterfall, flame graph, topology, and sequence diagram, whichever way you need to read a run.” [✓](https://langwatch.ai/)
@@ -1216,7 +1216,7 @@
 ### AFFiNE
 
 - 领域：知识管理；议题：同一批内容既要线性地写，又要空间化地摆
-- 编码：文本与文档 + 多层与复合；重点：跨视图的同一对象；把握：官方页面直接写了
+- 编码：层级与树 + 空间与几何；重点：跨视图的同一对象；把握：官方页面直接写了
 - 编码所依据的原文：
   - 关系：“the same blocks work in both modes, so written notes can become visual plans without copying content” [✓](https://affine.pro/pagedoc)
   - 抽象与层级：“From Freeform Canvas to Structured Pages” [✓](https://affine.pro/whiteboard)
@@ -1326,7 +1326,7 @@
 ### InfraNodus
 
 - 领域：文本分析与知识发现；议题：在一大段文字里找出主要话题群和它们之间的结构空白
-- 编码：文本与文档 + 一般图与网络；重点：群落与相似、连通与邻域、对象上的度量；把握：官方页面直接写了
+- 编码：一般图与网络；重点：群落与相似、连通与邻域、对象上的度量；把握：官方页面直接写了
 - 说明：重点不只是“连了什么”，还有“没连什么”：结构空白（structural gaps）是主要产出。
 - 编码所依据的原文：
   - 对象：“the concepts (or entities) are the nodes, and their co-occurrences are the connections.” [✓](https://infranodus.com/tutorial/create-your-first-knowledge-graph)
@@ -1603,7 +1603,7 @@
 ### Argdown
 
 - 领域：论证与讨论；议题：把一场辩论或论证重建成地图
-- 编码：一般图与网络；重点：连通与邻域、关系上的类型与量；把握：官方页面直接写了
+- 编码：命题与论证；重点：连通与邻域、关系上的类型与量；把握：官方页面直接写了
 - 编码所依据的原文：
   - 抽象与层级：“This map hides a lot of the logical details for simplicty's sake (to dive into the details, click on "Source").” [✓](https://argdown.org/)
   - 抽象与层级：“where every premise and inferential step is visualized, it takes only a few configuration changes” [✓](https://argdown.org/)
@@ -1708,7 +1708,7 @@
 ### Docling
 
 - 领域：文档处理；议题：把 PDF 等文档转成保留版面和阅读顺序的统一结构
-- 编码：文本与文档 + 层级与树；重点：包含与层次、来源与证据；把握：官方页面直接写了
+- 编码：层级与树；重点：包含与层次、来源与证据；把握：官方页面直接写了
 - 编码所依据的原文：
   - 关系：“which reference children and parents through JSON pointers” [✓](https://docling-project.github.io/docling/concepts/docling_document/)
   - 属性与度量：“Layout information (i.e. bounding boxes) for all items, if available” [✓](https://docling-project.github.io/docling/concepts/docling_document/)
@@ -1737,7 +1737,7 @@
 ### Docling Graph
 
 - 领域：文档处理；议题：把文档变成带显式语义关系的知识图，用于需要精确实体连接的场合
-- 编码：文本与文档 + 一般图与网络；重点：连通与邻域、关系上的类型与量、来源与证据；把握：官方页面直接写了
+- 编码：一般图与网络；重点：连通与邻域、关系上的类型与量、来源与证据；把握：官方页面直接写了
 - 编码所依据的原文：
   - 关系：“builds a directed knowledge graph with explicit semantic relationships” [✓](https://docling-project.github.io/docling-graph/)
   - 关系：“Composition & Containment” [✓](https://docling-project.github.io/docling-graph/fundamentals/schema-definition/relationships/)
@@ -1769,7 +1769,7 @@
 ### Microsoft GraphRAG
 
 - 领域：文本检索与知识建模；议题：回答关于整个语料库的整体性问题，以及关于具体实体的局部问题
-- 编码：文本与文档 + 一般图与网络、层级与树；重点：群落与相似、包含与层次、对象上的度量；把握：官方页面直接写了
+- 编码：一般图与网络 + 层级与树；重点：群落与相似、包含与层次、对象上的度量；把握：官方页面直接写了
 - 说明：社区层级是算法分出来的聚类，摘要是语义概括——两种抽象叠在一起；是否对应认知上的逻辑层级，官方页面没有说。
 - 编码所依据的原文：
   - 抽象与层级：“Perform a hierarchical clustering of the graph using the Leiden technique” [✓](https://microsoft.github.io/graphrag/)
@@ -1814,7 +1814,7 @@
 ### LightRAG
 
 - 领域：文本检索与知识建模；议题：用图结构配合向量做检索，并用网页看板查看知识
-- 编码：文本与文档 + 一般图与网络；重点：连通与邻域；把握：证据很少
+- 编码：一般图与网络；重点：连通与邻域；把握：证据很少
 - 编码所依据的原文：
   - 抽象与层级：“It adopts a dual-layer architecture to manage both knowledge graphs (KGs) and vector embeddings” [✓](https://pypi.org/project/lightrag-hku/)
   - 视图：“an interface that allows you to insert, query, and visualize LightRAG knowledge through an intuitive web-based dashboard” [✓](https://pypi.org/project/lightrag-hku/)
@@ -2054,7 +2054,7 @@
 ### SBGN 系统生物学图形标记
 
 - 领域：分子生物学通路；议题：用统一的图形语言表示生物网络，并按想传达的信息选择详细程度
-- 编码：一般图与网络 + 多层与复合；重点：先后与依赖方向、关系上的类型与量、跨视图的同一对象；把握：官方页面直接写了
+- 编码：一般图与网络；重点：先后与依赖方向、关系上的类型与量、跨视图的同一对象；把握：官方页面直接写了
 - 编码所依据的原文：
   - 抽象与层级：“They can be seen as three alternative projections of the underlying, more complex biological information.” [✓](https://sbgn.github.io/specifications)
   - 视图：“The SBGN Process Description (PD) language shows the temporal courses of biochemical interactions in a network.” [✓](https://sbgn.github.io/specifications)
@@ -2252,7 +2252,7 @@
 ### Kialo 论证树
 
 - 领域：论证与讨论；议题：把一个论题的赞成与反对理由层层展开，参与者能找到自己该回应的位置
-- 编码：层级与树；重点：包含与层次、关系上的类型与量；把握：证据很少
+- 编码：命题与论证 + 层级与树；重点：包含与层次、关系上的类型与量；把握：证据很少
 - 编码所依据的原文：
   - 视图：“Click the + symbol at the top of the Pros or Cons column.” [✓](https://support.kialo.com/en/hc/creating-a-claim/)
   - 关系：“Linking Claims Between Discussions” [✓](https://support.kialo.com/en/)
@@ -2634,7 +2634,7 @@
 ### Universal Dependencies 依存树
 
 - 领域：语言学；议题：用同一套标注描述多种语言的句子结构，方便比较和训练解析器
-- 编码：层级与树 + 文本与文档；重点：关系上的类型与量、包含与层次；把握：页面信息支持，归类靠推断
+- 编码：层级与树；重点：关系上的类型与量、包含与层次；把握：页面信息支持，归类靠推断
 - 编码所依据的原文：
   - 关系：“HEAD: Head of the current word, which is either a value of ID or zero (0).” [✓](https://universaldependencies.org/format.html)
   - 关系：“DEPREL: Universal dependency relation to the HEAD ( root iff HEAD = 0)” [✓](https://universaldependencies.org/format.html)
@@ -2665,7 +2665,7 @@
 ### CmapTools 概念图
 
 - 领域：教育与知识建模；议题：围绕一个焦点问题组织并表示知识，发现概念之间的跨联
-- 编码：一般图与网络 + 层级与树；重点：包含与层次、连通与邻域、关系上的类型与量；把握：官方页面直接写了
+- 编码：命题与论证 + 层级与树；重点：包含与层次、连通与邻域、关系上的类型与量；把握：官方页面直接写了
 - 说明：这个案例里最关键的一条：层级“依赖于使用知识的情境”，所以要有焦点问题。
 - 编码所依据的原文：
   - 回答的问题：“construct concept maps with reference to some particular question we seek to answer, which we have called a focus question” [✓](https://cmap.ihmc.us/Publications/ResearchPapers/TheoryUnderlyingConceptMaps.pdf)
@@ -2710,7 +2710,7 @@
 ### Wikipedia 摘要式写作
 
 - 领域：百科写作；议题：一个大主题的文章太长，如何拆分又不让读者迷路
-- 编码：层级与树 + 文本与文档；重点：包含与层次、跨视图的同一对象；把握：官方页面直接写了
+- 编码：层级与树；重点：包含与层次、跨视图的同一对象；把握：官方页面直接写了
 - 编码所依据的原文：
   - 抽象与层级：“Wikipedia articles cover topics at several levels of detail” [✓](https://en.wikipedia.org/wiki/Wikipedia:Summary_style)
   - 关系：“The original article should contain a section with a summary of the subtopic's article as well as a link to it, or an excerpt of it.” [✓](https://en.wikipedia.org/wiki/Wikipedia:Summary_style)
@@ -2753,7 +2753,7 @@
 ### Explorable Explanations
 
 - 领域：交互式写作；议题：让读者不只读结论，还能改动前提看后果
-- 编码：因果与反馈 + 文本与文档；重点：关系上的类型与量、对象上的度量；把握：页面信息支持，归类靠推断
+- 编码：因果与反馈；重点：关系上的类型与量、对象上的度量；把握：页面信息支持，归类靠推断
 - 编码所依据的原文：
   - 关系：“The reader can play with the premise and assumptions of various claims, and see the consequences update immediately.” [✓](https://worrydream.com/ExplorableExplanations/)
   - 抽象与层级：“It can be read at multiple levels, depending on the reader's level of interest.” [✓](https://worrydream.com/ExplorableExplanations/)
@@ -2883,7 +2883,7 @@
 ### Markmap
 
 - 领域：知识管理与写作；议题：把一篇 Markdown 文档的层级直接看成一张可折叠的思维导图
-- 编码：文本与文档 + 层级与树；重点：包含与层次；把握：官方页面直接写了
+- 编码：层级与树；重点：包含与层次；把握：官方页面直接写了
 - 编码所依据的原文：
   - 处理的材料：“It parses Markdown content and extracts its intrinsic hierarchical structure” [✓](https://markmap.js.org/docs/markmap)
   - 交互：“Fold the current node and all its descendents.” [✓](https://markmap.js.org/docs/magic-comments)
@@ -2917,7 +2917,7 @@
 ### 图尔敏论证模型
 
 - 领域：论证与写作；议题：分析并检验一个论证站不站得住，找出最弱的一环
-- 编码：一般图与网络；重点：关系上的类型与量、来源与证据；把握：官方页面直接写了
+- 编码：命题与论证；重点：关系上的类型与量、来源与证据；把握：官方页面直接写了
 - 编码所依据的原文：
   - 对象：“WARRANT – logical and persuasive connection between a claim and the evidence.” [✓](https://www.utsa.edu/twc/documents/Toulmin_Model_of_Argumentation.pdf)
   - 属性与度量：“Toulmin says that the weakest part of any argument is its weakest warrant.” [✓](https://www.blinn.edu/writing-centers/wide/toulmin-argument.html)

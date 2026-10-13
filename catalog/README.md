@@ -47,7 +47,7 @@
 | 文件 | 内容 |
 | --- | --- |
 | `cases.yaml` | 案例编码：领域、议题、数据结构类别、重点部分、弱化了什么、图形、层级处理。编码是整理者的判断；`ev` 指向依据的官方原文，`thinking` 指向设计者自己写的思路（why / alternative / limit）。 |
-| `case-vocab.yaml` | 编码用的词表：议题、结构类别、结构修饰、重点部分、层级处理方式。 |
+| `case-vocab.yaml` | 编码用的词表：议题、结构类别、结构修饰、重点部分、层级处理方式、画法流派（`schools`）、结构来源（`sources`）。 |
 | `case-evidence.json` | 官方页面的原文摘录，按案例 id 和类目存放，每条有 `check`：`ok`（页面文字里找到了）、`missing`、`unreadable`、`unchecked`。 |
 
 | `case-gallery.json` | 每个案例的展示页（`demo`，带 `mode`：`live` 可操作 / `samples` 样例目录 / `video` 视频或导览）、官方图片（`images`，只存地址）、说明网页（`pages`），以及没找到什么（`not_found`）。每个地址有 `check`；展示页另有 `render`（无头 Chromium 打开后的情况）。 |

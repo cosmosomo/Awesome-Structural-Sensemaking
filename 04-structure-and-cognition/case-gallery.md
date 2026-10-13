@@ -22,6 +22,13 @@
 | [CNCF Landscape](https://landscape.cncf.io/) | 技术生态 | 集合与分类 | [可操作](https://landscape.cncf.io/) | 1 | 2 |
 | [Thoughtworks Technology Radar](https://www.thoughtworks.com/radar) | 技术生态 | 集合与分类 | [可操作](https://www.thoughtworks.com/radar) | — | 1 |
 | [Zalando Tech Radar](https://github.com/zalando/tech-radar) | 技术生态 | 集合与分类 | [可操作](https://opensource.zalando.com/tech-radar/) | 3 | 1 |
+| [Grafana](https://github.com/grafana/grafana) | 基础设施运维 | 表与多维属性 | [可操作](https://play.grafana.org/) | — | 1 |
+| [Build Your Own Radar](https://github.com/thoughtworks/build-your-own-radar) | 技术生态 | 表与多维属性 | [可操作](https://radar.thoughtworks.com/) | 1 | 1 |
+| [OSS Insight](https://ossinsight.io/) | 开源生态 | 表与多维属性 | [可操作](https://ossinsight.io/) | 1 | 1 |
+| [OSS Compass](https://oss-compass.org/) | 开源生态 | 表与多维属性 | [可操作](https://oss-compass.org/os-situation) | 3 | 2 |
+| [PyGraphistry](https://github.com/graphistry/pygraphistry) | 数据分析 | 表与多维属性 | — | 3 | 2 |
+| [Wikidata Query Service 结果视图](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/Wikidata_Query_Help/Result_Views) | 开放知识图谱 | 表与多维属性 | [可操作](https://query.wikidata.org/) | 1 | 1 |
+| [Gapminder 气泡图](https://www.gapminder.org/tools/) | 国际发展统计 | 表与多维属性 | [可操作](https://www.gapminder.org/tools/) | — | 2 |
 | [CodeBoarding](https://codeboarding.org/) | 软件工程 | 层级与树 | [可操作](https://app.codeboarding.org/CodeBoarding/CodeBoarding) | 3 | 2 |
 | [LikeC4](https://likec4.dev/) | 软件工程 | 层级与树 | [可操作](https://playground.likec4.dev/w/bigbank/) | — | 1 |
 | [AgentPrism](https://evilmartians.com/chronicles/debug-ai-fast-agent-prism-open-source-library-visualize-agent-traces) | AI Agent 观测 | 层级与树 | [可操作](https://agent-prism.evilmartians.io/) | 3 | 1 |
@@ -33,21 +40,20 @@
 | [Comet Opik](https://www.comet.com/site/products/opik/) | AI 应用观测 | 层级与树 | — | 3 | 2 |
 | [AgentOps](https://www.agentops.ai/) | AI 应用观测 | 层级与树 | — | 3 | 1 |
 | [LangWatch](https://langwatch.ai/) | AI 应用观测 | 层级与树 | [需登录](https://app.langwatch.ai/demo) | 1 | 1 |
+| [AFFiNE](https://affine.pro/) | 知识管理 | 层级与树 | [样例目录](https://affine.pro/templates) | 3 | 2 |
 | [Tree-sitter](https://github.com/tree-sitter/tree-sitter) | 软件工程 | 层级与树 | [可操作](https://tree-sitter.github.io/tree-sitter/7-playground.html) | — | 2 |
+| [Docling](https://github.com/docling-project/docling) | 文档处理 | 层级与树 | [可操作](https://huggingface.co/spaces/docling-project/SmolDocling-256M-Demo) | 3 | 2 |
 | [Nextstrain / Auspice](https://docs.nextstrain.org/en/latest/learn/interpret/interacting-with-nextstrain.html) | 流行病与基因组 | 层级与树 | [可操作](https://nextstrain.org/ncov/open/global/6m) | 2 | 2 |
 | [OneZoom 生命之树](https://www.onezoom.org/introduction) | 生物分类 | 层级与树 | [可操作](https://www.onezoom.org/) | 2 | 2 |
 | [Reactome 通路浏览器](https://reactome.org/userguide/pathway-browser) | 分子生物学通路 | 层级与树 | — | 3 | 2 |
-| [Kialo 论证树](https://support.kialo.com/en/) | 论证与讨论 | 层级与树 | [可操作](https://www.kialo.com/should-us-internet-platforms-be-able-to-remove-or-demote-speech-by-elected-public-figures-39863) | 1 | 2 |
 | [CodeCity](https://www.inf.usi.ch/faculty/lanza/PUBS/M/Wett2008e.pdf) | 软件演化与度量 | 层级与树 | — | — | 1 |
 | [Treemap（磁盘空间）](https://www.cs.umd.edu/hcil/treemap-history/) | 文件系统与资源占用 | 层级与树 | [样例目录](https://d3-graph-gallery.com/treemap.html) | 3 | 2 |
 | [火焰图](https://www.brendangregg.com/flamegraphs.html) | 性能剖析 | 层级与树 | [可操作](https://www.brendangregg.com/FlameGraphs/cpu-mysql-updated.svg) | 1 | 2 |
 | [Universal Dependencies 依存树](https://universaldependencies.org/introduction.html) | 语言学 | 层级与树 | [可操作](https://universaldependencies.org/conllu_viewer.html) | — | 2 |
 | [Wikipedia 摘要式写作](https://en.wikipedia.org/wiki/Wikipedia:Summary_style) | 百科写作 | 层级与树 | — | — | 2 |
+| [Markmap](https://markmap.js.org/docs/markmap) | 知识管理与写作 | 层级与树 | [可操作](https://markmap.js.org/repl) | — | 2 |
 | [AgentEnsemble Viz](https://docs.agentensemble.net/guides/visualization/) | AI Agent 开发 | 有向无环图 | — | — | 2 |
 | [Marquez](https://marquezproject.ai/) | 数据工程 | 有向无环图 | — | 3 | 2 |
-| [Dify](https://dify.ai/) | AI Agent 开发 | 有向无环图 | [样例目录](https://marketplace.dify.ai/templates) | 3 | 2 |
-| [Langflow](https://www.langflow.org/) | AI Agent 开发 | 有向无环图 | [样例目录](https://www.langflow.org/templates/use-langflow-to-process-and-classify-call-transcripts/) | 3 | 2 |
-| [n8n](https://github.com/n8n-io/n8n) | 业务自动化 | 有向无环图 | [样例目录](https://n8n.io/workflows/) | — | 2 |
 | [AgentEnsemble](https://agentensemble.github.io/agentensemble/) | AI Agent 开发 | 有向无环图 | — | — | 2 |
 | [Nx](https://nx.dev/docs/features/explore-graph) | 软件工程 | 有向无环图 | [可操作](https://nrwl-nx-examples-dep-graph.netlify.app/?focus=cart) | — | 1 |
 | [DataHub](https://docs.datahub.com/) | 数据工程 | 有向无环图 | [视频/导览](https://datahub.com/demos/data-lineage-with-datahub/) | — | 1 |
@@ -60,6 +66,9 @@
 | [Understand Anything](https://understand-anything.com/) | 软件工程 | 一般图与网络 | [可操作](https://understand-anything.com/) | — | — |
 | [bpmn-js](https://github.com/bpmn-io/bpmn-js) | 业务流程 | 一般图与网络 | [可操作](https://demo.bpmn.io/) | 2 | 2 |
 | [NeoDash](https://github.com/neo4j-labs/neodash) | 图数据库应用 | 一般图与网络 | — | 1 | 1 |
+| [Dify](https://dify.ai/) | AI Agent 开发 | 一般图与网络 | [样例目录](https://marketplace.dify.ai/templates) | 3 | 2 |
+| [Langflow](https://www.langflow.org/) | AI Agent 开发 | 一般图与网络 | [样例目录](https://www.langflow.org/templates/use-langflow-to-process-and-classify-call-transcripts/) | 3 | 2 |
+| [n8n](https://github.com/n8n-io/n8n) | 业务自动化 | 一般图与网络 | [样例目录](https://n8n.io/workflows/) | — | 2 |
 | [Node-RED](https://github.com/node-red/node-red) | 物联网与事件流 | 一般图与网络 | [样例目录](https://flows.nodered.org/) | 2 | 2 |
 | [Flowise](https://flowiseai.com/) | AI Agent 开发 | 一般图与网络 | — | 2 | 2 |
 | [LangGraph / Studio](https://docs.langchain.com/langsmith/studio) | AI Agent 开发 | 一般图与网络 | — | 1 | 2 |
@@ -69,7 +78,10 @@
 | [Kiali](https://kiali.io/docs/features/topology/) | 服务网格运维 | 一般图与网络 | — | 3 | 2 |
 | [diagrams.net / draw.io](https://www.drawio.com/) | 通用绘图 | 一般图与网络 | [可操作](https://app.diagrams.net/) | 3 | 2 |
 | [Kumu](https://kumu.io/) | 系统与关系分析 | 一般图与网络 | [可操作](https://kumu.io/tanyabeer/hewlett-foundation-madison-initiative) | 3 | 1 |
-| [Argdown](https://argdown.org/) | 论证与讨论 | 一般图与网络 | [可操作](https://argdown.org/sandbox/) | 1 | 2 |
+| [InfraNodus](https://infranodus.com/) | 文本分析与知识发现 | 一般图与网络 | [可操作](https://infranodus.com/live/hourlydailynews?background=default&most_influential=bc&maxnodes=150&demo=1&defaultlabelsize=14&labelsizeratio=2&demo=1) | 3 | 2 |
+| [Docling Graph](https://docling-project.github.io/docling-graph/) | 文档处理 | 一般图与网络 | [可操作](https://docling-project.github.io/docling-graph/usage/examples/) | — | 2 |
+| [Microsoft GraphRAG](https://microsoft.github.io/graphrag/) | 文本检索与知识建模 | 一般图与网络 | — | 3 | 2 |
+| [LightRAG](https://github.com/HKUDS/LightRAG) | 文本检索与知识建模 | 一般图与网络 | — | — | 1 |
 | [Graphiti](https://help.getzep.com/graphiti/getting-started/overview) | Agent 记忆 | 一般图与网络 | [可操作](https://app.getzep.com/playground) | — | 2 |
 | [伦敦地铁图（Beck）](https://www.londonmuseum.org.uk/collections/london-stories/harry-beck-revolutionised-tube-map/) | 交通 | 一般图与网络 | — | 1 | 2 |
 | [SBGN 系统生物学图形标记](https://sbgn.github.io/specifications) | 分子生物学通路 | 一般图与网络 | [样例目录](https://sbgn.github.io/examples) | 3 | 2 |
@@ -78,29 +90,17 @@
 | [Hive Plot](https://mk.bcgsc.ca/linnet/) | 网络分析（生物与社会网络） | 一般图与网络 | [可操作](https://bost.ocks.org/mike/hive/) | 3 | 1 |
 | [Gephi](https://gephi.org/desktop/) | 通用网络分析 | 一般图与网络 | [可操作](https://lite.gephi.org/) | 3 | 2 |
 | [设计结构矩阵 DSM](https://dsmweb.org/reading-a-dsm/) | 工程系统与产品架构 | 一般图与网络 | — | 3 | 2 |
-| [CmapTools 概念图](https://cmap.ihmc.us/) | 教育与知识建模 | 一般图与网络 | [样例目录](https://cmap.ihmc.us/docs/itinerary.php) | 1 | 2 |
 | [Luhmann 的卡片盒](https://www.uni-bielefeld.de/fakultaeten/soziologie/forschung/luhmann-archiv/pdf/jschmidt_zettelkasten-als-uberraschungsgenerator.pdf) | 知识管理与写作 | 一般图与网络 | — | — | — |
-| [图尔敏论证模型](https://www.blinn.edu/writing-centers/wide/toulmin-argument.html) | 论证与写作 | 一般图与网络 | — | — | 1 |
+| [Argdown](https://argdown.org/) | 论证与讨论 | 命题与论证 | [可操作](https://argdown.org/sandbox/) | 1 | 2 |
+| [Kialo 论证树](https://support.kialo.com/en/) | 论证与讨论 | 命题与论证 | [可操作](https://www.kialo.com/should-us-internet-platforms-be-able-to-remove-or-demote-speech-by-elected-public-figures-39863) | 1 | 2 |
+| [CmapTools 概念图](https://cmap.ihmc.us/) | 教育与知识建模 | 命题与论证 | [样例目录](https://cmap.ihmc.us/docs/itinerary.php) | 1 | 2 |
+| [图尔敏论证模型](https://www.blinn.edu/writing-centers/wide/toulmin-argument.html) | 论证与写作 | 命题与论证 | — | — | 1 |
 | [OpenTelemetry GenAI 语义约定](https://opentelemetry.io/docs/specs/semconv/gen-ai/) | AI Agent 观测 | 序列与事件流 | — | — | — |
 | [OpenLLMetry](https://github.com/traceloop/openllmetry) | AI Agent 观测 | 序列与事件流 | — | 1 | 2 |
 | [Up and Down the Ladder of Abstraction](https://worrydream.com/LadderOfAbstraction/) | 交互式写作与抽象 | 序列与事件流 | [可操作](https://worrydream.com/LadderOfAbstraction/) | — | — |
-| [Grafana](https://github.com/grafana/grafana) | 基础设施运维 | 表与多维属性 | [可操作](https://play.grafana.org/) | — | 1 |
-| [Build Your Own Radar](https://github.com/thoughtworks/build-your-own-radar) | 技术生态 | 表与多维属性 | [可操作](https://radar.thoughtworks.com/) | 1 | 1 |
-| [OSS Insight](https://ossinsight.io/) | 开源生态 | 表与多维属性 | [可操作](https://ossinsight.io/) | 1 | 1 |
-| [OSS Compass](https://oss-compass.org/) | 开源生态 | 表与多维属性 | [可操作](https://oss-compass.org/os-situation) | 3 | 2 |
-| [PyGraphistry](https://github.com/graphistry/pygraphistry) | 数据分析 | 表与多维属性 | — | 3 | 2 |
-| [Wikidata Query Service 结果视图](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/Wikidata_Query_Help/Result_Views) | 开放知识图谱 | 表与多维属性 | [可操作](https://query.wikidata.org/) | 1 | 1 |
-| [Gapminder 气泡图](https://www.gapminder.org/tools/) | 国际发展统计 | 表与多维属性 | [可操作](https://www.gapminder.org/tools/) | — | 2 |
 | [LLNL 美国能源流向图](https://flowcharts.llnl.gov/) | 能源 | 流量网络 | [样例目录](https://flowcharts.llnl.gov/commodities/energy) | 2 | 2 |
 | [Embedding Projector](https://projector.tensorflow.org/) | 机器学习 | 空间与几何 | [可操作](https://projector.tensorflow.org/) | 3 | 2 |
 | [Circos](https://pmc.ncbi.nlm.nih.gov/articles/PMC2752132/) | 比较基因组 | 空间与几何 | — | 3 | 1 |
-| [AFFiNE](https://affine.pro/) | 知识管理 | 文本与文档 | [样例目录](https://affine.pro/templates) | 3 | 2 |
-| [InfraNodus](https://infranodus.com/) | 文本分析与知识发现 | 文本与文档 | [可操作](https://infranodus.com/live/hourlydailynews?background=default&most_influential=bc&maxnodes=150&demo=1&defaultlabelsize=14&labelsizeratio=2&demo=1) | 3 | 2 |
-| [Docling](https://github.com/docling-project/docling) | 文档处理 | 文本与文档 | [可操作](https://huggingface.co/spaces/docling-project/SmolDocling-256M-Demo) | 3 | 2 |
-| [Docling Graph](https://docling-project.github.io/docling-graph/) | 文档处理 | 文本与文档 | [可操作](https://docling-project.github.io/docling-graph/usage/examples/) | — | 2 |
-| [Microsoft GraphRAG](https://microsoft.github.io/graphrag/) | 文本检索与知识建模 | 文本与文档 | — | 3 | 2 |
-| [LightRAG](https://github.com/HKUDS/LightRAG) | 文本检索与知识建模 | 文本与文档 | — | — | 1 |
-| [Markmap](https://markmap.js.org/docs/markmap) | 知识管理与写作 | 文本与文档 | [可操作](https://markmap.js.org/repl) | — | 2 |
 | [Insight Maker](https://www.insightmaker.com/) | 系统建模 | 因果与反馈 | [样例目录](https://www.insightmaker.com/explore) | 3 | 2 |
 | [Explorable Explanations](https://worrydream.com/ExplorableExplanations/) | 交互式写作 | 因果与反馈 | [可操作](https://worrydream.com/TenBrighterIdeas/) | 2 | 2 |
 <!-- /gen -->
@@ -172,6 +172,44 @@
 <sub>图：neodash（[来源页](https://neo4j.com/labs/neodash/)）</sub>
 
 <sub>[编码与原文摘录](case-evidence.md#neodash)</sub>
+
+#### [Dify](https://dify.ai/)
+
+<sub>AI Agent 开发 · 一般图与网络 · 重点：先后与依赖方向、对象上的度量</sub>　搭建 AI 工作流，并逐节点测试、检查数据怎么流过去
+
+- 展示页（样例目录）：[Dify Marketplace](https://marketplace.dify.ai/templates)（页面顶部有 'Plugins' 与 'Templates' 两个标签，Templates 下列出模板卡片，每张带 'View' 按钮（如 'AI Business Analyst'、'Offer Arena'）；部分卡片标注 'Verified by a Dify partner'。）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 31600 字、svg 1 个</sub>
+- 网页：[Dify - The Platform for Production-Ready Agentic Workflows](https://dify.ai/)（官网首页，列出 Workflow Studio、Knowledge Pipeline 等产品模块，并附对应截图）
+- 网页：[Single Node - Dify Docs](https://docs.dify.ai/en/cloud/use-dify/debug/step-run)（单节点运行调试的文档页，内嵌节点运行输出相关截图（alt：'When You Run Nodes One at a Time, Their Outputs Are Cached in the Variable'））
+
+<a href="https://dify.ai/_astro/workflow.Dl7EY_X1_rPiFq.webp"><img src="https://dify.ai/_astro/workflow.Dl7EY_X1_rPiFq.webp" width="230" alt="Dify Workflow Studio canvas showing connected nodes for an AI workflow."></a> <a href="https://dify.ai/_astro/agent.Ba3STi-y_Z18Lowi.webp"><img src="https://dify.ai/_astro/agent.Ba3STi-y_Z18Lowi.webp" width="230" alt="Dify agent configuration with tools and memory."></a> <a href="https://dify.ai/_astro/knowledge.COlULHvU_Z1dyyjQ.webp"><img src="https://dify.ai/_astro/knowledge.COlULHvU_Z1dyyjQ.webp" width="230" alt="Dify Knowledge Pipeline turning documents into an indexed knowledge base."></a>
+
+<sub>图：Dify Workflow Studio canvas showing connected nodes for an AI workflow.（[来源页](https://dify.ai/)）；Dify agent configuration with tools and memory.（[来源页](https://dify.ai/)）；Dify Knowledge Pipeline turning documents into an indexed knowledge base.（[来源页](https://dify.ai/)）</sub>
+
+<sub>[编码与原文摘录](case-evidence.md#dify)</sub>
+
+#### [Langflow](https://www.langflow.org/)
+
+<sub>AI Agent 开发 · 一般图与网络 · 重点：先后与依赖方向</sub>　用拖拽组件搭 AI 流程，并在 Playground 里实时测试
+
+- 展示页（样例目录）：[Call Classification Analytics \| Langflow \| Low-code AI builder for agentic and RAG applications](https://www.langflow.org/templates/use-langflow-to-process-and-classify-call-transcripts/)（模板页列出流程组件（如 Prompt、Agent、Transcription Result Parser、Model Provider）和示例提示词；页面有 'Use for Free' 与 'Share' 按钮（未点击核对是否需要登录）。）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 7401 字、svg 74 个</sub>
+- 网页：[Test flows in the Playground \| Langflow Documentation](https://docs.langflow.org/concepts-playground)（Playground 功能页，说明可以实时测试基于 LLM 的流程的响应，页面内嵌 Playground 界面与 agent 回复的截图）
+- 网页：[What is Langflow? \| Langflow Documentation](https://docs.langflow.org/)（官方文档首页，内嵌 Basic Prompting 流程的截图）
+
+<a href="https://docs.langflow.org/assets/images/playground-34f869f8763b3c69ddcd4d365c96d0e6.png"><img src="https://docs.langflow.org/assets/images/playground-34f869f8763b3c69ddcd4d365c96d0e6.png" width="230" alt="The Langflow visual builder with the Playground active"></a> <a href="https://docs.langflow.org/assets/images/playground-with-agent-56fa39130f9a50d376ba5a226ae254f0.png"><img src="https://docs.langflow.org/assets/images/playground-with-agent-56fa39130f9a50d376ba5a226ae254f0.png" width="230" alt="Playground with agent response"></a> <a href="https://docs.langflow.org/assets/images/workspace-basic-prompting-c16e2f001725aa6dc1bc479f22aa11df.png"><img src="https://docs.langflow.org/assets/images/workspace-basic-prompting-c16e2f001725aa6dc1bc479f22aa11df.png" width="230" alt="Basic Prompting flow in Langflow"></a>
+
+<sub>图：The Langflow visual builder with the Playground active（[来源页](https://docs.langflow.org/concepts-playground)）；Playground with agent response（[来源页](https://docs.langflow.org/concepts-playground)）；Basic Prompting flow in Langflow（[来源页](https://docs.langflow.org/)）</sub>
+
+<sub>[编码与原文摘录](case-evidence.md#langflow)</sub>
+
+#### [n8n](https://github.com/n8n-io/n8n)
+
+<sub>业务自动化 · 一般图与网络 · 重点：跨视图的同一对象、时间与演化</sub>　工作流在生产中失败后，把当时的执行数据带回编辑器里调试
+
+- 展示页（样例目录）：[Discover 13200 Automation Workflows from the n8n's Community](https://n8n.io/workflows/)（页面列出社区工作流模板（标题写 'Discover 13200 Automation Workflows'），并有按分类浏览的入口：AI、Sales、IT Ops、Marketing、Document Ops、Support、Other。）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 16182 字、svg 126 个</sub>
+- 网页：[Debug executions \| Build \| n8n Docs](https://docs.n8n.io/build/understand-workflows/understand-executions/debug-executions)（文档页，主题为调试执行（Debug executions），属于 Understand executions 章节；静态 HTML 中可用图片只有图标，无功能截图）
+- 网页：[View executions for a single workflow \| Build \| n8n Docs](https://docs.n8n.io/build/understand-workflows/understand-executions/view-executions-for-a-single-workflow)（文档页，主题为查看单个工作流的执行记录；静态 HTML 中可用图片只有图标，无功能截图）
+
+<sub>[编码与原文摘录](case-evidence.md#n8n)</sub>
 
 #### [Node-RED](https://github.com/node-red/node-red)
 
@@ -281,17 +319,52 @@
 
 <sub>[编码与原文摘录](case-evidence.md#kumu)</sub>
 
-#### [Argdown](https://argdown.org/)
+#### [InfraNodus](https://infranodus.com/)
 
-<sub>论证与讨论 · 一般图与网络 · 重点：连通与邻域、关系上的类型与量</sub>　把一场辩论或论证重建成地图
+<sub>文本分析与知识发现 · 一般图与网络 · 重点：群落与相似、连通与邻域</sub>　在一大段文字里找出主要话题群和它们之间的结构空白
 
-- 展示页（可直接操作）：[Sandbox \| Argdown](https://argdown.org/sandbox/)（argdown.org 首页上 'Browser Sandbox' 链接指向 argdown.github.io/argdown/sandbox/，该地址跳转到此页）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 4471 字</sub><sub> 打开后所见：打开是左侧 Argdown 文本、右侧渲染结果（HTML / Map / JSON 标签），默认文本是 “Welcome to Argdown!” 教程</sub>
-- 网页：[A first example \| Argdown](https://argdown.org/guide/a-first-example.html)（Argdown 官方入门教程。页面说明它带读者完成一场简单辩论的重构与可视化，并介绍 Argdown 语法的主要元素。）
-- 网页：[Installing the Argdown VS Code Extension \| Argdown](https://argdown.org/guide/installing-the-vscode-extension.html)（Argdown 官方的 VS Code 扩展安装指南，页内有一张 argdown-vscode 相关图片（alt 为空）。）
+- 展示页（可直接操作）：[InfraNodus - hourlydailynews by live - Text Network Graph](https://infranodus.com/live/hourlydailynews?background=default&most_influential=bc&maxnodes=150&demo=1&defaultlabelsize=14&labelsizeratio=2&demo=1)（页面文字写明 'To change visibility, use the Filter menu above or select topics or nodes on the graph'（用上方 Filter 菜单，或点选图上的主题、节点来改变可见内容），顶部有 'visible graph / whole text / top graphs / all graphs' 切换，页面里有 'AI Text Tools' 面板）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 1584 字、canvas 6 个、svg 63 个</sub><sub> 打开后所见：打开是 hourlydailynews 的文本网络图：按主题着色的词节点与连线，左侧是原文列表，下方有 AI Insights 面板</sub>
+- 网页：[Create Your First Knowledge Graph from Any Text (No Code) - InfraNodus.Com](https://infranodus.com/tutorial/create-your-first-knowledge-graph)（教程页，说明把任意文字变成可交互的知识图谱，页面正文区分 'Topics View' 与 'Concepts View' 两个视图（页面文字：'1 Topics View 2 Concepts View'）。）
+- 网页：[Text Network Analysis and Visualization — InfraNodus.Com](https://infranodus.com/use-case/text-network-analysis)（用例页，写有 'Represent your text as a network and apply advanced graph theory tools for topic modeling, classification, and structural gap detection.'，页面嵌有 Chinese Medicine、Google 搜索结果等文本网络图。）
 
-<a href="https://argdown.org/assets/argdown-vscode-greenspan-1.8miLtm3Q.png"><img src="https://argdown.org/assets/argdown-vscode-greenspan-1.8miLtm3Q.png" width="230" alt="argdown"></a>
+<a href="https://infranodus.com/images/front/graph-visualization-popular-tweets.jpg"><img src="https://infranodus.com/images/front/graph-visualization-popular-tweets.jpg" width="230" alt="Graph visualization of the most popular tweets"></a> <a href="https://infranodus.com/images/front/graph-visualization-coronavirus-tweets.jpg"><img src="https://infranodus.com/images/front/graph-visualization-coronavirus-tweets.jpg" width="230" alt="Network Graph of the Tweets on Coronavirus"></a> <a href="https://infranodus.com/images/front/graph-chinese-medicine-tcm.jpg"><img src="https://infranodus.com/images/front/graph-chinese-medicine-tcm.jpg" width="230" alt="Mind Map of Chinese Medicine"></a>
 
-<sub>[编码与原文摘录](case-evidence.md#argdown)</sub>
+<sub>图：Graph visualization of the most popular tweets（[来源页](https://infranodus.com/graphs)）；Network Graph of the Tweets on Coronavirus（[来源页](https://infranodus.com/graphs)）；Mind Map of Chinese Medicine（[来源页](https://infranodus.com/graphs)）</sub>
+
+<sub>[编码与原文摘录](case-evidence.md#infranodus)</sub>
+
+#### [Docling Graph](https://docling-project.github.io/docling-graph/)
+
+<sub>文档处理 · 一般图与网络 · 重点：连通与邻域、关系上的类型与量</sub>　把文档变成带显式语义关系的知识图，用于需要精确实体连接的场合
+
+- 展示页（可直接操作）：[Overview - Docling Graph Documentation](https://docling-project.github.io/docling-graph/usage/examples/)（示例总览页按输入格式（URL Input、Markdown Input、DoclingDocument Input）和领域（Billing Document、ID Card、Insurance Policy、Rheology Research）分类，并列出 Workflow 1: URL → Extract → Visualize。）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 5323 字、svg 12 个</sub>
+- 网页：[Visualization - Docling Graph Documentation](https://docling-project.github.io/docling-graph/fundamentals/graph-management/visualization/)（讲交互式 HTML 可视化，页面列出 Zoom and pan 等功能，并给出 open outputs/visualization.html 的打开方法。）
+- 网页：[Docling Graph Documentation](https://docling-project.github.io/docling-graph/)（项目首页，目录下有 What is Docling Graph? 的介绍。）
+
+<sub>[编码与原文摘录](case-evidence.md#docling-graph)</sub>
+
+#### [Microsoft GraphRAG](https://microsoft.github.io/graphrag/)
+
+<sub>文本检索与知识建模 · 一般图与网络 · 重点：群落与相似、包含与层次</sub>　回答关于整个语料库的整体性问题，以及关于具体实体的局部问题
+
+- 展示页：没有找到在线展示页<sub>（官网与可视化指南中没有官方在线演示或 playground。WebSearch 只找到社区项目 graphrag-visualizer 与 graphrag-workbench，不是官方，也未找到可直接打开的托管页…）</sub>
+- 网页：[Welcome - GraphRAG](https://microsoft.github.io/graphrag/)（官方首页，嵌有 Figure 1 知识图谱图，正文说明图中圆圈是实体、大小表示度数、颜色表示社区。）
+- 网页：[Visualization Guide - GraphRAG](https://microsoft.github.io/graphrag/visualization_guide/)（可视化指南，讲如何把输出的 graph.graphml 导入 Gephi，页面含 Gephi 界面截图。）
+
+<a href="https://microsoft.github.io/graphrag/img/GraphRag-Figure1.jpg"><img src="https://microsoft.github.io/graphrag/img/GraphRag-Figure1.jpg" width="230" alt="Figure 1: LLM-generated knowledge graph built from a private dataset using GPT-4 Turbo."></a> <a href="https://microsoft.github.io/graphrag/img/viz_guide/gephi-initial-graph-example.png"><img src="https://microsoft.github.io/graphrag/img/viz_guide/gephi-initial-graph-example.png" width="230" alt="A basic graph visualization by Gephi"></a> <a href="https://microsoft.github.io/graphrag/img/viz_guide/gephi-appearance-pane.png"><img src="https://microsoft.github.io/graphrag/img/viz_guide/gephi-appearance-pane.png" width="230" alt="A view of Gephi"></a>
+
+<sub>图：Figure 1: An LLM-generated knowledge graph built using GPT-4 Turbo.（[来源页](https://microsoft.github.io/graphrag/)）；A basic graph visualization by Gephi（[来源页](https://microsoft.github.io/graphrag/visualization_guide/)）；A view of Gephi（[来源页](https://microsoft.github.io/graphrag/visualization_guide/)）</sub>
+
+<sub>[编码与原文摘录](case-evidence.md#graphrag)</sub>
+
+#### [LightRAG](https://github.com/HKUDS/LightRAG)
+
+<sub>文本检索与知识建模 · 一般图与网络 · 重点：连通与邻域</sub>　用图结构配合向量做检索，并用网页看板查看知识
+
+- 展示页：没有找到在线展示页<sub>（没有找到官方托管的在线演示。README 只链接了 YouTube 视频（https://www.youtube.com/watch?v=g21royNJ4fw，标为 video demo）；视频不是可直接操作的页面…）</sub>
+- 网页：[lightrag-hku · PyPI](https://pypi.org/project/lightrag-hku/)（包的 PyPI 项目页，README 嵌有 LightRAG Diagram 与一张 iShot 截图，并介绍 LightRAG WebUI（2024.11 新功能）。）
+
+<sub>[编码与原文摘录](case-evidence.md#lightrag)</sub>
 
 #### [Graphiti](https://help.getzep.com/graphiti/getting-started/overview)
 
@@ -391,18 +464,6 @@
 
 <sub>[编码与原文摘录](case-evidence.md#dsm)</sub>
 
-#### [CmapTools 概念图](https://cmap.ihmc.us/)
-
-<sub>教育与知识建模 · 一般图与网络 · 重点：包含与层次、连通与邻域</sub>　围绕一个焦点问题组织并表示知识，发现概念之间的跨联
-
-- 展示页（样例目录）：[Cmap \| Cmap Software](https://cmap.ihmc.us/docs/itinerary.php)（学习页 https://cmap.ihmc.us/docs/learn.php 写：点击 'Click on this image to get started' 的图片进入 Beginner's Itinerary；概念图显示后，点击概念下方的图标可列出相关资源链接。itinerary.php 页面文字为 'View this tutorial video to learn how to open links form this Itinerary'）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 517 字</sub><sub> 打开后所见：只渲染出页头和 “View this page on desktop or tablet”，概念图没有出现</sub>
-- 网页：[Cmap Cloud & CmapTools in the Cloud \| Cmap](https://cmap.ihmc.us/cmap-cloud/)（页面说明 Cmap Cloud 可用网页浏览器构建和分享概念图，CmapTools in the Cloud 是可在主流桌面浏览器运行的网页版，列出了拖放编辑、导出 CXL/JPG/SVG 等功能。）
-- 网页：[Cmap \| Cmap Software](https://cmap.ihmc.us/docs/learn.php)（学习资源页，列出 Beginner's Itinerary、'Concept Map about Concept Maps' 等概念图和文档，并有可点击进入概念图的入口。）
-
-<a href="https://cmap.ihmc.us/docs/img/build-concept-maps.png"><img src="https://cmap.ihmc.us/docs/img/build-concept-maps.png" width="230" alt="cmaptools"></a>
-
-<sub>[编码与原文摘录](case-evidence.md#cmaptools)</sub>
-
 #### [Luhmann 的卡片盒](https://www.uni-bielefeld.de/fakultaeten/soziologie/forschung/luhmann-archiv/pdf/jschmidt_zettelkasten-als-uberraschungsgenerator.pdf)
 
 <sub>知识管理与写作 · 一般图与网络 · 重点：连通与邻域、跨视图的同一对象</sub>　让积累的笔记自己产生不显而易见的联想（“卡片盒为什么能发展出自己的创造力”）
@@ -410,15 +471,6 @@
 - 展示页：没有找到在线展示页<sub>（Luhmann-Archiv 相关页面（首页、教程页 /bestand/zettelkasten/tutorial、检索页 /bestand/zettelkasten/suche、/nachlass/zettelkast…）</sub>
 
 <sub>[编码与原文摘录](case-evidence.md#zettelkasten)</sub>
-
-#### [图尔敏论证模型](https://www.blinn.edu/writing-centers/wide/toulmin-argument.html)
-
-<sub>论证与写作 · 一般图与网络 · 重点：关系上的类型与量、来源与证据</sub>　分析并检验一个论证站不站得住，找出最弱的一环
-
-- 展示页：没有找到在线展示页<sub>（未找到官方在线演示。Toulmin 模型是论证分析框架；搜索只找到描述在线工具的 arXiv 论文（ARG，arXiv 1507.03682），未找到其站点地址，未核对，未收。）</sub>
-- 网页：[Toulmin Argument](https://www.blinn.edu/writing-centers/wide/toulmin-argument.html)（学院写作中心的说明页，用文字拆解 claim、data（grounds）、warrant，并以牙齿美白广告为例给出 'Example Toulmin Breakdown'。）
-
-<sub>[编码与原文摘录](case-evidence.md#toulmin)</sub>
 
 <!-- /gen -->
 
@@ -559,6 +611,20 @@
 
 <sub>[编码与原文摘录](case-evidence.md#langwatch)</sub>
 
+#### [AFFiNE](https://affine.pro/)
+
+<sub>知识管理 · 层级与树 · 重点：跨视图的同一对象</sub>　同一批内容既要线性地写，又要空间化地摆
+
+- 展示页（样例目录）：[Free Templates for Notes, Planning & Whiteboards \| AFFiNE](https://affine.pro/templates)（页面是模板目录，列出多个模板的链接（如 'Free Blank Checklist Template with a Filled Example'、'Case Brief Example: Facts, Issues, Holding, Reasoning'），每条指向单独的模板页；未逐个打开模板页核对。）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 18918 字、svg 40 个</sub>
+- 网页：[Online Whiteboard for Brainstorming and Planning \| AFFiNE](https://affine.pro/whiteboard)（页面围绕在线白板（Edgeless 画布），正文有 'Draw, Plan, and Share Ideas Seamlessly'、'Endless Possibilities with the Edgeless Canvas' 等句子，并列出 Monthly Weekly Planner、Cornell Notes Template、Habit Tracker 等白板模板。）
+- 网页：[Collaborative Docs for Notes and Structured Writing \| AFFiNE](https://affine.pro/pagedoc)（页面围绕 Page Docs 文档编辑，正文标题为 'Beyond Text: Build Rich, Interactive Documents'，列出 Blocks、Table、PDF Preview、Image & Videos 等内容块。）
+
+<a href="https://affine.pro/edgeless/monthly-weekly-planner-slide.webp"><img src="https://affine.pro/edgeless/monthly-weekly-planner-slide.webp" width="230" alt="Monthly Weekly Planner — Stay Organized, Achieve More"></a> <a href="https://affine.pro/edgeless/cornell-notes-template-slide.webp"><img src="https://affine.pro/edgeless/cornell-notes-template-slide.webp" width="230" alt="Cornell Notes Template — Write, Draw all in one Template"></a> <a href="https://affine.pro/edgeless/habit-tracker-slide.webp"><img src="https://affine.pro/edgeless/habit-tracker-slide.webp" width="230" alt="Habit Tracker — Monitor Habits, Boost Motivation"></a>
+
+<sub>图：Monthly Weekly Planner — Stay Organized, Achieve More（[来源页](https://affine.pro/whiteboard)）；Cornell Notes Template — Write, Draw all in one Template（[来源页](https://affine.pro/whiteboard)）；Habit Tracker — Monitor Habits, Boost Motivation（[来源页](https://affine.pro/whiteboard)）</sub>
+
+<sub>[编码与原文摘录](case-evidence.md#affine)</sub>
+
 #### [Tree-sitter](https://github.com/tree-sitter/tree-sitter)
 
 <sub>软件工程 · 层级与树 · 重点：包含与层次</sub>　把源码解析成语法树，并随编辑增量更新
@@ -568,6 +634,20 @@
 - 网页：[Introduction - Tree-sitter](https://tree-sitter.github.io/tree-sitter/)（官网首页，首段说明 Tree-sitter 是解析器生成工具和增量解析库。）
 
 <sub>[编码与原文摘录](case-evidence.md#tree-sitter)</sub>
+
+#### [Docling](https://github.com/docling-project/docling)
+
+<sub>文档处理 · 层级与树 · 重点：包含与层次、来源与证据</sub>　把 PDF 等文档转成保留版面和阅读顺序的统一结构
+
+- 展示页（可直接操作）：[SmolDocling - a Hugging Face Space by docling-project](https://huggingface.co/spaces/docling-project/SmolDocling-256M-Demo)<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 108 字、svg 16 个</sub><sub> 打开后所见：打开是 SmolDocling-256M 的 Hugging Face Space：一个聊天框加几个示例提示（Convert this page to docling 等），要上传图片才能转换</sub>
+- 网页：[Architecture - Docling](https://docling-project.github.io/docling/concepts/architecture/)（页面标题为 Architecture，并嵌有架构图 docling_arch.png。）
+- 网页：[Docling document - Docling](https://docling-project.github.io/docling/concepts/docling_document/)（概念页，标题为 Docling document，嵌有两张文档层级图。）
+
+<a href="https://docling-project.github.io/docling/assets/docling_arch.png"><img src="https://docling-project.github.io/docling/assets/docling_arch.png" width="230" alt="docling_architecture"></a> <a href="https://docling-project.github.io/docling/assets/docling_doc_hierarchy_1.png"><img src="https://docling-project.github.io/docling/assets/docling_doc_hierarchy_1.png" width="230" alt="doc_hierarchy_1"></a> <a href="https://docling-project.github.io/docling/assets/docling_doc_hierarchy_2.png"><img src="https://docling-project.github.io/docling/assets/docling_doc_hierarchy_2.png" width="230" alt="doc_hierarchy_2"></a>
+
+<sub>图：docling_architecture（[来源页](https://docling-project.github.io/docling/concepts/architecture/)）；doc_hierarchy_1（[来源页](https://docling-project.github.io/docling/concepts/docling_document/)）；doc_hierarchy_2（[来源页](https://docling-project.github.io/docling/concepts/docling_document/)）</sub>
+
+<sub>[编码与原文摘录](case-evidence.md#docling)</sub>
 
 #### [Nextstrain / Auspice](https://docs.nextstrain.org/en/latest/learn/interpret/interacting-with-nextstrain.html)
 
@@ -610,18 +690,6 @@
 <sub>图：pathway browser labelled（[来源页](https://reactome.org/userguide/pathway-browser)）；subpathway selection（[来源页](https://reactome.org/userguide/pathway-browser)）；EHLD（[来源页](https://reactome.org/userguide/pathway-browser)）</sub>
 
 <sub>[编码与原文摘录](case-evidence.md#reactome)</sub>
-
-#### [Kialo 论证树](https://support.kialo.com/en/)
-
-<sub>论证与讨论 · 层级与树 · 重点：包含与层次、关系上的类型与量</sub>　把一个论题的赞成与反对理由层层展开，参与者能找到自己该回应的位置
-
-- 展示页（可直接操作）：[Should US internet platforms be able to remove or demote… \| Kialo](https://www.kialo.com/should-us-internet-platforms-be-able-to-remove-or-demote-speech-by-elected-public-figures-39863)（kialo.com 首页的 Explore Debates 列表中的公开辩论（首页文字含 'Explore Debates'、'Featured Popular New Hot'）；直接请求返回 200，未见登录要求）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 2934 字、svg 33 个</sub><sub> 打开后所见：先是辩论的介绍框，点 Enter 进入论点树</sub>
-- 网页：[Creating a Claim \| Kialo Help Center](https://support.kialo.com/en/hc/creating-a-claim/)（帮助中心文章，页面带有同名的 Create-a-Claim 截图（og:image 也指向该图））
-- 网页：[Navigating the Claim Menu \| Kialo Help Center](https://support.kialo.com/en/hc/navigating-the-claim-menu/)（帮助中心文章，标题为 Navigating the Claim Menu；页面上没有截图，只读到标题与导航文字）
-
-<a href="https://support.kialo.com/wp-content/uploads/sites/17/2023/04/Create-a-Claim-1024x466.png"><img src="https://support.kialo.com/wp-content/uploads/sites/17/2023/04/Create-a-Claim-1024x466.png" width="230" alt="kialo"></a>
-
-<sub>[编码与原文摘录](case-evidence.md#kialo)</sub>
 
 #### [CodeCity](https://www.inf.usi.ch/faculty/lanza/PUBS/M/Wett2008e.pdf)
 
@@ -678,6 +746,16 @@
 
 <sub>[编码与原文摘录](case-evidence.md#wikipedia-summary-style)</sub>
 
+#### [Markmap](https://markmap.js.org/docs/markmap)
+
+<sub>知识管理与写作 · 层级与树 · 重点：包含与层次</sub>　把一篇 Markdown 文档的层级直接看成一张可折叠的思维导图
+
+- 展示页（可直接操作）：[展示页](https://markmap.js.org/repl)（官方首页页面文字 'Visualize your Markdown with mindmaps' 下有 'Try it out →' 入口，链接指向 /repl。）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 1517 字、svg 1 个</sub>
+- 网页：[markmap](https://markmap.js.org/)（官方首页，页面文字为 'Visualize your Markdown with mindmaps'，并有 'Try it out →' 入口。）
+- 网页：[markmap - markmap docs](https://markmap.js.org/docs/markmap)（文档的 'What is markmap?' 入门页，页面说明 markmap 是 Markdown 与思维导图的结合。）
+
+<sub>[编码与原文摘录](case-evidence.md#markmap)</sub>
+
 <!-- /gen -->
 
 ## 有向无环图
@@ -706,44 +784,6 @@
 <sub>图：Marquez UI Screencaps（[来源页](https://marquezproject.ai/)）</sub>
 
 <sub>[编码与原文摘录](case-evidence.md#marquez)</sub>
-
-#### [Dify](https://dify.ai/)
-
-<sub>AI Agent 开发 · 有向无环图 · 重点：先后与依赖方向、对象上的度量</sub>　搭建 AI 工作流，并逐节点测试、检查数据怎么流过去
-
-- 展示页（样例目录）：[Dify Marketplace](https://marketplace.dify.ai/templates)（页面顶部有 'Plugins' 与 'Templates' 两个标签，Templates 下列出模板卡片，每张带 'View' 按钮（如 'AI Business Analyst'、'Offer Arena'）；部分卡片标注 'Verified by a Dify partner'。）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 31600 字、svg 1 个</sub>
-- 网页：[Dify - The Platform for Production-Ready Agentic Workflows](https://dify.ai/)（官网首页，列出 Workflow Studio、Knowledge Pipeline 等产品模块，并附对应截图）
-- 网页：[Single Node - Dify Docs](https://docs.dify.ai/en/cloud/use-dify/debug/step-run)（单节点运行调试的文档页，内嵌节点运行输出相关截图（alt：'When You Run Nodes One at a Time, Their Outputs Are Cached in the Variable'））
-
-<a href="https://dify.ai/_astro/workflow.Dl7EY_X1_rPiFq.webp"><img src="https://dify.ai/_astro/workflow.Dl7EY_X1_rPiFq.webp" width="230" alt="Dify Workflow Studio canvas showing connected nodes for an AI workflow."></a> <a href="https://dify.ai/_astro/agent.Ba3STi-y_Z18Lowi.webp"><img src="https://dify.ai/_astro/agent.Ba3STi-y_Z18Lowi.webp" width="230" alt="Dify agent configuration with tools and memory."></a> <a href="https://dify.ai/_astro/knowledge.COlULHvU_Z1dyyjQ.webp"><img src="https://dify.ai/_astro/knowledge.COlULHvU_Z1dyyjQ.webp" width="230" alt="Dify Knowledge Pipeline turning documents into an indexed knowledge base."></a>
-
-<sub>图：Dify Workflow Studio canvas showing connected nodes for an AI workflow.（[来源页](https://dify.ai/)）；Dify agent configuration with tools and memory.（[来源页](https://dify.ai/)）；Dify Knowledge Pipeline turning documents into an indexed knowledge base.（[来源页](https://dify.ai/)）</sub>
-
-<sub>[编码与原文摘录](case-evidence.md#dify)</sub>
-
-#### [Langflow](https://www.langflow.org/)
-
-<sub>AI Agent 开发 · 有向无环图 · 重点：先后与依赖方向</sub>　用拖拽组件搭 AI 流程，并在 Playground 里实时测试
-
-- 展示页（样例目录）：[Call Classification Analytics \| Langflow \| Low-code AI builder for agentic and RAG applications](https://www.langflow.org/templates/use-langflow-to-process-and-classify-call-transcripts/)（模板页列出流程组件（如 Prompt、Agent、Transcription Result Parser、Model Provider）和示例提示词；页面有 'Use for Free' 与 'Share' 按钮（未点击核对是否需要登录）。）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 7401 字、svg 74 个</sub>
-- 网页：[Test flows in the Playground \| Langflow Documentation](https://docs.langflow.org/concepts-playground)（Playground 功能页，说明可以实时测试基于 LLM 的流程的响应，页面内嵌 Playground 界面与 agent 回复的截图）
-- 网页：[What is Langflow? \| Langflow Documentation](https://docs.langflow.org/)（官方文档首页，内嵌 Basic Prompting 流程的截图）
-
-<a href="https://docs.langflow.org/assets/images/playground-34f869f8763b3c69ddcd4d365c96d0e6.png"><img src="https://docs.langflow.org/assets/images/playground-34f869f8763b3c69ddcd4d365c96d0e6.png" width="230" alt="The Langflow visual builder with the Playground active"></a> <a href="https://docs.langflow.org/assets/images/playground-with-agent-56fa39130f9a50d376ba5a226ae254f0.png"><img src="https://docs.langflow.org/assets/images/playground-with-agent-56fa39130f9a50d376ba5a226ae254f0.png" width="230" alt="Playground with agent response"></a> <a href="https://docs.langflow.org/assets/images/workspace-basic-prompting-c16e2f001725aa6dc1bc479f22aa11df.png"><img src="https://docs.langflow.org/assets/images/workspace-basic-prompting-c16e2f001725aa6dc1bc479f22aa11df.png" width="230" alt="Basic Prompting flow in Langflow"></a>
-
-<sub>图：The Langflow visual builder with the Playground active（[来源页](https://docs.langflow.org/concepts-playground)）；Playground with agent response（[来源页](https://docs.langflow.org/concepts-playground)）；Basic Prompting flow in Langflow（[来源页](https://docs.langflow.org/)）</sub>
-
-<sub>[编码与原文摘录](case-evidence.md#langflow)</sub>
-
-#### [n8n](https://github.com/n8n-io/n8n)
-
-<sub>业务自动化 · 有向无环图 · 重点：跨视图的同一对象、时间与演化</sub>　工作流在生产中失败后，把当时的执行数据带回编辑器里调试
-
-- 展示页（样例目录）：[Discover 13200 Automation Workflows from the n8n's Community](https://n8n.io/workflows/)（页面列出社区工作流模板（标题写 'Discover 13200 Automation Workflows'），并有按分类浏览的入口：AI、Sales、IT Ops、Marketing、Document Ops、Support、Other。）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 16182 字、svg 126 个</sub>
-- 网页：[Debug executions \| Build \| n8n Docs](https://docs.n8n.io/build/understand-workflows/understand-executions/debug-executions)（文档页，主题为调试执行（Debug executions），属于 Understand executions 章节；静态 HTML 中可用图片只有图标，无功能截图）
-- 网页：[View executions for a single workflow \| Build \| n8n Docs](https://docs.n8n.io/build/understand-workflows/understand-executions/view-executions-for-a-single-workflow)（文档页，主题为查看单个工作流的执行记录；静态 HTML 中可用图片只有图标，无功能截图）
-
-<sub>[编码与原文摘录](case-evidence.md#n8n)</sub>
 
 #### [AgentEnsemble](https://agentensemble.github.io/agentensemble/)
 
@@ -900,91 +940,7 @@
 ## 文本与文档
 
 <!-- gen:gallery:text -->
-#### [AFFiNE](https://affine.pro/)
-
-<sub>知识管理 · 文本与文档 · 重点：跨视图的同一对象</sub>　同一批内容既要线性地写，又要空间化地摆
-
-- 展示页（样例目录）：[Free Templates for Notes, Planning & Whiteboards \| AFFiNE](https://affine.pro/templates)（页面是模板目录，列出多个模板的链接（如 'Free Blank Checklist Template with a Filled Example'、'Case Brief Example: Facts, Issues, Holding, Reasoning'），每条指向单独的模板页；未逐个打开模板页核对。）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 18918 字、svg 40 个</sub>
-- 网页：[Online Whiteboard for Brainstorming and Planning \| AFFiNE](https://affine.pro/whiteboard)（页面围绕在线白板（Edgeless 画布），正文有 'Draw, Plan, and Share Ideas Seamlessly'、'Endless Possibilities with the Edgeless Canvas' 等句子，并列出 Monthly Weekly Planner、Cornell Notes Template、Habit Tracker 等白板模板。）
-- 网页：[Collaborative Docs for Notes and Structured Writing \| AFFiNE](https://affine.pro/pagedoc)（页面围绕 Page Docs 文档编辑，正文标题为 'Beyond Text: Build Rich, Interactive Documents'，列出 Blocks、Table、PDF Preview、Image & Videos 等内容块。）
-
-<a href="https://affine.pro/edgeless/monthly-weekly-planner-slide.webp"><img src="https://affine.pro/edgeless/monthly-weekly-planner-slide.webp" width="230" alt="Monthly Weekly Planner — Stay Organized, Achieve More"></a> <a href="https://affine.pro/edgeless/cornell-notes-template-slide.webp"><img src="https://affine.pro/edgeless/cornell-notes-template-slide.webp" width="230" alt="Cornell Notes Template — Write, Draw all in one Template"></a> <a href="https://affine.pro/edgeless/habit-tracker-slide.webp"><img src="https://affine.pro/edgeless/habit-tracker-slide.webp" width="230" alt="Habit Tracker — Monitor Habits, Boost Motivation"></a>
-
-<sub>图：Monthly Weekly Planner — Stay Organized, Achieve More（[来源页](https://affine.pro/whiteboard)）；Cornell Notes Template — Write, Draw all in one Template（[来源页](https://affine.pro/whiteboard)）；Habit Tracker — Monitor Habits, Boost Motivation（[来源页](https://affine.pro/whiteboard)）</sub>
-
-<sub>[编码与原文摘录](case-evidence.md#affine)</sub>
-
-#### [InfraNodus](https://infranodus.com/)
-
-<sub>文本分析与知识发现 · 文本与文档 · 重点：群落与相似、连通与邻域</sub>　在一大段文字里找出主要话题群和它们之间的结构空白
-
-- 展示页（可直接操作）：[InfraNodus - hourlydailynews by live - Text Network Graph](https://infranodus.com/live/hourlydailynews?background=default&most_influential=bc&maxnodes=150&demo=1&defaultlabelsize=14&labelsizeratio=2&demo=1)（页面文字写明 'To change visibility, use the Filter menu above or select topics or nodes on the graph'（用上方 Filter 菜单，或点选图上的主题、节点来改变可见内容），顶部有 'visible graph / whole text / top graphs / all graphs' 切换，页面里有 'AI Text Tools' 面板）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 1584 字、canvas 6 个、svg 63 个</sub><sub> 打开后所见：打开是 hourlydailynews 的文本网络图：按主题着色的词节点与连线，左侧是原文列表，下方有 AI Insights 面板</sub>
-- 网页：[Create Your First Knowledge Graph from Any Text (No Code) - InfraNodus.Com](https://infranodus.com/tutorial/create-your-first-knowledge-graph)（教程页，说明把任意文字变成可交互的知识图谱，页面正文区分 'Topics View' 与 'Concepts View' 两个视图（页面文字：'1 Topics View 2 Concepts View'）。）
-- 网页：[Text Network Analysis and Visualization — InfraNodus.Com](https://infranodus.com/use-case/text-network-analysis)（用例页，写有 'Represent your text as a network and apply advanced graph theory tools for topic modeling, classification, and structural gap detection.'，页面嵌有 Chinese Medicine、Google 搜索结果等文本网络图。）
-
-<a href="https://infranodus.com/images/front/graph-visualization-popular-tweets.jpg"><img src="https://infranodus.com/images/front/graph-visualization-popular-tweets.jpg" width="230" alt="Graph visualization of the most popular tweets"></a> <a href="https://infranodus.com/images/front/graph-visualization-coronavirus-tweets.jpg"><img src="https://infranodus.com/images/front/graph-visualization-coronavirus-tweets.jpg" width="230" alt="Network Graph of the Tweets on Coronavirus"></a> <a href="https://infranodus.com/images/front/graph-chinese-medicine-tcm.jpg"><img src="https://infranodus.com/images/front/graph-chinese-medicine-tcm.jpg" width="230" alt="Mind Map of Chinese Medicine"></a>
-
-<sub>图：Graph visualization of the most popular tweets（[来源页](https://infranodus.com/graphs)）；Network Graph of the Tweets on Coronavirus（[来源页](https://infranodus.com/graphs)）；Mind Map of Chinese Medicine（[来源页](https://infranodus.com/graphs)）</sub>
-
-<sub>[编码与原文摘录](case-evidence.md#infranodus)</sub>
-
-#### [Docling](https://github.com/docling-project/docling)
-
-<sub>文档处理 · 文本与文档 · 重点：包含与层次、来源与证据</sub>　把 PDF 等文档转成保留版面和阅读顺序的统一结构
-
-- 展示页（可直接操作）：[SmolDocling - a Hugging Face Space by docling-project](https://huggingface.co/spaces/docling-project/SmolDocling-256M-Demo)<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 108 字、svg 16 个</sub><sub> 打开后所见：打开是 SmolDocling-256M 的 Hugging Face Space：一个聊天框加几个示例提示（Convert this page to docling 等），要上传图片才能转换</sub>
-- 网页：[Architecture - Docling](https://docling-project.github.io/docling/concepts/architecture/)（页面标题为 Architecture，并嵌有架构图 docling_arch.png。）
-- 网页：[Docling document - Docling](https://docling-project.github.io/docling/concepts/docling_document/)（概念页，标题为 Docling document，嵌有两张文档层级图。）
-
-<a href="https://docling-project.github.io/docling/assets/docling_arch.png"><img src="https://docling-project.github.io/docling/assets/docling_arch.png" width="230" alt="docling_architecture"></a> <a href="https://docling-project.github.io/docling/assets/docling_doc_hierarchy_1.png"><img src="https://docling-project.github.io/docling/assets/docling_doc_hierarchy_1.png" width="230" alt="doc_hierarchy_1"></a> <a href="https://docling-project.github.io/docling/assets/docling_doc_hierarchy_2.png"><img src="https://docling-project.github.io/docling/assets/docling_doc_hierarchy_2.png" width="230" alt="doc_hierarchy_2"></a>
-
-<sub>图：docling_architecture（[来源页](https://docling-project.github.io/docling/concepts/architecture/)）；doc_hierarchy_1（[来源页](https://docling-project.github.io/docling/concepts/docling_document/)）；doc_hierarchy_2（[来源页](https://docling-project.github.io/docling/concepts/docling_document/)）</sub>
-
-<sub>[编码与原文摘录](case-evidence.md#docling)</sub>
-
-#### [Docling Graph](https://docling-project.github.io/docling-graph/)
-
-<sub>文档处理 · 文本与文档 · 重点：连通与邻域、关系上的类型与量</sub>　把文档变成带显式语义关系的知识图，用于需要精确实体连接的场合
-
-- 展示页（可直接操作）：[Overview - Docling Graph Documentation](https://docling-project.github.io/docling-graph/usage/examples/)（示例总览页按输入格式（URL Input、Markdown Input、DoclingDocument Input）和领域（Billing Document、ID Card、Insurance Policy、Rheology Research）分类，并列出 Workflow 1: URL → Extract → Visualize。）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 5323 字、svg 12 个</sub>
-- 网页：[Visualization - Docling Graph Documentation](https://docling-project.github.io/docling-graph/fundamentals/graph-management/visualization/)（讲交互式 HTML 可视化，页面列出 Zoom and pan 等功能，并给出 open outputs/visualization.html 的打开方法。）
-- 网页：[Docling Graph Documentation](https://docling-project.github.io/docling-graph/)（项目首页，目录下有 What is Docling Graph? 的介绍。）
-
-<sub>[编码与原文摘录](case-evidence.md#docling-graph)</sub>
-
-#### [Microsoft GraphRAG](https://microsoft.github.io/graphrag/)
-
-<sub>文本检索与知识建模 · 文本与文档 · 重点：群落与相似、包含与层次</sub>　回答关于整个语料库的整体性问题，以及关于具体实体的局部问题
-
-- 展示页：没有找到在线展示页<sub>（官网与可视化指南中没有官方在线演示或 playground。WebSearch 只找到社区项目 graphrag-visualizer 与 graphrag-workbench，不是官方，也未找到可直接打开的托管页…）</sub>
-- 网页：[Welcome - GraphRAG](https://microsoft.github.io/graphrag/)（官方首页，嵌有 Figure 1 知识图谱图，正文说明图中圆圈是实体、大小表示度数、颜色表示社区。）
-- 网页：[Visualization Guide - GraphRAG](https://microsoft.github.io/graphrag/visualization_guide/)（可视化指南，讲如何把输出的 graph.graphml 导入 Gephi，页面含 Gephi 界面截图。）
-
-<a href="https://microsoft.github.io/graphrag/img/GraphRag-Figure1.jpg"><img src="https://microsoft.github.io/graphrag/img/GraphRag-Figure1.jpg" width="230" alt="Figure 1: LLM-generated knowledge graph built from a private dataset using GPT-4 Turbo."></a> <a href="https://microsoft.github.io/graphrag/img/viz_guide/gephi-initial-graph-example.png"><img src="https://microsoft.github.io/graphrag/img/viz_guide/gephi-initial-graph-example.png" width="230" alt="A basic graph visualization by Gephi"></a> <a href="https://microsoft.github.io/graphrag/img/viz_guide/gephi-appearance-pane.png"><img src="https://microsoft.github.io/graphrag/img/viz_guide/gephi-appearance-pane.png" width="230" alt="A view of Gephi"></a>
-
-<sub>图：Figure 1: An LLM-generated knowledge graph built using GPT-4 Turbo.（[来源页](https://microsoft.github.io/graphrag/)）；A basic graph visualization by Gephi（[来源页](https://microsoft.github.io/graphrag/visualization_guide/)）；A view of Gephi（[来源页](https://microsoft.github.io/graphrag/visualization_guide/)）</sub>
-
-<sub>[编码与原文摘录](case-evidence.md#graphrag)</sub>
-
-#### [LightRAG](https://github.com/HKUDS/LightRAG)
-
-<sub>文本检索与知识建模 · 文本与文档 · 重点：连通与邻域</sub>　用图结构配合向量做检索，并用网页看板查看知识
-
-- 展示页：没有找到在线展示页<sub>（没有找到官方托管的在线演示。README 只链接了 YouTube 视频（https://www.youtube.com/watch?v=g21royNJ4fw，标为 video demo）；视频不是可直接操作的页面…）</sub>
-- 网页：[lightrag-hku · PyPI](https://pypi.org/project/lightrag-hku/)（包的 PyPI 项目页，README 嵌有 LightRAG Diagram 与一张 iShot 截图，并介绍 LightRAG WebUI（2024.11 新功能）。）
-
-<sub>[编码与原文摘录](case-evidence.md#lightrag)</sub>
-
-#### [Markmap](https://markmap.js.org/docs/markmap)
-
-<sub>知识管理与写作 · 文本与文档 · 重点：包含与层次</sub>　把一篇 Markdown 文档的层级直接看成一张可折叠的思维导图
-
-- 展示页（可直接操作）：[展示页](https://markmap.js.org/repl)（官方首页页面文字 'Visualize your Markdown with mindmaps' 下有 'Try it out →' 入口，链接指向 /repl。）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 1517 字、svg 1 个</sub>
-- 网页：[markmap](https://markmap.js.org/)（官方首页，页面文字为 'Visualize your Markdown with mindmaps'，并有 'Try it out →' 入口。）
-- 网页：[markmap - markmap docs](https://markmap.js.org/docs/markmap)（文档的 'What is markmap?' 入门页，页面说明 markmap 是 Markdown 与思维导图的结合。）
-
-<sub>[编码与原文摘录](case-evidence.md#markmap)</sub>
-
+暂无。
 <!-- /gen -->
 
 ## 序列与事件流
