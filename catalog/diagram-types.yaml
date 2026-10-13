@@ -15,7 +15,7 @@ families:
     title: 一般关系网络
     question: 谁和谁有关系？网络如何聚类？
     forms:
-      - {id: node-link, name: 节点连线图, demos: [{title: "Sigma.js 示例", url: "https://www.sigmajs.org/examples/"}]}
+      - {id: node-link, name: 节点连线图, demos: [{title: "Sigma.js 示例", url: "https://www.sigmajs.org/examples/", checked: "2026-10-13"}]}
       - {id: force-directed, name: 力导向图, demos: [{title: "Force-directed graph（D3）", url: "https://observablehq.com/@d3/force-directed-graph"}]}
       - {id: chord, name: 弦图, demos: [{title: "d3-chord 集合（D3）", url: "https://observablehq.com/collection/@d3/d3-chord"}]}
       - {id: adjacency-matrix, name: 邻接矩阵, demos: [{title: "Vega-Lite adjacency matrix", url: "https://observablehq.com/@vega/vega-lite-adjacency-matrix"}]}
@@ -25,27 +25,27 @@ families:
     title: 依赖与拓扑
     question: 谁依赖谁？是否存在循环与耦合？
     forms:
-      - {id: dependency-graph, name: 有向依赖图, demos: [{title: "dependency-cruiser 3D 图演示", url: "https://sverweij.github.io/dependency-cruiser-repro-repo/458/"}]}
-      - {id: dag, name: DAG 图, demos: [{title: "Dagre 交互演示", url: "https://dagrejs.github.io/project/dagre-d3/latest/demo/interactive-demo.html"}]}
-      - {id: dsm, name: 设计结构矩阵, demos: [{title: "DSMweb：如何读 DSM", url: "https://dsmweb.org/reading-a-dsm/"}]}
+      - {id: dependency-graph, name: 有向依赖图, demos: [{title: "dependency-cruiser 3D 图演示", url: "https://sverweij.github.io/dependency-cruiser-repro-repo/458/", checked: "2026-10-13"}]}
+      - {id: dag, name: DAG 图, demos: [{title: "Dagre 交互演示", url: "https://dagrejs.github.io/project/dagre-d3/latest/demo/interactive-demo.html", checked: "2026-10-13"}]}
+      - {id: dsm, name: 设计结构矩阵, demos: [{title: "DSMweb：如何读 DSM", url: "https://dsmweb.org/reading-a-dsm/", checked: "2026-10-13"}]}
 
   - id: process
     title: 流程与控制
     question: 一个过程如何分支、执行和转移？
     forms:
-      - {id: flowchart, name: 流程图, demos: [{title: "Mermaid 流程图", url: "https://mermaid.js.org/syntax/flowchart.html"}]}
-      - {id: bpmn, name: BPMN, demos: [{title: "bpmn.io 在线编辑器", url: "https://demo.bpmn.io/"}]}
-      - {id: swimlane, name: 泳道图, demos: [{title: "draw.io 泳道流程图", url: "https://www.drawio.com/docs/diagram-types/swimlane-diagrams/"}]}
-      - {id: state-machine, name: 状态机图, demos: [{title: "Mermaid 状态图", url: "https://mermaid.js.org/syntax/stateDiagram.html"}]}
+      - {id: flowchart, name: 流程图, demos: [{title: "Mermaid 流程图", url: "https://mermaid.js.org/syntax/flowchart.html", checked: "2026-10-13"}]}
+      - {id: bpmn, name: BPMN, demos: [{title: "bpmn.io 在线编辑器", url: "https://demo.bpmn.io/", checked: "2026-10-13"}]}
+      - {id: swimlane, name: 泳道图, demos: [{title: "draw.io 泳道流程图", url: "https://www.drawio.com/docs/diagram-types/swimlane-diagrams/", checked: "2026-10-13"}]}
+      - {id: state-machine, name: 状态机图, demos: [{title: "Mermaid 状态图", url: "https://mermaid.js.org/syntax/stateDiagram.html", checked: "2026-10-13"}]}
 
   - id: sequence
     title: 时序与调用
     question: 谁在什么时间调用谁？耗时在哪里？
     forms:
-      - {id: sequence-diagram, name: UML 时序图, demos: [{title: "Mermaid 时序图", url: "https://mermaid.js.org/syntax/sequenceDiagram.html"}]}
-      - {id: trace-waterfall, name: Trace 瀑布图, demos: [{title: "Jaeger 在线演示", url: "https://www.jaegertracing.io/demo/"}]}
-      - {id: gantt, name: 甘特图, demos: [{title: "Mermaid 甘特图", url: "https://mermaid.js.org/syntax/gantt.html"}]}
-      - {id: flame-graph, name: 火焰图, demos: [{title: "Brendan Gregg 火焰图", url: "https://www.brendangregg.com/flamegraphs.html"}]}
+      - {id: sequence-diagram, name: UML 时序图, demos: [{title: "Mermaid 时序图", url: "https://mermaid.js.org/syntax/sequenceDiagram.html", checked: "2026-10-13"}]}
+      - {id: trace-waterfall, name: Trace 瀑布图, demos: [{title: "Jaeger 在线演示", url: "https://www.jaegertracing.io/demo/", checked: "2026-10-13"}]}
+      - {id: gantt, name: 甘特图, demos: [{title: "Mermaid 甘特图", url: "https://mermaid.js.org/syntax/gantt.html", checked: "2026-10-13"}]}
+      - {id: flame-graph, name: 火焰图, demos: [{title: "Brendan Gregg 火焰图", url: "https://www.brendangregg.com/flamegraphs.html", checked: "2026-10-13"}]}
 
   - id: flow
     title: 流量与转化
@@ -53,53 +53,53 @@ families:
     forms:
       - {id: sankey, name: 桑基图, demos: [{title: "d3-sankey 集合（D3）", url: "https://observablehq.com/collection/@d3/d3-sankey"}]}
       - {id: alluvial, name: Alluvial 图}
-      - {id: funnel, name: 漏斗图, demos: [{title: "Funnel charts（Plotly）", url: "https://plotly.com/javascript/funnel-charts/"}]}
+      - {id: funnel, name: 漏斗图, demos: [{title: "Funnel charts（Plotly）", url: "https://plotly.com/javascript/funnel-charts/", checked: "2026-10-13"}]}
 
   - id: multidimensional
     title: 多维属性
     question: 对象在哪些维度上存在差异？
     forms:
       - {id: scatterplot-matrix, name: 散点矩阵, demos: [{title: "Scatterplot matrix（D3）", url: "https://observablehq.com/@d3/splom/2"}, {title: "Brushable scatterplot matrix（D3）", url: "https://observablehq.com/@d3/brushable-scatterplot-matrix"}]}
-      - {id: parallel-coordinates, name: 平行坐标, demos: [{title: "Parallel coordinates（D3）", url: "https://observablehq.com/notebook-kit/ex/d3/parallel-coordinates"}, {title: "Parallel coordinates（Plotly）", url: "https://plotly.com/javascript/parallel-coordinates-plot/"}]}
-      - {id: radar, name: 雷达图, demos: [{title: "Radar charts（Plotly）", url: "https://plotly.com/javascript/radar-chart/"}]}
+      - {id: parallel-coordinates, name: 平行坐标, demos: [{title: "Parallel coordinates（D3）", url: "https://observablehq.com/notebook-kit/ex/d3/parallel-coordinates"}, {title: "Parallel coordinates（Plotly）", url: "https://plotly.com/javascript/parallel-coordinates-plot/", checked: "2026-10-13"}]}
+      - {id: radar, name: 雷达图, demos: [{title: "Radar charts（Plotly）", url: "https://plotly.com/javascript/radar-chart/", checked: "2026-10-13"}]}
       - {id: heatmap, name: 热力图, demos: [{title: "D3.js Heatmap（社区笔记）", url: "https://observablehq.com/@bbischof/d3-js-heatmap"}]}
 
   - id: spatial
     title: 空间与地理
     question: 对象在真实或虚拟空间中的分布如何？
     forms:
-      - {id: map, name: 地图, demos: [{title: "deck.gl 图层示例", url: "https://deck.gl/gallery/"}]}
-      - {id: spatial-network, name: 空间网络, demos: [{title: "3D force-directed graph", url: "https://vasturiano.github.io/3d-force-graph/"}]}
-      - {id: scene-3d, name: 3D 场景, demos: [{title: "three.js 示例", url: "https://threejs.org/examples/"}]}
+      - {id: map, name: 地图, demos: [{title: "deck.gl 图层示例", url: "https://deck.gl/gallery/", checked: "2026-10-13"}]}
+      - {id: spatial-network, name: 空间网络, demos: [{title: "3D force-directed graph", url: "https://vasturiano.github.io/3d-force-graph/", checked: "2026-10-13"}]}
+      - {id: scene-3d, name: 3D 场景, demos: [{title: "three.js 示例", url: "https://threejs.org/examples/", checked: "2026-10-13"}, {title: "SkyWalking 3D 基础设施地图（交互演示）", url: "https://skywalking.apache.org/3d-map-app/", checked: "2026-10-13"}]}
 
   - id: semantic
     title: 语义与知识
     question: 概念之间有什么关系？判断有什么依据？
     forms:
       - {id: concept-map, name: 概念图}
-      - {id: knowledge-graph, name: 知识图谱, demos: [{title: "Understand Anything 演示", url: "https://understand-anything.com/"}]}
-      - {id: argument-map, name: 论证地图, demos: [{title: "Argdown 第一个例子", url: "https://argdown.org/guide/a-first-example.html"}]}
+      - {id: knowledge-graph, name: 知识图谱, demos: [{title: "Understand Anything 演示", url: "https://understand-anything.com/", checked: "2026-10-13"}]}
+      - {id: argument-map, name: 论证地图, demos: [{title: "Argdown 第一个例子", url: "https://argdown.org/guide/a-first-example.html", checked: "2026-10-13"}]}
 
   - id: dynamic
     title: 动态与演化
     question: 系统如何随时间变化？
     forms:
       - {id: dynamic-network, name: 动态网络, demos: [{title: "Temporal force-directed graph（D3）", url: "https://observablehq.com/@d3/temporal-force-directed-graph"}]}
-      - {id: event-timeline, name: 事件时间线, demos: [{title: "Mermaid 时间线", url: "https://mermaid.js.org/syntax/timeline.html"}]}
-      - {id: state-replay, name: 状态回放, demos: [{title: "21st.dev agent-trace 组件（时间线回放）", url: "https://21st.dev/@n1m4mz/components/agent-trace"}]}
+      - {id: event-timeline, name: 事件时间线, demos: [{title: "Mermaid 时间线", url: "https://mermaid.js.org/syntax/timeline.html", checked: "2026-10-13"}]}
+      - {id: state-replay, name: 状态回放, demos: [{title: "21st.dev agent-trace 组件（时间线回放）", url: "https://21st.dev/@n1m4mz/components/agent-trace", checked: "2026-10-13"}]}
 
   - id: multilevel
     title: 多层与复合结构
     question: 如何同时理解整体、局部及跨层联系？
     forms:
-      - {id: compound-graph, name: 嵌套复合图, demos: [{title: "Cytoscape.js 复合图布局演示", url: "https://js.cytoscape.org/demos/cose-bilkent-layout-compound/"}]}
+      - {id: compound-graph, name: 嵌套复合图, demos: [{title: "Cytoscape.js 复合图布局演示", url: "https://js.cytoscape.org/demos/cose-bilkent-layout-compound/", checked: "2026-10-13"}]}
       - {id: multilayer-network, name: 多层网络}
-      - {id: multiview-architecture, name: 多视图架构图, demos: [{title: "LikeC4 Big Bank 示例", url: "https://likec4.dev/showcases/bigbank/"}, {title: "Structurizr C4 示例", url: "https://docs.structurizr.com/example"}]}
+      - {id: multiview-architecture, name: 多视图架构图, demos: [{title: "LikeC4 Big Bank 示例", url: "https://likec4.dev/showcases/bigbank/", checked: "2026-10-13"}, {title: "Structurizr C4 示例", url: "https://docs.structurizr.com/example", checked: "2026-10-13"}]}
 
   - id: causal
     title: 因果与反馈
     added_by_maintainer: true
     question: 变量之间如何相互影响？有哪些反馈环？
     forms:
-      - {id: causal-loop, name: 因果回路图, demos: [{title: "Kumu 因果回路图项目", url: "https://kumu.io/tanyabeer/hewlett-foundation-madison-initiative"}]}
-      - {id: stock-flow, name: 存量流量图, demos: [{title: "Insight Maker 仿真模型（含浴缸、储蓄账户等存量流量例子）", url: "https://www.insightmaker.com/tag/simulation?page=3"}]}
+      - {id: causal-loop, name: 因果回路图, demos: [{title: "Kumu 因果回路图项目", url: "https://kumu.io/tanyabeer/hewlett-foundation-madison-initiative", checked: "2026-10-13"}]}
+      - {id: stock-flow, name: 存量流量图, demos: [{title: "Insight Maker 仿真模型（含浴缸、储蓄账户等存量流量例子）", url: "https://www.insightmaker.com/tag/simulation?page=3", checked: "2026-10-13"}]}

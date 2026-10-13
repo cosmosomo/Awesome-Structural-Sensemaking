@@ -14,6 +14,7 @@
   demo_source: search
   site: https://sverweij.github.io/dependency-cruiser/
   notes: "展示页是作者的 3D 图报告插件演示（issue 458），用它自己的源码和 React 仓库生成。"
+  demo_checked: "2026-10-13"
 
 - id: madge
   name: Madge
@@ -44,6 +45,7 @@
   summary: "源码结构及架构语义分析。"
   focus: "自动归纳组件，形成分层架构解释与可视化。"
   repo: https://github.com/CodeBoarding/CodeBoarding
+  site: https://codeboarding.org/
 
 - id: understand-anything
   name: Understand Anything
@@ -58,6 +60,7 @@
   repo: https://github.com/Egonex-AI/Understand-Anything
   notes: "以上能力来自项目文档的功能说明，未逐项做交互和输出准确率评测；据文档，结构事实部分采用 Tree-sitter 等确定性解析。"
   demo_source: report
+  demo_checked: "2026-10-13"
 
 - id: likec4
   name: LikeC4
@@ -71,6 +74,7 @@
   repo: https://github.com/likec4/likec4
   demo: https://likec4.dev/showcases/bigbank/
   demo_source: search
+  demo_checked: "2026-10-13"
 
 # ---- 流程、状态机与任务依赖 ----
 - id: bpmn-js
@@ -83,6 +87,7 @@
   repo: https://github.com/bpmn-io/bpmn-js
   demo: https://demo.bpmn.io/
   demo_source: search
+  demo_checked: "2026-10-13"
 
 # ---- Agent 与多智能体协作 ----
 - id: agentensemble-viz
@@ -95,6 +100,7 @@
   focus: "Flow View 看任务依赖、并发层级、关键路径；Timeline View 看真实起止时间、LLM 和工具调用。分别导出计划依赖 DAG 与执行 Trace。值得研究同一任务在两张视图中的身份如何保持一致，以及点击任务如何进入工具调用或会话详情。"
   docs: https://docs.agentensemble.net/guides/visualization/
   repo: https://github.com/AgentEnsemble/agentensemble
+  demo_none: "Live Dashboard 在本地运行（localhost:7329），没有托管的公开演示"
 
 - id: agentprism
   name: AgentPrism
@@ -106,10 +112,11 @@
   focus: "层次化调用树、执行时间、工具与模型调用；独立可复用的 Trace UI 设计。"
   repo: https://github.com/evilmartians/agent-prism
   status: alpha
-  notes: "项目公开标注为 Alpha。"
+  notes: "报告称项目公开标注为 Alpha。evilmartians.com 的博客、项目页和演示站正文里没有找到 Alpha 标注；搜索结果摘要称 GitHub README 标为 alpha，未核实。"
   demo: https://agent-prism.evilmartians.io/
   demo_source: search
   docs: https://evilmartians.com/chronicles/debug-ai-fast-agent-prism-open-source-library-visualize-agent-traces
+  demo_checked: "2026-10-13"
 
 # ---- Trace、调用链与执行过程 ----
 - id: otel-genai-semconv
@@ -120,8 +127,8 @@
   summary: "规定如何描述 AI / Agent / 工具调用等遥测事件。"
   focus: "数据到可视化链条的起点：Span、事件、属性、父子关系。"
   docs: https://opentelemetry.io/docs/specs/semconv/gen-ai/
-  notes: "生成式 AI 语义约定仍在演进。建库时记录具体版本和字段定义，不要当成永远稳定的统一标准。"
-  repo: https://github.com/open-telemetry/semantic-conventions
+  notes: "官方页面已写明 GenAI 语义约定迁到 open-telemetry/semantic-conventions-genai 仓库，opentelemetry.io 上的旧页面只剩迁移说明（2026-10-13 访问）。该约定仍在演进，建库时记录具体版本和字段定义，不要当成永远稳定的统一标准。"
+  repo: https://github.com/open-telemetry/semantic-conventions-genai
   added_by_maintainer: [repo]
   demo_none: "规范文档，本身没有可视化"
 
@@ -145,7 +152,8 @@
   repo: https://github.com/jaegertracing/jaeger
   demo: https://www.jaegertracing.io/demo/
   demo_source: search
-  notes: "Jaeger v1 已于 2025-12-31 终止支持，应使用 v2（官网文档摘要）。"
+  notes: "官网下载页写明 Jaeger v1 已于 2025-12-31 终止支持，v2 是基于 OpenTelemetry Collector 的新主版本（2026-10-13 核对）。"
+  demo_checked: "2026-10-13"
 
 - id: grafana-tempo
   name: Grafana Tempo
@@ -178,9 +186,10 @@
   focus: "图数据查询驱动的看板。"
   repo: https://github.com/neo4j-contrib/neodash
   status: needs-check
-  notes: "相关仓库存在维护状态变化，需要明确标注。"
+  notes: "Neo4j Labs 页面写明 NeoDash 已“毕业”为 Neo4j Dashboards，并入 Neo4j Desktop、Aura Console 和 Enterprise Studio（2026-10-13 核对）；独立的 NeoDash 仓库后续状态需核实。"
   demo: https://neodash-gallery.graphapp.io/
   demo_source: search
+  demo_checked: "2026-10-13"
 
 # ---- 技术生态与商业产品地图 ----
 - id: cncf-landscape2
@@ -193,6 +202,7 @@
   repo: https://github.com/cncf/landscape2
   demo: https://landscape.cncf.io/
   demo_source: report
+  demo_checked: "2026-10-13"
 
 - id: zalando-tech-radar
   name: Zalando Tech Radar
@@ -204,6 +214,7 @@
   repo: https://github.com/zalando/tech-radar
   demo: https://opensource.zalando.com/tech-radar/
   demo_source: search
+  demo_checked: "2026-10-13"
 
 - id: build-your-own-radar
   name: Build Your Own Radar
@@ -216,6 +227,7 @@
   demo: https://radar.thoughtworks.com/
   demo_source: search
   notes: "官方托管版要求使用 Technology Radar 固定的象限和环名称，自定义名称需自行部署；据搜索结果为 AGPL 许可。"
+  demo_checked: "2026-10-13"
 
 # ---- 三维、高维与大规模关系探索 ----
 - id: pygraphistry
@@ -228,6 +240,7 @@
   repo: https://github.com/graphistry/pygraphistry
   demo: https://pygraphistry.readthedocs.io/en/latest/demos/for_analysis.html
   demo_source: search
+  demo_checked: "2026-10-13"
 
 - id: embedding-projector
   name: Embedding Projector

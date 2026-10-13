@@ -25,6 +25,7 @@
   repo: https://github.com/vega/vega-lite
   demo: https://vega.github.io/vega-lite/examples/
   demo_source: search
+  demo_checked: "2026-10-13"
 
 - id: echarts
   name: Apache ECharts
@@ -37,6 +38,7 @@
   site: https://echarts.apache.org/
   demo: https://echarts.apache.org/examples
   demo_source: search
+  demo_checked: "2026-10-13"
 
 - id: plotly-js
   name: Plotly.js
@@ -48,6 +50,7 @@
   repo: https://github.com/plotly/plotly.js
   demo: https://plotly.com/javascript/
   demo_source: search
+  demo_checked: "2026-10-13"
 
 - id: deck-gl
   name: deck.gl
@@ -60,6 +63,7 @@
   repo: https://github.com/visgl/deck.gl
   demo: https://deck.gl/gallery/
   demo_source: search
+  demo_checked: "2026-10-13"
 
 # ---- 关系图与节点交互引擎 ----
 - id: antv-g6
@@ -70,10 +74,11 @@
   summary: "通用关系图引擎：图布局、分组、交互。"
   focus: "Combo 嵌套、聚合、折叠，复杂关系布局。适合研究复杂网络的结构呈现。"
   site: https://g6.antv.antgroup.com/
-  demo: https://g6.antv.antgroup.com/manual/behavior/collapse-expand
+  demo: https://g6.antv.antgroup.com/en/manual/behavior/collapse-expand
   repo: https://github.com/antvis/G6
   added_by_maintainer: [repo]
   demo_source: report
+  demo_checked: "2026-10-13"
 
 - id: react-flow
   name: React Flow
@@ -86,8 +91,9 @@
   demo: https://reactflow.dev/examples
   repo: https://github.com/xyflow/xyflow
   added_by_maintainer: [repo]
-  notes: "官方展开折叠等部分高级示例属于付费 Pro 内容。"
+  notes: "官方 Pro Examples 页面把 Expand and Collapse 等高级示例列为 Pro 示例（2026-10-13 核对）。"
   demo_source: report
+  demo_checked: "2026-10-13"
 
 - id: cytoscape-js
   name: Cytoscape.js
@@ -101,6 +107,7 @@
   repo: https://github.com/cytoscape/cytoscape.js
   added_by_maintainer: [repo]
   demo_source: report
+  demo_checked: "2026-10-13"
 
 - id: sigma-js
   name: Sigma.js
@@ -114,6 +121,7 @@
   added_by_maintainer: [repo]
   demo: https://www.sigmajs.org/examples/
   demo_source: search
+  demo_checked: "2026-10-13"
 
 - id: antv-x6
   name: AntV X6
@@ -125,6 +133,7 @@
   repo: https://github.com/antvis/X6
   demo: https://x6.antv.antgroup.com/examples
   demo_source: search
+  demo_checked: "2026-10-13"
 
 - id: diagram-js
   name: diagram-js
@@ -161,6 +170,7 @@
   demo: https://dagrejs.github.io/project/dagre-d3/latest/demo/interactive-demo.html
   demo_source: search
   notes: "展示页属于 dagre-d3。"
+  demo_checked: "2026-10-13"
 
 - id: graphviz
   name: Graphviz
@@ -174,6 +184,7 @@
   demo_source: search
   repo: https://gitlab.com/graphviz/graphviz
   added_by_maintainer: [repo]
+  demo_checked: "2026-10-13"
 
 - id: d3-force
   name: d3-force
@@ -206,6 +217,9 @@
   focus: "层次化复杂网络；节点、边及聚合关系的管理。"
   repo: https://github.com/iVis-at-Bilkent/cytoscape.js-complexity-management
   notes: "README 带有演示链接，但地址没有拿到；需要 Cytoscape.js 3.2.0 以上以及 fcose、cmgm.js，README 称尚未发布到 npm 和 bower。"
+  demo: https://ivis-at-bilkent.github.io/cytoscape.js-complexity-management/demo/demo.html
+  demo_source: search
+  demo_checked: "2026-10-13"
 
 # ---- 图形描述语言与模型驱动技术 ----
 - id: mermaid
@@ -220,6 +234,7 @@
   demo_source: search
   repo: https://github.com/mermaid-js/mermaid
   added_by_maintainer: [repo]
+  demo_checked: "2026-10-13"
 
 - id: plantuml
   name: PlantUML
@@ -244,6 +259,7 @@
   demo_source: search
   repo: https://github.com/terrastruct/d2
   added_by_maintainer: [repo]
+  demo_checked: "2026-10-13"
 
 - id: structurizr-dsl
   name: Structurizr DSL
@@ -256,6 +272,7 @@
   repo: https://github.com/structurizr/dsl
   demo: https://docs.structurizr.com/example
   demo_source: search
+  demo_checked: "2026-10-13"
 
 # ---- 二维无限画布与三维空间技术 ----
 - id: excalidraw
@@ -269,6 +286,7 @@
   repo: https://github.com/excalidraw/excalidraw
   demo: https://excalidraw.com/
   demo_source: search
+  demo_checked: "2026-10-13"
 
 - id: tldraw
   name: tldraw
@@ -279,9 +297,10 @@
   focus: "无限画布上的自定义对象与协作。"
   repo: https://github.com/tldraw/tldraw
   access: custom-license
-  notes: "SDK 生产使用需符合其专有许可条件。"
+  notes: "tldraw.dev/community/license 写明：默认条款下 SDK 许可只允许在开发中使用，生产环境需要试用许可或商业许可等（2026-10-13 核对）。"
   demo: https://examples.tldraw.com/
   demo_source: search
+  demo_checked: "2026-10-13"
 
 - id: three-js
   name: Three.js
@@ -293,6 +312,7 @@
   repo: https://github.com/mrdoob/three.js
   demo: https://threejs.org/examples/
   demo_source: search
+  demo_checked: "2026-10-13"
 
 - id: react-three-fiber
   name: React Three Fiber
@@ -304,6 +324,7 @@
   repo: https://github.com/pmndrs/react-three-fiber
   demo: https://r3f.docs.pmnd.rs/getting-started/examples
   demo_source: search
+  demo_checked: "2026-10-13"
 
 - id: react-force-graph
   name: React Force Graph
@@ -316,6 +337,7 @@
   repo: https://github.com/vasturiano/react-force-graph
   demo: https://vasturiano.github.io/react-force-graph/
   demo_source: search
+  demo_checked: "2026-10-13"
 
 - id: cosmos-gl
   name: Cosmos.gl
@@ -327,6 +349,9 @@
   focus: "使用 GPU 做布局计算与图形渲染，面向大规模网络。"
   repo: https://github.com/cosmosgl/graph
   docs: https://openjsf.org/blog/introducing-cosmos-gl
+  demo: https://cosmos.gl/
+  demo_source: search
+  notes: "展示页是 Storybook 示例站，页面标题是通用的 Storybook 标题，具体示例未确认。"
 
 - id: cytoscape-expand-collapse
   name: Cytoscape Expand Collapse
@@ -339,3 +364,6 @@
   added_by_maintainer: [repo]
   status: deprecated
   notes: "npm README 称仓库不再维护，并指向同一团队的 cytoscape.js-complexity-management（搜索结果摘要）。"
+  demo: https://ivis-at-bilkent.github.io/cytoscape.js-expand-collapse/demo/demo-compounds-collapsed.html
+  demo_source: search
+  demo_checked: "2026-10-13"

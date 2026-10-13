@@ -26,7 +26,7 @@
 <!-- gen:matrix: -->
 | 研究方向 | L1 通用技术能力 | L2 专项项目或可视化 | L3 综合应用 |
 | --- | --- | --- | --- |
-| 软件架构 | [AntV G6](https://g6.antv.antgroup.com/)、[ELK.js](https://github.com/kieler/elkjs)、[Graphviz](https://graphviz.org/) | [dependency-cruiser](https://sverweij.github.io/dependency-cruiser/)、[CodeBoarding](https://github.com/CodeBoarding/CodeBoarding) | [Nx](https://github.com/nrwl/nx)、[LikeC4](https://likec4.dev/)、[Backstage](https://github.com/backstage/backstage) |
+| 软件架构 | [AntV G6](https://g6.antv.antgroup.com/)、[ELK.js](https://github.com/kieler/elkjs)、[Graphviz](https://graphviz.org/) | [dependency-cruiser](https://sverweij.github.io/dependency-cruiser/)、[CodeBoarding](https://codeboarding.org/) | [Nx](https://github.com/nrwl/nx)、[LikeC4](https://likec4.dev/)、[Backstage](https://github.com/backstage/backstage) |
 | 业务流程 | [diagram-js](https://github.com/bpmn-io/diagram-js)、[React Flow](https://reactflow.dev/)、[AntV X6](https://github.com/antvis/X6) | [bpmn-js](https://github.com/bpmn-io/bpmn-js)、流程运行视图 | [Node-RED](https://github.com/node-red/node-red)、[n8n](https://github.com/n8n-io/n8n)、[Dify](https://dify.ai/) |
 | Agent 协作 | 图引擎、布局、事件流 | [AgentEnsemble Viz](https://github.com/AgentEnsemble/agentensemble)、[AgentPrism](https://github.com/evilmartians/agent-prism) | [AgentScope 2.0](https://github.com/agentscope-ai/agentscope)、[LangGraph / Studio](https://github.com/langchain-ai/langgraph) |
 | Trace | 时间线组件、数据查询与渲染 | [AgentPrism](https://github.com/evilmartians/agent-prism)、任务执行时间图 | [Langfuse](https://github.com/langfuse/langfuse)、[Arize Phoenix](https://github.com/Arize-ai/phoenix)、[Comet Opik](https://www.comet.com/site/products/opik/)、[Jaeger](https://github.com/jaegertracing/jaeger) |

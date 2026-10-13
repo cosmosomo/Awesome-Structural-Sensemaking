@@ -34,41 +34,41 @@
 | 层级与包含 | 矩形树图 | [d3-hierarchy 集合，含 treemap（D3）](https://observablehq.com/collection/@d3/d3-hierarchy) |
 | 层级与包含 | 旭日图 | [Zoomable sunburst（D3）](https://observablehq.com/@mbostock/d3-zoomable-sunburst) |
 | 层级与包含 | 冰柱图 | [Icicle（D3）](https://observablehq.com/@d3/icicle/2) |
-| 一般关系网络 | 节点连线图 | [Sigma.js 示例](https://www.sigmajs.org/examples/) |
+| 一般关系网络 | 节点连线图 | [Sigma.js 示例](https://www.sigmajs.org/examples/) ✓ |
 | 一般关系网络 | 力导向图 | [Force-directed graph（D3）](https://observablehq.com/@d3/force-directed-graph) |
 | 一般关系网络 | 弦图 | [d3-chord 集合（D3）](https://observablehq.com/collection/@d3/d3-chord) |
 | 一般关系网络 | 邻接矩阵 | [Vega-Lite adjacency matrix](https://observablehq.com/@vega/vega-lite-adjacency-matrix) |
 | 一般关系网络 | 层级边捆绑图 | [Hierarchical edge bundling（D3）](https://observablehq.com/@d3/hierarchical-edge-bundling) |
-| 依赖与拓扑 | 有向依赖图 | [dependency-cruiser 3D 图演示](https://sverweij.github.io/dependency-cruiser-repro-repo/458/) |
-| 依赖与拓扑 | DAG 图 | [Dagre 交互演示](https://dagrejs.github.io/project/dagre-d3/latest/demo/interactive-demo.html) |
-| 依赖与拓扑 | 设计结构矩阵 | [DSMweb：如何读 DSM](https://dsmweb.org/reading-a-dsm/) |
-| 流程与控制 | 流程图 | [Mermaid 流程图](https://mermaid.js.org/syntax/flowchart.html) |
-| 流程与控制 | BPMN | [bpmn.io 在线编辑器](https://demo.bpmn.io/) |
-| 流程与控制 | 泳道图 | [draw.io 泳道流程图](https://www.drawio.com/docs/diagram-types/swimlane-diagrams/) |
-| 流程与控制 | 状态机图 | [Mermaid 状态图](https://mermaid.js.org/syntax/stateDiagram.html) |
-| 时序与调用 | UML 时序图 | [Mermaid 时序图](https://mermaid.js.org/syntax/sequenceDiagram.html) |
-| 时序与调用 | Trace 瀑布图 | [Jaeger 在线演示](https://www.jaegertracing.io/demo/) |
-| 时序与调用 | 甘特图 | [Mermaid 甘特图](https://mermaid.js.org/syntax/gantt.html) |
-| 时序与调用 | 火焰图 | [Brendan Gregg 火焰图](https://www.brendangregg.com/flamegraphs.html) |
+| 依赖与拓扑 | 有向依赖图 | [dependency-cruiser 3D 图演示](https://sverweij.github.io/dependency-cruiser-repro-repo/458/) ✓ |
+| 依赖与拓扑 | DAG 图 | [Dagre 交互演示](https://dagrejs.github.io/project/dagre-d3/latest/demo/interactive-demo.html) ✓ |
+| 依赖与拓扑 | 设计结构矩阵 | [DSMweb：如何读 DSM](https://dsmweb.org/reading-a-dsm/) ✓ |
+| 流程与控制 | 流程图 | [Mermaid 流程图](https://mermaid.js.org/syntax/flowchart.html) ✓ |
+| 流程与控制 | BPMN | [bpmn.io 在线编辑器](https://demo.bpmn.io/) ✓ |
+| 流程与控制 | 泳道图 | [draw.io 泳道流程图](https://www.drawio.com/docs/diagram-types/swimlane-diagrams/) ✓ |
+| 流程与控制 | 状态机图 | [Mermaid 状态图](https://mermaid.js.org/syntax/stateDiagram.html) ✓ |
+| 时序与调用 | UML 时序图 | [Mermaid 时序图](https://mermaid.js.org/syntax/sequenceDiagram.html) ✓ |
+| 时序与调用 | Trace 瀑布图 | [Jaeger 在线演示](https://www.jaegertracing.io/demo/) ✓ |
+| 时序与调用 | 甘特图 | [Mermaid 甘特图](https://mermaid.js.org/syntax/gantt.html) ✓ |
+| 时序与调用 | 火焰图 | [Brendan Gregg 火焰图](https://www.brendangregg.com/flamegraphs.html) ✓ |
 | 流量与转化 | 桑基图 | [d3-sankey 集合（D3）](https://observablehq.com/collection/@d3/d3-sankey) |
 | 流量与转化 | Alluvial 图 | 待收集 |
-| 流量与转化 | 漏斗图 | [Funnel charts（Plotly）](https://plotly.com/javascript/funnel-charts/) |
+| 流量与转化 | 漏斗图 | [Funnel charts（Plotly）](https://plotly.com/javascript/funnel-charts/) ✓ |
 | 多维属性 | 散点矩阵 | [Scatterplot matrix（D3）](https://observablehq.com/@d3/splom/2)、[Brushable scatterplot matrix（D3）](https://observablehq.com/@d3/brushable-scatterplot-matrix) |
-| 多维属性 | 平行坐标 | [Parallel coordinates（D3）](https://observablehq.com/notebook-kit/ex/d3/parallel-coordinates)、[Parallel coordinates（Plotly）](https://plotly.com/javascript/parallel-coordinates-plot/) |
-| 多维属性 | 雷达图 | [Radar charts（Plotly）](https://plotly.com/javascript/radar-chart/) |
+| 多维属性 | 平行坐标 | [Parallel coordinates（D3）](https://observablehq.com/notebook-kit/ex/d3/parallel-coordinates)、[Parallel coordinates（Plotly）](https://plotly.com/javascript/parallel-coordinates-plot/) ✓ |
+| 多维属性 | 雷达图 | [Radar charts（Plotly）](https://plotly.com/javascript/radar-chart/) ✓ |
 | 多维属性 | 热力图 | [D3.js Heatmap（社区笔记）](https://observablehq.com/@bbischof/d3-js-heatmap) |
-| 空间与地理 | 地图 | [deck.gl 图层示例](https://deck.gl/gallery/) |
-| 空间与地理 | 空间网络 | [3D force-directed graph](https://vasturiano.github.io/3d-force-graph/) |
-| 空间与地理 | 3D 场景 | [three.js 示例](https://threejs.org/examples/) |
+| 空间与地理 | 地图 | [deck.gl 图层示例](https://deck.gl/gallery/) ✓ |
+| 空间与地理 | 空间网络 | [3D force-directed graph](https://vasturiano.github.io/3d-force-graph/) ✓ |
+| 空间与地理 | 3D 场景 | [three.js 示例](https://threejs.org/examples/) ✓、[SkyWalking 3D 基础设施地图（交互演示）](https://skywalking.apache.org/3d-map-app/) ✓ |
 | 语义与知识 | 概念图 | 待收集 |
-| 语义与知识 | 知识图谱 | [Understand Anything 演示](https://understand-anything.com/) |
-| 语义与知识 | 论证地图 | [Argdown 第一个例子](https://argdown.org/guide/a-first-example.html) |
+| 语义与知识 | 知识图谱 | [Understand Anything 演示](https://understand-anything.com/) ✓ |
+| 语义与知识 | 论证地图 | [Argdown 第一个例子](https://argdown.org/guide/a-first-example.html) ✓ |
 | 动态与演化 | 动态网络 | [Temporal force-directed graph（D3）](https://observablehq.com/@d3/temporal-force-directed-graph) |
-| 动态与演化 | 事件时间线 | [Mermaid 时间线](https://mermaid.js.org/syntax/timeline.html) |
-| 动态与演化 | 状态回放 | [21st.dev agent-trace 组件（时间线回放）](https://21st.dev/@n1m4mz/components/agent-trace) |
-| 多层与复合结构 | 嵌套复合图 | [Cytoscape.js 复合图布局演示](https://js.cytoscape.org/demos/cose-bilkent-layout-compound/) |
+| 动态与演化 | 事件时间线 | [Mermaid 时间线](https://mermaid.js.org/syntax/timeline.html) ✓ |
+| 动态与演化 | 状态回放 | [21st.dev agent-trace 组件（时间线回放）](https://21st.dev/@n1m4mz/components/agent-trace) ✓ |
+| 多层与复合结构 | 嵌套复合图 | [Cytoscape.js 复合图布局演示](https://js.cytoscape.org/demos/cose-bilkent-layout-compound/) ✓ |
 | 多层与复合结构 | 多层网络 | 待收集 |
-| 多层与复合结构 | 多视图架构图 | [LikeC4 Big Bank 示例](https://likec4.dev/showcases/bigbank/)、[Structurizr C4 示例](https://docs.structurizr.com/example) |
-| 因果与反馈 | 因果回路图 | [Kumu 因果回路图项目](https://kumu.io/tanyabeer/hewlett-foundation-madison-initiative) |
-| 因果与反馈 | 存量流量图 | [Insight Maker 仿真模型（含浴缸、储蓄账户等存量流量例子）](https://www.insightmaker.com/tag/simulation?page=3) |
+| 多层与复合结构 | 多视图架构图 | [LikeC4 Big Bank 示例](https://likec4.dev/showcases/bigbank/) ✓、[Structurizr C4 示例](https://docs.structurizr.com/example) ✓ |
+| 因果与反馈 | 因果回路图 | [Kumu 因果回路图项目](https://kumu.io/tanyabeer/hewlett-foundation-madison-initiative) ✓ |
+| 因果与反馈 | 存量流量图 | [Insight Maker 仿真模型（含浴缸、储蓄账户等存量流量例子）](https://www.insightmaker.com/tag/simulation?page=3) ✓ |
 <!-- /gen -->

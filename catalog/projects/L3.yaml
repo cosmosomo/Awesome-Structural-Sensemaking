@@ -11,8 +11,11 @@
   focus: "工作流、知识检索及执行观察；节点编辑、测试、节点结果检查、应用管理。"
   repo: https://github.com/langgenius/dify
   access: custom-license
-  notes: "使用定制许可证，不能简单标为标准 Apache-2.0。"
+  notes: "官网自称 Source-available、Apache-2.0-derivative license（dify.ai，2026-10-13 访问）；具体附加条件在 GitHub 的 LICENSE 里，未核实。展示页是官方市场，含可复制的工作流模板。"
   site: https://dify.ai/
+  demo: https://marketplace.dify.ai/
+  demo_source: search
+  demo_checked: "2026-10-13"
 
 - id: langflow
   name: Langflow
@@ -24,6 +27,10 @@
   repo: https://github.com/langflow-ai/langflow
   site: https://www.langflow.org/
   docs: https://docs.langflow.org/
+  demo: https://www.langflow.org/templates/use-langflow-to-process-and-classify-call-transcripts/
+  demo_source: search
+  notes: "展示页是官网模板页之一；模板总览页 /templates 返回 404。"
+  demo_checked: "2026-10-13"
 
 - id: n8n
   name: n8n
@@ -34,9 +41,10 @@
   focus: "自动化流程设计与执行诊断；节点编辑、运行历史、失败定位、重新执行。"
   repo: https://github.com/n8n-io/n8n
   access: source-available
-  notes: "官方明确将自身归为 fair-code / source-available，不是 OSI 意义上的开源软件。"
+  notes: "docs.n8n.io 写明采用 Sustainable Use License 与 Enterprise License，均基于 fair-code 模式（2026-10-13 核对）；报告称其不是 OSI 意义上的开源。"
   demo: https://n8n.io/workflows/
   demo_source: search
+  demo_checked: "2026-10-13"
 
 - id: node-red
   name: Node-RED
@@ -48,6 +56,7 @@
   repo: https://github.com/node-red/node-red
   demo: https://flows.nodered.org/
   demo_source: search
+  demo_checked: "2026-10-13"
 
 - id: flowise
   name: Flowise
@@ -57,10 +66,11 @@
   summary: "LLM、工具与 Agent 流程构建。"
   focus: "Agentflow 图编辑器；条件、循环、状态与工具节点。"
   repo: https://github.com/FlowiseAI/Flowise
-  status: needs-check
-  notes: "报告称原始 GitHub 仓库存在归档状态，需核查当前版本和维护主体，不能把历史仓库与持续运营的服务直接等同。"
+  status: deprecated
+  notes: "官网 flowiseai.com/sunset 宣布停止运营：2026-07-29 代码冻结，2026-08-10 仓库转为公共归档，2026-08-31 终止支持；代码仍为 Apache 2.0，可自行 fork（2026-10-13 访问）。页面仍用将来时，仓库当前是否已归档需在 GitHub 上核实。"
   site: https://flowiseai.com/
   docs: https://docs.flowiseai.com/
+  access: open-source
 
 # ---- Agent 开发、协作与管理平台 ----
 - id: agentscope
@@ -71,8 +81,10 @@
   summary: "Agent 团队编排、运行和观测。"
   focus: "团队及执行信息进入 Web UI；Agent 团队运行与实时观察。"
   repo: https://github.com/agentscope-ai/agentscope
-  notes: "旧版独立 AgentScope Studio 已不再单独维护，研究应以 2.0 的当前能力为主。搜索到的 AgentScope Studio 文档仍写“快速迭代中”，与报告“不再单独维护”的说法不一致，待核查。"
-  docs: https://docs.agentscope.io/observe-and-evaluate
+  notes: "报告称旧版独立 AgentScope Studio 已不再单独维护。doc.agentscope.io 的 Studio 页仍写着“The Studio is under fast development”，页脚年份是 2025，可能已过时；docs.agentscope.io 的 2.0.9 文档没有提到 Studio（2026-10-13 核对）。Studio 当前状态待核查。"
+  docs: https://docs.agentscope.io/
+  demo_none: "Studio 在本地运行，没有公开在线演示"
+  status: needs-check
 
 - id: langgraph
   name: LangGraph / Studio
@@ -84,6 +96,7 @@
   repo: https://github.com/langchain-ai/langgraph
   notes: "LangGraph Studio / LangSmith Studio 有账号及运行环境要求。"
   docs: https://docs.langchain.com/langsmith/studio
+  demo_none: "Studio 需账号或在本地运行，没有公开演示"
 
 - id: agentensemble
   name: AgentEnsemble
@@ -96,6 +109,7 @@
   docs: https://docs.agentensemble.net/guides/visualization/
   repo: https://github.com/AgentEnsemble/agentensemble
   added_by_maintainer: [site]
+  demo_none: "Live Dashboard 在本地运行（localhost:7329），没有托管的公开演示"
 
 - id: autogen
   name: AutoGen / AutoGen Studio
@@ -106,6 +120,7 @@
   focus: "智能体团队的可视化原型、运行测试；Studio 定位为原型，不是生产级应用。"
   repo: https://github.com/microsoft/autogen
   docs: https://microsoft.github.io/autogen/stable/user-guide/autogenstudio-user-guide/index.html
+  demo_none: "AutoGen Studio 在本地运行，没有托管的公开演示"
 
 # ---- LLM 与 Agent 可观测性平台 ----
 - id: langfuse
@@ -118,6 +133,7 @@
   repo: https://github.com/langfuse/langfuse
   demo: https://langfuse.com/docs/demo
   demo_source: search
+  demo_checked: "2026-10-13"
 
 - id: arize-phoenix
   name: Arize Phoenix
@@ -129,6 +145,7 @@
   repo: https://github.com/Arize-ai/phoenix
   demo: https://phoenix-demo.arize.com/
   demo_source: search
+  demo_checked: "2026-10-13"
 
 - id: comet-opik
   name: Comet Opik
@@ -150,6 +167,7 @@
   repo: https://github.com/AgentOps-AI/agentops
   site: https://www.agentops.ai/
   docs: https://docs.agentops.ai/v2/introduction
+  demo_none: "控制台需登录（app.agentops.ai 跳转到登录页），没有找到免登录的公开示例"
 
 - id: langwatch
   name: LangWatch
@@ -160,6 +178,9 @@
   focus: "Trace、质量指标与运行分析。"
   repo: https://github.com/langwatch/langwatch
   site: https://langwatch.ai/
+  demo: https://app.langwatch.ai/demo
+  demo_source: search
+  notes: "展示页由前端渲染，内容以及是否免登录都没有确认。"
 
 # ---- 软件架构、开发者平台与工程管理 ----
 - id: nx
@@ -171,6 +192,9 @@
   focus: "把组成结构和任务结构分开：Project Graph 表示项目间依赖，Task Graph 表示实际构建任务及执行依赖。可聚焦项目、查看邻近项目、按文件夹分组、分析影响范围、导出图数据。"
   docs: https://nx.dev/docs/features/explore-graph
   repo: https://github.com/nrwl/nx
+  demo: https://nx.dev/docs/features/explore-graph
+  demo_source: search
+  notes: "展示页是官方文档页，据检索页面内嵌可交互的项目图示例，由 JS 加载，渲染情况未确认。"
 
 - id: backstage
   name: Backstage
@@ -184,6 +208,7 @@
   notes: "官方强调服务目录反映的是便于人理解的组织与软件模型，而不是所有实时关系的唯一真实来源。公开 Demo 站点上是否启用了关系图未确认。"
   demo: https://demo.backstage.io/catalog
   demo_source: search
+  demo_checked: "2026-10-13"
 
 # ---- 数据平台与基础设施管理 ----
 - id: datahub
@@ -199,6 +224,7 @@
   demo: https://datahub.com/demos/data-lineage-with-datahub/
   demo_source: search
   notes: "该展示页是录制的血缘功能演示，不是开放试用。"
+  demo_checked: "2026-10-13"
 
 - id: openmetadata
   name: OpenMetadata
@@ -213,6 +239,7 @@
   demo_source: search
   docs: https://docs.open-metadata.org/latest/quick-start/sandbox
   notes: "沙盒需要用 Google 账号登录。"
+  demo_checked: "2026-10-13"
 
 - id: skywalking
   name: Apache SkyWalking
@@ -224,8 +251,11 @@
   focus: "服务、实例、接口、部署等层级；从宏观服务拓扑进入监控、日志与 Trace，多视图联动。其生态中出现了基础设施三维可视化的探索。"
   repo: https://github.com/apache/skywalking
   site: https://skywalking.apache.org/
+  demo: https://demo.skywalking.apache.org/
+  demo_source: maintainer
   docs: https://skywalking.apache.org/docs/skywalking-showcase/next/readme/
-  notes: "官网首页链接到在线 Demo（示例数据）；其 Horizon UI 有基础设施 3D 地图（官方博客 2026-06）。"
+  notes: "官网首页链接到在线 Demo（Horizon UI，示例数据）和一个独立的 3D 基础设施地图交互演示（2026-10-13 访问）。"
+  demo_checked: "2026-10-13"
 
 - id: kiali
   name: Kiali
@@ -248,6 +278,7 @@
   repo: https://github.com/grafana/grafana
   demo: https://play.grafana.org/
   demo_source: search
+  demo_checked: "2026-10-13"
 
 # ---- 知识组织、概念地图与认知工具 ----
 - id: affine
@@ -260,6 +291,10 @@
   focus: "将线性文本与空间组织结合。"
   repo: https://github.com/toeverything/AFFiNE
   site: https://affine.pro/
+  demo: https://affine.pro/templates
+  demo_source: search
+  notes: "展示页是模板库页面，不是在线试用；没有找到免登录的在线版本。"
+  demo_checked: "2026-10-13"
 
 - id: drawio
   name: diagrams.net / draw.io
@@ -272,6 +307,7 @@
   demo: https://www.drawio.com/docs/diagram-types/
   demo_source: search
   site: https://www.drawio.com/
+  demo_checked: "2026-10-13"
 
 - id: kumu
   name: Kumu
@@ -286,6 +322,7 @@
   demo: https://kumu.io/tanyabeer/hewlett-foundation-madison-initiative
   demo_source: search
   docs: https://docs.kumu.io/frequently-asked-questions/where-can-i-find-example-kumu-projects
+  demo_checked: "2026-10-13"
 
 - id: logseq
   name: Logseq
@@ -298,6 +335,7 @@
   repo: https://github.com/logseq/logseq
   demo: https://demo.logseq.com/
   demo_source: search
+  demo_checked: "2026-10-13"
 
 - id: infranodus
   name: InfraNodus
@@ -310,9 +348,10 @@
   site: https://infranodus.com/
   repo: https://github.com/noduslabs/infranodus
   access: commercial
-  notes: "GitHub 公共仓库包含较早期代码，不能等同于当前商业产品的全部功能。"
+  notes: "官网说明开源的是一组支撑 InfraNodus 的工具（AGPL 许可），页脚列出 GitHub 上的 Workflows、Datasets、Tools API 和 GraphRAG MCP Server（infranodus.com，2026-10-13 访问）；报告所说“旧仓库不代表当前产品全部功能”未核实。"
   demo: https://infranodus.com/graphs
   demo_source: search
+  demo_checked: "2026-10-13"
 
 # ---- 生态地图与产业分析产品 ----
 - id: cncf-landscape
@@ -326,6 +365,7 @@
   demo: https://landscape.cncf.io/
   repo: https://github.com/cncf/landscape
   demo_source: report
+  demo_checked: "2026-10-13"
 
 - id: thoughtworks-tech-radar
   name: Thoughtworks Technology Radar
@@ -337,6 +377,7 @@
   site: https://www.thoughtworks.com/radar
   demo: https://www.thoughtworks.com/radar
   demo_source: report
+  demo_checked: "2026-10-13"
 
 - id: oss-insight
   name: OSS Insight
@@ -349,6 +390,7 @@
   repo: https://github.com/pingcap/ossinsight
   demo: https://ossinsight.io/
   demo_source: report
+  demo_checked: "2026-10-13"
 
 - id: oss-compass
   name: OSS Compass
@@ -361,3 +403,4 @@
   repo: https://github.com/oss-compass/compass-web
   demo: https://oss-compass.org/
   demo_source: report
+  demo_checked: "2026-10-13"
