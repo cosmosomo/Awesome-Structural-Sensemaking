@@ -55,6 +55,8 @@ python3 scripts/build.py --check    # 只检查，数据或表格过期则失败
 python3 scripts/check_links.py      # 访问所有地址，输出状态码（需要联网）
 ```
 
+推送和 PR 时，`.github/workflows/check.yml` 会运行 `build.py --check`。
+
 ## 待定
 
 - License 未定。
