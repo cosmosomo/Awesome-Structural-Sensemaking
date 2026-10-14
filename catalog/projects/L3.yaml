@@ -518,3 +518,37 @@
   demo_checked: "2026-10-13"
   facts_checked: "2026-10-13"
   notes: "官网 About 页只链到 GitHub 组织 github.com/oss-compass，具体到 compass-web 这个仓库未核实。"
+
+# ---- 数据与嵌入探索平台 ----
+- id: nomic-atlas
+  name: Nomic Atlas
+  level: L3
+  category: data-exploration-platforms
+  kind: platform
+  summary: "把大规模文本或嵌入数据变成可在浏览器里探索的二维地图的云平台。"
+  focus: "嵌入到二维用什么投影（UMAP 与自研投影按规模切换）、主题层级与标签、分享与筛选。"
+  docs: https://docs.nomic.ai/atlas/datasets/data-maps/how-atlas-works/1-key_terms
+  demo: https://atlas.nomic.ai/
+  demo_source: search
+  access: commercial
+  demo_checked: "2026-10-14"
+  facts_checked: "2026-10-14"
+  notes: "商业云平台，Python 客户端 nomic 在 PyPI（包元数据声明的仓库是 nomic-ai/nomic，客户端不是平台本身）；技术报告写明无法公开许多技术细节。"
+
+- id: orange
+  name: Orange
+  level: L3
+  category: data-exploration-platforms
+  kind: tool
+  summary: "开源的数据挖掘与可视化软件，用组件搭流程；可视化组件里有 Radviz、FreeViz 等多维投影。"
+  focus: "VizRank 在众多可能的投影里替人挑出“有信息”的那几张；锚点可以拖动。"
+  repo: https://github.com/biolab/orange3
+  site: https://orangedatamining.com/
+  docs: https://orangedatamining.com/docs
+  demo_none: "桌面软件，没有在线展示页。"
+  package: pypi:Orange3
+  repo_checked: "2026-10-14"
+  repo_check_via: "官网首页的 GitHub 链接；PyPI 包元数据"
+  access: open-source
+  facts_checked: "2026-10-14"
+  notes: "许可证 GPLv3+（PyPI 元数据）。"

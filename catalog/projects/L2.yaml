@@ -296,11 +296,11 @@
   repo_check_via: "radar.thoughtworks.com 页面的 open source 链接"
   facts_checked: "2026-10-13"
 
-# ---- 三维、高维与大规模关系探索 ----
+# ---- 三维空间与大规模关系探索 / 高维数据探索 ----
 - id: pygraphistry
   name: PyGraphistry
   level: L2
-  category: spatial-and-high-dimensional
+  category: 3d-and-large-graphs
   kind: library
   summary: "将图分析数据接入 GPU 图探索环境。"
   focus: "GPU 图探索。"
@@ -317,7 +317,7 @@
 - id: embedding-projector
   name: Embedding Projector
   level: L2
-  category: spatial-and-high-dimensional
+  category: high-dimensional-exploration
   kind: web-app
   summary: "将高维向量降维到二维、三维，探索相似性与聚类。"
   focus: "高维结构投影后哪些信息被保留、哪些被扭曲。"
@@ -329,6 +329,153 @@
   added_by_maintainer: [repo]
   facts_checked: "2026-10-13"
   facts_gaps: ["降维到二维三维", "聚类", "保留与扭曲了哪些信息"]
+
+- id: hiplot
+  name: HiPlot
+  level: L2
+  category: high-dimensional-exploration
+  kind: tool
+  summary: "Meta（原 Facebook AI Research）的交互式高维数据探索工具，以平行坐标图为核心。"
+  focus: "每个维度一根轴、每条记录一条线：刷选、重排与删除轴、按另一根轴着色，用来看超参数与指标的关系。"
+  repo: https://github.com/facebookresearch/hiplot
+  docs: https://facebookresearch.github.io/hiplot/
+  demo: https://facebookresearch.github.io/hiplot/
+  demo_source: search
+  package: pypi:hiplot
+  demo_checked: "2026-10-14"
+  repo_checked: "2026-10-14"
+  repo_check_via: "PyPI 包元数据声明的仓库"
+  facts_checked: "2026-10-14"
+  notes: "PyPI 最近一次发布是 2022-10-27（0.1.33），包元数据没有写许可证；“删除轴、按另一根轴着色”在 Meta AI 博客里有原文，文档页没有。"
+
+- id: facets
+  name: Facets
+  level: L2
+  category: high-dimensional-exploration
+  kind: tool
+  summary: "Google PAIR 的机器学习数据集可视化：Overview 逐特征看分布，Dive 按特征值摆放每个数据点。"
+  focus: "特征成百上千时，先逐特征看总体分布与异常，再按特征分面、着色地看单条记录。"
+  repo: https://github.com/pair-code/facets
+  site: https://pair-code.github.io/facets/
+  demo: https://pair-code.github.io/facets/
+  demo_source: search
+  package: pypi:facets-overview
+  demo_checked: "2026-10-14"
+  repo_checked: "2026-10-14"
+  repo_check_via: "PyPI 包元数据声明的仓库；项目站点的 Code 链接"
+  access: open-source
+  facts_checked: "2026-10-14"
+  notes: "PyPI 最近一次发布是 2023-05-24（facets-overview 1.1.1）；仓库当前是否仍在维护没有核实（GitHub 页面没有访问）。“特征成百上千”见 Google 开源博客 2017 年的发布文章。"
+
+- id: kepler-mapper
+  name: KeplerMapper
+  level: L2
+  category: high-dimensional-exploration
+  kind: library
+  summary: "拓扑数据分析里 Mapper 算法的 Python 实现，把高维数据变成一张由聚类节点组成的小图。"
+  focus: "投影、覆盖、聚类三步；节点和边的大小、颜色由用户指定的函数决定。"
+  repo: https://github.com/scikit-tda/kepler-mapper
+  docs: https://kepler-mapper.scikit-tda.org/en/latest/
+  demo: https://kepler-mapper.scikit-tda.org/en/latest/notebooks/Cancer-demo.html
+  demo_source: search
+  notes: "展示页是文档里的 notebook 示例，输出是预先生成的，不是在线交互。"
+  package: pypi:kmapper
+  demo_checked: "2026-10-14"
+  repo_checked: "2026-10-14"
+  repo_check_via: "官方文档站首页的源码仓库链接"
+  access: open-source
+  facts_checked: "2026-10-14"
+
+- id: dtour
+  name: dtour
+  level: L2
+  category: high-dimensional-exploration
+  kind: tool
+  summary: "在浏览器里沿一串二维投影“巡游”高维数据的工具，支持引导式巡游、手动拖动投影和自动漫游。"
+  focus: "点的身份怎样在投影之间保持；只有关键帧可解释，中间的插值只是帮助跟踪。"
+  repo: https://github.com/flekschas/dtour
+  site: https://dtour.dev
+  demo: https://dtour.dev
+  demo_source: search
+  notes: "2026 年 5 月的论文（arXiv:2605.04306），论文作者的博客里给了仓库和网站地址；PyPI 上有同名包 dtour，但它的元数据没有写仓库地址，没有核对是不是同一个项目。"
+  added_by_maintainer: [repo]
+  demo_checked: "2026-10-14"
+  repo_checked: "2026-10-14"
+  repo_check_via: "作者博客 lekschas.de 里的 dtour 仓库链接"
+  facts_checked: "2026-10-14"
+  facts_gaps: ["官网 dtour.dev 正文由 JS 渲染，页面文字只有标题；说明依据是论文 HTML 版和作者博客"]
+
+- id: datamapplot
+  name: DataMapPlot
+  level: L2
+  category: high-dimensional-exploration
+  kind: library
+  summary: "把嵌入的二维投影画成带标签的静态或交互式“数据地图”的 Python 库。"
+  focus: "给簇的点加标签后自动排版；社区页列出了用它做的交互地图，包括 Semantic Map of GitHub。"
+  repo: https://github.com/TutteInstitute/datamapplot
+  docs: https://datamapplot.readthedocs.io/en/latest/
+  demo: https://datamapplot.readthedocs.io/en/latest/
+  demo_source: search
+  package: pypi:datamapplot
+  demo_checked: "2026-10-14"
+  repo_checked: "2026-10-14"
+  repo_check_via: "PyPI 包元数据声明的仓库"
+  access: open-source
+  facts_checked: "2026-10-14"
+
+- id: embedding-atlas
+  name: Embedding Atlas
+  level: L2
+  category: high-dimensional-exploration
+  kind: tool
+  summary: "Apple 的开源嵌入可视化工具：二维地图加密度等高线、自动聚类标签和元数据联动视图。"
+  focus: "几百万个点的嵌入怎样低门槛地搜索、找近邻并联动过滤。"
+  repo: https://github.com/apple/embedding-atlas
+  site: https://apple.github.io/embedding-atlas/
+  demo: https://apple.github.io/embedding-atlas/
+  demo_source: search
+  package: pypi:embedding-atlas
+  demo_checked: "2026-10-14"
+  repo_checked: "2026-10-14"
+  repo_check_via: "PyPI、npm 包元数据声明的仓库"
+  access: open-source
+  facts_checked: "2026-10-14"
+
+- id: upset
+  name: UpSet
+  level: L2
+  category: high-dimensional-exploration
+  kind: tool
+  summary: "用矩阵加条形图表示多个集合的交集，替代集合超过三四个以后的 Venn 图。"
+  focus: "集合很多时怎样排序、聚合和查询交集；元素的属性怎样接在交集旁边。"
+  repo: https://github.com/visdesignlab/upset2
+  site: https://upset.app/
+  demo: https://upset.app/
+  demo_source: search
+  demo_checked: "2026-10-14"
+  repo_checked: "2026-10-14"
+  repo_check_via: "upset.app/implementations 页面的 Source Code 链接（UpSet 2）"
+  facts_checked: "2026-10-14"
+  notes: "2014 年原版 UpSet 的仓库是 VCG/upset，upset.app 的实现页同时列了两个；这里记的是新版 UpSet 2。"
+
+- id: voyager
+  name: Voyager
+  level: L2
+  category: high-dimensional-exploration
+  kind: tool
+  summary: "把分面浏览和可视化推荐结合起来的探索工具：字段很多时自动给出一批候选图。"
+  focus: "高维表格里不靠手工逐张指定图，而是浏览推荐的图；展示数据的变化而不是设计的变化。"
+  repo: https://github.com/vega/voyager
+  site: https://idl.uw.edu/papers/voyager
+  demo: https://vega.github.io/voyager/
+  demo_source: search
+  package: npm:datavoyager
+  demo_checked: "2026-10-14"
+  repo_checked: "2026-10-14"
+  repo_check_via: "npm 包元数据声明的仓库"
+  access: open-source
+  facts_checked: "2026-10-14"
+  notes: "npm 包 datavoyager 最近一次发布是 2022-06-14（2.0.0-alpha.24）。展示页由 JS 渲染，页面文字只有标题。"
 
 - id: aerograph
   name: AeroGraph

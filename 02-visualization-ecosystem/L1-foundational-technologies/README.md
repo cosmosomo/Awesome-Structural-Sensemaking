@@ -16,6 +16,7 @@
 | [Apache ECharts](https://echarts.apache.org/) | 综合图表引擎。<br>图表类型、交互组件、大屏和业务看板。 △ | [仓库](https://github.com/apache/echarts "核对依据：npm 包元数据") ✓ | [展示页](https://echarts.apache.org/examples) ✓ | [站点](https://echarts.apache.org/) | 开源；官方页面没找到依据的说明：业务看板 |
 | [Plotly.js](https://github.com/plotly/plotly.js) | 数据探索与交互图表。<br>多维统计图、科学可视化、交互分析。 △ | [仓库](https://github.com/plotly/plotly.js "核对依据：npm 包元数据") ✓ | [展示页](https://plotly.com/javascript/) ✓ | — | 开源；官方页面没找到依据的说明：数据探索、交互、多维 |
 | [deck.gl](https://github.com/visgl/deck.gl) | GPU 加速的大数据可视化框架。<br>大规模数据、地图图层、多视角渲染。 ✓ | [仓库](https://github.com/visgl/deck.gl "核对依据：npm 包元数据") ✓ | [展示页](https://deck.gl/gallery/) ✓ | — | 开源 |
+| [regl-scatterplot](https://github.com/flekschas/regl-scatterplot) | 基于 WebGL 的交互式二维散点图，面向大量数据点。<br>几十万以上的点如何做到可缩放、可选择、可编码；投影结果的前端落地。 ✓ | [仓库](https://github.com/flekschas/regl-scatterplot "核对依据：npm 包元数据声明的仓库") ✓ | [展示页](https://flekschas.github.io/regl-scatterplot/) ✓ | — | 开源；展示页由 WebGL 渲染，页面文字只有标题；说明依据是 npm 包的 README。 |
 <!-- /gen -->
 
 ## 关系图与节点交互引擎
@@ -47,6 +48,17 @@
 | [Graphology](https://graphology.github.io/) | 图数据操作与算法生态。<br>关系分析、节点指标、图结构处理。 △ | [仓库](https://github.com/graphology/graphology "核对依据：npm 包元数据") ✓ | 无：数据结构库，没有可视化界面 | [站点](https://graphology.github.io/) | 开源；官方页面没找到依据的说明：关系分析 |
 | [Cytoscape Complexity Management](https://github.com/iVis-at-Bilkent/cytoscape.js-complexity-management) | 大型复合图的展开、折叠与关系管理（Cytoscape.js 扩展）。<br>层次化复杂网络；节点、边及聚合关系的管理。 △ | [仓库](https://github.com/iVis-at-Bilkent/cytoscape.js-complexity-management "核对依据：npm 包 cytoscape-complexity-management 的 homepage 字段") ✓ | [展示页](https://ivis-at-bilkent.github.io/cytoscape.js-complexity-management/demo/demo.html) ✓ | — | README 带有演示链接，但地址没有拿到；需要 Cytoscape.js 3.2.0 以上以及 fcose、cmgm.js，README 称尚未发布到 npm 和 bower；官方页面没找到依据的说明：大型、层次化、聚合关系 |
 | [Cytoscape Expand Collapse](https://github.com/iVis-at-Bilkent/cytoscape.js-expand-collapse) | 复合节点的展开与折叠（Cytoscape.js 扩展）。<br>折叠复合节点及其内部的边。README 提供三个演示：基础版、可撤销版、同时折叠边和节点。 ✓ | [仓库](https://github.com/iVis-at-Bilkent/cytoscape.js-expand-collapse "核对依据：npm 包元数据") ✓ | [展示页](https://ivis-at-bilkent.github.io/cytoscape.js-expand-collapse/demo/demo-compounds-collapsed.html) ✓ | — | 开源；已停止维护；npm README 称仓库不再维护，并指向同一团队的 cytoscape.js-complexity-management（搜索结果摘要）。 |
+<!-- /gen -->
+
+## 降维与投影算法
+
+高维数据要变成屏幕上的位置，先要有一个把维度压下来的算法。这一组只收算法实现；它们的输出怎么读、各自丢掉什么，见[高维可视化](../../01-theory/high-dimensional.md)。
+
+<!-- gen:catalog:L1/dimensionality-reduction -->
+| 项目 | 定位与值得研究 | 开源项目 | 展示页 | 站点 / 文档 | 备注 |
+| --- | --- | --- | --- | --- | --- |
+| [UMAP（umap-learn）](https://github.com/lmcinnes/umap) | UMAP 降维算法的 Python 实现。<br>文档讲了主要参数（n_neighbors、min_dist、n_components、metric）和交互式绘图的做法。 ✓ | [仓库](https://github.com/lmcinnes/umap "核对依据：PyPI 包元数据声明的仓库") ✓ | 无：算法库，没有独立的展示页；文档里有绘图示例。 | [文档](https://umap-learn.readthedocs.io/en/latest/) | 开源 |
+| [openTSNE](https://github.com/pavlin-policar/openTSNE) | t-SNE 的可扩展、并行实现。<br>t-SNE 的参数怎样改变图（文档有参数指南）。 ✓ | [仓库](https://github.com/pavlin-policar/openTSNE "核对依据：PyPI 包元数据声明的仓库") ✓ | 无：算法库，没有独立的展示页；文档里有使用示例。 | [文档](https://opentsne.readthedocs.io/en/stable/) | 开源 |
 <!-- /gen -->
 
 ## 图形描述语言与模型驱动技术

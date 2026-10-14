@@ -1706,7 +1706,7 @@
    "check": {
     "status": 200,
     "at": "2026-10-13",
-    "title": "Discover 13200 Automation Workflows from the n8n's Community"
+    "title": "Discover 13300 Automation Workflows from the n8n's Community"
    },
    "render": {
     "status": 200,
@@ -2911,7 +2911,7 @@
     "check": {
      "status": 200,
      "at": "2026-10-13",
-     "title": "Visualizing Data using the Embedding Projector in TensorBoard  |  TensorFlow"
+     "title": "Visualizing Data using the Embedding Projector in TensorBoard | TensorFlow"
     }
    },
    {
@@ -3119,6 +3119,970 @@
    "https://www.hiveplot.com/ 证书校验失败，按规则未绕过，读不到其内容。",
    "bost.ocks.org 是 d3 作者 Mike Bostock 的博客示例，不是 Krzywinski 的官方 demo，作为备选收录。",
    "jhive 为 Java 应用（zip 下载），不是在线展示页，未收录。"
+  ]
+ },
+ "tsne-misread": {
+  "demo": {
+   "url": "https://distill.pub/2016/misread-tsne/",
+   "title": "How to Use t-SNE Effectively",
+   "how": "页面顶部有 'Step' 控件和 'play_arrow pause'、'refresh' 按钮（页面文字），文章本身就是交互式演示；每张图的具体操作以页面为准",
+   "mode": "live",
+   "seen": "打开是 Distill 交互式文章：正文里每个 t-SNE 图都带播放、暂停、步进控件（页面里有 20 个 canvas）",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "How to Use t-SNE Effectively"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://distill.pub/2016/misread-tsne/",
+    "title": "How to Use t-SNE Effectively",
+    "text_len": 17016,
+    "canvas": 20,
+    "svg": 2,
+    "img": 78,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [],
+  "pages": [
+   {
+    "url": "https://distill.pub/2016/misread-tsne/",
+    "title": "How to Use t-SNE Effectively",
+    "why": "同一交互文章的正文，按小节讲 t-SNE 的误读：超参数与迭代步数、簇大小、簇间距离、随机噪声、形状、拓扑（页面小节标题）",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "How to Use t-SNE Effectively"
+    }
+   }
+  ],
+  "not_found": [
+   "正文各 t-SNE 图是脚本交互的，页面源码里没有静态图片地址；唯一的图片是 og:image 分享卡片（thumbnail.jpg），未收"
+  ]
+ },
+ "grand-tour": {
+  "demo": {
+   "url": "https://distill.pub/2020/grand-tour/",
+   "title": "Visualizing Neural Networks with the Grand Tour",
+   "how": "正文中 'The Grand Tour in action' 为交互可视化（页面文字），标注为最终 10 维层在 MNIST 训练中的行为；顶部 'Dataset' 选择器可选 mnist、fashion-mnist、cifar10",
+   "mode": "live",
+   "seen": "打开顶部就是“The Grand Tour in action”交互图：十维 softmax 层的点云随训练轮次（Epoch 8/99）和投影动画，右侧图例是 10 个数字，下方有播放键和轮次滑块",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Visualizing Neural Networks with the Grand Tour"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://distill.pub/2020/grand-tour/",
+    "title": "Visualizing Neural Networks with the Grand Tour",
+    "text_len": 39402,
+    "canvas": 12,
+    "svg": 14,
+    "img": 21,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [
+   {
+    "url": "https://distill.pub/2020/grand-tour/figs/softmax.png",
+    "page": "https://distill.pub/2020/grand-tour/",
+    "alt": "",
+    "caption": "Neural network opened. The colored blocks are building-block functions (i.e. neural network layers), the gray-scale heatmaps are either the input image or intermediate activation vectors after some layers.",
+    "kind": "diagram",
+    "shows": "method",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 122211,
+     "at": "2026-10-13",
+     "width": 1486,
+     "height": 631
+    }
+   },
+   {
+    "url": "https://distill.pub/2020/grand-tour/figs/direct-manipulation-rotation-3d.png",
+    "page": "https://distill.pub/2020/grand-tour/",
+    "alt": "",
+    "caption": "",
+    "kind": "figure",
+    "shows": "concept",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 143120,
+     "at": "2026-10-13",
+     "width": 1575,
+     "height": 899
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://distill.pub/2020/grand-tour/",
+    "title": "Visualizing Neural Networks with the Grand Tour",
+    "why": "同一交互文章的正文，含神经网络功能示意图，以及 'Using Visualization to Understand DNNs' 一节，说明用 Grand Tour 看训练过程与层间行为（页面正文）",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Visualizing Neural Networks with the Grand Tour"
+    }
+   }
+  ],
+  "not_found": [
+   "'The Grand Tour in action' 的主视图是脚本渲染的交互组件，页面源码里没有它的静态图片地址",
+   "figs 下的静态图（direct-manipulation-rotation-3d.png）alt 和说明都为空，shows 是按拿不准记的 other，需看缩略图确认；页面上没有 og 之外的其他可用截图"
+  ]
+ },
+ "dtour": {
+  "demo": {
+   "url": "https://dtour.dev",
+   "title": "dtour: interactive visual tours of high-dimensional data",
+   "how": "作者博客与 arXiv 论文都写明可在 https://dtour.dev 体验（'Explore these yourself' / 'runs in any modern browser'）；dtour.dev 正文由脚本渲染，静态读取只拿到标题，具体界面未核对",
+   "mode": "live",
+   "seen": "打开是 dtour 首页：拖入 Parquet、Arrow 或 CSV 文件，或选 9 个示例数据集（如 Fashion MNIST 7 万点、arXiv 论文 300 万点）；没有点进去看巡游界面",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "dtour: interactive visual tours of high-dimensional data"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://dtour.dev/",
+    "title": "dtour: interactive visual tours of high-dimensional data",
+    "text_len": 586,
+    "canvas": 1,
+    "svg": 16,
+    "img": 0,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [
+   {
+    "url": "https://arxiv.org/html/2605.04306v4/usage-scenarios.png",
+    "page": "https://arxiv.org/html/2605.04306v4",
+    "alt": "Refer to caption",
+    "caption": "Figure 1: Usage Scenarios. Left: Attraction–repulsion tour of 70K Fashion MNIST images. Middle: UMAP-Validating little PCA tour of 276K single-cell RNA-seq cells. Right: Sequential embedding tour of 3M arXiv titles and abstracts.",
+    "kind": "figure",
+    "shows": "view",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 12000000,
+     "at": "2026-10-13",
+     "width": 10000,
+     "height": 3334
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://arxiv.org/html/2605.04306v4",
+    "title": "dtour: A Steerable Tour de Vis Through High-Dimensional Data",
+    "why": "论文 HTML 版；摘要写明 dtour 含静态投影预览、沿测地线路径的可逆拖动、手动投影操作和 grand tour，Figure 1 给出三个使用场景的视图",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "dtour: A Steerable Tour de Vis Through High-Dimensional Data"
+    }
+   },
+   {
+    "url": "https://lekschas.de/blog/high-dimensional-data-is-hard-to-understand",
+    "title": "Say 👋 to dtour: a visualization tool for smoothly navigating through high-dimensional data · Fritz Lekschas",
+    "why": "工具作者的博客文章；列出 keyframe 概览、引导式循环 tour、手动轴操作和 grand tour 四种工作方式，并写明可到 https://dtour.dev 体验",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Say 👋 to dtour: a visualization tool for smoothly navigating through high-dimensional data · Fritz Lekschas"
+    }
+   }
+  ],
+  "not_found": [
+   "论文 HTML 版里只有 Figure 1 一张带地址的图，其余图未在页面源码中列出"
+  ]
+ },
+ "embedding-atlas": {
+  "demo": {
+   "url": "https://apple.github.io/embedding-atlas/examples/",
+   "title": "Examples | Embedding Atlas",
+   "how": "示例页写明 'Opening an example will load the dataset directly into your browser'，列出 Wine Reviews、Visualization Publications、MedMCQA、SuperGPQA、ImageWoof、Movies Dashboard 等交互示例；Wine Reviews 条目链接到 examples/app/ 应用页",
+   "mode": "samples",
+   "seen": "示例页：列着 Wine Reviews、Visualization Publications、MedMCQA 等示例的界面缩略图，点开会把数据集直接载入浏览器；没有点进去",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Examples | Embedding Atlas"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://apple.github.io/embedding-atlas/examples/",
+    "title": "Examples | Embedding Atlas",
+    "text_len": 2470,
+    "canvas": 0,
+    "svg": 0,
+    "img": 20,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [
+   {
+    "url": "https://mlr.cdn-apple.com/media/teaser_854e862626.png",
+    "page": "https://machinelearning.apple.com/research/embedding-atlas",
+    "alt": "Embedding Atlas UI showing filtered embedding of 196,630 wine reviews with a selected outlier and re",
+    "caption": "Figure 1: The Embedding Atlas user interface visualizing the embedding of 196,630 wine reviews. A user has filtered the embedding to only show wines from the US, France, and Italy with \"points\" in a specific range, and selected one outlier from the embedding to read its review and inspect its metadata.",
+    "kind": "screenshot",
+    "shows": "view",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 761167,
+     "at": "2026-10-13",
+     "width": 3456,
+     "height": 1850
+    }
+   },
+   {
+    "url": "https://apple.github.io/embedding-atlas/assets/embedding-atlas-light.png",
+    "page": "https://apple.github.io/embedding-atlas/",
+    "alt": "a screenshot of embedding atlas",
+    "caption": "",
+    "kind": "screenshot",
+    "shows": "view",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 1952495,
+     "at": "2026-10-13",
+     "width": 2880,
+     "height": 1920
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://apple.github.io/embedding-atlas/overview.html",
+    "title": "Overview | Embedding Atlas",
+    "why": "官方文档概览页：写明可视化大规模嵌入的 2D 投影、浏览自动聚类与标签、查找最近邻、按元数据交叉筛选，并列出标准图表与多模态列的支持",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Overview | Embedding Atlas"
+    }
+   },
+   {
+    "url": "https://machinelearning.apple.com/research/embedding-atlas",
+    "title": "Embedding Atlas: Low-Friction, Interactive Embedding Visualization - Apple Machine Learning Research",
+    "why": "官方研究页（2025 年 11 月，IEEE Visualization）；Figure 1 为 196,630 条葡萄酒评论嵌入的界面截图，图注写明可在 https://apple.github.io/embedding-atlas 试用",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Embedding Atlas: Low-Friction, Interactive Embedding Visualization - Apple Machine Learning Research"
+    }
+   }
+  ],
+  "not_found": [
+   "两张截图的 shows 依据 alt 文字和页面位置判断，未打开图片本身，需看缩略图确认",
+   "研究页 Figure 1 的 alt 在 imgs.py 输出中被截断，caption 为完整图注"
+  ]
+ },
+ "nomic-atlas": {
+  "images": [],
+  "pages": [
+   {
+    "url": "https://docs.nomic.ai/atlas/embeddings-and-retrieval/guides/how-to-visualize-embeddings",
+    "title": "How to Visualize Embeddings with t-SNE, UMAP, and Nomic Atlas | Nomic Platform Documentation",
+    "why": "官方指南：并列介绍 t-SNE、UMAP 与 Nomic Atlas（页面称 'Cloud-based, Interactive Visualization'）三种嵌入可视化方法，各自列出优缺点",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "How to Visualize Embeddings with t-SNE, UMAP, and Nomic Atlas | Nomic Platform Documentation"
+    }
+   },
+   {
+    "url": "https://docs.nomic.ai/atlas/datasets/data-maps",
+    "title": "Atlas Data Maps | Nomic Platform Documentation",
+    "why": "官方文档：Atlas 数据地图功能页，目录列出 Data Map Controls、Analyst、Topic Modeling、Duplicate Detection 等子页",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Atlas Data Maps | Nomic Platform Documentation"
+    }
+   }
+  ],
+  "not_found": [
+   "https://atlas.nomic.ai/ 返回 200、标题 'Nomic Atlas'，但正文由脚本渲染，静态读不到任何可操作内容，无法确认是否需要登录，所以未收为展示页；文档的指南页（Data Map Guides）也没有链接到公开的示例地图",
+   "文档站截图中 data-maps 的 map_icon.png、vector_search_icon.png 是图标；data-maps/controls 的搜索、过滤、视图设置截图是界面细节，均未收",
+   "how-to-visualize-embeddings 的图只出现在 og:image 分享卡片（visualize-embeddings-tsne-umap-atlas.png）中，正文没有 img，未收",
+   "技术报告 static.nomic.ai/atlas_tech_report.pdf 只读到地址，未读其内容，未收其中的图"
+  ]
+ },
+ "hiplot": {
+  "demo": {
+   "url": "https://facebookresearch.github.io/hiplot/_static/demo/ml1.csv.html?hip.color_by=%22valid+ppl%22",
+   "title": "HiPlot",
+   "how": "Meta 博客原文写 'You can reproduce this example here'，链接指向这个页面（ml1.csv 数据，按 valid ppl 着色）。页面是 JS 渲染，脚本只读到 'Loading HiPlot...'，具体操作位置未核对。",
+   "mode": "live",
+   "seen": "打开是 HiPlot 的平行坐标图：valid ppl、train f1、lr、epoch、embedding_size、dropout 六根轴，约 7000 条线按 valid ppl 着色；上方有 Restore、Keep、Exclude、Export、Help 按钮，下方是数据表",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "HiPlot"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://facebookresearch.github.io/hiplot/_static/demo/ml1.csv.html?hip.color_by=%22valid+ppl%22&hip.filters=%5B%5D&hip.PARALLEL_PLOT.order=%5B%22valid+ppl%22%2C%22train+f1%22%2C%22lr%22%2C%22epoch%22%2C%22embedding_size%22%2C%22dropout%22%5D",
+    "title": "HiPlot",
+    "text_len": 1523,
+    "canvas": 2,
+    "svg": 1,
+    "img": 1,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [],
+  "pages": [
+   {
+    "url": "https://facebookresearch.github.io/hiplot/",
+    "title": "HiPlot demonstration — HiPlot 0.1.33 documentation",
+    "why": "文档站的 HiPlot demonstration 逐步演示（约 7000 个实验数据点，切片、设为 X 轴、添加 XY 图），页面上只有文字步骤，没有截图。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "HiPlot demonstration — HiPlot 0.1.33 documentation"
+    }
+   },
+   {
+    "url": "https://ai.meta.com/blog/hiplot-high-dimensional-interactive-plots-made-easy/",
+    "title": "HiPlot: High-dimensional interactive plots made easy",
+    "why": "Meta 官方博客，介绍 HiPlot 的平行坐标图及其交互（切片、调整和删除坐标轴、按某一轴着色、选取数据）。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "HiPlot: High-dimensional interactive plots made easy"
+    }
+   }
+  ],
+  "not_found": [
+   "experiment_settings 页的 customized_demo.png（https://facebookresearch.github.io/hiplot/_images/customized_demo.png）alt 和说明都为空，脚本看不了图，内容未确认，未收。",
+   "Meta 博客正文的图片 alt 和说明都为空，脚本看不了图，无法确定哪张是 HiPlot 视图，未收；og:image 是分享卡片，未收。"
+  ]
+ },
+ "facets": {
+  "demo": {
+   "url": "https://pair-code.github.io/facets/quickdraw.html",
+   "title": "（页面无 title 标签，正文首行为 Quick, Draw! Dataset）",
+   "how": "页面正文写 Quick, Draw! Dataset，下面是 Random Faces、Complex Faces、Random Faces (non-US)、Random Chairs 几个数据子集，以及 Preset View（预设视图）。首页链接文字为 'Explore the Quick, Draw! dataset on Dive.'。",
+   "mode": "live",
+   "seen": "打开是 Facets Dive 载入的 Quick, Draw! 数据：几万个涂鸦缩略图排成方阵，顶部有 Binning、Color By、Label By、Scatter 的下拉框和预设视图",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://pair-code.github.io/facets/quickdraw.html",
+    "title": "",
+    "text_len": 309,
+    "canvas": 0,
+    "svg": 3,
+    "img": 0,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [
+   {
+    "url": "https://pair-code.github.io/facets/images/FacetsDive_Quickdraw@2x.jpg",
+    "page": "https://pair-code.github.io/facets/",
+    "alt": "Facets Dive x Quickdraw",
+    "caption": "",
+    "kind": "screenshot",
+    "shows": "view",
+    "check": {
+     "status": 200,
+     "content_type": "image/jpeg",
+     "bytes": 632228,
+     "at": "2026-10-13",
+     "width": 1920,
+     "height": 990
+    }
+   },
+   {
+    "url": "https://lh5.googleusercontent.com/rFogrvVyT3dG-BkmHmgPrxd7TAAw8nJslDwbeMKv9qL012HpuqGbB7euAm0uHtLd9oxvOgX2tTFtWu9Y-rk8aH5at5RU6oB7vo6MZ2M9vUKUiqrEowyhRvDuVYCKUE8U2nXb-fxX",
+    "page": "https://opensource.googleblog.com/2017/07/facets-open-source-visualization-tool.html",
+    "alt": "overview-numerical.png",
+    "caption": "",
+    "kind": "screenshot",
+    "shows": "view",
+    "check": {
+     "status": 403,
+     "content_type": "",
+     "bytes": 0,
+     "at": "2026-10-13"
+    }
+   },
+   {
+    "url": "https://lh4.googleusercontent.com/jP3V_CjhQJ7GqkAtuMzga4ykpl943OV1SmpU2Xwdwf-tC93Lkg95vH2VMWs7mlaBANIvpmInwbjZ1lt3SUKxQg9xorRLw1fv7mHgUGETVzY5eKEQ7VjQ9w3EEgEqaeHz_OBf4_mZ",
+    "page": "https://opensource.googleblog.com/2017/07/facets-open-source-visualization-tool.html",
+    "alt": "overview-categorical-expand.png",
+    "caption": "",
+    "kind": "screenshot",
+    "shows": "view",
+    "check": {
+     "status": 403,
+     "content_type": "",
+     "bytes": 0,
+     "at": "2026-10-13"
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://pair-code.github.io/facets/",
+    "title": "Facets - Visualizations for ML datasets",
+    "why": "官网首页，介绍 Facets Overview（逐个特征的数值分布）和 Facets Dive，并写明可在 UCI Census Income 数据集上试用两者。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Facets - Visualizations for ML datasets"
+    }
+   },
+   {
+    "url": "https://opensource.googleblog.com/2017/07/facets-open-source-visualization-tool.html",
+    "title": "Facets: An Open Source Visualization Tool for Machine Learning Training Data | Google Open Source Blog",
+    "why": "2017 年 Google 开源博客的发布文章，页内有以 overview-numerical.png、overview-categorical-expand.png 命名的截图（按文件名看是 Overview 的数值与分类视图）。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Facets: An Open Source Visualization Tool for Machine Learning Training Data | Google Open Source Blog"
+    }
+   }
+  ],
+  "not_found": [
+   "博客中的 facets-dive.gif 是动图，脚本只能看到地址，看不了首帧，未收。"
+  ]
+ },
+ "voyager": {
+  "demo": {
+   "url": "https://vega.github.io/voyager/",
+   "title": "Voyager 2",
+   "how": "页面是 JS 渲染，脚本只读到标题 'Voyager 2'，读不到界面文字，无法从页面确认操作位置，未核对交互。",
+   "mode": "live",
+   "seen": "打开是 datavoyager 的空白界面，只有“Please load a dataset”和 Load 按钮，要点 Load 选数据集才能看到推荐图库；没有点进去",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Voyager 2"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://vega.github.io/voyager/",
+    "title": "Voyager 2",
+    "text_len": 26,
+    "canvas": 0,
+    "svg": 0,
+    "img": 2,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [
+   {
+    "url": "https://idl.uw.edu/images/figures/voyager.png",
+    "page": "https://idl.uw.edu/papers/voyager",
+    "alt": "Figure for Voyager: Exploratory Analysis via Faceted Browsing of Visualization Recommendations",
+    "caption": "Voyager: a recommendation-powered visualization browser. The schema panel (left) lists data variables selectable by users. The main gallery (right) presents suggested visualizations of different variable subsets and transformations.",
+    "kind": "figure",
+    "shows": "view",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 33050,
+     "at": "2026-10-13",
+     "width": 700,
+     "height": 400
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://idl.uw.edu/papers/voyager",
+    "title": "Voyager: Exploratory Analysis via Faceted Browsing of Visualization Recommendations",
+    "why": "论文页，页内配有 Voyager 界面图（左侧 schema 面板、右侧推荐可视化图库）及其图注。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "UW Interactive Data Lab"
+    }
+   },
+   {
+    "url": "https://vega.github.io/voyager/",
+    "title": "Voyager 2",
+    "why": "Voyager 2 的在线页面入口（known 中记录的 demo）；页面文字读不到，只据标题和入口位置收，内容未核对。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Voyager 2"
+    }
+   }
+  ],
+  "not_found": [
+   "论文 PDF（https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf）本次未读，其中的图（若有）没有单独地址，未收。"
+  ]
+ },
+ "rank-by-feature": {
+  "images": [],
+  "pages": [
+   {
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "title": "A Rank-by-Feature Framework for Interactive Exploration of Multidimensional Data",
+    "why": "Seo 与 Shneiderman 的技术报告全文（页面 <title> 是 Word 残留的 'Author Guidelines for 8'），正文引用了 Figure 1 到 Figure 11，并写明框架在 HCE 中实现。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Author Guidelines for 8"
+    }
+   },
+   {
+    "url": "https://www.cs.umd.edu/hcil/hce/",
+    "title": "HCE - Hierarchical Clustering Explorer",
+    "why": "HCE 项目页，写明它用 dendrogram 和 color mosaic 给出交互视觉反馈，并列出各版本的下载与注册入口。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "HCE - Hierarchical Clustering Explorer"
+    }
+   }
+  ],
+  "not_found": [
+   "HCE 是需下载安装的桌面程序（页面给出 HCE 3.5 test version 下载和 HCE 3.0、2.0、1.0 的注册下载表单），没有在线展示页，所以 demo 记 null；rank-by-feature 本身是论文方法，同样没有在线展示页。",
+   "技术报告页有大量小图，alt 和说明都为空，脚本看不了图，无法确定哪张是 Figure 1（rank-by-feature 界面）。页面第一张大图 https://www.cs.umd.edu/hcil/trs/2004-31/seo_shneiderman_rff_ivs_files/image002.jpg（624x382）可能是它，但未确认，未收。",
+   "HCE 首页的 hce2-title-screen.gif（alt 为 'HCE screen'，文件名像启动画面）按 other 不收。"
+  ]
+ },
+ "orange": {
+  "images": [
+   {
+    "url": "https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/_images/Radviz-stamped.png",
+    "page": "https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/radviz.html",
+    "alt": "../../_images/Radviz-stamped.png",
+    "caption": "",
+    "kind": "screenshot",
+    "shows": "view",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 304343,
+     "at": "2026-10-13",
+     "width": 1896,
+     "height": 1370
+    }
+   },
+   {
+    "url": "https://orange.readthedocs.io/en/latest/_images/LinearProjection-Zoo.png",
+    "page": "https://orange.readthedocs.io/en/latest/widgets/rst/visualize/linearprojection.html",
+    "alt": "Lienar Projection on zoo data set",
+    "caption": "",
+    "kind": "screenshot",
+    "shows": "view",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 29058,
+     "at": "2026-10-13",
+     "width": 797,
+     "height": 581
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/radviz.html",
+    "title": "Radviz — Orange Visual Programming 3 documentation",
+    "why": "Radviz 部件的说明页，页内 'The snapshot shown below' 给出 Radviz 部件的截图，并解释这种投影的锚点与弹簧画法。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Radviz — Orange Visual Programming 3 documentation"
+    }
+   },
+   {
+    "url": "https://orangedatamining.com/",
+    "title": "Orange Data Mining",
+    "why": "官网首页，写明 Orange 是开源的机器学习与数据可视化工具，'Interactive Data Visualization' 一节列出箱线图、散点图、层次聚类、热图、MDS、t-SNE 和 linear projections。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Orange Data Mining"
+    }
+   }
+  ],
+  "not_found": [
+   "FreeViz 页的 FreeViz-stamped.png、FreeViz-anchors.png、FreeViz-selection.png 和 FreeViz-Example.png：页面只写 'see the screenshot below'，脚本看不了图，内容未确认，未收。",
+   "Radviz 页的 Radviz-Example.png 是示例场景，未确认是否为视图，未收。",
+   "示例工作流页 https://orangedatamining.com/examples/ 的示例是要在 Orange 桌面程序里打开的工作流文件，没有在线展示，未作为 demo。"
+  ]
+ },
+ "upset": {
+  "demo": {
+   "url": "https://upset.multinet.app/",
+   "title": "Upset - Visualizing Intersecting Sets",
+   "how": "vdl.sci.utah.edu/upset2/ 首页（UpSet 2.0 Interactive Set Visualization）上的 'Go To UpSet' 按钮指向此地址。",
+   "mode": "samples",
+   "seen": "打开是 UpSet 2.0 欢迎页：Movies、Covid Symptoms、Tennis Tournament Winners、World Organizations 等示例，每个是矩阵加条形图的缩略图；没有点进去",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Upset - Visualizing Intersecting Sets"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://upset.multinet.app/",
+    "title": "Upset - Visualizing Intersecting Sets",
+    "text_len": 457,
+    "canvas": 0,
+    "svg": 0,
+    "img": 4,
+    "page_errors": 0,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [
+   {
+    "url": "https://upset.app/assets/images//upsetr.png",
+    "page": "https://upset.app/",
+    "alt": "A simple UpSet Example",
+    "caption": "",
+    "kind": "figure",
+    "shows": "view",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 163268,
+     "at": "2026-10-13",
+     "width": 2151,
+     "height": 1490
+    }
+   },
+   {
+    "url": "https://upset.app/assets/images/advanced//upset_inline_attribute.png",
+    "page": "https://upset.app/advanced/",
+    "alt": "Inline attributes visualized as box plots.",
+    "caption": "",
+    "kind": "figure",
+    "shows": "view",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 66179,
+     "at": "2026-10-13",
+     "width": 1227,
+     "height": 476
+    }
+   },
+   {
+    "url": "https://upset.app/assets/images/advanced//aggregate_sets.png",
+    "page": "https://upset.app/advanced/",
+    "alt": "UpSet plot aggregated by sets.",
+    "caption": "",
+    "kind": "figure",
+    "shows": "view",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 254205,
+     "at": "2026-10-13",
+     "width": 2074,
+     "height": 1154
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://upset.app/",
+    "title": "UpSet Home",
+    "why": "官网首页讲解 UpSet 的矩阵布局、交集的柱状图和排序方式，并附示例图。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "UpSet Home"
+    }
+   },
+   {
+    "url": "https://upset.app/advanced/",
+    "title": "Advanced | UpSet",
+    "why": "高级功能页，附属性内联箱线图、按集合聚合等示例图。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Advanced | UpSet"
+    }
+   }
+  ],
+  "not_found": [
+   "upset.multinet.app 是前端渲染的应用，脚本只读到页面标题，未能核对页内的操作界面。"
+  ]
+ },
+ "kepler-mapper": {
+  "demo": {
+   "url": "https://kepler-mapper.scikit-tda.org/en/latest/notebooks/Plotly-Demo.html",
+   "title": "Demo of Plotlyviz features — KeplerMapper 2.1.0 documentation",
+   "how": "页面写 'Hover the graph nodes in the next cell to see their distribution in the right figure'（悬停图中节点，右侧显示其分布）；'Dashboards' 小节说明用 dashboard=True 或 vbox=True 显示节点直方图和成员。",
+   "mode": "samples",
+   "seen": "文档里的 notebook：前面是代码，后面嵌着 Plotly 画的 Mapper 图（悬停节点看分布）；输出是文档页里的，不是在线应用",
+   "check": {
+    "status": 200,
+    "at": "2026-10-13",
+    "title": "Demo of Plotlyviz features — KeplerMapper 2.1.0 documentation"
+   },
+   "render": {
+    "status": 200,
+    "final": "https://kepler-mapper.scikit-tda.org/en/latest/notebooks/Plotly-Demo.html",
+    "title": "Demo of Plotlyviz features — KeplerMapper 2.1.0 documentation",
+    "text_len": 8009,
+    "canvas": 0,
+    "svg": 170,
+    "img": 2,
+    "page_errors": 1,
+    "at": "2026-10-13"
+   }
+  },
+  "images": [
+   {
+    "url": "https://kepler-mapper.scikit-tda.org/en/latest/_images/html-visualization-multiple-color-values-and-node-functions.gif",
+    "page": "https://kepler-mapper.scikit-tda.org/en/latest/html-visualization-features.html",
+    "alt": "_images/html-visualization-multiple-color-values-and-node-functions.gif",
+    "caption": "",
+    "kind": "screenshot",
+    "shows": "ui",
+    "check": {
+     "status": 200,
+     "content_type": "image/gif",
+     "bytes": 3462409,
+     "at": "2026-10-13",
+     "width": 800,
+     "height": 600
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://kepler-mapper.scikit-tda.org/en/latest/html-visualization-features.html",
+    "title": "HTML Visualization Features — KeplerMapper 2.1.0 documentation",
+    "why": "官方文档讲 HTML 可视化的交互功能（节点配色、搜索栏、最小交集选择、冻结节点、亮/暗模式），各功能附 GIF 动图。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "HTML Visualization Features — KeplerMapper 2.1.0 documentation"
+    }
+   },
+   {
+    "url": "https://kepler-mapper.scikit-tda.org/en/latest/started.html",
+    "title": "Getting Started — KeplerMapper 2.1.0 documentation",
+    "why": "入门页，用 make_circles 数据生成 HTML 输出，页面附该输出的截图。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Getting Started — KeplerMapper 2.1.0 documentation"
+    }
+   }
+  ],
+  "not_found": [
+   "started 页面的 'interactive version' 链接指向 mlwave.github.io，本环境 DNS 解析失败，未能打开，未作为展示页。",
+   "started 页的截图托管在 i.imgur.com，本环境 DNS 解析失败；图片地址来自页面源码，但未能打开核对。",
+   "已知展示页 Cancer-demo 的两张图（notebooks_Cancer-demo_23_0.png、_30_0.png）是 lens 选择的散点图，不是 Mapper 图本身，未收。"
+  ]
+ },
+ "miegakure": {
+  "images": [
+   {
+    "url": "https://miegakure.com/data/MK120wThumb.png",
+    "page": "https://miegakure.com",
+    "alt": "Screenshot 120 Cell Viewed along the 4D",
+    "caption": "",
+    "kind": "screenshot",
+    "shows": "view",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 246221,
+     "at": "2026-10-13",
+     "width": 440,
+     "height": 330
+    }
+   },
+   {
+    "url": "https://miegakure.com/data/WindmillRotatedThumb.png",
+    "page": "https://miegakure.com",
+    "alt": "Screenshot Windmill Viewed along the 4D",
+    "caption": "",
+    "kind": "screenshot",
+    "shows": "view",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 385629,
+     "at": "2026-10-13",
+     "width": 533,
+     "height": 400
+    }
+   },
+   {
+    "url": "https://miegakure.com/data/MKPillarsThumb.png",
+    "page": "https://miegakure.com",
+    "alt": "Screenshot Spherinder Grove",
+    "caption": "",
+    "kind": "screenshot",
+    "shows": "view",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 198731,
+     "at": "2026-10-13",
+     "width": 440,
+     "height": 330
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://miegakure.com",
+    "title": "Miegakure [Hide and Reveal]: A 4D puzzle-platforming game.",
+    "why": "官网的游戏介绍：一次只看到三个维度，按键切换看到的三维，画面里的变形来自看到的是 4D 物体的三维切片（页面文字）。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Miegakure [Hide and Reveal]: A 4D puzzle-platforming game."
+    }
+   },
+   {
+    "url": "https://store.steampowered.com/app/355750",
+    "title": "Miegakure: Hide & Reveal on Steam",
+    "why": "Steam 商店页，About This Game 写明如何显示 4D 世界（三维切片），页面上有预告片。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Miegakure: Hide & Reveal on Steam"
+    }
+   }
+  ],
+  "not_found": [
+   "没有可直接在浏览器里玩的在线演示：官网与 Steam 页的链接中未见试玩入口；官网的 trailer 链接是 YouTube 视频（9yW--eQaA2I），视频不计展示页。",
+   "备注：同图大图以页面链接形式存在（未作为 img 列出）：https://miegakure.com/data/MK120w.png、https://miegakure.com/data/WindmillRotated.png、https://miegakure.com/data/MKPillars.png。"
+  ]
+ },
+ "imaxes": {
+  "images": [],
+  "pages": [
+   {
+    "url": "https://sites.google.com/view/cordeil/projects",
+    "title": "XR+VIS Research - Projects",
+    "why": "作者 Maxime Cordeil 的项目页，ImAxes（UIST 2017）条目下列有预印本视频、UIST 演示视频和软件下载链接。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "XR+VIS Research - Projects"
+    }
+   },
+   {
+    "url": "https://research.monash.edu/en/publications/imaxes-immersive-axes-as-embodied-affordances-for-interactive-mul/",
+    "title": "ImAxes: immersive axes as embodied affordances for interactive multivariate data visualisation - Monash University",
+    "why": "Monash 研究库记录页，摘要写明可视化的基本元素是可被操纵的嵌入式数据轴，可视化类型取决于轴之间的邻近程度和相对朝向。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "ImAxes: immersive axes as embodied affordances for interactive multivariate data visualisation - Monash University"
+    }
+   }
+  ],
+  "not_found": [
+   "没有网页版在线演示：系统是沉浸式 VR 应用，作者页的软件下载指向 GitHub（不访问）；作者页列的视频（YouTube、Vimeo）是视频，不计展示页。",
+   "论文图只在 PDF 里（https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf），没有独立图片地址，未收；论文页面为 https://research.monash.edu/en/publications/imaxes-immersive-axes-as-embodied-affordances-for-interactive-mul/。脚本读不出 PDF 文字，图号未核对。",
+   "immersiveanalyticssurvey.org 页面嵌有 3 张 ImAxes 截图（2017-Cordeil-1/2/3），但该站是第三方整理站，不是官方页面，未收。"
+  ]
+ },
+ "hyperbolic-browser": {
+  "images": [
+   {
+    "url": "https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_figs/fg-ut.gif",
+    "page": "https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm",
+    "alt": "",
+    "caption": "Figure 4: A uniform tree of depth 5 and branching factor 3 (364 nodes).",
+    "kind": "figure",
+    "shows": "view",
+    "check": {
+     "status": 200,
+     "content_type": "image/gif",
+     "bytes": 24560,
+     "at": "2026-10-13",
+     "width": 910,
+     "height": 928
+    }
+   },
+   {
+    "url": "https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_figs/fg-eg.gif",
+    "page": "https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm",
+    "alt": "",
+    "caption": "Figure 5: The initial layout of a tree with 1004 nodes using a Poisson distribution for number of children. The origin of the tree is in the center.",
+    "kind": "figure",
+    "shows": "view",
+    "check": {
+     "status": 200,
+     "content_type": "image/gif",
+     "bytes": 29577,
+     "at": "2026-10-13",
+     "width": 920,
+     "height": 958
+    }
+   },
+   {
+    "url": "https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_figs/fg-eg2.gif",
+    "page": "https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm",
+    "alt": "",
+    "caption": "Figure 6: A new focus.",
+    "kind": "figure",
+    "shows": "view",
+    "check": {
+     "status": 200,
+     "content_type": "image/gif",
+     "bytes": 27051,
+     "at": "2026-10-13",
+     "width": 920,
+     "height": 958
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm",
+    "title": "A Focus+Context Technique Based on Hyperbolic Geometry for Visualizing Large Hierarchies.",
+    "why": "CHI 1995 论文页，正文配图 1–10；图 3 为焦点切换（Changing the focus），图 4–6 为不同布局和焦点下的树。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "A Focus+Context Technique Based on Hyperbolic Geometry for Visualizing Large Hierarchies."
+    }
+   },
+   {
+    "url": "https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_figs/anim1a.htm",
+    "title": "Animation: Changing the Focus, Frame 1",
+    "why": "论文附的焦点切换动画页（第 1 帧，带 Next/Previous 翻页），正文图 3 链接到此。",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "Animation: Changing the Focus, Frame 1"
+    }
+   }
+  ],
+  "not_found": [
+   "未找到原系统的在线可操作版本：论文页与附录页只有静态图和动画帧；搜到的开源复现在 GitHub，不访问，也不是原论文官方来源。",
+   "备注：页面 img 标签指向的缩略图（tn-*.gif）返回 404，改用同图的 Full Size 大图链接（fg-*.gif，页面 <a> 链接，可打开），alt 页面上为空。"
   ]
  },
  "infranodus": {
@@ -5947,6 +6911,69 @@
   ],
   "not_found": [
    "symbols 页的符号图都在 raw.githubusercontent.com 上，按规则未收"
+  ]
+ },
+ "single-cell-embeddings": {
+  "images": [
+   {
+    "url": "https://journals.plos.org/ploscompbiol/article/figure/image?size=inline&id=10.1371/journal.pcbi.1012403.g001",
+    "page": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012403",
+    "alt": "Fig 1",
+    "caption": "Fig 1. Evaluated embeddings.",
+    "kind": "figure",
+    "shows": "view",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 43369,
+     "at": "2026-10-13",
+     "width": 320,
+     "height": 121
+    }
+   },
+   {
+    "url": "https://journals.plos.org/ploscompbiol/article/figure/image?size=inline&id=10.1371/journal.pcbi.1012403.g002",
+    "page": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012403",
+    "alt": "Fig 2",
+    "caption": "Fig 2. Embedding quality metrics. Panels correspond to metrics, colors correspond to embedding methods, marker shapes correspond to datasets.",
+    "kind": "figure",
+    "shows": "other",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 53639,
+     "at": "2026-10-13",
+     "width": 320,
+     "height": 278
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012403",
+    "title": "The art of seeing the elephant in the room: 2D embeddings of single-cell data do make sense | PLOS Computational Biology",
+    "why": "Lause 等 2024 的评论正文；页面写明 Fig 1 比较了 elephant 嵌入、2D PCA、t-SNE 与 UMAP 四种嵌入",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "The art of seeing the elephant in the room: 2D embeddings of single-cell data do make sense | PLOS Computational Biology"
+    }
+   },
+   {
+    "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011288",
+    "title": "The specious art of single-cell genomics | PLOS Computational Biology",
+    "why": "被评论的原文（Chari 与 Pachter 2023，PLOS 版）；页面含 Fig 1–8，Fig 1 图注为 'Necessary properties for embedding applications'",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "The specious art of single-cell genomics | PLOS Computational Biology"
+    }
+   }
+  ],
+  "not_found": [
+   "Chari 与 Pachter 2023 的 PMC 版（https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/）返回 reCAPTCHA 验证页，读不到；改用同一篇的 PLOS 版（DOI 10.1371/journal.pcbi.1011288，经搜索得到其地址）",
+   "两篇都是论文，没有在线展示页，demo 记为 null",
+   "PLOS 版 Chari 与 Pachter 的 Fig 2–5 图注只写 distortion，未能判断是否为嵌入散点图，未收"
   ]
  },
  "tube-map": {

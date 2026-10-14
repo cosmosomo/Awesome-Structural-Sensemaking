@@ -23,6 +23,14 @@ EV_TITLES = {"input_material": "处理的材料", "entities": "对象", "relatio
 CHECK_MARK = {"ok": "✓", "missing": "？", "unreadable": "？", "unchecked": "？"}
 
 
+# 生成块写进哪个文件，指向案例证据页的相对路径就不同；build.py 在渲染每个文件前设置它（"" 表示就在 data/ 里）
+LINK_BASE = ""
+
+
+def ev_link(case_id: str) -> str:
+    return f"{LINK_BASE}case-evidence.md#{case_id}"
+
+
 def load_cases(cat: Path) -> dict:
     gpath = cat / "case-gallery.json"
     return {
@@ -60,6 +68,8 @@ def validate_cases(c: dict, project_ids: set[str], form_ids: set[str]) -> list[s
         for k in ("domain", "field", "issue", "structure", "confidence", "origin"):
             if not case.get(k):
                 errs.append(f"案例 {i}: 缺少 {k}")
+        if case.get("dims") and not case.get("dims_note"):
+            errs.append(f"案例 {i}: 写了 dims 就要写 dims_note（数据有几维、每一维在画面上变成什么）")
         if case.get("field") and case["field"] not in v["fields"]:
             errs.append(f"案例 {i}: field {case['field']!r} 不在词表 fields 里")
         elif case.get("field"):
@@ -79,7 +89,7 @@ def validate_cases(c: dict, project_ids: set[str], form_ids: set[str]) -> list[s
         if case.get("confidence") and case["confidence"] not in CONFIDENCE:
             errs.append(f"案例 {i}: confidence 不在 {list(CONFIDENCE)} 里")
         for key, vocab_key in (("issue_types", "issue_types"), ("structure", "structures"), ("modifiers", "modifiers"),
-                               ("focus", "focus_parts"), ("abstraction", "abstraction_modes")):
+                               ("focus", "focus_parts"), ("abstraction", "abstraction_modes"), ("dims", "dim_modes")):
             for x in case.get(key, []):
                 if x not in v[vocab_key]:
                     errs.append(f"案例 {i}: {key} 里的 {x} 不在词表 {vocab_key} 里")
@@ -226,7 +236,7 @@ def render_by_structure(d: dict, arg: str) -> str:
         types = titles(x, "issue_types", v["issue_types"])
         dom = f"{esc(x['domain'])}<br>{issue}" + (f"<br><sub>{esc(types)}</sub>" if types else "")
         conf = {"high": "高", "medium": "中", "low": "低"}[x["confidence"]]
-        ev = f"[摘录](case-evidence.md#{x['id']})<br><sub>把握：{conf}</sub>"
+        ev = f"[摘录]({ev_link(x['id'])})<br><sub>把握：{conf}</sub>"
         out.append(f"| {name_link(x, projects)} | {dom} | {structure_cell(x, v)} | {focus_cell(x, v)} | {vis_cell(x, forms, v)} | {thinking_cell(x, c['evidence'])} | {ev} |")
     return "\n".join(out) + "\n"
 
@@ -307,6 +317,41 @@ def render_school_count(d: dict, arg: str) -> str:
     return _count_matrix(rows, lambda x: x["schools"][0], spec[0], v["schools"], spec[1], spec[2])
 
 
+def render_dims_modes(d: dict, _arg: str) -> str:
+    """维度处理方式总表：定义、用到它的案例（主要的加粗）。"""
+    c, v = d["cases"], d["cases"]["vocab"]
+    projects = {p["id"]: p for p in d["projects"]}
+    out = ["| 维度处理 | 做法 | 案例（加粗的是主要做法） | 数量 |", "| --- | --- | --- | --- |"]
+    for k, m in v["dim_modes"].items():
+        rows = [x for x in c["cases"] if k in x.get("dims", [])]
+        names = "、".join((lambda s, x=x: f"**{s}**" if x["dims"][0] == k else s)(f"[{esc(case_name(x, projects))}]({ev_link(x['id'])})") for x in rows)
+        out.append(f"| {m['title']} | {esc(m['desc'])} | {names or '—'} | {len(rows)} |")
+    n = sum(1 for x in c["cases"] if x.get("dims"))
+    out.append("")
+    out.append(f"{n} 个案例标了维度处理；其余案例没有“维度比位置轴多”的问题，或页面没写。")
+    return "\n".join(out) + "\n"
+
+
+def render_dims_cross(d: dict, arg: str) -> str:
+    """主要维度处理与主流派、主类结构的交叉计数。arg: school / structure"""
+    c, v = d["cases"], d["cases"]["vocab"]
+    rows = [x for x in c["cases"] if x.get("dims") and x.get("schools")] if arg == "school" else [x for x in c["cases"] if x.get("dims")]
+    if arg == "school":
+        return _count_matrix(rows, lambda x: x["dims"][0], lambda x: x["schools"][0], v["dim_modes"], v["schools"], "主要维度处理 \\ 主流派")
+    return _count_matrix(rows, lambda x: x["dims"][0], lambda x: x["structure"][0], v["dim_modes"], v["structures"], "主要维度处理 \\ 主类结构")
+
+
+def render_school_summary(d: dict, _arg: str) -> str:
+    """八个流派的总表：押注什么、放弃什么、用到的案例数（其中主流派）。"""
+    c, v = d["cases"], d["cases"]["vocab"]
+    out = ["| 流派 | 押注什么 | 放弃什么 | 用到的案例数（其中主流派） |", "| --- | --- | --- | --- |"]
+    for k, s in v["schools"].items():
+        anyn = sum(1 for x in c["cases"] if k in x.get("schools", []))
+        prim = sum(1 for x in c["cases"] if x.get("schools") and x["schools"][0] == k)
+        out.append(f"| {s['title']} | {esc(s['bet'])} | {esc(s['cost'])} | {anyn}（{prim}） |")
+    return "\n".join(out) + "\n"
+
+
 def render_school_loo(d: dict, _arg: str) -> str:
     """留一法：拿一个案例的某些编码去预测它的主流派，只用其余案例统计。平局取其余案例里整体更常见的流派，结果与案例顺序无关。"""
     rows = [x for x in d["cases"]["cases"] if x.get("schools") and x.get("focus") and x.get("issue_types")]
@@ -347,7 +392,7 @@ def render_school_cases(d: dict, arg: str) -> str:
     for x in rows:
         mark = "**" if x["schools"][0] == arg else ""
         others = "、".join(v["schools"][s]["title"] for s in x["schools"] if s != arg)
-        out.append(f"- {mark}[{esc(case_name(x, projects))}](data/case-evidence.md#{x['id']}){mark}　{esc(x['domain'])} · "
+        out.append(f"- {mark}[{esc(case_name(x, projects))}]({ev_link(x['id'])}){mark}　{esc(x['domain'])} · "
                    f"{'+'.join(v['structures'][s]['title'] for s in x['structure'])}"
                    + (f" · 同时用：{others}" if others else ""))
     return "\n".join(out) + "\n"
@@ -430,7 +475,7 @@ def render_evidence(d: dict, _arg: str) -> str:
 
 
 def gallery_images(g: dict) -> list[dict]:
-    """能展示的图片：展示的是这个案例画出来的视图（shows 为 view）；核对过是图片；位图宽不小于 180、高不小于 100（更小的看不清）。
+    """能展示的图片：展示的是这个案例画出来的视图（shows 为 view）；核对过是图片；位图宽不小于 180、高不小于 100（更小的看不清），单张不超过 8 MB。
     界面设置面板、架构与方法图、数据模型图、概念示意、模板和宣传页（shows 为别的值）留在数据里，不显示。"""
     out = []
     for im in g.get("images", []):
@@ -440,6 +485,8 @@ def gallery_images(g: dict) -> list[dict]:
         if ck.get("status") != 200 or not str(ck.get("content_type", "")).startswith("image/"):
             continue
         if (ck.get("width") and ck["width"] < 180) or (ck.get("height") and ck["height"] < 100):
+            continue
+        if ck.get("bytes") and ck["bytes"] > 8_000_000:  # 单张超过 8 MB 的不显示：读者打开页面会很慢
             continue
         out.append(im)
     return out
@@ -513,7 +560,7 @@ def render_gallery(d: dict, arg: str) -> str:
             if caps:
                 out.append("")
                 out.append("<sub>图：" + "；".join(caps) + "</sub>")
-        out.append(f"\n<sub>[编码与原文摘录](case-evidence.md#{x['id']})</sub>\n")
+        out.append(f"\n<sub>[编码与原文摘录]({ev_link(x['id'])})</sub>\n")
     return "\n".join(out) + "\n"
 
 
@@ -554,6 +601,9 @@ CASE_RENDERERS = {
     "schoolcases": render_school_cases,
     "schoolpairs": render_school_pairs,
     "schoolloo": render_school_loo,
+    "schoolsummary": render_school_summary,
+    "dimsmodes": render_dims_modes,
+    "dimscross": render_dims_cross,
     "gallery": render_gallery,
     "gallerystats": render_gallery_stats,
     "galleryindex": render_gallery_index,

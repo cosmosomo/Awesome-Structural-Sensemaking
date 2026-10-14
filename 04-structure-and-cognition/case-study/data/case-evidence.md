@@ -1703,6 +1703,683 @@
 </details>
 - 没读到：interactions
 
+<a id="tsne-misread"></a>
+
+### How to Use t-SNE Effectively（Distill）
+
+- 领域：机器学习与嵌入分析；议题：把几百上千维的点压成二维图以后，图上的哪些东西（簇的大小、簇之间的距离、形状）能读，哪些会误读
+- 编码：空间与几何；重点：群落与相似、空间位置；把握：官方页面直接写了
+- 说明：这是一篇讲“怎么读”的文章，不是产品；设计者的理由和局限都写在文章里，所以放进来。
+- 编码所依据的原文：
+  - 回答的问题：“The purpose of this note is to prevent some common misreadings.” [✓](https://distill.pub/2016/misread-tsne/)
+  - 编码：“distances between well-separated clusters in a t-SNE plot may mean nothing” [✓](https://distill.pub/2016/misread-tsne/)
+  - 属性与度量：“A second feature of t-SNE is a tuneable parameter, “perplexity,” which says (loosely) how to balance attention between local and global aspects of your data.” [✓](https://distill.pub/2016/misread-tsne/)
+  - 视图：“The diagrams at right show t-SNE plots for five different perplexity values.” [✓](https://distill.pub/2016/misread-tsne/)
+  - 抽象与层级：“Getting the most from t-SNE may mean analyzing multiple plots with different perplexities.” [✓](https://distill.pub/2016/misread-tsne/)
+<details><summary>本案例读到的其他原文摘录</summary>
+
+- 处理的材料：“to create compelling two-dimensonal “maps” from data with hundreds or even thousands of dimensions.” [✓](https://distill.pub/2016/misread-tsne/)
+- 处理的材料：“500 points drawn from a unit Gaussian distribution in 100 dimensions” [✓](https://distill.pub/2016/misread-tsne/)
+- 对象：“The goal is to take a set of points in a high-dimensional space and find a faithful representation of those points in a lower-dimensional space, typically the 2D plane.” [✓](https://distill.pub/2016/misread-tsne/)
+- 关系：“The parameter is, in a sense, a guess about the number of close neighbors each point has.” [✓](https://distill.pub/2016/misread-tsne/)
+- 属性与度量：“with a learning rate (often called “epsilon”) of 10” [✓](https://distill.pub/2016/misread-tsne/)
+- 编码：“(For clarity, the two clusters are color coded.)” [✓](https://distill.pub/2016/misread-tsne/)
+- 回答的问题：“By exploring how it behaves in simple cases, we can learn to use it more effectively.” [✓](https://distill.pub/2016/misread-tsne/)
+- 抽象与层级：“The t-SNE algorithm adapts its notion of “distance” to regional density variations in the data set.” [✓](https://distill.pub/2016/misread-tsne/)
+- 为什么这样画：“To make things as simple as possible, we’ll consider clusters in a 2D plane, as shown in the lefthand diagram.” [✓](https://distill.pub/2016/misread-tsne/)
+- 为什么这样画：“We’ll walk through a series of simple examples to illustrate what t-SNE diagrams can and cannot show.” [✓](https://distill.pub/2016/misread-tsne/)
+- 为什么这样画：“In our experience, the most important thing is to iterate until reaching a stable configuration.” [✓](https://distill.pub/2016/misread-tsne/)
+- 为什么这样画：“Recognizing noise when you see it is a critical skill, but it takes time to build up the right intuitions.” [✓](https://distill.pub/2016/misread-tsne/)
+- 原来的问题：“Seen in this light, the t-SNE plot is more accurate than any linear projection could be.” [✓](https://distill.pub/2016/misread-tsne/)
+- 原来的问题：“A tricky thing about t-SNE is that it throws a lot of existing intuition out the window.” [✓](https://distill.pub/2016/misread-tsne/)
+- 局限与代价：“The bottom line, however, is that you cannot see relative sizes of clusters in a t-SNE plot.” [✓](https://distill.pub/2016/misread-tsne/)
+- 局限与代价：“Certain data sets, however, yield markedly different diagrams on different runs” [✓](https://distill.pub/2016/misread-tsne/)
+- 局限与代价：“Unfortunately, that very flexibility makes it tricky to interpret.” [✓](https://distill.pub/2016/misread-tsne/)
+- 局限与代价：“Even in the best cases, though, there’s a subtle distortion: the lines are slightly curved outwards in the t-SNE diagram.” [✓](https://distill.pub/2016/misread-tsne/)
+
+</details>
+- 没读到：interactions（页面只有播放、暂停、刷新、Step 的界面文字，没有写交互操作的说明）
+
+<a id="grand-tour"></a>
+
+### Visualizing Neural Networks with the Grand Tour（Distill）
+
+- 领域：机器学习与嵌入分析；议题：看神经网络训练的过程中、以及一层一层往后，十维以上的激活向量怎么变：哪些类先分开、测试集和训练集差在哪里
+- 编码：空间与几何 + 序列与事件流；重点：群落与相似、时间与演化、空间位置；把握：官方页面直接写了
+- 说明：文章同时是方法说明和工具（可交互的网页）；设计者明说为什么不用 t-SNE 和 PCA（分别因为单点位置依赖整体分布、前两个主成分不比第三个好多少）。
+- 编码所依据的原文：
+  - 属性与度量：“the points in the softmax layer for our example datasets are 10 dimensional (and in larger-scale classification problems this number can be much larger).” [✓](https://distill.pub/2020/grand-tour/)
+  - 视图：“Starting with a random velocity, it smoothly rotates data points around the origin in high dimensional space, and then projects it down to 2D for display.” [✓](https://distill.pub/2020/grand-tour/)
+  - 编码：“the color of points are more mixed in testing (right) than training (left) set” [✓](https://distill.pub/2020/grand-tour/)
+  - 交互：“If we provide the user with the ability to change these vectors by dragging around user-interface handles, then users can intuitively set up new linear projections.” [✓](https://distill.pub/2020/grand-tour/)
+  - 视图：“The Grand Tour, on the other hand, uses a single animated view.” [✓](https://distill.pub/2020/grand-tour/)
+<details><summary>本案例读到的其他原文摘录</summary>
+
+- 处理的材料：“we trained deep neural network models (DNNs) with 3 common image classification datasets” [✓](https://distill.pub/2020/grand-tour/)
+- 处理的材料：“we trained each of the neural networks for 99 epochs and recorded the entire history of neuron activations on a subset of training and testing examples” [✓](https://distill.pub/2020/grand-tour/)
+- 对象：“The softmax, for example, can be seen as a 10-vector whose values are positive real numbers that sum up to 1.” [✓](https://distill.pub/2020/grand-tour/)
+- 对象：“The softmax layer is relatively easy to understand because its axes have strong semantics.” [✓](https://distill.pub/2020/grand-tour/)
+- 关系：“classification outputs that are halfway confident between two classes are projected to vectors that are halfway between the class handles.” [✓](https://distill.pub/2020/grand-tour/)
+- 属性与度量：“we monitor the whole history of training and testing losses over rounds of training (or “epochs”)” [✓](https://distill.pub/2020/grand-tour/)
+- 属性与度量：“we reduce the number of data points to 500 and epochs to 50” [✓](https://distill.pub/2020/grand-tour/)
+- 视图：“The Grand Tour is a classic visualization technique for high-dimensional point clouds that projects a high-dimensional dataset into two dimensions.” [✓](https://distill.pub/2020/grand-tour/)
+- 视图：“So the Grand Tour provides a natural, elegant and computationally efficient way to align visualizations of activations separated by fully-connected (linear) layers.” [✓](https://distill.pub/2020/grand-tour/)
+- 编码：“Show data as images to see the actual images generated in each step, or dots colored by labels.” [✓](https://distill.pub/2020/grand-tour/)
+- 编码：“where the digits are close to one of the ten corners of the softmax space” [✓](https://distill.pub/2020/grand-tour/)
+- 编码：“Data points went directly toward the corner of its true class and all classes are stabilized after about 50 epochs.” [✓](https://distill.pub/2020/grand-tour/)
+- 交互：“Use the buttons on the right to highlight digits 1 and 7 in the plot, or drag rectangles around the charts to select particular point subsets to highlight in the other charts.” [✓](https://distill.pub/2020/grand-tour/)
+- 回答的问题：“what is the difference between the present training epoch and the next one? How does the classification of a network converge (or diverge) as the image is fed through the network?” [✓](https://distill.pub/2020/grand-tour/)
+- 回答的问题：“The Grand Tour also lets us compare visualizations of the training and testing data, giving us a qualitative assessment of over-fitting.” [✓](https://distill.pub/2020/grand-tour/)
+- 抽象与层级：“Given the presented techniques of the Grand Tour and direct manipulations on the axes, we can in theory visualize and manipulate any intermediate layer of a neural network by itself.” [✓](https://distill.pub/2020/grand-tour/)
+- 抽象与层级：“This vector view of data in neural network not only allows us represent complex data in a mathematically compact form” [✓](https://distill.pub/2020/grand-tour/)
+- 为什么这样画：“Linear methods are attractive because they are particularly easy to reason about.” [✓](https://distill.pub/2020/grand-tour/)
+- 为什么这样画：“When given the chance, then, we should prefer methods for which changes in the data produce predictable, visually salient changes in the result, and linear dimensionality reductions often have this property.” [✓](https://distill.pub/2020/grand-tour/)
+- 为什么这样画：“Whenever geometry is concerned, like the case of understanding multi-way confusions in the softmax layer, linear methods are more interpretable because they preserve certain geometrical structures of data in the projection.” [✓](https://distill.pub/2020/grand-tour/)
+- 为什么这样画：“it should be possible to know how the visualization would change, if the data had been different in a particular way” [✓](https://distill.pub/2020/grand-tour/)
+- 原来的问题：“Here, a significant change happened in only a subset of data (e.g. all points of digit 1 from epoch 13 to 14), but all points in the visualization move dramatically.” [✓](https://distill.pub/2020/grand-tour/)
+- 原来的问题：“For both UMAP and t-SNE, the position of each single point depends non-trivially on the whole data distribution in such embedding algorithms.” [✓](https://distill.pub/2020/grand-tour/)
+- 原来的问题：“As a result, even though PCA projections are interpretable and consistent through training epochs, the first two principal components of softmax activations are not substantially better than the third.” [✓](https://distill.pub/2020/grand-tour/)
+- 原来的问题：“Instead of PCA, we propose to visualize this data by smoothly animating random projections, using a technique called the Grand Tour .” [✓](https://distill.pub/2020/grand-tour/)
+- 局限与代价：“While our architecture is simpler and smaller than current DNNs, it’s still indicative of modern networks” [✓](https://distill.pub/2020/grand-tour/)
+- 局限与代价：“With our technique, one can visualize neuron activations on each such branch, but additional research is required to incorporate multiple branches directly.” [✓](https://distill.pub/2020/grand-tour/)
+- 局限与代价：“For the sake of simplicity, in this article we brute-forced the computation of the alignment of such convolutional layers by writing out their explicit matrix representation.” [✓](https://distill.pub/2020/grand-tour/)
+- 局限与代价：“When topology is the main focus, such as when we want to cluster the data” [✓](https://distill.pub/2020/grand-tour/)
+
+</details>
+
+<a id="dtour"></a>
+
+### dtour
+
+- 领域：高维数据探索；议题：把四维以上的数据沿一串二维投影“巡游”，既保持点的身份，又能引导、手动调整或自动漫游，用来判断嵌入里的结构是真的还是投影造成的
+- 编码：空间与几何 + 序列与事件流；重点：群落与相似、跨视图的同一对象、空间位置；把握：官方页面直接写了
+- 说明：2026 年 5 月的预印本（arXiv:2605.04306，未经同行评审）；作者博客里说“用户受益尚未评估”类的话页面没有，没写进来。官网 dtour.dev 是脚本渲染的应用，页面文字读不到；证据取自论文 HTML 版和作者博客。
+- 编码所依据的原文：
+  - 关系：“a sequence of 2D projections with one-to-one point correspondence” [✓](https://arxiv.org/html/2605.04306v4)
+  - 视图：“A central 2D scatter ringed by projection previews gives an overview.” [✓](https://arxiv.org/html/2605.04306v4)
+  - 编码：“the width of the slider’s ring segments encode geodesic distances between consecutive keyframes: thin segments indicate stretched regions of projection space” [✓](https://arxiv.org/html/2605.04306v4)
+  - 编码：“Each handle’s projected direction and length encode that dimension’s current contribution to the projection basis” [✓](https://arxiv.org/html/2605.04306v4)
+  - 交互：“Lasso and label-based selection let users isolate a subset of points and track them across projections” [✓](https://arxiv.org/html/2605.04306v4)
+<details><summary>本案例读到的其他原文摘录</summary>
+
+- 处理的材料：“We demonstrate dtour on text, image, and single-cell data for two usage scenarios” [✓](https://arxiv.org/abs/2605.04306)
+- 处理的材料：“Given data with four or more dimensions” [✓](https://arxiv.org/html/2605.04306v4)
+- 处理的材料：“on a 346K-cell single-cell surface-protein dataset from Florian Mair” [✓](https://lekschas.de/blog/high-dimensional-data-is-hard-to-understand)
+- 对象：“a guided cyclical tour along geodesic paths connecting keyframes” [✓](https://lekschas.de/blog/high-dimensional-data-is-hard-to-understand)
+- 对象：“dtour scales to millions of points via GPU-accelerated rendering” [✓](https://arxiv.org/abs/2605.04306)
+- 关系：“A tour is defined by a cyclic sequence of keyframe projections” [✓](https://arxiv.org/html/2605.04306v4)
+- 属性与度量：“Tours can specify feature loadings, shown as text beneath each preview indicating the top contributing dimensions.” [✓](https://arxiv.org/html/2605.04306v4)
+- 属性与度量：“Many datasets include labels or non-embedded dimensions that aid interpretation.” [✓](https://arxiv.org/html/2605.04306v4)
+- 视图：“a wandering grand tour” [✓](https://arxiv.org/abs/2605.04306)
+- 视图：“Gallery previews are arranged around the circular tour slider” [✓](https://arxiv.org/html/2605.04306v4)
+- 视图：“dimension axes appear as draggable handles” [✓](https://arxiv.org/html/2605.04306v4)
+- 编码：“These can be mapped to point color” [✓](https://arxiv.org/html/2605.04306v4)
+- 编码：“Tick marks at keyframe positions serve as navigational landmarks” [✓](https://arxiv.org/html/2605.04306v4)
+- 交互：“Users can scrub the slider, scroll the mouse wheel, or press play for animated playback to advance the tour.” [✓](https://arxiv.org/html/2605.04306v4)
+- 交互：“specifies a new target direction for its variable” [✓](https://arxiv.org/html/2605.04306v4)
+- 交互：“holding Shift while dragging rotates the view about a temporary third axis” [✓](https://arxiv.org/html/2605.04306v4)
+- 回答的问题：“To help you develop better intuition for high-dimensional datasets” [✓](https://lekschas.de/blog/high-dimensional-data-is-hard-to-understand)
+- 回答的问题：“validating whether structure in an embedding is genuine or a projection artifact” [✓](https://arxiv.org/html/2605.04306v4)
+- 回答的问题：“validating or comparing embeddings through sequential tours over a series of 2D projections” [✓](https://lekschas.de/blog/high-dimensional-data-is-hard-to-understand)
+- 抽象与层级：“Tours address this limitation through animation of 2D projection sequences” [✓](https://arxiv.org/abs/2605.04306)
+- 抽象与层级：“Traversing multiple projections can help build a more holistic understanding of high-dim manifolds” [✓](https://lekschas.de/blog/high-dimensional-data-is-hard-to-understand)
+- 为什么这样画：“dtour makes such exploration effortless through one interface” [✓](https://lekschas.de/blog/high-dimensional-data-is-hard-to-understand)
+- 为什么这样画：“smooth, user-steered traversal within and between projection spaces” [✓](https://arxiv.org/html/2605.04306v4)
+- 为什么这样画：“All transitions—within a tour mode and between—are smoothly interpolated to preserve point identity and spatial context.” [✓](https://arxiv.org/html/2605.04306v4)
+- 为什么这样画：“letting viewers track points across views rather than re-identifying them after each transition” [✓](https://arxiv.org/html/2605.04306v4)
+- 原来的问题：“Some dimensionality reduction methods find interesting angles but hide everything orthogonal to them.” [✓](https://lekschas.de/blog/high-dimensional-data-is-hard-to-understand)
+- 原来的问题：“Other methods compress the whole manifold into 2D, which can muddle genuine structure with layout artifacts.” [✓](https://lekschas.de/blog/high-dimensional-data-is-hard-to-understand)
+- 原来的问题：“grids of static projections are directly comparable at a glance but require constant shifts of focus to integrate information” [✓](https://arxiv.org/html/2605.04306v4)
+- 原来的问题：“Yet these tools limit accessibility as the analyst must choose the most suitable mode upfront.” [✓](https://arxiv.org/html/2605.04306v4)
+- 局限与代价：“any single projection inevitably loses information or introduces distortions” [✓](https://arxiv.org/abs/2605.04306)
+- 局限与代价：“only the keyframes are interpretable: the smooth interpolation is an object-constancy aid for tracking points across embeddings” [✓](https://arxiv.org/html/2605.04306v4)
+- 局限与代价：“dtour is optimized for performance: it runs smoothly for up to ~10M points and remains usable up to ~20M” [✓](https://lekschas.de/blog/high-dimensional-data-is-hard-to-understand)
+- 局限与代价：“The supplementary video shows the fluid transitions that static figures cannot convey.” [✓](https://arxiv.org/html/2605.04306v4)
+
+</details>
+- 没读到：文中没有单独的局限或未评估部分一节；全文检索 limitation、future work、user study 都没有专门段落
+
+<a id="embedding-atlas"></a>
+
+### Embedding Atlas
+
+- 领域：机器学习与嵌入分析；议题：在几百万个点的嵌入二维地图上看簇、搜近邻，并和元数据的分布联动过滤
+- 编码：空间与几何 + 表与多维属性；重点：群落与相似、空间位置、总体分布；把握：官方页面直接写了
+- 说明：论文写明“用户研究超出这篇短文范围”。
+- 编码所依据的原文：
+  - 视图：“Render up to a few million points with density contours, powered by WebGPU.” [✓](https://apple.github.io/embedding-atlas/)
+  - 抽象与层级：“Group and label related points across multiple resolutions.” [✓](https://arxiv.org/html/2505.06386v2)
+  - 交互：“users can cross-filter between all the charts and the embedding.” [✓](https://arxiv.org/html/2505.06386v2)
+  - 编码：“The density mode (right) visualizes the density of the projected points through opacity and contours.” [✓](https://arxiv.org/html/2505.06386v2)
+  - 属性与度量：“the distribution of each metadata column is automatically visualized in the sidebar” [✓](https://arxiv.org/html/2505.06386v2)
+<details><summary>本案例读到的其他原文摘录</summary>
+
+- 处理的材料：“Supported column types include text, image, audio, numeric, categorical, and time.” [✓](https://apple.github.io/embedding-atlas/overview.html)
+- 处理的材料：“In this online version, Embedding Atlas will compute the embedding and projection in your browser. Your data does not leave your machine.” [✓](https://apple.github.io/embedding-atlas/overview.html)
+- 对象：“Interactions enable users to explore millions of points smoothly, without needing to pre-sample or pre-render their data, reducing the effort required to explore data at scale.” [✓](https://arxiv.org/html/2505.06386v2)
+- 对象：“each wine also contains metadata such as its origin country and province” [✓](https://arxiv.org/html/2505.06386v2)
+- 关系：“Projections may preserve local neighborhoods and global structure to ultimately make sense of the original data.” [✓](https://arxiv.org/html/2505.06386v2)
+- 关系：“Find similar data to any point.” [✓](https://arxiv.org/html/2505.06386v2)
+- 属性与度量：“Built-in viewers for text, image, audio, numeric, categorical, and time columns.” [✓](https://apple.github.io/embedding-atlas/)
+- 视图：“Standard charts (bar, line, bubble, count plot, eCDF) plus a composable chart spec for building custom charts.” [✓](https://apple.github.io/embedding-atlas/overview.html)
+- 视图：“If your dataset has no embedding column, the embedding view is hidden, but linked charts, full-text search, and the instances view still work.” [✓](https://apple.github.io/embedding-atlas/overview.html)
+- 视图：“A virtualized data table can also be shown for users who want to browse the data quickly.” [✓](https://arxiv.org/html/2505.06386v2)
+- 编码：“When showing multiple categories, the visualization uses order-independent transparency” [✓](https://arxiv.org/html/2505.06386v2)
+- 编码：“To visualize these high-dimensional embeddings, we use UMAP” [✓](https://arxiv.org/html/2505.06386v2)
+- 交互：“Find similar data to a given query or existing data point.” [✓](https://apple.github.io/embedding-atlas/)
+- 交互：“Arrange charts and configure cross-filtering between them.” [✓](https://apple.github.io/embedding-atlas/)
+- 交互：“She exports this subset to a Parquet file to save for the future.” [✓](https://arxiv.org/html/2505.06386v2)
+- 回答的问题：“Next, she wants to find the best wines for the cheapest price.” [✓](https://arxiv.org/html/2505.06386v2)
+- 回答的问题：“Because there are noticeable clusters by region, she hypothesizes that wines from the same region may taste more similar to each other than to those from other regions.” [✓](https://arxiv.org/html/2505.06386v2)
+- 回答的问题：“Visualize 2D projections of millions of points, browse automatic clusters and labels, find nearest neighbors, and cross-filter against metadata.” [✓](https://apple.github.io/embedding-atlas/overview.html)
+- 抽象与层级：“The automatic cluster labels are also produced with a fast clustering algorithm based on 2D density” [✓](https://arxiv.org/html/2505.06386v2)
+- 抽象与层级：“This package provides a WebAssembly implementation of a density map clustering algorithm.” [✓](https://apple.github.io/embedding-atlas/algorithms.html)
+- 抽象与层级：“Summarize points with real-time contour plotting based on data density.” [✓](https://arxiv.org/html/2505.06386v2)
+- 为什么这样画：“focusing people’s time on looking at their data rather than configuring the tool” [✓](https://arxiv.org/html/2505.06386v2)
+- 为什么这样画：“Every bit of friction encountered by a user during installation, set up, and use, lowers the chance of them engaging with the tool and their data.” [✓](https://arxiv.org/html/2505.06386v2)
+- 为什么这样画：“Removes the need to install packages or configure environments, allowing users to get started with only a web browser—ideal for onboarding, demos, or lightweight workflows.” [✓](https://arxiv.org/html/2505.06386v2)
+- 为什么这样画：“View coordination removes the need to constantly switch between tools, enabling users to cross-reference points and metadata together.” [✓](https://arxiv.org/html/2505.06386v2)
+- 原来的问题：“these tools solely focus on rendering, and do not visualize other metadata, let alone support cross-filtering at this scale” [✓](https://arxiv.org/html/2505.06386v2)
+- 原来的问题：“since these tools immediately suffer from scalability as the data grows into the few thousands” [✓](https://arxiv.org/html/2505.06386v2)
+- 原来的问题：“Existing tools today can be a dead end for people’s analyses.” [✓](https://arxiv.org/html/2505.06386v2)
+- 原来的问题：“few allow users to export results in other developer environments” [✓](https://arxiv.org/html/2505.06386v2)
+- 局限与代价：“This approach has limitations (e.g., no side-by-side view), and first-class support would greatly enhance the comparison experience.” [✓](https://arxiv.org/html/2505.06386v2)
+- 局限与代价：“as we attempt to cover more use cases, this fixed layout becomes a limitation.” [✓](https://arxiv.org/html/2505.06386v2)
+- 局限与代价：“However, since the density mode uses more involved pixel-space computation, its FPS drops as we increase the number of pixels” [✓](https://arxiv.org/html/2505.06386v2)
+- 局限与代价：“A user study is beyond the scope of this short paper.” [✓](https://arxiv.org/html/2505.06386v2)
+
+</details>
+- 没读到：encodings（页面没写颜色和点大小分别代表什么）
+
+<a id="nomic-atlas"></a>
+
+### Nomic Atlas
+
+- 领域：机器学习与嵌入分析；议题：把大规模文本或嵌入数据放到一张地图上，找簇、离群点和误分类，并协作标注
+- 编码：空间与几何 + 层级与树；重点：群落与相似、包含与层次、空间位置；把握：官方页面直接写了
+- 说明：商业云平台；技术报告写明“目前无法公开许多技术细节”，所以投影与标注的细节只能引用文档写出来的部分。
+- 编码所依据的原文：
+  - 编码：“Numerical distances between 2D point positions do not have concrete meaning” [✓](https://docs.nomic.ai/atlas/datasets/data-maps)
+  - 编码：“For datasets with 50,000 or more points, Atlas uses advanced proprietary algorithms designed for large-scale visualization” [✓](https://docs.nomic.ai/atlas/embeddings-and-retrieval/guides/how-to-visualize-embeddings)
+  - 抽象与层级：“Topics group your dataset into homogenous regions. As you zoom around the map, more granular versions of your datasets topics will appear.” [✓](https://docs.nomic.ai/atlas/datasets/data-maps)
+  - 抽象与层级：“Atlas auto-labels each cluster with a custom-trained large language model that synthesizes a short topical description for each topic/cluster in the ontology.” [✓](https://static.nomic.ai/atlas_tech_report.pdf)
+  - 交互：“Drag a lasso around a region of space to select all points contained in your region” [✓](https://docs.nomic.ai/atlas/datasets/data-maps/controls)
+<details><summary>本案例读到的其他原文摘录</summary>
+
+- 处理的材料：“Atlas is a platform for visually and programmatically interacting with massive unstructured datasets of text documents, images and embeddings.” [✓](https://docs.nomic.ai/atlas/datasets/data-maps/how-atlas-works/1-key_terms)
+- 处理的材料：“Users can opt to either upload their own precomputed vectors or to use Atlas’ built in vectorizer.” [✓](https://static.nomic.ai/atlas_tech_report.pdf)
+- 对象：“Points close to each other on the map are semantically similar/related” [✓](https://docs.nomic.ai/atlas/datasets/data-maps)
+- 对象：“Clusters on your Atlas Map contain datapoints that are semantically similar.” [✓](https://docs.nomic.ai/atlas/datasets/data-maps)
+- 关系：“Topics have a hierarchy” [✓](https://docs.nomic.ai/atlas/datasets/data-maps)
+- 关系：“Distinct clusters might be close together; related clusters might be far apart.” [✓](https://docs.nomic.ai/atlas/datasets/data-maps)
+- 属性与度量：“Filter over any of your numerical metadata values like sentiment value, temperature, price, score, and much more.” [✓](https://docs.nomic.ai/atlas/datasets/data-maps/controls)
+- 属性与度量：“Coloring works for both categorical or numerical data types.” [✓](https://docs.nomic.ai/atlas/datasets/data-maps/controls)
+- 属性与度量：“Slicing by timestamp allows you to see change in topics over time” [✓](https://docs.nomic.ai/atlas/datasets/data-maps/controls)
+- 视图：“The Atlas Data Map plots your entire dataset on one screen and organizes it by meaning into clusters.” [✓](https://docs.nomic.ai/atlas/datasets/data-maps)
+- 视图：“Floating labels correspond to distinct topics in your data” [✓](https://docs.nomic.ai/atlas/datasets/data-maps)
+- 视图：“The legend on your graph will describe the current labels corresponding to colors of points on the map.” [✓](https://docs.nomic.ai/atlas/datasets/data-maps/controls)
+- 视图：“In the selection results panel on the left (where it shows the number of results), click the Tag all results button.” [✓](https://docs.nomic.ai/atlas/datasets/data-maps/controls)
+- 编码：“the X-Y axes of the map do not have meaning, and the exact distance between points is not meaningful” [✓](https://docs.nomic.ai/atlas/datasets/data-maps)
+- 编码：“To color datapoints by topic clusters, you can color by Nomic Topic: 1/2/3. Depth level 1 is most general and depth level 3 is the most specific.” [✓](https://docs.nomic.ai/atlas/datasets/data-maps/controls)
+- 交互：“Query Search (Default): Find data points that best answer a question you have about your data” [✓](https://docs.nomic.ai/atlas/datasets/data-maps/controls)
+- 交互：“Click individual points to add them to a selection.” [✓](https://docs.nomic.ai/atlas/datasets/data-maps/controls)
+- 交互：“An editor of a dataset can update topic labels from within the Atlas Map.” [✓](https://docs.nomic.ai/atlas/datasets/data-maps/controls)
+- 回答的问题：“Cluster and auto-categorize your datasets.” [✓](https://docs.nomic.ai/atlas/datasets/data-maps)
+- 回答的问题：“Discover outlier and anomolous regions in your data.” [✓](https://docs.nomic.ai/atlas/datasets/data-maps)
+- 回答的问题：“Spot misclassified or outlier points where a model's assumptions break down.” [✓](https://docs.nomic.ai/atlas/embeddings-and-retrieval/guides/how-to-visualize-embeddings)
+- 回答的问题：“See if your data forms distinct groups, which can be crucial for classification or recommendation tasks.” [✓](https://docs.nomic.ai/atlas/embeddings-and-retrieval/guides/how-to-visualize-embeddings)
+- 抽象与层级：“Atlas automatically builds an ontology over uploaded datasets by applying a hierarchical clustering model over data vectors in the latent space.” [✓](https://static.nomic.ai/atlas_tech_report.pdf)
+- 抽象与层级：“The topic labeling system in Atlas will generate topics at either two or three depth levels depending on the granularity of your dataset.” [✓](https://docs.nomic.ai/atlas/datasets/data-maps/how-atlas-works/3-about-topics)
+- 为什么这样画：“Atlas automatically selects the optimal projection algorithm based on your dataset size” [✓](https://docs.nomic.ai/atlas/embeddings-and-retrieval/guides/how-to-visualize-embeddings)
+- 为什么这样画：“makes choices about the high dimensional kernel, low dimensional kernel, and optimizer that enable increased projection speed, size, and quality” [✓](https://static.nomic.ai/atlas_tech_report.pdf)
+- 为什么这样画：“Built for collaboration across technical and non-technical teams.” [✓](https://docs.nomic.ai/atlas/datasets/data-maps)
+- 为什么这样画：“We aim to address these risks using the methods of information cartography, the art and practice of making and using maps of data.” [✓](https://static.nomic.ai/atlas_tech_report.pdf)
+- 原来的问题：“Traditional technologies for investigating and probing large datasets, such as relational databases and full-text search indices, are insufficient to handling the volume of unstructured datasets” [✓](https://static.nomic.ai/atlas_tech_report.pdf)
+- 原来的问题：“While traditioanl two-dimensional layout algorithms like principal components analysis privilege global structure at the expense of local relationships” [✓](https://static.nomic.ai/atlas_tech_report.pdf)
+- 原来的问题：“For datasets over 100k embeddings, local methods might become too slow or memory-intensive” [✓](https://docs.nomic.ai/atlas/embeddings-and-retrieval/guides/how-to-visualize-embeddings)
+- 原来的问题：“May distort global distances; clusters might appear artificially separated” [✓](https://docs.nomic.ai/atlas/embeddings-and-retrieval/guides/how-to-visualize-embeddings)
+- 局限与代价：“Nomic is unable to disclose many technical details of the Atlas system at this time.” [✓](https://static.nomic.ai/atlas_tech_report.pdf)
+- 局限与代价：“2D projections can distort high-dimensional distances. Validate with metadata or alternative projections.” [✓](https://docs.nomic.ai/atlas/embeddings-and-retrieval/guides/how-to-visualize-embeddings)
+- 局限与代价：“since vector spaces of embeddings are typically much higher-dimensional than 2D, and therefore only approximately representable in 2D” [✓](https://docs.nomic.ai/atlas/datasets/data-maps/how-atlas-works/1-key_terms)
+- 局限与代价：“Image, audio, video, and multimodal embeddings are on the way to Atlas.” [✓](https://docs.nomic.ai/atlas/datasets/data-maps/how-atlas-works/2-embedding_projection)
+
+</details>
+- 没读到：input_material（页面没写 Atlas 内置嵌入模型的具体维数，只举了 128、512、1024 维的一般例子）
+
+<a id="hiplot"></a>
+
+### HiPlot
+
+- 领域：机器学习实验分析；议题：几十个超参数、十万次实验里，哪些参数在影响要优化的指标
+- 编码：表与多维属性；重点：对象上的度量、总体分布；把握：官方页面直接写了
+- 编码所依据的原文：
+  - 处理的材料：“we have been using HiPlot to explore and efficiently analyze hyperparameter tuning of deep neural networks with dozens of hyperparameters and more than 100,000 experiments” [✓](https://ai.meta.com/blog/hiplot-high-dimensional-interactive-plots-made-easy)
+  - 编码：“each training/data point is a continuous line that goes through its value on each of the axes” [✓](https://ai.meta.com/blog/hiplot-high-dimensional-interactive-plots-made-easy)
+  - 编码：“set the color scheme according to yet another axis” [✓](https://ai.meta.com/blog/hiplot-high-dimensional-interactive-plots-made-easy)
+  - 视图：“HiPlot consists of multiple independant displays” [✓](https://facebookresearch.github.io/hiplot/plugins_reference.html)
+  - 交互：“reorder or remove axes, or extract a particular selection of data” [✓](https://ai.meta.com/blog/hiplot-high-dimensional-interactive-plots-made-easy)
+<details><summary>本案例读到的其他原文摘录</summary>
+
+- 处理的材料：“Given about 7000 experimental datapoints, we want to understand which parameters influence the metric we want to optimize” [✓](https://facebookresearch.github.io/hiplot/)
+- 处理的材料：“By default, HiPlot’s web server can parse CSV or JSON files” [✓](https://ai.meta.com/blog/hiplot-high-dimensional-interactive-plots-made-easy)
+- 对象：“each point corresponds to a hiplot.Datapoint” [✓](https://facebookresearch.github.io/hiplot/experiment_settings.html)
+- 对象：“Each of the training tasks can be represented as a data point with values (dropout, lr, optimizer, loss)” [✓](https://ai.meta.com/blog/hiplot-high-dimensional-interactive-plots-made-easy)
+- 关系：“the XY graph will connect the parent and the child” [✓](https://facebookresearch.github.io/hiplot/experiment_settings.html)
+- 关系：“Multiple points can share the same parent” [✓](https://facebookresearch.github.io/hiplot/experiment_settings.html)
+- 关系：“its XY plot can render edges between related data points” [✓](https://ai.meta.com/blog/hiplot-high-dimensional-interactive-plots-made-easy)
+- 属性与度量：“each has two scalar parameters, coined dropout and lr” [✓](https://ai.meta.com/blog/hiplot-high-dimensional-interactive-plots-made-easy)
+- 属性与度量：“Either globally by attributing a hiplot.ValueType to columns” [✓](https://facebookresearch.github.io/hiplot/experiment_settings.html)
+- 视图：“It uses parallel plots and other graphical ways to represent information more clearly” [✓](https://ai.meta.com/blog/hiplot-high-dimensional-interactive-plots-made-easy)
+- 视图：“On the parallel plot, each line represents one datapoint” [✓](https://facebookresearch.github.io/hiplot/)
+- 编码：“HiPlot will draw one vertical scaled axis each for dropout” [✓](https://ai.meta.com/blog/hiplot-high-dimensional-interactive-plots-made-easy)
+- 交互：“Slicing on the valid ppl axis reveals that higher values for lr lead to better models” [✓](https://facebookresearch.github.io/hiplot/)
+- 交互：“Right click the epoch axis title and select Set as X axis” [✓](https://facebookresearch.github.io/hiplot/)
+- 回答的问题：“HiPlot is a lightweight interactive visualization tool to help AI researchers discover correlations and patterns in high-dimensional data” [✓](https://ai.meta.com/blog/hiplot-high-dimensional-interactive-plots-made-easy)
+- 回答的问题：“we want to understand which parameters influence the metric we want to optimize” [✓](https://facebookresearch.github.io/hiplot/)
+- 为什么这样画：“Parallel plots are a convenient way to visualize and filter high-dimensional data” [✓](https://ai.meta.com/blog/hiplot-high-dimensional-interactive-plots-made-easy)
+- 为什么这样画：“In HiPlot, parallel plots are interactive, which makes it easy to change the visualization for different use cases” [✓](https://ai.meta.com/blog/hiplot-high-dimensional-interactive-plots-made-easy)
+- 为什么这样画：“You can use HiPlot in two equally straightforward ways” [✓](https://ai.meta.com/blog/hiplot-high-dimensional-interactive-plots-made-easy)
+- 原来的问题：“HiPlot is designed to offer several advantages over other visualization tools” [✓](https://ai.meta.com/blog/hiplot-high-dimensional-interactive-plots-made-easy)
+- 原来的问题：“Such experiments can be challenging to analyze and may contain bugs that are difficult to spot” [✓](https://ai.meta.com/blog/hiplot-high-dimensional-interactive-plots-made-easy)
+- 局限与代价：“Columns with a single value won't appear either unless you provide a min/max” [✓](https://facebookresearch.github.io/hiplot/plugins_reference.html)
+- 局限与代价：“Categorical columns with more distinct values that this won't be displayed” [✓](https://facebookresearch.github.io/hiplot/plugins_reference.html)
+
+</details>
+- 没读到：abstraction
+
+<a id="facets"></a>
+
+### Facets
+
+- 领域：机器学习数据集检查；议题：看懂有成百上千个特征的数据集：逐特征看分布和异常，再按特征摆放每个样本去找系统性错误
+- 编码：表与多维属性；重点：总体分布、对象上的度量；把握：官方页面直接写了
+- 说明：“Dive 一次只能用有限的几个特征”是我对界面的读法（位置、颜色等通道有限），页面没有直接写这一句。
+- 编码所依据的原文：
+  - 视图：“Facets consists of two visualizations that allow users to see a holistic picture of their data at different granularities” [✓](https://opensource.googleblog.com/2017/07/facets-open-source-visualization-tool.html)
+  - 编码：“The features are sorted by non-uniformity, with the feature with the most non-uniform distribution at the top” [✓](https://opensource.googleblog.com/2017/07/facets-open-source-visualization-tool.html)
+  - 编码：“you control the position, color and visual representation of each data point based on its feature values” [✓](https://opensource.googleblog.com/2017/07/facets-open-source-visualization-tool.html)
+  - 属性与度量：“Use the “Sort by” dropdown to sort features by “Distribution distance”” [✓](https://pair-code.github.io/facets/)
+  - 抽象与层级：“or bucketing them in multiple dimensions by their feature values” [✓](https://pair-code.github.io/facets/)
+<details><summary>本案例读到的其他原文摘录</summary>
+
+- 处理的材料：“ML datasets can contain hundreds of millions of data points, each consisting of hundreds (or even thousands) of features” [✓](https://opensource.googleblog.com/2017/07/facets-open-source-visualization-tool.html)
+- 处理的材料：“Overview takes input feature data from any number of datasets, analyzes them feature by feature and visualizes the analysis” [✓](https://pair-code.github.io/facets/)
+- 处理的材料：“Load one or more csv files with your first row being the header” [✓](https://pair-code.github.io/facets/)
+- 对象：“Each individual item in the visualization represents a data point” [✓](https://pair-code.github.io/facets/)
+- 对象：“Get a sense of the shape of each feature of your dataset using Facets Overview” [✓](https://pair-code.github.io/facets/)
+- 关系：“Multiple datasets, such as a training set and a test set, can be compared on the same visualization” [✓](https://opensource.googleblog.com/2017/07/facets-open-source-visualization-tool.html)
+- 关系：“exploring the relationship between data points across all of the different features of a dataset” [✓](https://pair-code.github.io/facets/)
+- 属性与度量：“It becomes easy to learn the distribution of values across the 6 numeric and 9 categorical features for both datasets” [✓](https://pair-code.github.io/facets/)
+- 视图：“Dive is a tool for interactively exploring large numbers of data points at once” [✓](https://pair-code.github.io/facets/)
+- 编码：“The histograms at right allow you to compare the distributions between the training data (blue) and test data (orange)” [✓](https://opensource.googleblog.com/2017/07/facets-open-source-visualization-tool.html)
+- 编码：“Numbers in red indicate possible trouble spots” [✓](https://opensource.googleblog.com/2017/07/facets-open-source-visualization-tool.html)
+- 交互：“Use the “Sort by” dropdown to sort features by “Distribution distance”” [✓](https://pair-code.github.io/facets/)
+- 交互：“Using the menus on the left, you can change how the data is organized in order to gain insight into the dataset” [✓](https://pair-code.github.io/facets/)
+- 交互：“Use the “Color” menu to color by “Target”” [✓](https://pair-code.github.io/facets/)
+- 交互：“Clicking on an individual item reveals key/value pairs that represent the features of that record” [✓](https://pair-code.github.io/facets/)
+- 回答的问题：“These visualizations allow you to debug your data” [✓](https://opensource.googleblog.com/2017/07/facets-open-source-visualization-tool.html)
+- 回答的问题：“Uncover several uncommon and common issues such as unexpected feature values” [✓](https://pair-code.github.io/facets/)
+- 回答的问题：“Success stories of Dive include the detection of classifier failure, identification of systematic errors, evaluating ground truth and potential new signals for ranking” [✓](https://pair-code.github.io/facets/)
+- 抽象与层级：“analyzes them feature by feature and visualizes the analysis” [✓](https://pair-code.github.io/facets/)
+- 抽象与层级：“This produces a confusion matrix view, allowing us to drill into particular kinds of misclassifications” [✓](https://opensource.googleblog.com/2017/07/facets-open-source-visualization-tool.html)
+- 为什么这样画：“Getting the best results out of a machine learning (ML) model requires that you truly understand your data” [✓](https://opensource.googleblog.com/2017/07/facets-open-source-visualization-tool.html)
+- 为什么这样画：“A picture may be worth a thousand words, but an interactive visualization can be worth even more” [✓](https://opensource.googleblog.com/2017/07/facets-open-source-visualization-tool.html)
+- 为什么这样画：“Better data leads to better models” [✓](https://pair-code.github.io/facets/)
+- 原来的问题：“making it nearly impossible to understand an entire dataset in an intuitive fashion” [✓](https://opensource.googleblog.com/2017/07/facets-open-source-visualization-tool.html)
+- 局限与代价：“Load one or more csv files with your first row being the header” [✓](https://pair-code.github.io/facets/)
+
+</details>
+- 没读到：limit（作者未写失真或误差，上面只有输入格式要求）
+
+<a id="voyager"></a>
+
+### Voyager
+
+- 领域：探索式数据分析；议题：字段很多的表，不预先想好问题也能看到有价值的图，并系统地覆盖各个变量
+- 编码：表与多维属性；重点：总体分布、对象上的度量；把握：官方页面直接写了
+- 说明：论文版是 2015 年的 Voyager；展示页 vega.github.io/voyager 的当前版本是 Voyager 2，页面文字由 JS 渲染读不到，所以证据取自论文和论文页。
+- 编码所依据的原文：
+  - 处理的材料：“For any given data table the choice of variables, transformations and visual encodings leads to a combinatorial explosion” [✓](https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf)
+  - 视图：“the gallery is divided into two sections: exact match and suggestion” [✓](https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf)
+  - 抽象与层级：“Voyager organizes suggested charts by clustering encoding variations of the same data and showing a single top-ranked exemplar of each cluster” [✓](https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf)
+  - 交互：“users can click a variable to toggle its inclusion” [✓](https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf)
+  - 编码：“Voyager aligns axis positions and uses consistent colors for variables” [✓](https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf)
+<details><summary>本案例读到的其他原文摘录</summary>
+
+- 处理的材料：“couples faceted browsing with visualization recommendation to support exploration of multivariate, tabular data” [✓](https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf)
+- 处理的材料：“a browser interface for statistical graphics of a single relational table” [✓](https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf)
+- 对象：“The schema panel (left) lists data variables selectable by users” [✓](https://idl.uw.edu/papers/voyager)
+- 对象：“The main gallery (right) presents suggested visualizations of different variable subsets and transformations” [✓](https://idl.uw.edu/papers/voyager)
+- 关系：“specifications consist of a set of mappings between visual encoding channels and (potentially transformed) data variables” [✓](https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf)
+- 关系：“The top of each view lists its member variables in capsules” [✓](https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf)
+- 属性与度量：“chosen according to statistical and perceptual measures” [✓](https://idl.uw.edu/papers/voyager)
+- 属性与度量：“which upon hover shows descriptive statistics and samples in a tooltip” [✓](https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf)
+- 属性与度量：“includes the assigned variable’s name, data type, scale and axis properties, and transformations” [✓](https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf)
+- 视图：“we seek to complement manual chart construction with interactive navigation of a gallery of automatically-generated visualizations” [✓](https://idl.uw.edu/papers/voyager)
+- 视图：“facets (row, column) for creating trellis plots” [✓](https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf)
+- 视图：“bookmarked visualizations can be viewed in the bookmark gallery” [✓](https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf)
+- 编码：“Scatter plots of horsepower vs. acceleration, partitioned by cylinder” [✓](https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf)
+- 交互：“Each chart supports interactive refinement, bookmarks, and expansion to increase the chart size and see related views” [✓](https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf)
+- 交互：“Analysts can also hover over data points to view” [✓](https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf)
+- 交互：“transposing axes, sorting nominal or ordinal dimensions, and adjusting scales (e.g., between linear and log)” [✓](https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf)
+- 回答的问题：“Voyager facilitates exploration of previously unseen data and leads to increased data variable coverage” [✓](https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf)
+- 抽象与层级：“prunes visually similar results to avoid exhaustive enumeration” [✓](https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf)
+- 抽象与层级：“to produce clusters of visualizations that are grouped by their underlying data tables” [✓](https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf)
+- 为什么这样画：“Show data variation, not design variation” [✓](https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf)
+- 为什么这样画：“Voyager exchanges specification for browsing” [✓](https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf)
+- 为什么这样画：“Voyager privileges data variation (different variable selections and transformations) over design variation” [✓](https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf)
+- 为什么这样画：“To discourage premature fixation and avoid the problem of “empty results” [14], Voyager shows univariate summaries of all variables prior to user interaction” [✓](https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf)
+- 原来的问题：“General visualization tools typically require manual specification of views” [✓](https://idl.uw.edu/papers/voyager)
+- 原来的问题：“may impose a tedious specification process that impedes exploration” [✓](https://idl.uw.edu/papers/voyager)
+- 原来的问题：“in practice they may fail to do so due to premature fixation on specific questions or the tedium of manual specification” [✓](https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf)
+- 局限与代价：“Our initial Compass design is admittedly modest” [✓](https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf)
+- 局限与代价：“Voyager currently “looks ahead” by only one variable at a time” [✓](https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf)
+- 局限与代价：“while PoleStar is preferable for answering more specific questions” [✓](https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf)
+- 局限与代价：“often require substantial screen real estate at odds with a rapidly scannable gallery” [✓](https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf)
+
+</details>
+
+<a id="rank-by-feature"></a>
+
+### Rank-by-Feature 框架与 Hierarchical Clustering Explorer（Seo 与 Shneiderman）
+
+- 领域：多维数据探索（统计与微阵列数据）；议题：维度很多的时候，二维投影的数量多到没法逐个看：按特征给一维、二维投影打分排序，先看最有信息的
+- 编码：表与多维属性；重点：对象上的度量、群落与相似；把握：官方页面直接写了
+- 说明：读的是马里兰大学 HCIL 的技术报告 2004-31（InfoVis 2004 会议版的扩展版），不是 Information Visualization 2005 的期刊版；HCE 的主页（cs.umd.edu/hcil/hce）只读到概述。
+- 编码所依据的原文：
+  - 处理的材料：“A data set that can be represented in a spreadsheet where there are more than three columns can be thought of as multidimensional” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+  - 视图：“The ranking result is visually presented in a color-coded grid” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+  - 编码：“All dimensions are aligned from top to bottom in the original order, and each dimension is color-coded by the score value” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+  - 属性与度量：“in this case, Pearson correlation coefficient” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+  - 交互：“If users select a group of items in any view, they can see the selected items highlighted in all other views” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+<details><summary>本案例读到的其他原文摘录</summary>
+
+- 处理的材料：“with 17 demographical and economical statistics available for each county” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+- 处理的材料：“A microarray data set consists of tens or hundreds of microarray chip measurements” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+- 对象：“Each data item in the data set is shown as a point in the scatterplot” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+- 对象：“each column is a dimension (or a variable), and each row is a data item” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+- 对象：“to include relationships between dimensions (or variables) but also interesting characteristics” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+- 关系：“ranks all pairs according to the score values” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+- 关系：“each cell represents the scatterplot for a pair of dimensions” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+- 属性与度量：“The numerical detail includes the five-number summary of each dimension and the mean and the standard deviation” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+- 属性与度量：“we divide the two-dimensional space into regular grid cells and then use each cell as a bin” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+- 视图：“The main display for the rank-by-feature framework for 1D projections shows a combined histogram and boxplot” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+- 视图：“each row represents a projection and is color-coded by the ranking score” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+- 编码：“cells of high value have bright blue green colors and cells of low value have bright brown colors” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+- 编码：“it is color-coded by the score value for the scatterplot” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+- 编码：“The values of one dimension are aligned on the horizontal axis, and the values of the other dimension are aligned on the vertical axis” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+- 交互：“Users can manually browse projections by rapidly changing the dimension for an axis using the item slider attached to the corresponding axis of the projection view” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+- 交互：“they can just mouse over the row to view the numerical score value and the name of the dimension is shown in a tooltip window” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+- 交互：“Users can select a ranking criterion from a combo box in the control panel” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+- 回答的问题：“Users could easily identify that there is a negative correlation between poverty level and the percentage of high school graduates” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+- 回答的问题：“users can systematically examine the most important 1D and 2D axis-parallel projections” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+- 回答的问题：“discover relationships, clusters, gaps, outliers, and other features” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+- 抽象与层级：“They graphically show the five-number summary (the minimum, the first quartile, the median, the third quartile, and the maximum)” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+- 抽象与层级：“can easily see the overall pattern of the score distribution” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+- 抽象与层级：“to rank clusters of dimensions instead of individual dimensions” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+- 为什么这样画：“could enable users to better understand distributions in one (1D) or two dimensions (2D)” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+- 为什么这样画：“it is difficult to comprehend patterns in more than three dimensions” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+- 为什么这样画：“2D projections are widely understood by users, allowing them to concentrate on the data itself rather than being distracted by navigation controls” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+- 为什么这样画：“ranking guides insight, statistics confirm” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+- 原来的问题：“they suffer from occlusion and the disorientation brought on by the cognitive burden of navigation” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+- 原来的问题：“in interpreting 2D projections whose axes are linear/nonlinear combination of two or more dimensions” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+- 原来的问题：“An exhaustive visual search is out of the question as the number of dimensions grows” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+- 原来的问题：“When there are many dimensions, the number of possible projections is too large to investigate by looking for interesting features” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+- 局限与代价：“Techniques in category (2), axis-parallel, have a limitation that features can be detected in only the two selected dimensions” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+- 局限与代价：“the result is not so accurate, but it still makes sense at most cases” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+- 局限与代价：“the score overview becomes unacceptably overcrowded in a general PC environment when the dimensionality is greater than about 130” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+- 局限与代价：“The time complexity of the current implementations prevents exploratory data analysis” [✓](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)
+
+</details>
+
+<a id="orange"></a>
+
+### Orange
+
+- 领域：数据挖掘与多维投影；议题：找一张能把不同类别分开的二维投影，并读出哪些属性在起作用
+- 编码：表与多维属性；重点：群落与相似、对象上的度量；把握：官方页面直接写了
+- 说明：摘录来自 Orange 3 的 Radviz、FreeViz 文档和 Orange 2.7 的线性投影文档；文档里没有写“替代做法有什么问题”，所以没有 alternative。
+- 编码所依据的原文：
+  - 编码：“equally spaced around the perimeter of a unit circle” [✓](https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/radviz.html)
+  - 编码：“The stiffness of each spring is proportional to the value of the corresponding variable” [✓](https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/radviz.html)
+  - 编码：“projections of unit vector that are very short compared to the others indicate that their associated attribute is not very informative for particular classification task” [✓](https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/freeviz.html)
+  - 交互：“The fourth projection search technique that can be accessed from this widget is VizRank search algorithm with RadViz visualization” [✓](https://orange.readthedocs.io/en/latest/widgets/rst/visualize/linearprojection.html)
+  - 交互：“Use a mouse pointer and hover above the end of an anchor. Click the left button and then you can move selected anchor where ever you want.” [✓](https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/freeviz.html)
+<details><summary>本案例读到的其他原文摘录</summary>
+
+- 处理的材料：“all deal with class-labeled data and aim at finding the two-dimensional projection where instances of different classes are best separated” [✓](https://orange.readthedocs.io/en/latest/widgets/rst/visualize/linearprojection.html)
+- 对象：“Data instances are shown as points inside the circle, with their positions determined by a metaphor from physics” [✓](https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/radviz.html)
+- 对象：“The visualized variables are presented as anchor points equally spaced around the perimeter of a unit circle.” [✓](https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/radviz.html)
+- 关系：“each point is held in place with springs that are attached at the other end to the variable anchors.” [✓](https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/radviz.html)
+- 关系：“points in the same class attract each other, those from different class repel each other, and the resulting forces are exerted on the anchors of the attributes” [✓](https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/freeviz.html)
+- 属性与度量：“can display data defined by three or more variables in a 2-dimensional projection” [✓](https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/radviz.html)
+- 属性与度量：“on unit vectors of each of the dimensional axis” [✓](https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/freeviz.html)
+- 视图：“Radviz (Hoffman et al. 1997) is a non-linear multi-dimensional visualization technique” [✓](https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/radviz.html)
+- 视图：“This widget provides an interface to a number of linear projection methods” [✓](https://orange.readthedocs.io/en/latest/widgets/rst/visualize/linearprojection.html)
+- 编码：“the point ends up at the position where the spring forces are in equilibrium” [✓](https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/radviz.html)
+- 交互：“it can be used to find a set of variables that would result in an interesting visualization” [✓](https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/radviz.html)
+- 交互：“Selection can be used to manually define the subgroups in the data.” [✓](https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/freeviz.html)
+- 回答的问题：“aim at finding the two-dimensional projection where instances of different classes are best separated” [✓](https://orange.readthedocs.io/en/latest/widgets/rst/visualize/linearprojection.html)
+- 回答的问题：“It looks like frogs and worms share some characteristics. What could these be? Use Data Table to find out.” [✓](https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/freeviz.html)
+- 抽象与层级：“are accessible through FreeViz’s Dimensionality Reduction tab” [✓](https://orange.readthedocs.io/en/latest/widgets/rst/visualize/linearprojection.html)
+- 抽象与层级：“If checked, Gravity adjusts the tendency of same-colored points to cluster together.” [✓](https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/freeviz.html)
+- 为什么这样画：“Notice that the particular visualization very nicely separates data instances of different class, making the visualization interesting and potentially informative.” [✓](https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/radviz.html)
+- 为什么这样画：“we recommend to play with this option in order to understand how a change of one anchor affects the positions of the data points” [✓](https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/freeviz.html)
+- 局限与代价：“this widget combines a number of visualization methods that are currently in research” [✓](https://orange.readthedocs.io/en/latest/widgets/rst/visualize/linearprojection.html)
+- 局限与代价：“The result of the optimization may depend on the initial placement of the anchors, which can be set in a circle, arbitrary or even manually.” [✓](https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/freeviz.html)
+- 局限与代价：“the results - because of different optimization methods and differences in their bias - may be quite different” [✓](https://orange.readthedocs.io/en/latest/widgets/rst/visualize/linearprojection.html)
+
+</details>
+- 没读到：alternative
+
+<a id="upset"></a>
+
+### UpSet
+
+- 领域：集合与交集分析；议题：集合多到 Venn 图画不下时，看哪些集合组合的交集最大、最特别，并把元素的属性接在交集旁边看
+- 编码：集合与分类 + 表与多维属性；重点：有什么、总体分布；把握：官方页面直接写了
+- 编码所依据的原文：
+  - 视图：“UpSet visualizes set intersections in a matrix layout and introduces aggregates based on groupings and queries.” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/)
+  - 编码：“The cardinality of an intersection (the number of elements it contains) is encoded by the length of the bars to the right of the matrix.” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/)
+  - 抽象与层级：“Aggregates are collections of exclusive intersections that are defined using a task driven approach.” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/)
+  - 交互：“Hence, we offer various options to sort exclusive intersections that are designed to support specific tasks.” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/)
+  - 处理的材料：“containing 3883 movies, 17 genres and multiple attributes such as release date and average rating” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/)
+<details><summary>本案例读到的其他原文摘录</summary>
+
+- 处理的材料：“Figure 2 shows a simple example of a typical set-typed dataset, describing characters of the television show The Simpsons” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/)
+- 对象：“UpSet shows sets in the columns and set intersections in the rows” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/)
+- 对象：“Each row corresponds to a possible intersection: the filled-in cells show which set is part of an intersection.” [✓](https://upset.app/)
+- 对象：“These intersections correspond to the atomic areas of a Venn diagram” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/)
+- 关系：“Set intersections are the basic building blocks of UpSet.” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/)
+- 关系：“The matrix cells in UpSet only encode which sets contribute to which intersection.” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/)
+- 属性与度量：“Through their elements the exclusive intersections are also associated with attribute values.” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/)
+- 属性与度量：“These columns can also show summaries of element attributes” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/)
+- 视图：“UpSet uses two separate but interlinked views to represent the data: the set view and the element view” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/)
+- 视图：“Each column corresponds to a set, and bar charts on top show the size of the set.” [✓](https://upset.app/)
+- 编码：“we encode the sets contained in an exclusive intersection with a filled dark circle” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/)
+- 编码：“we encode sets that do not participate in the exclusive intersection with a light-gray circle” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/)
+- 编码：“the “Deviation” (orange and blue bars) that indicate how much an intersection deviates from the expected size if we assumed that set membership were random.” [✓](https://upset.app/)
+- 交互：“Aggregates can be collapsed to save space, hiding the exclusive intersections contained in them” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/)
+- 交互：“In a query, an analyst specifies the rules to create an aggregation.” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/)
+- 交互：“Queries based on containment in specific intersections, aggregates or driven by attribute filters are propagated between both views.” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/)
+- 回答的问题：“to answer questions such as: Which is the biggest intersection of degree 3?” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/)
+- 回答的问题：“Which two-set intersection has the highest average attribute value?” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/)
+- 抽象与层级：“Items are abstracted away as “counts”, though attributes of the items can be visualized in integrated or adjacent plots.” [✓](https://upset.app/)
+- 抽象与层级：“Collective aggregations can be nested, making the aggregation hierarchical.” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/)
+- 为什么这样画：“UpSet is unique because it exploits the duality between visualization of attributes and visualization of sets.” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/)
+- 为什么这样画：“UpSet shines when you want to look at all combinations of how sets intersect” [✓](https://upset.app/)
+- 为什么这样画：“The impetus of the measure is to convey how “surprising” the cardinality of an intersection is given the size of its constituting sets.” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/)
+- 原来的问题：“Venn diagrams are not suitable to visualize intersections of more than three or four sets.” [✓](https://upset.app/)
+- 原来的问题：“Euler and Venn diagrams are not a good choice, since they use area to encode quantitative values, which is shown to be inferior to, e.g., position” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/)
+- 原来的问题：“While this figure looks fun, it is not a useful visualization. Try to extract any information from it.” [✓](https://upset.app/)
+- 局限与代价：“We observe a practical limitation at about 40-50 sets” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/)
+- 局限与代价：“UpSet works best for set data with more than three and less than about 30 sets” [✓](https://upset.app/)
+- 局限与代价：“you should be careful about interpreting data where the size of the sets is very different” [✓](https://upset.app/)
+- 局限与代价：“If you want to see individual items in your set, you should probably go with a Euler Diagram” [✓](https://upset.app/)
+
+</details>
+
+<a id="kepler-mapper"></a>
+
+### KeplerMapper
+
+- 领域：拓扑数据分析；议题：看高维点云的连通结构（分支、环、簇之间怎么连），而不只是点与点的距离
+- 编码：一般图与网络 + 表与多维属性；重点：连通与邻域、群落与相似；把握：官方页面直接写了
+- 说明：展示页是文档里的 notebook 示例，不是在线交互。
+- 编码所依据的原文：
+  - 对象：“The clusters become nodes in a graph.” [✓](https://kepler-mapper.scikit-tda.org/en/latest/theory.html)
+  - 关系：“When there is such a member intersection, draw an edge between these nodes.” [✓](https://kepler-mapper.scikit-tda.org/en/latest/theory.html)
+  - 编码：“Color the graph nodes by a function of interest (for instance: average customer spend)” [✓](https://kepler-mapper.scikit-tda.org/en/latest/theory.html)
+  - 抽象与层级：“The main workflow for Mapper is to project the data, group the image, apply clustering to the preimage of the groups, and then build a simplicial complex.” [✓](https://kepler-mapper.scikit-tda.org/en/latest/started.html)
+  - 交互：“The searchbar can be used to highlight (i.e., visually resize) nodes based on whether their samples’ custom_tooltips match a query.” [✓](https://kepler-mapper.scikit-tda.org/en/latest/html-visualization-features.html)
+<details><summary>本案例读到的其他原文摘录</summary>
+
+- 处理的材料：“Extraction of information from datasets that are high-dimensional, incomplete and noisy is generally challenging.” [✓](https://kepler-mapper.scikit-tda.org/en/latest/theory.html)
+- 对象：“Due to the overlap, a single point can appear in multiple nodes.” [✓](https://kepler-mapper.scikit-tda.org/en/latest/theory.html)
+- 关系：“is used to determine whether an edge should be drawn between pairs of nodes.” [✓](https://kepler-mapper.scikit-tda.org/en/latest/html-visualization-features.html)
+- 属性与度量：“A set (or sets) of color_values associate values with samples.” [✓](https://kepler-mapper.scikit-tda.org/en/latest/html-visualization-features.html)
+- 视图：“For interactive visualization and exploration in the browser, Kepler Mapper can create a visual HTML interface utilizing D3.js.” [✓](https://joss.theoj.org/papers/10.21105/joss.01315.pdf)
+- 视图：“Normally, nodes are free to float around the visualization, acted upon by gravity and repulsion forces decided by the underlying d3-force simulation.” [✓](https://kepler-mapper.scikit-tda.org/en/latest/html-visualization-features.html)
+- 视图：“For static visualizations, we provide an adapter so that visualization functionality from NetworkX” [✓](https://joss.theoj.org/papers/10.21105/joss.01315.pdf)
+- 编码：“Size the graph nodes by a function of interest (for instance: number of members inside cluster)” [✓](https://kepler-mapper.scikit-tda.org/en/latest/theory.html)
+- 编码：“Shape the graph edges by a function of interest (for instance: dotted line when intersecting members < 3 else solid line)” [✓](https://kepler-mapper.scikit-tda.org/en/latest/theory.html)
+- 编码：“First we visualize the resulting graph via a color_function that associates to lens data their x-coordinate distance to min” [✓](https://kepler-mapper.scikit-tda.org/en/latest/notebooks/Cancer-demo.html)
+- 交互：“The html visualization can dynamically change the min-intersection it uses to draw edges.” [✓](https://kepler-mapper.scikit-tda.org/en/latest/html-visualization-features.html)
+- 交互：“clicking-and-dragging a node will cause that node to become “frozen” – it will stay where you drag it.” [✓](https://kepler-mapper.scikit-tda.org/en/latest/html-visualization-features.html)
+- 交互：“The visualization can be changed to a white background which may be better for printing.” [✓](https://kepler-mapper.scikit-tda.org/en/latest/html-visualization-features.html)
+- 回答的问题：“This is an unsupervised method of generating a visual representation of the data that can often reveal new insights of the data that other methods cannot.” [✓](https://kepler-mapper.scikit-tda.org/en/latest/theory.html)
+- 回答的问题：“Get answers to questions you haven’t even asked yet.” [✓](https://kepler-mapper.scikit-tda.org/en/latest/theory.html)
+- 抽象与层级：“Cover this projection with overlapping intervals/hypercubes.” [✓](https://kepler-mapper.scikit-tda.org/en/latest/theory.html)
+- 抽象与层级：“A lossy compressed mathematical representation of a data set.” [✓](https://kepler-mapper.scikit-tda.org/en/latest/theory.html)
+- 抽象与层级：“You can study the global structure of a dataset, down to the details of a single data point, without incurring a cognitive overload.” [✓](https://kepler-mapper.scikit-tda.org/en/latest/theory.html)
+- 为什么这样画：“Though not exact, mapper is able to estimate important connectivity aspects of the underlying space of the data so that it can be explored in a visual format.” [✓](https://kepler-mapper.scikit-tda.org/en/latest/theory.html)
+- 为什么这样画：“The fundamental assumption in topology is that connectivity is more important than distance.” [✓](https://kepler-mapper.scikit-tda.org/en/latest/theory.html)
+- 为什么这样画：“The module employs the strategy pattern, giving users control over the clustering algorithm, covering scheme, and nerve scheme.” [✓](https://joss.theoj.org/papers/10.21105/joss.01315.pdf)
+- 原来的问题：“However, raw TDA metrics cannot be readily visualized.” [✓](https://joss.theoj.org/papers/10.21105/joss.01315.pdf)
+- 原来的问题：“either apply clustering on the projection and suffer projection loss” [✓](https://kepler-mapper.scikit-tda.org/en/latest/theory.html)
+- 局限与代价：“either apply clustering on the projection and suffer projection loss” [✓](https://kepler-mapper.scikit-tda.org/en/latest/theory.html)
+- 局限与代价：“A lossy compressed mathematical representation of a data set” [✓](https://kepler-mapper.scikit-tda.org/en/latest/theory.html)
+- 局限与代价：“Though not exact, mapper is able to estimate important connectivity aspects of the underlying space of the data” [✓](https://kepler-mapper.scikit-tda.org/en/latest/theory.html)
+
+</details>
+
+<a id="miegakure"></a>
+
+### Miegakure（四维解谜游戏）
+
+- 领域：四维几何与游戏；议题：让玩家用三维的大脑理解并操作一个真正的四维世界
+- 编码：空间与几何；重点：空间位置；把握：官方页面直接写了
+- 说明：这是一款游戏，不是数据可视化工具；放进来是因为它是“超越三维”里最直接的案例，而且开发者明确写了为什么用截面而不用投影。作者站点 marctenbosch.com 当时域名解析失败，没读。
+- 编码所依据的原文：
+  - 对象：“instead of taking a 2D slice of a 3D object, we are taking a 3D slice of 4D objects” [✓](https://miegakure.com)
+  - 视图：“You see three dimensions at a time and by pressing a button you can trade which three dimensions you are seeing.” [✓](https://miegakure.com)
+  - 回答的问题：“Why does the game slice the 4th dimension instead of projecting it?” [✓](https://miegakure.com)
+  - 交互：“Translating the slice is unlocked later in the game.” [✓](https://miegakure.com)
+<details><summary>本案例读到的其他原文摘录</summary>
+
+- 处理的材料：“what if each position was represented using four numbers?” [✓](https://miegakure.com)
+- 对象：“in which you are a 3D character inside 4D world” [✓](https://history.siggraph.org/?p=217392)
+- 关系：“as we move and turn the 3D slice around within the 4D world” [✓](https://miegakure.com)
+- 属性与度量：“If you count time, this game is 5D.” [✓](https://miegakure.com)
+- 视图：“It is used throughout the game to help players understand the 4th dimension.” [✓](https://miegakure.com)
+- 交互：“by pressing a button you can trade which three dimensions you are seeing” [✓](https://miegakure.com)
+- 交互：“Yes, but not initially in order to teach players in a more gradual way, and because many puzzles are more fun with this limitation.” [✓](https://miegakure.com)
+- 回答的问题：“what if there was another direction you could move along in addition to the first three?” [✓](https://store.steampowered.com/app/355750)
+- 为什么这样画：“I wanted the 4D world to feel like an extension of the 3D world we live in.” [✓](https://miegakure.com)
+- 为什么这样画：“The way we chose is a method that has been popularized in the novella Flatland.” [✓](https://store.steampowered.com/app/355750)
+- 为什么这样画：“So we had to come up with a way to display this calculated 4D world so that our three-dimensional brains could comprehend it.” [✓](https://store.steampowered.com/app/355750)
+- 原来的问题：“4D to 2D is two dimensions down: a lot of objects are going to overlap on the screen, which makes things hard to understand.” [✓](https://miegakure.com)
+- 局限与代价：“When you translate the slice you cannot see where you are going” [✓](https://miegakure.com)
+- 局限与代价：“Miegakure is still very much a work in progress, but we hope to release the game next year.” [✓](https://blog.playstation.com/2014/12/04/miegakure-exploring-a-4d-world-on-ps4/)
+- 局限与代价：“There is no announced date yet.” [✓](https://miegakure.com)
+
+</details>
+- 没读到：abstraction；encodings；备注：marctenbosch.com（作者站点）域名解析失败，没读；encodings 只有“看起来像变形”的 MRI 类比，页面没有写颜色、位置或大小代表什么；作者站点上讲渲染的技术页只看到链接标题，没有打开，也没找到 4D Toys 的页面。
+
+<a id="imaxes"></a>
+
+### ImAxes（VR 里的沉浸式坐标轴）
+
+- 领域：沉浸式数据分析；议题：在 VR 里用手抓取数据轴，现场搭出散点图、散点矩阵和平行坐标，探索多维数据
+- 编码：表与多维属性；重点：对象上的度量、连通与邻域；把握：官方页面直接写了
+- 说明：论文自己说只有用例演示、不是案例研究，需要以后做经验验证；本批没找到用户研究结果。DOI 页 403 没读，代码只在 GitHub，没读。
+- 编码所依据的原文：
+  - 对象：“The basic interface element is an embodied data axis.” [✓](https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf)
+  - 编码：“The type of visualisation that appears depends on the proximity and relative orientation of the axes with respect to one another” [✓](https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf)
+  - 交互：“ImAxes uses a grab and place interaction to manipulate visualisation elements” [✓](https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf)
+  - 视图：“to create standard visualisations for understanding multidimensional data: scatterplots, SPLOMs, PCPs and their three-dimensional variants” [✓](https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf)
+<details><summary>本案例读到的其他原文摘录</summary>
+
+- 处理的材料：“We introduce ImAxes, an immersive system for exploring multivariate data using fluid, modeless interaction.” [✓](https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf)
+- 处理的材料：“reveals the attributes of good and bad quality wine” [✓](https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf)
+- 对象：“Each axis corresponds to a data attribute from the dataset.” [✓](https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf)
+- 关系：“we require the axes in each of the various symbols to actually touch the other, so that they form a kind of physical skeleton for the data visualisation” [✓](https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf)
+- 关系：“Links appear between two SPLOMs when they are within a given distance.” [✓](https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf)
+- 属性与度量：“where s and e are the positions in 3D space of the axis start and end points, and d is the data attribute linked to the axis” [✓](https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf)
+- 视图：“it is possible with our system to form 3D scatterplot matrices from existing 3D scatterplots” [✓](https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf)
+- 视图：“the fabrication of a hierarchy tree linking 2D scatterplots” [✓](https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf)
+- 编码：“An arrowhead at the end of the axis indicates the direction of increasing attribute value, and minimum and maximum value labels display the attribute range.” [✓](https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf)
+- 交互：“The data points that are not within the specified ranges disappear from the visualisation.” [✓](https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf)
+- 交互：“causes the points and/or lines that are associated with that axis to move proportionally to the displacement of the axis” [✓](https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf)
+- 交互：“Dragging an axis across an array of axes or visualisations results in the successive apparition and disappearing of visualisations as defined by our grammar.” [✓](https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf)
+- 回答的问题：“how more traditional computing applications such as data analysis will look in Virtual and Augmented Reality (VR/AR)” [✓](https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf)
+- 抽象与层级：“The three other symbols in the grammar model are the 1-, 2- and 3-D structures that can be built with axes” [✓](https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf)
+- 抽象与层级：“The user can manipulate these axes like physical objects in the immersive environment and combine them into sophisticated visualisations.” [✓](https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf)
+- 为什么这样画：“We want there to be a physical affordance so that data visualisations look and behave like physical objects” [✓](https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf)
+- 为什么这样画：“the system to be declarative in the sense that the order of construction should not matter” [✓](https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf)
+- 为什么这样画：“We believe that we need to explore immersive data visualisation to be ready to exploit the technology fully as it becomes mainstream” [✓](https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf)
+- 原来的问题：“Projecting 3D data visualisations onto a 2D screen suffers from inherent issues due to occlusions, perspective distortion and interaction problems using a 2D input device” [✓](https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf)
+- 原来的问题：“as dimensionality increases, a traditional desktop display only offers a limited surface to display data” [✓](https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf)
+- 原来的问题：“Unlike SPLOMs, in PCPs only the relations between adjacent axes are easily visible.” [✓](https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf)
+- 局限与代价：“Conceptually, the number of axes that a user can reasonably handle and interact with is limited.” [✓](https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf)
+- 局限与代价：“Over this limit, usability issues such as the need for the user to walk, crouch or reach to access the axes may occur.” [✓](https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf)
+- 局限与代价：“However, we recognise that this illustrative scenario cannot be considered a case study and that in the future we acknowledge that empirical validation of ImAxes is needed.” [✓](https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf)
+- 局限与代价：“both graphics system and user-perception limitations can still be reached before long” [✓](https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf)
+
+</details>
+- 没读到：encodings（颜色、大小、线型未写）；备注：DOI 页面 https://doi.org/10.1145/3126594.3126613 返回 403，没读；代码只在 github.com，没读；论文是用例演示，作者写明还需要经验验证，本批没找到用户研究结果。
+
+<a id="hyperbolic-browser"></a>
+
+### 双曲浏览器（Lamping、Rao、Pirolli，CHI 1995）
+
+- 领域：大型层级的浏览；议题：看目录、组织图、网站这样的大型层级时，既聚焦一部分，又看得见整体上下文
+- 编码：层级与树；重点：包含与层次、连通与邻域；把握：官方页面直接写了
+- 说明：严格说这不是“高维”：它说的是用非欧几何给指数增长的结构更多空间，放在这里当作“超越欧氏二维”的边界案例，维度处理编为 warp。
+- 编码所依据的原文：
+  - 视图：“map this plane onto a circular display region” [✓](https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm)
+  - 编码：“the amount of space available to a node falls off as a continuous function of its distance in the tree from the point in the center” [✓](https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm)
+  - 交互：“The user can change focus either by clicking on any visible point to bring it into focus at the center, or by dragging any visible point interactively to any other position” [✓](https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm)
+<details><summary>本案例读到的其他原文摘录</summary>
+
+- 处理的材料：“Many hierarchies, such as organization charts or directory structures, are too large to display in their entirety on a computer screen.” [✓](https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm)
+- 处理的材料：“in four World-Wide-Web hierarchies identified by their URLs” [✓](https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm)
+- 对象：“The hyperbolic browser initially displays a tree with its root at the center” [✓](https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm)
+- 对象：“calculating a circle in the hyperbolic plane around each node that is guaranteed not to intersect the circle of any other node” [✓](https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm)
+- 关系：“so that the distance (as measured in the hyperbolic geometry) between parents, children, and siblings is approximately the same everywhere in the hierarchy” [✓](https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm)
+- 属性与度量：“according to the varying interest levels of its parts” [✓](https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm)
+- 属性与度量：“Space for displaying node information is also computed during layout and automatically transformed with each change of focus” [✓](https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm)
+- 视图：“but the display can be smoothly transformed to bring other nodes into focus” [✓](https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm)
+- 编码：“Regions that approach the center become magnified, while regions that were in the center shrink as they are moved toward the edge.” [✓](https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm)
+- 交互：“a feature to rotate the names of children of a pointed-to node through the feedback area and then jump to the current child” [✓](https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm)
+- 交互：“allowed interactive dragging of the tree within the window” [✓](https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm)
+- 回答的问题：“It would be useful to be able to see the entire hierarchy while focusing on any particular part so that the relationship of parts to the whole can be seen” [✓](https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm)
+- 抽象与层级：“This can be combined with a facility that uses different representations for nodes depending on the amount of real space they receive.” [✓](https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm)
+- 为什么这样画：“Thus the context always includes several generations of parents, siblings, and children, making it easier for the user to explore the hierarchy without getting lost.” [✓](https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm)
+- 为什么这样画：“The emphasis of the hyperbolic browser is a particular exploitation of hyperbolic space for information visualization.” [✓](https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm)
+- 为什么这样画：“In one approach, rotations are added so that the original root node always keeps its original orientation on the display.” [✓](https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm)
+- 原来的问题：“The problem is that there is no satisfactory conventional 2-d layout of a large tree, because of its exponential growth.” [✓](https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm)
+- 原来的问题：“This requires currently expensive 3D animation support. Furthermore, trees with more than approximately 1000 nodes are difficult to manipulate.” [✓](https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm)
+- 原来的问题：“it tends to obscure the hierarchical structure of the values and provides no way of focusing on one part of a hierarchy without losing the context.” [✓](https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm)
+- 原来的问题：“nodes more than a link or two from the node in focus get almost no screen real-estate, making it very hard to perceive the context” [✓](https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm)
+- 局限与代价：“Though no statistically significant performance difference was identified, a strong preference for the hyperbolic tree browser was established” [✓](https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm)
+- 局限与代价：“Though this particular task and application were adequate for a rough baseline evaluation, there are problematic aspects.” [✓](https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm)
+- 局限与代价：“The hyperbolic browser can display 1000 nodes of which about the 50 nearest the focus can show from 3 to dozens of characters of text.” [✓](https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm)
+- 局限与代价：“One other possible compromise is to drop text during animation. We found this to be a significant distraction, however.” [✓](https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm)
+
+</details>
+- 没读到：备注：第二个地址 https://ils.unc.edu/~march/courses/357_f03/p388-lamping.pdf 的标题是 Visualizing Large Trees Using the Hyperbolic Browser（Lamping 与 Rao，CHI '96，第 388–389 页），不是 1995 年 Lamping、Rao、Pirolli 的那篇；它的文字层是 OCR，有误识，本批没有从它摘录原文。
+
 <a id="infranodus"></a>
 
 ### InfraNodus
@@ -1731,7 +2408,7 @@
 - 视图：“laid out with Force-Atlas so related ideas sit close together” [✓](https://infranodus.com/tutorial/create-your-first-knowledge-graph)
 - 视图：“1 Topics View 2 Concepts View” [✓](https://infranodus.com/tutorial/create-your-first-knowledge-graph)
 - 交互：“create the graph manually with a plain text editor” [✓](https://infranodus.com/use-case/text-network-analysis)
-- 交互：“You can use the powerful filters to perform sentiment analysis” [？](https://infranodus.com/)
+- 交互：“You can use the powerful filters to perform sentiment analysis” [✓](https://infranodus.com/)
 - 交互：“Use the network representation to find the structural gaps in your discourse.” [✓](https://infranodus.com/use-case/text-network-analysis)
 - 回答的问题：“Generate better insights and steer your LLM's reasoning.” [✓](https://infranodus.com/)
 - 回答的问题：“Then apply the built-in AI to generate research questions to bridge those gaps.” [✓](https://infranodus.com/use-case/text-network-analysis)
@@ -3334,6 +4011,56 @@
 - 局限与代价：“Next, to avoid any confusion, we concentrate only on the Process Description (PD) language.” [✓](https://sbgn.github.io/learning)
 
 </details>
+
+<a id="single-cell-embeddings"></a>
+
+### 单细胞数据的二维嵌入：失真之争（Chari 与 Pachter 2023；Lause 等 2024）
+
+- 领域：单细胞基因组学；议题：几千维的基因表达数据压到二维之后，邻域和簇有多可信，能不能拿来下定量结论
+- 编码：空间与几何 + 表与多维属性；重点：群落与相似、空间位置；把握：官方页面直接写了
+- 说明：这是两篇结论相反的论文：前一篇主张二维嵌入失真太大，只能当作事后展示的“卡通图”；后一篇（PLOS 版的反驳）用邻域和类别保持的度量，认为 t-SNE 与 UMAP 保留了有意义的局部结构和簇。两篇都同意距离会失真、不能盲信。反驳的 PMC 版页面要人机验证没读到，改读 PLOS 上的同一篇。
+- 编码所依据的原文：
+  - 处理的材料：“extreme dimension reduction, from hundreds or thousands of dimensions to 2, inevitably induces significant distortion of high-dimensional datasets” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/)
+  - 关系：““local” is defined as nearest neighbor relationships, “global” as neighbor relationships and properties of groups of cells (e.g., cell types), and “distance” as Euclidean distance” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/)
+  - 视图：“In biology, single-cell genomics studies typically begin with reduction to 2 or 3 dimensions to produce “all-in-one” visuals of the data that are amenable to the human eye” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/)
+  - 抽象与层级：“Higher-level diagrams that do not seek to display all point-wise information can also be used to represent the results of other inter-cluster analyses” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/)
+  - 编码：“Colors correspond to cell types and are taken from Chari and Pachter” [✓](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012403)
+<details><summary>本案例读到的其他原文摘录</summary>
+
+- 处理的材料：“Here, we assess dimensionality reduction for single-cell gene expression” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/)
+- 处理的材料：““Ambient” space refers to the gene count matrix after highly variable gene selection and log-normalization of the counts” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/)
+- 对象：“to define each cell’s 30 nearest neighbors” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/)
+- 对象：“Cell “types” denote either author-provided cell type” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/)
+- 关系：“Note that preservation of distance implies preservation of local and global properties.” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/)
+- 属性与度量：“cell annotations or labels (such as cell type or condition) used in the following analyses were taken from the original studies” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/)
+- 属性与度量：“used labels derived in original publications via clustering” [✓](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012403)
+- 属性与度量：“these labels do not necessarily correspond to biological ground truth” [✓](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012403)
+- 视图：“by comparing contour locations and sizes in the density diagrams” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/)
+- 视图：“Large panels: Ex Utero dataset. Small panels: MERFISH and Smart-seq datasets.” [✓](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012403)
+- 编码：“with orange circles denoting all cells within the previously determined equidistant groups” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/)
+- 编码：“by directly relying on distances between the cells in 2 dimensions” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/)
+- 编码：“while 2D PCA and Picasso elephant lead to strongly overlapping types” [✓](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012403)
+- 回答的问题：“Visual applications range from assessing the existence of and relationships between predefined clusters, to inferring properties of the clusters” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/)
+- 回答的问题：“Embeddings are used to visually assess the extent of integration, mixing, or similarities between cells from different batches” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/)
+- 回答的问题：“Embedding applications range from implying or inferring local, continuous relationships between cells and assigning pseudotime coordinates” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/)
+- 抽象与层级：“combining initial dimensionality reduction to a few dozen dimensions, often using principal component analysis (PCA), with further nonlinear reduction to 2 dimensions using t-SNE” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/)
+- 抽象与层级：“clusters can be generated from higher dimensional embeddings if not from the ambient space itself” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/)
+- 抽象与层级：“conceptual graphics can be used instead which do not attempt to represent “all points and all relationships”” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/)
+- 为什么这样画：“Biologists are often interested in cell clusters, and so preservation of cell neighborhoods and visual separation of meaningful cell groups are important properties of 2D embeddings.” [✓](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012403)
+- 为什么这样画：“We therefore examine the practical implications of low-dimensional embedding of single-cell data” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/)
+- 为什么这样画：“Indeed, one can use 2D embeddings to form hypotheses about the data structure, ranging from data quality control and sanity-checking of any algorithmic output, to more general hypotheses about cluster separability” [✓](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012403)
+- 为什么这样画：“Of course, any generated insight should then be validated in the high-dimensional data by other means.” [✓](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012403)
+- 原来的问题：“We therefore discourage reliance on and blind application of such heuristic procedures” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/)
+- 原来的问题：“there is little discussion of the logic behind this coupling” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/)
+- 原来的问题：“are insufficient and only quantify a single aspect: both metrics focus on preservation of distances” [✓](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012403)
+- 原来的问题：“such 2D spaces should be treated more as cartoon diagrams to be displayed post-analysis” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/)
+- 局限与代价：“inevitably induces significant distortion of high-dimensional datasets” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/)
+- 局限与代价：“Distortion is inevitable: given n points embedded in 2 dimensions” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/)
+- 局限与代价：“cluster structures were additionally highly sensitive to the number of neighbors (perplexity for t-SNE) used in constructing nonlinear embeddings” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/)
+- 局限与代价：“2D visualisations distort distances and should not be blindly trusted” [✓](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012403)
+
+</details>
+- 没读到：interactions（两篇论文都没有写交互操作）；来源说明：PMC11446450（Lause 等的 PMC 版）返回 reCAPTCHA 人机验证页，没读到；改读 PLOS 上的同一篇原文
 
 <a id="tube-map"></a>
 

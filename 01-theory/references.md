@@ -16,6 +16,12 @@
 | [The State of the Art in Multilayer Network Visualization（McGee 等）](https://arxiv.org/abs/1902.06815) | 多层网络的定义与相关图模型（二分图、多变量图、动态图）以及可视化手法与任务分类。 | 信息结构理论里“多层与复合”一节的校准：层不是子网络，也不只是属性。（读了前四节的定义、相关模型和任务分类。） |
 | [The Design Space of Implicit Hierarchy Visualization: A Survey（Schulz, Hadlak, Schumann）](https://tildeweb.au.dk/au597509/pdfs/tvsurvey.pdf) | 隐式层级可视化（treemap、冰柱图等）的设计空间；任何层级都可表示成嵌套集合。 | 解释层级为什么既可以用连线也可以用包含表达。（读了摘要和引言，其余没读。） |
 | [The Theory Underlying Concept Maps and How to Construct and Use Them（Novak, Cañas）](https://cmap.ihmc.us/Publications/ResearchPapers/TheoryUnderlyingConceptMaps.pdf) | 概念图的定义与构建流程：焦点问题、命题、层级、跨联。 | 第四板块里提炼层级的一个现成流程；层级取决于所问的问题。（读了定义和构建部分。） |
+| [Visualizing High-Dimensional Data: Advances in the Past Decade（Liu, Maljovec, Wang, Bremer, Pascucci）](https://sci.utah.edu/~beiwang/publications/Vis_HD_STAR_BeiWang_2015.pdf) | 200 多篇论文的综述：按信息可视化流水线（数据变换、视觉映射、视图变换）分类，并按交互程度分成计算为主、交互探索、模型操作三类。 | 高维可视化文档里“办法在流水线的哪一步起作用”的校准；引用它对三维散点图与散点矩阵的评估。（读了引言、分类方法，以及感知评估和交互两节；其余没读。） |
+| [Information Visualization and Visual Data Mining（Keim）](https://kops.uni-konstanz.de/entities/publication/79d60036-d223-41a5-836f-1c2ab19cfd2a/full) | 按数据类型、可视化技术（标准二三维、几何变换、图符、密集像素、堆叠）、交互与扭曲技术三个维度给可视化与可视数据挖掘分类。 | 校准“维度处理”词表的名字，也说明本库案例里没有图符和密集像素两类。（读了分类一节，其余没读。） |
+| [A Review of the State-of-the-Art on Tours for Dynamic Visualization of High-dimensional Data（Lee 等）](https://arxiv.org/abs/2104.08016) | 综述“巡游”：用一串线性投影的动画看四维以上的数据；顺带回顾散点矩阵、平行坐标、热力图和刷选。 | 高维可视化文档里“高维”的定义，以及巡游与其他办法的关系。（读了摘要和引言，其余没读。） |
+| [Empirical Guidance on Scatterplot and Dimension Reduction Technique Choices（Sedlmair, Munzner, Tory）](https://eprints.cs.univie.ac.at/3992/) | 两位编码员检查了 75 个数据集、4 种降维方法、3 种散点图形式生成的 816 张图：二维散点图常常“够用”，交互式三维散点图很少有帮助、常常更差。 | “再加一个空间维度有没有用”的实证旁证。（读了摘要和引言，其余没读。） |
+| [Effectiveness of Animation in Trend Visualization（Robertson, Fernandez, Fisher, Lee, Stasko）](https://faculty.cc.gatech.edu/~stasko/papers/infovis08-anim.pdf) | 比较动画、叠加轨迹和小多图三种趋势可视化：动画在演示时最快、最让人愉快但出错多，分析时最差，小多图最准。 | 时间或投影序列当作一个“维度”用动画展示时的取舍（Gapminder 气泡图、巡游）。（读了摘要和引言，其余没读。） |
+| [Multidimensional Projection for Visual Analytics: Linking Techniques with Distortions, Tasks, and Layout Enrichment（Nonato, Aupetit）](https://qcai.qcri.org/publications/multidimensional-projection-for-visual-analytics-linking-techniques-with-distortions-tasks-and-layout-enrichment) | 多维投影的综述：投影会产生哪些失真、怎样量化评估、怎样用布局增强来识别失真。 | 高维可视化文档里“失真的度量”一项还没解决的说明。（只读到出版页的摘要，没读到全文。） |
 <!-- /gen -->
 
 尤其值得借鉴的是 Tamara Munzner 的分析方法：先明确领域问题和用户任务，再做数据抽象、视觉设计与算法实现，而不是直接选一个图形库开始画图。这可以作为后面所有项目研究的共同方法。

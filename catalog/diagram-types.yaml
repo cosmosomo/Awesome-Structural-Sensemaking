@@ -10,6 +10,7 @@ families:
       - {id: treemap, name: 矩形树图, demos: [{title: "d3-hierarchy 集合，含 treemap（D3）", url: "https://observablehq.com/collection/@d3/d3-hierarchy"}]}
       - {id: sunburst, name: 旭日图, demos: [{title: "Zoomable sunburst（D3）", url: "https://observablehq.com/@mbostock/d3-zoomable-sunburst"}]}
       - {id: icicle, name: 冰柱图, demos: [{title: "Icicle（D3）", url: "https://observablehq.com/@d3/icicle/2"}]}
+      - {id: hyperbolic-tree, name: 双曲树, added_by_maintainer: true}
 
   - id: network
     title: 一般关系网络
@@ -63,6 +64,11 @@ families:
       - {id: parallel-coordinates, name: 平行坐标, demos: [{title: "Parallel coordinates（D3）", url: "https://observablehq.com/notebook-kit/ex/d3/parallel-coordinates"}, {title: "Parallel coordinates（Plotly）", url: "https://plotly.com/javascript/parallel-coordinates-plot/", checked: "2026-10-13"}]}
       - {id: radar, name: 雷达图, demos: [{title: "Radar charts（Plotly）", url: "https://plotly.com/javascript/radar-chart/", checked: "2026-10-13"}]}
       - {id: heatmap, name: 热力图, demos: [{title: "D3.js Heatmap（社区笔记）", url: "https://observablehq.com/@bbischof/d3-js-heatmap"}]}
+      - {id: projection-scatter, name: 降维投影散点图, added_by_maintainer: true, demos: [{title: "Embedding Projector", url: "https://projector.tensorflow.org/"}, {title: "How to Use t-SNE Effectively（交互式文章）", url: "https://distill.pub/2016/misread-tsne/", checked: "2026-10-14"}]}
+      - {id: tour, name: 巡游（Grand Tour）, added_by_maintainer: true, demos: [{title: "Visualizing Neural Networks with the Grand Tour（交互式文章）", url: "https://distill.pub/2020/grand-tour/", checked: "2026-10-14"}, {title: "dtour", url: "https://dtour.dev", checked: "2026-10-14"}]}
+      - {id: radviz, name: 径向可视化（Radviz）, added_by_maintainer: true}
+      - {id: upset, name: 集合交集矩阵（UpSet）, added_by_maintainer: true, demos: [{title: "UpSet", url: "https://upset.app/", checked: "2026-10-14"}]}
+      - {id: mapper-graph, name: 拓扑摘要图（Mapper）, added_by_maintainer: true, demos: [{title: "KeplerMapper 示例 notebook", url: "https://kepler-mapper.scikit-tda.org/en/latest/notebooks/Cancer-demo.html", checked: "2026-10-14"}]}
 
   - id: spatial
     title: 空间与地理
@@ -71,6 +77,8 @@ families:
       - {id: map, name: 地图, demos: [{title: "deck.gl 图层示例", url: "https://deck.gl/gallery/", checked: "2026-10-13"}]}
       - {id: spatial-network, name: 空间网络, demos: [{title: "3D force-directed graph", url: "https://vasturiano.github.io/3d-force-graph/", checked: "2026-10-13"}]}
       - {id: scene-3d, name: 3D 场景, demos: [{title: "three.js 示例", url: "https://threejs.org/examples/", checked: "2026-10-13"}, {title: "SkyWalking 3D 基础设施地图（交互演示）", url: "https://skywalking.apache.org/3d-map-app/", checked: "2026-10-13"}]}
+      - {id: nd-slice, name: 高维几何的截面, added_by_maintainer: true, demos: [{title: "Miegakure（四维解谜游戏）", url: "https://miegakure.com", checked: "2026-10-14"}]}
+      - {id: immersive-axes, name: 沉浸式坐标轴（VR）, added_by_maintainer: true}
 
   - id: semantic
     title: 语义与知识

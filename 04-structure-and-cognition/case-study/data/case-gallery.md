@@ -9,7 +9,7 @@
 - 这些案例为什么这样归类、设计者怎么想，见 [案例表](case-analysis.md)；编码依据的官方原文见 [案例证据](case-evidence.md)。
 
 <!-- gen:gallerystats: -->
-98 个案例里，67 个有在线展示页（可操作 52、样例目录 11、视频或导览 1、需要登录 3），其中 67 个用无头 Chromium 实际打开过；50 个有官方图片，共 91 张。其余 31 个没找到在线展示页（命令行工具、规范、方法类，或官方页面读不到），原因写在各案例下。图片只存地址，不转存。
+114 个案例里，76 个有在线展示页（可操作 58、样例目录 14、视频或导览 1、需要登录 3），其中 76 个用无头 Chromium 实际打开过；58 个有官方图片，共 105 张。其余 38 个没找到在线展示页（命令行工具、规范、方法类，或官方页面读不到），原因写在各案例下。图片只存地址，不转存。
 <!-- /gen -->
 
 ## 总表
@@ -19,12 +19,19 @@
 <!-- gen:galleryindex: -->
 | 案例 | 领域 | 主结构 | 展示页 | 图 | 网页 |
 |---|---|---|---|---|---|
+| [UpSet](https://upset.app/) | 集合与交集分析 | 集合与分类 | [样例目录](https://upset.multinet.app/) | 3 | 2 |
 | [CNCF Landscape](https://landscape.cncf.io/) | 技术生态 | 集合与分类 | [可操作](https://landscape.cncf.io/) | 1 | 2 |
 | [Thoughtworks Technology Radar](https://www.thoughtworks.com/radar) | 技术生态 | 集合与分类 | [可操作](https://www.thoughtworks.com/radar) | — | 1 |
 | [Zalando Tech Radar](https://github.com/zalando/tech-radar) | 技术生态 | 集合与分类 | [可操作](https://opensource.zalando.com/tech-radar/) | 1 | 1 |
 | [Open Source AI Gap Map](https://www.aipotluck.org/map) | 开源生态评估 | 集合与分类 | [可操作](https://www.aipotluck.org/map/gap-map) | 2 | 2 |
 | [Grafana](https://github.com/grafana/grafana) | 基础设施运维 | 表与多维属性 | [可操作](https://play.grafana.org/) | — | 1 |
 | [PyGraphistry](https://github.com/graphistry/pygraphistry) | 数据分析 | 表与多维属性 | — | 3 | 2 |
+| [HiPlot](https://facebookresearch.github.io/hiplot/) | 机器学习实验分析 | 表与多维属性 | [可操作](https://facebookresearch.github.io/hiplot/_static/demo/ml1.csv.html?hip.color_by=%22valid+ppl%22) | — | 2 |
+| [Facets](https://pair-code.github.io/facets/) | 机器学习数据集检查 | 表与多维属性 | [可操作](https://pair-code.github.io/facets/quickdraw.html) | 1 | 2 |
+| [Voyager](https://idl.uw.edu/papers/voyager) | 探索式数据分析 | 表与多维属性 | [可操作](https://vega.github.io/voyager/) | 1 | 1 |
+| [Rank-by-Feature 框架与 Hierarchical Clustering Explorer（Seo 与 Shneiderman）](https://www.cs.umd.edu/hcil/hce/) | 多维数据探索（统计与微阵列数据） | 表与多维属性 | — | — | 2 |
+| [Orange](https://orangedatamining.com/) | 数据挖掘与多维投影 | 表与多维属性 | — | 2 | 2 |
+| [ImAxes（VR 里的沉浸式坐标轴）](https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf) | 沉浸式数据分析 | 表与多维属性 | — | — | 2 |
 | [Wikidata Query Service 结果视图](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/Wikidata_Query_Help/Result_Views) | 开放知识图谱 | 表与多维属性 | [可操作](https://query.wikidata.org/) | 1 | 1 |
 | [Build Your Own Radar](https://github.com/thoughtworks/build-your-own-radar) | 技术生态 | 表与多维属性 | [可操作](https://radar.thoughtworks.com/) | — | 1 |
 | [OSS Insight](https://ossinsight.io/) | 开源生态 | 表与多维属性 | [可操作](https://ossinsight.io/) | 1 | 1 |
@@ -42,9 +49,10 @@
 | [Langfuse](https://github.com/langfuse/langfuse) | AI 应用观测 | 层级与树 | [可操作](https://langfuse.com/docs/demo) | 2 | 2 |
 | [Arize Phoenix](https://github.com/Arize-ai/phoenix) | AI 应用观测 | 层级与树 | [可操作](https://phoenix-demo.arize.com/) | 1 | 2 |
 | [Comet Opik](https://www.comet.com/site/products/opik/) | AI 应用观测 | 层级与树 | — | 2 | 2 |
-| [AgentOps](https://www.agentops.ai/) | AI 应用观测 | 层级与树 | — | 2 | 1 |
+| [AgentOps](https://www.agentops.ai/) | AI 应用观测 | 层级与树 | — | 1 | 1 |
 | [LangWatch](https://langwatch.ai/) | AI 应用观测 | 层级与树 | [需登录](https://app.langwatch.ai/demo) | — | 1 |
 | [AgentScope 2.0](https://docs.agentscope.io/) | AI Agent 开发 | 层级与树 | — | 1 | 2 |
+| [双曲浏览器（Lamping、Rao、Pirolli，CHI 1995）](https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm) | 大型层级的浏览 | 层级与树 | — | 3 | 2 |
 | [Docling](https://github.com/docling-project/docling) | 文档处理 | 层级与树 | [可操作](https://huggingface.co/spaces/docling-project/SmolDocling-256M-Demo) | — | 2 |
 | [Universal Dependencies 依存树](https://universaldependencies.org/introduction.html) | 语言学 | 层级与树 | [可操作](https://universaldependencies.org/conllu_viewer.html) | — | 2 |
 | [AFFiNE](https://affine.pro/) | 知识管理 | 层级与树 | [样例目录](https://affine.pro/templates) | — | 2 |
@@ -85,6 +93,7 @@
 | [NeoDash](https://github.com/neo4j-labs/neodash) | 图数据库应用 | 一般图与网络 | — | 1 | 1 |
 | [Gephi](https://gephi.org/desktop/) | 通用网络分析 | 一般图与网络 | [可操作](https://lite.gephi.org/) | 3 | 2 |
 | [Hive Plot](https://mk.bcgsc.ca/linnet/) | 网络分析（生物与社会网络） | 一般图与网络 | [可操作](https://bost.ocks.org/mike/hive/) | 2 | 1 |
+| [KeplerMapper](https://kepler-mapper.scikit-tda.org/en/latest/) | 拓扑数据分析 | 一般图与网络 | [样例目录](https://kepler-mapper.scikit-tda.org/en/latest/notebooks/Plotly-Demo.html) | — | 2 |
 | [InfraNodus](https://infranodus.com/) | 文本分析与知识发现 | 一般图与网络 | [可操作](https://infranodus.com/live/hourlydailynews?background=default&most_influential=bc&maxnodes=150&demo=1&defaultlabelsize=14&labelsizeratio=2&demo=1) | 3 | 2 |
 | [Docling Graph](https://docling-project.github.io/docling-graph/) | 文档处理 | 一般图与网络 | [可操作](https://docling-project.github.io/docling-graph/usage/examples/) | — | 2 |
 | [Microsoft GraphRAG](https://microsoft.github.io/graphrag/) | 文本检索与知识建模 | 一般图与网络 | — | 2 | 2 |
@@ -110,11 +119,18 @@
 | [OpenLLMetry](https://github.com/traceloop/openllmetry) | AI Agent 观测 | 序列与事件流 | — | 1 | 2 |
 | [Up and Down the Ladder of Abstraction](https://worrydream.com/LadderOfAbstraction/) | 交互式写作与抽象 | 序列与事件流 | [可操作](https://worrydream.com/LadderOfAbstraction/) | — | — |
 | [LLNL 美国能源流向图](https://flowcharts.llnl.gov/) | 能源 | 流量网络 | [样例目录](https://flowcharts.llnl.gov/commodities/energy) | 1 | 2 |
-| [Embedding Projector](https://projector.tensorflow.org/) | 机器学习 | 空间与几何 | [可操作](https://projector.tensorflow.org/) | 3 | 2 |
+| [Embedding Projector](https://projector.tensorflow.org/) | 机器学习 | 空间与几何 | [可操作](https://projector.tensorflow.org/) | 2 | 2 |
+| [How to Use t-SNE Effectively（Distill）](https://distill.pub/2016/misread-tsne/) | 机器学习与嵌入分析 | 空间与几何 | [可操作](https://distill.pub/2016/misread-tsne/) | — | — |
+| [Visualizing Neural Networks with the Grand Tour（Distill）](https://distill.pub/2020/grand-tour/) | 机器学习与嵌入分析 | 空间与几何 | [可操作](https://distill.pub/2020/grand-tour/) | — | — |
+| [dtour](https://dtour.dev) | 高维数据探索 | 空间与几何 | [可操作](https://dtour.dev) | — | 2 |
+| [Embedding Atlas](https://apple.github.io/embedding-atlas/) | 机器学习与嵌入分析 | 空间与几何 | [样例目录](https://apple.github.io/embedding-atlas/examples/) | 2 | 2 |
+| [Nomic Atlas](https://docs.nomic.ai/atlas/datasets/data-maps/how-atlas-works/1-key_terms) | 机器学习与嵌入分析 | 空间与几何 | — | — | 2 |
+| [Miegakure（四维解谜游戏）](https://miegakure.com) | 四维几何与游戏 | 空间与几何 | — | 3 | 2 |
 | [Semantic Map of GitHub](https://stevenfazzio.com/semantic-github-map/) | 开源生态地图 | 空间与几何 | [可操作](https://stevenfazzio.com/semantic-github-map/) | — | 1 |
 | [Map of GitHub](https://anvaka.github.io/map-of-github/) | 开源生态地图 | 空间与几何 | [可操作](https://anvaka.github.io/map-of-github/) | — | — |
 | [The State of Open Source Agentic AI](https://stateofagenticai.reiuk.co.uk/) | 开源生态地图 | 空间与几何 | [可操作](https://stateofagenticai.reiuk.co.uk/) | 1 | — |
 | [Circos](https://pmc.ncbi.nlm.nih.gov/articles/PMC2752132/) | 比较基因组 | 空间与几何 | — | 3 | 1 |
+| [单细胞数据的二维嵌入：失真之争（Chari 与 Pachter 2023；Lause 等 2024）](https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/) | 单细胞基因组学 | 空间与几何 | — | 1 | 2 |
 | [Insight Maker](https://www.insightmaker.com/) | 系统建模 | 因果与反馈 | [样例目录](https://www.insightmaker.com/explore) | 3 | 2 |
 | [Explorable Explanations](https://worrydream.com/ExplorableExplanations/) | 交互式写作 | 因果与反馈 | [可操作](https://worrydream.com/TenBrighterIdeas/) | 2 | 2 |
 <!-- /gen -->
@@ -367,6 +383,16 @@
 <sub>图：E. coli gene regulatory network visualized with the linear layout.（[来源页](https://mk.bcgsc.ca/linnet/)）；Linux kernel function call network visualized with the linear layout.（[来源页](https://mk.bcgsc.ca/linnet/)）</sub>
 
 <sub>[编码与原文摘录](case-evidence.md#hive-plot)</sub>
+
+#### [KeplerMapper](https://kepler-mapper.scikit-tda.org/en/latest/)
+
+<sub>拓扑数据分析 · 一般图与网络 · 重点：连通与邻域、群落与相似</sub>　看高维点云的连通结构（分支、环、簇之间怎么连），而不只是点与点的距离
+
+- 展示页（样例目录）：[Demo of Plotlyviz features — KeplerMapper 2.1.0 documentation](https://kepler-mapper.scikit-tda.org/en/latest/notebooks/Plotly-Demo.html)（页面写 'Hover the graph nodes in the next cell to see their distribution in the right figure'（悬停图中节点，右侧显示其分布）；'Dashboards' 小节说明用 dashboard=True 或 vbox=True 显示节点直方图和成员。）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 8009 字、svg 170 个</sub><sub> 打开后所见：文档里的 notebook：前面是代码，后面嵌着 Plotly 画的 Mapper 图（悬停节点看分布）；输出是文档页里的，不是在线应用</sub>
+- 网页：[HTML Visualization Features — KeplerMapper 2.1.0 documentation](https://kepler-mapper.scikit-tda.org/en/latest/html-visualization-features.html)（官方文档讲 HTML 可视化的交互功能（节点配色、搜索栏、最小交集选择、冻结节点、亮/暗模式），各功能附 GIF 动图。）
+- 网页：[Getting Started — KeplerMapper 2.1.0 documentation](https://kepler-mapper.scikit-tda.org/en/latest/started.html)（入门页，用 make_circles 数据生成 HTML 输出，页面附该输出的截图。）
+
+<sub>[编码与原文摘录](case-evidence.md#kepler-mapper)</sub>
 
 #### [InfraNodus](https://infranodus.com/)
 
@@ -707,7 +733,7 @@
 - 展示页：没有找到在线展示页<sub>（未找到无需登录的在线展示页。主页的 Dashboard 按钮指向 https://app.agentops.ai/，这是账号控制台，未访问，不计为展示页。搜索也未找到公开演示。）</sub>
 - 网页：[Introduction - AgentOps](https://docs.agentops.ai/v2/introduction)（介绍页，嵌有 overview 截图以及 session-waterfall、session-drawer 两张动图，图片没有 alt 和说明文字。）
 
-<a href="https://mintcdn.com/agentops/lKHoIAF-8UF9BP18/images/overview.png?fit=max&auto=format&n=lKHoIAF-8UF9BP18&q=85&s=7eaf05b550f66df6c3ea493035a827b3"><img src="https://mintcdn.com/agentops/lKHoIAF-8UF9BP18/images/overview.png?fit=max&auto=format&n=lKHoIAF-8UF9BP18&q=85&s=7eaf05b550f66df6c3ea493035a827b3" width="230" alt="agentops"></a> <a href="https://mintcdn.com/agentops/lKHoIAF-8UF9BP18/images/session-waterfall.gif?s=dc65c7b9a11e84ba14105811b1eaa1e5"><img src="https://mintcdn.com/agentops/lKHoIAF-8UF9BP18/images/session-waterfall.gif?s=dc65c7b9a11e84ba14105811b1eaa1e5" width="230" alt="agentops"></a>
+<a href="https://mintcdn.com/agentops/lKHoIAF-8UF9BP18/images/overview.png?fit=max&auto=format&n=lKHoIAF-8UF9BP18&q=85&s=7eaf05b550f66df6c3ea493035a827b3"><img src="https://mintcdn.com/agentops/lKHoIAF-8UF9BP18/images/overview.png?fit=max&auto=format&n=lKHoIAF-8UF9BP18&q=85&s=7eaf05b550f66df6c3ea493035a827b3" width="230" alt="agentops"></a>
 
 <sub>[编码与原文摘录](case-evidence.md#agentops)</sub>
 
@@ -733,6 +759,20 @@
 <sub>图：AgentScope 2.0 ecosystem diagram（[来源页](https://agentscope.io/)）</sub>
 
 <sub>[编码与原文摘录](case-evidence.md#agentscope)</sub>
+
+#### [双曲浏览器（Lamping、Rao、Pirolli，CHI 1995）](https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm)
+
+<sub>大型层级的浏览 · 层级与树 · 重点：包含与层次、连通与邻域</sub>　看目录、组织图、网站这样的大型层级时，既聚焦一部分，又看得见整体上下文
+
+- 展示页：没有找到在线展示页<sub>（未找到原系统的在线可操作版本：论文页与附录页只有静态图和动画帧；搜到的开源复现在 GitHub，不访问，也不是原论文官方来源。）</sub>
+- 网页：[A Focus+Context Technique Based on Hyperbolic Geometry for Visualizing Large Hierarchies.](https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm)（CHI 1995 论文页，正文配图 1–10；图 3 为焦点切换（Changing the focus），图 4–6 为不同布局和焦点下的树。）
+- 网页：[Animation: Changing the Focus, Frame 1](https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_figs/anim1a.htm)（论文附的焦点切换动画页（第 1 帧，带 Next/Previous 翻页），正文图 3 链接到此。）
+
+<a href="https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_figs/fg-ut.gif"><img src="https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_figs/fg-ut.gif" width="230" alt="hyperbolic-browser"></a> <a href="https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_figs/fg-eg.gif"><img src="https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_figs/fg-eg.gif" width="230" alt="hyperbolic-browser"></a> <a href="https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_figs/fg-eg2.gif"><img src="https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_figs/fg-eg2.gif" width="230" alt="hyperbolic-browser"></a>
+
+<sub>图：Figure 4: A uniform tree of depth 5 and branching factor 3 (364 nodes).（[来源页](https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm)）；Figure 5: The initial layout of a tree with 1004 nodes using a Poisson distribution for number of children. The origin of the tree is in the center.（[来源页](https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm)）；Figure 6: A new focus.（[来源页](https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm)）</sub>
+
+<sub>[编码与原文摘录](case-evidence.md#hyperbolic-browser)</sub>
 
 #### [Docling](https://github.com/docling-project/docling)
 
@@ -972,6 +1012,77 @@
 
 <sub>[编码与原文摘录](case-evidence.md#pygraphistry)</sub>
 
+#### [HiPlot](https://facebookresearch.github.io/hiplot/)
+
+<sub>机器学习实验分析 · 表与多维属性 · 重点：对象上的度量、总体分布</sub>　几十个超参数、十万次实验里，哪些参数在影响要优化的指标
+
+- 展示页（可直接操作）：[HiPlot](https://facebookresearch.github.io/hiplot/_static/demo/ml1.csv.html?hip.color_by=%22valid+ppl%22)（Meta 博客原文写 'You can reproduce this example here'，链接指向这个页面（ml1.csv 数据，按 valid ppl 着色）。页面是 JS 渲染，脚本只读到 'Loading HiPlot...'，具体操作位置未核对。）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 1523 字、canvas 2 个、svg 1 个</sub><sub> 打开后所见：打开是 HiPlot 的平行坐标图：valid ppl、train f1、lr、epoch、embedding_size、dropout 六根轴，约 7000 条线按 valid ppl 着色；上方有 Restore、Keep、Exclude、Export、Help 按钮，下方是数据表</sub>
+- 网页：[HiPlot demonstration — HiPlot 0.1.33 documentation](https://facebookresearch.github.io/hiplot/)（文档站的 HiPlot demonstration 逐步演示（约 7000 个实验数据点，切片、设为 X 轴、添加 XY 图），页面上只有文字步骤，没有截图。）
+- 网页：[HiPlot: High-dimensional interactive plots made easy](https://ai.meta.com/blog/hiplot-high-dimensional-interactive-plots-made-easy/)（Meta 官方博客，介绍 HiPlot 的平行坐标图及其交互（切片、调整和删除坐标轴、按某一轴着色、选取数据）。）
+
+<sub>[编码与原文摘录](case-evidence.md#hiplot)</sub>
+
+#### [Facets](https://pair-code.github.io/facets/)
+
+<sub>机器学习数据集检查 · 表与多维属性 · 重点：总体分布、对象上的度量</sub>　看懂有成百上千个特征的数据集：逐特征看分布和异常，再按特征摆放每个样本去找系统性错误
+
+- 展示页（可直接操作）：[（页面无 title 标签，正文首行为 Quick, Draw! Dataset）](https://pair-code.github.io/facets/quickdraw.html)（页面正文写 Quick, Draw! Dataset，下面是 Random Faces、Complex Faces、Random Faces (non-US)、Random Chairs 几个数据子集，以及 Preset View（预设视图）。首页链接文字为 'Explore the Quick, Draw! dataset on Dive.'。）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 309 字、svg 3 个</sub><sub> 打开后所见：打开是 Facets Dive 载入的 Quick, Draw! 数据：几万个涂鸦缩略图排成方阵，顶部有 Binning、Color By、Label By、Scatter 的下拉框和预设视图</sub>
+- 网页：[Facets - Visualizations for ML datasets](https://pair-code.github.io/facets/)（官网首页，介绍 Facets Overview（逐个特征的数值分布）和 Facets Dive，并写明可在 UCI Census Income 数据集上试用两者。）
+- 网页：[Facets: An Open Source Visualization Tool for Machine Learning Training Data \| Google Open Source Blog](https://opensource.googleblog.com/2017/07/facets-open-source-visualization-tool.html)（2017 年 Google 开源博客的发布文章，页内有以 overview-numerical.png、overview-categorical-expand.png 命名的截图（按文件名看是 Overview 的数值与分类视图）。）
+
+<a href="https://pair-code.github.io/facets/images/FacetsDive_Quickdraw@2x.jpg"><img src="https://pair-code.github.io/facets/images/FacetsDive_Quickdraw@2x.jpg" width="230" alt="Facets Dive x Quickdraw"></a>
+
+<sub>图：Facets Dive x Quickdraw（[来源页](https://pair-code.github.io/facets/)）</sub>
+
+<sub>[编码与原文摘录](case-evidence.md#facets)</sub>
+
+#### [Voyager](https://idl.uw.edu/papers/voyager)
+
+<sub>探索式数据分析 · 表与多维属性 · 重点：总体分布、对象上的度量</sub>　字段很多的表，不预先想好问题也能看到有价值的图，并系统地覆盖各个变量
+
+- 展示页（可直接操作）：[Voyager 2](https://vega.github.io/voyager/)（页面是 JS 渲染，脚本只读到标题 'Voyager 2'，读不到界面文字，无法从页面确认操作位置，未核对交互。）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 26 字；内容很少，可能需要交互或登录</sub><sub> 打开后所见：打开是 datavoyager 的空白界面，只有“Please load a dataset”和 Load 按钮，要点 Load 选数据集才能看到推荐图库；没有点进去</sub>
+- 网页：[Voyager: Exploratory Analysis via Faceted Browsing of Visualization Recommendations](https://idl.uw.edu/papers/voyager)（论文页，页内配有 Voyager 界面图（左侧 schema 面板、右侧推荐可视化图库）及其图注。）
+
+<a href="https://idl.uw.edu/images/figures/voyager.png"><img src="https://idl.uw.edu/images/figures/voyager.png" width="230" alt="Figure for Voyager: Exploratory Analysis via Faceted Browsing of Visualization Recommendations"></a>
+
+<sub>图：Voyager: a recommendation-powered visualization browser. The schema panel (left) lists data variables selectable by users. The main gallery (right) presents suggested visualizations of different variable subsets and transformations.（[来源页](https://idl.uw.edu/papers/voyager)）</sub>
+
+<sub>[编码与原文摘录](case-evidence.md#voyager)</sub>
+
+#### [Rank-by-Feature 框架与 Hierarchical Clustering Explorer（Seo 与 Shneiderman）](https://www.cs.umd.edu/hcil/hce/)
+
+<sub>多维数据探索（统计与微阵列数据） · 表与多维属性 · 重点：对象上的度量、群落与相似</sub>　维度很多的时候，二维投影的数量多到没法逐个看：按特征给一维、二维投影打分排序，先看最有信息的
+
+- 展示页：没有找到在线展示页<sub>（HCE 是需下载安装的桌面程序（页面给出 HCE 3.5 test version 下载和 HCE 3.0、2.0、1.0 的注册下载表单），没有在线展示页，所以 demo 记 null…）</sub>
+- 网页：[A Rank-by-Feature Framework for Interactive Exploration of Multidimensional Data](https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html)（Seo 与 Shneiderman 的技术报告全文（页面 <title> 是 Word 残留的 'Author Guidelines for 8'），正文引用了 Figure 1 到 Figure 11，并写明框架在 HCE 中实现。）
+- 网页：[HCE - Hierarchical Clustering Explorer](https://www.cs.umd.edu/hcil/hce/)（HCE 项目页，写明它用 dendrogram 和 color mosaic 给出交互视觉反馈，并列出各版本的下载与注册入口。）
+
+<sub>[编码与原文摘录](case-evidence.md#rank-by-feature)</sub>
+
+#### [Orange](https://orangedatamining.com/)
+
+<sub>数据挖掘与多维投影 · 表与多维属性 · 重点：群落与相似、对象上的度量</sub>　找一张能把不同类别分开的二维投影，并读出哪些属性在起作用
+
+- 展示页：没有找到在线展示页<sub>（FreeViz 页的 FreeViz-stamped.png、FreeViz-anchors.png、FreeViz-selection.png 和 FreeViz-Example.png：页面只写 'see the s…）</sub>
+- 网页：[Radviz — Orange Visual Programming 3 documentation](https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/radviz.html)（Radviz 部件的说明页，页内 'The snapshot shown below' 给出 Radviz 部件的截图，并解释这种投影的锚点与弹簧画法。）
+- 网页：[Orange Data Mining](https://orangedatamining.com/)（官网首页，写明 Orange 是开源的机器学习与数据可视化工具，'Interactive Data Visualization' 一节列出箱线图、散点图、层次聚类、热图、MDS、t-SNE 和 linear projections。）
+
+<a href="https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/_images/Radviz-stamped.png"><img src="https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/_images/Radviz-stamped.png" width="230" alt="../../_images/Radviz-stamped.png"></a> <a href="https://orange.readthedocs.io/en/latest/_images/LinearProjection-Zoo.png"><img src="https://orange.readthedocs.io/en/latest/_images/LinearProjection-Zoo.png" width="230" alt="Lienar Projection on zoo data set"></a>
+
+<sub>图：../../_images/Radviz-stamped.png（[来源页](https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/radviz.html)）；Lienar Projection on zoo data set（[来源页](https://orange.readthedocs.io/en/latest/widgets/rst/visualize/linearprojection.html)）</sub>
+
+<sub>[编码与原文摘录](case-evidence.md#orange)</sub>
+
+#### [ImAxes（VR 里的沉浸式坐标轴）](https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf)
+
+<sub>沉浸式数据分析 · 表与多维属性 · 重点：对象上的度量、连通与邻域</sub>　在 VR 里用手抓取数据轴，现场搭出散点图、散点矩阵和平行坐标，探索多维数据
+
+- 展示页：没有找到在线展示页<sub>（没有网页版在线演示：系统是沉浸式 VR 应用，作者页的软件下载指向 GitHub（不访问）；作者页列的视频（YouTube、Vimeo）是视频，不计展示页。）</sub>
+- 网页：[XR+VIS Research - Projects](https://sites.google.com/view/cordeil/projects)（作者 Maxime Cordeil 的项目页，ImAxes（UIST 2017）条目下列有预印本视频、UIST 演示视频和软件下载链接。）
+- 网页：[ImAxes: immersive axes as embodied affordances for interactive multivariate data visualisation - Monash University](https://research.monash.edu/en/publications/imaxes-immersive-axes-as-embodied-affordances-for-interactive-mul/)（Monash 研究库记录页，摘要写明可视化的基本元素是可被操纵的嵌入式数据轴，可视化类型取决于轴之间的邻近程度和相对朝向。）
+
+<sub>[编码与原文摘录](case-evidence.md#imaxes)</sub>
+
 #### [Wikidata Query Service 结果视图](https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/Wikidata_Query_Help/Result_Views)
 
 <sub>开放知识图谱 · 表与多维属性 · 重点：对象上的度量、时间与演化</sub>　把一次 SPARQL 查询的结果换成不同的图来看
@@ -1073,6 +1184,20 @@
 ## 集合与分类
 
 <!-- gen:gallery:set -->
+#### [UpSet](https://upset.app/)
+
+<sub>集合与交集分析 · 集合与分类 · 重点：有什么、总体分布</sub>　集合多到 Venn 图画不下时，看哪些集合组合的交集最大、最特别，并把元素的属性接在交集旁边看
+
+- 展示页（样例目录）：[Upset - Visualizing Intersecting Sets](https://upset.multinet.app/)（vdl.sci.utah.edu/upset2/ 首页（UpSet 2.0 Interactive Set Visualization）上的 'Go To UpSet' 按钮指向此地址。）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 457 字</sub><sub> 打开后所见：打开是 UpSet 2.0 欢迎页：Movies、Covid Symptoms、Tennis Tournament Winners、World Organizations 等示例，每个是矩阵加条形图的缩略图；没有点进去</sub>
+- 网页：[UpSet Home](https://upset.app/)（官网首页讲解 UpSet 的矩阵布局、交集的柱状图和排序方式，并附示例图。）
+- 网页：[Advanced \| UpSet](https://upset.app/advanced/)（高级功能页，附属性内联箱线图、按集合聚合等示例图。）
+
+<a href="https://upset.app/assets/images//upsetr.png"><img src="https://upset.app/assets/images//upsetr.png" width="230" alt="A simple UpSet Example"></a> <a href="https://upset.app/assets/images/advanced//upset_inline_attribute.png"><img src="https://upset.app/assets/images/advanced//upset_inline_attribute.png" width="230" alt="Inline attributes visualized as box plots."></a> <a href="https://upset.app/assets/images/advanced//aggregate_sets.png"><img src="https://upset.app/assets/images/advanced//aggregate_sets.png" width="230" alt="UpSet plot aggregated by sets."></a>
+
+<sub>图：A simple UpSet Example（[来源页](https://upset.app/)）；Inline attributes visualized as box plots.（[来源页](https://upset.app/advanced/)）；UpSet plot aggregated by sets.（[来源页](https://upset.app/advanced/)）</sub>
+
+<sub>[编码与原文摘录](case-evidence.md#upset)</sub>
+
 #### [CNCF Landscape](https://landscape.cncf.io/)
 
 <sub>技术生态 · 集合与分类 · 重点：有什么、对象上的度量</sub>　在云原生生态里找到某类项目，并查看具体项目的信息
@@ -1134,9 +1259,73 @@
 - 网页：[Visualizing Data using the Embedding Projector in TensorBoard \| TensorFlow](https://www.tensorflow.org/tensorboard/tensorboard_projector_plugin)（TensorFlow 官方的 TensorBoard Embedding Projector 使用页，页内有 embedding_projector 系列示例图（alt 为空）。）
 - 网页：[Open sourcing the Embedding Projector: a tool for visualizing high dimensional d](https://research.google/blog/open-sourcing-the-embedding-projector-a-tool-for-visualizing-high-dimensional-data/)（Google Research 官方博客，介绍 Embedding Projector 的开源；页面 og:image 文件名为 embedding-mnist.gif。）
 
-<a href="https://www.tensorflow.org/tensorboard/images/embedding_projector.png?raw=1"><img src="https://www.tensorflow.org/tensorboard/images/embedding_projector.png?raw=1" width="230" alt="embedding-projector"></a> <a href="https://www.tensorflow.org/tensorboard/images/embedding_projector_hitchcock.png?raw=1"><img src="https://www.tensorflow.org/tensorboard/images/embedding_projector_hitchcock.png?raw=1" width="230" alt="embedding-projector"></a> <a href="https://storage.googleapis.com/gweb-research2023-media/original_images/f02c81bacca2434edcc059ef56bbd5e4-embedding-mnist.gif"><img src="https://storage.googleapis.com/gweb-research2023-media/original_images/f02c81bacca2434edcc059ef56bbd5e4-embedding-mnist.gif" width="230" alt="embedding-projector"></a>
+<a href="https://www.tensorflow.org/tensorboard/images/embedding_projector.png?raw=1"><img src="https://www.tensorflow.org/tensorboard/images/embedding_projector.png?raw=1" width="230" alt="embedding-projector"></a> <a href="https://www.tensorflow.org/tensorboard/images/embedding_projector_hitchcock.png?raw=1"><img src="https://www.tensorflow.org/tensorboard/images/embedding_projector_hitchcock.png?raw=1" width="230" alt="embedding-projector"></a>
 
 <sub>[编码与原文摘录](case-evidence.md#embedding-projector)</sub>
+
+#### [How to Use t-SNE Effectively（Distill）](https://distill.pub/2016/misread-tsne/)
+
+<sub>机器学习与嵌入分析 · 空间与几何 · 重点：群落与相似、空间位置</sub>　把几百上千维的点压成二维图以后，图上的哪些东西（簇的大小、簇之间的距离、形状）能读，哪些会误读
+
+- 展示页（可直接操作）：[How to Use t-SNE Effectively](https://distill.pub/2016/misread-tsne/)（页面顶部有 'Step' 控件和 'play_arrow pause'、'refresh' 按钮（页面文字），文章本身就是交互式演示；每张图的具体操作以页面为准）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 17016 字、canvas 20 个、svg 2 个</sub><sub> 打开后所见：打开是 Distill 交互式文章：正文里每个 t-SNE 图都带播放、暂停、步进控件（页面里有 20 个 canvas）</sub>
+
+<sub>[编码与原文摘录](case-evidence.md#tsne-misread)</sub>
+
+#### [Visualizing Neural Networks with the Grand Tour（Distill）](https://distill.pub/2020/grand-tour/)
+
+<sub>机器学习与嵌入分析 · 空间与几何 · 重点：群落与相似、时间与演化</sub>　看神经网络训练的过程中、以及一层一层往后，十维以上的激活向量怎么变：哪些类先分开、测试集和训练集差在哪里
+
+- 展示页（可直接操作）：[Visualizing Neural Networks with the Grand Tour](https://distill.pub/2020/grand-tour/)（正文中 'The Grand Tour in action' 为交互可视化（页面文字），标注为最终 10 维层在 MNIST 训练中的行为；顶部 'Dataset' 选择器可选 mnist、fashion-mnist、cifar10）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 39402 字、canvas 12 个、svg 14 个</sub><sub> 打开后所见：打开顶部就是“The Grand Tour in action”交互图：十维 softmax 层的点云随训练轮次（Epoch 8/99）和投影动画，右侧图例是 10 个数字，下方有播放键和轮次滑块</sub>
+
+<sub>[编码与原文摘录](case-evidence.md#grand-tour)</sub>
+
+#### [dtour](https://dtour.dev)
+
+<sub>高维数据探索 · 空间与几何 · 重点：群落与相似、跨视图的同一对象</sub>　把四维以上的数据沿一串二维投影“巡游”，既保持点的身份，又能引导、手动调整或自动漫游，用来判断嵌入里的结构是真的还是投影造成的
+
+- 展示页（可直接操作）：[dtour: interactive visual tours of high-dimensional data](https://dtour.dev)（作者博客与 arXiv 论文都写明可在 https://dtour.dev 体验（'Explore these yourself' / 'runs in any modern browser'）；dtour.dev 正文由脚本渲染，静态读取只拿到标题，具体界面未核对）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 586 字、canvas 1 个、svg 16 个</sub><sub> 打开后所见：打开是 dtour 首页：拖入 Parquet、Arrow 或 CSV 文件，或选 9 个示例数据集（如 Fashion MNIST 7 万点、arXiv 论文 300 万点）；没有点进去看巡游界面</sub>
+- 网页：[dtour: A Steerable Tour de Vis Through High-Dimensional Data](https://arxiv.org/html/2605.04306v4)（论文 HTML 版；摘要写明 dtour 含静态投影预览、沿测地线路径的可逆拖动、手动投影操作和 grand tour，Figure 1 给出三个使用场景的视图）
+- 网页：[Say 👋 to dtour: a visualization tool for smoothly navigating through high-dimensional data · Fritz Lekschas](https://lekschas.de/blog/high-dimensional-data-is-hard-to-understand)（工具作者的博客文章；列出 keyframe 概览、引导式循环 tour、手动轴操作和 grand tour 四种工作方式，并写明可到 https://dtour.dev 体验）
+
+<sub>[编码与原文摘录](case-evidence.md#dtour)</sub>
+
+#### [Embedding Atlas](https://apple.github.io/embedding-atlas/)
+
+<sub>机器学习与嵌入分析 · 空间与几何 · 重点：群落与相似、空间位置</sub>　在几百万个点的嵌入二维地图上看簇、搜近邻，并和元数据的分布联动过滤
+
+- 展示页（样例目录）：[Examples \| Embedding Atlas](https://apple.github.io/embedding-atlas/examples/)（示例页写明 'Opening an example will load the dataset directly into your browser'，列出 Wine Reviews、Visualization Publications、MedMCQA、SuperGPQA、ImageWoof、Movies Dashboard 等交互示例；Wine Reviews 条目链接到 examples/app/ 应用页）<sub> 渲染检查（无头 Chromium，2026-10-13）：页面文字 2470 字</sub><sub> 打开后所见：示例页：列着 Wine Reviews、Visualization Publications、MedMCQA 等示例的界面缩略图，点开会把数据集直接载入浏览器；没有点进去</sub>
+- 网页：[Overview \| Embedding Atlas](https://apple.github.io/embedding-atlas/overview.html)（官方文档概览页：写明可视化大规模嵌入的 2D 投影、浏览自动聚类与标签、查找最近邻、按元数据交叉筛选，并列出标准图表与多模态列的支持）
+- 网页：[Embedding Atlas: Low-Friction, Interactive Embedding Visualization - Apple Machine Learning Research](https://machinelearning.apple.com/research/embedding-atlas)（官方研究页（2025 年 11 月，IEEE Visualization）；Figure 1 为 196,630 条葡萄酒评论嵌入的界面截图，图注写明可在 https://apple.github.io/embedding-atlas 试用）
+
+<a href="https://mlr.cdn-apple.com/media/teaser_854e862626.png"><img src="https://mlr.cdn-apple.com/media/teaser_854e862626.png" width="230" alt="Embedding Atlas UI showing filtered embedding of 196,630 wine reviews with a selected outlier and re"></a> <a href="https://apple.github.io/embedding-atlas/assets/embedding-atlas-light.png"><img src="https://apple.github.io/embedding-atlas/assets/embedding-atlas-light.png" width="230" alt="a screenshot of embedding atlas"></a>
+
+<sub>图：Figure 1: The Embedding Atlas user interface visualizing the embedding of 196,630 wine reviews. A user has filtered the embedding to only show wines from the US, France, and Italy with "points" in a specific range, and selected one outlier from the embedding to read its review and inspect its metadata.（[来源页](https://machinelearning.apple.com/research/embedding-atlas)）；a screenshot of embedding atlas（[来源页](https://apple.github.io/embedding-atlas/)）</sub>
+
+<sub>[编码与原文摘录](case-evidence.md#embedding-atlas)</sub>
+
+#### [Nomic Atlas](https://docs.nomic.ai/atlas/datasets/data-maps/how-atlas-works/1-key_terms)
+
+<sub>机器学习与嵌入分析 · 空间与几何 · 重点：群落与相似、包含与层次</sub>　把大规模文本或嵌入数据放到一张地图上，找簇、离群点和误分类，并协作标注
+
+- 展示页：没有找到在线展示页<sub>（https://atlas.nomic.ai/ 返回 200、标题 'Nomic Atlas'，但正文由脚本渲染，静态读不到任何可操作内容，无法确认是否需要登录，所以未收为展示页…）</sub>
+- 网页：[How to Visualize Embeddings with t-SNE, UMAP, and Nomic Atlas \| Nomic Platform Documentation](https://docs.nomic.ai/atlas/embeddings-and-retrieval/guides/how-to-visualize-embeddings)（官方指南：并列介绍 t-SNE、UMAP 与 Nomic Atlas（页面称 'Cloud-based, Interactive Visualization'）三种嵌入可视化方法，各自列出优缺点）
+- 网页：[Atlas Data Maps \| Nomic Platform Documentation](https://docs.nomic.ai/atlas/datasets/data-maps)（官方文档：Atlas 数据地图功能页，目录列出 Data Map Controls、Analyst、Topic Modeling、Duplicate Detection 等子页）
+
+<sub>[编码与原文摘录](case-evidence.md#nomic-atlas)</sub>
+
+#### [Miegakure（四维解谜游戏）](https://miegakure.com)
+
+<sub>四维几何与游戏 · 空间与几何 · 重点：空间位置</sub>　让玩家用三维的大脑理解并操作一个真正的四维世界
+
+- 展示页：没有找到在线展示页<sub>（没有可直接在浏览器里玩的在线演示：官网与 Steam 页的链接中未见试玩入口；官网的 trailer 链接是 YouTube 视频（9yW--eQaA2I），视频不计展示页。）</sub>
+- 网页：[Miegakure [Hide and Reveal]: A 4D puzzle-platforming game.](https://miegakure.com)（官网的游戏介绍：一次只看到三个维度，按键切换看到的三维，画面里的变形来自看到的是 4D 物体的三维切片（页面文字）。）
+- 网页：[Miegakure: Hide & Reveal on Steam](https://store.steampowered.com/app/355750)（Steam 商店页，About This Game 写明如何显示 4D 世界（三维切片），页面上有预告片。）
+
+<a href="https://miegakure.com/data/MK120wThumb.png"><img src="https://miegakure.com/data/MK120wThumb.png" width="230" alt="Screenshot 120 Cell Viewed along the 4D"></a> <a href="https://miegakure.com/data/WindmillRotatedThumb.png"><img src="https://miegakure.com/data/WindmillRotatedThumb.png" width="230" alt="Screenshot Windmill Viewed along the 4D"></a> <a href="https://miegakure.com/data/MKPillarsThumb.png"><img src="https://miegakure.com/data/MKPillarsThumb.png" width="230" alt="Screenshot Spherinder Grove"></a>
+
+<sub>图：Screenshot 120 Cell Viewed along the 4D（[来源页](https://miegakure.com)）；Screenshot Windmill Viewed along the 4D（[来源页](https://miegakure.com)）；Screenshot Spherinder Grove（[来源页](https://miegakure.com)）</sub>
+
+<sub>[编码与原文摘录](case-evidence.md#miegakure)</sub>
 
 #### [Semantic Map of GitHub](https://stevenfazzio.com/semantic-github-map/)
 
@@ -1179,6 +1368,20 @@
 <sub>图：Copy number whole-genome profiles of five follicular lymphoma tumor samples generated from the Affymetrix Mapping 500K array. Samples are represented in each of the five histograms in tracks A–E. (后文省略)（[来源页](https://pmc.ncbi.nlm.nih.gov/articles/PMC2752132/)）；Copy number profiles for chromosomes 6 and 17 of five follicular lymphoma tumor samples generated from the Affymetrix Mapping 500K array. Probe values were averaged across 20 adjacent probes. (后文省略)（[来源页](https://pmc.ncbi.nlm.nih.gov/articles/PMC2752132/)）；Copy number profiles for chromosomes 6 and 17 of five follicular lymphoma tumor samples generated from the Affymetrix Mapping 500K array. Regions of interest A and B on chromosomes 6 and J and K on chromosomes 17 (后文省略)（[来源页](https://pmc.ncbi.nlm.nih.gov/articles/PMC2752132/)）</sub>
 
 <sub>[编码与原文摘录](case-evidence.md#circos)</sub>
+
+#### [单细胞数据的二维嵌入：失真之争（Chari 与 Pachter 2023；Lause 等 2024）](https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/)
+
+<sub>单细胞基因组学 · 空间与几何 · 重点：群落与相似、空间位置</sub>　几千维的基因表达数据压到二维之后，邻域和簇有多可信，能不能拿来下定量结论
+
+- 展示页：没有找到在线展示页<sub>（Chari 与 Pachter 2023 的 PMC 版（https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/）返回 reCAPTCHA 验证页，读不到…）</sub>
+- 网页：[The art of seeing the elephant in the room: 2D embeddings of single-cell data do make sense \| PLOS Computational Biology](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012403)（Lause 等 2024 的评论正文；页面写明 Fig 1 比较了 elephant 嵌入、2D PCA、t-SNE 与 UMAP 四种嵌入）
+- 网页：[The specious art of single-cell genomics \| PLOS Computational Biology](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011288)（被评论的原文（Chari 与 Pachter 2023，PLOS 版）；页面含 Fig 1–8，Fig 1 图注为 'Necessary properties for embedding applications'）
+
+<a href="https://journals.plos.org/ploscompbiol/article/figure/image?size=inline&id=10.1371/journal.pcbi.1012403.g001"><img src="https://journals.plos.org/ploscompbiol/article/figure/image?size=inline&id=10.1371/journal.pcbi.1012403.g001" width="230" alt="Fig 1"></a>
+
+<sub>图：Fig 1. Evaluated embeddings.（[来源页](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012403)）</sub>
+
+<sub>[编码与原文摘录](case-evidence.md#single-cell-embeddings)</sub>
 
 <!-- /gen -->
 

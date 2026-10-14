@@ -19,6 +19,7 @@ from pathlib import Path
 import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import cases as cases_mod  # noqa: E402
 from cases import CASE_RENDERERS, load_cases, validate_cases  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -409,6 +410,9 @@ def generate(d: dict) -> dict[Path, str]:
         if p == CAT / "INDEX.md":
             continue
         text = p.read_text(encoding="utf-8")
+        data_dir = ROOT / "04-structure-and-cognition" / "case-study" / "data"
+        rel = Path(__import__("os").path.relpath(data_dir, p.parent)).as_posix()
+        cases_mod.LINK_BASE = "" if rel == "." else rel + "/"
 
         def sub(m: re.Match) -> str:
             kind, arg = m.group(2), m.group(3)

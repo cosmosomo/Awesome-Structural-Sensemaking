@@ -10,8 +10,8 @@
 | 流程与控制 | 流程图、BPMN、泳道图、状态机图 | 一个过程如何分支、执行和转移？ | 并行和时间信息表达弱 |
 | 时序与调用 | UML 时序图、Trace 瀑布图、甘特图、火焰图 | 谁在什么时间调用谁？耗时在哪里？ | 参与者多时时序图过宽；Trace 图看不出静态结构 |
 | 流量与转化 | 桑基图、Alluvial 图、漏斗图 | 数量和资源如何流动、分配、转化？ | 节点和流太多时拥挤 |
-| 多维属性 | 散点矩阵、平行坐标、雷达图、热力图 | 对象在哪些维度上存在差异？ | 降维后轴没有直接含义 |
-| 空间与地理 | 地图、空间网络、3D 场景 | 对象在真实或虚拟空间中的分布如何？ | |
+| 多维属性 | 散点矩阵、平行坐标、雷达图、热力图、降维投影散点图、巡游、径向可视化、集合交集矩阵、拓扑摘要图 | 对象在哪些维度上存在差异？ | 降维后轴没有直接含义，距离和大小不能读；平行坐标的轴顺序影响能看到什么；详见[高维可视化](high-dimensional.md) |
+| 空间与地理 | 地图、空间网络、3D 场景、高维几何的截面、沉浸式坐标轴 | 对象在真实或虚拟空间中的分布如何？ | 三维不一定比二维好（见[高维可视化](high-dimensional.md)） |
 | 语义与知识 | 概念图、知识图谱、论证地图 | 概念之间有什么关系？判断有什么依据？ | 缺少统一语义时随意性大 |
 | 动态与演化 | 动态网络、事件时间线、状态回放 | 系统如何随时间变化？ | |
 | 多层与复合结构 | 嵌套复合图、多层网络、多视图架构图 | 如何同时理解整体、局部及跨层联系？ | 视图之间的一致性需要靠模型保证 |
@@ -34,6 +34,7 @@
 | 层级与包含 | 矩形树图 | [d3-hierarchy 集合，含 treemap（D3）](https://observablehq.com/collection/@d3/d3-hierarchy) |
 | 层级与包含 | 旭日图 | [Zoomable sunburst（D3）](https://observablehq.com/@mbostock/d3-zoomable-sunburst) |
 | 层级与包含 | 冰柱图 | [Icicle（D3）](https://observablehq.com/@d3/icicle/2) |
+| 层级与包含 | 双曲树 | 待收集 |
 | 一般关系网络 | 节点连线图 | [Sigma.js 示例](https://www.sigmajs.org/examples/) ✓ |
 | 一般关系网络 | 力导向图 | [Force-directed graph（D3）](https://observablehq.com/@d3/force-directed-graph) |
 | 一般关系网络 | 弦图 | [d3-chord 集合（D3）](https://observablehq.com/collection/@d3/d3-chord) |
@@ -57,9 +58,16 @@
 | 多维属性 | 平行坐标 | [Parallel coordinates（D3）](https://observablehq.com/notebook-kit/ex/d3/parallel-coordinates)、[Parallel coordinates（Plotly）](https://plotly.com/javascript/parallel-coordinates-plot/) ✓ |
 | 多维属性 | 雷达图 | [Radar charts（Plotly）](https://plotly.com/javascript/radar-chart/) ✓ |
 | 多维属性 | 热力图 | [D3.js Heatmap（社区笔记）](https://observablehq.com/@bbischof/d3-js-heatmap) |
+| 多维属性 | 降维投影散点图 | [Embedding Projector](https://projector.tensorflow.org/)、[How to Use t-SNE Effectively（交互式文章）](https://distill.pub/2016/misread-tsne/) ✓ |
+| 多维属性 | 巡游（Grand Tour） | [Visualizing Neural Networks with the Grand Tour（交互式文章）](https://distill.pub/2020/grand-tour/) ✓、[dtour](https://dtour.dev) ✓ |
+| 多维属性 | 径向可视化（Radviz） | 待收集 |
+| 多维属性 | 集合交集矩阵（UpSet） | [UpSet](https://upset.app/) ✓ |
+| 多维属性 | 拓扑摘要图（Mapper） | [KeplerMapper 示例 notebook](https://kepler-mapper.scikit-tda.org/en/latest/notebooks/Cancer-demo.html) ✓ |
 | 空间与地理 | 地图 | [deck.gl 图层示例](https://deck.gl/gallery/) ✓ |
 | 空间与地理 | 空间网络 | [3D force-directed graph](https://vasturiano.github.io/3d-force-graph/) ✓ |
 | 空间与地理 | 3D 场景 | [three.js 示例](https://threejs.org/examples/) ✓、[SkyWalking 3D 基础设施地图（交互演示）](https://skywalking.apache.org/3d-map-app/) ✓ |
+| 空间与地理 | 高维几何的截面 | [Miegakure（四维解谜游戏）](https://miegakure.com) ✓ |
+| 空间与地理 | 沉浸式坐标轴（VR） | 待收集 |
 | 语义与知识 | 概念图 | 待收集 |
 | 语义与知识 | 知识图谱 | [Understand Anything 演示](https://understand-anything.com/) ✓ |
 | 语义与知识 | 论证地图 | [Argdown 第一个例子](https://argdown.org/guide/a-first-example.html) ✓ |

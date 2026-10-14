@@ -6,6 +6,7 @@ levels:
       chart-and-visualization-engines: 通用图形与数据可视化
       graph-and-node-engines: 关系图与节点交互引擎
       layouts-and-graph-algorithms: 布局与复杂度管理算法
+      dimensionality-reduction: 降维与投影算法
       diagram-languages: 图形描述语言与模型驱动技术
       canvas-2d-and-3d: 二维无限画布与三维空间技术
   L2:
@@ -20,7 +21,8 @@ levels:
       infrastructure-topology: 系统服务拓扑与基础设施
       knowledge-and-cognition: 知识、文档与认知地图
       technology-landscapes: 技术生态与商业产品地图
-      spatial-and-high-dimensional: 三维、高维与大规模关系探索
+      high-dimensional-exploration: 高维数据探索（投影、平行坐标、巡游、拓扑摘要）
+      3d-and-large-graphs: 三维空间与大规模关系探索
       systems-modeling: 系统动力学与因果建模
   L3:
     title: 成熟应用与综合交互系统
@@ -32,6 +34,7 @@ levels:
       data-and-infrastructure: 数据平台与基础设施管理
       knowledge-workspaces: 知识组织、概念地图与认知工具
       market-and-ecosystem-platforms: 生态地图与产业分析产品
+      data-exploration-platforms: 数据与嵌入探索平台
 
 # 第四板块的工具与项目分类（条目里写 section: cognition）
 cognition:

@@ -985,7 +985,7 @@
    {
     "quote": "You can use the powerful filters to perform sentiment analysis",
     "url": "https://infranodus.com/",
-    "check": "missing",
+    "check": "ok",
     "what": "filters"
    },
    {
@@ -15933,5 +15933,3405 @@
    "页面文字里没有写许可证；MIT 与 CC BY-NC-ND 4.0 写在用户给的 GitHub 仓库 README 里（读了克隆，不是页面核对）"
   ],
   "id": "state-of-agentic-ai"
+ },
+ "tsne-misread": {
+  "pages_read": [
+   "https://distill.pub/2016/misread-tsne/"
+  ],
+  "retrieved": "2026-10-14",
+  "input_material": [
+   {
+    "quote": "to create compelling two-dimensonal “maps” from data with hundreds or even thousands of dimensions.",
+    "url": "https://distill.pub/2016/misread-tsne/",
+    "check": "ok"
+   },
+   {
+    "quote": "500 points drawn from a unit Gaussian distribution in 100 dimensions",
+    "url": "https://distill.pub/2016/misread-tsne/",
+    "check": "ok"
+   }
+  ],
+  "entities": [
+   {
+    "what": "点",
+    "quote": "The goal is to take a set of points in a high-dimensional space and find a faithful representation of those points in a lower-dimensional space, typically the 2D plane.",
+    "url": "https://distill.pub/2016/misread-tsne/",
+    "check": "ok"
+   }
+  ],
+  "relations": [
+   {
+    "what": "近邻数",
+    "quote": "The parameter is, in a sense, a guess about the number of close neighbors each point has.",
+    "url": "https://distill.pub/2016/misread-tsne/",
+    "check": "ok"
+   }
+  ],
+  "attributes": [
+   {
+    "what": "perplexity",
+    "quote": "A second feature of t-SNE is a tuneable parameter, “perplexity,” which says (loosely) how to balance attention between local and global aspects of your data.",
+    "url": "https://distill.pub/2016/misread-tsne/",
+    "check": "ok"
+   },
+   {
+    "what": "学习率与迭代",
+    "quote": "with a learning rate (often called “epsilon”) of 10",
+    "url": "https://distill.pub/2016/misread-tsne/",
+    "check": "ok"
+   }
+  ],
+  "views": [
+   {
+    "what": "多个 perplexity 的 t-SNE 图",
+    "quote": "The diagrams at right show t-SNE plots for five different perplexity values.",
+    "url": "https://distill.pub/2016/misread-tsne/",
+    "check": "ok"
+   }
+  ],
+  "encodings": [
+   {
+    "what": "颜色",
+    "quote": "(For clarity, the two clusters are color coded.)",
+    "url": "https://distill.pub/2016/misread-tsne/",
+    "check": "ok"
+   },
+   {
+    "what": "距离",
+    "quote": "distances between well-separated clusters in a t-SNE plot may mean nothing",
+    "url": "https://distill.pub/2016/misread-tsne/",
+    "check": "ok"
+   }
+  ],
+  "interactions": [],
+  "questions": [
+   {
+    "quote": "The purpose of this note is to prevent some common misreadings.",
+    "url": "https://distill.pub/2016/misread-tsne/",
+    "check": "ok"
+   },
+   {
+    "quote": "By exploring how it behaves in simple cases, we can learn to use it more effectively.",
+    "url": "https://distill.pub/2016/misread-tsne/",
+    "check": "ok"
+   }
+  ],
+  "abstraction": [
+   {
+    "what": "密度",
+    "quote": "The t-SNE algorithm adapts its notion of “distance” to regional density variations in the data set.",
+    "url": "https://distill.pub/2016/misread-tsne/",
+    "check": "ok"
+   },
+   {
+    "what": "多 perplexity 视图",
+    "quote": "Getting the most from t-SNE may mean analyzing multiple plots with different perplexities.",
+    "url": "https://distill.pub/2016/misread-tsne/",
+    "check": "ok"
+   }
+  ],
+  "why": [
+   {
+    "quote": "To make things as simple as possible, we’ll consider clusters in a 2D plane, as shown in the lefthand diagram.",
+    "url": "https://distill.pub/2016/misread-tsne/",
+    "check": "ok"
+   },
+   {
+    "quote": "We’ll walk through a series of simple examples to illustrate what t-SNE diagrams can and cannot show.",
+    "url": "https://distill.pub/2016/misread-tsne/",
+    "check": "ok"
+   },
+   {
+    "quote": "In our experience, the most important thing is to iterate until reaching a stable configuration.",
+    "url": "https://distill.pub/2016/misread-tsne/",
+    "check": "ok"
+   },
+   {
+    "quote": "Recognizing noise when you see it is a critical skill, but it takes time to build up the right intuitions.",
+    "url": "https://distill.pub/2016/misread-tsne/",
+    "check": "ok"
+   }
+  ],
+  "alternative": [
+   {
+    "quote": "Seen in this light, the t-SNE plot is more accurate than any linear projection could be.",
+    "url": "https://distill.pub/2016/misread-tsne/",
+    "check": "ok"
+   },
+   {
+    "quote": "A tricky thing about t-SNE is that it throws a lot of existing intuition out the window.",
+    "url": "https://distill.pub/2016/misread-tsne/",
+    "check": "ok"
+   }
+  ],
+  "limit": [
+   {
+    "quote": "The bottom line, however, is that you cannot see relative sizes of clusters in a t-SNE plot.",
+    "url": "https://distill.pub/2016/misread-tsne/",
+    "check": "ok"
+   },
+   {
+    "quote": "Certain data sets, however, yield markedly different diagrams on different runs",
+    "url": "https://distill.pub/2016/misread-tsne/",
+    "check": "ok"
+   },
+   {
+    "quote": "Unfortunately, that very flexibility makes it tricky to interpret.",
+    "url": "https://distill.pub/2016/misread-tsne/",
+    "check": "ok"
+   },
+   {
+    "quote": "Even in the best cases, though, there’s a subtle distortion: the lines are slightly curved outwards in the t-SNE diagram.",
+    "url": "https://distill.pub/2016/misread-tsne/",
+    "check": "ok"
+   }
+  ],
+  "not_stated": [
+   "interactions（页面只有播放、暂停、刷新、Step 的界面文字，没有写交互操作的说明）"
+  ],
+  "id": "tsne-misread"
+ },
+ "grand-tour": {
+  "pages_read": [
+   "https://distill.pub/2020/grand-tour/"
+  ],
+  "retrieved": "2026-10-14",
+  "input_material": [
+   {
+    "quote": "we trained deep neural network models (DNNs) with 3 common image classification datasets",
+    "url": "https://distill.pub/2020/grand-tour/",
+    "check": "ok"
+   },
+   {
+    "quote": "we trained each of the neural networks for 99 epochs and recorded the entire history of neuron activations on a subset of training and testing examples",
+    "url": "https://distill.pub/2020/grand-tour/",
+    "check": "ok"
+   }
+  ],
+  "entities": [
+   {
+    "what": "softmax 向量",
+    "quote": "The softmax, for example, can be seen as a 10-vector whose values are positive real numbers that sum up to 1.",
+    "url": "https://distill.pub/2020/grand-tour/",
+    "check": "ok"
+   },
+   {
+    "what": "softmax 层的轴",
+    "quote": "The softmax layer is relatively easy to understand because its axes have strong semantics.",
+    "url": "https://distill.pub/2020/grand-tour/",
+    "check": "ok"
+   }
+  ],
+  "relations": [
+   {
+    "what": "线性映射的比例",
+    "quote": "classification outputs that are halfway confident between two classes are projected to vectors that are halfway between the class handles.",
+    "url": "https://distill.pub/2020/grand-tour/",
+    "check": "ok"
+   }
+  ],
+  "attributes": [
+   {
+    "what": "维数",
+    "quote": "the points in the softmax layer for our example datasets are 10 dimensional (and in larger-scale classification problems this number can be much larger).",
+    "url": "https://distill.pub/2020/grand-tour/",
+    "check": "ok"
+   },
+   {
+    "what": "损失与 epoch",
+    "quote": "we monitor the whole history of training and testing losses over rounds of training (or “epochs”)",
+    "url": "https://distill.pub/2020/grand-tour/",
+    "check": "ok"
+   },
+   {
+    "what": "数据点与 epoch 数",
+    "quote": "we reduce the number of data points to 500 and epochs to 50",
+    "url": "https://distill.pub/2020/grand-tour/",
+    "check": "ok"
+   }
+  ],
+  "views": [
+   {
+    "what": "投影动画",
+    "quote": "The Grand Tour is a classic visualization technique for high-dimensional point clouds that projects a high-dimensional dataset into two dimensions.",
+    "url": "https://distill.pub/2020/grand-tour/",
+    "check": "ok"
+   },
+   {
+    "what": "随机旋转后投影",
+    "quote": "Starting with a random velocity, it smoothly rotates data points around the origin in high dimensional space, and then projects it down to 2D for display.",
+    "url": "https://distill.pub/2020/grand-tour/",
+    "check": "ok"
+   },
+   {
+    "what": "单一动画视图",
+    "quote": "The Grand Tour, on the other hand, uses a single animated view.",
+    "url": "https://distill.pub/2020/grand-tour/",
+    "check": "ok"
+   },
+   {
+    "what": "层间对齐",
+    "quote": "So the Grand Tour provides a natural, elegant and computationally efficient way to align visualizations of activations separated by fully-connected (linear) layers.",
+    "url": "https://distill.pub/2020/grand-tour/",
+    "check": "ok"
+   }
+  ],
+  "encodings": [
+   {
+    "what": "点颜色=标签",
+    "quote": "Show data as images to see the actual images generated in each step, or dots colored by labels.",
+    "url": "https://distill.pub/2020/grand-tour/",
+    "check": "ok"
+   },
+   {
+    "what": "左右=测试/训练",
+    "quote": "the color of points are more mixed in testing (right) than training (left) set",
+    "url": "https://distill.pub/2020/grand-tour/",
+    "check": "ok"
+   },
+   {
+    "what": "角=置信类别",
+    "quote": "where the digits are close to one of the ten corners of the softmax space",
+    "url": "https://distill.pub/2020/grand-tour/",
+    "check": "ok"
+   },
+   {
+    "what": "角=真实类别",
+    "quote": "Data points went directly toward the corner of its true class and all classes are stabilized after about 50 epochs.",
+    "url": "https://distill.pub/2020/grand-tour/",
+    "check": "ok"
+   }
+  ],
+  "interactions": [
+   {
+    "what": "按钮与框选高亮",
+    "quote": "Use the buttons on the right to highlight digits 1 and 7 in the plot, or drag rectangles around the charts to select particular point subsets to highlight in the other charts.",
+    "url": "https://distill.pub/2020/grand-tour/",
+    "check": "ok"
+   },
+   {
+    "what": "拖动手柄",
+    "quote": "If we provide the user with the ability to change these vectors by dragging around user-interface handles, then users can intuitively set up new linear projections.",
+    "url": "https://distill.pub/2020/grand-tour/",
+    "check": "ok"
+   }
+  ],
+  "questions": [
+   {
+    "quote": "what is the difference between the present training epoch and the next one? How does the classification of a network converge (or diverge) as the image is fed through the network?",
+    "url": "https://distill.pub/2020/grand-tour/",
+    "check": "ok"
+   },
+   {
+    "quote": "The Grand Tour also lets us compare visualizations of the training and testing data, giving us a qualitative assessment of over-fitting.",
+    "url": "https://distill.pub/2020/grand-tour/",
+    "check": "ok"
+   }
+  ],
+  "abstraction": [
+   {
+    "what": "跨层",
+    "quote": "Given the presented techniques of the Grand Tour and direct manipulations on the axes, we can in theory visualize and manipulate any intermediate layer of a neural network by itself.",
+    "url": "https://distill.pub/2020/grand-tour/",
+    "check": "ok"
+   },
+   {
+    "what": "向量视角",
+    "quote": "This vector view of data in neural network not only allows us represent complex data in a mathematically compact form",
+    "url": "https://distill.pub/2020/grand-tour/",
+    "check": "ok"
+   }
+  ],
+  "why": [
+   {
+    "quote": "Linear methods are attractive because they are particularly easy to reason about.",
+    "url": "https://distill.pub/2020/grand-tour/",
+    "check": "ok"
+   },
+   {
+    "quote": "When given the chance, then, we should prefer methods for which changes in the data produce predictable, visually salient changes in the result, and linear dimensionality reductions often have this property.",
+    "url": "https://distill.pub/2020/grand-tour/",
+    "check": "ok"
+   },
+   {
+    "quote": "Whenever geometry is concerned, like the case of understanding multi-way confusions in the softmax layer, linear methods are more interpretable because they preserve certain geometrical structures of data in the projection.",
+    "url": "https://distill.pub/2020/grand-tour/",
+    "check": "ok"
+   },
+   {
+    "quote": "it should be possible to know how the visualization would change, if the data had been different in a particular way",
+    "url": "https://distill.pub/2020/grand-tour/",
+    "check": "ok"
+   }
+  ],
+  "alternative": [
+   {
+    "quote": "Here, a significant change happened in only a subset of data (e.g. all points of digit 1 from epoch 13 to 14), but all points in the visualization move dramatically.",
+    "url": "https://distill.pub/2020/grand-tour/",
+    "check": "ok"
+   },
+   {
+    "quote": "For both UMAP and t-SNE, the position of each single point depends non-trivially on the whole data distribution in such embedding algorithms.",
+    "url": "https://distill.pub/2020/grand-tour/",
+    "check": "ok"
+   },
+   {
+    "quote": "As a result, even though PCA projections are interpretable and consistent through training epochs, the first two principal components of softmax activations are not substantially better than the third.",
+    "url": "https://distill.pub/2020/grand-tour/",
+    "check": "ok"
+   },
+   {
+    "quote": "Instead of PCA, we propose to visualize this data by smoothly animating random projections, using a technique called the Grand Tour .",
+    "url": "https://distill.pub/2020/grand-tour/",
+    "check": "ok"
+   }
+  ],
+  "limit": [
+   {
+    "quote": "While our architecture is simpler and smaller than current DNNs, it’s still indicative of modern networks",
+    "url": "https://distill.pub/2020/grand-tour/",
+    "check": "ok"
+   },
+   {
+    "quote": "With our technique, one can visualize neuron activations on each such branch, but additional research is required to incorporate multiple branches directly.",
+    "url": "https://distill.pub/2020/grand-tour/",
+    "check": "ok"
+   },
+   {
+    "quote": "For the sake of simplicity, in this article we brute-forced the computation of the alignment of such convolutional layers by writing out their explicit matrix representation.",
+    "url": "https://distill.pub/2020/grand-tour/",
+    "check": "ok"
+   },
+   {
+    "quote": "When topology is the main focus, such as when we want to cluster the data",
+    "url": "https://distill.pub/2020/grand-tour/",
+    "check": "ok"
+   }
+  ],
+  "not_stated": [],
+  "id": "grand-tour"
+ },
+ "dtour": {
+  "pages_read": [
+   "https://arxiv.org/abs/2605.04306",
+   "https://arxiv.org/html/2605.04306v4",
+   "https://lekschas.de/blog/high-dimensional-data-is-hard-to-understand"
+  ],
+  "retrieved": "2026-10-14",
+  "input_material": [
+   {
+    "quote": "We demonstrate dtour on text, image, and single-cell data for two usage scenarios",
+    "url": "https://arxiv.org/abs/2605.04306",
+    "check": "ok"
+   },
+   {
+    "quote": "Given data with four or more dimensions",
+    "url": "https://arxiv.org/html/2605.04306v4",
+    "check": "ok"
+   },
+   {
+    "quote": "on a 346K-cell single-cell surface-protein dataset from Florian Mair",
+    "url": "https://lekschas.de/blog/high-dimensional-data-is-hard-to-understand",
+    "check": "ok"
+   }
+  ],
+  "entities": [
+   {
+    "what": "关键帧",
+    "quote": "a guided cyclical tour along geodesic paths connecting keyframes",
+    "url": "https://lekschas.de/blog/high-dimensional-data-is-hard-to-understand",
+    "check": "ok"
+   },
+   {
+    "what": "点",
+    "quote": "dtour scales to millions of points via GPU-accelerated rendering",
+    "url": "https://arxiv.org/abs/2605.04306",
+    "check": "ok"
+   }
+  ],
+  "relations": [
+   {
+    "what": "一对一点对应",
+    "quote": "a sequence of 2D projections with one-to-one point correspondence",
+    "url": "https://arxiv.org/html/2605.04306v4",
+    "check": "ok"
+   },
+   {
+    "what": "循环关键帧序列",
+    "quote": "A tour is defined by a cyclic sequence of keyframe projections",
+    "url": "https://arxiv.org/html/2605.04306v4",
+    "check": "ok"
+   }
+  ],
+  "attributes": [
+   {
+    "what": "特征载荷",
+    "quote": "Tours can specify feature loadings, shown as text beneath each preview indicating the top contributing dimensions.",
+    "url": "https://arxiv.org/html/2605.04306v4",
+    "check": "ok"
+   },
+   {
+    "what": "标签与非嵌入维度",
+    "quote": "Many datasets include labels or non-embedded dimensions that aid interpretation.",
+    "url": "https://arxiv.org/html/2605.04306v4",
+    "check": "ok"
+   }
+  ],
+  "views": [
+   {
+    "what": "中心散点与预览",
+    "quote": "A central 2D scatter ringed by projection previews gives an overview.",
+    "url": "https://arxiv.org/html/2605.04306v4",
+    "check": "ok"
+   },
+   {
+    "what": "漫游",
+    "quote": "a wandering grand tour",
+    "url": "https://arxiv.org/abs/2605.04306",
+    "check": "ok"
+   },
+   {
+    "what": "圆形滑块排列",
+    "quote": "Gallery previews are arranged around the circular tour slider",
+    "url": "https://arxiv.org/html/2605.04306v4",
+    "check": "ok"
+   },
+   {
+    "what": "手动拖动轴",
+    "quote": "dimension axes appear as draggable handles",
+    "url": "https://arxiv.org/html/2605.04306v4",
+    "check": "ok"
+   }
+  ],
+  "encodings": [
+   {
+    "what": "滑块环宽",
+    "quote": "the width of the slider’s ring segments encode geodesic distances between consecutive keyframes: thin segments indicate stretched regions of projection space",
+    "url": "https://arxiv.org/html/2605.04306v4",
+    "check": "ok"
+   },
+   {
+    "what": "手柄方向与长度",
+    "quote": "Each handle’s projected direction and length encode that dimension’s current contribution to the projection basis",
+    "url": "https://arxiv.org/html/2605.04306v4",
+    "check": "ok"
+   },
+   {
+    "what": "点颜色",
+    "quote": "These can be mapped to point color",
+    "url": "https://arxiv.org/html/2605.04306v4",
+    "check": "ok"
+   },
+   {
+    "what": "刻度",
+    "quote": "Tick marks at keyframe positions serve as navigational landmarks",
+    "url": "https://arxiv.org/html/2605.04306v4",
+    "check": "ok"
+   }
+  ],
+  "interactions": [
+   {
+    "what": "滑块与播放",
+    "quote": "Users can scrub the slider, scroll the mouse wheel, or press play for animated playback to advance the tour.",
+    "url": "https://arxiv.org/html/2605.04306v4",
+    "check": "ok"
+   },
+   {
+    "what": "拖动手柄",
+    "quote": "specifies a new target direction for its variable",
+    "url": "https://arxiv.org/html/2605.04306v4",
+    "check": "ok"
+   },
+   {
+    "what": "套索与标签选择",
+    "quote": "Lasso and label-based selection let users isolate a subset of points and track them across projections",
+    "url": "https://arxiv.org/html/2605.04306v4",
+    "check": "ok"
+   },
+   {
+    "what": "Shift 拖动",
+    "quote": "holding Shift while dragging rotates the view about a temporary third axis",
+    "url": "https://arxiv.org/html/2605.04306v4",
+    "check": "ok"
+   }
+  ],
+  "questions": [
+   {
+    "quote": "To help you develop better intuition for high-dimensional datasets",
+    "url": "https://lekschas.de/blog/high-dimensional-data-is-hard-to-understand",
+    "check": "ok"
+   },
+   {
+    "quote": "validating whether structure in an embedding is genuine or a projection artifact",
+    "url": "https://arxiv.org/html/2605.04306v4",
+    "check": "ok"
+   },
+   {
+    "quote": "validating or comparing embeddings through sequential tours over a series of 2D projections",
+    "url": "https://lekschas.de/blog/high-dimensional-data-is-hard-to-understand",
+    "check": "ok"
+   }
+  ],
+  "abstraction": [
+   {
+    "what": "投影序列",
+    "quote": "Tours address this limitation through animation of 2D projection sequences",
+    "url": "https://arxiv.org/abs/2605.04306",
+    "check": "ok"
+   },
+   {
+    "what": "整体理解",
+    "quote": "Traversing multiple projections can help build a more holistic understanding of high-dim manifolds",
+    "url": "https://lekschas.de/blog/high-dimensional-data-is-hard-to-understand",
+    "check": "ok"
+   }
+  ],
+  "why": [
+   {
+    "quote": "dtour makes such exploration effortless through one interface",
+    "url": "https://lekschas.de/blog/high-dimensional-data-is-hard-to-understand",
+    "check": "ok"
+   },
+   {
+    "quote": "smooth, user-steered traversal within and between projection spaces",
+    "url": "https://arxiv.org/html/2605.04306v4",
+    "check": "ok"
+   },
+   {
+    "quote": "All transitions—within a tour mode and between—are smoothly interpolated to preserve point identity and spatial context.",
+    "url": "https://arxiv.org/html/2605.04306v4",
+    "check": "ok"
+   },
+   {
+    "quote": "letting viewers track points across views rather than re-identifying them after each transition",
+    "url": "https://arxiv.org/html/2605.04306v4",
+    "check": "ok"
+   }
+  ],
+  "alternative": [
+   {
+    "quote": "Some dimensionality reduction methods find interesting angles but hide everything orthogonal to them.",
+    "url": "https://lekschas.de/blog/high-dimensional-data-is-hard-to-understand",
+    "check": "ok"
+   },
+   {
+    "quote": "Other methods compress the whole manifold into 2D, which can muddle genuine structure with layout artifacts.",
+    "url": "https://lekschas.de/blog/high-dimensional-data-is-hard-to-understand",
+    "check": "ok"
+   },
+   {
+    "quote": "grids of static projections are directly comparable at a glance but require constant shifts of focus to integrate information",
+    "url": "https://arxiv.org/html/2605.04306v4",
+    "check": "ok"
+   },
+   {
+    "quote": "Yet these tools limit accessibility as the analyst must choose the most suitable mode upfront.",
+    "url": "https://arxiv.org/html/2605.04306v4",
+    "check": "ok"
+   }
+  ],
+  "limit": [
+   {
+    "quote": "any single projection inevitably loses information or introduces distortions",
+    "url": "https://arxiv.org/abs/2605.04306",
+    "check": "ok"
+   },
+   {
+    "quote": "only the keyframes are interpretable: the smooth interpolation is an object-constancy aid for tracking points across embeddings",
+    "url": "https://arxiv.org/html/2605.04306v4",
+    "check": "ok"
+   },
+   {
+    "quote": "dtour is optimized for performance: it runs smoothly for up to ~10M points and remains usable up to ~20M",
+    "url": "https://lekschas.de/blog/high-dimensional-data-is-hard-to-understand",
+    "check": "ok"
+   },
+   {
+    "quote": "The supplementary video shows the fluid transitions that static figures cannot convey.",
+    "url": "https://arxiv.org/html/2605.04306v4",
+    "check": "ok"
+   }
+  ],
+  "not_stated": [
+   "文中没有单独的局限或未评估部分一节；全文检索 limitation、future work、user study 都没有专门段落"
+  ],
+  "id": "dtour"
+ },
+ "embedding-atlas": {
+  "pages_read": [
+   "https://apple.github.io/embedding-atlas/",
+   "https://apple.github.io/embedding-atlas/overview.html",
+   "https://apple.github.io/embedding-atlas/algorithms.html",
+   "https://arxiv.org/abs/2505.06386",
+   "https://arxiv.org/html/2505.06386v2",
+   "https://machinelearning.apple.com/research/embedding-atlas"
+  ],
+  "retrieved": "2026-10-14",
+  "input_material": [
+   {
+    "quote": "Supported column types include text, image, audio, numeric, categorical, and time.",
+    "url": "https://apple.github.io/embedding-atlas/overview.html",
+    "check": "ok"
+   },
+   {
+    "quote": "In this online version, Embedding Atlas will compute the embedding and projection in your browser. Your data does not leave your machine.",
+    "url": "https://apple.github.io/embedding-atlas/overview.html",
+    "check": "ok"
+   }
+  ],
+  "entities": [
+   {
+    "what": "数据点（百万级）",
+    "quote": "Interactions enable users to explore millions of points smoothly, without needing to pre-sample or pre-render their data, reducing the effort required to explore data at scale.",
+    "url": "https://arxiv.org/html/2505.06386v2",
+    "check": "ok"
+   },
+   {
+    "what": "记录及其元数据",
+    "quote": "each wine also contains metadata such as its origin country and province",
+    "url": "https://arxiv.org/html/2505.06386v2",
+    "check": "ok"
+   }
+  ],
+  "relations": [
+   {
+    "what": "近邻与全局结构",
+    "quote": "Projections may preserve local neighborhoods and global structure to ultimately make sense of the original data.",
+    "url": "https://arxiv.org/html/2505.06386v2",
+    "check": "ok"
+   },
+   {
+    "what": "相似数据（近邻）",
+    "quote": "Find similar data to any point.",
+    "url": "https://arxiv.org/html/2505.06386v2",
+    "check": "ok"
+   }
+  ],
+  "attributes": [
+   {
+    "what": "元数据列",
+    "quote": "the distribution of each metadata column is automatically visualized in the sidebar",
+    "url": "https://arxiv.org/html/2505.06386v2",
+    "check": "ok"
+   },
+   {
+    "what": "列数据类型",
+    "quote": "Built-in viewers for text, image, audio, numeric, categorical, and time columns.",
+    "url": "https://apple.github.io/embedding-atlas/",
+    "check": "ok"
+   }
+  ],
+  "views": [
+   {
+    "what": "密度等高线嵌入图",
+    "quote": "Render up to a few million points with density contours, powered by WebGPU.",
+    "url": "https://apple.github.io/embedding-atlas/",
+    "check": "ok"
+   },
+   {
+    "what": "标准图表",
+    "quote": "Standard charts (bar, line, bubble, count plot, eCDF) plus a composable chart spec for building custom charts.",
+    "url": "https://apple.github.io/embedding-atlas/overview.html",
+    "check": "ok"
+   },
+   {
+    "what": "实例视图与全文搜索",
+    "quote": "If your dataset has no embedding column, the embedding view is hidden, but linked charts, full-text search, and the instances view still work.",
+    "url": "https://apple.github.io/embedding-atlas/overview.html",
+    "check": "ok"
+   },
+   {
+    "what": "虚拟化数据表",
+    "quote": "A virtualized data table can also be shown for users who want to browse the data quickly.",
+    "url": "https://arxiv.org/html/2505.06386v2",
+    "check": "ok"
+   }
+  ],
+  "encodings": [
+   {
+    "what": "密度（不透明度与等高线）",
+    "quote": "The density mode (right) visualizes the density of the projected points through opacity and contours.",
+    "url": "https://arxiv.org/html/2505.06386v2",
+    "check": "ok"
+   },
+   {
+    "what": "多类别透明度",
+    "quote": "When showing multiple categories, the visualization uses order-independent transparency",
+    "url": "https://arxiv.org/html/2505.06386v2",
+    "check": "ok"
+   },
+   {
+    "what": "位置（UMAP 投影）",
+    "quote": "To visualize these high-dimensional embeddings, we use UMAP",
+    "url": "https://arxiv.org/html/2505.06386v2",
+    "check": "ok"
+   }
+  ],
+  "interactions": [
+   {
+    "what": "实时搜索与近邻",
+    "quote": "Find similar data to a given query or existing data point.",
+    "url": "https://apple.github.io/embedding-atlas/",
+    "check": "ok"
+   },
+   {
+    "what": "跨图联动筛选",
+    "quote": "Arrange charts and configure cross-filtering between them.",
+    "url": "https://apple.github.io/embedding-atlas/",
+    "check": "ok"
+   },
+   {
+    "what": "图表与嵌入联动筛选",
+    "quote": "users can cross-filter between all the charts and the embedding.",
+    "url": "https://arxiv.org/html/2505.06386v2",
+    "check": "ok"
+   },
+   {
+    "what": "导出选中子集",
+    "quote": "She exports this subset to a Parquet file to save for the future.",
+    "url": "https://arxiv.org/html/2505.06386v2",
+    "check": "ok"
+   }
+  ],
+  "questions": [
+   {
+    "quote": "Next, she wants to find the best wines for the cheapest price.",
+    "url": "https://arxiv.org/html/2505.06386v2",
+    "check": "ok"
+   },
+   {
+    "quote": "Because there are noticeable clusters by region, she hypothesizes that wines from the same region may taste more similar to each other than to those from other regions.",
+    "url": "https://arxiv.org/html/2505.06386v2",
+    "check": "ok"
+   },
+   {
+    "quote": "Visualize 2D projections of millions of points, browse automatic clusters and labels, find nearest neighbors, and cross-filter against metadata.",
+    "url": "https://apple.github.io/embedding-atlas/overview.html",
+    "check": "ok"
+   }
+  ],
+  "abstraction": [
+   {
+    "what": "多分辨率聚类与标注",
+    "quote": "Group and label related points across multiple resolutions.",
+    "url": "https://arxiv.org/html/2505.06386v2",
+    "check": "ok"
+   },
+   {
+    "what": "基于二维密度的聚类",
+    "quote": "The automatic cluster labels are also produced with a fast clustering algorithm based on 2D density",
+    "url": "https://arxiv.org/html/2505.06386v2",
+    "check": "ok"
+   },
+   {
+    "what": "密度图聚类实现",
+    "quote": "This package provides a WebAssembly implementation of a density map clustering algorithm.",
+    "url": "https://apple.github.io/embedding-atlas/algorithms.html",
+    "check": "ok"
+   },
+   {
+    "what": "密度汇总（等高线）",
+    "quote": "Summarize points with real-time contour plotting based on data density.",
+    "url": "https://arxiv.org/html/2505.06386v2",
+    "check": "ok"
+   }
+  ],
+  "why": [
+   {
+    "quote": "focusing people’s time on looking at their data rather than configuring the tool",
+    "url": "https://arxiv.org/html/2505.06386v2",
+    "check": "ok"
+   },
+   {
+    "quote": "Every bit of friction encountered by a user during installation, set up, and use, lowers the chance of them engaging with the tool and their data.",
+    "url": "https://arxiv.org/html/2505.06386v2",
+    "check": "ok"
+   },
+   {
+    "quote": "Removes the need to install packages or configure environments, allowing users to get started with only a web browser—ideal for onboarding, demos, or lightweight workflows.",
+    "url": "https://arxiv.org/html/2505.06386v2",
+    "check": "ok"
+   },
+   {
+    "quote": "View coordination removes the need to constantly switch between tools, enabling users to cross-reference points and metadata together.",
+    "url": "https://arxiv.org/html/2505.06386v2",
+    "check": "ok"
+   }
+  ],
+  "alternative": [
+   {
+    "quote": "these tools solely focus on rendering, and do not visualize other metadata, let alone support cross-filtering at this scale",
+    "url": "https://arxiv.org/html/2505.06386v2",
+    "check": "ok"
+   },
+   {
+    "quote": "since these tools immediately suffer from scalability as the data grows into the few thousands",
+    "url": "https://arxiv.org/html/2505.06386v2",
+    "check": "ok"
+   },
+   {
+    "quote": "Existing tools today can be a dead end for people’s analyses.",
+    "url": "https://arxiv.org/html/2505.06386v2",
+    "check": "ok"
+   },
+   {
+    "quote": "few allow users to export results in other developer environments",
+    "url": "https://arxiv.org/html/2505.06386v2",
+    "check": "ok"
+   }
+  ],
+  "limit": [
+   {
+    "quote": "This approach has limitations (e.g., no side-by-side view), and first-class support would greatly enhance the comparison experience.",
+    "url": "https://arxiv.org/html/2505.06386v2",
+    "check": "ok"
+   },
+   {
+    "quote": "as we attempt to cover more use cases, this fixed layout becomes a limitation.",
+    "url": "https://arxiv.org/html/2505.06386v2",
+    "check": "ok"
+   },
+   {
+    "quote": "However, since the density mode uses more involved pixel-space computation, its FPS drops as we increase the number of pixels",
+    "url": "https://arxiv.org/html/2505.06386v2",
+    "check": "ok"
+   },
+   {
+    "quote": "A user study is beyond the scope of this short paper.",
+    "url": "https://arxiv.org/html/2505.06386v2",
+    "check": "ok"
+   }
+  ],
+  "not_stated": [
+   "encodings（页面没写颜色和点大小分别代表什么）"
+  ],
+  "id": "embedding-atlas"
+ },
+ "nomic-atlas": {
+  "pages_read": [
+   "https://docs.nomic.ai/atlas/embeddings-and-retrieval/guides/how-to-visualize-embeddings",
+   "https://docs.nomic.ai/atlas/datasets/data-maps",
+   "https://docs.nomic.ai/atlas/datasets/data-maps/controls",
+   "https://docs.nomic.ai/atlas/datasets/data-maps/how-atlas-works/3-about-topics",
+   "https://docs.nomic.ai/atlas/datasets/data-maps/how-atlas-works/2-embedding_projection",
+   "https://docs.nomic.ai/atlas/datasets/data-maps/how-atlas-works/1-key_terms",
+   "https://static.nomic.ai/atlas_tech_report.pdf"
+  ],
+  "retrieved": "2026-10-14",
+  "input_material": [
+   {
+    "quote": "Atlas is a platform for visually and programmatically interacting with massive unstructured datasets of text documents, images and embeddings.",
+    "url": "https://docs.nomic.ai/atlas/datasets/data-maps/how-atlas-works/1-key_terms",
+    "check": "ok"
+   },
+   {
+    "quote": "Users can opt to either upload their own precomputed vectors or to use Atlas’ built in vectorizer.",
+    "url": "https://static.nomic.ai/atlas_tech_report.pdf",
+    "check": "ok"
+   }
+  ],
+  "entities": [
+   {
+    "what": "数据点（地图上的点）",
+    "quote": "Points close to each other on the map are semantically similar/related",
+    "url": "https://docs.nomic.ai/atlas/datasets/data-maps",
+    "check": "ok"
+   },
+   {
+    "what": "地图上的数据点集合",
+    "quote": "Clusters on your Atlas Map contain datapoints that are semantically similar.",
+    "url": "https://docs.nomic.ai/atlas/datasets/data-maps",
+    "check": "ok"
+   }
+  ],
+  "relations": [
+   {
+    "what": "主题层级关系",
+    "quote": "Topics have a hierarchy",
+    "url": "https://docs.nomic.ai/atlas/datasets/data-maps",
+    "check": "ok"
+   },
+   {
+    "what": "距离与簇的关系",
+    "quote": "Distinct clusters might be close together; related clusters might be far apart.",
+    "url": "https://docs.nomic.ai/atlas/datasets/data-maps",
+    "check": "ok"
+   }
+  ],
+  "attributes": [
+   {
+    "what": "数值型元数据",
+    "quote": "Filter over any of your numerical metadata values like sentiment value, temperature, price, score, and much more.",
+    "url": "https://docs.nomic.ai/atlas/datasets/data-maps/controls",
+    "check": "ok"
+   },
+   {
+    "what": "颜色用的列（分类或数值）",
+    "quote": "Coloring works for both categorical or numerical data types.",
+    "url": "https://docs.nomic.ai/atlas/datasets/data-maps/controls",
+    "check": "ok"
+   },
+   {
+    "what": "时间戳",
+    "quote": "Slicing by timestamp allows you to see change in topics over time",
+    "url": "https://docs.nomic.ai/atlas/datasets/data-maps/controls",
+    "check": "ok"
+   }
+  ],
+  "views": [
+   {
+    "what": "全数据地图",
+    "quote": "The Atlas Data Map plots your entire dataset on one screen and organizes it by meaning into clusters.",
+    "url": "https://docs.nomic.ai/atlas/datasets/data-maps",
+    "check": "ok"
+   },
+   {
+    "what": "地图上的浮动主题标签",
+    "quote": "Floating labels correspond to distinct topics in your data",
+    "url": "https://docs.nomic.ai/atlas/datasets/data-maps",
+    "check": "ok"
+   },
+   {
+    "what": "图例",
+    "quote": "The legend on your graph will describe the current labels corresponding to colors of points on the map.",
+    "url": "https://docs.nomic.ai/atlas/datasets/data-maps/controls",
+    "check": "ok"
+   },
+   {
+    "what": "选择结果面板",
+    "quote": "In the selection results panel on the left (where it shows the number of results), click the Tag all results button.",
+    "url": "https://docs.nomic.ai/atlas/datasets/data-maps/controls",
+    "check": "ok"
+   }
+  ],
+  "encodings": [
+   {
+    "what": "位置（距离无具体含义）",
+    "quote": "Numerical distances between 2D point positions do not have concrete meaning",
+    "url": "https://docs.nomic.ai/atlas/datasets/data-maps",
+    "check": "ok"
+   },
+   {
+    "what": "位置（坐标轴无含义）",
+    "quote": "the X-Y axes of the map do not have meaning, and the exact distance between points is not meaningful",
+    "url": "https://docs.nomic.ai/atlas/datasets/data-maps",
+    "check": "ok"
+   },
+   {
+    "what": "颜色（主题层级）",
+    "quote": "To color datapoints by topic clusters, you can color by Nomic Topic: 1/2/3. Depth level 1 is most general and depth level 3 is the most specific.",
+    "url": "https://docs.nomic.ai/atlas/datasets/data-maps/controls",
+    "check": "ok"
+   },
+   {
+    "what": "投影算法（按规模选择）",
+    "quote": "For datasets with 50,000 or more points, Atlas uses advanced proprietary algorithms designed for large-scale visualization",
+    "url": "https://docs.nomic.ai/atlas/embeddings-and-retrieval/guides/how-to-visualize-embeddings",
+    "check": "ok"
+   }
+  ],
+  "interactions": [
+   {
+    "what": "向量搜索（查询）",
+    "quote": "Query Search (Default): Find data points that best answer a question you have about your data",
+    "url": "https://docs.nomic.ai/atlas/datasets/data-maps/controls",
+    "check": "ok"
+   },
+   {
+    "what": "套索选择",
+    "quote": "Drag a lasso around a region of space to select all points contained in your region",
+    "url": "https://docs.nomic.ai/atlas/datasets/data-maps/controls",
+    "check": "ok"
+   },
+   {
+    "what": "逐点加入选择",
+    "quote": "Click individual points to add them to a selection.",
+    "url": "https://docs.nomic.ai/atlas/datasets/data-maps/controls",
+    "check": "ok"
+   },
+   {
+    "what": "编辑主题标签",
+    "quote": "An editor of a dataset can update topic labels from within the Atlas Map.",
+    "url": "https://docs.nomic.ai/atlas/datasets/data-maps/controls",
+    "check": "ok"
+   }
+  ],
+  "questions": [
+   {
+    "quote": "Cluster and auto-categorize your datasets.",
+    "url": "https://docs.nomic.ai/atlas/datasets/data-maps",
+    "check": "ok"
+   },
+   {
+    "quote": "Discover outlier and anomolous regions in your data.",
+    "url": "https://docs.nomic.ai/atlas/datasets/data-maps",
+    "check": "ok"
+   },
+   {
+    "quote": "Spot misclassified or outlier points where a model's assumptions break down.",
+    "url": "https://docs.nomic.ai/atlas/embeddings-and-retrieval/guides/how-to-visualize-embeddings",
+    "check": "ok"
+   },
+   {
+    "quote": "See if your data forms distinct groups, which can be crucial for classification or recommendation tasks.",
+    "url": "https://docs.nomic.ai/atlas/embeddings-and-retrieval/guides/how-to-visualize-embeddings",
+    "check": "ok"
+   }
+  ],
+  "abstraction": [
+   {
+    "what": "自动构建层级本体",
+    "quote": "Atlas automatically builds an ontology over uploaded datasets by applying a hierarchical clustering model over data vectors in the latent space.",
+    "url": "https://static.nomic.ai/atlas_tech_report.pdf",
+    "check": "ok"
+   },
+   {
+    "what": "LLM 自动标注簇",
+    "quote": "Atlas auto-labels each cluster with a custom-trained large language model that synthesizes a short topical description for each topic/cluster in the ontology.",
+    "url": "https://static.nomic.ai/atlas_tech_report.pdf",
+    "check": "ok"
+   },
+   {
+    "what": "两到三级主题深度",
+    "quote": "The topic labeling system in Atlas will generate topics at either two or three depth levels depending on the granularity of your dataset.",
+    "url": "https://docs.nomic.ai/atlas/datasets/data-maps/how-atlas-works/3-about-topics",
+    "check": "ok"
+   },
+   {
+    "what": "缩放时显示更细的主题",
+    "quote": "Topics group your dataset into homogenous regions. As you zoom around the map, more granular versions of your datasets topics will appear.",
+    "url": "https://docs.nomic.ai/atlas/datasets/data-maps",
+    "check": "ok"
+   }
+  ],
+  "why": [
+   {
+    "quote": "Atlas automatically selects the optimal projection algorithm based on your dataset size",
+    "url": "https://docs.nomic.ai/atlas/embeddings-and-retrieval/guides/how-to-visualize-embeddings",
+    "check": "ok"
+   },
+   {
+    "quote": "makes choices about the high dimensional kernel, low dimensional kernel, and optimizer that enable increased projection speed, size, and quality",
+    "url": "https://static.nomic.ai/atlas_tech_report.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "Built for collaboration across technical and non-technical teams.",
+    "url": "https://docs.nomic.ai/atlas/datasets/data-maps",
+    "check": "ok"
+   },
+   {
+    "quote": "We aim to address these risks using the methods of information cartography, the art and practice of making and using maps of data.",
+    "url": "https://static.nomic.ai/atlas_tech_report.pdf",
+    "check": "ok"
+   }
+  ],
+  "alternative": [
+   {
+    "quote": "Traditional technologies for investigating and probing large datasets, such as relational databases and full-text search indices, are insufficient to handling the volume of unstructured datasets",
+    "url": "https://static.nomic.ai/atlas_tech_report.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "While traditioanl two-dimensional layout algorithms like principal components analysis privilege global structure at the expense of local relationships",
+    "url": "https://static.nomic.ai/atlas_tech_report.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "For datasets over 100k embeddings, local methods might become too slow or memory-intensive",
+    "url": "https://docs.nomic.ai/atlas/embeddings-and-retrieval/guides/how-to-visualize-embeddings",
+    "check": "ok"
+   },
+   {
+    "quote": "May distort global distances; clusters might appear artificially separated",
+    "url": "https://docs.nomic.ai/atlas/embeddings-and-retrieval/guides/how-to-visualize-embeddings",
+    "check": "ok"
+   }
+  ],
+  "limit": [
+   {
+    "quote": "Nomic is unable to disclose many technical details of the Atlas system at this time.",
+    "url": "https://static.nomic.ai/atlas_tech_report.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "2D projections can distort high-dimensional distances. Validate with metadata or alternative projections.",
+    "url": "https://docs.nomic.ai/atlas/embeddings-and-retrieval/guides/how-to-visualize-embeddings",
+    "check": "ok"
+   },
+   {
+    "quote": "since vector spaces of embeddings are typically much higher-dimensional than 2D, and therefore only approximately representable in 2D",
+    "url": "https://docs.nomic.ai/atlas/datasets/data-maps/how-atlas-works/1-key_terms",
+    "check": "ok"
+   },
+   {
+    "quote": "Image, audio, video, and multimodal embeddings are on the way to Atlas.",
+    "url": "https://docs.nomic.ai/atlas/datasets/data-maps/how-atlas-works/2-embedding_projection",
+    "check": "ok"
+   }
+  ],
+  "not_stated": [
+   "input_material（页面没写 Atlas 内置嵌入模型的具体维数，只举了 128、512、1024 维的一般例子）"
+  ],
+  "id": "nomic-atlas"
+ },
+ "single-cell-embeddings": {
+  "pages_read": [
+   "https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/",
+   "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012403"
+  ],
+  "retrieved": "2026-10-14",
+  "input_material": [
+   {
+    "quote": "extreme dimension reduction, from hundreds or thousands of dimensions to 2, inevitably induces significant distortion of high-dimensional datasets",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/",
+    "check": "ok"
+   },
+   {
+    "quote": "Here, we assess dimensionality reduction for single-cell gene expression",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/",
+    "check": "ok"
+   },
+   {
+    "quote": "“Ambient” space refers to the gene count matrix after highly variable gene selection and log-normalization of the counts",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/",
+    "check": "ok"
+   }
+  ],
+  "entities": [
+   {
+    "what": "细胞",
+    "quote": "to define each cell’s 30 nearest neighbors",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/",
+    "check": "ok"
+   },
+   {
+    "what": "细胞类型或条件（分组）",
+    "quote": "Cell “types” denote either author-provided cell type",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/",
+    "check": "ok"
+   }
+  ],
+  "relations": [
+   {
+    "what": "近邻、全局与距离的定义",
+    "quote": "“local” is defined as nearest neighbor relationships, “global” as neighbor relationships and properties of groups of cells (e.g., cell types), and “distance” as Euclidean distance",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/",
+    "check": "ok"
+   },
+   {
+    "what": "距离保持蕴含局部与全局保持",
+    "quote": "Note that preservation of distance implies preservation of local and global properties.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/",
+    "check": "ok"
+   }
+  ],
+  "attributes": [
+   {
+    "what": "细胞类型与条件标注",
+    "quote": "cell annotations or labels (such as cell type or condition) used in the following analyses were taken from the original studies",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/",
+    "check": "ok"
+   },
+   {
+    "what": "由聚类得到的类别标签",
+    "quote": "used labels derived in original publications via clustering",
+    "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012403",
+    "check": "ok"
+   },
+   {
+    "what": "标签不等于真值",
+    "quote": "these labels do not necessarily correspond to biological ground truth",
+    "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012403",
+    "check": "ok"
+   }
+  ],
+  "views": [
+   {
+    "what": "二维“一图看全”",
+    "quote": "In biology, single-cell genomics studies typically begin with reduction to 2 or 3 dimensions to produce “all-in-one” visuals of the data that are amenable to the human eye",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/",
+    "check": "ok"
+   },
+   {
+    "what": "密度图（等高线）",
+    "quote": "by comparing contour locations and sizes in the density diagrams",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/",
+    "check": "ok"
+   },
+   {
+    "what": "论文比较用的嵌入图组",
+    "quote": "Large panels: Ex Utero dataset. Small panels: MERFISH and Smart-seq datasets.",
+    "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012403",
+    "check": "ok"
+   }
+  ],
+  "encodings": [
+   {
+    "what": "颜色（细胞类型）",
+    "quote": "Colors correspond to cell types and are taken from Chari and Pachter",
+    "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012403",
+    "check": "ok"
+   },
+   {
+    "what": "灰色与橙色圆点",
+    "quote": "with orange circles denoting all cells within the previously determined equidistant groups",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/",
+    "check": "ok"
+   },
+   {
+    "what": "二维距离（细胞间关系）",
+    "quote": "by directly relying on distances between the cells in 2 dimensions",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/",
+    "check": "ok"
+   },
+   {
+    "what": "位置（类别重叠）",
+    "quote": "while 2D PCA and Picasso elephant lead to strongly overlapping types",
+    "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012403",
+    "check": "ok"
+   }
+  ],
+  "interactions": [],
+  "questions": [
+   {
+    "quote": "Visual applications range from assessing the existence of and relationships between predefined clusters, to inferring properties of the clusters",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/",
+    "check": "ok"
+   },
+   {
+    "quote": "Embeddings are used to visually assess the extent of integration, mixing, or similarities between cells from different batches",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/",
+    "check": "ok"
+   },
+   {
+    "quote": "Embedding applications range from implying or inferring local, continuous relationships between cells and assigning pseudotime coordinates",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/",
+    "check": "ok"
+   }
+  ],
+  "abstraction": [
+   {
+    "what": "先降到几十维再降到二维",
+    "quote": "combining initial dimensionality reduction to a few dozen dimensions, often using principal component analysis (PCA), with further nonlinear reduction to 2 dimensions using t-SNE",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/",
+    "check": "ok"
+   },
+   {
+    "what": "可从高维嵌入聚类",
+    "quote": "clusters can be generated from higher dimensional embeddings if not from the ambient space itself",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/",
+    "check": "ok"
+   },
+   {
+    "what": "高层图（不画每个点）",
+    "quote": "Higher-level diagrams that do not seek to display all point-wise information can also be used to represent the results of other inter-cluster analyses",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/",
+    "check": "ok"
+   },
+   {
+    "what": "无点级信息的概念图",
+    "quote": "conceptual graphics can be used instead which do not attempt to represent “all points and all relationships”",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/",
+    "check": "ok"
+   }
+  ],
+  "why": [
+   {
+    "quote": "Biologists are often interested in cell clusters, and so preservation of cell neighborhoods and visual separation of meaningful cell groups are important properties of 2D embeddings.",
+    "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012403",
+    "check": "ok"
+   },
+   {
+    "quote": "We therefore examine the practical implications of low-dimensional embedding of single-cell data",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/",
+    "check": "ok"
+   },
+   {
+    "quote": "Indeed, one can use 2D embeddings to form hypotheses about the data structure, ranging from data quality control and sanity-checking of any algorithmic output, to more general hypotheses about cluster separability",
+    "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012403",
+    "check": "ok"
+   },
+   {
+    "quote": "Of course, any generated insight should then be validated in the high-dimensional data by other means.",
+    "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012403",
+    "check": "ok"
+   }
+  ],
+  "alternative": [
+   {
+    "quote": "We therefore discourage reliance on and blind application of such heuristic procedures",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/",
+    "check": "ok"
+   },
+   {
+    "quote": "there is little discussion of the logic behind this coupling",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/",
+    "check": "ok"
+   },
+   {
+    "quote": "are insufficient and only quantify a single aspect: both metrics focus on preservation of distances",
+    "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012403",
+    "check": "ok"
+   },
+   {
+    "quote": "such 2D spaces should be treated more as cartoon diagrams to be displayed post-analysis",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/",
+    "check": "ok"
+   }
+  ],
+  "limit": [
+   {
+    "quote": "inevitably induces significant distortion of high-dimensional datasets",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/",
+    "check": "ok"
+   },
+   {
+    "quote": "Distortion is inevitable: given n points embedded in 2 dimensions",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/",
+    "check": "ok"
+   },
+   {
+    "quote": "cluster structures were additionally highly sensitive to the number of neighbors (perplexity for t-SNE) used in constructing nonlinear embeddings",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/",
+    "check": "ok"
+   },
+   {
+    "quote": "2D visualisations distort distances and should not be blindly trusted",
+    "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012403",
+    "check": "ok"
+   }
+  ],
+  "not_stated": [
+   "interactions（两篇论文都没有写交互操作）",
+   "来源说明：PMC11446450（Lause 等的 PMC 版）返回 reCAPTCHA 人机验证页，没读到；改读 PLOS 上的同一篇原文"
+  ],
+  "id": "single-cell-embeddings"
+ },
+ "hiplot": {
+  "pages_read": [
+   "https://ai.meta.com/blog/hiplot-high-dimensional-interactive-plots-made-easy",
+   "https://facebookresearch.github.io/hiplot/",
+   "https://facebookresearch.github.io/hiplot/experiment_settings.html",
+   "https://facebookresearch.github.io/hiplot/plugins_reference.html",
+   "https://pypi.org/project/hiplot/"
+  ],
+  "retrieved": "2026-10-14",
+  "input_material": [
+   {
+    "quote": "Given about 7000 experimental datapoints, we want to understand which parameters influence the metric we want to optimize",
+    "url": "https://facebookresearch.github.io/hiplot/",
+    "check": "ok"
+   },
+   {
+    "quote": "we have been using HiPlot to explore and efficiently analyze hyperparameter tuning of deep neural networks with dozens of hyperparameters and more than 100,000 experiments",
+    "url": "https://ai.meta.com/blog/hiplot-high-dimensional-interactive-plots-made-easy",
+    "check": "ok"
+   },
+   {
+    "quote": "By default, HiPlot’s web server can parse CSV or JSON files",
+    "url": "https://ai.meta.com/blog/hiplot-high-dimensional-interactive-plots-made-easy",
+    "check": "ok"
+   }
+  ],
+  "entities": [
+   {
+    "what": "hiplot.Datapoint",
+    "quote": "each point corresponds to a hiplot.Datapoint",
+    "url": "https://facebookresearch.github.io/hiplot/experiment_settings.html",
+    "check": "ok"
+   },
+   {
+    "what": "data point",
+    "quote": "Each of the training tasks can be represented as a data point with values (dropout, lr, optimizer, loss)",
+    "url": "https://ai.meta.com/blog/hiplot-high-dimensional-interactive-plots-made-easy",
+    "check": "ok"
+   }
+  ],
+  "relations": [
+   {
+    "what": "connect the parent and the child",
+    "quote": "the XY graph will connect the parent and the child",
+    "url": "https://facebookresearch.github.io/hiplot/experiment_settings.html",
+    "check": "ok"
+   },
+   {
+    "what": "shared parent",
+    "quote": "Multiple points can share the same parent",
+    "url": "https://facebookresearch.github.io/hiplot/experiment_settings.html",
+    "check": "ok"
+   },
+   {
+    "what": "edges",
+    "quote": "its XY plot can render edges between related data points",
+    "url": "https://ai.meta.com/blog/hiplot-high-dimensional-interactive-plots-made-easy",
+    "check": "ok"
+   }
+  ],
+  "attributes": [
+   {
+    "what": "scalar parameters",
+    "quote": "each has two scalar parameters, coined dropout and lr",
+    "url": "https://ai.meta.com/blog/hiplot-high-dimensional-interactive-plots-made-easy",
+    "check": "ok"
+   },
+   {
+    "what": "column type",
+    "quote": "Either globally by attributing a hiplot.ValueType to columns",
+    "url": "https://facebookresearch.github.io/hiplot/experiment_settings.html",
+    "check": "ok"
+   }
+  ],
+  "views": [
+   {
+    "what": "parallel plots",
+    "quote": "It uses parallel plots and other graphical ways to represent information more clearly",
+    "url": "https://ai.meta.com/blog/hiplot-high-dimensional-interactive-plots-made-easy",
+    "check": "ok"
+   },
+   {
+    "what": "parallel plot",
+    "quote": "On the parallel plot, each line represents one datapoint",
+    "url": "https://facebookresearch.github.io/hiplot/",
+    "check": "ok"
+   },
+   {
+    "what": "independant displays",
+    "quote": "HiPlot consists of multiple independant displays",
+    "url": "https://facebookresearch.github.io/hiplot/plugins_reference.html",
+    "check": "ok"
+   }
+  ],
+  "encodings": [
+   {
+    "what": "vertical scaled axis",
+    "quote": "HiPlot will draw one vertical scaled axis each for dropout",
+    "url": "https://ai.meta.com/blog/hiplot-high-dimensional-interactive-plots-made-easy",
+    "check": "ok"
+   },
+   {
+    "what": "continuous line",
+    "quote": "each training/data point is a continuous line that goes through its value on each of the axes",
+    "url": "https://ai.meta.com/blog/hiplot-high-dimensional-interactive-plots-made-easy",
+    "check": "ok"
+   },
+   {
+    "what": "color scheme",
+    "quote": "set the color scheme according to yet another axis",
+    "url": "https://ai.meta.com/blog/hiplot-high-dimensional-interactive-plots-made-easy",
+    "check": "ok"
+   }
+  ],
+  "interactions": [
+   {
+    "what": "slicing",
+    "quote": "Slicing on the valid ppl axis reveals that higher values for lr lead to better models",
+    "url": "https://facebookresearch.github.io/hiplot/",
+    "check": "ok"
+   },
+   {
+    "what": "Set as X axis",
+    "quote": "Right click the epoch axis title and select Set as X axis",
+    "url": "https://facebookresearch.github.io/hiplot/",
+    "check": "ok"
+   },
+   {
+    "what": "reorder or remove axes",
+    "quote": "reorder or remove axes, or extract a particular selection of data",
+    "url": "https://ai.meta.com/blog/hiplot-high-dimensional-interactive-plots-made-easy",
+    "check": "ok"
+   }
+  ],
+  "questions": [
+   {
+    "quote": "HiPlot is a lightweight interactive visualization tool to help AI researchers discover correlations and patterns in high-dimensional data",
+    "url": "https://ai.meta.com/blog/hiplot-high-dimensional-interactive-plots-made-easy",
+    "check": "ok"
+   },
+   {
+    "quote": "we want to understand which parameters influence the metric we want to optimize",
+    "url": "https://facebookresearch.github.io/hiplot/",
+    "check": "ok"
+   }
+  ],
+  "abstraction": [],
+  "why": [
+   {
+    "quote": "Parallel plots are a convenient way to visualize and filter high-dimensional data",
+    "url": "https://ai.meta.com/blog/hiplot-high-dimensional-interactive-plots-made-easy",
+    "check": "ok"
+   },
+   {
+    "quote": "In HiPlot, parallel plots are interactive, which makes it easy to change the visualization for different use cases",
+    "url": "https://ai.meta.com/blog/hiplot-high-dimensional-interactive-plots-made-easy",
+    "check": "ok"
+   },
+   {
+    "quote": "You can use HiPlot in two equally straightforward ways",
+    "url": "https://ai.meta.com/blog/hiplot-high-dimensional-interactive-plots-made-easy",
+    "check": "ok"
+   }
+  ],
+  "alternative": [
+   {
+    "quote": "HiPlot is designed to offer several advantages over other visualization tools",
+    "url": "https://ai.meta.com/blog/hiplot-high-dimensional-interactive-plots-made-easy",
+    "check": "ok"
+   },
+   {
+    "quote": "Such experiments can be challenging to analyze and may contain bugs that are difficult to spot",
+    "url": "https://ai.meta.com/blog/hiplot-high-dimensional-interactive-plots-made-easy",
+    "check": "ok"
+   }
+  ],
+  "limit": [
+   {
+    "quote": "Columns with a single value won't appear either unless you provide a min/max",
+    "url": "https://facebookresearch.github.io/hiplot/plugins_reference.html",
+    "check": "ok"
+   },
+   {
+    "quote": "Categorical columns with more distinct values that this won't be displayed",
+    "url": "https://facebookresearch.github.io/hiplot/plugins_reference.html",
+    "check": "ok"
+   }
+  ],
+  "not_stated": [
+   "abstraction"
+  ],
+  "id": "hiplot"
+ },
+ "facets": {
+  "pages_read": [
+   "https://opensource.googleblog.com/2017/07/facets-open-source-visualization-tool.html",
+   "https://pair-code.github.io/facets/"
+  ],
+  "retrieved": "2026-10-14",
+  "input_material": [
+   {
+    "quote": "ML datasets can contain hundreds of millions of data points, each consisting of hundreds (or even thousands) of features",
+    "url": "https://opensource.googleblog.com/2017/07/facets-open-source-visualization-tool.html",
+    "check": "ok"
+   },
+   {
+    "quote": "Overview takes input feature data from any number of datasets, analyzes them feature by feature and visualizes the analysis",
+    "url": "https://pair-code.github.io/facets/",
+    "check": "ok"
+   },
+   {
+    "quote": "Load one or more csv files with your first row being the header",
+    "url": "https://pair-code.github.io/facets/",
+    "check": "ok"
+   }
+  ],
+  "entities": [
+   {
+    "what": "individual item",
+    "quote": "Each individual item in the visualization represents a data point",
+    "url": "https://pair-code.github.io/facets/",
+    "check": "ok"
+   },
+   {
+    "what": "each feature",
+    "quote": "Get a sense of the shape of each feature of your dataset using Facets Overview",
+    "url": "https://pair-code.github.io/facets/",
+    "check": "ok"
+   }
+  ],
+  "relations": [
+   {
+    "what": "training set and test set",
+    "quote": "Multiple datasets, such as a training set and a test set, can be compared on the same visualization",
+    "url": "https://opensource.googleblog.com/2017/07/facets-open-source-visualization-tool.html",
+    "check": "ok"
+   },
+   {
+    "what": "relationship between data points",
+    "quote": "exploring the relationship between data points across all of the different features of a dataset",
+    "url": "https://pair-code.github.io/facets/",
+    "check": "ok"
+   }
+  ],
+  "attributes": [
+   {
+    "what": "numeric and categorical features",
+    "quote": "It becomes easy to learn the distribution of values across the 6 numeric and 9 categorical features for both datasets",
+    "url": "https://pair-code.github.io/facets/",
+    "check": "ok"
+   },
+   {
+    "what": "Distribution distance",
+    "quote": "Use the “Sort by” dropdown to sort features by “Distribution distance”",
+    "url": "https://pair-code.github.io/facets/",
+    "check": "ok"
+   }
+  ],
+  "views": [
+   {
+    "what": "two visualizations",
+    "quote": "Facets consists of two visualizations that allow users to see a holistic picture of their data at different granularities",
+    "url": "https://opensource.googleblog.com/2017/07/facets-open-source-visualization-tool.html",
+    "check": "ok"
+   },
+   {
+    "what": "Dive",
+    "quote": "Dive is a tool for interactively exploring large numbers of data points at once",
+    "url": "https://pair-code.github.io/facets/",
+    "check": "ok"
+   }
+  ],
+  "encodings": [
+   {
+    "what": "blue and orange histograms",
+    "quote": "The histograms at right allow you to compare the distributions between the training data (blue) and test data (orange)",
+    "url": "https://opensource.googleblog.com/2017/07/facets-open-source-visualization-tool.html",
+    "check": "ok"
+   },
+   {
+    "what": "red numbers",
+    "quote": "Numbers in red indicate possible trouble spots",
+    "url": "https://opensource.googleblog.com/2017/07/facets-open-source-visualization-tool.html",
+    "check": "ok"
+   },
+   {
+    "what": "sorted by non-uniformity",
+    "quote": "The features are sorted by non-uniformity, with the feature with the most non-uniform distribution at the top",
+    "url": "https://opensource.googleblog.com/2017/07/facets-open-source-visualization-tool.html",
+    "check": "ok"
+   },
+   {
+    "what": "position, color",
+    "quote": "you control the position, color and visual representation of each data point based on its feature values",
+    "url": "https://opensource.googleblog.com/2017/07/facets-open-source-visualization-tool.html",
+    "check": "ok"
+   }
+  ],
+  "interactions": [
+   {
+    "what": "Sort by",
+    "quote": "Use the “Sort by” dropdown to sort features by “Distribution distance”",
+    "url": "https://pair-code.github.io/facets/",
+    "check": "ok"
+   },
+   {
+    "what": "menus",
+    "quote": "Using the menus on the left, you can change how the data is organized in order to gain insight into the dataset",
+    "url": "https://pair-code.github.io/facets/",
+    "check": "ok"
+   },
+   {
+    "what": "Color menu",
+    "quote": "Use the “Color” menu to color by “Target”",
+    "url": "https://pair-code.github.io/facets/",
+    "check": "ok"
+   },
+   {
+    "what": "click an item",
+    "quote": "Clicking on an individual item reveals key/value pairs that represent the features of that record",
+    "url": "https://pair-code.github.io/facets/",
+    "check": "ok"
+   }
+  ],
+  "questions": [
+   {
+    "quote": "These visualizations allow you to debug your data",
+    "url": "https://opensource.googleblog.com/2017/07/facets-open-source-visualization-tool.html",
+    "check": "ok"
+   },
+   {
+    "quote": "Uncover several uncommon and common issues such as unexpected feature values",
+    "url": "https://pair-code.github.io/facets/",
+    "check": "ok"
+   },
+   {
+    "quote": "Success stories of Dive include the detection of classifier failure, identification of systematic errors, evaluating ground truth and potential new signals for ranking",
+    "url": "https://pair-code.github.io/facets/",
+    "check": "ok"
+   }
+  ],
+  "abstraction": [
+   {
+    "what": "feature by feature",
+    "quote": "analyzes them feature by feature and visualizes the analysis",
+    "url": "https://pair-code.github.io/facets/",
+    "check": "ok"
+   },
+   {
+    "what": "bucketing",
+    "quote": "or bucketing them in multiple dimensions by their feature values",
+    "url": "https://pair-code.github.io/facets/",
+    "check": "ok"
+   },
+   {
+    "what": "confusion matrix view",
+    "quote": "This produces a confusion matrix view, allowing us to drill into particular kinds of misclassifications",
+    "url": "https://opensource.googleblog.com/2017/07/facets-open-source-visualization-tool.html",
+    "check": "ok"
+   }
+  ],
+  "why": [
+   {
+    "quote": "Getting the best results out of a machine learning (ML) model requires that you truly understand your data",
+    "url": "https://opensource.googleblog.com/2017/07/facets-open-source-visualization-tool.html",
+    "check": "ok"
+   },
+   {
+    "quote": "A picture may be worth a thousand words, but an interactive visualization can be worth even more",
+    "url": "https://opensource.googleblog.com/2017/07/facets-open-source-visualization-tool.html",
+    "check": "ok"
+   },
+   {
+    "quote": "Better data leads to better models",
+    "url": "https://pair-code.github.io/facets/",
+    "check": "ok"
+   }
+  ],
+  "alternative": [
+   {
+    "quote": "making it nearly impossible to understand an entire dataset in an intuitive fashion",
+    "url": "https://opensource.googleblog.com/2017/07/facets-open-source-visualization-tool.html",
+    "check": "ok"
+   }
+  ],
+  "limit": [
+   {
+    "quote": "Load one or more csv files with your first row being the header",
+    "url": "https://pair-code.github.io/facets/",
+    "check": "ok"
+   }
+  ],
+  "not_stated": [
+   "limit（作者未写失真或误差，上面只有输入格式要求）"
+  ],
+  "id": "facets"
+ },
+ "voyager": {
+  "pages_read": [
+   "https://idl.uw.edu/papers/voyager",
+   "https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf",
+   "https://vega.github.io/voyager/"
+  ],
+  "retrieved": "2026-10-14",
+  "input_material": [
+   {
+    "quote": "couples faceted browsing with visualization recommendation to support exploration of multivariate, tabular data",
+    "url": "https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "a browser interface for statistical graphics of a single relational table",
+    "url": "https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "For any given data table the choice of variables, transformations and visual encodings leads to a combinatorial explosion",
+    "url": "https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf",
+    "check": "ok"
+   }
+  ],
+  "entities": [
+   {
+    "what": "data variables",
+    "quote": "The schema panel (left) lists data variables selectable by users",
+    "url": "https://idl.uw.edu/papers/voyager",
+    "check": "ok"
+   },
+   {
+    "what": "visualizations",
+    "quote": "The main gallery (right) presents suggested visualizations of different variable subsets and transformations",
+    "url": "https://idl.uw.edu/papers/voyager",
+    "check": "ok"
+   }
+  ],
+  "relations": [
+   {
+    "what": "mappings",
+    "quote": "specifications consist of a set of mappings between visual encoding channels and (potentially transformed) data variables",
+    "url": "https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf",
+    "check": "ok"
+   },
+   {
+    "what": "member variables",
+    "quote": "The top of each view lists its member variables in capsules",
+    "url": "https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf",
+    "check": "ok"
+   }
+  ],
+  "attributes": [
+   {
+    "what": "statistical and perceptual measures",
+    "quote": "chosen according to statistical and perceptual measures",
+    "url": "https://idl.uw.edu/papers/voyager",
+    "check": "ok"
+   },
+   {
+    "what": "descriptive statistics and samples",
+    "quote": "which upon hover shows descriptive statistics and samples in a tooltip",
+    "url": "https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf",
+    "check": "ok"
+   },
+   {
+    "what": "encoding channel properties",
+    "quote": "includes the assigned variable’s name, data type, scale and axis properties, and transformations",
+    "url": "https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf",
+    "check": "ok"
+   }
+  ],
+  "views": [
+   {
+    "what": "gallery of visualizations",
+    "quote": "we seek to complement manual chart construction with interactive navigation of a gallery of automatically-generated visualizations",
+    "url": "https://idl.uw.edu/papers/voyager",
+    "check": "ok"
+   },
+   {
+    "what": "two sections",
+    "quote": "the gallery is divided into two sections: exact match and suggestion",
+    "url": "https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf",
+    "check": "ok"
+   },
+   {
+    "what": "trellis plots",
+    "quote": "facets (row, column) for creating trellis plots",
+    "url": "https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf",
+    "check": "ok"
+   },
+   {
+    "what": "bookmark gallery",
+    "quote": "bookmarked visualizations can be viewed in the bookmark gallery",
+    "url": "https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf",
+    "check": "ok"
+   }
+  ],
+  "encodings": [
+   {
+    "what": "axis positions, colors",
+    "quote": "Voyager aligns axis positions and uses consistent colors for variables",
+    "url": "https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf",
+    "check": "ok"
+   },
+   {
+    "what": "partitioned by cylinder",
+    "quote": "Scatter plots of horsepower vs. acceleration, partitioned by cylinder",
+    "url": "https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf",
+    "check": "ok"
+   }
+  ],
+  "interactions": [
+   {
+    "what": "click a variable",
+    "quote": "users can click a variable to toggle its inclusion",
+    "url": "https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf",
+    "check": "ok"
+   },
+   {
+    "what": "refinement, bookmarks, expansion",
+    "quote": "Each chart supports interactive refinement, bookmarks, and expansion to increase the chart size and see related views",
+    "url": "https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf",
+    "check": "ok"
+   },
+   {
+    "what": "hover",
+    "quote": "Analysts can also hover over data points to view",
+    "url": "https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf",
+    "check": "ok"
+   },
+   {
+    "what": "transposing axes, sorting, scales",
+    "quote": "transposing axes, sorting nominal or ordinal dimensions, and adjusting scales (e.g., between linear and log)",
+    "url": "https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf",
+    "check": "ok"
+   }
+  ],
+  "questions": [
+   {
+    "quote": "Voyager facilitates exploration of previously unseen data and leads to increased data variable coverage",
+    "url": "https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf",
+    "check": "ok"
+   }
+  ],
+  "abstraction": [
+   {
+    "what": "clustering encoding variations",
+    "quote": "Voyager organizes suggested charts by clustering encoding variations of the same data and showing a single top-ranked exemplar of each cluster",
+    "url": "https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf",
+    "check": "ok"
+   },
+   {
+    "what": "prunes visually similar results",
+    "quote": "prunes visually similar results to avoid exhaustive enumeration",
+    "url": "https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf",
+    "check": "ok"
+   },
+   {
+    "what": "clusters of visualizations",
+    "quote": "to produce clusters of visualizations that are grouped by their underlying data tables",
+    "url": "https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf",
+    "check": "ok"
+   }
+  ],
+  "why": [
+   {
+    "quote": "Show data variation, not design variation",
+    "url": "https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "Voyager exchanges specification for browsing",
+    "url": "https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "Voyager privileges data variation (different variable selections and transformations) over design variation",
+    "url": "https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "To discourage premature fixation and avoid the problem of “empty results” [14], Voyager shows univariate summaries of all variables prior to user interaction",
+    "url": "https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf",
+    "check": "ok"
+   }
+  ],
+  "alternative": [
+   {
+    "quote": "General visualization tools typically require manual specification of views",
+    "url": "https://idl.uw.edu/papers/voyager",
+    "check": "ok"
+   },
+   {
+    "quote": "may impose a tedious specification process that impedes exploration",
+    "url": "https://idl.uw.edu/papers/voyager",
+    "check": "ok"
+   },
+   {
+    "quote": "in practice they may fail to do so due to premature fixation on specific questions or the tedium of manual specification",
+    "url": "https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf",
+    "check": "ok"
+   }
+  ],
+  "limit": [
+   {
+    "quote": "Our initial Compass design is admittedly modest",
+    "url": "https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "Voyager currently “looks ahead” by only one variable at a time",
+    "url": "https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "while PoleStar is preferable for answering more specific questions",
+    "url": "https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "often require substantial screen real estate at odds with a rapidly scannable gallery",
+    "url": "https://idl.cs.washington.edu/files/2015-Voyager-InfoVis.pdf",
+    "check": "ok"
+   }
+  ],
+  "not_stated": [],
+  "id": "voyager"
+ },
+ "rank-by-feature": {
+  "pages_read": [
+   "https://www.cs.umd.edu/hcil/hce/",
+   "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html"
+  ],
+  "retrieved": "2026-10-14",
+  "input_material": [
+   {
+    "quote": "A data set that can be represented in a spreadsheet where there are more than three columns can be thought of as multidimensional",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   },
+   {
+    "quote": "with 17 demographical and economical statistics available for each county",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   },
+   {
+    "quote": "A microarray data set consists of tens or hundreds of microarray chip measurements",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   }
+  ],
+  "entities": [
+   {
+    "what": "data item",
+    "quote": "Each data item in the data set is shown as a point in the scatterplot",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   },
+   {
+    "what": "dimension and data item",
+    "quote": "each column is a dimension (or a variable), and each row is a data item",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   },
+   {
+    "what": "features",
+    "quote": "to include relationships between dimensions (or variables) but also interesting characteristics",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   }
+  ],
+  "relations": [
+   {
+    "what": "ranks all pairs",
+    "quote": "ranks all pairs according to the score values",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   },
+   {
+    "what": "pair of dimensions",
+    "quote": "each cell represents the scatterplot for a pair of dimensions",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   }
+  ],
+  "attributes": [
+   {
+    "what": "Pearson correlation coefficient",
+    "quote": "in this case, Pearson correlation coefficient",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   },
+   {
+    "what": "numerical detail",
+    "quote": "The numerical detail includes the five-number summary of each dimension and the mean and the standard deviation",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   },
+   {
+    "what": "grid cells as bins",
+    "quote": "we divide the two-dimensional space into regular grid cells and then use each cell as a bin",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   }
+  ],
+  "views": [
+   {
+    "what": "combined histogram and boxplot",
+    "quote": "The main display for the rank-by-feature framework for 1D projections shows a combined histogram and boxplot",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   },
+   {
+    "what": "color-coded grid",
+    "quote": "The ranking result is visually presented in a color-coded grid",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   },
+   {
+    "what": "row per projection",
+    "quote": "each row represents a projection and is color-coded by the ranking score",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   }
+  ],
+  "encodings": [
+   {
+    "what": "color by score value",
+    "quote": "All dimensions are aligned from top to bottom in the original order, and each dimension is color-coded by the score value",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   },
+   {
+    "what": "bright blue green and bright brown",
+    "quote": "cells of high value have bright blue green colors and cells of low value have bright brown colors",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   },
+   {
+    "what": "scatterplot color",
+    "quote": "it is color-coded by the score value for the scatterplot",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   },
+   {
+    "what": "horizontal and vertical axis",
+    "quote": "The values of one dimension are aligned on the horizontal axis, and the values of the other dimension are aligned on the vertical axis",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   }
+  ],
+  "interactions": [
+   {
+    "what": "item slider",
+    "quote": "Users can manually browse projections by rapidly changing the dimension for an axis using the item slider attached to the corresponding axis of the projection view",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   },
+   {
+    "what": "mouse over, tooltip",
+    "quote": "they can just mouse over the row to view the numerical score value and the name of the dimension is shown in a tooltip window",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   },
+   {
+    "what": "select items, highlight",
+    "quote": "If users select a group of items in any view, they can see the selected items highlighted in all other views",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   },
+   {
+    "what": "combo box",
+    "quote": "Users can select a ranking criterion from a combo box in the control panel",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   }
+  ],
+  "questions": [
+   {
+    "quote": "Users could easily identify that there is a negative correlation between poverty level and the percentage of high school graduates",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   },
+   {
+    "quote": "users can systematically examine the most important 1D and 2D axis-parallel projections",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   },
+   {
+    "quote": "discover relationships, clusters, gaps, outliers, and other features",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   }
+  ],
+  "abstraction": [
+   {
+    "what": "five-number summary",
+    "quote": "They graphically show the five-number summary (the minimum, the first quartile, the median, the third quartile, and the maximum)",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   },
+   {
+    "what": "overall pattern of the score distribution",
+    "quote": "can easily see the overall pattern of the score distribution",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   },
+   {
+    "what": "clusters of dimensions",
+    "quote": "to rank clusters of dimensions instead of individual dimensions",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   }
+  ],
+  "why": [
+   {
+    "quote": "could enable users to better understand distributions in one (1D) or two dimensions (2D)",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   },
+   {
+    "quote": "it is difficult to comprehend patterns in more than three dimensions",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   },
+   {
+    "quote": "2D projections are widely understood by users, allowing them to concentrate on the data itself rather than being distracted by navigation controls",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   },
+   {
+    "quote": "ranking guides insight, statistics confirm",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   }
+  ],
+  "alternative": [
+   {
+    "quote": "they suffer from occlusion and the disorientation brought on by the cognitive burden of navigation",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   },
+   {
+    "quote": "in interpreting 2D projections whose axes are linear/nonlinear combination of two or more dimensions",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   },
+   {
+    "quote": "An exhaustive visual search is out of the question as the number of dimensions grows",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   },
+   {
+    "quote": "When there are many dimensions, the number of possible projections is too large to investigate by looking for interesting features",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   }
+  ],
+  "limit": [
+   {
+    "quote": "Techniques in category (2), axis-parallel, have a limitation that features can be detected in only the two selected dimensions",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   },
+   {
+    "quote": "the result is not so accurate, but it still makes sense at most cases",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   },
+   {
+    "quote": "the score overview becomes unacceptably overcrowded in a general PC environment when the dimensionality is greater than about 130",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   },
+   {
+    "quote": "The time complexity of the current implementations prevents exploratory data analysis",
+    "url": "https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html",
+    "check": "ok"
+   }
+  ],
+  "not_stated": [],
+  "id": "rank-by-feature"
+ },
+ "orange": {
+  "pages_read": [
+   "https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/radviz.html",
+   "https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/freeviz.html",
+   "https://orange.readthedocs.io/en/latest/widgets/rst/visualize/linearprojection.html"
+  ],
+  "retrieved": "2026-10-14",
+  "input_material": [
+   {
+    "quote": "all deal with class-labeled data and aim at finding the two-dimensional projection where instances of different classes are best separated",
+    "url": "https://orange.readthedocs.io/en/latest/widgets/rst/visualize/linearprojection.html",
+    "check": "ok"
+   }
+  ],
+  "entities": [
+   {
+    "what": "data instances",
+    "quote": "Data instances are shown as points inside the circle, with their positions determined by a metaphor from physics",
+    "url": "https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/radviz.html",
+    "check": "ok"
+   },
+   {
+    "what": "anchor points",
+    "quote": "The visualized variables are presented as anchor points equally spaced around the perimeter of a unit circle.",
+    "url": "https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/radviz.html",
+    "check": "ok"
+   }
+  ],
+  "relations": [
+   {
+    "what": "springs",
+    "quote": "each point is held in place with springs that are attached at the other end to the variable anchors.",
+    "url": "https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/radviz.html",
+    "check": "ok"
+   },
+   {
+    "what": "attract / repel",
+    "quote": "points in the same class attract each other, those from different class repel each other, and the resulting forces are exerted on the anchors of the attributes",
+    "url": "https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/freeviz.html",
+    "check": "ok"
+   }
+  ],
+  "attributes": [
+   {
+    "what": "three or more variables",
+    "quote": "can display data defined by three or more variables in a 2-dimensional projection",
+    "url": "https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/radviz.html",
+    "check": "ok"
+   },
+   {
+    "what": "unit vectors",
+    "quote": "on unit vectors of each of the dimensional axis",
+    "url": "https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/freeviz.html",
+    "check": "ok"
+   }
+  ],
+  "views": [
+   {
+    "what": "Radviz",
+    "quote": "Radviz (Hoffman et al. 1997) is a non-linear multi-dimensional visualization technique",
+    "url": "https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/radviz.html",
+    "check": "ok"
+   },
+   {
+    "what": "linear projection methods",
+    "quote": "This widget provides an interface to a number of linear projection methods",
+    "url": "https://orange.readthedocs.io/en/latest/widgets/rst/visualize/linearprojection.html",
+    "check": "ok"
+   }
+  ],
+  "encodings": [
+   {
+    "what": "equally spaced around the perimeter of a unit circle",
+    "quote": "equally spaced around the perimeter of a unit circle",
+    "url": "https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/radviz.html",
+    "check": "ok"
+   },
+   {
+    "what": "position",
+    "quote": "the point ends up at the position where the spring forces are in equilibrium",
+    "url": "https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/radviz.html",
+    "check": "ok"
+   },
+   {
+    "what": "stiffness",
+    "quote": "The stiffness of each spring is proportional to the value of the corresponding variable",
+    "url": "https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/radviz.html",
+    "check": "ok"
+   },
+   {
+    "what": "vectors that are very short",
+    "quote": "projections of unit vector that are very short compared to the others indicate that their associated attribute is not very informative for particular classification task",
+    "url": "https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/freeviz.html",
+    "check": "ok"
+   }
+  ],
+  "interactions": [
+   {
+    "what": "VizRank search algorithm",
+    "quote": "The fourth projection search technique that can be accessed from this widget is VizRank search algorithm with RadViz visualization",
+    "url": "https://orange.readthedocs.io/en/latest/widgets/rst/visualize/linearprojection.html",
+    "check": "ok"
+   },
+   {
+    "what": "find a set of variables",
+    "quote": "it can be used to find a set of variables that would result in an interesting visualization",
+    "url": "https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/radviz.html",
+    "check": "ok"
+   },
+   {
+    "what": "move anchors",
+    "quote": "Use a mouse pointer and hover above the end of an anchor. Click the left button and then you can move selected anchor where ever you want.",
+    "url": "https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/freeviz.html",
+    "check": "ok"
+   },
+   {
+    "what": "Selection",
+    "quote": "Selection can be used to manually define the subgroups in the data.",
+    "url": "https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/freeviz.html",
+    "check": "ok"
+   }
+  ],
+  "questions": [
+   {
+    "quote": "aim at finding the two-dimensional projection where instances of different classes are best separated",
+    "url": "https://orange.readthedocs.io/en/latest/widgets/rst/visualize/linearprojection.html",
+    "check": "ok"
+   },
+   {
+    "quote": "It looks like frogs and worms share some characteristics. What could these be? Use Data Table to find out.",
+    "url": "https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/freeviz.html",
+    "check": "ok"
+   }
+  ],
+  "abstraction": [
+   {
+    "what": "Dimensionality Reduction",
+    "quote": "are accessible through FreeViz’s Dimensionality Reduction tab",
+    "url": "https://orange.readthedocs.io/en/latest/widgets/rst/visualize/linearprojection.html",
+    "check": "ok"
+   },
+   {
+    "what": "cluster together",
+    "quote": "If checked, Gravity adjusts the tendency of same-colored points to cluster together.",
+    "url": "https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/freeviz.html",
+    "check": "ok"
+   }
+  ],
+  "why": [
+   {
+    "quote": "Notice that the particular visualization very nicely separates data instances of different class, making the visualization interesting and potentially informative.",
+    "url": "https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/radviz.html",
+    "check": "ok"
+   },
+   {
+    "quote": "we recommend to play with this option in order to understand how a change of one anchor affects the positions of the data points",
+    "url": "https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/freeviz.html",
+    "check": "ok"
+   }
+  ],
+  "alternative": [],
+  "limit": [
+   {
+    "quote": "this widget combines a number of visualization methods that are currently in research",
+    "url": "https://orange.readthedocs.io/en/latest/widgets/rst/visualize/linearprojection.html",
+    "check": "ok"
+   },
+   {
+    "quote": "The result of the optimization may depend on the initial placement of the anchors, which can be set in a circle, arbitrary or even manually.",
+    "url": "https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/freeviz.html",
+    "check": "ok"
+   },
+   {
+    "quote": "the results - because of different optimization methods and differences in their bias - may be quite different",
+    "url": "https://orange.readthedocs.io/en/latest/widgets/rst/visualize/linearprojection.html",
+    "check": "ok"
+   }
+  ],
+  "not_stated": [
+   "alternative"
+  ],
+  "id": "orange"
+ },
+ "upset": {
+  "pages_read": [
+   "https://upset.app/",
+   "https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/",
+   "https://vcg.seas.harvard.edu/publications/20140101-upset-visualization-of-intersecting-sets"
+  ],
+  "retrieved": "2026-10-14",
+  "input_material": [
+   {
+    "quote": "Figure 2 shows a simple example of a typical set-typed dataset, describing characters of the television show The Simpsons",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/",
+    "check": "ok"
+   },
+   {
+    "quote": "containing 3883 movies, 17 genres and multiple attributes such as release date and average rating",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/",
+    "check": "ok"
+   }
+  ],
+  "entities": [
+   {
+    "what": "columns",
+    "quote": "UpSet shows sets in the columns and set intersections in the rows",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/",
+    "check": "ok"
+   },
+   {
+    "what": "rows",
+    "quote": "Each row corresponds to a possible intersection: the filled-in cells show which set is part of an intersection.",
+    "url": "https://upset.app/",
+    "check": "ok"
+   },
+   {
+    "what": "exclusive intersections",
+    "quote": "These intersections correspond to the atomic areas of a Venn diagram",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/",
+    "check": "ok"
+   }
+  ],
+  "relations": [
+   {
+    "what": "set intersections",
+    "quote": "Set intersections are the basic building blocks of UpSet.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/",
+    "check": "ok"
+   },
+   {
+    "what": "which sets contribute to which intersection",
+    "quote": "The matrix cells in UpSet only encode which sets contribute to which intersection.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/",
+    "check": "ok"
+   }
+  ],
+  "attributes": [
+   {
+    "what": "attribute values",
+    "quote": "Through their elements the exclusive intersections are also associated with attribute values.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/",
+    "check": "ok"
+   },
+   {
+    "what": "summaries of element attributes",
+    "quote": "These columns can also show summaries of element attributes",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/",
+    "check": "ok"
+   }
+  ],
+  "views": [
+   {
+    "what": "matrix layout",
+    "quote": "UpSet visualizes set intersections in a matrix layout and introduces aggregates based on groupings and queries.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/",
+    "check": "ok"
+   },
+   {
+    "what": "two interlinked views",
+    "quote": "UpSet uses two separate but interlinked views to represent the data: the set view and the element view",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/",
+    "check": "ok"
+   },
+   {
+    "what": "bar charts",
+    "quote": "Each column corresponds to a set, and bar charts on top show the size of the set.",
+    "url": "https://upset.app/",
+    "check": "ok"
+   }
+  ],
+  "encodings": [
+   {
+    "what": "length of the bars",
+    "quote": "The cardinality of an intersection (the number of elements it contains) is encoded by the length of the bars to the right of the matrix.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/",
+    "check": "ok"
+   },
+   {
+    "what": "filled dark circle",
+    "quote": "we encode the sets contained in an exclusive intersection with a filled dark circle",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/",
+    "check": "ok"
+   },
+   {
+    "what": "light-gray circle",
+    "quote": "we encode sets that do not participate in the exclusive intersection with a light-gray circle",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/",
+    "check": "ok"
+   },
+   {
+    "what": "“Deviation” (orange and blue bars)",
+    "quote": "the “Deviation” (orange and blue bars) that indicate how much an intersection deviates from the expected size if we assumed that set membership were random.",
+    "url": "https://upset.app/",
+    "check": "ok"
+   }
+  ],
+  "interactions": [
+   {
+    "what": "sort",
+    "quote": "Hence, we offer various options to sort exclusive intersections that are designed to support specific tasks.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/",
+    "check": "ok"
+   },
+   {
+    "what": "collapsed aggregates",
+    "quote": "Aggregates can be collapsed to save space, hiding the exclusive intersections contained in them",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/",
+    "check": "ok"
+   },
+   {
+    "what": "query",
+    "quote": "In a query, an analyst specifies the rules to create an aggregation.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/",
+    "check": "ok"
+   },
+   {
+    "what": "propagated between both views",
+    "quote": "Queries based on containment in specific intersections, aggregates or driven by attribute filters are propagated between both views.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/",
+    "check": "ok"
+   }
+  ],
+  "questions": [
+   {
+    "quote": "to answer questions such as: Which is the biggest intersection of degree 3?",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/",
+    "check": "ok"
+   },
+   {
+    "quote": "Which two-set intersection has the highest average attribute value?",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/",
+    "check": "ok"
+   }
+  ],
+  "abstraction": [
+   {
+    "what": "abstracted away as counts",
+    "quote": "Items are abstracted away as “counts”, though attributes of the items can be visualized in integrated or adjacent plots.",
+    "url": "https://upset.app/",
+    "check": "ok"
+   },
+   {
+    "what": "nested, hierarchical",
+    "quote": "Collective aggregations can be nested, making the aggregation hierarchical.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/",
+    "check": "ok"
+   },
+   {
+    "what": "collections of exclusive intersections",
+    "quote": "Aggregates are collections of exclusive intersections that are defined using a task driven approach.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/",
+    "check": "ok"
+   }
+  ],
+  "why": [
+   {
+    "quote": "UpSet is unique because it exploits the duality between visualization of attributes and visualization of sets.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/",
+    "check": "ok"
+   },
+   {
+    "quote": "UpSet shines when you want to look at all combinations of how sets intersect",
+    "url": "https://upset.app/",
+    "check": "ok"
+   },
+   {
+    "quote": "The impetus of the measure is to convey how “surprising” the cardinality of an intersection is given the size of its constituting sets.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/",
+    "check": "ok"
+   }
+  ],
+  "alternative": [
+   {
+    "quote": "Venn diagrams are not suitable to visualize intersections of more than three or four sets.",
+    "url": "https://upset.app/",
+    "check": "ok"
+   },
+   {
+    "quote": "Euler and Venn diagrams are not a good choice, since they use area to encode quantitative values, which is shown to be inferior to, e.g., position",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/",
+    "check": "ok"
+   },
+   {
+    "quote": "While this figure looks fun, it is not a useful visualization. Try to extract any information from it.",
+    "url": "https://upset.app/",
+    "check": "ok"
+   }
+  ],
+  "limit": [
+   {
+    "quote": "We observe a practical limitation at about 40-50 sets",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4720993/",
+    "check": "ok"
+   },
+   {
+    "quote": "UpSet works best for set data with more than three and less than about 30 sets",
+    "url": "https://upset.app/",
+    "check": "ok"
+   },
+   {
+    "quote": "you should be careful about interpreting data where the size of the sets is very different",
+    "url": "https://upset.app/",
+    "check": "ok"
+   },
+   {
+    "quote": "If you want to see individual items in your set, you should probably go with a Euler Diagram",
+    "url": "https://upset.app/",
+    "check": "ok"
+   }
+  ],
+  "not_stated": [],
+  "id": "upset"
+ },
+ "kepler-mapper": {
+  "pages_read": [
+   "https://kepler-mapper.scikit-tda.org/en/latest/theory.html",
+   "https://kepler-mapper.scikit-tda.org/en/latest/started.html",
+   "https://kepler-mapper.scikit-tda.org/en/latest/html-visualization-features.html",
+   "https://kepler-mapper.scikit-tda.org/en/latest/notebooks/Cancer-demo.html",
+   "https://joss.theoj.org/papers/10.21105/joss.01315.pdf"
+  ],
+  "retrieved": "2026-10-14",
+  "input_material": [
+   {
+    "quote": "Extraction of information from datasets that are high-dimensional, incomplete and noisy is generally challenging.",
+    "url": "https://kepler-mapper.scikit-tda.org/en/latest/theory.html",
+    "check": "ok"
+   }
+  ],
+  "entities": [
+   {
+    "what": "nodes",
+    "quote": "The clusters become nodes in a graph.",
+    "url": "https://kepler-mapper.scikit-tda.org/en/latest/theory.html",
+    "check": "ok"
+   },
+   {
+    "what": "a single point in multiple nodes",
+    "quote": "Due to the overlap, a single point can appear in multiple nodes.",
+    "url": "https://kepler-mapper.scikit-tda.org/en/latest/theory.html",
+    "check": "ok"
+   }
+  ],
+  "relations": [
+   {
+    "what": "edge",
+    "quote": "When there is such a member intersection, draw an edge between these nodes.",
+    "url": "https://kepler-mapper.scikit-tda.org/en/latest/theory.html",
+    "check": "ok"
+   },
+   {
+    "what": "min-intersection",
+    "quote": "is used to determine whether an edge should be drawn between pairs of nodes.",
+    "url": "https://kepler-mapper.scikit-tda.org/en/latest/html-visualization-features.html",
+    "check": "ok"
+   }
+  ],
+  "attributes": [
+   {
+    "what": "color_values",
+    "quote": "A set (or sets) of color_values associate values with samples.",
+    "url": "https://kepler-mapper.scikit-tda.org/en/latest/html-visualization-features.html",
+    "check": "ok"
+   }
+  ],
+  "views": [
+   {
+    "what": "D3.js HTML interface",
+    "quote": "For interactive visualization and exploration in the browser, Kepler Mapper can create a visual HTML interface utilizing D3.js.",
+    "url": "https://joss.theoj.org/papers/10.21105/joss.01315.pdf",
+    "check": "ok"
+   },
+   {
+    "what": "d3-force simulation",
+    "quote": "Normally, nodes are free to float around the visualization, acted upon by gravity and repulsion forces decided by the underlying d3-force simulation.",
+    "url": "https://kepler-mapper.scikit-tda.org/en/latest/html-visualization-features.html",
+    "check": "ok"
+   },
+   {
+    "what": "static visualizations",
+    "quote": "For static visualizations, we provide an adapter so that visualization functionality from NetworkX",
+    "url": "https://joss.theoj.org/papers/10.21105/joss.01315.pdf",
+    "check": "ok"
+   }
+  ],
+  "encodings": [
+   {
+    "what": "nodes size",
+    "quote": "Size the graph nodes by a function of interest (for instance: number of members inside cluster)",
+    "url": "https://kepler-mapper.scikit-tda.org/en/latest/theory.html",
+    "check": "ok"
+   },
+   {
+    "what": "nodes color",
+    "quote": "Color the graph nodes by a function of interest (for instance: average customer spend)",
+    "url": "https://kepler-mapper.scikit-tda.org/en/latest/theory.html",
+    "check": "ok"
+   },
+   {
+    "what": "edges shape",
+    "quote": "Shape the graph edges by a function of interest (for instance: dotted line when intersecting members < 3 else solid line)",
+    "url": "https://kepler-mapper.scikit-tda.org/en/latest/theory.html",
+    "check": "ok"
+   },
+   {
+    "what": "color_function",
+    "quote": "First we visualize the resulting graph via a color_function that associates to lens data their x-coordinate distance to min",
+    "url": "https://kepler-mapper.scikit-tda.org/en/latest/notebooks/Cancer-demo.html",
+    "check": "ok"
+   }
+  ],
+  "interactions": [
+   {
+    "what": "searchbar",
+    "quote": "The searchbar can be used to highlight (i.e., visually resize) nodes based on whether their samples’ custom_tooltips match a query.",
+    "url": "https://kepler-mapper.scikit-tda.org/en/latest/html-visualization-features.html",
+    "check": "ok"
+   },
+   {
+    "what": "min-intersection selector",
+    "quote": "The html visualization can dynamically change the min-intersection it uses to draw edges.",
+    "url": "https://kepler-mapper.scikit-tda.org/en/latest/html-visualization-features.html",
+    "check": "ok"
+   },
+   {
+    "what": "frozen",
+    "quote": "clicking-and-dragging a node will cause that node to become “frozen” – it will stay where you drag it.",
+    "url": "https://kepler-mapper.scikit-tda.org/en/latest/html-visualization-features.html",
+    "check": "ok"
+   },
+   {
+    "what": "white background",
+    "quote": "The visualization can be changed to a white background which may be better for printing.",
+    "url": "https://kepler-mapper.scikit-tda.org/en/latest/html-visualization-features.html",
+    "check": "ok"
+   }
+  ],
+  "questions": [
+   {
+    "quote": "This is an unsupervised method of generating a visual representation of the data that can often reveal new insights of the data that other methods cannot.",
+    "url": "https://kepler-mapper.scikit-tda.org/en/latest/theory.html",
+    "check": "ok"
+   },
+   {
+    "quote": "Get answers to questions you haven’t even asked yet.",
+    "url": "https://kepler-mapper.scikit-tda.org/en/latest/theory.html",
+    "check": "ok"
+   }
+  ],
+  "abstraction": [
+   {
+    "what": "main workflow",
+    "quote": "The main workflow for Mapper is to project the data, group the image, apply clustering to the preimage of the groups, and then build a simplicial complex.",
+    "url": "https://kepler-mapper.scikit-tda.org/en/latest/started.html",
+    "check": "ok"
+   },
+   {
+    "what": "overlapping intervals/hypercubes",
+    "quote": "Cover this projection with overlapping intervals/hypercubes.",
+    "url": "https://kepler-mapper.scikit-tda.org/en/latest/theory.html",
+    "check": "ok"
+   },
+   {
+    "what": "lossy compressed",
+    "quote": "A lossy compressed mathematical representation of a data set.",
+    "url": "https://kepler-mapper.scikit-tda.org/en/latest/theory.html",
+    "check": "ok"
+   },
+   {
+    "what": "global structure",
+    "quote": "You can study the global structure of a dataset, down to the details of a single data point, without incurring a cognitive overload.",
+    "url": "https://kepler-mapper.scikit-tda.org/en/latest/theory.html",
+    "check": "ok"
+   }
+  ],
+  "why": [
+   {
+    "quote": "Though not exact, mapper is able to estimate important connectivity aspects of the underlying space of the data so that it can be explored in a visual format.",
+    "url": "https://kepler-mapper.scikit-tda.org/en/latest/theory.html",
+    "check": "ok"
+   },
+   {
+    "quote": "The fundamental assumption in topology is that connectivity is more important than distance.",
+    "url": "https://kepler-mapper.scikit-tda.org/en/latest/theory.html",
+    "check": "ok"
+   },
+   {
+    "quote": "The module employs the strategy pattern, giving users control over the clustering algorithm, covering scheme, and nerve scheme.",
+    "url": "https://joss.theoj.org/papers/10.21105/joss.01315.pdf",
+    "check": "ok"
+   }
+  ],
+  "alternative": [
+   {
+    "quote": "However, raw TDA metrics cannot be readily visualized.",
+    "url": "https://joss.theoj.org/papers/10.21105/joss.01315.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "either apply clustering on the projection and suffer projection loss",
+    "url": "https://kepler-mapper.scikit-tda.org/en/latest/theory.html",
+    "check": "ok"
+   }
+  ],
+  "limit": [
+   {
+    "quote": "either apply clustering on the projection and suffer projection loss",
+    "url": "https://kepler-mapper.scikit-tda.org/en/latest/theory.html",
+    "check": "ok"
+   },
+   {
+    "quote": "A lossy compressed mathematical representation of a data set",
+    "url": "https://kepler-mapper.scikit-tda.org/en/latest/theory.html",
+    "check": "ok"
+   },
+   {
+    "quote": "Though not exact, mapper is able to estimate important connectivity aspects of the underlying space of the data",
+    "url": "https://kepler-mapper.scikit-tda.org/en/latest/theory.html",
+    "check": "ok"
+   }
+  ],
+  "not_stated": [],
+  "id": "kepler-mapper"
+ },
+ "miegakure": {
+  "pages_read": [
+   "https://miegakure.com",
+   "https://store.steampowered.com/app/355750",
+   "https://blog.playstation.com/2014/12/04/miegakure-exploring-a-4d-world-on-ps4/",
+   "https://history.siggraph.org/?p=217392"
+  ],
+  "retrieved": "2026-10-14",
+  "input_material": [
+   {
+    "quote": "what if each position was represented using four numbers?",
+    "url": "https://miegakure.com",
+    "check": "ok"
+   }
+  ],
+  "entities": [
+   {
+    "what": "4D objects",
+    "quote": "instead of taking a 2D slice of a 3D object, we are taking a 3D slice of 4D objects",
+    "url": "https://miegakure.com",
+    "check": "ok"
+   },
+   {
+    "what": "3D character",
+    "quote": "in which you are a 3D character inside 4D world",
+    "url": "https://history.siggraph.org/?p=217392",
+    "check": "ok"
+   }
+  ],
+  "relations": [
+   {
+    "what": "move and turn the 3D slice",
+    "quote": "as we move and turn the 3D slice around within the 4D world",
+    "url": "https://miegakure.com",
+    "check": "ok"
+   }
+  ],
+  "attributes": [
+   {
+    "what": "5D",
+    "quote": "If you count time, this game is 5D.",
+    "url": "https://miegakure.com",
+    "check": "ok"
+   }
+  ],
+  "views": [
+   {
+    "what": "three dimensions at a time",
+    "quote": "You see three dimensions at a time and by pressing a button you can trade which three dimensions you are seeing.",
+    "url": "https://miegakure.com",
+    "check": "ok"
+   },
+   {
+    "what": "2D/3D version",
+    "quote": "It is used throughout the game to help players understand the 4th dimension.",
+    "url": "https://miegakure.com",
+    "check": "ok"
+   }
+  ],
+  "encodings": [],
+  "interactions": [
+   {
+    "what": "press a button",
+    "quote": "by pressing a button you can trade which three dimensions you are seeing",
+    "url": "https://miegakure.com",
+    "check": "ok"
+   },
+   {
+    "what": "translate the slice",
+    "quote": "Translating the slice is unlocked later in the game.",
+    "url": "https://miegakure.com",
+    "check": "ok"
+   },
+   {
+    "what": "rotate the 3D slice",
+    "quote": "Yes, but not initially in order to teach players in a more gradual way, and because many puzzles are more fun with this limitation.",
+    "url": "https://miegakure.com",
+    "check": "ok"
+   }
+  ],
+  "questions": [
+   {
+    "quote": "what if there was another direction you could move along in addition to the first three?",
+    "url": "https://store.steampowered.com/app/355750",
+    "check": "ok"
+   },
+   {
+    "quote": "Why does the game slice the 4th dimension instead of projecting it?",
+    "url": "https://miegakure.com",
+    "check": "ok"
+   }
+  ],
+  "abstraction": [],
+  "why": [
+   {
+    "quote": "I wanted the 4D world to feel like an extension of the 3D world we live in.",
+    "url": "https://miegakure.com",
+    "check": "ok"
+   },
+   {
+    "quote": "The way we chose is a method that has been popularized in the novella Flatland.",
+    "url": "https://store.steampowered.com/app/355750",
+    "check": "ok"
+   },
+   {
+    "quote": "So we had to come up with a way to display this calculated 4D world so that our three-dimensional brains could comprehend it.",
+    "url": "https://store.steampowered.com/app/355750",
+    "check": "ok"
+   }
+  ],
+  "alternative": [
+   {
+    "quote": "4D to 2D is two dimensions down: a lot of objects are going to overlap on the screen, which makes things hard to understand.",
+    "url": "https://miegakure.com",
+    "check": "ok"
+   }
+  ],
+  "limit": [
+   {
+    "quote": "When you translate the slice you cannot see where you are going",
+    "url": "https://miegakure.com",
+    "check": "ok"
+   },
+   {
+    "quote": "Miegakure is still very much a work in progress, but we hope to release the game next year.",
+    "url": "https://blog.playstation.com/2014/12/04/miegakure-exploring-a-4d-world-on-ps4/",
+    "check": "ok"
+   },
+   {
+    "quote": "There is no announced date yet.",
+    "url": "https://miegakure.com",
+    "check": "ok"
+   }
+  ],
+  "not_stated": [
+   "abstraction",
+   "encodings",
+   "备注：marctenbosch.com（作者站点）域名解析失败，没读；encodings 只有“看起来像变形”的 MRI 类比，页面没有写颜色、位置或大小代表什么；作者站点上讲渲染的技术页只看到链接标题，没有打开，也没找到 4D Toys 的页面。"
+  ],
+  "id": "miegakure"
+ },
+ "imaxes": {
+  "pages_read": [
+   "https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf",
+   "https://research.monash.edu/en/publications/imaxes-immersive-axes-as-embodied-affordances-for-interactive-mul/"
+  ],
+  "retrieved": "2026-10-14",
+  "input_material": [
+   {
+    "quote": "We introduce ImAxes, an immersive system for exploring multivariate data using fluid, modeless interaction.",
+    "url": "https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "reveals the attributes of good and bad quality wine",
+    "url": "https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf",
+    "check": "ok"
+   }
+  ],
+  "entities": [
+   {
+    "what": "embodied data axis",
+    "quote": "The basic interface element is an embodied data axis.",
+    "url": "https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf",
+    "check": "ok"
+   },
+   {
+    "what": "data attribute",
+    "quote": "Each axis corresponds to a data attribute from the dataset.",
+    "url": "https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf",
+    "check": "ok"
+   }
+  ],
+  "relations": [
+   {
+    "what": "touch the other",
+    "quote": "we require the axes in each of the various symbols to actually touch the other, so that they form a kind of physical skeleton for the data visualisation",
+    "url": "https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf",
+    "check": "ok"
+   },
+   {
+    "what": "Links appear between two SPLOMs",
+    "quote": "Links appear between two SPLOMs when they are within a given distance.",
+    "url": "https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf",
+    "check": "ok"
+   }
+  ],
+  "attributes": [
+   {
+    "what": "axis(s, e, d)",
+    "quote": "where s and e are the positions in 3D space of the axis start and end points, and d is the data attribute linked to the axis",
+    "url": "https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf",
+    "check": "ok"
+   }
+  ],
+  "views": [
+   {
+    "what": "scatterplots, SPLOMs, PCPs",
+    "quote": "to create standard visualisations for understanding multidimensional data: scatterplots, SPLOMs, PCPs and their three-dimensional variants",
+    "url": "https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf",
+    "check": "ok"
+   },
+   {
+    "what": "3D SPLOM",
+    "quote": "it is possible with our system to form 3D scatterplot matrices from existing 3D scatterplots",
+    "url": "https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf",
+    "check": "ok"
+   },
+   {
+    "what": "hierarchy tree linking 2D scatterplots",
+    "quote": "the fabrication of a hierarchy tree linking 2D scatterplots",
+    "url": "https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf",
+    "check": "ok"
+   }
+  ],
+  "encodings": [
+   {
+    "what": "arrowhead",
+    "quote": "An arrowhead at the end of the axis indicates the direction of increasing attribute value, and minimum and maximum value labels display the attribute range.",
+    "url": "https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf",
+    "check": "ok"
+   },
+   {
+    "what": "proximity and relative orientation",
+    "quote": "The type of visualisation that appears depends on the proximity and relative orientation of the axes with respect to one another",
+    "url": "https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf",
+    "check": "ok"
+   }
+  ],
+  "interactions": [
+   {
+    "what": "grab and place",
+    "quote": "ImAxes uses a grab and place interaction to manipulate visualisation elements",
+    "url": "https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf",
+    "check": "ok"
+   },
+   {
+    "what": "filtering",
+    "quote": "The data points that are not within the specified ranges disappear from the visualisation.",
+    "url": "https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf",
+    "check": "ok"
+   },
+   {
+    "what": "Brushing with Motion",
+    "quote": "causes the points and/or lines that are associated with that axis to move proportionally to the displacement of the axis",
+    "url": "https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf",
+    "check": "ok"
+   },
+   {
+    "what": "Axis Swipe",
+    "quote": "Dragging an axis across an array of axes or visualisations results in the successive apparition and disappearing of visualisations as defined by our grammar.",
+    "url": "https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf",
+    "check": "ok"
+   }
+  ],
+  "questions": [
+   {
+    "quote": "how more traditional computing applications such as data analysis will look in Virtual and Augmented Reality (VR/AR)",
+    "url": "https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf",
+    "check": "ok"
+   }
+  ],
+  "abstraction": [
+   {
+    "what": "1-, 2- and 3-D structures",
+    "quote": "The three other symbols in the grammar model are the 1-, 2- and 3-D structures that can be built with axes",
+    "url": "https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf",
+    "check": "ok"
+   },
+   {
+    "what": "combine them",
+    "quote": "The user can manipulate these axes like physical objects in the immersive environment and combine them into sophisticated visualisations.",
+    "url": "https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf",
+    "check": "ok"
+   }
+  ],
+  "why": [
+   {
+    "quote": "We want there to be a physical affordance so that data visualisations look and behave like physical objects",
+    "url": "https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "the system to be declarative in the sense that the order of construction should not matter",
+    "url": "https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "We believe that we need to explore immersive data visualisation to be ready to exploit the technology fully as it becomes mainstream",
+    "url": "https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf",
+    "check": "ok"
+   }
+  ],
+  "alternative": [
+   {
+    "quote": "Projecting 3D data visualisations onto a 2D screen suffers from inherent issues due to occlusions, perspective distortion and interaction problems using a 2D input device",
+    "url": "https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "as dimensionality increases, a traditional desktop display only offers a limited surface to display data",
+    "url": "https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "Unlike SPLOMs, in PCPs only the relations between adjacent axes are easily visible.",
+    "url": "https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf",
+    "check": "ok"
+   }
+  ],
+  "limit": [
+   {
+    "quote": "Conceptually, the number of axes that a user can reasonably handle and interact with is limited.",
+    "url": "https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "Over this limit, usability issues such as the need for the user to walk, crouch or reach to access the axes may occur.",
+    "url": "https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "However, we recognise that this illustrative scenario cannot be considered a case study and that in the future we acknowledge that empirical validation of ImAxes is needed.",
+    "url": "https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "both graphics system and user-perception limitations can still be reached before long",
+    "url": "https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf",
+    "check": "ok"
+   }
+  ],
+  "not_stated": [
+   "encodings（颜色、大小、线型未写）",
+   "备注：DOI 页面 https://doi.org/10.1145/3126594.3126613 返回 403，没读；代码只在 github.com，没读；论文是用例演示，作者写明还需要经验验证，本批没找到用户研究结果。"
+  ],
+  "id": "imaxes"
+ },
+ "hyperbolic-browser": {
+  "pages_read": [
+   "https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm",
+   "https://ils.unc.edu/~march/courses/357_f03/p388-lamping.pdf"
+  ],
+  "retrieved": "2026-10-14",
+  "input_material": [
+   {
+    "quote": "Many hierarchies, such as organization charts or directory structures, are too large to display in their entirety on a computer screen.",
+    "url": "https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm",
+    "check": "ok"
+   },
+   {
+    "quote": "in four World-Wide-Web hierarchies identified by their URLs",
+    "url": "https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm",
+    "check": "ok"
+   }
+  ],
+  "entities": [
+   {
+    "what": "tree",
+    "quote": "The hyperbolic browser initially displays a tree with its root at the center",
+    "url": "https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm",
+    "check": "ok"
+   },
+   {
+    "what": "node",
+    "quote": "calculating a circle in the hyperbolic plane around each node that is guaranteed not to intersect the circle of any other node",
+    "url": "https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm",
+    "check": "ok"
+   }
+  ],
+  "relations": [
+   {
+    "what": "parents, children, and siblings",
+    "quote": "so that the distance (as measured in the hyperbolic geometry) between parents, children, and siblings is approximately the same everywhere in the hierarchy",
+    "url": "https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm",
+    "check": "ok"
+   }
+  ],
+  "attributes": [
+   {
+    "what": "interest levels",
+    "quote": "according to the varying interest levels of its parts",
+    "url": "https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm",
+    "check": "ok"
+   },
+   {
+    "what": "node information",
+    "quote": "Space for displaying node information is also computed during layout and automatically transformed with each change of focus",
+    "url": "https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm",
+    "check": "ok"
+   }
+  ],
+  "views": [
+   {
+    "what": "circular display region",
+    "quote": "map this plane onto a circular display region",
+    "url": "https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm",
+    "check": "ok"
+   },
+   {
+    "what": "bring other nodes into focus",
+    "quote": "but the display can be smoothly transformed to bring other nodes into focus",
+    "url": "https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm",
+    "check": "ok"
+   }
+  ],
+  "encodings": [
+   {
+    "what": "space available to a node",
+    "quote": "the amount of space available to a node falls off as a continuous function of its distance in the tree from the point in the center",
+    "url": "https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm",
+    "check": "ok"
+   },
+   {
+    "what": "magnified",
+    "quote": "Regions that approach the center become magnified, while regions that were in the center shrink as they are moved toward the edge.",
+    "url": "https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm",
+    "check": "ok"
+   }
+  ],
+  "interactions": [
+   {
+    "what": "clicking, dragging",
+    "quote": "The user can change focus either by clicking on any visible point to bring it into focus at the center, or by dragging any visible point interactively to any other position",
+    "url": "https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm",
+    "check": "ok"
+   },
+   {
+    "what": "rotate the names of children",
+    "quote": "a feature to rotate the names of children of a pointed-to node through the feedback area and then jump to the current child",
+    "url": "https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm",
+    "check": "ok"
+   },
+   {
+    "what": "interactive dragging",
+    "quote": "allowed interactive dragging of the tree within the window",
+    "url": "https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm",
+    "check": "ok"
+   }
+  ],
+  "questions": [
+   {
+    "quote": "It would be useful to be able to see the entire hierarchy while focusing on any particular part so that the relationship of parts to the whole can be seen",
+    "url": "https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm",
+    "check": "ok"
+   }
+  ],
+  "abstraction": [
+   {
+    "what": "different representations",
+    "quote": "This can be combined with a facility that uses different representations for nodes depending on the amount of real space they receive.",
+    "url": "https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm",
+    "check": "ok"
+   }
+  ],
+  "why": [
+   {
+    "quote": "Thus the context always includes several generations of parents, siblings, and children, making it easier for the user to explore the hierarchy without getting lost.",
+    "url": "https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm",
+    "check": "ok"
+   },
+   {
+    "quote": "The emphasis of the hyperbolic browser is a particular exploitation of hyperbolic space for information visualization.",
+    "url": "https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm",
+    "check": "ok"
+   },
+   {
+    "quote": "In one approach, rotations are added so that the original root node always keeps its original orientation on the display.",
+    "url": "https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm",
+    "check": "ok"
+   }
+  ],
+  "alternative": [
+   {
+    "quote": "The problem is that there is no satisfactory conventional 2-d layout of a large tree, because of its exponential growth.",
+    "url": "https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm",
+    "check": "ok"
+   },
+   {
+    "quote": "This requires currently expensive 3D animation support. Furthermore, trees with more than approximately 1000 nodes are difficult to manipulate.",
+    "url": "https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm",
+    "check": "ok"
+   },
+   {
+    "quote": "it tends to obscure the hierarchical structure of the values and provides no way of focusing on one part of a hierarchy without losing the context.",
+    "url": "https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm",
+    "check": "ok"
+   },
+   {
+    "quote": "nodes more than a link or two from the node in focus get almost no screen real-estate, making it very hard to perceive the context",
+    "url": "https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm",
+    "check": "ok"
+   }
+  ],
+  "limit": [
+   {
+    "quote": "Though no statistically significant performance difference was identified, a strong preference for the hyperbolic tree browser was established",
+    "url": "https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm",
+    "check": "ok"
+   },
+   {
+    "quote": "Though this particular task and application were adequate for a rough baseline evaluation, there are problematic aspects.",
+    "url": "https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm",
+    "check": "ok"
+   },
+   {
+    "quote": "The hyperbolic browser can display 1000 nodes of which about the 50 nearest the focus can show from 3 to dozens of characters of text.",
+    "url": "https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm",
+    "check": "ok"
+   },
+   {
+    "quote": "One other possible compromise is to drop text during animation. We found this to be a significant distraction, however.",
+    "url": "https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm",
+    "check": "ok"
+   }
+  ],
+  "not_stated": [
+   "备注：第二个地址 https://ils.unc.edu/~march/courses/357_f03/p388-lamping.pdf 的标题是 Visualizing Large Trees Using the Hyperbolic Browser（Lamping 与 Rao，CHI '96，第 388–389 页），不是 1995 年 Lamping、Rao、Pirolli 的那篇；它的文字层是 OCR，有误识，本批没有从它摘录原文。"
+  ],
+  "id": "hyperbolic-browser"
  }
 }

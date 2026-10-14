@@ -919,6 +919,11 @@
   source: [derived]
   structure_note: "每个词（或样本）是高维向量，被投影到二维或三维；点带标签"
   focus: [cluster, position]
+  dims:
+  - project
+  dims_note: 每个词或样本是一个高维向量；用 PCA、t-SNE 等投影到二维或三维，可旋转缩放；右侧检视面板给最近邻
+  forms:
+  - projection-scatter
   schools: [channels]
   dropped: "投影以外的维度和精确距离；全局形状靠投影方法保留多少"
   views_note: "二维/三维散点（投影视图）+ 右侧检视面板（搜索、最近邻）"
@@ -971,6 +976,716 @@
   ev: ["encodings:Node-to-axis assignment and node-on-axis position are determined solely by network structure", "questions:exposing both trends and outlier patterns", "views:Multiple hive plots are presented together"]
   confidence: high
   thinking: ["alternative:In a hairball, data is subordinate to layout", "why:Hive plots make it possible to assess network structure", "limit:The axis and node mapping is arbitrary"]
+
+- id: tsne-misread
+  origin: external
+  name: How to Use t-SNE Effectively（Distill）
+  urls:
+  - https://distill.pub/2016/misread-tsne/
+  domain: 机器学习与嵌入分析
+  field: data
+  issue: 把几百上千维的点压成二维图以后，图上的哪些东西（簇的大小、簇之间的距离、形状）能读，哪些会误读
+  issue_types:
+  - explain-teach
+  - explore-discover
+  structure:
+  - spatial
+  modifiers:
+  - derived
+  source:
+  - derived
+  structure_note: 对象是高维空间里的点（页面例子：100 维里的 500 个点，或二维平面上的簇）；位置是 t-SNE 算出来的二维坐标；perplexity 是“每个点有多少近邻”的猜测，决定局部与全局怎样平衡
+  focus:
+  - cluster
+  - position
+  dims:
+  - project
+  - juxtapose
+  dims_note: 几百到几千维，用 t-SNE 压到二维；同一份数据要看多个 perplexity 的图并排比较，不能只看一张
+  forms:
+  - projection-scatter
+  schools:
+  - channels
+  views_note: 交互式文章：每个例子是一组 t-SNE 迭代动画（播放、暂停、步进），簇用颜色标出；同一数据放五个 perplexity 的图并排
+  dropped: 簇的相对大小和簇间距离：页面写明在图上读不出来
+  abstraction:
+  - separate-views
+  abstraction_note: 同一份数据用多个 perplexity 各画一张图
+  ev:
+  - questions:prevent some common misreadings
+  - encodings:distances between well-separated clusters in a t-SNE plot may mean nothing
+  - attributes:A second feature of t-SNE is a tuneable parameter
+  - views:five different perplexity values
+  - abstraction:analyzing multiple plots with different perplexities
+  thinking:
+  - why:a series of simple examples
+  - alternative:the t-SNE plot is more accurate than any linear projection could be
+  - limit:you cannot see relative sizes of clusters in a t-SNE plot
+  confidence: high
+  note: 这是一篇讲“怎么读”的文章，不是产品；设计者的理由和局限都写在文章里，所以放进来。
+
+- id: grand-tour
+  origin: external
+  name: Visualizing Neural Networks with the Grand Tour（Distill）
+  urls:
+  - https://distill.pub/2020/grand-tour/
+  domain: 机器学习与嵌入分析
+  field: data
+  issue: 看神经网络训练的过程中、以及一层一层往后，十维以上的激活向量怎么变：哪些类先分开、测试集和训练集差在哪里
+  issue_types:
+  - explore-discover
+  - compare
+  structure:
+  - spatial
+  - sequence
+  modifiers:
+  - derived
+  - temporal
+  source:
+  - derived
+  - recorded
+  structure_note: 对象是训练样本在某一层的激活向量（softmax 层是 10 维），按训练轮次（epoch）和网络层记录；位置是随机旋转后投影到二维的结果
+  focus:
+  - cluster
+  - time
+  - position
+  dims:
+  - tour
+  - project
+  dims_note: 十维激活向量用线性投影的动画（Grand Tour）看：高维里平滑旋转，再投影到二维；轴有含义，所以可以拖手柄手动设定投影；作者特意不用 t-SNE、UMAP
+  forms:
+  - tour
+  schools:
+  - channels
+  views_note: 单个动画散点图（数据点可显示为图片，或按标签着色）；训练集与测试集、各层的图并排，框选一处在其他图里高亮；拖动轴手柄设定新的线性投影
+  dropped: 非线性投影擅长的拓扑与聚类：页面写以拓扑为主要关注点时可能选别的方法
+  abstraction:
+  - separate-views
+  abstraction_note: 按层、按训练轮次分成多张图；Grand Tour 让相邻线性层的图可以对齐
+  ev:
+  - attributes:the points in the softmax layer for our example datasets are 10 dimensional
+  - views:Starting with a random velocity
+  - encodings:the color of points are more mixed in testing
+  - interactions:dragging around user-interface handles
+  - views:The Grand Tour, on the other hand, uses a single animated view
+  thinking:
+  - why:Linear methods are attractive because they are particularly easy to reason about
+  - alternative:For both UMAP and t-SNE, the position of each single point depends non-trivially on the whole data distribution
+  - limit:additional research is required to incorporate multiple branches directly
+  confidence: high
+  note: 文章同时是方法说明和工具（可交互的网页）；设计者明说为什么不用 t-SNE 和 PCA（分别因为单点位置依赖整体分布、前两个主成分不比第三个好多少）。
+
+- id: dtour
+  origin: project
+  domain: 高维数据探索
+  field: data
+  issue: 把四维以上的数据沿一串二维投影“巡游”，既保持点的身份，又能引导、手动调整或自动漫游，用来判断嵌入里的结构是真的还是投影造成的
+  issue_types:
+  - explore-discover
+  - compare
+  structure:
+  - spatial
+  - sequence
+  modifiers:
+  - derived
+  source:
+  - derived
+  - given
+  structure_note: 对象是高维点（文本、图像、单细胞数据，最多约百万点）；巡游是一串循环的关键帧投影，帧与帧之间做测地线插值，点一一对应
+  focus:
+  - cluster
+  - identity
+  - position
+  dims:
+  - tour
+  - juxtapose
+  dims_note: 四维以上的数据：用“关键帧投影”的循环序列看，平滑过渡并保持点的身份；一圈预览把几个关键投影并排摆出来，兼顾逐帧动画和并排比较
+  forms:
+  - tour
+  schools:
+  - channels
+  views_note: 中央一张二维散点，外围一圈投影预览；圆形巡游滑块（环的宽窄表示关键帧之间的测地距离）；坐标轴手柄的方向和长度表示该维对当前投影的贡献，可拖动；套索或按标签选点并跨投影跟踪；自动漫游
+  dropped: 关键帧之间的插值帧没有解释（作者写明只有关键帧可解释，插值是帮助跟踪点的）
+  abstraction:
+  - separate-views
+  abstraction_note: 一串二维投影构成对高维的多个侧面；预览画廊给概览，滑块给细看
+  ev:
+  - relations:a sequence of 2D projections with one-to-one point correspondence
+  - views:A central 2D scatter ringed by projection previews
+  - encodings:the width of the slider’s ring segments encode geodesic distances
+  - encodings:Each handle’s projected direction and length encode
+  - interactions:Lasso and label-based selection
+  thinking:
+  - why:letting viewers track points across views
+  - alternative:Some dimensionality reduction methods find interesting angles but hide everything orthogonal to them
+  - alternative:grids of static projections are directly comparable at a glance
+  - limit:only the keyframes are interpretable
+  confidence: high
+  note: 2026 年 5 月的预印本（arXiv:2605.04306，未经同行评审）；作者博客里说“用户受益尚未评估”类的话页面没有，没写进来。官网 dtour.dev 是脚本渲染的应用，页面文字读不到；证据取自论文 HTML 版和作者博客。
+
+- id: embedding-atlas
+  origin: project
+  domain: 机器学习与嵌入分析
+  field: data
+  issue: 在几百万个点的嵌入二维地图上看簇、搜近邻，并和元数据的分布联动过滤
+  issue_types:
+  - explore-discover
+  - retrieve
+  structure:
+  - spatial
+  - table
+  modifiers:
+  - derived
+  - typed
+  source:
+  - derived
+  - given
+  structure_note: 每条记录有一个嵌入向量和一组元数据列（文本、图像、音频、数值、类别、时间）；位置由 UMAP 投影得到，密度、簇与标签由二维密度聚类算出
+  focus:
+  - cluster
+  - position
+  - distribution
+  dims:
+  - project
+  - summarize
+  - juxtapose
+  dims_note: 嵌入向量先投影到二维；再用密度等高线和自动簇标签把“几百万个点”概括成地图上的区域；侧栏里每个元数据列画一张分布图，与嵌入图联动
+  forms:
+  - projection-scatter
+  schools:
+  - channels
+  views_note: 二维嵌入图（点或密度等高线，WebGPU 渲染）；侧栏每个元数据列的分布图；数据表与实例视图；图之间交叉过滤；近邻搜索
+  dropped: 两个嵌入的并排比较（作者写明没有并排视图）
+  abstraction:
+  - aggregate
+  - zoom
+  - summarize
+  abstraction_note: 多分辨率的簇标签；密度等高线汇总点；缩放时看到更细的簇
+  ev:
+  - views:Render up to a few million points with density contours
+  - abstraction:Group and label related points across multiple resolutions
+  - interactions:cross-filter between all the charts and the embedding
+  - encodings:The density mode (right) visualizes the density
+  - attributes:the distribution of each metadata column is automatically visualized
+  thinking:
+  - why:Every bit of friction encountered by a user
+  - alternative:these tools solely focus on rendering
+  - limit:no side-by-side view
+  confidence: high
+  note: 论文写明“用户研究超出这篇短文范围”。
+
+- id: nomic-atlas
+  origin: project
+  domain: 机器学习与嵌入分析
+  field: data
+  issue: 把大规模文本或嵌入数据放到一张地图上，找簇、离群点和误分类，并协作标注
+  issue_types:
+  - explore-discover
+  - retrieve
+  structure:
+  - spatial
+  - hierarchy
+  modifiers:
+  - derived
+  - nested
+  source:
+  - derived
+  - given
+  structure_note: 每个数据点是一条文本、图像或嵌入向量；位置由嵌入投影得到（数据少于 5 万点用 UMAP，更多用自研投影）；主题是在向量空间里层次聚类出来的两到三级层级，由大模型起名
+  focus:
+  - cluster
+  - containment
+  - position
+  dims:
+  - project
+  - summarize
+  dims_note: 高维嵌入投影成二维“数据地图”；再用层次聚类加大模型标注把区域概括成主题标签，缩放时出现更细的层级
+  forms:
+  - projection-scatter
+  schools:
+  - channels
+  - schematic
+  views_note: 整个数据集一张二维地图，簇上有浮动的主题标签；按元数据着色、过滤；套索选择；向量搜索；选择结果面板与批量加标签
+  dropped: 地图上的坐标轴和精确距离（文档写明没有具体含义）
+  abstraction:
+  - aggregate
+  - zoom
+  - summarize
+  abstraction_note: 主题有两到三级深度，缩放时出现更细的主题；大模型给每个簇起短名
+  ev:
+  - encodings:Numerical distances between 2D point positions do not have concrete meaning
+  - encodings:For datasets with 50,000 or more points
+  - abstraction:As you zoom around the map, more granular versions
+  - abstraction:Atlas auto-labels each cluster with a custom-trained large language model
+  - interactions:Drag a lasso around a region
+  thinking:
+  - why:Atlas automatically selects the optimal projection algorithm based on your dataset size
+  - alternative:privilege global structure at the expense of local relationships
+  - limit:2D projections can distort high-dimensional distances
+  confidence: high
+  note: 商业云平台；技术报告写明“目前无法公开许多技术细节”，所以投影与标注的细节只能引用文档写出来的部分。
+
+- id: hiplot
+  origin: project
+  domain: 机器学习实验分析
+  field: data
+  issue: 几十个超参数、十万次实验里，哪些参数在影响要优化的指标
+  issue_types:
+  - explore-discover
+  - compare
+  structure:
+  - table
+  modifiers:
+  - typed
+  source:
+  - recorded
+  structure_note: 每次实验（训练任务）是一行，每个超参数和指标是一列；可选的父子关系用 XY 图里的连线表示
+  focus:
+  - node_attr
+  - distribution
+  dims:
+  - axes
+  - juxtapose
+  dims_note: 几十个维度不降维：每个维度一根垂直轴，每条记录一条穿过各轴的线（平行坐标）；其余视图（表格、XY 图）并列，选择在它们之间联动
+  forms:
+  - parallel-coordinates
+  schools:
+  - rulepos
+  - textlist
+  views_note: 平行坐标图为主，另有可并列的表格、XY 图等显示；可重排或删除轴、按范围刷选保留、按另一根轴着色
+  dropped: 取值太多的分类列、只有一个取值的列默认不显示（文档写明）
+  abstraction:
+  - separate-views
+  - filter-scope
+  abstraction_note: 多个并列显示；轴范围刷选保留子集
+  ev:
+  - input_material:more than 100,000 experiments
+  - encodings:each training/data point is a continuous line that goes through its value on each of the axes
+  - encodings:set the color scheme according to yet another axis
+  - views:HiPlot consists of multiple independant displays
+  - interactions:reorder or remove axes
+  thinking:
+  - why:Parallel plots are a convenient way to visualize and filter high-dimensional data
+  - alternative:Such experiments can be challenging to analyze
+  - limit:Categorical columns with more distinct values
+  confidence: high
+
+- id: facets
+  origin: project
+  domain: 机器学习数据集检查
+  field: data
+  issue: 看懂有成百上千个特征的数据集：逐特征看分布和异常，再按特征摆放每个样本去找系统性错误
+  issue_types:
+  - understand-whole
+  - locate-anomaly
+  structure:
+  - table
+  modifiers:
+  - typed
+  source:
+  - given
+  structure_note: 每个数据点一行，每个特征一列；Overview 把每个特征当一个对象来统计，Dive 把每个数据点当一个对象来摆放
+  focus:
+  - distribution
+  - node_attr
+  dims:
+  - juxtapose
+  - encode
+  dims_note: 特征成百上千：Overview 每个特征一行分布图，竖着排开，并把训练集和测试集叠在同一行里比较；Dive 把每个数据点摆在由两个特征分面（再加颜色）决定的位置上
+  schools:
+  - channels
+  views_note: Overview：每行一个特征，直方图叠加比较多个数据集，按非均匀度或分布距离排序，红色数字标出可疑；Dive：每个数据点是一个小方块，可按特征分面、定位、着色，点开看记录
+  dropped: 特征之间的交互关系（Overview 一次只看一个特征）；Dive 一次只能用有限的几个特征决定位置和颜色
+  abstraction:
+  - aggregate
+  - filter-scope
+  - separate-views
+  abstraction_note: Overview 是汇总，Dive 是逐点；Dive 里可按特征值分桶再钻进某一桶
+  ev:
+  - views:Facets consists of two visualizations
+  - encodings:The features are sorted by non-uniformity
+  - encodings:you control the position, color and visual representation of each data point
+  - attributes:Distribution distance
+  - abstraction:bucketing them in multiple dimensions by their feature values
+  thinking:
+  - why:Getting the best results out of a machine learning (ML) model requires that you truly understand your data
+  - alternative:making it nearly impossible to understand an entire dataset in an intuitive fashion
+  confidence: high
+  note: “Dive 一次只能用有限的几个特征”是我对界面的读法（位置、颜色等通道有限），页面没有直接写这一句。
+
+- id: voyager
+  origin: project
+  domain: 探索式数据分析
+  field: data
+  issue: 字段很多的表，不预先想好问题也能看到有价值的图，并系统地覆盖各个变量
+  issue_types:
+  - explore-discover
+  - understand-whole
+  structure:
+  - table
+  modifiers:
+  - typed
+  source:
+  - given
+  structure_note: 一张关系表；图由“变量到视觉通道的映射”规格描述；系统按变量子集和变换枚举规格并排序
+  focus:
+  - distribution
+  - node_attr
+  dims:
+  - rank
+  - juxtapose
+  - encode
+  dims_note: 变量、变换和编码的组合会爆炸：系统按统计和感知度量枚举并排序图，聚类相近的编码只留每类的最高排名；用户点变量来扩展；用分面（行、列）并排
+  schools:
+  - channels
+  views_note: 左侧字段面板，右侧推荐图库（“精确匹配”和“建议”两区）；一开始先显示所有变量的单变量摘要；每张图可展开、收藏、微调
+  dropped: 设计的变化：只展示数据的变化（不同变量和变换），不同编码的同一数据只留最好的一张
+  abstraction:
+  - aggregate
+  - filter-scope
+  - separate-views
+  abstraction_note: 推荐图按相近编码聚类、每类只留一个代表；图库按数据表分组
+  ev:
+  - input_material:combinatorial explosion
+  - views:the gallery is divided into two sections
+  - abstraction:Voyager organizes suggested charts by clustering encoding variations
+  - interactions:users can click a variable to toggle its inclusion
+  - encodings:Voyager aligns axis positions and uses consistent colors for variables
+  thinking:
+  - why:Show data variation, not design variation
+  - alternative:General visualization tools typically require manual specification of views
+  - limit:by only one variable at a time
+  confidence: high
+  note: 论文版是 2015 年的 Voyager；展示页 vega.github.io/voyager 的当前版本是 Voyager 2，页面文字由 JS 渲染读不到，所以证据取自论文和论文页。
+
+- id: rank-by-feature
+  origin: external
+  name: Rank-by-Feature 框架与 Hierarchical Clustering Explorer（Seo 与 Shneiderman）
+  urls:
+  - https://www.cs.umd.edu/hcil/hce/
+  - https://www.cs.umd.edu/hcil/trs/2004-31/2004-31.html
+  domain: 多维数据探索（统计与微阵列数据）
+  field: data
+  issue: 维度很多的时候，二维投影的数量多到没法逐个看：按特征给一维、二维投影打分排序，先看最有信息的
+  issue_types:
+  - explore-discover
+  structure:
+  - table
+  modifiers:
+  - derived
+  source:
+  - given
+  - derived
+  structure_note: 一张表（列是维度，行是数据项）；对每个维度（一维）和每对维度（二维）按所选的特征打分——相关系数、聚类、离群点、均匀度等
+  focus:
+  - node_attr
+  - cluster
+  dims:
+  - rank
+  - juxtapose
+  dims_note: n 个维度有 n(n-1)/2 个二维投影；先给所有一维、二维投影打分，用颜色编码的网格总览，点一格看对应的直方图或散点图
+  forms:
+  - heatmap
+  schools:
+  - rulepos
+  views_note: 评分总览（颜色编码的网格，行和列是维度）+ 有序列表 + 一维（直方图加箱线图）或二维（散点图）投影视图；选中的数据项在所有视图里高亮
+  dropped: 只看轴平行的投影：只能发现所选两个维度里的特征，看不到多个维度线性组合的结构（作者写明）
+  abstraction:
+  - separate-views
+  abstraction_note: 总览（评分）与细看（投影）分成两层；也可以对维度的聚类排序
+  ev:
+  - input_material:more than three columns can be thought of as multidimensional
+  - views:The ranking result is visually presented in a color-coded grid
+  - encodings:each dimension is color-coded by the score value
+  - attributes:Pearson correlation coefficient
+  - interactions:If users select a group of items in any view
+  thinking:
+  - why:2D projections are widely understood by users
+  - alternative:When there are many dimensions, the number of possible projections is too large
+  - limit:features can be detected in only the two selected dimensions
+  - limit:when the dimensionality is greater than about 130
+  confidence: high
+  note: 读的是马里兰大学 HCIL 的技术报告 2004-31（InfoVis 2004 会议版的扩展版），不是 Information Visualization 2005 的期刊版；HCE 的主页（cs.umd.edu/hcil/hce）只读到概述。
+
+- id: orange
+  origin: project
+  domain: 数据挖掘与多维投影
+  field: data
+  issue: 找一张能把不同类别分开的二维投影，并读出哪些属性在起作用
+  issue_types:
+  - explore-discover
+  structure:
+  - table
+  modifiers:
+  - derived
+  source:
+  - given
+  - derived
+  structure_note: 带类别标签的数据：对象乘以属性；每个属性对应圆周上的一个锚点，点的位置由各属性值通过“弹簧”拉出来（Radviz），或者由优化算法调整锚点位置、让类别分开（FreeViz）
+  focus:
+  - cluster
+  - node_attr
+  dims:
+  - axes
+  - project
+  - rank
+  dims_note: 三个以上的变量：Radviz 把每个变量放成圆周上的一个锚点，不降维；FreeViz 优化锚点位置做线性投影；VizRank 在可能的投影里搜索“有信息”的几个
+  forms:
+  - radviz
+  schools:
+  - rulepos
+  views_note: 圆内散点，属性锚点均匀分布在圆周上（或被优化后的位置），点被弹簧拉向各锚点；可手动拖动锚点；选区可送到别的部件；VizRank 搜索
+  dropped: 文档承认：不同优化方法的偏好不同，结果可能很不一样
+  abstraction:
+  - separate-views
+  abstraction_note: Radviz、FreeViz、线性投影是同一问题的不同视图；VizRank 做视图搜索
+  ev:
+  - encodings:equally spaced around the perimeter of a unit circle
+  - encodings:The stiffness of each spring is proportional to the value of the corresponding variable
+  - encodings:very short compared to the others
+  - interactions:VizRank search algorithm
+  - interactions:move selected anchor
+  thinking:
+  - why:we recommend to play with this option in order to understand how a change of one anchor affects the positions
+  - limit:The result of the optimization may depend on the initial placement of the anchors
+  - limit:may be quite different
+  confidence: high
+  note: 摘录来自 Orange 3 的 Radviz、FreeViz 文档和 Orange 2.7 的线性投影文档；文档里没有写“替代做法有什么问题”，所以没有 alternative。
+
+- id: upset
+  origin: project
+  domain: 集合与交集分析
+  field: data
+  issue: 集合多到 Venn 图画不下时，看哪些集合组合的交集最大、最特别，并把元素的属性接在交集旁边看
+  issue_types:
+  - explore-discover
+  - compare
+  structure:
+  - set
+  - table
+  modifiers:
+  - typed
+  source:
+  - given
+  structure_note: 对象是元素，每个元素属于若干集合；一个“交集”是一组恰好属于同样集合的元素（排他交集）；元素还带属性
+  focus:
+  - membership
+  - distribution
+  dims:
+  - summarize
+  - juxtapose
+  dims_note: n 个集合有 2^n 个可能的交集：不画集合本身，而把交集当作对象排成矩阵的行，用条形图给大小；集合视图和元素视图联动；按任务排序、聚合
+  forms:
+  - upset
+  schools:
+  - rulepos
+  - channels
+  views_note: 矩阵：列是集合，行是交集，实心圆点标出哪些集合参与；条形图给交集大小，另有“偏差”条（实际比随机预期多或少）；元素视图列出具体元素与属性；排序、聚合、查询
+  dropped: 元素本身（抽象成计数，属性靠旁边的图）；页面写明要看单个元素时 Euler 图更合适
+  abstraction:
+  - aggregate
+  - filter-scope
+  - fold-drill
+  abstraction_note: 聚合是按任务定义的一组排他交集，可嵌套、可折叠；查询创建聚合
+  ev:
+  - views:UpSet visualizes set intersections in a matrix layout
+  - encodings:The cardinality of an intersection
+  - abstraction:Aggregates are collections of exclusive intersections
+  - interactions:Hence, we offer various options to sort exclusive intersections
+  - input_material:containing 3883 movies, 17 genres
+  thinking:
+  - why:UpSet is unique because it exploits the duality between visualization of attributes and visualization of sets
+  - alternative:Venn diagrams are not suitable to visualize intersections of more than three or four sets
+  - limit:We observe a practical limitation at about 40-50 sets
+  confidence: high
+
+- id: kepler-mapper
+  origin: project
+  domain: 拓扑数据分析
+  field: data
+  issue: 看高维点云的连通结构（分支、环、簇之间怎么连），而不只是点与点的距离
+  issue_types:
+  - explore-discover
+  structure:
+  - graph
+  - table
+  modifiers:
+  - derived
+  - weighted
+  source:
+  - derived
+  structure_note: 输入是高维点云（表）；输出是一张小图：节点是对投影区间里的原数据做聚类得到的簇，两个节点有共同成员就连一条边
+  focus:
+  - connectivity
+  - cluster
+  dims:
+  - summarize
+  - project
+  dims_note: 高维点云先用“镜头”投影到低维、切成有重叠的区间，对每个区间里的原数据（不是投影）聚类，再把聚类当节点连成图：画的是连通结构，高维坐标不再出现
+  forms:
+  - mapper-graph
+  schools:
+  - link
+  views_note: D3 力导向图：节点大小、颜色、边的形状由用户指定的函数决定；可搜索、冻结节点位置、动态调整画边所需的最小共同成员数；也可用 Plotly 或 NetworkX 画
+  dropped: 距离：作者的假设是“连通比距离重要”；投影的损失靠对原数据聚类来减轻（文档写明有损）
+  abstraction:
+  - summarize
+  - aggregate
+  abstraction_note: 点云被压缩成一张图，一个点可以出现在多个节点里
+  ev:
+  - entities:The clusters become nodes in a graph
+  - relations:When there is such a member intersection, draw an edge between these nodes
+  - encodings:Color the graph nodes by a function of interest
+  - abstraction:The main workflow for Mapper is to project the data
+  - interactions:The searchbar can be used to highlight
+  thinking:
+  - why:The fundamental assumption in topology is that connectivity is more important than distance
+  - alternative:either apply clustering on the projection and suffer projection loss
+  - limit:A lossy compressed mathematical representation of a data set
+  confidence: high
+  note: 展示页是文档里的 notebook 示例，不是在线交互。
+
+# ───────── 空间、几何与沉浸式载体 ─────────
+- id: miegakure
+  origin: external
+  name: Miegakure（四维解谜游戏）
+  urls:
+  - https://miegakure.com
+  - https://store.steampowered.com/app/355750
+  domain: 四维几何与游戏
+  field: geometry
+  issue: 让玩家用三维的大脑理解并操作一个真正的四维世界
+  issue_types:
+  - explain-teach
+  - explore-discover
+  structure:
+  - spatial
+  modifiers:
+  - temporal
+  source:
+  - authored
+  structure_note: 世界里的每个位置是四个数；玩家（三维角色）看到的是这个四维世界的一个三维截面，截面随玩家在第四个方向上的位置而变；如果算上时间，游戏是五维
+  focus:
+  - position
+  dims:
+  - slice
+  dims_note: 四维压到屏幕：不投影，只取三维截面（类比 Flatland 里二维生物看三维世界的二维截面）；按一个键可以换看哪三个维度，后期才解锁平移截面
+  forms:
+  - nd-slice
+  schools:
+  - schematic
+  views_note: 游戏画面是三维截面；换维度时形状像 MRI 一样变形；游戏里另有二维或三维版本的小关卡，用来帮玩家一步步理解第四维
+  dropped: 四维物体的整体：只看到截面（作者写明平移截面时看不到要去哪里）；不用投影，因为四维压到二维物体会大量重叠
+  abstraction:
+  - filter-scope
+  abstraction_note: 截面就是把四维世界限定在一个三维子空间里
+  ev:
+  - entities:instead of taking a 2D slice of a 3D object, we are taking a 3D slice of 4D objects
+  - views:You see three dimensions at a time
+  - questions:Why does the game slice the 4th dimension instead of projecting it?
+  - interactions:Translating the slice is unlocked later in the game
+  thinking:
+  - why:I wanted the 4D world to feel like an extension of the 3D world we live in
+  - 'alternative:4D to 2D is two dimensions down: a lot of objects are going to overlap on the screen'
+  - limit:When you translate the slice you cannot see where you are going
+  confidence: high
+  note: 这是一款游戏，不是数据可视化工具；放进来是因为它是“超越三维”里最直接的案例，而且开发者明确写了为什么用截面而不用投影。作者站点 marctenbosch.com 当时域名解析失败，没读。
+
+- id: imaxes
+  origin: external
+  name: ImAxes（VR 里的沉浸式坐标轴）
+  urls:
+  - https://ialab.it.monash.edu/~dwyer/papers/imaxes.pdf
+  - https://research.monash.edu/en/publications/imaxes-immersive-axes-as-embodied-affordances-for-interactive-mul/
+  domain: 沉浸式数据分析
+  field: geometry
+  issue: 在 VR 里用手抓取数据轴，现场搭出散点图、散点矩阵和平行坐标，探索多维数据
+  issue_types:
+  - explore-discover
+  - build-author
+  structure:
+  - table
+  modifiers:
+  - typed
+  source:
+  - given
+  structure_note: 一张多维表（论文用葡萄酒数据）；每个数据属性是一根可以抓在手里的“轴”，轴的位置和朝向定义怎么画
+  focus:
+  - node_attr
+  - connectivity
+  dims:
+  - immerse
+  - axes
+  - juxtapose
+  dims_note: 多维属性：每个属性一根可移动的轴，两轴靠近成直角是散点图，平行排列是平行坐标，多个散点图拼成散点矩阵；三维空间和双手操作换来更多的摆放自由
+  forms:
+  - immersive-axes
+  - parallel-coordinates
+  - scatterplot-matrix
+  schools:
+  - rulepos
+  views_note: VR 里的三维空间：用握放操作拖动轴；轴之间的距离和相对朝向按文法决定画成哪种图；滑动轴刷选，拖动轴让相关的点或线随之移动（“运动刷选”）
+  dropped: 可同时处理的轴数：作者写明数量有限，超过后需要走动、蹲下、伸手
+  abstraction:
+  - separate-views
+  abstraction_note: 用户自己把轴组合成不同的图
+  ev:
+  - entities:The basic interface element is an embodied data axis
+  - encodings:The type of visualisation that appears depends on the proximity and relative orientation
+  - interactions:ImAxes uses a grab and place interaction
+  - views:to create standard visualisations for understanding multidimensional data
+  thinking:
+  - why:We want there to be a physical affordance
+  - alternative:Projecting 3D data visualisations onto a 2D screen suffers from inherent issues due to occlusions
+  - limit:the number of axes that a user can reasonably handle and interact with is limited
+  - limit:empirical validation of ImAxes is needed
+  confidence: high
+  note: 论文自己说只有用例演示、不是案例研究，需要以后做经验验证；本批没找到用户研究结果。DOI 页 403 没读，代码只在 GitHub，没读。
+
+- id: hyperbolic-browser
+  origin: external
+  name: 双曲浏览器（Lamping、Rao、Pirolli，CHI 1995）
+  urls:
+  - https://www.chi1995.chistatic.hosting.acm.org/proceedings/papers/jl_bdy.htm
+  domain: 大型层级的浏览
+  field: geometry
+  issue: 看目录、组织图、网站这样的大型层级时，既聚焦一部分，又看得见整体上下文
+  issue_types:
+  - understand-whole
+  - explore-discover
+  structure:
+  - hierarchy
+  modifiers:
+  - nested
+  source:
+  - given
+  structure_note: 树：根在中心；每个节点占双曲平面上的一个圆，父子、兄弟之间的双曲距离大致处处相同
+  focus:
+  - containment
+  - connectivity
+  dims:
+  - warp
+  dims_note: 不加维度，换空间：把树均匀铺在双曲平面上再映射到圆盘，指数增长的节点有了足够的“面积”；焦点放大，远处缩小
+  forms:
+  - hyperbolic-tree
+  schools:
+  - link
+  - schematic
+  views_note: 圆盘里的树：点击或拖动任意一点把它换到中心，平滑变换；节点大小随离中心的距离连续变小
+  dropped: 远处节点的文字和细节：能显示约 1000 个节点，只有离焦点最近的约 50 个能显示文字
+  abstraction:
+  - zoom
+  abstraction_note: 焦点加上下文的连续缩放；节点离焦点越远，表示越简略
+  ev:
+  - views:map this plane onto a circular display region
+  - encodings:the amount of space available to a node falls off
+  - interactions:The user can change focus either by clicking
+  thinking:
+  - why:Thus the context always includes several generations of parents, siblings, and children
+  - alternative:there is no satisfactory conventional 2-d layout of a large tree, because of its exponential growth
+  - limit:The hyperbolic browser can display 1000 nodes of which about the 50 nearest the focus
+  confidence: high
+  note: 严格说这不是“高维”：它说的是用非欧几何给指数增长的结构更多空间，放在这里当作“超越欧氏二维”的边界案例，维度处理编为 warp。
 
 # ───────── 知识抽取、知识图谱与本体 ─────────
 - id: infranodus
@@ -1616,6 +2331,12 @@
   source: [derived]
   structure_note: "每个仓库是一个点；位置由 README 的向量经降维得到，语义相近的挨在一起；多层级主题标签由层次密度聚类生成；每个仓库另有大模型从 README 提取的标题、摘要、标语、项目类型、目标读者"
   focus: [position, cluster]
+  dims:
+  - project
+  - summarize
+  dims_note: README 的 512 维向量降到二维；再用层次聚类给出多个细节层级的主题标签
+  forms:
+  - projection-scatter
   schools: [channels, schematic]
   views_note: "交互 HTML 地图（DataMapPlot）：悬停看标题、标语、类型、语言、Star；可换颜色（创建时间、最近推送、簇）；可搜索、过滤、点击跳转"
   dropped: "页面写明簇与簇之间的距离不宜读作差异大小的精确度量；README 短于 200 字符的仓库不收"
@@ -1698,6 +2419,12 @@
   - distribution
   - cluster
   - position
+  dims:
+  - project
+  - summarize
+  dims_note: 能力描述的 1024 维向量先降到二维、再自底向上聚成 178 个簇和 25 个区域；问题描述另聚 120 个簇，是另一套分法
+  forms:
+  - projection-scatter
   schools:
   - channels
   - schematic
@@ -1952,6 +2679,56 @@
   confidence: high
   thinking: ["why:three alternative projections", "why:This will help you choose what to omit", "limit:It omits information about the state transitions"]
 
+- id: single-cell-embeddings
+  origin: external
+  name: 单细胞数据的二维嵌入：失真之争（Chari 与 Pachter 2023；Lause 等 2024）
+  urls:
+  - https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/
+  - https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012403
+  domain: 单细胞基因组学
+  field: life
+  issue: 几千维的基因表达数据压到二维之后，邻域和簇有多可信，能不能拿来下定量结论
+  issue_types:
+  - explore-discover
+  - compare
+  structure:
+  - spatial
+  - table
+  modifiers:
+  - derived
+  source:
+  - derived
+  - given
+  structure_note: 对象是细胞，每个细胞几百到几千个基因的表达量；先 PCA 降到几十维，再用 t-SNE 或 UMAP 降到二维；细胞类型标签来自原研究的聚类
+  focus:
+  - cluster
+  - position
+  dims:
+  - project
+  - summarize
+  dims_note: 几千维压到二维的“一图看全”；两篇论文争的是这张图失真多大；其中一篇建议在需要时改用不画每个点的高层图或概念图
+  forms:
+  - projection-scatter
+  schools:
+  - channels
+  views_note: 论文里的静态图：二维嵌入散点（颜色=细胞类型）、密度等高线、多个降维方法的小图板对比；没有交互
+  dropped: 点与点之间的精确距离：双方都承认二维图会让距离失真
+  abstraction:
+  - summarize
+  abstraction_note: 先降到几十维再降到二维；需要时用不画每个点的高层图
+  ev:
+  - input_material:extreme dimension reduction, from hundreds or thousands of dimensions to 2
+  - relations:“local” is defined as nearest neighbor relationships
+  - views:“all-in-one” visuals
+  - abstraction:Higher-level diagrams that do not seek to display all point-wise information
+  - encodings:Colors correspond to cell types
+  thinking:
+  - why:Biologists are often interested in cell clusters
+  - alternative:such 2D spaces should be treated more as cartoon diagrams
+  - limit:2D visualisations distort distances and should not be blindly trusted
+  confidence: high
+  note: 这是两篇结论相反的论文：前一篇主张二维嵌入失真太大，只能当作事后展示的“卡通图”；后一篇（PLOS 版的反驳）用邻域和类别保持的度量，认为 t-SNE 与 UMAP 保留了有意义的局部结构和簇。两篇都同意距离会失真、不能盲信。反驳的 PMC 版页面要人机验证没读到，改读 PLOS 上的同一篇。
+
 # ───────── 社会、经济与公共数据 ─────────
 - id: tube-map
   origin: external
@@ -2034,6 +2811,9 @@
   source: [given]
   structure_note: "每个国家每年一行的表：对象 × 时间 × 多个指标"
   focus: [node_attr, time, distribution]
+  dims:
+  - encode
+  dims_note: 人均 GDP、预期寿命、人口、地区和时间五个变量，分到横轴、纵轴、面积、颜色和动画五个通道
   forms: [scatterplot-matrix]
   schools: [channels]
   views_note: "动画气泡图：X 轴=人均 GDP，Y 轴=预期寿命，面积=人口，颜色=地区，时间=动画"

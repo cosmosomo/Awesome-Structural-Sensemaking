@@ -46,6 +46,7 @@ scripts/                               校验、生成、核对脚本
 | 想知道 | 去 |
 | --- | --- |
 | 某种结构该用什么图，图的适用边界 | [`01-theory/taxonomy.md`](01-theory/taxonomy.md)；按重点部分和任务选画法：[`01-theory/choosing-views.md`](01-theory/choosing-views.md) |
+| 数据维度很多、想超越二维三维怎么画（投影、平行坐标、巡游、切片、VR……） | [`01-theory/high-dimensional.md`](01-theory/high-dimensional.md) |
 | 折叠、钻取、多视角这些交互怎么分类 | [`01-theory/interaction-patterns.md`](01-theory/interaction-patterns.md) |
 | 某个研究方向在三个层级上各有什么代表 | [`02-visualization-ecosystem`](02-visualization-ecosystem) 里的跨层索引 |
 | 全部项目的仓库和展示页 | [`catalog/INDEX.md`](catalog/INDEX.md) |

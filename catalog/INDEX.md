@@ -3,9 +3,9 @@
 > 本文件由 `scripts/build.py` 根据 `catalog/` 生成，请改 YAML，不要直接改这里。
 > 条目信息来自 2026-10 调研报告。展示页来自报告原文或事后的搜索结果，除标 ✓ 的外都没有实际访问过。
 
-共 87 个条目；有开源项目地址 84 个，有展示页 63 个（其中 55 个已访问核对，标 ✓）；另有 16 个本身没有展示页。
-有 77 个开源项目地址已核对（标 ✓，鼠标悬停可看依据）：npm / PyPI 的包元数据、项目官网或官方文档里的源码链接，或 Go 模块代理指向的仓库与这里一致。其余没有核对，GitHub 页面本身没有访问。
-“定位与值得研究”一列末尾的标记：✓ 表示这段说明的主要点在官方页面里都找到了依据（45 个）；△ 表示有些点没找到依据，写在备注里（37 个）；没有标记的没核对过。找不到依据不等于说法有误，官方页面由 JS 渲染读不到的、或者只是整理者的评价性判断，也会落在这一类。
+共 100 个条目；有开源项目地址 96 个，有展示页 73 个（其中 65 个已访问核对，标 ✓）；另有 19 个本身没有展示页。
+有 89 个开源项目地址已核对（标 ✓，鼠标悬停可看依据）：npm / PyPI 的包元数据、项目官网或官方文档里的源码链接，或 Go 模块代理指向的仓库与这里一致。其余没有核对，GitHub 页面本身没有访问。
+“定位与值得研究”一列末尾的标记：✓ 表示这段说明的主要点在官方页面里都找到了依据（57 个）；△ 表示有些点没找到依据，写在备注里（38 个）；没有标记的没核对过。找不到依据不等于说法有误，官方页面由 JS 渲染读不到的、或者只是整理者的评价性判断，也会落在这一类。
 
 “待补”表示开源项目地址缺失，“待收集”表示展示页缺失或还没找到；“无：…”表示这个条目本身不存在展示页（如规范、采集库、命令行工具）；商业产品、规范和刊物没有仓库，用“—”表示。
 
@@ -22,6 +22,7 @@
 | [Apache ECharts](https://echarts.apache.org/) | 综合图表引擎。<br>图表类型、交互组件、大屏和业务看板。 △ | [仓库](https://github.com/apache/echarts "核对依据：npm 包元数据") ✓ | [展示页](https://echarts.apache.org/examples) ✓ | [站点](https://echarts.apache.org/) | 开源；官方页面没找到依据的说明：业务看板 |
 | [Plotly.js](https://github.com/plotly/plotly.js) | 数据探索与交互图表。<br>多维统计图、科学可视化、交互分析。 △ | [仓库](https://github.com/plotly/plotly.js "核对依据：npm 包元数据") ✓ | [展示页](https://plotly.com/javascript/) ✓ | — | 开源；官方页面没找到依据的说明：数据探索、交互、多维 |
 | [deck.gl](https://github.com/visgl/deck.gl) | GPU 加速的大数据可视化框架。<br>大规模数据、地图图层、多视角渲染。 ✓ | [仓库](https://github.com/visgl/deck.gl "核对依据：npm 包元数据") ✓ | [展示页](https://deck.gl/gallery/) ✓ | — | 开源 |
+| [regl-scatterplot](https://github.com/flekschas/regl-scatterplot) | 基于 WebGL 的交互式二维散点图，面向大量数据点。<br>几十万以上的点如何做到可缩放、可选择、可编码；投影结果的前端落地。 ✓ | [仓库](https://github.com/flekschas/regl-scatterplot "核对依据：npm 包元数据声明的仓库") ✓ | [展示页](https://flekschas.github.io/regl-scatterplot/) ✓ | — | 开源；展示页由 WebGL 渲染，页面文字只有标题；说明依据是 npm 包的 README。 |
 
 ### 关系图与节点交互引擎
 
@@ -49,6 +50,15 @@
 | [Graphology](https://graphology.github.io/) | 图数据操作与算法生态。<br>关系分析、节点指标、图结构处理。 △ | [仓库](https://github.com/graphology/graphology "核对依据：npm 包元数据") ✓ | 无：数据结构库，没有可视化界面 | [站点](https://graphology.github.io/) | 开源；官方页面没找到依据的说明：关系分析 |
 | [Cytoscape Complexity Management](https://github.com/iVis-at-Bilkent/cytoscape.js-complexity-management) | 大型复合图的展开、折叠与关系管理（Cytoscape.js 扩展）。<br>层次化复杂网络；节点、边及聚合关系的管理。 △ | [仓库](https://github.com/iVis-at-Bilkent/cytoscape.js-complexity-management "核对依据：npm 包 cytoscape-complexity-management 的 homepage 字段") ✓ | [展示页](https://ivis-at-bilkent.github.io/cytoscape.js-complexity-management/demo/demo.html) ✓ | — | README 带有演示链接，但地址没有拿到；需要 Cytoscape.js 3.2.0 以上以及 fcose、cmgm.js，README 称尚未发布到 npm 和 bower；官方页面没找到依据的说明：大型、层次化、聚合关系 |
 | [Cytoscape Expand Collapse](https://github.com/iVis-at-Bilkent/cytoscape.js-expand-collapse) | 复合节点的展开与折叠（Cytoscape.js 扩展）。<br>折叠复合节点及其内部的边。README 提供三个演示：基础版、可撤销版、同时折叠边和节点。 ✓ | [仓库](https://github.com/iVis-at-Bilkent/cytoscape.js-expand-collapse "核对依据：npm 包元数据") ✓ | [展示页](https://ivis-at-bilkent.github.io/cytoscape.js-expand-collapse/demo/demo-compounds-collapsed.html) ✓ | — | 开源；已停止维护；npm README 称仓库不再维护，并指向同一团队的 cytoscape.js-complexity-management（搜索结果摘要）。 |
+
+### 降维与投影算法
+
+<sub>L1/dimensionality-reduction</sub>
+
+| 项目 | 定位与值得研究 | 开源项目 | 展示页 | 站点 / 文档 | 备注 |
+| --- | --- | --- | --- | --- | --- |
+| [UMAP（umap-learn）](https://github.com/lmcinnes/umap) | UMAP 降维算法的 Python 实现。<br>文档讲了主要参数（n_neighbors、min_dist、n_components、metric）和交互式绘图的做法。 ✓ | [仓库](https://github.com/lmcinnes/umap "核对依据：PyPI 包元数据声明的仓库") ✓ | 无：算法库，没有独立的展示页；文档里有绘图示例。 | [文档](https://umap-learn.readthedocs.io/en/latest/) | 开源 |
+| [openTSNE](https://github.com/pavlin-policar/openTSNE) | t-SNE 的可扩展、并行实现。<br>t-SNE 的参数怎样改变图（文档有参数指南）。 ✓ | [仓库](https://github.com/pavlin-policar/openTSNE "核对依据：PyPI 包元数据声明的仓库") ✓ | 无：算法库，没有独立的展示页；文档里有使用示例。 | [文档](https://opentsne.readthedocs.io/en/stable/) | 开源 |
 
 ### 图形描述语言与模型驱动技术
 
@@ -172,14 +182,30 @@
 | [Zalando Tech Radar](https://github.com/zalando/tech-radar) | 使用技术雷达表达技术采用阶段与类别。<br>技术决策状态的雷达表达。 △ | [仓库](https://github.com/zalando/tech-radar "核对依据：官方页面 opensource.zalando.com/tech-radar 的源码链接") ✓ | [展示页](https://opensource.zalando.com/tech-radar/) ✓ | — | 官方页面没找到依据的说明：类别（象限） |
 | [Build Your Own Radar](https://github.com/thoughtworks/build-your-own-radar) | 从结构化技术条目生成交互技术雷达。<br>技术雷达生成器。 ✓ | [仓库](https://github.com/thoughtworks/build-your-own-radar "核对依据：radar.thoughtworks.com 页面的 open source 链接") ✓ | [展示页](https://radar.thoughtworks.com/) ✓ | — | 官方托管版要求使用 Technology Radar 固定的象限和环名称，自定义名称需自行部署；据搜索结果为 AGPL 许可。 |
 
-### 三维、高维与大规模关系探索
+### 高维数据探索（投影、平行坐标、巡游、拓扑摘要）
 
-<sub>L2/spatial-and-high-dimensional</sub>
+<sub>L2/high-dimensional-exploration</sub>
+
+| 项目 | 定位与值得研究 | 开源项目 | 展示页 | 站点 / 文档 | 备注 |
+| --- | --- | --- | --- | --- | --- |
+| [Embedding Projector](https://projector.tensorflow.org/) | 将高维向量降维到二维、三维，探索相似性与聚类。<br>高维结构投影后哪些信息被保留、哪些被扭曲。 △ | [仓库](https://github.com/tensorflow/embedding-projector) | [展示页](https://projector.tensorflow.org/) | — | 三维位置来自降维计算，不应理解为概念在原始高维语义空间中的真实坐标。 projector.tensorflow.org 和 TensorBoard Projector 插件文档都没有给出 embedding-projector 仓库的地址，这个地址未核实；官方页面没找到依据的说明：降维到二维三维、聚类、保留与扭曲了哪些信息 |
+| [HiPlot](https://github.com/facebookresearch/hiplot) | Meta（原 Facebook AI Research）的交互式高维数据探索工具，以平行坐标图为核心。<br>每个维度一根轴、每条记录一条线：刷选、重排与删除轴、按另一根轴着色，用来看超参数与指标的关系。 ✓ | [仓库](https://github.com/facebookresearch/hiplot "核对依据：PyPI 包元数据声明的仓库") ✓ | [展示页](https://facebookresearch.github.io/hiplot/) ✓ | — | PyPI 最近一次发布是 2022-10-27（0.1.33），包元数据没有写许可证；“删除轴、按另一根轴着色”在 Meta AI 博客里有原文，文档页没有。 |
+| [Facets](https://pair-code.github.io/facets/) | Google PAIR 的机器学习数据集可视化：Overview 逐特征看分布，Dive 按特征值摆放每个数据点。<br>特征成百上千时，先逐特征看总体分布与异常，再按特征分面、着色地看单条记录。 ✓ | [仓库](https://github.com/pair-code/facets "核对依据：PyPI 包元数据声明的仓库；项目站点的 Code 链接") ✓ | [展示页](https://pair-code.github.io/facets/) ✓ | — | 开源；PyPI 最近一次发布是 2023-05-24（facets-overview 1.1.1）；仓库当前是否仍在维护没有核实（GitHub 页面没有访问）。“特征成百上千”见 Google 开源博客 2017 年的发布文章。 |
+| [KeplerMapper](https://github.com/scikit-tda/kepler-mapper) | 拓扑数据分析里 Mapper 算法的 Python 实现，把高维数据变成一张由聚类节点组成的小图。<br>投影、覆盖、聚类三步；节点和边的大小、颜色由用户指定的函数决定。 ✓ | [仓库](https://github.com/scikit-tda/kepler-mapper "核对依据：官方文档站首页的源码仓库链接") ✓ | [展示页](https://kepler-mapper.scikit-tda.org/en/latest/notebooks/Cancer-demo.html) ✓ | [文档](https://kepler-mapper.scikit-tda.org/en/latest/) | 开源；展示页是文档里的 notebook 示例，输出是预先生成的，不是在线交互。 |
+| [dtour](https://dtour.dev) | 在浏览器里沿一串二维投影“巡游”高维数据的工具，支持引导式巡游、手动拖动投影和自动漫游。<br>点的身份怎样在投影之间保持；只有关键帧可解释，中间的插值只是帮助跟踪。 △ | [仓库](https://github.com/flekschas/dtour "核对依据：作者博客 lekschas.de 里的 dtour 仓库链接") ✓ | [展示页](https://dtour.dev) ✓ | — | 2026 年 5 月的论文（arXiv:2605.04306），论文作者的博客里给了仓库和网站地址；PyPI 上有同名包 dtour，但它的元数据没有写仓库地址，没有核对是不是同一个项目；官方页面没找到依据的说明：官网 dtour.dev 正文由 JS 渲染，页面文字只有标题；说明依据是论文 HTML 版和作者博客 |
+| [DataMapPlot](https://github.com/TutteInstitute/datamapplot) | 把嵌入的二维投影画成带标签的静态或交互式“数据地图”的 Python 库。<br>给簇的点加标签后自动排版；社区页列出了用它做的交互地图，包括 Semantic Map of GitHub。 ✓ | [仓库](https://github.com/TutteInstitute/datamapplot "核对依据：PyPI 包元数据声明的仓库") ✓ | [展示页](https://datamapplot.readthedocs.io/en/latest/) ✓ | — | 开源 |
+| [Embedding Atlas](https://apple.github.io/embedding-atlas/) | Apple 的开源嵌入可视化工具：二维地图加密度等高线、自动聚类标签和元数据联动视图。<br>几百万个点的嵌入怎样低门槛地搜索、找近邻并联动过滤。 ✓ | [仓库](https://github.com/apple/embedding-atlas "核对依据：PyPI、npm 包元数据声明的仓库") ✓ | [展示页](https://apple.github.io/embedding-atlas/) ✓ | — | 开源 |
+| [UpSet](https://upset.app/) | 用矩阵加条形图表示多个集合的交集，替代集合超过三四个以后的 Venn 图。<br>集合很多时怎样排序、聚合和查询交集；元素的属性怎样接在交集旁边。 ✓ | [仓库](https://github.com/visdesignlab/upset2 "核对依据：upset.app/implementations 页面的 Source Code 链接（UpSet 2）") ✓ | [展示页](https://upset.app/) ✓ | — | 2014 年原版 UpSet 的仓库是 VCG/upset，upset.app 的实现页同时列了两个；这里记的是新版 UpSet 2。 |
+| [Voyager](https://idl.uw.edu/papers/voyager) | 把分面浏览和可视化推荐结合起来的探索工具：字段很多时自动给出一批候选图。<br>高维表格里不靠手工逐张指定图，而是浏览推荐的图；展示数据的变化而不是设计的变化。 ✓ | [仓库](https://github.com/vega/voyager "核对依据：npm 包元数据声明的仓库") ✓ | [展示页](https://vega.github.io/voyager/) ✓ | [站点](https://idl.uw.edu/papers/voyager) | 开源；npm 包 datavoyager 最近一次发布是 2022-06-14（2.0.0-alpha.24）。展示页由 JS 渲染，页面文字只有标题。 |
+| [regl-scatterplot](https://github.com/flekschas/regl-scatterplot)<br>（主分类 L1/chart-and-visualization-engines） | 基于 WebGL 的交互式二维散点图，面向大量数据点。<br>几十万以上的点如何做到可缩放、可选择、可编码；投影结果的前端落地。 ✓ | [仓库](https://github.com/flekschas/regl-scatterplot "核对依据：npm 包元数据声明的仓库") ✓ | [展示页](https://flekschas.github.io/regl-scatterplot/) ✓ | — | 开源；展示页由 WebGL 渲染，页面文字只有标题；说明依据是 npm 包的 README。 |
+
+### 三维空间与大规模关系探索
+
+<sub>L2/3d-and-large-graphs</sub>
 
 | 项目 | 定位与值得研究 | 开源项目 | 展示页 | 站点 / 文档 | 备注 |
 | --- | --- | --- | --- | --- | --- |
 | [PyGraphistry](https://github.com/graphistry/pygraphistry) | 将图分析数据接入 GPU 图探索环境。<br>GPU 图探索。 △ | [仓库](https://github.com/graphistry/pygraphistry "核对依据：PyPI 包元数据") ✓ | [展示页](https://pygraphistry.readthedocs.io/en/latest/demos/for_analysis.html) ✓ | — | 开源；官方页面没找到依据的说明：GPU 图探索环境（正文只有导航条目） |
-| [Embedding Projector](https://projector.tensorflow.org/) | 将高维向量降维到二维、三维，探索相似性与聚类。<br>高维结构投影后哪些信息被保留、哪些被扭曲。 △ | [仓库](https://github.com/tensorflow/embedding-projector) | [展示页](https://projector.tensorflow.org/) | — | 三维位置来自降维计算，不应理解为概念在原始高维语义空间中的真实坐标。 projector.tensorflow.org 和 TensorBoard Projector 插件文档都没有给出 embedding-projector 仓库的地址，这个地址未核实；官方页面没找到依据的说明：降维到二维三维、聚类、保留与扭曲了哪些信息 |
 | [deck.gl](https://github.com/visgl/deck.gl)<br>（主分类 L1/chart-and-visualization-engines） | GPU 加速的大数据可视化框架。<br>大规模数据、地图图层、多视角渲染。 ✓ | [仓库](https://github.com/visgl/deck.gl "核对依据：npm 包元数据") ✓ | [展示页](https://deck.gl/gallery/) ✓ | — | 开源 |
 | [React Force Graph](https://github.com/vasturiano/react-force-graph)<br>（主分类 L1/canvas-2d-and-3d） | 2D、3D、VR、AR 关系图。<br>官方示例含点击展开折叠、相机聚焦、方向箭头、动态数据和不同空间模式，对复杂图的空间交互有参考价值。 ✓ | [仓库](https://github.com/vasturiano/react-force-graph "核对依据：npm 包元数据") ✓ | [展示页](https://vasturiano.github.io/react-force-graph/) ✓ | — | 开源 |
 | [Cosmos.gl](https://github.com/cosmosgl/graph)<br>（主分类 L1/canvas-2d-and-3d） | GPU 加速的力导向图。<br>使用 GPU 做布局计算与图形渲染，面向大规模网络。 ✓ | [仓库](https://github.com/cosmosgl/graph "核对依据：npm 包元数据") ✓ | [展示页](https://cosmos.gl/) | [文档](https://openjsf.org/blog/introducing-cosmos-gl) | 开源；展示页是 Storybook 示例站，页面标题是通用的 Storybook 标题，具体示例未确认。 |
@@ -276,6 +302,15 @@
 | [Thoughtworks Technology Radar](https://www.thoughtworks.com/radar) | 技术采用建议与趋势。<br>表达经过研究者判断的技术采用建议，而不是技术、产品、需求之间的完整关系。 ✓ | — | [展示页](https://www.thoughtworks.com/radar) ✓ | — | — |
 | [OSS Insight](https://ossinsight.io/) | GitHub 项目和开发生态数据分析。<br>研究 GitHub 活跃度、生态指标及时间变化。 ✓ | [仓库](https://github.com/pingcap/ossinsight "核对依据：官网 About 页的 GitHub 链接") ✓ | [展示页](https://ossinsight.io/) ✓ | — | — |
 | [OSS Compass](https://oss-compass.org/) | 开源项目健康与生态指标分析。<br>多指标比较开源项目的生态表现。 ✓ | [仓库](https://github.com/oss-compass/compass-web) | [展示页](https://oss-compass.org/) ✓ | — | 官网 About 页只链到 GitHub 组织 github.com/oss-compass，具体到 compass-web 这个仓库未核实。 |
+
+### 数据与嵌入探索平台
+
+<sub>L3/data-exploration-platforms</sub>
+
+| 项目 | 定位与值得研究 | 开源项目 | 展示页 | 站点 / 文档 | 备注 |
+| --- | --- | --- | --- | --- | --- |
+| [Nomic Atlas](https://docs.nomic.ai/atlas/datasets/data-maps/how-atlas-works/1-key_terms) | 把大规模文本或嵌入数据变成可在浏览器里探索的二维地图的云平台。<br>嵌入到二维用什么投影（UMAP 与自研投影按规模切换）、主题层级与标签、分享与筛选。 ✓ | — | [展示页](https://atlas.nomic.ai/) ✓ | [文档](https://docs.nomic.ai/atlas/datasets/data-maps/how-atlas-works/1-key_terms) | 商业产品；商业云平台，Python 客户端 nomic 在 PyPI（包元数据声明的仓库是 nomic-ai/nomic，客户端不是平台本身）；技术报告写明无法公开许多技术细节。 |
+| [Orange](https://orangedatamining.com/) | 开源的数据挖掘与可视化软件，用组件搭流程；可视化组件里有 Radviz、FreeViz 等多维投影。<br>VizRank 在众多可能的投影里替人挑出“有信息”的那几张；锚点可以拖动。 ✓ | [仓库](https://github.com/biolab/orange3 "核对依据：官网首页的 GitHub 链接；PyPI 包元数据") ✓ | 无：桌面软件，没有在线展示页。 | [站点](https://orangedatamining.com/) · [文档](https://orangedatamining.com/docs) | 开源；许可证 GPLv3+（PyPI 元数据）。 |
 
 ## 第四板块 结构提炼与认知建模
 

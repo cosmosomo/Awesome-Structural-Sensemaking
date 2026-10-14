@@ -34,7 +34,8 @@
 | 服务拓扑 | 图布局、GPU 渲染 | 流量拓扑、服务关系视图 | [Kiali](https://github.com/kiali/kiali)、[Apache SkyWalking](https://skywalking.apache.org/) |
 | 知识地图 | [D3.js](https://github.com/d3/d3)、[Sigma.js](https://www.sigmajs.org/)、无限画布 | 文本知识网络、概念抽取 | [AFFiNE](https://affine.pro/)、[Kumu](https://kumu.io/)、[Logseq](https://github.com/logseq/logseq) |
 | 生态地图 | [D3.js](https://github.com/d3/d3)、[Apache ECharts](https://echarts.apache.org/)、筛选组件 | [CNCF Landscape2](https://github.com/cncf/landscape2)、[Build Your Own Radar](https://github.com/thoughtworks/build-your-own-radar) | [CNCF Landscape](https://landscape.cncf.io/)、[OSS Insight](https://ossinsight.io/) |
-| 高维关系探索 | [Three.js](https://github.com/mrdoob/three.js)、WebGL、GPU 图计算 | [React Force Graph](https://github.com/vasturiano/react-force-graph)、[Embedding Projector](https://projector.tensorflow.org/) | 专业图探索与 AI 分析平台 |
+| 高维数据探索 | [UMAP（umap-learn）](https://github.com/lmcinnes/umap)、[openTSNE](https://github.com/pavlin-policar/openTSNE)、[regl-scatterplot](https://github.com/flekschas/regl-scatterplot)、[Plotly.js](https://github.com/plotly/plotly.js) | [Embedding Projector](https://projector.tensorflow.org/)、[HiPlot](https://github.com/facebookresearch/hiplot)、[Facets](https://pair-code.github.io/facets/)、[KeplerMapper](https://github.com/scikit-tda/kepler-mapper)、[dtour](https://dtour.dev)、[Embedding Atlas](https://apple.github.io/embedding-atlas/)、[UpSet](https://upset.app/)、[Voyager](https://idl.uw.edu/papers/voyager) | [Nomic Atlas](https://docs.nomic.ai/atlas/datasets/data-maps/how-atlas-works/1-key_terms)、[Orange](https://orangedatamining.com/) |
+| 三维与大规模关系探索 | [Three.js](https://github.com/mrdoob/three.js)、WebGL、GPU 图计算 | [React Force Graph](https://github.com/vasturiano/react-force-graph)、[PyGraphistry](https://github.com/graphistry/pygraphistry) | 专业图探索与 AI 分析平台 |
 <!-- /gen -->
 
 ## 看全部项目

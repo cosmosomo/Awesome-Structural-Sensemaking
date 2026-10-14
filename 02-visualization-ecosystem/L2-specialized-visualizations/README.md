@@ -159,19 +159,38 @@ SkyWalking 能从宏观服务拓扑进入监控、日志与 Trace；Kiali 围绕
 | [Build Your Own Radar](https://github.com/thoughtworks/build-your-own-radar) | 从结构化技术条目生成交互技术雷达。<br>技术雷达生成器。 ✓ | [仓库](https://github.com/thoughtworks/build-your-own-radar "核对依据：radar.thoughtworks.com 页面的 open source 链接") ✓ | [展示页](https://radar.thoughtworks.com/) ✓ | — | 官方托管版要求使用 Technology Radar 固定的象限和环名称，自定义名称需自行部署；据搜索结果为 AGPL 许可。 |
 <!-- /gen -->
 
-## 三维、高维与大规模关系探索
+## 高维数据探索
 
-需要分别研究三个问题：
+数据的维度（属性数、特征数）比屏幕的位置轴多时，这一组项目怎样把它变成人能看的东西：降维投影、平行坐标与并置视图、巡游、拓扑摘要、集合交集。办法的分类、每一类丢掉什么、设计者自己写下的限制，见[高维可视化](../../01-theory/high-dimensional.md)；每个项目的编码和原文摘录在[案例分析](../../04-structure-and-cognition/case-study/data/case-analysis.md)里。
+
+要分别研究的问题：投影之后哪些信息被保留，哪些被扭曲；视图太多时谁来挑；点的身份能不能在视图之间保持。
+
+<!-- gen:catalog:L2/high-dimensional-exploration -->
+| 项目 | 定位与值得研究 | 开源项目 | 展示页 | 站点 / 文档 | 备注 |
+| --- | --- | --- | --- | --- | --- |
+| [Embedding Projector](https://projector.tensorflow.org/) | 将高维向量降维到二维、三维，探索相似性与聚类。<br>高维结构投影后哪些信息被保留、哪些被扭曲。 △ | [仓库](https://github.com/tensorflow/embedding-projector) | [展示页](https://projector.tensorflow.org/) | — | 三维位置来自降维计算，不应理解为概念在原始高维语义空间中的真实坐标。 projector.tensorflow.org 和 TensorBoard Projector 插件文档都没有给出 embedding-projector 仓库的地址，这个地址未核实；官方页面没找到依据的说明：降维到二维三维、聚类、保留与扭曲了哪些信息 |
+| [HiPlot](https://github.com/facebookresearch/hiplot) | Meta（原 Facebook AI Research）的交互式高维数据探索工具，以平行坐标图为核心。<br>每个维度一根轴、每条记录一条线：刷选、重排与删除轴、按另一根轴着色，用来看超参数与指标的关系。 ✓ | [仓库](https://github.com/facebookresearch/hiplot "核对依据：PyPI 包元数据声明的仓库") ✓ | [展示页](https://facebookresearch.github.io/hiplot/) ✓ | — | PyPI 最近一次发布是 2022-10-27（0.1.33），包元数据没有写许可证；“删除轴、按另一根轴着色”在 Meta AI 博客里有原文，文档页没有。 |
+| [Facets](https://pair-code.github.io/facets/) | Google PAIR 的机器学习数据集可视化：Overview 逐特征看分布，Dive 按特征值摆放每个数据点。<br>特征成百上千时，先逐特征看总体分布与异常，再按特征分面、着色地看单条记录。 ✓ | [仓库](https://github.com/pair-code/facets "核对依据：PyPI 包元数据声明的仓库；项目站点的 Code 链接") ✓ | [展示页](https://pair-code.github.io/facets/) ✓ | — | 开源；PyPI 最近一次发布是 2023-05-24（facets-overview 1.1.1）；仓库当前是否仍在维护没有核实（GitHub 页面没有访问）。“特征成百上千”见 Google 开源博客 2017 年的发布文章。 |
+| [KeplerMapper](https://github.com/scikit-tda/kepler-mapper) | 拓扑数据分析里 Mapper 算法的 Python 实现，把高维数据变成一张由聚类节点组成的小图。<br>投影、覆盖、聚类三步；节点和边的大小、颜色由用户指定的函数决定。 ✓ | [仓库](https://github.com/scikit-tda/kepler-mapper "核对依据：官方文档站首页的源码仓库链接") ✓ | [展示页](https://kepler-mapper.scikit-tda.org/en/latest/notebooks/Cancer-demo.html) ✓ | [文档](https://kepler-mapper.scikit-tda.org/en/latest/) | 开源；展示页是文档里的 notebook 示例，输出是预先生成的，不是在线交互。 |
+| [dtour](https://dtour.dev) | 在浏览器里沿一串二维投影“巡游”高维数据的工具，支持引导式巡游、手动拖动投影和自动漫游。<br>点的身份怎样在投影之间保持；只有关键帧可解释，中间的插值只是帮助跟踪。 △ | [仓库](https://github.com/flekschas/dtour "核对依据：作者博客 lekschas.de 里的 dtour 仓库链接") ✓ | [展示页](https://dtour.dev) ✓ | — | 2026 年 5 月的论文（arXiv:2605.04306），论文作者的博客里给了仓库和网站地址；PyPI 上有同名包 dtour，但它的元数据没有写仓库地址，没有核对是不是同一个项目；官方页面没找到依据的说明：官网 dtour.dev 正文由 JS 渲染，页面文字只有标题；说明依据是论文 HTML 版和作者博客 |
+| [DataMapPlot](https://github.com/TutteInstitute/datamapplot) | 把嵌入的二维投影画成带标签的静态或交互式“数据地图”的 Python 库。<br>给簇的点加标签后自动排版；社区页列出了用它做的交互地图，包括 Semantic Map of GitHub。 ✓ | [仓库](https://github.com/TutteInstitute/datamapplot "核对依据：PyPI 包元数据声明的仓库") ✓ | [展示页](https://datamapplot.readthedocs.io/en/latest/) ✓ | — | 开源 |
+| [Embedding Atlas](https://apple.github.io/embedding-atlas/) | Apple 的开源嵌入可视化工具：二维地图加密度等高线、自动聚类标签和元数据联动视图。<br>几百万个点的嵌入怎样低门槛地搜索、找近邻并联动过滤。 ✓ | [仓库](https://github.com/apple/embedding-atlas "核对依据：PyPI、npm 包元数据声明的仓库") ✓ | [展示页](https://apple.github.io/embedding-atlas/) ✓ | — | 开源 |
+| [UpSet](https://upset.app/) | 用矩阵加条形图表示多个集合的交集，替代集合超过三四个以后的 Venn 图。<br>集合很多时怎样排序、聚合和查询交集；元素的属性怎样接在交集旁边。 ✓ | [仓库](https://github.com/visdesignlab/upset2 "核对依据：upset.app/implementations 页面的 Source Code 链接（UpSet 2）") ✓ | [展示页](https://upset.app/) ✓ | — | 2014 年原版 UpSet 的仓库是 VCG/upset，upset.app 的实现页同时列了两个；这里记的是新版 UpSet 2。 |
+| [Voyager](https://idl.uw.edu/papers/voyager) | 把分面浏览和可视化推荐结合起来的探索工具：字段很多时自动给出一批候选图。<br>高维表格里不靠手工逐张指定图，而是浏览推荐的图；展示数据的变化而不是设计的变化。 ✓ | [仓库](https://github.com/vega/voyager "核对依据：npm 包元数据声明的仓库") ✓ | [展示页](https://vega.github.io/voyager/) ✓ | [站点](https://idl.uw.edu/papers/voyager) | 开源；npm 包 datavoyager 最近一次发布是 2022-06-14（2.0.0-alpha.24）。展示页由 JS 渲染，页面文字只有标题。 |
+| [regl-scatterplot](https://github.com/flekschas/regl-scatterplot)<br>（主分类 L1/chart-and-visualization-engines） | 基于 WebGL 的交互式二维散点图，面向大量数据点。<br>几十万以上的点如何做到可缩放、可选择、可编码；投影结果的前端落地。 ✓ | [仓库](https://github.com/flekschas/regl-scatterplot "核对依据：npm 包元数据声明的仓库") ✓ | [展示页](https://flekschas.github.io/regl-scatterplot/) ✓ | — | 开源；展示页由 WebGL 渲染，页面文字只有标题；说明依据是 npm 包的 README。 |
+<!-- /gen -->
+
+## 三维空间与大规模关系探索
+
+需要分别研究两个问题：
 
 1. 图形是否能够容纳非常大量的节点和边？
-2. 高维结构投影到二维或三维之后，哪些信息被保留，哪些被扭曲？
-3. 三维交互是否真正降低了理解成本，还是只增加了空间操作成本？
+2. 三维交互是否真正降低了理解成本，还是只增加了空间操作成本？第二个问题在高维数据上有实证研究的回答，见[高维可视化](../../01-theory/high-dimensional.md)。
 
-<!-- gen:catalog:L2/spatial-and-high-dimensional -->
+<!-- gen:catalog:L2/3d-and-large-graphs -->
 | 项目 | 定位与值得研究 | 开源项目 | 展示页 | 站点 / 文档 | 备注 |
 | --- | --- | --- | --- | --- | --- |
 | [PyGraphistry](https://github.com/graphistry/pygraphistry) | 将图分析数据接入 GPU 图探索环境。<br>GPU 图探索。 △ | [仓库](https://github.com/graphistry/pygraphistry "核对依据：PyPI 包元数据") ✓ | [展示页](https://pygraphistry.readthedocs.io/en/latest/demos/for_analysis.html) ✓ | — | 开源；官方页面没找到依据的说明：GPU 图探索环境（正文只有导航条目） |
-| [Embedding Projector](https://projector.tensorflow.org/) | 将高维向量降维到二维、三维，探索相似性与聚类。<br>高维结构投影后哪些信息被保留、哪些被扭曲。 △ | [仓库](https://github.com/tensorflow/embedding-projector) | [展示页](https://projector.tensorflow.org/) | — | 三维位置来自降维计算，不应理解为概念在原始高维语义空间中的真实坐标。 projector.tensorflow.org 和 TensorBoard Projector 插件文档都没有给出 embedding-projector 仓库的地址，这个地址未核实；官方页面没找到依据的说明：降维到二维三维、聚类、保留与扭曲了哪些信息 |
 | [deck.gl](https://github.com/visgl/deck.gl)<br>（主分类 L1/chart-and-visualization-engines） | GPU 加速的大数据可视化框架。<br>大规模数据、地图图层、多视角渲染。 ✓ | [仓库](https://github.com/visgl/deck.gl "核对依据：npm 包元数据") ✓ | [展示页](https://deck.gl/gallery/) ✓ | — | 开源 |
 | [React Force Graph](https://github.com/vasturiano/react-force-graph)<br>（主分类 L1/canvas-2d-and-3d） | 2D、3D、VR、AR 关系图。<br>官方示例含点击展开折叠、相机聚焦、方向箭头、动态数据和不同空间模式，对复杂图的空间交互有参考价值。 ✓ | [仓库](https://github.com/vasturiano/react-force-graph "核对依据：npm 包元数据") ✓ | [展示页](https://vasturiano.github.io/react-force-graph/) ✓ | — | 开源 |
 | [Cosmos.gl](https://github.com/cosmosgl/graph)<br>（主分类 L1/canvas-2d-and-3d） | GPU 加速的力导向图。<br>使用 GPU 做布局计算与图形渲染，面向大规模网络。 ✓ | [仓库](https://github.com/cosmosgl/graph "核对依据：npm 包元数据") ✓ | [展示页](https://cosmos.gl/) | [文档](https://openjsf.org/blog/introducing-cosmos-gl) | 开源；展示页是 Storybook 示例站，页面标题是通用的 Storybook 标题，具体示例未确认。 |

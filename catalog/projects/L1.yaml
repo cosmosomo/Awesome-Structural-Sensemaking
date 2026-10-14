@@ -74,7 +74,7 @@
   name: deck.gl
   level: L1
   category: chart-and-visualization-engines
-  also: [L2/spatial-and-high-dimensional]
+  also: [L2/3d-and-large-graphs]
   kind: library
   summary: "GPU 加速的大数据可视化框架。"
   focus: "大规模数据、地图图层、多视角渲染。"
@@ -87,7 +87,26 @@
   access: open-source
   facts_checked: "2026-10-13"
 
+- id: regl-scatterplot
+  name: regl-scatterplot
+  level: L1
+  category: chart-and-visualization-engines
+  also: [L2/high-dimensional-exploration]
+  kind: library
+  summary: "基于 WebGL 的交互式二维散点图，面向大量数据点。"
+  focus: "几十万以上的点如何做到可缩放、可选择、可编码；投影结果的前端落地。"
+  repo: https://github.com/flekschas/regl-scatterplot
+  demo: https://flekschas.github.io/regl-scatterplot/
+  demo_source: search
+  package: npm:regl-scatterplot
+
 # ---- 关系图与节点交互引擎 ----
+  demo_checked: "2026-10-14"
+  repo_checked: "2026-10-14"
+  repo_check_via: "npm 包元数据声明的仓库"
+  access: open-source
+  facts_checked: "2026-10-14"
+  notes: "展示页由 WebGL 渲染，页面文字只有标题；说明依据是 npm 包的 README。"
 - id: antv-g6
   name: AntV G6
   level: L1
@@ -295,7 +314,40 @@
   facts_checked: "2026-10-13"
   facts_gaps: ["大型", "层次化", "聚合关系"]
 
+# ---- 降维与投影算法 ----
+- id: umap-learn
+  name: UMAP（umap-learn）
+  level: L1
+  category: dimensionality-reduction
+  kind: library
+  summary: "UMAP 降维算法的 Python 实现。"
+  focus: "文档讲了主要参数（n_neighbors、min_dist、n_components、metric）和交互式绘图的做法。"
+  repo: https://github.com/lmcinnes/umap
+  docs: https://umap-learn.readthedocs.io/en/latest/
+  demo_none: "算法库，没有独立的展示页；文档里有绘图示例。"
+  package: pypi:umap-learn
+  repo_checked: "2026-10-14"
+  repo_check_via: "PyPI 包元数据声明的仓库"
+  access: open-source
+  facts_checked: "2026-10-14"
+
+- id: opentsne
+  name: openTSNE
+  level: L1
+  category: dimensionality-reduction
+  kind: library
+  summary: "t-SNE 的可扩展、并行实现。"
+  focus: "t-SNE 的参数怎样改变图（文档有参数指南）。"
+  repo: https://github.com/pavlin-policar/openTSNE
+  docs: https://opentsne.readthedocs.io/en/stable/
+  demo_none: "算法库，没有独立的展示页；文档里有使用示例。"
+  package: pypi:openTSNE
+
 # ---- 图形描述语言与模型驱动技术 ----
+  repo_checked: "2026-10-14"
+  repo_check_via: "PyPI 包元数据声明的仓库"
+  access: open-source
+  facts_checked: "2026-10-14"
 - id: mermaid
   name: Mermaid
   level: L1
@@ -433,7 +485,7 @@
   name: React Force Graph
   level: L1
   category: canvas-2d-and-3d
-  also: [L2/spatial-and-high-dimensional]
+  also: [L2/3d-and-large-graphs]
   kind: library
   summary: "2D、3D、VR、AR 关系图。"
   focus: "官方示例含点击展开折叠、相机聚焦、方向箭头、动态数据和不同空间模式，对复杂图的空间交互有参考价值。"
@@ -450,7 +502,7 @@
   name: Cosmos.gl
   level: L1
   category: canvas-2d-and-3d
-  also: [L2/spatial-and-high-dimensional]
+  also: [L2/3d-and-large-graphs]
   kind: library
   summary: "GPU 加速的力导向图。"
   focus: "使用 GPU 做布局计算与图形渲染，面向大规模网络。"

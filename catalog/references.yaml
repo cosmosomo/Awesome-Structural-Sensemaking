@@ -76,6 +76,48 @@ theory:
     use: "第四板块里提炼层级的一个现成流程；层级取决于所问的问题。"
     notes: "读了定义和构建部分。"
 
+  - id: liu-hd-survey
+    title: "Visualizing High-Dimensional Data: Advances in the Past Decade（Liu, Maljovec, Wang, Bremer, Pascucci）"
+    url: https://sci.utah.edu/~beiwang/publications/Vis_HD_STAR_BeiWang_2015.pdf
+    summary: "200 多篇论文的综述：按信息可视化流水线（数据变换、视觉映射、视图变换）分类，并按交互程度分成计算为主、交互探索、模型操作三类。"
+    use: "高维可视化文档里“办法在流水线的哪一步起作用”的校准；引用它对三维散点图与散点矩阵的评估。"
+    notes: "读了引言、分类方法，以及感知评估和交互两节；其余没读。"
+
+  - id: keim-2002
+    title: "Information Visualization and Visual Data Mining（Keim）"
+    url: https://kops.uni-konstanz.de/entities/publication/79d60036-d223-41a5-836f-1c2ab19cfd2a/full
+    summary: "按数据类型、可视化技术（标准二三维、几何变换、图符、密集像素、堆叠）、交互与扭曲技术三个维度给可视化与可视数据挖掘分类。"
+    use: "校准“维度处理”词表的名字，也说明本库案例里没有图符和密集像素两类。"
+    notes: "读了分类一节，其余没读。"
+
+  - id: lee-tours-review
+    title: "A Review of the State-of-the-Art on Tours for Dynamic Visualization of High-dimensional Data（Lee 等）"
+    url: https://arxiv.org/abs/2104.08016
+    summary: "综述“巡游”：用一串线性投影的动画看四维以上的数据；顺带回顾散点矩阵、平行坐标、热力图和刷选。"
+    use: "高维可视化文档里“高维”的定义，以及巡游与其他办法的关系。"
+    notes: "读了摘要和引言，其余没读。"
+
+  - id: sedlmair-scatterplot-2013
+    title: "Empirical Guidance on Scatterplot and Dimension Reduction Technique Choices（Sedlmair, Munzner, Tory）"
+    url: https://eprints.cs.univie.ac.at/3992/
+    summary: "两位编码员检查了 75 个数据集、4 种降维方法、3 种散点图形式生成的 816 张图：二维散点图常常“够用”，交互式三维散点图很少有帮助、常常更差。"
+    use: "“再加一个空间维度有没有用”的实证旁证。"
+    notes: "读了摘要和引言，其余没读。"
+
+  - id: robertson-animation-2008
+    title: "Effectiveness of Animation in Trend Visualization（Robertson, Fernandez, Fisher, Lee, Stasko）"
+    url: https://faculty.cc.gatech.edu/~stasko/papers/infovis08-anim.pdf
+    summary: "比较动画、叠加轨迹和小多图三种趋势可视化：动画在演示时最快、最让人愉快但出错多，分析时最差，小多图最准。"
+    use: "时间或投影序列当作一个“维度”用动画展示时的取舍（Gapminder 气泡图、巡游）。"
+    notes: "读了摘要和引言，其余没读。"
+
+  - id: nonato-aupetit-2018
+    title: "Multidimensional Projection for Visual Analytics: Linking Techniques with Distortions, Tasks, and Layout Enrichment（Nonato, Aupetit）"
+    url: https://qcai.qcri.org/publications/multidimensional-projection-for-visual-analytics-linking-techniques-with-distortions-tasks-and-layout-enrichment
+    summary: "多维投影的综述：投影会产生哪些失真、怎样量化评估、怎样用布局增强来识别失真。"
+    use: "高维可视化文档里“失真的度量”一项还没解决的说明。"
+    notes: "只读到出版页的摘要，没读到全文。"
+
 awesome_lists:
   - id: awesome-dataviz
     title: "Awesome Dataviz"

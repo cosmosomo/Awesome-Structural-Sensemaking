@@ -101,3 +101,14 @@ Dify、Langflow、n8n、Node-RED 的重点已超出画图，进入完整的应�
 | [OSS Insight](https://ossinsight.io/) | GitHub 项目和开发生态数据分析。<br>研究 GitHub 活跃度、生态指标及时间变化。 ✓ | [仓库](https://github.com/pingcap/ossinsight "核对依据：官网 About 页的 GitHub 链接") ✓ | [展示页](https://ossinsight.io/) ✓ | — | — |
 | [OSS Compass](https://oss-compass.org/) | 开源项目健康与生态指标分析。<br>多指标比较开源项目的生态表现。 ✓ | [仓库](https://github.com/oss-compass/compass-web) | [展示页](https://oss-compass.org/) ✓ | — | 官网 About 页只链到 GitHub 组织 github.com/oss-compass，具体到 compass-web 这个仓库未核实。 |
 <!-- /gen -->
+
+## 数据与嵌入探索平台
+
+把投影、聚类、搜索、筛选和协作放进同一个产品，面向高维数据和嵌入向量的探索。办法的分类见[高维可视化](../../01-theory/high-dimensional.md)。
+
+<!-- gen:catalog:L3/data-exploration-platforms -->
+| 项目 | 定位与值得研究 | 开源项目 | 展示页 | 站点 / 文档 | 备注 |
+| --- | --- | --- | --- | --- | --- |
+| [Nomic Atlas](https://docs.nomic.ai/atlas/datasets/data-maps/how-atlas-works/1-key_terms) | 把大规模文本或嵌入数据变成可在浏览器里探索的二维地图的云平台。<br>嵌入到二维用什么投影（UMAP 与自研投影按规模切换）、主题层级与标签、分享与筛选。 ✓ | — | [展示页](https://atlas.nomic.ai/) ✓ | [文档](https://docs.nomic.ai/atlas/datasets/data-maps/how-atlas-works/1-key_terms) | 商业产品；商业云平台，Python 客户端 nomic 在 PyPI（包元数据声明的仓库是 nomic-ai/nomic，客户端不是平台本身）；技术报告写明无法公开许多技术细节。 |
+| [Orange](https://orangedatamining.com/) | 开源的数据挖掘与可视化软件，用组件搭流程；可视化组件里有 Radviz、FreeViz 等多维投影。<br>VizRank 在众多可能的投影里替人挑出“有信息”的那几张；锚点可以拖动。 ✓ | [仓库](https://github.com/biolab/orange3 "核对依据：官网首页的 GitHub 链接；PyPI 包元数据") ✓ | 无：桌面软件，没有在线展示页。 | [站点](https://orangedatamining.com/) · [文档](https://orangedatamining.com/docs) | 开源；许可证 GPLv3+（PyPI 元数据）。 |
+<!-- /gen -->
