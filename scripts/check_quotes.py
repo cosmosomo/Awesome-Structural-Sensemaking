@@ -30,7 +30,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 UA = "Mozilla/5.0 (compatible; awesome-structural-sensemaking-linkcheck/1.0)"
 CATEGORIES = ("input_material", "entities", "relations", "attributes", "views", "encodings",
-              "interactions", "questions", "abstraction", "why", "alternative", "limit")
+              "interactions", "questions", "abstraction", "why", "alternative", "limit",
+              # 文献摘录（catalog/literature-evidence.json）用的类目
+              "setup", "better_3d", "better_2d", "no_difference", "caveat")
 
 
 def norm(s: str) -> str:

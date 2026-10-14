@@ -314,6 +314,45 @@
   facts_checked: "2026-10-13"
   facts_gaps: ["GPU 图探索环境（正文只有导航条目）"]
 
+- id: vrnetzer
+  name: VRNetzer
+  level: L2
+  category: 3d-and-large-graphs
+  kind: platform
+  summary: "在 VR 里探索大型网络的平台：Unreal 做头显前端，Python 做分析，MySQL 存数据，另有浏览器界面和不需要头显的桌面版。"
+  focus: "三维布局由功能注释或随机游走频率经降维嵌入得到；论文把立体深度用来解开二维里被遮挡的节点和边。"
+  repo: https://github.com/menchelab/VRNetzer
+  repo_checked: "2026-10-14"
+  repo_check_via: "论文（Nature Communications 2021）的 Code availability 一节写明仓库地址"
+  demo_none: "需要 Steam VR 兼容头显，或在 Windows 上运行桌面版可执行文件，没有在线展示页"
+  access: unchecked
+  notes: "论文写明有桌面版（不需要 VR 硬件，要求 Windows 10）和完整的 VR 版。许可证没读。"
+
+- id: icave
+  name: iCAVE
+  level: L2
+  category: 3d-and-large-graphs
+  kind: tool
+  summary: "面向生物分子网络的三维、立体和沉浸式（CAVE）可视化工具，内置三维布局和聚类算法，支持没有立体设备时旋转缩放。"
+  focus: "“语义层布局”把网络分成默认 7 层放在第三维上，每层内再做力导向；可以在同一个图的几种布局之间切换。"
+  access: open-source
+  notes: "论文写明按 GNU LGPL 发布，项目主页写在论文里（research.mssm.edu 的 gumuslab/software.html）；这个主页 2026-10-14 访问不到（我这边返回 HTTP 405，子智能体那边 DNS 解析失败），没有换路径去读，所以没有仓库地址，也没有展示页。论文自称快照和视频放在 GitHub 上，会话读不了 GitHub 页面，没找。"
+  demo_none: "需要 CAVE 环境或立体显示，没找到在线展示页"
+
+- id: geographviz
+  name: GeoGraphViz
+  level: L2
+  category: 3d-and-large-graphs
+  kind: tool
+  summary: "带地理约束的三维力导向知识图谱：把图悬在二维地图上方，节点既受语义力拉扯，又被拉向自己的地理位置。"
+  focus: "地理力与语义力的平衡由一个可调变量控制；论文写明地理力占主导时，局部簇会几乎消失。"
+  repo: https://github.com/ASUcicilab/GeoGraphViz
+  repo_checked: "2026-10-14"
+  repo_check_via: "论文（arXiv 2304.09864）给出的数据与代码地址；论文另写 will be openly shared，仓库内容没读（会话读不了 GitHub 页面）"
+  access: research-prototype
+  demo_none: "论文和搜索都没有给出可打开的展示页"
+  notes: "2023 年 4 月的论文，作者 Sizhe Wang、Wenwen Li、Zhining Gu。"
+
 - id: embedding-projector
   name: Embedding Projector
   level: L2
@@ -385,6 +424,18 @@
   repo_check_via: "官方文档站首页的源码仓库链接"
   access: open-source
   facts_checked: "2026-10-14"
+
+- id: pca3d
+  name: pca3d
+  level: L2
+  category: high-dimensional-exploration
+  kind: library
+  summary: "R 包：用 rgl 画可旋转的三维 PCA 图，按分组给点配颜色和形状，并提供二维版 pca2d。"
+  focus: "作者的用法是在三维版里探索、挑选主成分，再用二维版出论文图；重点是样本怎样落进不同的分组。"
+  docs: https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd
+  access: archived
+  notes: "GPL-2；作者 January Weiner；最后版本 0.10.2（2020-10）。CRAN 页面写明 2023-02-02 因问题没有及时修复被移出 CRAN，源码包还在 CRAN 归档里。DESCRIPTION 里没有仓库地址，所以没有 repo。说明依据是源码包里的 vignette 和 DESCRIPTION（2026-10-14 读）。"
+  demo_none: "要在 R 里运行才会打开 rgl 窗口，没有在线展示页；vignette 里有截图"
 
 - id: dtour
   name: dtour

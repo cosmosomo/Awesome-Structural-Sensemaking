@@ -70,6 +70,8 @@ def validate_cases(c: dict, project_ids: set[str], form_ids: set[str]) -> list[s
                 errs.append(f"案例 {i}: 缺少 {k}")
         if case.get("dims") and not case.get("dims_note"):
             errs.append(f"案例 {i}: 写了 dims 就要写 dims_note（数据有几维、每一维在画面上变成什么）")
+        if case.get("space") and not case.get("space_note"):
+            errs.append(f"案例 {i}: 写了 space 就要写 space_note（第三根轴代表什么、靠什么线索读出深度）")
         if case.get("field") and case["field"] not in v["fields"]:
             errs.append(f"案例 {i}: field {case['field']!r} 不在词表 fields 里")
         elif case.get("field"):
@@ -89,7 +91,7 @@ def validate_cases(c: dict, project_ids: set[str], form_ids: set[str]) -> list[s
         if case.get("confidence") and case["confidence"] not in CONFIDENCE:
             errs.append(f"案例 {i}: confidence 不在 {list(CONFIDENCE)} 里")
         for key, vocab_key in (("issue_types", "issue_types"), ("structure", "structures"), ("modifiers", "modifiers"),
-                               ("focus", "focus_parts"), ("abstraction", "abstraction_modes"), ("dims", "dim_modes")):
+                               ("focus", "focus_parts"), ("abstraction", "abstraction_modes"), ("dims", "dim_modes"), ("space", "spaces")):
             for x in case.get(key, []):
                 if x not in v[vocab_key]:
                     errs.append(f"案例 {i}: {key} 里的 {x} 不在词表 {vocab_key} 里")
@@ -329,6 +331,21 @@ def render_dims_modes(d: dict, _arg: str) -> str:
     n = sum(1 for x in c["cases"] if x.get("dims"))
     out.append("")
     out.append(f"{n} 个案例标了维度处理；其余案例没有“维度比位置轴多”的问题，或页面没写。")
+    return "\n".join(out) + "\n"
+
+
+def render_space_modes(d: dict, _arg: str) -> str:
+    """展示空间总表：定义、用到它的案例（主要的加粗）。"""
+    c, v = d["cases"], d["cases"]["vocab"]
+    projects = {p["id"]: p for p in d["projects"]}
+    out = ["| 展示空间 | 做法 | 案例（加粗的是主要的） | 数量 |", "| --- | --- | --- | --- |"]
+    for k, m in v["spaces"].items():
+        rows = [x for x in c["cases"] if k in x.get("space", [])]
+        names = "、".join((lambda s, x=x: f"**{s}**" if x["space"][0] == k else s)(f"[{esc(case_name(x, projects))}]({ev_link(x['id'])})") for x in rows)
+        out.append(f"| {m['title']} | {esc(m['desc'])} | {names or '—'} | {len(rows)} |")
+    n = sum(1 for x in c["cases"] if x.get("space"))
+    out.append("")
+    out.append(f"{n} 个案例标了展示空间；其余案例的位置轴放在普通二维平面里（含平面上的双曲几何）。")
     return "\n".join(out) + "\n"
 
 
@@ -604,6 +621,7 @@ CASE_RENDERERS = {
     "schoolsummary": render_school_summary,
     "dimsmodes": render_dims_modes,
     "dimscross": render_dims_cross,
+    "spacemodes": render_space_modes,
     "gallery": render_gallery,
     "gallerystats": render_gallery_stats,
     "galleryindex": render_gallery_index,

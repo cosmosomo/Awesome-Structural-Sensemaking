@@ -288,6 +288,10 @@
   modifiers: [directed, weighted, temporal]
   source: [recorded]
   structure_note: "服务、实例、端点、进程的层级，服务之间的调用拓扑；节点上有指标（RPM、SLA）；基础设施画成三维地图"
+  space:
+  - layered
+  - scene
+  space_note: "摘录只写到 3D Infrastructure Map 用来看跨层（cross-layer view）、可旋转；我在无头 Chromium 里打开演示页（2026-10-14）看到的是 Apps、Middleware、Service Mesh、Infra 四个层竖直堆叠，层内是平面布局，层间有跨层连线，界面左下角写着 17 layers、18 cross-layer links——第三根轴放的是层，不是连续量"
   focus: [connectivity, node_attr, containment]
   forms: [dependency-graph, scene-3d]
   schools: [link, schematic]
@@ -922,6 +926,8 @@
   dims:
   - project
   dims_note: 每个词或样本是一个高维向量；用 PCA、t-SNE 等投影到二维或三维，可旋转缩放；右侧检视面板给最近邻
+  space: [scene]
+  space_note: "PCA 的 x、y、z 各选一个成分（Component #1 到 #3），可以取消 Z 轴退回二维；三维模式用多种冗余的深度线索（按距离改变点的大小、加雾、开场的“lazy susan”旋转）帮助读深度。演示页自己写出“Total variance described”：200 维词向量取三根轴是 8.5%，取两根轴是 6.3%（2026-10-14 在页面里取消勾选 Z 轴读出）"
   forms:
   - projection-scatter
   schools: [channels]
@@ -929,9 +935,38 @@
   views_note: "二维/三维散点（投影视图）+ 右侧检视面板（搜索、最近邻）"
   abstraction: [zoom, filter-scope]
   abstraction_note: "缩放旋转平移；选取一个球；“隔离点”只分析选中的"
-  ev: ["questions:nearby points are semantically related", "questions:finding meaningful directions", "relations:list of nearest points and distances", "encodings:choose data columns to color and label points"]
+  ev: ["questions:nearby points are semantically related", "questions:finding meaningful directions", "relations:list of nearest points and distances", "encodings:choose data columns to color and label points", "encodings:changing the size of points based on distance to camera"]
   confidence: high
   thinking: ["alternative:these static views are generally inadequate", "why:customized for the kinds of tasks", "limit:visually compare two embeddings"]
+
+- id: pca3d
+  origin: project
+  domain: 统计与组学
+  field: data
+  issue: 看样本在前几个主成分上怎样按分组聚在一起；在三维里探索、挑选成分，再出论文用的二维图
+  issue_types: [explore-discover, compare]
+  structure: [spatial, table]
+  modifiers: [derived, typed]
+  source: [derived]
+  structure_note: "一张样本乘变量的表（作者的示例是 400 多种代谢物、136 名受试者）；PCA 得到的前几个主成分得分当作坐标；样本带分组标签"
+  focus: [cluster, membership]
+  dims:
+  - project
+  dims_note: 每个样本是几百维向量；PCA 取三个成分当 x、y、z（可指定用哪三个，二维版取两个）；分组映射到颜色和形状，可加分组质心、置信椭球和双标图里的变量载荷
+  space:
+  - scene
+  space_note: 第三根轴是第三个主成分；用 rgl 画可旋转的三维窗口；点到 xy 平面的细线（阴影线）和灰色平面帮助读深度；作者的用法是三维探索、二维出图
+  forms:
+  - projection-scatter
+  schools: [channels]
+  dropped: "成分之外的方差；变量载荷在维度很高时作者自己写读不清"
+  views_note: "可旋转的三维散点（颜色和形状表示分组）+ 质心和置信椭球 + 可选双标图；二维版 pca2d 用同样参数出图"
+  abstraction: [aggregate, separate-views]
+  abstraction_note: "质心符号和置信椭球把一组样本概括成一个符号；三维版与二维版分工"
+  ev: ["entities:The samples fall into one of three groups", "encodings:Factor levels can be used to automatically generate symbols and colors", "views:The pca3d function shows a three dimensional representation", "encodings:Draw a thin grey line from the point to the xy plane", "abstraction:Show a large symbol of the group at the average coordinates"]
+  confidence: medium
+  thinking: ["why:fiddle around with the 3D version", "alternative:a biplot showing all variable loadings will be unreadable", "limit:colors and palette should not contain an alpha channel"]
+  note: "作者把三维当探索工具、二维当表达工具；文档没有给三维比二维好的比较证据。包 2023 年被移出 CRAN，源码包还在 CRAN 归档里。"
 
 - id: gephi
   origin: external
@@ -1570,6 +1605,9 @@
   dims:
   - slice
   dims_note: 四维压到屏幕：不投影，只取三维截面（类比 Flatland 里二维生物看三维世界的二维截面）；按一个键可以换看哪三个维度，后期才解锁平移截面
+  space:
+  - scene
+  space_note: "屏幕上画的是四维世界的三维截面：玩家是四维世界里的三维角色，按键换看哪三个维度；深度靠三维场景的透视和移动读出"
   forms:
   - nd-slice
   schools:
@@ -1618,6 +1656,9 @@
   - axes
   - juxtapose
   dims_note: 多维属性：每个属性一根可移动的轴，两轴靠近成直角是散点图，平行排列是平行坐标，多个散点图拼成散点矩阵；三维空间和双手操作换来更多的摆放自由
+  space:
+  - stereo
+  space_note: "头显里的三维空间，轴被抓在手里摆放；作者的理由是把三维图投到二维屏幕上有遮挡等固有问题（摘录：Projecting 3D data visualisations onto a 2D screen suffers from inherent issues due to occlusions）；没有用户研究"
   forms:
   - immersive-axes
   - parallel-coordinates
@@ -1870,6 +1911,32 @@
   fit_note: "数据格式几乎就是结构的定义：每行一个词，两列表达“指向谁、什么关系”"
   ev: ["relations:HEAD: Head of the current word", "relations:DEPREL: Universal dependency relation", "relations:DEPS: Enhanced dependency graph", "abstraction:propose a universal inventory of categories"]
   confidence: medium
+
+- id: geographviz
+  origin: project
+  domain: 地理空间知识图谱
+  field: knowledge
+  issue: 在知识图谱里同时看语义关系和地理位置，发现图结构里藏着的地理分布模式
+  issue_types: [explore-discover]
+  structure: [graph, spatial]
+  modifiers: [typed]
+  source: [given]
+  structure_note: "节点是实体（论文示例是疾病专家），边是实体之间的关系；每个节点带地理位置属性；图悬在二维地图上方，绿线把节点连到它的地理位置"
+  focus: [position, connectivity, cluster]
+  space:
+  - scene
+  - layered
+  space_note: 三维虚拟空间里，二维地图是底层平面，图悬在它上方（论文叫 Graph Above the Map）；节点的水平位置被“地理力”拉向自己的坐标，语义力把有关系的节点拉近；一个力平衡变量调两种力的比例
+  forms: [force-directed, spatial-network, map]
+  schools: [link]
+  dropped: "地理力占主导时局部簇几乎消失（作者自己写明）；位置不再只反映语义关系"
+  views_note: "三维力导向图 + 二维地图层 + 词云视图（选中子图的集体专长）；可旋转、平移、缩放，可拖动节点；也可只看图"
+  abstraction: [aggregate, separate-views]
+  abstraction_note: "词云概括选中子图；图视图和“图在地图上方”视图可切换"
+  ev: ["entities:clusters of disease experts who share similar research interests", "relations:uses the green lines to connect the nodes with its geolocation", "views:solution to enable interactive graph exploration", "abstraction:This mechanism helps create a balanced graph view", "interactions:users can drag the graph nodes"]
+  confidence: medium
+  thinking: ["why:most graph visualization techniques rely on 2D graph visualization", "alternative:One major limitation in such solutions is the lack of geographical reference", "limit:the local cluster presented in Figure 2 a almost completely gone"]
+  note: "论文是方法论文，没有用户研究；数据和代码的地址写在论文里，同时写“将公开”，仓库内容没读（会话读不了 GitHub 页面）；没有找到展示页。来源编 given 是推测：摘录里同时出现了专家数据和“按预定义概率连边”的生成数据，没有读到全部实验设置。"
 
 # ───────── 认知、写作与教育 ─────────
 - id: affine
@@ -2728,6 +2795,62 @@
   - limit:2D visualisations distort distances and should not be blindly trusted
   confidence: high
   note: 这是两篇结论相反的论文：前一篇主张二维嵌入失真太大，只能当作事后展示的“卡通图”；后一篇（PLOS 版的反驳）用邻域和类别保持的度量，认为 t-SNE 与 UMAP 保留了有意义的局部结构和簇。两篇都同意距离会失真、不能盲信。反驳的 PMC 版页面要人机验证没读到，改读 PLOS 上的同一篇。
+
+- id: vrnetzer
+  origin: project
+  domain: 分子生物学与医学
+  field: life
+  issue: 在 VR 里连续地从局部簇看到全局结构，探索大型分子网络，找出与罕见病相关的基因
+  issue_types: [explore-discover, locate-anomaly]
+  structure: [graph, spatial]
+  modifiers: [derived]
+  source: [given, derived]
+  structure_note: "蛋白质互作网络：约 16,000 个蛋白质作节点、约 300,000 条物理互作作边（HIPPIE 数据库）；节点带基因注释和疾病关联；三维坐标有三种来源：弹簧布局、功能注释经 t-SNE 嵌入、随机游走访问频率"
+  focus: [connectivity, cluster, node_attr]
+  dims:
+  - project
+  dims_note: 节点的功能注释构成 n 乘 m 的特征矩阵，用 t-SNE 嵌入三维，距离反映特征向量的余弦相似度；另一种布局用随机游走的访问频率向量做同样的嵌入
+  space:
+  - stereo
+  - scene
+  space_note: 头显里的立体三维，用户可在网络里走动、六自由度地旋转平移；论文的理由是立体深度让被遮挡的节点和边的连接不再有歧义；功能注释嵌入的布局里位置本身有含义
+  forms: [spatial-network, force-directed]
+  schools: [link]
+  dropped: "VR 以外的界面习惯；论文写明立体渲染要 60 Hz 以上，VR 专用的交互隐喻还很少"
+  views_note: "VR 里的三维节点连线图，选中节点高亮其邻居，簇用浮动标签标注；浏览器里另有 Web 界面与 VR 交换"
+  abstraction: [zoom, summarize]
+  abstraction_note: "全局到局部连续缩放；中尺度的簇用基因集富集得到的浮动标签概括"
+  ev: ["input_material:the human interactome network of protein–protein interactions", "entities:the human interactome consisting of around 16,000 proteins as nodes", "relations:around 300,000 physical interactions as links", "encodings:We then use the dimensionality reduction method tSNE", "views:providing an immersive 3D frontend", "interactions:rotation, and translation of the network with full six degrees of freedom", "abstraction:Meso-scale node clusters"]
+  confidence: high
+  thinking: ["why:The immersive nature of VR provides a sense of depth", "alternative:unintelligible hairball visualizations", "limit:VR-specific interaction modes are scarce", "limit:The primary performance requirement"]
+  note: "论文的对照表比较的是网络工具的功能和大图上的流畅度，摘录里没有 VR 与二维的用户实验；“立体深度是别的办法给不了的”是设计者的主张，不是实验结果。"
+
+- id: icave
+  origin: project
+  domain: 分子生物学与医学
+  field: life
+  issue: 在三维、立体或 CAVE 沉浸环境里查看大型、多层的生物分子网络，看清二维里看不清的结构
+  issue_types: [explore-discover, understand-whole]
+  structure: [graph]
+  modifiers: [typed, weighted, directed]
+  source: [given]
+  structure_note: "节点是基因、疾病、药物、代谢物等，边是互作；输入是制表符分隔的标识符文件，可带变化量、边方向、边权重、节点和边的颜色与图案；内置 COMBO 数据库可查询；语义层布局把节点分到基因、疾病、药物等层"
+  focus: [connectivity, cluster, node_attr]
+  space:
+  - scene
+  - stereo
+  - layered
+  space_note: 三种显示：桌面三维、立体眼镜、CAVE，可关闭立体；语义层布局把网络分成默认 7 层放在第三维上、每层内再做三维力导向；半球布局把最连通的节点放在顶部中央
+  forms: [force-directed, multilayer-network]
+  schools: [link]
+  dropped: "没有立体设备时丢掉立体深度，只剩旋转；CAVE 设施昂贵，作者自己写明"
+  views_note: "三维节点连线图（节点颜色、大小、透明度，边的颜色频率表示权重，箭头表示方向，节点图案表示类型）；可存成二维快照或旋转的影片；网络统计在二维里给"
+  abstraction: [aggregate, separate-views]
+  abstraction_note: "可选的边捆绑显示概括全局模式；同一张图的几种布局之间可以切换"
+  ev: ["input_material:iCAVE supports tabular input formats", "entities:layer1: genes; layer2: diseases; layer3: drugs", "views:Users can explore networks (i) in 3D using a desktop", "encodings:segregates the network into separate layers (default 7) in the third dimension", "interactions:iCAVE users can turn 3D stereoscopy on or off", "abstraction:Bundling is extremely useful in identifying global patterns"]
+  confidence: high
+  thinking: ["why:Three-dimensional elements that appear to form a pattern", "alternative:The visual clutter problem due to edge crossings", "limit:More user and case studies are needed", "limit:a CAVE facility is a substantial investment"]
+  note: "作者引用别人的用户研究作理由（页面写 has been shown to be particularly beneficial ……、better performance than 2D in user studies for relatively difficult tasks），自己没有做实验；还写明大网络的显示里“靠得近”可能被误读成有关系（作者没有说这是三维特有的）。"
 
 # ───────── 社会、经济与公共数据 ─────────
 - id: tube-map

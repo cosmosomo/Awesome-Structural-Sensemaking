@@ -51,12 +51,12 @@
 
 - id: high-dimensional
   title: 高维数据探索
-  L1: [{ref: umap-learn}, {ref: opentsne}, {ref: regl-scatterplot}, {ref: plotly-js}]
-  L2: [{ref: embedding-projector}, {ref: hiplot}, {ref: facets}, {ref: kepler-mapper}, {ref: dtour}, {ref: embedding-atlas}, {ref: upset}, {ref: voyager}]
+  L1: [{ref: umap-learn}, {ref: opentsne}, {ref: regl-scatterplot}, {ref: scatter-gl}, {ref: plotly-js}]
+  L2: [{ref: embedding-projector}, {ref: pca3d}, {ref: hiplot}, {ref: facets}, {ref: kepler-mapper}, {ref: dtour}, {ref: embedding-atlas}, {ref: upset}, {ref: voyager}]
   L3: [{ref: nomic-atlas}, {ref: orange}]
 
 - id: spatial-3d
   title: 三维与大规模关系探索
-  L1: [{ref: three-js}, {text: WebGL}, {text: GPU 图计算}]
-  L2: [{ref: react-force-graph}, {ref: pygraphistry}]
+  L1: [{ref: three-js}, {ref: 3d-force-graph}, {text: WebGL}, {text: GPU 图计算}]
+  L2: [{ref: react-force-graph}, {ref: pygraphistry}, {ref: vrnetzer}, {ref: icave}, {ref: geographviz}]
   L3: [{text: 专业图探索与 AI 分析平台}]

@@ -37,5 +37,9 @@
 - **Understanding UMAP**（PAIR，pair-code.github.io/understanding-umap）：页面正文由 JS 渲染，只读到标题，没有摘录，没有编成案例。如果之后能读到，它讲 UMAP 与 t-SNE 的全局结构和局部结构、n_neighbors 与 min_dist 的作用，正好补“线性与非线性投影”那张对照表里 UMAP 的一栏。
 - **图符（Chernoff 脸、星形图）和密集像素显示**：Keim 2002 的分类里有，但本库没有找到把它们做成产品并写了设计理由的案例，没有收。
 - **Nonato 与 Aupetit 2018** 的投影失真综述只读到摘要。
+- **三维与二维比较研究里没读到原文的三篇**（2026-10-14）：Greffard、Picarougne、Kuntz 2011（社区发现，二维对三维透视对立体，图形绘制会议）、Gracia 等 2016（三维的质量损失量化，Information Visualization）、St. John 等 2001（二维与三维显示：理解形状对相对位置，Human Factors）。原文页面被人机验证或 403 挡住，没有绕；现在只能通过 Marriott 等 2018 的综述转述前两篇的结论。Ware 与 Mitchell 2008 也只读到摘要。
+- **笔记软件的三维图谱插件**（Obsidian 的 3D Graph 一类）：页面写的是“沉浸、空间记忆”这类宣传，没有二维对三维的比较证据，没有收案例。如果用户说的“图谱”指它们，上面的实验只是旁证。
+- **iCAVE 的项目主页**（research.mssm.edu 的 gumuslab/software.html）2026-10-14 访问不到（我这边 HTTP 405，子智能体那边 DNS 解析失败），所以没有仓库地址和展示页。
+- **带语义类型的知识图谱的三维对照实验**：Ware 等用的是随机生成的节点连线图，没有找到针对知识图谱的二维对三维实验。
 - **Observable 上的平行坐标、散点矩阵示例**：已在图形范式里，但没有设计者写理由，没编案例。
 

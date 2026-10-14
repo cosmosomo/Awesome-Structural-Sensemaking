@@ -2931,6 +2931,53 @@
    "博客图片来自 og:image，kind 为推断，未目视核对。"
   ]
  },
+ "pca3d": {
+  "images": [
+   {
+    "url": "https://logfc.wordpress.com/wp-content/uploads/2014/03/movie.gif?w=630&h=630",
+    "page": "https://logfc.wordpress.com/tag/pca3d/",
+    "alt": "movie",
+    "caption": "",
+    "kind": "screenshot",
+    "shows": "view",
+    "check": {
+     "status": 200,
+     "content_type": "image/gif",
+     "bytes": 1728762,
+     "at": "2026-10-13",
+     "width": 630,
+     "height": 630
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://logfc.wordpress.com/tag/pca3d/",
+    "title": "pca3d | log Fold Change",
+    "why": "包作者的博客（DESCRIPTION 里的 URL）的 pca3d 标签页；文章 Rotating movies with RGL 用 pca3d 的结果和 rgl 的 spin3d、movie3d 生成三维 PCA 的旋转动图，上面那张就是",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "pca3d | log Fold Change"
+    }
+   },
+   {
+    "url": "https://rdrr.io/cran/pca3d/man/pca3d-package.html",
+    "title": "pca3d-package: Show a three- or two-dimensional plot of a prcomp object in pca3d: Three Dimensional PCA Plots",
+    "why": "包的帮助页（rdrr.io 镜像，不是 CRAN 官方页），列出 pca3d、pca2d、snapshotPCA3d、makeMoviePCA 等函数",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "pca3d-package: Show a three- or two-dimensional plot of a prcomp object in pca3d: Three Dimensional PCA Plots"
+    }
+   }
+  ],
+  "not_found": [
+   "没有在线展示页：pca3d 是 R 包，要在 R 里运行才会打开 rgl 的交互窗口",
+   "rdrr.io 上 vignette 源码列出的 first_plot.png、ellipses.png、fancy.png 直接访问返回 404，没有收",
+   "动图有 121 帧，页面只显示它在旋转；收的是它的图片地址，首帧就是三维 PCA 散点（PC1、PC2、PC3 三根轴，三个分组用不同颜色和形状），我看过"
+  ]
+ },
  "gephi": {
   "demo": {
    "url": "https://lite.gephi.org/",
@@ -4657,6 +4704,52 @@
   "not_found": [
    "images：introduction.html、format.html、syntax.html、conllu_viewer.html 中 imgs.py 都没有列出内容图片；universaldependencies.org 首页的图片是 logo、旗帜和星标，未收",
    "demo：viewer 页面只读到静态文字，未能加载文件验证显示效果"
+  ]
+ },
+ "geographviz": {
+  "images": [
+   {
+    "url": "https://arxiv.org/html/2304.09864v1/figures/fig3.png",
+    "page": "https://arxiv.org/html/2304.09864",
+    "alt": "Refer to caption",
+    "caption": "Figure 5: The GeoGraphViz user interface for location-aware knowledge graph visualization",
+    "kind": "screenshot",
+    "shows": "view",
+    "check": {
+     "status": 200,
+     "content_type": "image/png",
+     "bytes": 2390736,
+     "at": "2026-10-13",
+     "width": 3840,
+     "height": 2240
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://arxiv.org/html/2304.09864",
+    "title": "GeoGraphViz: Geographically Constrained 3D Force-Directed Graph for Knowledge Graph Visualization",
+    "why": "arXiv 的 HTML 版论文，图 5 是 GeoGraphViz 的界面截图：地图上方的专家节点、位置节点和相似度连线",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "GeoGraphViz: Geographically Constrained 3D Force-Directed Graph for Knowledge Graph Visualization"
+    }
+   },
+   {
+    "url": "https://arxiv.org/abs/2304.09864",
+    "title": "[2304.09864] GeoGraphViz: Geographically Constrained 3D Force-Directed Graph for Knowledge Graph Visualization",
+    "why": "论文摘要页，标题写明工具是带地理约束的三维力导向知识图谱可视化",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "[2304.09864] GeoGraphViz: Geographically Constrained 3D Force-Directed Graph for Knowledge Graph Visualization"
+    }
+   }
+  ],
+  "not_found": [
+   "没有在线展示页：论文页面和搜索都没有给出可打开的 demo",
+   "arXiv HTML 里的 fig1 是带人物照片的专家节点面板、fig4 是效率曲线，没有收；其余几张图没有逐张核对内容，没有收"
   ]
  },
  "affine": {
@@ -6974,6 +7067,127 @@
    "Chari 与 Pachter 2023 的 PMC 版（https://pmc.ncbi.nlm.nih.gov/articles/PMC10434946/）返回 reCAPTCHA 验证页，读不到；改用同一篇的 PLOS 版（DOI 10.1371/journal.pcbi.1011288，经搜索得到其地址）",
    "两篇都是论文，没有在线展示页，demo 记为 null",
    "PLOS 版 Chari 与 Pachter 的 Fig 2–5 图注只写 distortion，未能判断是否为嵌入散点图，未收"
+  ]
+ },
+ "vrnetzer": {
+  "images": [
+   {
+    "url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/7cdd/8065164/83e3dbe1fe6b/41467_2021_22570_Fig2_HTML.jpg",
+    "page": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/",
+    "alt": "Fig. 2",
+    "caption": "Fig. 2. Immersive network exploration. a Green-screen composition showing a user immersed in the genome-scale molecular interaction network.",
+    "kind": "figure",
+    "shows": "view",
+    "check": {
+     "status": 200,
+     "content_type": "image/jpeg",
+     "bytes": 187543,
+     "at": "2026-10-13",
+     "width": 700,
+     "height": 783
+    }
+   },
+   {
+    "url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/7cdd/8065164/3058d47e8374/41467_2021_22570_Fig3_HTML.jpg",
+    "page": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/",
+    "alt": "Fig. 3",
+    "caption": "Fig. 3. User interaction design.",
+    "kind": "figure",
+    "shows": "ui",
+    "check": {
+     "status": 200,
+     "content_type": "image/jpeg",
+     "bytes": 217671,
+     "at": "2026-10-13",
+     "width": 799,
+     "height": 895
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/",
+    "title": "The VRNetzer platform enables interactive network analysis in Virtual Reality - PMC",
+    "why": "论文全文（Nature Communications 2021）；图 2 是 VR 中探索网络的合成图和三种尺度的标注，图 3 是 VR 里的控制面板",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "The VRNetzer platform enables interactive network analysis in Virtual Reality - PMC"
+    }
+   }
+  ],
+  "not_found": [
+   "没有在线展示页：需要 Steam VR 兼容头显，或在 Windows 上运行桌面版可执行文件",
+   "图 1 含作者戴头显的照片和系统模块图，图 4 是用 Cytoscape 画的二维图（不是 VRNetzer 的视图），图 5、6 是流程截图和数据库模式图，没有收",
+   "图 2 的 a 是一名用户站在绿幕合成的网络场景里，b 是三种尺度的示意，c 是跨上下文探索，只有 c 和 a 的背景是真实的三维视图；我把它当作这篇论文的视图图收下"
+  ]
+ },
+ "icave": {
+  "images": [
+   {
+    "url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/9585/5554349/97d5d2bc1fb9/gix054fig2.jpg",
+    "page": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "alt": "Figure 2:",
+    "caption": "( a ) iCAVE visualization of bacterial leucine transporter, LeuT residue correlation network, side-view.",
+    "kind": "figure",
+    "shows": "view",
+    "check": {
+     "status": 200,
+     "content_type": "image/jpeg",
+     "bytes": 165664,
+     "at": "2026-10-13",
+     "width": 776,
+     "height": 388
+    }
+   },
+   {
+    "url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/9585/5554349/5e6e98ea47f2/gix054fig4.jpg",
+    "page": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "alt": "Figure 4:",
+    "caption": "Visualizing multiple layers of information.",
+    "kind": "figure",
+    "shows": "view",
+    "check": {
+     "status": 200,
+     "content_type": "image/jpeg",
+     "bytes": 140182,
+     "at": "2026-10-13",
+     "width": 779,
+     "height": 319
+    }
+   },
+   {
+    "url": "https://cdn.ncbi.nlm.nih.gov/pmc/blobs/9585/5554349/1f8d26314cb0/gix054fig5.jpg",
+    "page": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "alt": "Figure 5:",
+    "caption": "Pathway reconstructed high-throughput metabolomics data with Gaussian Graphical Modeling; each sphere color represents a single metabolite class.",
+    "kind": "figure",
+    "shows": "view",
+    "check": {
+     "status": 200,
+     "content_type": "image/jpeg",
+     "bytes": 218241,
+     "at": "2026-10-13",
+     "width": 773,
+     "height": 590
+    }
+   }
+  ],
+  "pages": [
+   {
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "title": "iCAVE: an open source tool for visualizing biomolecular networks in 3D, stereoscopic 3D and immersive 3D - PMC",
+    "why": "论文全文；图 2、4、5 是 iCAVE 画出的三维网络（残基相关网络、多层信息的几种布局、代谢组网络）",
+    "check": {
+     "status": 200,
+     "at": "2026-10-13",
+     "title": "iCAVE: an open source tool for visualizing biomolecular networks in 3D, stereoscopic 3D and immersive 3D - PMC"
+    }
+   }
+  ],
+  "not_found": [
+   "没有在线展示页：需要 CAVE 环境或立体显示；项目主页 2026-10-14 访问不到",
+   "图 1 含作者使用立体设备的照片，图 3 是打印用的二维网络图，没有收"
   ]
  },
  "tube-map": {

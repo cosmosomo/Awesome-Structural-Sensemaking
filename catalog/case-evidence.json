@@ -3884,7 +3884,8 @@
   "pages_read": [
    "https://research.google/blog/open-sourcing-the-embedding-projector-a-tool-for-visualizing-high-dimensional-data/",
    "https://ar5iv.arxiv.org/html/1611.05469",
-   "https://www.tensorflow.org/tensorboard/tensorboard_projector_plugin"
+   "https://www.tensorflow.org/tensorboard/tensorboard_projector_plugin",
+   "https://arxiv.org/pdf/1611.05469"
   ],
   "retrieved": "2026-10-13",
   "input_material": [
@@ -3902,6 +3903,16 @@
     "quote": "Each word (or sub-word in this case) will be associated with a 16-dimensional vector (or embedding)",
     "url": "https://www.tensorflow.org/tensorboard/tensorboard_projector_plugin",
     "check": "ok"
+   },
+   {
+    "quote": "it often has hundreds or even thousands of dimensions, requiring special tools to investigate the space",
+    "url": "https://research.google/blog/open-sourcing-the-embedding-projector-a-tool-for-visualizing-high-dimensional-data/",
+    "check": "ok"
+   },
+   {
+    "quote": "Users may either upload arbitrary high-dimensional data, in a simple text format, or (in TensorFlow) take advantage of the model checkpoint system",
+    "url": "https://arxiv.org/pdf/1611.05469",
+    "check": "ok"
    }
   ],
   "entities": [
@@ -3910,6 +3921,12 @@
     "url": "https://research.google/blog/open-sourcing-the-embedding-projector-a-tool-for-visualizing-high-dimensional-data/",
     "check": "ok",
     "what": "point"
+   },
+   {
+    "what": "embedding",
+    "quote": "a mathematical vector representation that captures different facets (dimensions) of the data",
+    "url": "https://research.google/blog/open-sourcing-the-embedding-projector-a-tool-for-visualizing-high-dimensional-data/",
+    "check": "ok"
    }
   ],
   "relations": [
@@ -3924,6 +3941,12 @@
     "url": "https://www.tensorflow.org/tensorboard/tensorboard_projector_plugin",
     "check": "ok",
     "what": "adjacent words"
+   },
+   {
+    "what": "closeness",
+    "quote": "similar words are mapped to points that are close to each other",
+    "url": "https://research.google/blog/open-sourcing-the-embedding-projector-a-tool-for-visualizing-high-dimensional-data/",
+    "check": "ok"
    }
   ],
   "attributes": [
@@ -3938,6 +3961,12 @@
     "url": "https://www.tensorflow.org/tensorboard/tensorboard_projector_plugin",
     "check": "ok",
     "what": "Labels"
+   },
+   {
+    "what": "color and label",
+    "quote": "users can choose data columns to color and label points",
+    "url": "https://arxiv.org/pdf/1611.05469",
+    "check": "ok"
    }
   ],
   "views": [
@@ -3958,6 +3987,24 @@
     "url": "https://ar5iv.arxiv.org/html/1611.05469",
     "check": "ok",
     "what": "inspector panel"
+   },
+   {
+    "what": "2D or 3D mode",
+    "quote": "users can navigate the views in either a 2D or a 3D mode",
+    "url": "https://arxiv.org/pdf/1611.05469",
+    "check": "ok"
+   },
+   {
+    "what": "3D t-SNE",
+    "quote": "The Embedding Projector offers both two- and three-dimensional t-SNE views.",
+    "url": "https://arxiv.org/pdf/1611.05469",
+    "check": "ok"
+   },
+   {
+    "what": "billboards",
+    "quote": "In 3D mode, labels can appear as \"billboards\" – flat images that always face the user.",
+    "url": "https://arxiv.org/pdf/1611.05469",
+    "check": "ok"
    }
   ],
   "encodings": [
@@ -3972,6 +4019,30 @@
     "url": "https://ar5iv.arxiv.org/html/1611.05469",
     "check": "ok",
     "what": "fade"
+   },
+   {
+    "what": "components on axes",
+    "quote": "The Embedding Projector computes the top 10 principal components. Menus let the user project those components onto any combination of two or three.",
+    "url": "https://arxiv.org/pdf/1611.05469",
+    "check": "ok"
+   },
+   {
+    "what": "point size",
+    "quote": "changing the size of points based on distance to camera",
+    "url": "https://arxiv.org/pdf/1611.05469",
+    "check": "ok"
+   },
+   {
+    "what": "fog",
+    "quote": "adding fog to fade out more distant points",
+    "url": "https://arxiv.org/pdf/1611.05469",
+    "check": "ok"
+   },
+   {
+    "what": "lazy susan",
+    "quote": "initializing the view with an animated \"lazy susan\" motion",
+    "url": "https://arxiv.org/pdf/1611.05469",
+    "check": "ok"
    }
   ],
   "interactions": [
@@ -3992,6 +4063,18 @@
     "url": "https://ar5iv.arxiv.org/html/1611.05469",
     "check": "ok",
     "what": "Isolate Points"
+   },
+   {
+    "what": "subset recompute",
+    "quote": "restrict the view to a subset of points and perform t-SNE or PCA only on those points",
+    "url": "https://arxiv.org/pdf/1611.05469",
+    "check": "ok"
+   },
+   {
+    "what": "select neighbors",
+    "quote": "after clicking on a point, its nearest neighbors are selected",
+    "url": "https://arxiv.org/pdf/1611.05469",
+    "check": "ok"
    }
   ],
   "questions": [
@@ -4009,6 +4092,16 @@
     "quote": "Users can construct specialized linear projections based on text searches, supporting Task 3, finding meaningful directions in space.",
     "url": "https://ar5iv.arxiv.org/html/1611.05469",
     "check": "ok"
+   },
+   {
+    "quote": "it is increasingly important for research scientists to be able to explore how the data is being interpreted by the models",
+    "url": "https://research.google/blog/open-sourcing-the-embedding-projector-a-tool-for-visualizing-high-dimensional-data/",
+    "check": "ok"
+   },
+   {
+    "quote": "PCA is often effective at exploring the internal structure of the embeddings, revealing the most influential dimensions in the data",
+    "url": "https://research.google/blog/open-sourcing-the-embedding-projector-a-tool-for-visualizing-high-dimensional-data/",
+    "check": "ok"
    }
   ],
   "abstraction": [
@@ -4017,6 +4110,18 @@
     "url": "https://ar5iv.arxiv.org/html/1611.05469",
     "check": "ok",
     "what": "zooming and filtering"
+   },
+   {
+    "what": "local neighborhoods",
+    "quote": "t-SNE, on the other hand, is useful for exploring local neighborhoods and finding clusters",
+    "url": "https://research.google/blog/open-sourcing-the-embedding-projector-a-tool-for-visualizing-high-dimensional-data/",
+    "check": "ok"
+   },
+   {
+    "what": "local structure",
+    "quote": "Because t-SNE often preserves some local structure, in practice it supports both Task 1 and Task 2.",
+    "url": "https://arxiv.org/pdf/1611.05469",
+    "check": "ok"
    }
   ],
   "not_stated": [
@@ -4042,6 +4147,11 @@
     "quote": "To help interpretation of the 3D mode, the Projector uses multiple redundant depth cues",
     "url": "https://ar5iv.arxiv.org/html/1611.05469",
     "check": "ok"
+   },
+   {
+    "quote": "PCA is often effective at supporting Task 2, examining global geometry.",
+    "url": "https://arxiv.org/pdf/1611.05469",
+    "check": "ok"
    }
   ],
   "alternative": [
@@ -4063,6 +4173,11 @@
    {
     "quote": "We know of no current tools that help with this use case.",
     "url": "https://ar5iv.arxiv.org/html/1611.05469",
+    "check": "ok"
+   },
+   {
+    "quote": "Zooming into the cluster gives some information, but it is sometimes more helpful to restrict the view to a subset of points and perform t-SNE or PCA only on those points",
+    "url": "https://arxiv.org/pdf/1611.05469",
     "check": "ok"
    }
   ],
@@ -19333,5 +19448,903 @@
    "备注：第二个地址 https://ils.unc.edu/~march/courses/357_f03/p388-lamping.pdf 的标题是 Visualizing Large Trees Using the Hyperbolic Browser（Lamping 与 Rao，CHI '96，第 388–389 页），不是 1995 年 Lamping、Rao、Pirolli 的那篇；它的文字层是 OCR，有误识，本批没有从它摘录原文。"
   ],
   "id": "hyperbolic-browser"
+ },
+ "pca3d": {
+  "pages_read": [
+   "https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd",
+   "https://rdrr.io/cran/pca3d/man/pca3d-package.html",
+   "https://cran.r-project.org/web/packages/pca3d/index.html",
+   "https://logfc.wordpress.com",
+   "https://logfc.wordpress.com/tag/pca3d/"
+  ],
+  "retrieved": "2026-10-14",
+  "input_material": [
+   {
+    "quote": "Either a prcomp object or a matrix with at least three columns",
+    "url": "https://rdrr.io/cran/pca3d/man/pca3d-package.html",
+    "check": "ok"
+   },
+   {
+    "quote": "The provided data set, metabo, includes metabolic profiles for over 400 metabolites sampled from 136 tuberculosis (TB) patients and healthy volunteers",
+    "url": "https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd",
+    "check": "ok"
+   }
+  ],
+  "entities": [
+   {
+    "what": "groups",
+    "quote": "The samples fall into one of three groups",
+    "url": "https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd",
+    "check": "ok"
+   },
+   {
+    "what": "group",
+    "quote": "either NULL or a factor of length equal to number of rows. Factor levels can be used to automatically generate symbols and colors for the points shown",
+    "url": "https://rdrr.io/cran/pca3d/man/pca3d-package.html",
+    "check": "ok"
+   }
+  ],
+  "relations": [
+   {
+    "what": "show.centroids",
+    "quote": "lines from each data point to the corresponding centroid",
+    "url": "https://rdrr.io/cran/pca3d/man/pca3d-package.html",
+    "check": "ok"
+   }
+  ],
+  "attributes": [
+   {
+    "what": "radius",
+    "quote": "Scaling item for the size of points to be shown.",
+    "url": "https://rdrr.io/cran/pca3d/man/pca3d-package.html",
+    "check": "ok"
+   },
+   {
+    "what": "ellipse.ci",
+    "quote": "The confidence level of a pairwise confidence region for the CI.",
+    "url": "https://rdrr.io/cran/pca3d/man/pca3d-package.html",
+    "check": "ok"
+   }
+  ],
+  "views": [
+   {
+    "what": "pca3d",
+    "quote": "Show a three- two-dimensional plot of a prcomp object or a matrix, using different symbols and colors for groups of data",
+    "url": "https://rdrr.io/cran/pca3d/man/pca3d-package.html",
+    "check": "ok"
+   },
+   {
+    "what": "rgl",
+    "quote": "The pca3d function shows a three dimensional representation of a PCA object or any other matrix. It uses the rgl package for rendering.",
+    "url": "https://rdrr.io/cran/pca3d/man/pca3d-package.html",
+    "check": "ok"
+   },
+   {
+    "what": "show.ellipses",
+    "quote": "A TRUTH/FALSE value indicating whether to show confidence interval ellipses or ellipsoids around each defined group",
+    "url": "https://rdrr.io/cran/pca3d/man/pca3d-package.html",
+    "check": "ok"
+   },
+   {
+    "what": "biplot",
+    "quote": "A biplot shows information on variable loadings, which helps to interpret a PCA.",
+    "url": "https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd",
+    "check": "ok"
+   }
+  ],
+  "encodings": [
+   {
+    "what": "group",
+    "quote": "Factor levels can be used to automatically generate symbols and colors for the points shown",
+    "url": "https://rdrr.io/cran/pca3d/man/pca3d-package.html",
+    "check": "ok"
+   },
+   {
+    "what": "shape",
+    "quote": "Currently, there are four possible 3D shapes to choose from: tetrahedrons, cubes, spheres and octahedrons.",
+    "url": "https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd",
+    "check": "ok"
+   },
+   {
+    "what": "components",
+    "quote": "Vector of length 3 ( pca3d ) or 2 ( pca2d ) containing the components to be shown",
+    "url": "https://rdrr.io/cran/pca3d/man/pca3d-package.html",
+    "check": "ok"
+   },
+   {
+    "what": "show.shadows",
+    "quote": "Draw a thin grey line from the point to the xy plane",
+    "url": "https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd",
+    "check": "ok"
+   }
+  ],
+  "interactions": [
+   {
+    "what": "interactive window",
+    "quote": "When pca3d is called, the opened window is interactive and can be used to explore differences.",
+    "url": "https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd",
+    "check": "ok"
+   },
+   {
+    "what": "spin3d, play3d, movie3d",
+    "quote": "it is very simple to create animated GIFs in the rgl package with the build-in functions spin3d, play3d and movie3d",
+    "url": "https://logfc.wordpress.com/tag/pca3d/",
+    "check": "ok"
+   },
+   {
+    "what": "makeMoviePCA",
+    "quote": "makeMoviePCA: Create a PCA movie",
+    "url": "https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd",
+    "check": "ok"
+   },
+   {
+    "what": "snapshotPCA3d",
+    "quote": "snapshotPCA3d: Save a 3D PCA snapshot",
+    "url": "https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd",
+    "check": "ok"
+   }
+  ],
+  "questions": [
+   {
+    "quote": "The idea is to have a few functions that can be quickly and reliably used to visualize and explore multivariate models, and then create a publication-ready figure.",
+    "url": "https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd",
+    "check": "ok"
+   },
+   {
+    "quote": "a simple call with two parameters – the pca object and the vector with group assignments of the samples – is sufficient for a basic diagnosis.",
+    "url": "https://rdrr.io/cran/pca3d/man/pca3d-package.html",
+    "check": "ok"
+   }
+  ],
+  "abstraction": [
+   {
+    "what": "show.centroids",
+    "quote": "Show a large symbol of the group at the average coordinates of samples in that group (centroids)",
+    "url": "https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd",
+    "check": "ok"
+   },
+   {
+    "what": "show.group.labels",
+    "quote": "Show group labels at the centroids",
+    "url": "https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd",
+    "check": "ok"
+   },
+   {
+    "what": "biplot.vars",
+    "quote": "The top N variables are selected based on their absolute loadings.",
+    "url": "https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd",
+    "check": "ok"
+   }
+  ],
+  "why": [
+   {
+    "quote": "The idea is that you can fiddle around with the 3D version to explore your graphics and / or choose the components, and then use pca2d to create a figure for a publication.",
+    "url": "https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd",
+    "check": "ok"
+   },
+   {
+    "quote": "This package is actually a bunch of shortcuts to the RGL graphics library, which does the actual job.",
+    "url": "https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd",
+    "check": "ok"
+   }
+  ],
+  "alternative": [
+   {
+    "quote": "a biplot showing all variable loadings will be unreadable if the data is highly dimensional (for example, gene expression data)",
+    "url": "https://rdrr.io/cran/pca3d/man/pca3d-package.html",
+    "check": "ok"
+   },
+   {
+    "quote": "mostly for demonstration purposes, because the plot is then hardly readable",
+    "url": "https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd",
+    "check": "ok"
+   }
+  ],
+  "limit": [
+   {
+    "quote": "For 3D plots, colors and palette should not contain an alpha channel",
+    "url": "https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd",
+    "check": "ok"
+   },
+   {
+    "quote": "it is worthwile to remove the grey plane at z=0 with the show.plane=FALSE option",
+    "url": "https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd",
+    "check": "ok"
+   },
+   {
+    "quote": "Package ‘pca3d’ was removed from the CRAN repository.",
+    "url": "https://cran.r-project.org/web/packages/pca3d/index.html",
+    "check": "ok"
+   },
+   {
+    "quote": "Archived on 2023-02-02 as issues were not corrected in time.",
+    "url": "https://cran.r-project.org/web/packages/pca3d/index.html",
+    "check": "ok"
+   }
+  ],
+  "not_stated": [
+   "备注：rdrr.io 是 CRAN 包内容的第三方镜像，vignette 与帮助页来自这里；CRAN 官方页说明包已于 2023-02-02 归档。博客只读了首页与标签页，没有逐篇通读。"
+  ],
+  "id": "pca3d"
+ },
+ "vrnetzer": {
+  "pages_read": [
+   "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/"
+  ],
+  "retrieved": "2026-10-14",
+  "input_material": [
+   {
+    "quote": "the human interactome network of protein–protein interactions as curated from the HIPPIE database",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/",
+    "check": "ok"
+   },
+   {
+    "quote": "widely used gene annotation data ranging from molecular functions to disease associations",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/",
+    "check": "ok"
+   }
+  ],
+  "entities": [
+   {
+    "what": "nodes",
+    "quote": "the human interactome consisting of around 16,000 proteins as nodes",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/",
+    "check": "ok"
+   },
+   {
+    "what": "seed genes",
+    "quote": "Seed genes are typically compiled from genes associated with similar diseases or phenotypes",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/",
+    "check": "ok"
+   }
+  ],
+  "relations": [
+   {
+    "what": "links",
+    "quote": "around 300,000 physical interactions as links",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/",
+    "check": "ok"
+   },
+   {
+    "what": "neighbors",
+    "quote": "by highlighting all directly connected neighbors",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/",
+    "check": "ok"
+   }
+  ],
+  "attributes": [
+   {
+    "what": "inspection panel",
+    "quote": "Individual nodes can be inspected via a panel displaying any information contained in the underlying database",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/",
+    "check": "ok"
+   },
+   {
+    "what": "visiting frequency",
+    "quote": "The algorithm ranks the candidate genes based on their visiting frequency.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/",
+    "check": "ok"
+   }
+  ],
+  "views": [
+   {
+    "what": "immersive 3D frontend",
+    "quote": "providing an immersive 3D frontend for visualizing and exploring large networks",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/",
+    "check": "ok"
+   },
+   {
+    "what": "web module",
+    "quote": "We also provide a (5) web module as a browser-based frontend",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/",
+    "check": "ok"
+   },
+   {
+    "what": "functional landscape",
+    "quote": "In functional landscape layouts, the nodes are clustered together based on a combination of network proximity and annotation similarity",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/",
+    "check": "ok"
+   },
+   {
+    "what": "projected 3D",
+    "quote": "‘projected 3D’ refers to 3D renderings on a 2D screen",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/",
+    "check": "ok"
+   }
+  ],
+  "encodings": [
+   {
+    "what": "node positions",
+    "quote": "These layouts allow us to assign explicit meaning to absolute and relative node positions in 3D space",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/",
+    "check": "ok"
+   },
+   {
+    "what": "distance",
+    "quote": "such that the distance between nodes reflects the cosine similarity of their respective feature vectors",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/",
+    "check": "ok"
+   },
+   {
+    "what": "spring-based layout",
+    "quote": "We included six 3D layouts: (i) a spring-based layout generated using a standard Fruchtermann–Reingold algorithm",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/",
+    "check": "ok"
+   },
+   {
+    "what": "tSNE",
+    "quote": "We then use the dimensionality reduction method tSNE 59 to embed the nodes into 3D space",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/",
+    "check": "ok"
+   }
+  ],
+  "interactions": [
+   {
+    "what": "navigation",
+    "quote": "The most basic navigation modes are the free movement within the surrounding network, rotation, and translation of the network with full six degrees of freedom",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/",
+    "check": "ok"
+   },
+   {
+    "what": "selecting nodes",
+    "quote": "Individual nodes are selected by directly pointing at them.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/",
+    "check": "ok"
+   },
+   {
+    "what": "search",
+    "quote": "For more complex searches, up to four AND and OR clauses can be combined.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/",
+    "check": "ok"
+   },
+   {
+    "what": "dynamic transition",
+    "quote": "By observing the dynamic transition between different explicit layouts",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/",
+    "check": "ok"
+   }
+  ],
+  "questions": [
+   {
+    "quote": "to identify genes associated with rare diseases and understand how they might contribute to disease development",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/",
+    "check": "ok"
+   },
+   {
+    "quote": "allow users to quickly locate individual nodes and node clusters, identify their immediate and broader neighborhoods in different functional contexts",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/",
+    "check": "ok"
+   }
+  ],
+  "abstraction": [
+   {
+    "what": "scales",
+    "quote": "Large networks exhibit functionally relevant structures at various scales, ranging from small node clusters (representing, e.g., protein complexes) to mesoscale structures",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/",
+    "check": "ok"
+   },
+   {
+    "what": "floating labels",
+    "quote": "Meso-scale node clusters (representing, for example, biological functions or disease-associated processes) are annotated using floating labels derived from gene set enrichment and network proximity",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/",
+    "check": "ok"
+   },
+   {
+    "what": "scaling",
+    "quote": "The scaling allows for a seamless transition between global network views and close-up inspection of local node clusters or individual nodes.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/",
+    "check": "ok"
+   }
+  ],
+  "why": [
+   {
+    "quote": "The immersive nature of VR provides a sense of depth that cannot be achieved by other means, such as 2D or non-immersive 3D representations.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/",
+    "check": "ok"
+   },
+   {
+    "quote": "This allows for quickly and accurately resolving connections that would otherwise be ambiguous due to partially occluded nodes and/or links.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/",
+    "check": "ok"
+   }
+  ],
+  "alternative": [
+   {
+    "quote": "On a conventional computer screen, networks beyond this size typically lead to unintelligible hairball visualizations that obscure existing structure and offer little insights.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/",
+    "check": "ok"
+   },
+   {
+    "quote": "This requires the selection of a smaller subnetwork, yet in many applications, it is not clear how to select the most meaningful one.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/",
+    "check": "ok"
+   },
+   {
+    "quote": "However, as any 2D network visualization tool, these analyses are critically limited by the size of the considered subnetworks",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/",
+    "check": "ok"
+   },
+   {
+    "quote": "in which the positioning of nodes is often only indirectly linked to structural or functional network characteristics",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/",
+    "check": "ok"
+   }
+  ],
+  "limit": [
+   {
+    "quote": "The primary performance requirement is the fluid display of 3D graphics, i.e., rendering high-resolution stereoscopic images at a framerate of 60 Hz or higher.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/",
+    "check": "ok"
+   },
+   {
+    "quote": "Not all these metaphors can be translated to an immersive 3D environment, and VR-specific interaction modes are scarce and not widely recognized",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/",
+    "check": "ok"
+   },
+   {
+    "quote": "can be used for exploring small to medium size networks, as well as for testing during the development of new functionalities",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/",
+    "check": "ok"
+   }
+  ],
+  "not_stated": [
+   "备注：论文没有单列局限的段落，以上 limit 条目是在 Methods 与 Results 中零散写到的。论文给出的代码地址 github.com/menchelab/vrnetzer 按规则没有访问；搜索没有找到独立的文档站。"
+  ],
+  "id": "vrnetzer"
+ },
+ "icave": {
+  "pages_read": [
+   "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/"
+  ],
+  "retrieved": "2026-10-14",
+  "input_material": [
+   {
+    "quote": "iCAVE supports tabular input formats (.txt, .csv, or .tsv).",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "check": "ok"
+   },
+   {
+    "quote": "iCAVE input is provided as a tab-delimited text file of identifiers and optional information on magnitude of change, edge directionality, edge weights, node/edge colors, and patterns",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "check": "ok"
+   }
+  ],
+  "entities": [
+   {
+    "what": "layers",
+    "quote": "layer1: genes; layer2: diseases; layer3: drugs",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "check": "ok"
+   },
+   {
+    "what": "networks",
+    "quote": "visualize their own networks (e.g., disease, drug, protein, metabolite)",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "check": "ok"
+   }
+  ],
+  "relations": [
+   {
+    "what": "interactions",
+    "quote": "Interactions are either user-defined, or are queries of the iCAVE COMBO database",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "check": "ok"
+   },
+   {
+    "what": "connectors",
+    "quote": "“connectors” between 2 dense network regions (modules)",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "check": "ok"
+   }
+  ],
+  "attributes": [
+   {
+    "what": "topology statistics",
+    "quote": "These include the number of nodes, the number of edges, network diameter, node-betweenness centrality, closeness centrality, neighborhood connectivity",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "check": "ok"
+   },
+   {
+    "what": "centrality measures",
+    "quote": "iCAVE automatically generates and reports network topology statistics and centrality measures both graphically and in tabular form.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "check": "ok"
+   }
+  ],
+  "views": [
+   {
+    "what": "3D / stereoscopic / immersive",
+    "quote": "Users can explore networks (i) in 3D using a desktop, (ii) in stereoscopic 3D using 3D-vision glasses and a desktop, or (iii) in immersive 3D within a CAVE environment.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "check": "ok"
+   },
+   {
+    "what": "CAVE",
+    "quote": "a CAVE environment, which includes projectors directed to several walls of a room-sized cube",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "check": "ok"
+   },
+   {
+    "what": "2D snapshots or movies",
+    "quote": "visual outputs can be saved in 2D snapshots or movies configured with user-defined rotation, zoom, and speeds",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "check": "ok"
+   },
+   {
+    "what": "network statistics in 2D",
+    "quote": "Additional reports on network statistics are provided in 2D.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "check": "ok"
+   }
+  ],
+  "encodings": [
+   {
+    "what": "layers in third dimension",
+    "quote": "segregates the network into separate layers (default 7) in the third dimension",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "check": "ok"
+   },
+   {
+    "what": "hemisphere",
+    "quote": "positions the network on the surface of a 3D hemisphere. The most connected node is positioned at the top center of the hemisphere.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "check": "ok"
+   },
+   {
+    "what": "edge color, arrows, glyph",
+    "quote": "Optional weights are represented with edge color frequency, directed edges with arrows, and node types with node glyph patterns.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "check": "ok"
+   },
+   {
+    "what": "node color, size, transparency",
+    "quote": "using different node color, size, and transparency options",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "check": "ok"
+   }
+  ],
+  "interactions": [
+   {
+    "what": "stereoscopy toggle",
+    "quote": "iCAVE users can turn 3D stereoscopy on or off during exploration.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "check": "ok"
+   },
+   {
+    "what": "zoom / rotate",
+    "quote": "they can use their mouse (in lieu of hand-held controls) to zoom in/out or rotate the network to a view without occlusions",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "check": "ok"
+   },
+   {
+    "what": "click",
+    "quote": "users can click on any edge or node for further information",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "check": "ok"
+   },
+   {
+    "what": "query several databases",
+    "quote": "users can simultaneously query several built-in databases within iCAVE for network generation",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "check": "ok"
+   }
+  ],
+  "questions": [
+   {
+    "quote": "Utilizing iCAVE, investigators from diverse fields can gain insights from large, heterogeneous datasets",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "check": "ok"
+   },
+   {
+    "quote": "we observed a network feature that was not intuitive from the original 2D layout",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "check": "ok"
+   }
+  ],
+  "abstraction": [
+   {
+    "what": "semantic layers",
+    "quote": "if the interaction network has a hierarchy, semantic layers layout can help visualize the hierarchical nature of the interactions easily",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "check": "ok"
+   },
+   {
+    "what": "edge-bundled display",
+    "quote": "“edge-bundled display” [ 50 ] option for visually bundling adjacent edges together",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "check": "ok"
+   },
+   {
+    "what": "global patterns",
+    "quote": "Bundling is extremely useful in identifying global patterns in very large networks",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "check": "ok"
+   }
+  ],
+  "why": [
+   {
+    "quote": "has been shown to be particularly beneficial for exploring large, complex networks, either alone or combined with rotation or user motion cues",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "check": "ok"
+   },
+   {
+    "quote": "have also led to better performance than 2D in user studies for relatively difficult tasks and large networks",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "check": "ok"
+   },
+   {
+    "quote": "Three-dimensional elements that appear to form a pattern because of their visual positioning in one viewpoint can be interpreted correctly by rotating the image to a different viewpoint",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "check": "ok"
+   }
+  ],
+  "alternative": [
+   {
+    "quote": "are limited by the number of molecules and interactions that can be displayed on a 2D screen",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "check": "ok"
+   },
+   {
+    "quote": "The visual clutter problem due to edge crossings that create a hairball effect in 2D is eliminated",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "check": "ok"
+   },
+   {
+    "quote": "it does not offer global layout and clustering algorithms to make full use of the third dimension",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "check": "ok"
+   },
+   {
+    "quote": "it does not utilize 3D effects to improve comprehension (e.g., transparency or advanced shadow effects)",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "check": "ok"
+   }
+  ],
+  "limit": [
+   {
+    "quote": "However, a CAVE facility is a substantial investment to build and maintain that only a limited number of institutions have.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "check": "ok"
+   },
+   {
+    "quote": "visualizations of large networks may exhibit problems with display clutter, molecular positioning, or perceptual tension, leading the user to misinterpret closely positioned molecules as related",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "check": "ok"
+   },
+   {
+    "quote": "More user and case studies are needed to understand how best we can make use of immersion, stereoscopy, and 3D.",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "check": "ok"
+   },
+   {
+    "quote": "how best to utilize features specific to 3D or to take advantage of new 3D technologies is currently an open research question",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/",
+    "check": "ok"
+   }
+  ],
+  "not_stated": [
+   "备注：论文写的项目页 http://research.mssm.edu/gumuslab/software.html 本次访问时 DNS 解析失败；labs.icahn.mssm.edu/gumuslab/software/ 返回 403，没有读到下载页。论文写明许可为 GNU Lesser General Public License，代码地址以项目页为准，未核实。"
+  ],
+  "id": "icave"
+ },
+ "geographviz": {
+  "pages_read": [
+   "https://arxiv.org/abs/2304.09864",
+   "https://arxiv.org/pdf/2304.09864"
+  ],
+  "retrieved": "2026-10-14",
+  "input_material": [
+   {
+    "quote": "Knowledge graphs are a key technique for linking and integrating cross-domain data, concepts, tools, and knowledge to enable data-driven analytics.",
+    "url": "https://arxiv.org/pdf/2304.09864",
+    "check": "ok"
+   },
+   {
+    "quote": "Quantitative measures for graph structure change of expert data under different force balancing parameter",
+    "url": "https://arxiv.org/pdf/2304.09864",
+    "check": "ok"
+   }
+  ],
+  "entities": [
+   {
+    "what": "nodes",
+    "quote": "nodes are used to represent the entities, and edges represent interrelationships between the entities",
+    "url": "https://arxiv.org/pdf/2304.09864",
+    "check": "ok"
+   },
+   {
+    "what": "experts",
+    "quote": "clusters of disease experts who share similar research interests",
+    "url": "https://arxiv.org/pdf/2304.09864",
+    "check": "ok"
+   }
+  ],
+  "relations": [
+   {
+    "what": "geolocation link",
+    "quote": "uses the green lines to connect the nodes with its geolocation on the map layer",
+    "url": "https://arxiv.org/pdf/2304.09864",
+    "check": "ok"
+   },
+   {
+    "what": "linkage",
+    "quote": "linkage between two nodes, whether they are in the same cluster or not, is based on a predefined probability",
+    "url": "https://arxiv.org/pdf/2304.09864",
+    "check": "ok"
+   }
+  ],
+  "attributes": [
+   {
+    "what": "geolocation property",
+    "quote": "representing the geolocation property of a graph node",
+    "url": "https://arxiv.org/pdf/2304.09864",
+    "check": "ok"
+   },
+   {
+    "what": "word cloud view",
+    "quote": "a word cloud view showing collective expertise of the experts in a selected subgraph",
+    "url": "https://arxiv.org/pdf/2304.09864",
+    "check": "ok"
+   }
+  ],
+  "views": [
+   {
+    "what": "Graph Above the Map",
+    "quote": "“Graph Above the Map” solution to enable interactive graph exploration from both the graph and map perspectives",
+    "url": "https://arxiv.org/pdf/2304.09864",
+    "check": "ok"
+   },
+   {
+    "what": "3D graph with 2D map",
+    "quote": "3D web-based graph visualization is enabled in combination with a 2D map view",
+    "url": "https://arxiv.org/pdf/2304.09864",
+    "check": "ok"
+   },
+   {
+    "what": "graph-only view",
+    "quote": "to display purely a graph view or the “Graph Above the Map” view",
+    "url": "https://arxiv.org/pdf/2304.09864",
+    "check": "ok"
+   },
+   {
+    "what": "word cloud view",
+    "quote": "a word cloud view showing collective expertise of the experts in a selected subgraph",
+    "url": "https://arxiv.org/pdf/2304.09864",
+    "check": "ok"
+   }
+  ],
+  "encodings": [
+   {
+    "what": "geo-force offset",
+    "quote": "The offset is computed as the horizontal distance that a node moves in the 2D map plane.",
+    "url": "https://arxiv.org/pdf/2304.09864",
+    "check": "ok"
+   },
+   {
+    "what": "C and G vectors",
+    "quote": "𝐶(⋅) indicates the coordinate vector of a graph node in a virtual 3D space in which the graph is placed.",
+    "url": "https://arxiv.org/pdf/2304.09864",
+    "check": "ok"
+   },
+   {
+    "what": "green lines to map layer",
+    "quote": "uses the green lines to connect the nodes with its geolocation on the map layer",
+    "url": "https://arxiv.org/pdf/2304.09864",
+    "check": "ok"
+   },
+   {
+    "what": "nodes on geolocation",
+    "quote": "The graph nodes in Figure 2 c locate nearly exactly on top of their actual geolocation, showing a clear geographic distribution pattern.",
+    "url": "https://arxiv.org/pdf/2304.09864",
+    "check": "ok"
+   }
+  ],
+  "interactions": [
+   {
+    "what": "drag, rotate",
+    "quote": "users can drag the graph nodes and place them in a different position on the screen; they can also rotate the entire graph to observe patterns from different viewpoints",
+    "url": "https://arxiv.org/pdf/2304.09864",
+    "check": "ok"
+   },
+   {
+    "what": "rotated, panned, zoomed",
+    "quote": "The graph can also be rotated, panned, and zoomed to improve user experience.",
+    "url": "https://arxiv.org/pdf/2304.09864",
+    "check": "ok"
+   },
+   {
+    "what": "force balancing variable",
+    "quote": "a force balancing variable that allows for the dynamic adjustment of the 3D graph structure and layout",
+    "url": "https://arxiv.org/pdf/2304.09864",
+    "check": "ok"
+   }
+  ],
+  "questions": [
+   {
+    "quote": "to identify hidden patterns, and most importantly, to support discovery of new (geospatial) knowledge from massive cross-domain datasets",
+    "url": "https://arxiv.org/pdf/2304.09864",
+    "check": "ok"
+   },
+   {
+    "quote": "to interactively explore graph data",
+    "url": "https://arxiv.org/pdf/2304.09864",
+    "check": "ok"
+   }
+  ],
+  "abstraction": [
+   {
+    "what": "force balancing variable",
+    "quote": "a force balancing variable that allows for the dynamic adjustment of the 3D graph structure and layout",
+    "url": "https://arxiv.org/pdf/2304.09864",
+    "check": "ok"
+   },
+   {
+    "what": "clusters",
+    "quote": "These two layers together could demonstrate the clusters of disease experts who share similar research interests from the graph perspective",
+    "url": "https://arxiv.org/pdf/2304.09864",
+    "check": "ok"
+   },
+   {
+    "what": "balanced view",
+    "quote": "This mechanism helps create a balanced graph view between the semantic forces among the graph nodes and the attractive force from a geolocation to a graph node",
+    "url": "https://arxiv.org/pdf/2304.09864",
+    "check": "ok"
+   }
+  ],
+  "why": [
+   {
+    "quote": "most graph visualization techniques rely on 2D graph visualization, which constraints the dimensions of information that can be presented",
+    "url": "https://arxiv.org/abs/2304.09864",
+    "check": "ok"
+   },
+   {
+    "quote": "Despite the fact that many such phenomena (e.g., disasters) have clear spatial footprints and geographical properties",
+    "url": "https://arxiv.org/abs/2304.09864",
+    "check": "ok"
+   },
+   {
+    "quote": "to enable interactive exploration of graph content and patterns in a spatially explicit manner",
+    "url": "https://arxiv.org/abs/2304.09864",
+    "check": "ok"
+   }
+  ],
+  "alternative": [
+   {
+    "quote": "One major limitation in such solutions is the lack of geographical reference for the graph data",
+    "url": "https://arxiv.org/pdf/2304.09864",
+    "check": "ok"
+   },
+   {
+    "quote": "mainly support 2D graph visualization",
+    "url": "https://arxiv.org/pdf/2304.09864",
+    "check": "ok"
+   }
+  ],
+  "limit": [
+   {
+    "quote": "where the geo-force dominates the graph layout simulation",
+    "url": "https://arxiv.org/pdf/2304.09864",
+    "check": "ok"
+   },
+   {
+    "quote": "the local cluster presented in Figure 2 a almost completely gone",
+    "url": "https://arxiv.org/pdf/2304.09864",
+    "check": "ok"
+   },
+   {
+    "quote": "In the future, we will continue to refine the visualization algorithm to enhance its spatial-semantic visual presentation",
+    "url": "https://arxiv.org/pdf/2304.09864",
+    "check": "ok"
+   },
+   {
+    "quote": "The data and code will be openly shared to benefit the broader research community.",
+    "url": "https://arxiv.org/pdf/2304.09864",
+    "check": "ok"
+   }
+  ],
+  "not_stated": [
+   "备注：论文写数据和代码见 https://github.com/ASUcicilab/GeoGraphViz，按规则没有访问 GitHub。搜索没有找到单独的展示页（demo）。"
+  ],
+  "id": "geographviz"
  }
 }

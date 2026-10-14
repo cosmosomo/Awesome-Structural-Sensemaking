@@ -498,6 +498,40 @@
   access: open-source
   facts_checked: "2026-10-13"
 
+- id: 3d-force-graph
+  name: 3d-force-graph
+  level: L1
+  category: canvas-2d-and-3d
+  also: [L2/3d-and-large-graphs]
+  kind: library
+  summary: "把图画成三维力导向布局的网页组件，基于 Three.js 和 WebGL；同一作者另有二维、VR、AR 版本。"
+  focus: "力模拟的维数可设为 1、2 或 3；有向无环图模式能把层次放在深度轴上（近到远或远到近）；点击展开折叠、相机聚焦、方向箭头和粒子。"
+  repo: https://github.com/vasturiano/3d-force-graph
+  demo: https://vasturiano.github.io/3d-force-graph/
+  demo_source: search
+  demo_checked: "2026-10-14"
+  package: npm:3d-force-graph
+  repo_checked: "2026-10-14"
+  access: open-source
+  notes: "说明依据是 npm 包里的 README（2026-10-14 读）。很多笔记软件的三维图谱插件和知识图谱演示建在它上面，但那些插件自己的宣传页没有给出三维比二维好的比较证据。"
+
+- id: scatter-gl
+  name: ScatterGL
+  level: L1
+  category: canvas-2d-and-3d
+  also: [L2/high-dimensional-exploration]
+  kind: library
+  summary: "WebGL 加速的二维或三维散点渲染组件，核心功能来自 Embedding Projector，能交互地画几万个点。"
+  focus: "同一套点数据可以切二维或三维显示；是 Embedding Projector 三维模式的底层。"
+  repo: https://github.com/PAIR-code/scatter-gl
+  demo: https://pair-code.github.io/scatter-gl/
+  demo_source: search
+  demo_checked: "2026-10-14"
+  package: npm:scatter-gl
+  repo_checked: "2026-10-14"
+  access: open-source
+  notes: "npm 上最新版 0.0.13（2022-06 发布），之后没有新版本。"
+
 - id: cosmos-gl
   name: Cosmos.gl
   level: L1

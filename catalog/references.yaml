@@ -102,7 +102,7 @@ theory:
     url: https://eprints.cs.univie.ac.at/3992/
     summary: "两位编码员检查了 75 个数据集、4 种降维方法、3 种散点图形式生成的 816 张图：二维散点图常常“够用”，交互式三维散点图很少有帮助、常常更差。"
     use: "“再加一个空间维度有没有用”的实证旁证。"
-    notes: "读了摘要和引言，其余没读。"
+    notes: "2026-10-14 起读了全文（eprints 上的 PDF），摘录在 catalog/literature-evidence.json。注意它是两名编码者对 816 张图打“类别可分性”的数据研究，不是用户实验；比较的是静态二维、交互三维和散点图矩阵，任务是判断类别分不分得开。"
 
   - id: robertson-animation-2008
     title: "Effectiveness of Animation in Trend Visualization（Robertson, Fernandez, Fisher, Lee, Stasko）"
@@ -117,6 +117,76 @@ theory:
     summary: "多维投影的综述：投影会产生哪些失真、怎样量化评估、怎样用布局增强来识别失真。"
     use: "高维可视化文档里“失真的度量”一项还没解决的说明。"
     notes: "只读到出版页的摘要，没读到全文。"
+
+  - id: ware-franck-1996
+    title: "Evaluating Stereo and Motion Cues for Visualizing Information Nets in Three Dimensions（Ware, Franck, ACM TOG 1996）"
+    url: https://scholars.unh.edu/ccom/939
+    summary: "被试判断两个高亮节点之间有没有长度为二的路径。作者的结论是头部耦合的立体显示能让读得懂的图大约大三倍（同样错误率下）；第二个实验（11 名被试，75 个节点、100 条边）里运动和立体都有帮助，运动的方式不重要；作者写道单张静态透视图和二维图相比“may add little”。"
+    use: "“图谱加一个空间维度”的实证：什么条件下有帮助。"
+    notes: "读了全文（Brown 大学课程页上的 PDF）。有两个代价被作者写明：头部耦合让一些被试觉得紧张，运动需要持续重绘。"
+
+  - id: ware-mitchell-2008
+    title: "Visualizing Graphs in Three Dimensions（Ware, Mitchell, ACM TAP 2008；会议版 APGV 2005）"
+    url: https://scholars.unh.edu/ccom/467
+    summary: "用很高分辨率的立体显示重做路径追踪：运动加立体时，未经训练的观察者在 333 个节点的图里错误率低于 10%，熟练观察者到 1000 个节点；作者说这比以往研究的三维收益大得多。"
+    use: "同上；说明三维图谱的收益随显示精度提高。"
+    notes: "只读到机构库页面上的摘要，全文在 ACM 和 DOI 上返回 403，没有绕。参与人数、任务细节没读到。"
+
+  - id: kotlarek-2020
+    title: "A Study of Mental Maps in Immersive Network Visualization（Kotlarek 等，PacificVis 2020）"
+    url: https://arxiv.org/abs/2001.06462
+    summary: "20 名被试比较头显里的沉浸式三维和桌面二维：沉浸式在读网络结构、找最短路径上更准更容易；桌面更快，空间记忆和回忆变化更好。"
+    use: "同上；说明收益取决于任务：读结构 vs. 记住位置。"
+    notes: "读了全文（arXiv）。作者写明两种环境整体算一个条件，不能把效果拆到单个因素上。"
+
+  - id: alper-2011
+    title: "Stereoscopic Highlighting: 2D Graph Visualization on Stereo Displays（Alper 等，InfoVis 2011）"
+    url: https://sites.cs.ucsb.edu/~holl/pubs/Alper-2011-Infovis.pdf
+    summary: "16 名被试在 2D、2.5D 和 3D 图布局上比较静态高亮与立体高亮：较复杂的任务里，加静态高亮的三维布局优于只用一种高亮的二维布局；另外几个任务（T1、T2、T4）里 2.5D 更快；没有旋转时三维布局因遮挡吃亏。"
+    use: "同上；给出“分层平面（2.5D）”的一个对照。"
+    notes: "读了全文（作者主页 PDF）。"
+
+  - id: poco-2011
+    title: "A Framework for Exploring Multidimensional Data with 3D Projections（Poco 等，EuroVis 2011）"
+    url: https://diglib.eg.org/handle/10.1111/v30i3pp1111-1120
+    summary: "把最小二乘投影扩展到三维。681 个对象、2993 维的文档集，12 名被试数簇、按密度排序、列出重叠：有两道题三维的正确率显著更高，但平均耗时 59.3 秒对 40.7 秒；作者写明点云缺少紧凑几何，三维里更容易迷失方向。"
+    use: "“PCA 三维”这类点云加一个空间维度的实证：准确更高、更慢。"
+    notes: "读了全文（EG 数字图书馆的 PDF）。"
+
+  - id: wagner-filho-2018
+    title: "Immersive Visualization of Abstract Information: An Evaluation on Dimensionally-Reduced Data Scatterplots（Wagner Filho 等；IEEE VR 2018）"
+    url: https://www.aviz.fr/~bbach/immersive2017/papers/IA_2736-paper.pdf
+    summary: "20 名被试比较桌面二维、桌面三维和头显三维看降维后的数据（450 到 620 维）：作者报告三维（沉浸式为主）在点分类、距离感知和离群点任务上有精度优势；二维始终最快、主观评分最高，桌面三维与沉浸式在多数任务上差异不显著。"
+    use: "同上，加上沉浸式的对照。"
+    notes: "读的是 aviz.fr 上 2017 年研讨会版本，标题是 Immersive Analytics of Dimensionally-Reduced Data Scatterplots；IEEE VR 2018 的正式版没读，两版数字可能不同。"
+
+  - id: raja-2004
+    title: "Exploring the Benefits of Immersion in Abstract Information Visualization（Raja, Bowman, Lucas, North, 2004）"
+    url: https://people.cs.vt.edu/~bowman/papers/ipt_dheva.pdf
+    summary: "CAVE 里四面墙加头部追踪的条件下三维散点图完成任务最快；只有 4 名被试，作者写明没有做统计检验，只能说是趋势。"
+    use: "同上；证据很弱，只作旁证。"
+    notes: "读了全文（作者主页 PDF）；发表场合没有核对。"
+
+  - id: tory-2006
+    title: "Visualization Task Performance with 2D, 3D, and Combination Displays（Tory 等，TVCG 2006）"
+    url: https://eprints.cs.univie.ac.at/4976/
+    summary: "40 名被试在位置估计、朝向和感兴趣体积三类任务上比较二维、三维和组合显示：三维配阴影等线索对近似定位有效，精确任务二维或组合更好；有人靠旋转在三维里完成精确任务，有人觉得太乱。"
+    use: "三维 vs 二维的一般性旁证：任务决定谁更好。"
+    notes: "读了全文（SFU 主页 PDF）。研究的是三维几何对象，不是抽象数据。"
+
+  - id: marriott-2018
+    title: "Immersive Analytics: Time to Reconsider the Value of 3D for Information Visualisation（Marriott 等，2018，《Immersive Analytics》一书的章节）"
+    url: https://vvise.iat.sfu.ca/pubs/marriott2018immersive
+    summary: "综述二维与三维的实证研究：三维不普遍更好，二维也不总是更好，取决于任务；三维节点连线图对路径追踪有实证收益，三维锥形树因遮挡和旋转慢而表现差；二维更适合精确操作和数值比较。"
+    use: "转述 Greffard 等 2011、St. John 等 2001 等本库没读到原文的研究，用来给“三维有没有帮助”的结论划条件。"
+    notes: "读了 VVISE 站上的章节 PDF。Greffard 等 2011（图形绘制会议）、Gracia 等 2016、St. John 等 2001 的原文页面都被人机验证或 403 挡住，没读到，这几篇只能通过这一章转述，转述的内容不当作一手证据。"
+
+  - id: tian-2021
+    title: "Quantitative and Qualitative Comparison of 2D and 3D Projection Techniques for High-Dimensional Data（Tian, Zhai, van Steenpaal, Yu, Dimara, Espadoto, Telea; Information 2021, 12(6):239）"
+    url: https://webspace.science.uu.nl/~telea001/uploads/PAPERS/MDPI21/paper.pdf
+    summary: "29 种投影技术、多个数据集和质量指标，加 4 位数据科学家的评估：三维几乎总是略好一点但只是边际改进；t-SNE 在二维里的解释更清楚；三维带来遮挡和交互负担。"
+    use: "“PCA 三维”这类问题的直接比较：整体上收益有限，随投影技术而异。"
+    notes: "读的是作者主页上的 PDF，没有核对它与出版版是否逐字一致（出版页 403）。作者写明只用了 8 个真实数据集、4 位专家和简单任务。"
 
 awesome_lists:
   - id: awesome-dataviz

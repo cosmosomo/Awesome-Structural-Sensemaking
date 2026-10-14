@@ -9,7 +9,7 @@
 - 这些案例为什么这样归类、设计者怎么想，见 [案例表](case-analysis.md)；编码依据的官方原文见 [案例证据](case-evidence.md)。
 
 <!-- gen:gallerystats: -->
-114 个案例里，76 个有在线展示页（可操作 58、样例目录 14、视频或导览 1、需要登录 3），其中 76 个用无头 Chromium 实际打开过；58 个有官方图片，共 105 张。其余 38 个没找到在线展示页（命令行工具、规范、方法类，或官方页面读不到），原因写在各案例下。图片只存地址，不转存。
+118 个案例里，76 个有在线展示页（可操作 58、样例目录 14、视频或导览 1、需要登录 3），其中 76 个用无头 Chromium 实际打开过；62 个有官方图片，共 111 张。其余 42 个没找到在线展示页（命令行工具、规范、方法类，或官方页面读不到），原因写在各案例下。图片只存地址，不转存。
 <!-- /gen -->
 
 ## 总表
@@ -100,6 +100,7 @@
 | [LightRAG](https://github.com/HKUDS/LightRAG) | 文本检索与知识建模 | 一般图与网络 | — | — | 1 |
 | [Graphiti](https://help.getzep.com/graphiti/getting-started/overview) | Agent 记忆 | 一般图与网络 | [可操作](https://app.getzep.com/playground) | — | 2 |
 | [VOWL / WebVOWL 本体可视化](https://semantic-web-journal.net/content/visualizing-ontologies-vowl-0) | 本体与语义网 | 一般图与网络 | — | — | 2 |
+| [GeoGraphViz](https://github.com/ASUcicilab/GeoGraphViz) | 地理空间知识图谱 | 一般图与网络 | — | 1 | 2 |
 | [Luhmann 的卡片盒](https://www.uni-bielefeld.de/fakultaeten/soziologie/forschung/luhmann-archiv/pdf/jschmidt_zettelkasten-als-uberraschungsgenerator.pdf) | 知识管理与写作 | 一般图与网络 | — | — | — |
 | [OpenDigger](https://open-digger.cn/en/) | 开源活动指标 | 一般图与网络 | [可操作](https://open-digger.cn/en/docs/user-docs/metrics/playground) | — | 2 |
 | [Ecosyste.ms](https://packages.ecosyste.ms/) | 开源数据基础设施 | 一般图与网络 | [可操作](https://packages.ecosyste.ms/) | — | 1 |
@@ -109,6 +110,8 @@
 | [MOSS（研究软件知识图谱）](https://pretalx.com/juliacon-2025/talk/3EVLR9/) | 研究软件知识图谱 | 一般图与网络 | — | — | 1 |
 | [CodeGraph（面向源代码的开放分类知识图谱）](https://arxiv.org/abs/2609.29474) | 代码知识图谱 | 一般图与网络 | [样例目录](https://huggingface.co/datasets/halykoss/CodeGraph/viewer/) | 1 | 2 |
 | [SBGN 系统生物学图形标记](https://sbgn.github.io/specifications) | 分子生物学通路 | 一般图与网络 | [样例目录](https://sbgn.github.io/examples) | 3 | 2 |
+| [VRNetzer](https://github.com/menchelab/VRNetzer) | 分子生物学与医学 | 一般图与网络 | — | 1 | 1 |
+| iCAVE | 分子生物学与医学 | 一般图与网络 | — | 3 | 1 |
 | [伦敦地铁图（Beck）](https://www.londonmuseum.org.uk/collections/london-stories/harry-beck-revolutionised-tube-map/) | 交通 | 一般图与网络 | — | 1 | 2 |
 | [ICIJ Offshore Leaks 数据库](https://offshoreleaks.icij.org/pages/howtouse) | 调查报道与金融 | 一般图与网络 | [可操作](https://offshoreleaks.icij.org/) | — | 1 |
 | [CmapTools 概念图](https://cmap.ihmc.us/) | 教育与知识建模 | 命题与论证 | [样例目录](https://cmap.ihmc.us/docs/itinerary.php) | 1 | 2 |
@@ -120,6 +123,7 @@
 | [Up and Down the Ladder of Abstraction](https://worrydream.com/LadderOfAbstraction/) | 交互式写作与抽象 | 序列与事件流 | [可操作](https://worrydream.com/LadderOfAbstraction/) | — | — |
 | [LLNL 美国能源流向图](https://flowcharts.llnl.gov/) | 能源 | 流量网络 | [样例目录](https://flowcharts.llnl.gov/commodities/energy) | 1 | 2 |
 | [Embedding Projector](https://projector.tensorflow.org/) | 机器学习 | 空间与几何 | [可操作](https://projector.tensorflow.org/) | 2 | 2 |
+| [pca3d](https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd) | 统计与组学 | 空间与几何 | — | 1 | 2 |
 | [How to Use t-SNE Effectively（Distill）](https://distill.pub/2016/misread-tsne/) | 机器学习与嵌入分析 | 空间与几何 | [可操作](https://distill.pub/2016/misread-tsne/) | — | — |
 | [Visualizing Neural Networks with the Grand Tour（Distill）](https://distill.pub/2020/grand-tour/) | 机器学习与嵌入分析 | 空间与几何 | [可操作](https://distill.pub/2020/grand-tour/) | — | — |
 | [dtour](https://dtour.dev) | 高维数据探索 | 空间与几何 | [可操作](https://dtour.dev) | — | 2 |
@@ -461,6 +465,20 @@
 
 <sub>[编码与原文摘录](case-evidence.md#vowl)</sub>
 
+#### [GeoGraphViz](https://github.com/ASUcicilab/GeoGraphViz)
+
+<sub>地理空间知识图谱 · 一般图与网络 · 重点：空间位置、连通与邻域</sub>　在知识图谱里同时看语义关系和地理位置，发现图结构里藏着的地理分布模式
+
+- 展示页：没有找到在线展示页<sub>（没有在线展示页：论文页面和搜索都没有给出可打开的 demo）</sub>
+- 网页：[GeoGraphViz: Geographically Constrained 3D Force-Directed Graph for Knowledge Graph Visualization](https://arxiv.org/html/2304.09864)（arXiv 的 HTML 版论文，图 5 是 GeoGraphViz 的界面截图：地图上方的专家节点、位置节点和相似度连线）
+- 网页：[[2304.09864] GeoGraphViz: Geographically Constrained 3D Force-Directed Graph for Knowledge Graph Visualization](https://arxiv.org/abs/2304.09864)（论文摘要页，标题写明工具是带地理约束的三维力导向知识图谱可视化）
+
+<a href="https://arxiv.org/html/2304.09864v1/figures/fig3.png"><img src="https://arxiv.org/html/2304.09864v1/figures/fig3.png" width="230" alt="Refer to caption"></a>
+
+<sub>图：Figure 5: The GeoGraphViz user interface for location-aware knowledge graph visualization（[来源页](https://arxiv.org/html/2304.09864)）</sub>
+
+<sub>[编码与原文摘录](case-evidence.md#geographviz)</sub>
+
 #### [Luhmann 的卡片盒](https://www.uni-bielefeld.de/fakultaeten/soziologie/forschung/luhmann-archiv/pdf/jschmidt_zettelkasten-als-uberraschungsgenerator.pdf)
 
 <sub>知识管理与写作 · 一般图与网络 · 重点：连通与邻域、跨视图的同一对象</sub>　让积累的笔记自己产生不显而易见的联想（“卡片盒为什么能发展出自己的创造力”）
@@ -558,6 +576,32 @@
 <sub>图：MAPK-PD（[来源页](https://sbgn.github.io/examples)）；Glycolysis.png（[来源页](https://sbgn.github.io/examples)）；Insulin_signaling（[来源页](https://sbgn.github.io/examples)）</sub>
 
 <sub>[编码与原文摘录](case-evidence.md#sbgn)</sub>
+
+#### [VRNetzer](https://github.com/menchelab/VRNetzer)
+
+<sub>分子生物学与医学 · 一般图与网络 · 重点：连通与邻域、群落与相似</sub>　在 VR 里连续地从局部簇看到全局结构，探索大型分子网络，找出与罕见病相关的基因
+
+- 展示页：没有找到在线展示页<sub>（没有在线展示页：需要 Steam VR 兼容头显，或在 Windows 上运行桌面版可执行文件）</sub>
+- 网页：[The VRNetzer platform enables interactive network analysis in Virtual Reality - PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/)（论文全文（Nature Communications 2021）；图 2 是 VR 中探索网络的合成图和三种尺度的标注，图 3 是 VR 里的控制面板）
+
+<a href="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/7cdd/8065164/83e3dbe1fe6b/41467_2021_22570_Fig2_HTML.jpg"><img src="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/7cdd/8065164/83e3dbe1fe6b/41467_2021_22570_Fig2_HTML.jpg" width="230" alt="Fig. 2"></a>
+
+<sub>图：Fig. 2. Immersive network exploration. a Green-screen composition showing a user immersed in the genome-scale molecular interaction network.（[来源页](https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/)）</sub>
+
+<sub>[编码与原文摘录](case-evidence.md#vrnetzer)</sub>
+
+#### iCAVE
+
+<sub>分子生物学与医学 · 一般图与网络 · 重点：连通与邻域、群落与相似</sub>　在三维、立体或 CAVE 沉浸环境里查看大型、多层的生物分子网络，看清二维里看不清的结构
+
+- 展示页：没有找到在线展示页<sub>（没有在线展示页：需要 CAVE 环境或立体显示；项目主页 2026-10-14 访问不到）</sub>
+- 网页：[iCAVE: an open source tool for visualizing biomolecular networks in 3D, stereoscopic 3D and immersive 3D - PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)（论文全文；图 2、4、5 是 iCAVE 画出的三维网络（残基相关网络、多层信息的几种布局、代谢组网络））
+
+<a href="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/9585/5554349/97d5d2bc1fb9/gix054fig2.jpg"><img src="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/9585/5554349/97d5d2bc1fb9/gix054fig2.jpg" width="230" alt="Figure 2:"></a> <a href="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/9585/5554349/5e6e98ea47f2/gix054fig4.jpg"><img src="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/9585/5554349/5e6e98ea47f2/gix054fig4.jpg" width="230" alt="Figure 4:"></a> <a href="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/9585/5554349/1f8d26314cb0/gix054fig5.jpg"><img src="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/9585/5554349/1f8d26314cb0/gix054fig5.jpg" width="230" alt="Figure 5:"></a>
+
+<sub>图：( a ) iCAVE visualization of bacterial leucine transporter, LeuT residue correlation network, side-view.（[来源页](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)）；Visualizing multiple layers of information.（[来源页](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)）；Pathway reconstructed high-throughput metabolomics data with Gaussian Graphical Modeling; each sphere color represents a single metabolite class.（[来源页](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)）</sub>
+
+<sub>[编码与原文摘录](case-evidence.md#icave)</sub>
 
 #### [伦敦地铁图（Beck）](https://www.londonmuseum.org.uk/collections/london-stories/harry-beck-revolutionised-tube-map/)
 
@@ -1262,6 +1306,20 @@
 <a href="https://www.tensorflow.org/tensorboard/images/embedding_projector.png?raw=1"><img src="https://www.tensorflow.org/tensorboard/images/embedding_projector.png?raw=1" width="230" alt="embedding-projector"></a> <a href="https://www.tensorflow.org/tensorboard/images/embedding_projector_hitchcock.png?raw=1"><img src="https://www.tensorflow.org/tensorboard/images/embedding_projector_hitchcock.png?raw=1" width="230" alt="embedding-projector"></a>
 
 <sub>[编码与原文摘录](case-evidence.md#embedding-projector)</sub>
+
+#### [pca3d](https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd)
+
+<sub>统计与组学 · 空间与几何 · 重点：群落与相似、有什么</sub>　看样本在前几个主成分上怎样按分组聚在一起；在三维里探索、挑选成分，再出论文用的二维图
+
+- 展示页：没有找到在线展示页<sub>（没有在线展示页：pca3d 是 R 包，要在 R 里运行才会打开 rgl 的交互窗口）</sub>
+- 网页：[pca3d \| log Fold Change](https://logfc.wordpress.com/tag/pca3d/)（包作者的博客（DESCRIPTION 里的 URL）的 pca3d 标签页；文章 Rotating movies with RGL 用 pca3d 的结果和 rgl 的 spin3d、movie3d 生成三维 PCA 的旋转动图，上面那张就是）
+- 网页：[pca3d-package: Show a three- or two-dimensional plot of a prcomp object in pca3d: Three Dimensional PCA Plots](https://rdrr.io/cran/pca3d/man/pca3d-package.html)（包的帮助页（rdrr.io 镜像，不是 CRAN 官方页），列出 pca3d、pca2d、snapshotPCA3d、makeMoviePCA 等函数）
+
+<a href="https://logfc.wordpress.com/wp-content/uploads/2014/03/movie.gif?w=630&h=630"><img src="https://logfc.wordpress.com/wp-content/uploads/2014/03/movie.gif?w=630&h=630" width="230" alt="movie"></a>
+
+<sub>图：movie（[来源页](https://logfc.wordpress.com/tag/pca3d/)）</sub>
+
+<sub>[编码与原文摘录](case-evidence.md#pca3d)</sub>
 
 #### [How to Use t-SNE Effectively（Distill）](https://distill.pub/2016/misread-tsne/)
 

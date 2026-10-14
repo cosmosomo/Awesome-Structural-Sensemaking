@@ -1,0 +1,1200 @@
+{
+ "ware-franck-1996": {
+  "citation": "Ware & Franck 1996, ACM TOG, Evaluating Stereo and Motion Cues for Visualizing Information Nets in Three Dimensions",
+  "pages_read": [
+   "https://scholars.unh.edu/ccom/939",
+   "https://cs.brown.edu/courses/cs237/2000/1999/ware.pdf"
+  ],
+  "setup": [
+   {
+    "quote": "The 3D display used was configured so that the image on the monitor was coupled to the user's actual eye positons (and it was updated in real-time as the user moved) as well as bring in stereo.",
+    "url": "https://scholars.unh.edu/ccom/939",
+    "check": "ok"
+   },
+   {
+    "quote": "The subject’s task was to decide whether there was a path of length two connecting two nodes that were highlighted in a randomly laid out graph.",
+    "url": "https://cs.brown.edu/courses/cs237/2000/1999/ware.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "The nine conditions for this experiment included the four from Experiment lb, two conditions with rotation added by hand motion (with and without stereo), and two other conditions with the rotation happening automatically (with and without stereo).",
+    "url": "https://cs.brown.edu/courses/cs237/2000/1999/ware.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "again, eleven subjects were used,",
+    "url": "https://cs.brown.edu/courses/cs237/2000/1999/ware.pdf",
+    "check": "ok"
+   }
+  ],
+  "better_3d": [
+   {
+    "quote": "The results from this study show that head-coupled stereo viewing can increase the size of an abstract graph that can be understood by a factor of three;",
+    "url": "https://scholars.unh.edu/ccom/939",
+    "check": "ok"
+   },
+   {
+    "quote": "On this basis, we conclude that the graph that can be understood with head-coupled stereo is about 3.0 times as large as the 2D graph for any given error rate (taking the ratios of the gradients).",
+    "url": "https://cs.brown.edu/courses/cs237/2000/1999/ware.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "The two 2D conditions gave significantly higher error rates than all other conditions although they did not differ significantly from each other.",
+    "url": "https://cs.brown.edu/courses/cs237/2000/1999/ware.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "The factor of three improvement that we actually measured (for the head-coupled stereo condition) should provide some strong encouragement",
+    "url": "https://cs.brown.edu/courses/cs237/2000/1999/ware.pdf",
+    "check": "ok"
+   }
+  ],
+  "better_2d": [],
+  "no_difference": [
+   {
+    "quote": "The results show that structured 3D motion and stereo viewing both help in understanding, but that the kind of motion is not particularly important; all improve performance, and all are more significant than stereo cues.",
+    "url": "https://scholars.unh.edu/ccom/939",
+    "check": "ok"
+   },
+   {
+    "quote": "they suggest that the method for producing the motion is not particularly important, inasmuch as no significant differences were found among the different combined stereo and motion conditions.",
+    "url": "https://cs.brown.edu/courses/cs237/2000/1999/ware.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "However, none of the differences among the three rotation and the stereo only conditions reached statistical significance.",
+    "url": "https://cs.brown.edu/courses/cs237/2000/1999/ware.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "A static perspective image may add little in comparison with a 2D diagram",
+    "url": "https://cs.brown.edu/courses/cs237/2000/1999/ware.pdf",
+    "check": "ok"
+   }
+  ],
+  "caveat": [
+   {
+    "quote": "There does appear to be some penalty associated with using head-coupled viewing. A number of subjects stated that they found viewing the graph in the head-coupled stereo mode to be somewhat stressful.",
+    "url": "https://cs.brown.edu/courses/cs237/2000/1999/ware.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "In our displays, more 2D patterns were inherently ambiguous than were the 3D patterns insofar as they contained paths that could not be resolved due to the densely overlapping network of nodes and arcs.",
+    "url": "https://cs.brown.edu/courses/cs237/2000/1999/ware.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "Unfortunately, structured motion is far more computationally expensive than stereo as it requires a minimum of 10 screen updates per second for a duration of at least 30 seconds, whereas a stereo pair only requires the computation of two images.",
+    "url": "https://cs.brown.edu/courses/cs237/2000/1999/ware.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "Noise in the head-tracking system and the occasional briefly frozen image because of UNIX system functions are especially irritating in the head-coupled viewing modes.",
+    "url": "https://cs.brown.edu/courses/cs237/2000/1999/ware.pdf",
+    "check": "ok"
+   }
+  ],
+  "not_found": [
+   "better_2d：页面中没有作者写的二维更好的结果；“A static perspective image may add little...”一句按字面归入了 no_difference。",
+   "setup 的图规模（Exp 2 中“There were always 75 nodes and 100 arcs in every trial.”）因每类上限 4 条未摘。",
+   "PDF 的图与表说明文字经 pdftotext 错乱，只摘了可读的正文句子，个别句子跨页断开，已按原文顺序拼接。"
+  ],
+  "id": "ware-franck-1996"
+ },
+ "ware-mitchell-2008": {
+  "citation": "Ware & Mitchell 2005/2008, Visualizing Graphs in Three Dimensions (ACM TAP 2008) / Reevaluating Stereo and Motion Cues (APGV 2005)",
+  "pages_read": [
+   "https://scholars.unh.edu/ccom/467",
+   "https://scholars.unh.edu/ccom/355"
+  ],
+  "setup": [
+   {
+    "quote": "we undertook a graph comprehension study using a very high resolution stereoscopic display.",
+    "url": "https://scholars.unh.edu/ccom/467",
+    "check": "ok"
+   },
+   {
+    "quote": "In our first experiment, we examined the effect of stereoscopic display, kinetic depth, and using 3D tubes versus lines to display the links.",
+    "url": "https://scholars.unh.edu/ccom/467",
+    "check": "ok"
+   },
+   {
+    "quote": "In our second experiment, we varied both nodes and links to understand the constraints on the number of links and the size of graph that can be reliably traced.",
+    "url": "https://scholars.unh.edu/ccom/467",
+    "check": "ok"
+   }
+  ],
+  "better_3d": [
+   {
+    "quote": "The results showed a much greater benefit for 3D viewing than previous studies.",
+    "url": "https://scholars.unh.edu/ccom/467",
+    "check": "ok"
+   },
+   {
+    "quote": "For example, with both motion and stereoscopic depth cues, unskilled observers could see paths between nodes in 333 node graphs with less than a 10% error rate.",
+    "url": "https://scholars.unh.edu/ccom/467",
+    "check": "ok"
+   },
+   {
+    "quote": "Skilled observers could see up to a 1000-node graph with less than a 10% error rate.",
+    "url": "https://scholars.unh.edu/ccom/467",
+    "check": "ok"
+   },
+   {
+    "quote": "Both kinetic depth cues and stereoscopic depth cues increase the size of the structure that can be interpreted.",
+    "url": "https://scholars.unh.edu/ccom/355",
+    "check": "ok"
+   }
+  ],
+  "better_2d": [],
+  "no_difference": [],
+  "caveat": [],
+  "not_found": [
+   "全文 PDF 不可得：scholars.unh.edu 记录页链接的全文地址，以及 dl.acm.org、doi.org 上两篇论文的 DOI 页面均返回 403；dx.doi.org 解析失败。我曾对 scholars.unh.edu/cgi/viewcontent.cgi 试过三个猜测的地址（article=1466、1354、1938），也都是 403，之后未再尝试。以下只据两个 UNH 记录页的摘要摘录。",
+   "setup：参与人数、显示设备细节和任务细节不在摘要中，未读到。",
+   "better_2d、no_difference：摘要中没有作者写的相应结果。",
+   "caveat：摘要中没有作者写的三维代价或局限。摘要里“prior studies were carried out using displays that provided a level of detail far short...”说的是先前研究的显示精度，不是三维本身的局限，未摘。"
+  ],
+  "id": "ware-mitchell-2008"
+ },
+ "greffard-2011": {
+  "citation": "Greffard, Picarougne, Kuntz 2011, Visual Community Detection: An Evaluation of 2D, 3D Perspective and 3D Stereoscopic Displays (Graph Drawing 2011)",
+  "pages_read": [],
+  "setup": [],
+  "better_3d": [],
+  "better_2d": [],
+  "no_difference": [],
+  "caveat": [],
+  "not_found": [
+   "hal-00627632 返回 Anubis 人机验证页，内容读不到，未尝试绕过。",
+   "link.springer.com/chapter/10.1007/978-3-642-25878-7_21 返回需要 JavaScript 的 “Client Challenge” 页，正文读不到。",
+   "doi.org 对该 DOI 的解析失败。本篇所有类别均未摘录，搜索结果的文字没有用作引文。"
+  ],
+  "id": "greffard-2011"
+ },
+ "kotlarek-2020": {
+  "citation": "Kotlarek et al. 2020, A Study of Mental Maps in Immersive Network Visualization (PacificVis 2020)",
+  "pages_read": [
+   "https://arxiv.org/pdf/2001.06462"
+  ],
+  "setup": [
+   {
+    "quote": "(1) a 3D immersive visualization environment with a head-mounted display and hand-tracker controllers and (2) a traditional 2D desktop environment with standard monitor and mouse.",
+    "url": "https://arxiv.org/pdf/2001.06462",
+    "check": "ok"
+   },
+   {
+    "quote": "We study three tasks that are commonly used for evaluating the quality of a mental map in network visualization [4]: interpreting network structure, memorizing a set of nodes, and identifying the structural changes.",
+    "url": "https://arxiv.org/pdf/2001.06462",
+    "check": "ok"
+   },
+   {
+    "quote": "We recruited 20 participants (11 female, 9 male) for our user study.",
+    "url": "https://arxiv.org/pdf/2001.06462",
+    "check": "ok"
+   },
+   {
+    "quote": "The HTC Vive Pro HMD has a 2,880 × 1,600 px (1,440 × 1,600 px per eye) AMOLED display with a 90 Hz refresh rate.",
+    "url": "https://arxiv.org/pdf/2001.06462",
+    "check": "ok"
+   }
+  ],
+  "better_3d": [
+   {
+    "quote": "However, they interpreted network structures more accurately in the immersive environment, and reported the task as easier to complete in the immersive environment.",
+    "url": "https://arxiv.org/pdf/2001.06462",
+    "check": "ok"
+   },
+   {
+    "quote": "The results indicate that immersive environments mitigate confusion caused by edge crossings and node overlaps that are commonly found in 2D representations",
+    "url": "https://arxiv.org/pdf/2001.06462",
+    "check": "ok"
+   },
+   {
+    "quote": "Finding the shortest path was significantly easier and more accurate with the immersive 3D visualization than the traditional 2D desktop environment.",
+    "url": "https://arxiv.org/pdf/2001.06462",
+    "check": "ok"
+   },
+   {
+    "quote": "The immersive 3D network visualization proved to be more helpful for interpreting the structure of a network.",
+    "url": "https://arxiv.org/pdf/2001.06462",
+    "check": "ok"
+   }
+  ],
+  "better_2d": [
+   {
+    "quote": "The results show that participants completed the tasks faster, and recalled changes to the network more accurately in the desktop environment.",
+    "url": "https://arxiv.org/pdf/2001.06462",
+    "check": "ok"
+   },
+   {
+    "quote": "while traditional 2D representations provide a better spatial overviews.",
+    "url": "https://arxiv.org/pdf/2001.06462",
+    "check": "ok"
+   },
+   {
+    "quote": "The traditional 2D desktop visualization environment was better for the memory task, where participants performed better in terms of both task completion time and accuracy than the immersive 3D condition.",
+    "url": "https://arxiv.org/pdf/2001.06462",
+    "check": "ok"
+   },
+   {
+    "quote": "The traditional 2D visualization has proven superior for spatial memory as they provide a better overview of the entire network.",
+    "url": "https://arxiv.org/pdf/2001.06462",
+    "check": "ok"
+   }
+  ],
+  "no_difference": [
+   {
+    "quote": "The gray bars in Fig. 5 show that the difference was not statistically significant.",
+    "url": "https://arxiv.org/pdf/2001.06462",
+    "check": "ok"
+   },
+   {
+    "quote": "However, the difference was not statistically significant (p = 0.458). Moreover, there were no significant differences between 2D and 3D conditions when we analyzed for each network individually.",
+    "url": "https://arxiv.org/pdf/2001.06462",
+    "check": "ok"
+   },
+   {
+    "quote": "In addition, the two visualization conditions performed similarity in the change task except for the overall task completion time.",
+    "url": "https://arxiv.org/pdf/2001.06462",
+    "check": "ok"
+   }
+  ],
+  "caveat": [
+   {
+    "quote": "However, our study has limitations in terms of external validity (generalizability).",
+    "url": "https://arxiv.org/pdf/2001.06462",
+    "check": "ok"
+   },
+   {
+    "quote": "Since we considered the entire visualization environment as a single condition, our study only shows the effect of the combination of multiple factors of each environment, but not the effect of individual factors.",
+    "url": "https://arxiv.org/pdf/2001.06462",
+    "check": "ok"
+   },
+   {
+    "quote": "The mental maps formed through this experiment seem to be limited due to the short time frame of all the tasks.",
+    "url": "https://arxiv.org/pdf/2001.06462",
+    "check": "ok"
+   },
+   {
+    "quote": "Part of this may have been due to participants’ lack of familiarity with the controls and virtual environment.",
+    "url": "https://arxiv.org/pdf/2001.06462",
+    "check": "ok"
+   }
+  ],
+  "not_found": [],
+  "id": "kotlarek-2020"
+ },
+ "poco-2011": {
+  "citation": "Poco et al. 2011, A Framework for Exploring Multidimensional Data with 3D Projections (EuroVis 2011, CGF 30(3))",
+  "pages_read": [
+   "https://diglib.eg.org/items/1e97798f-2a4b-4de8-a5d2-5fc82117fef1",
+   "https://diglib.eg.org/bitstreams/2d15ccc0-0a0b-4428-aaf4-f9b5998afd3c/download"
+  ],
+  "setup": [
+   {
+    "quote": "We compare projections to 2D and 3D visual spaces both quantitatively and through a user study considering certain exploration tasks.",
+    "url": "https://diglib.eg.org/bitstreams/2d15ccc0-0a0b-4428-aaf4-f9b5998afd3c/download",
+    "check": "ok"
+   },
+   {
+    "quote": "The user study involved 12 participants with different background including visualization experts and non-experts, but all with significant experience in working with computers.",
+    "url": "https://diglib.eg.org/bitstreams/2d15ccc0-0a0b-4428-aaf4-f9b5998afd3c/download",
+    "check": "ok"
+   },
+   {
+    "quote": "A document data set with 681 objects and 2,993 dimensions was used.",
+    "url": "https://diglib.eg.org/bitstreams/2d15ccc0-0a0b-4428-aaf4-f9b5998afd3c/download",
+    "check": "ok"
+   },
+   {
+    "quote": "The following tasks were asked: 1) count the clusters; 2) order the clusters by their density; 3) list all (pairwise) overlaps of clusters;",
+    "url": "https://diglib.eg.org/bitstreams/2d15ccc0-0a0b-4428-aaf4-f9b5998afd3c/download",
+    "check": "ok"
+   }
+  ],
+  "better_3d": [
+   {
+    "quote": "The quantitative analysis confirms that 3D projections outperform 2D projections in terms of precision.",
+    "url": "https://diglib.eg.org/bitstreams/2d15ccc0-0a0b-4428-aaf4-f9b5998afd3c/download",
+    "check": "ok"
+   },
+   {
+    "quote": "The user study indicates that certain tasks can be more reliably and confidently answered with 3D projections.",
+    "url": "https://diglib.eg.org/bitstreams/2d15ccc0-0a0b-4428-aaf4-f9b5998afd3c/download",
+    "check": "ok"
+   },
+   {
+    "quote": "Our tests indicate that Hypothesis 2 was confirmed. The interactive 3D system really allowed users to produce better results, which dismisses Hypothesis 1.",
+    "url": "https://diglib.eg.org/bitstreams/2d15ccc0-0a0b-4428-aaf4-f9b5998afd3c/download",
+    "check": "ok"
+   },
+   {
+    "quote": "Both questions exhibit a significantly higher correctness for the 3D system.",
+    "url": "https://diglib.eg.org/bitstreams/2d15ccc0-0a0b-4428-aaf4-f9b5998afd3c/download",
+    "check": "ok"
+   }
+  ],
+  "better_2d": [
+   {
+    "quote": "The average time over all participants and tasks were 59.3s for the 3D system and 40.7s for the 2D system.",
+    "url": "https://diglib.eg.org/bitstreams/2d15ccc0-0a0b-4428-aaf4-f9b5998afd3c/download",
+    "check": "ok"
+   },
+   {
+    "quote": "Questions 1 and 4 were the ones found to be statistically significant (p-value of 0.0189 for both). Both questions exhibit higher response times for the 3D system.",
+    "url": "https://diglib.eg.org/bitstreams/2d15ccc0-0a0b-4428-aaf4-f9b5998afd3c/download",
+    "check": "ok"
+   }
+  ],
+  "no_difference": [
+   {
+    "quote": "Correctness values for Questions 1 and 4 were 100% for both 2D and 3D.",
+    "url": "https://diglib.eg.org/bitstreams/2d15ccc0-0a0b-4428-aaf4-f9b5998afd3c/download",
+    "check": "ok"
+   },
+   {
+    "quote": "Only the findings for Questions 5 and 6 were statistically significant (p-values of 0.0156 and 0.0195, respectively).",
+    "url": "https://diglib.eg.org/bitstreams/2d15ccc0-0a0b-4428-aaf4-f9b5998afd3c/download",
+    "check": "ok"
+   },
+   {
+    "quote": "We also checked whether there is a difference between expert and non-expert users, but it was not statistically significant.",
+    "url": "https://diglib.eg.org/bitstreams/2d15ccc0-0a0b-4428-aaf4-f9b5998afd3c/download",
+    "check": "ok"
+   }
+  ],
+  "caveat": [
+   {
+    "quote": "Nonetheless, since the standard display is a ‘point cloud’, the lack of a more compact geometry tends to impair user orientation and interaction in 3D.",
+    "url": "https://diglib.eg.org/bitstreams/2d15ccc0-0a0b-4428-aaf4-f9b5998afd3c/download",
+    "check": "ok"
+   },
+   {
+    "quote": "Perceptional issues of the 3D views when looked at with a 2D monitor may enhance this effect.",
+    "url": "https://diglib.eg.org/bitstreams/2d15ccc0-0a0b-4428-aaf4-f9b5998afd3c/download",
+    "check": "ok"
+   },
+   {
+    "quote": "However, this higher correctness comes at the expense of spending more time.",
+    "url": "https://diglib.eg.org/bitstreams/2d15ccc0-0a0b-4428-aaf4-f9b5998afd3c/download",
+    "check": "ok"
+   },
+   {
+    "quote": "3D interaction is critical in visualization, particularly in displays depicting sparse point glyph representations, as depth perception becomes an issue.",
+    "url": "https://diglib.eg.org/bitstreams/2d15ccc0-0a0b-4428-aaf4-f9b5998afd3c/download",
+    "check": "ok"
+   }
+  ],
+  "not_found": [
+   "批次 urls 中 publications.graphics.tudelft.nl 的 PDF 实为 Paulovich 等 2011 的 PLP 论文（Piecewise Laplacian-based Projection，DOI 10.1111/j.1467-8659.2011.01958.x），与本条目不是同一篇，未使用其中任何内容；正文改取 diglib 条目页上的正式 PDF。"
+  ],
+  "id": "poco-2011"
+ },
+ "gracia-2016": {
+  "citation": "Gracia et al. 2016, New insights into the suitability of the third dimension for visualizing multivariate/multidimensional data: a study based on loss of quality quantification (Information Visualization 15(1), DOI 10.1177/1473871614556393)",
+  "pages_read": [],
+  "setup": [],
+  "better_3d": [],
+  "better_2d": [],
+  "no_difference": [],
+  "caveat": [],
+  "not_found": [
+   "doi.org/10.1177/1473871614556393 返回 HTTP 403，未读到全文，按规则记为读不到，未换路径硬试",
+   "tubiblio.ulb.tu-darmstadt.de 页面（批次第二个地址）是 Anubis 反爬挑战页，正文未加载",
+   "WebSearch 只返回书目记录，没有可读全文；setup、better_3d、better_2d、no_difference、caveat 均未摘录"
+  ],
+  "id": "gracia-2016"
+ },
+ "wagner-filho-2018": {
+  "citation": "Wagner Filho et al. 2018, Immersive Visualization of Abstract Information: An Evaluation on Dimensionally-Reduced Data Scatterplots (IEEE VR 2018)",
+  "pages_read": [
+   "https://www.aviz.fr/~bbach/immersive2017/papers/IA_2736-paper.pdf"
+  ],
+  "setup": [
+   {
+    "quote": "A user study was conducted to allow a comparative analysis between the desktop-based 2D, desktop-based 3D and HMD-based 3D approaches.",
+    "url": "https://www.aviz.fr/~bbach/immersive2017/papers/IA_2736-paper.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "The three dimensional environment can be explored either through non-immersive (traditional mouse and keyboard interaction) or immersive (HMD-based, with selection rays controlled by position-tracked hand controllers) setups.",
+    "url": "https://www.aviz.fr/~bbach/immersive2017/papers/IA_2736-paper.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "Our user tasks were applied to a population composed of 20 subjects (18-44 years old, 70% male, 25% female, 5% other), recruited on the University campus.",
+    "url": "https://www.aviz.fr/~bbach/immersive2017/papers/IA_2736-paper.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "For visualization purposes, only the first two or three are considered.",
+    "url": "https://www.aviz.fr/~bbach/immersive2017/papers/IA_2736-paper.pdf",
+    "check": "ok"
+   }
+  ],
+  "better_3d": [
+   {
+    "quote": "Results indicate advantages in accuracy in a point classification task with respect to the original dataset, as well as in distance perception and outlier identification tasks with respect to the principal components being visualized.",
+    "url": "https://www.aviz.fr/~bbach/immersive2017/papers/IA_2736-paper.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "Noticeably, when we consider distances in the original dataset, the party classification task was the only one where IM obtained a statistically significant advantage (p = 0.004) in conveying more accurate information",
+    "url": "https://www.aviz.fr/~bbach/immersive2017/papers/IA_2736-paper.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "In the first task, the average error in meters was reduced from 1.26 in 2D to 0.55 in 3D and 0.16 in IM.",
+    "url": "https://www.aviz.fr/~bbach/immersive2017/papers/IA_2736-paper.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "Distances travelled in 3D were, on average, 52% longer than in IM. This indicates a possible reduction in the effort to establish distances and depths in IM.",
+    "url": "https://www.aviz.fr/~bbach/immersive2017/papers/IA_2736-paper.pdf",
+    "check": "ok"
+   }
+  ],
+  "better_2d": [
+   {
+    "quote": "Fig. 2 (a) confirmed our expectations in relation to task elapsed time, with 2D always being the quickest (H3).",
+    "url": "https://www.aviz.fr/~bbach/immersive2017/papers/IA_2736-paper.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "2D was the best evaluated (83.1), followed by IM (68.3) and finally 3D (61.3).",
+    "url": "https://www.aviz.fr/~bbach/immersive2017/papers/IA_2736-paper.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "The user experience post-test questions indicated that participants believed 2D to be quicker (85%) and more intuitive (55%)",
+    "url": "https://www.aviz.fr/~bbach/immersive2017/papers/IA_2736-paper.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "We believe this task was better suited by the orthographic data overview provided in 2D, and the less intuitive interaction was compensated by the users previous experience with mouse and keyboard interfaces.",
+    "url": "https://www.aviz.fr/~bbach/immersive2017/papers/IA_2736-paper.pdf",
+    "check": "ok"
+   }
+  ],
+  "no_difference": [
+   {
+    "quote": "The party comparison task, not shown in this paper due to space constraints, failed to present significant differences in both analyses (p = 0.08 and 0.54, respectively), actually showing trends of larger errors in IM.",
+    "url": "https://www.aviz.fr/~bbach/immersive2017/papers/IA_2736-paper.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "In the former, average errors were indeed smaller in both 3D versions (in conformity with our hypothesis H2), but without significance (p = 0.5 in the Friedman test). In the latter, results were very similar (p = 0.7).",
+    "url": "https://www.aviz.fr/~bbach/immersive2017/papers/IA_2736-paper.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "Comparing 3D and IM, results were generally similar",
+    "url": "https://www.aviz.fr/~bbach/immersive2017/papers/IA_2736-paper.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "The level of discomfort observed in IM was not significant, with an average increase of the SSQ score of only 121.03 points.",
+    "url": "https://www.aviz.fr/~bbach/immersive2017/papers/IA_2736-paper.pdf",
+    "check": "ok"
+   }
+  ],
+  "caveat": [
+   {
+    "quote": "However, without careful inspection, perspective distortion and occlusion may lead to incorrect perceptions.",
+    "url": "https://www.aviz.fr/~bbach/immersive2017/papers/IA_2736-paper.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "Navigation was also perceived to be considerably more related to accuracy in 3D than in IM in some tasks.",
+    "url": "https://www.aviz.fr/~bbach/immersive2017/papers/IA_2736-paper.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "We attribute this to the very high dimensionality (between 450 and 620 dimensions) of the datasets employed in our case study",
+    "url": "https://www.aviz.fr/~bbach/immersive2017/papers/IA_2736-paper.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "We believe these results derive in part from the familiarity of 2D visualizations with mouse and keyboard interfaces and the users’ lack of experience to navigate 3D environments using HMDs.",
+    "url": "https://www.aviz.fr/~bbach/immersive2017/papers/IA_2736-paper.pdf",
+    "check": "ok"
+   }
+  ],
+  "not_found": [
+   "注：该 PDF 标题为 'Immersive Analytics of Dimensionally-Reduced Data Scatterplots'（作者 Wagner Filho, Rey, Freitas, Nedel），是 aviz.fr 上 2017 年 Immersive Analytics 研讨会的版本，与批次引文（IEEE VR 2018，标题 'Immersive Visualization of Abstract Information: An Evaluation on Dimensionally-Reduced Data Scatterplots'）标题不同；以上摘录来自该页面版本，两版数字可能不同，请核对。"
+  ],
+  "id": "wagner-filho-2018"
+ },
+ "raja-2004": {
+  "citation": "Raja, Bowman, Lucas, North 2004, Exploring the Benefits of Immersion in Abstract Information Visualization",
+  "pages_read": [
+   "https://people.cs.vt.edu/~bowman/papers/ipt_dheva.pdf"
+  ],
+  "setup": [
+   {
+    "quote": "In the non-immersive version the information was displayed using only one wall of the CAVE, while the immersive version used all four walls.",
+    "url": "https://people.cs.vt.edu/~bowman/papers/ipt_dheva.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "We also examined the effects of head tracking, giving a total of four conditions: four walls in the CAVE with head tracking, four walls without head tracking, one wall with head tracking and finally, one wall without head tracking.",
+    "url": "https://people.cs.vt.edu/~bowman/papers/ipt_dheva.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "We developed 6 tasks with which to test our hypotheses.",
+    "url": "https://people.cs.vt.edu/~bowman/papers/ipt_dheva.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "Four subjects were recruited to participate in the study.",
+    "url": "https://people.cs.vt.edu/~bowman/papers/ipt_dheva.pdf",
+    "check": "ok"
+   }
+  ],
+  "better_3d": [
+   {
+    "quote": "A high degree of physical immersion resulted in generally lower times than a low degree of physical immersion.",
+    "url": "https://people.cs.vt.edu/~bowman/papers/ipt_dheva.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "The combination of a high degree of physical immersion and head tracking seemed to yield the best results, as completion time for most tasks across condition one were lower than for any other condition.",
+    "url": "https://people.cs.vt.edu/~bowman/papers/ipt_dheva.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "For all tasks, condition one (with head tracking) was much faster than condition two (no head tracking).",
+    "url": "https://people.cs.vt.edu/~bowman/papers/ipt_dheva.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "All users stated that when four walls of the CAVE were used, it was much easier to view large datasets.",
+    "url": "https://people.cs.vt.edu/~bowman/papers/ipt_dheva.pdf",
+    "check": "ok"
+   }
+  ],
+  "better_2d": [
+   {
+    "quote": "For tasks one and two, a high degree of physical immersion was a few seconds slower, and for tasks four and five it was much faster.",
+    "url": "https://people.cs.vt.edu/~bowman/papers/ipt_dheva.pdf",
+    "check": "ok"
+   }
+  ],
+  "no_difference": [
+   {
+    "quote": "These three metrics, therefore, did not indicate any benefit for physical immersion in completing the tasks.",
+    "url": "https://people.cs.vt.edu/~bowman/papers/ipt_dheva.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "The average. difficulty for condition one was 3.3, for condition two it was also 3.3.",
+    "url": "https://people.cs.vt.edu/~bowman/papers/ipt_dheva.pdf",
+    "check": "ok"
+   }
+  ],
+  "caveat": [
+   {
+    "quote": "Because of the exploratory nature of this pilot study, no statistical analysis was performed on the data.",
+    "url": "https://people.cs.vt.edu/~bowman/papers/ipt_dheva.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "Due to the small number of subjects and design of the experiment, we cannot make any definitive statistical conclusions based on the data recorded.",
+    "url": "https://people.cs.vt.edu/~bowman/papers/ipt_dheva.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "Our results in this paper are limited to 3D scatterplots, and thus are not necessarily applicable to all types of 3D data visualizations, but further studies could show immersion’s usefulness.",
+    "url": "https://people.cs.vt.edu/~bowman/papers/ipt_dheva.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "There was, however, one subject out of the four who did not find head tracking useful.",
+    "url": "https://people.cs.vt.edu/~bowman/papers/ipt_dheva.pdf",
+    "check": "ok"
+   }
+  ],
+  "not_found": [
+   "better_2d 只找到一条；原文没有其他写非沉浸或无头追踪条件更好的结论"
+  ],
+  "id": "raja-2004"
+ },
+ "sedlmair-2013": {
+  "citation": "Sedlmair, Munzner, Tory 2013, Empirical Guidance on Scatterplot and Dimension Reduction Technique Choices (TVCG 19(12))",
+  "pages_read": [
+   "https://eprints.cs.univie.ac.at/3992/4/sedlmair2013infovis.pdf",
+   "https://www.cs.ubc.ca/labs/imager/tr/2013/ScatterplotEval/"
+  ],
+  "setup": [
+   {
+    "quote": "we conducted an empirical data study in which two human coders manually inspected a broad set of 816 scatterplots derived from 75 datasets, 4 DR techniques, and the 3 previously mentioned scatterplot techniques",
+    "url": "https://eprints.cs.univie.ac.at/3992/4/sedlmair2013infovis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "static 2D scatterplots (abbreviated here as 2D), interactive 3D scatterplots (i3D for short)",
+    "url": "https://eprints.cs.univie.ac.at/3992/4/sedlmair2013infovis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "Each coder scored all color-coded classes in each scatterplot in terms of their separability from other classes.",
+    "url": "https://eprints.cs.univie.ac.at/3992/4/sedlmair2013infovis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "We used a set of 75 datasets divided into four different categories: 31 real datasets from our colleagues and collaborators",
+    "url": "https://eprints.cs.univie.ac.at/3992/4/sedlmair2013infovis.pdf",
+    "check": "ok"
+   }
+  ],
+  "better_3d": [
+   {
+    "quote": "For 3D spatial data and tasks, most empirical evidence suggests that interactive 3D visualizations often outperform 2D projections",
+    "url": "https://eprints.cs.univie.ac.at/3992/4/sedlmair2013infovis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "For scatterplots of non-DR data, there is some limited evidence that 3D may be helpful for questions requiring integrated knowledge of 3 dimensions",
+    "url": "https://eprints.cs.univie.ac.at/3992/4/sedlmair2013infovis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "The only notable blue cells are with the highly artificial entangled and grid datasets, reflecting our main hypotheses that i3D would work well for these specifically designed datasets.",
+    "url": "https://eprints.cs.univie.ac.at/3992/4/sedlmair2013infovis.pdf",
+    "check": "ok"
+   }
+  ],
+  "better_2d": [
+   {
+    "quote": "interactive 3D rarely helps but often hurts in terms of poorer class separation and usability",
+    "url": "https://eprints.cs.univie.ac.at/3992/4/sedlmair2013infovis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "Switching to i3D, however, rarely helps and often hurts; that is, it has higher time costs and often provides less class separability, even for artificial datasets specifically designed for 3D.",
+    "url": "https://eprints.cs.univie.ac.at/3992/4/sedlmair2013infovis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "i3D often performs worse than the 2D encodings of other DR techniques or the SPLOM of the same DR technique",
+    "url": "https://eprints.cs.univie.ac.at/3992/4/sedlmair2013infovis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "Based on these findings, we recommend avoiding interactive 3D scatterplots for DR data, especially for cluster verification tasks.",
+    "url": "https://eprints.cs.univie.ac.at/3992/4/sedlmair2013infovis.pdf",
+    "check": "ok"
+   }
+  ],
+  "no_difference": [
+   {
+    "quote": "2D scatterplots are often ‘good enough’, that is, neither SPLOM nor interactive 3D adds notably more cluster separability with the chosen DR technique",
+    "url": "https://eprints.cs.univie.ac.at/3992/4/sedlmair2013infovis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "were able to complete a more exhaustive search in 2D within approximately the same amount of time as 3D",
+    "url": "https://eprints.cs.univie.ac.at/3992/4/sedlmair2013infovis.pdf",
+    "check": "ok"
+   }
+  ],
+  "caveat": [
+   {
+    "quote": "Three-dimensional visualizations, particularly 3D scatterplots, suffer from several limitations: occlusion of objects by other objects in the scene",
+    "url": "https://eprints.cs.univie.ac.at/3992/4/sedlmair2013infovis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "The time cost of an interactive 3D scatterplot is high because the user must spend significant time rotating the view to see the structure from different angles",
+    "url": "https://eprints.cs.univie.ac.at/3992/4/sedlmair2013infovis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "a pilot user study with five participants, six datasets and one DR technique, revealed that the results strongly depended on the characteristics of the data as viewed in the scatterplots and not on differences between participants",
+    "url": "https://eprints.cs.univie.ac.at/3992/4/sedlmair2013infovis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "Some interesting cases could have been missed, and our quantitative results should be interpreted with this in mind.",
+    "url": "https://eprints.cs.univie.ac.at/3992/4/sedlmair2013infovis.pdf",
+    "check": "ok"
+   }
+  ],
+  "not_found": [
+   "论文是数据研究（两名编码者打分），没有用户实验，因此 setup 中没有被试人数；作者解释未做用户实验的原因见 caveat 中的 pilot 摘录。UBC 页面上的 ScatterplotEval.pdf 下载后 pdftotext 报 xref 错误，未用，正文取自 eprints 版 PDF。"
+  ],
+  "id": "sedlmair-2013"
+ },
+ "tory-2006": {
+  "citation": "Tory, Kirkpatrick, Atkins, Möller 2006, Visualization Task Performance with 2D, 3D, and Combination Displays (TVCG 12(1))",
+  "pages_read": [
+   "https://www2.cs.sfu.ca/~stella/papers/2006/TVCG2006.pdf"
+  ],
+  "setup": [
+   {
+    "quote": "We describe a series of experiments that compare 2D displays, 3D displays, and combined 2D/3D displays (orientation icon, ExoVis, and clip planes) for relative position estimation, orientation, and volume of interest tasks.",
+    "url": "https://www2.cs.sfu.ca/~stella/papers/2006/TVCG2006.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "In Experiment 1, participants used 3D views and/or 2D orthographic views to estimate the position of a ball relative to a block shape",
+    "url": "https://www2.cs.sfu.ca/~stella/papers/2006/TVCG2006.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "A total of 40 volunteers (20 male, 20 female) were recruited from university computing science and engineering student populations",
+    "url": "https://www2.cs.sfu.ca/~stella/papers/2006/TVCG2006.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "Participants positioned a box-shaped “volume of interest” (VOI) around an anomaly in a volume data set.",
+    "url": "https://www2.cs.sfu.ca/~stella/papers/2006/TVCG2006.pdf",
+    "check": "ok"
+   }
+  ],
+  "better_3d": [
+   {
+    "quote": "3D displays can be very effective for approximate navigation and relative positioning when appropriate cues, such as shadows, are present.",
+    "url": "https://www2.cs.sfu.ca/~stella/papers/2006/TVCG2006.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "Three-dimensional shadow was significantly faster than all other displays",
+    "url": "https://www2.cs.sfu.ca/~stella/papers/2006/TVCG2006.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "Although the 3D display was fastest",
+    "url": "https://www2.cs.sfu.ca/~stella/papers/2006/TVCG2006.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "Strict 3D displays with additional cues such as shadows can be effective for approximate relative position estimation and orientation.",
+    "url": "https://www2.cs.sfu.ca/~stella/papers/2006/TVCG2006.pdf",
+    "check": "ok"
+   }
+  ],
+  "better_2d": [
+   {
+    "quote": "3D had significantly more error than 2D and OI",
+    "url": "https://www2.cs.sfu.ca/~stella/papers/2006/TVCG2006.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "2D views can enable analysis of details and precise navigation and distance measurements (since only one dimension is ambiguous)",
+    "url": "https://www2.cs.sfu.ca/~stella/papers/2006/TVCG2006.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "ExoVis, OI, and 2D performed well overall, having the lowest error and moderate times.",
+    "url": "https://www2.cs.sfu.ca/~stella/papers/2006/TVCG2006.pdf",
+    "check": "ok"
+   }
+  ],
+  "no_difference": [
+   {
+    "quote": "The 2D display was as inaccurate as the 3D display for the position estimation task, but became as accurate as the combination displays for the orientation task.",
+    "url": "https://www2.cs.sfu.ca/~stella/papers/2006/TVCG2006.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "performance of the strict 3D and 2D displays was sensitive to the orientation of the object displayed in the trial",
+    "url": "https://www2.cs.sfu.ca/~stella/papers/2006/TVCG2006.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "some users could perform precise tasks with 3D views alone by using rotation, whereas others found this too confusing and preferred to use 2D views or a combination of 2D and 3D views.",
+    "url": "https://www2.cs.sfu.ca/~stella/papers/2006/TVCG2006.pdf",
+    "check": "ok"
+   }
+  ],
+  "caveat": [
+   {
+    "quote": "3D displays are not effective for precise navigation and positioning except possibly in specific circumstances, for instance, when good viewing angles or measurement tools are available.",
+    "url": "https://www2.cs.sfu.ca/~stella/papers/2006/TVCG2006.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "This poses potential problems for 3D displays (because users may be overconfident in their accuracy)",
+    "url": "https://www2.cs.sfu.ca/~stella/papers/2006/TVCG2006.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "shadows can be hard to interpret and costly to render in scenes with complex or dense geometry.",
+    "url": "https://www2.cs.sfu.ca/~stella/papers/2006/TVCG2006.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "Note that this recommendation applies to novice users; with practice, users may become comfortable working with strict 2D displays.",
+    "url": "https://www2.cs.sfu.ca/~stella/papers/2006/TVCG2006.pdf",
+    "check": "ok"
+   }
+  ],
+  "not_found": [],
+  "id": "tory-2006"
+ },
+ "stjohn-2001": {
+  "citation": "St. John, Cowen, Smallman, Oonk 2001, The use of 2D and 3D displays for shape-understanding versus relative position tasks (Human Factors 43(1))",
+  "pages_read": [],
+  "setup": [],
+  "better_3d": [],
+  "better_2d": [],
+  "no_difference": [],
+  "caveat": [],
+  "not_found": [
+   "setup / better_3d / better_2d / no_difference / caveat 全部未读到：Human Factors 原文不可得。apps.dtic.mil/sti/pdfs/ADA461058.pdf 返回 403；journals.sagepub.com/doi/abs/10.1518/001872001775992534 返回 403；swov.nl 条目页返回 200 但为 Cloudflare/Turnstile 人机验证页，无正文；pubmed.ncbi.nlm.nih.gov/11482314 需要开启 cookie 的脚本页，没有摘要文字。搜索结果的摘要文字不算原文，未用于摘录。"
+  ],
+  "id": "stjohn-2001"
+ },
+ "mdpi-2021": {
+  "citation": "Quantitative and Qualitative Comparison of 2D and 3D Projection Techniques for High-Dimensional Data (Information 2021, 12(6), 239)",
+  "pages_read": [
+   "https://webspace.science.uu.nl/~telea001/uploads/PAPERS/MDPI21/paper.pdf"
+  ],
+  "setup": [
+   {
+    "quote": "We fill this gap by first presenting a quantitative study that compares 2D and 3D projections along a rich selection of datasets, projection techniques, and quality metrics.",
+    "url": "https://webspace.science.uu.nl/~telea001/uploads/PAPERS/MDPI21/paper.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "We computed 2D and 3D projections for the first 7 datasets in Table 1 using all 29 techniques in Table 2.",
+    "url": "https://webspace.science.uu.nl/~telea001/uploads/PAPERS/MDPI21/paper.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "We asked four data scientists to take part in our study.",
+    "url": "https://webspace.science.uu.nl/~telea001/uploads/PAPERS/MDPI21/paper.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "They were instructed first in how to use a visualization tool that allows examining the 2D or 3D projections via zoom, pan, rotation, and brushing points to see their attributes.",
+    "url": "https://webspace.science.uu.nl/~telea001/uploads/PAPERS/MDPI21/paper.pdf",
+    "check": "ok"
+   }
+  ],
+  "better_3d": [
+   {
+    "quote": "certain 3D projection techniques can show more structure than their 2D counterparts, and can stimulate users to further exploration.",
+    "url": "https://webspace.science.uu.nl/~telea001/uploads/PAPERS/MDPI21/paper.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "the 3D techniques scored almost always better but only marginally compared to their 2D counterparts",
+    "url": "https://webspace.science.uu.nl/~telea001/uploads/PAPERS/MDPI21/paper.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "for H-LLE, the use of a third dimension brings some significant added value.",
+    "url": "https://webspace.science.uu.nl/~telea001/uploads/PAPERS/MDPI21/paper.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "3D projections often introduce additional explanations which were not easily visible in the 2D variants",
+    "url": "https://webspace.science.uu.nl/~telea001/uploads/PAPERS/MDPI21/paper.pdf",
+    "check": "ok"
+   }
+  ],
+  "better_2d": [
+   {
+    "quote": "One user remarked that the key advantage of 2D projections was their ease of use.",
+    "url": "https://webspace.science.uu.nl/~telea001/uploads/PAPERS/MDPI21/paper.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "No interaction is required to examine them, while one can get lost or frustrated in the process of zooming, panning, and viewpoint rotation for 3D projections.",
+    "url": "https://webspace.science.uu.nl/~telea001/uploads/PAPERS/MDPI21/paper.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "Some projection techniques, in particular t-SNE, were consistently found to create clearer explanations in 2D than in 3D",
+    "url": "https://webspace.science.uu.nl/~telea001/uploads/PAPERS/MDPI21/paper.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "I prefer 2D because it gives very clear results without further interaction needed",
+    "url": "https://webspace.science.uu.nl/~telea001/uploads/PAPERS/MDPI21/paper.pdf",
+    "check": "ok"
+   }
+  ],
+  "no_difference": [
+   {
+    "quote": "in general, 3D projections bring only limited added-value atop of the one provided by their 2D counterparts",
+    "url": "https://webspace.science.uu.nl/~telea001/uploads/PAPERS/MDPI21/paper.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "both projection types are found equally insightful, but the 3D ones generate additional challenges and effort",
+    "url": "https://webspace.science.uu.nl/~telea001/uploads/PAPERS/MDPI21/paper.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "2D and 3D projections fare almost identically",
+    "url": "https://webspace.science.uu.nl/~telea001/uploads/PAPERS/MDPI21/paper.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "3D projections either show the same structure type, or otherwise do not show any structure at all, similar to their 2D counterparts.",
+    "url": "https://webspace.science.uu.nl/~telea001/uploads/PAPERS/MDPI21/paper.pdf",
+    "check": "ok"
+   }
+  ],
+  "caveat": [
+   {
+    "quote": "3D projections introduce additional challenges such as occlusion and additional user effort for exploration",
+    "url": "https://webspace.science.uu.nl/~telea001/uploads/PAPERS/MDPI21/paper.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "We only explored 8 (real-world) datasets, and considered only relatively simple tasks such as cluster separation identification.",
+    "url": "https://webspace.science.uu.nl/~telea001/uploads/PAPERS/MDPI21/paper.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "A more important limitation regards our expert evaluation (Section 4.3), which involved only four experts and a general task of ranking projections in terms of being more or less informative.",
+    "url": "https://webspace.science.uu.nl/~telea001/uploads/PAPERS/MDPI21/paper.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "measuring the task accuracy and completion time, is needed to refine our insights",
+    "url": "https://webspace.science.uu.nl/~telea001/uploads/PAPERS/MDPI21/paper.pdf",
+    "check": "ok"
+   }
+  ],
+  "not_found": [
+   "https://www.mdpi.com/2078-2489/12/6/239 返回 403，未读；改用作者主页（uu.nl）上的同文 PDF 读取，它与出版版是否逐字一致未核对。作者主页 PDF 首次下载被连接重置，用 --http1.1 重试一次后成功。"
+  ],
+  "id": "mdpi-2021"
+ },
+ "alper-2011": {
+  "citation": "Alper, Höllerer, Kuchera-Morin, Forbes 2011, Stereoscopic Highlighting: 2D Graph Visualization on Stereo Displays (InfoVis 2011)",
+  "pages_read": [
+   "https://sites.cs.ucsb.edu/~holl/pubs/Alper-2011-Infovis.pdf"
+  ],
+  "setup": [
+   {
+    "quote": "In order to validate our technique, we ran a controlled experiment with 16 subjects comparing static visual highlighting to stereoscopic highlighting on 2D and 3D graph layouts for a range of tasks.",
+    "url": "https://sites.cs.ucsb.edu/~holl/pubs/Alper-2011-Infovis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "We ran the study in the Allosphere Virtual Reality environment [1][2] featuring a large spherical display with a 5m radius.",
+    "url": "https://sites.cs.ucsb.edu/~holl/pubs/Alper-2011-Infovis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "Stereo viewing is enabled via active stereo using StereoGraphics CrystalEyes 3D LCD shutter glasses.",
+    "url": "https://sites.cs.ucsb.edu/~holl/pubs/Alper-2011-Infovis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "We designed a within-subjects experiment of four different visualization techniques with three data set sizes and five tasks (3x4x5).",
+    "url": "https://sites.cs.ucsb.edu/~holl/pubs/Alper-2011-Infovis.pdf",
+    "check": "ok"
+   }
+  ],
+  "better_3d": [
+   {
+    "quote": "In more complicated tasks, 3D layout with static visual highlighting outperformed 2D layouts with a single highlighting method.",
+    "url": "https://sites.cs.ucsb.edu/~holl/pubs/Alper-2011-Infovis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "for this task using 3D-SC participants committed 50% less errors compared to 2.5D-S and 2D-C.",
+    "url": "https://sites.cs.ucsb.edu/~holl/pubs/Alper-2011-Infovis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "A binomial test showed that 3D-SC was significantly more accurate than 2.5D-S and 2D-C (with p = .01 and p=.04 respectively).",
+    "url": "https://sites.cs.ucsb.edu/~holl/pubs/Alper-2011-Infovis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "The fact that 3D layouts are more accurate than other layout techniques for T5 supports our final hypothesis.",
+    "url": "https://sites.cs.ucsb.edu/~holl/pubs/Alper-2011-Infovis.pdf",
+    "check": "ok"
+   }
+  ],
+  "better_2d": [
+   {
+    "quote": "Moreover, 2.5D-SC outperformed 3D-SC for these tasks.",
+    "url": "https://sites.cs.ucsb.edu/~holl/pubs/Alper-2011-Infovis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "For T1, 2.5D-SC was significantly faster than 3D-SC, with p=.002.",
+    "url": "https://sites.cs.ucsb.edu/~holl/pubs/Alper-2011-Infovis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "For T2, 2.5D-SC was significantly faster than 2.5D-S, 2D-C and 3D-SC with p=.037, p=.004, and p=0.01, respectively.",
+    "url": "https://sites.cs.ucsb.edu/~holl/pubs/Alper-2011-Infovis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "For T4 both 2.5D-S and 2.5D-SC are significantly faster than both 2D-C (p=.03, p=.025 respectively) and 3D-SC (p=.035 and p=.013).",
+    "url": "https://sites.cs.ucsb.edu/~holl/pubs/Alper-2011-Infovis.pdf",
+    "check": "ok"
+   }
+  ],
+  "no_difference": [
+   {
+    "quote": "while for most tasks the difference in performance between stereoscopic highlighting alone and static visual highlighting is not statistically significant, users performed better when both highlighting methods were used concurrently.",
+    "url": "https://sites.cs.ucsb.edu/~holl/pubs/Alper-2011-Infovis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "We did not find any significant difference across techniques for T3, neither for accuracy nor time.",
+    "url": "https://sites.cs.ucsb.edu/~holl/pubs/Alper-2011-Infovis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "Although we did not observe any statistical significance across visualization techniques for T5, Figure 8, bottom, illustrates a trend where 2.5D-SC is faster than 2D layouts with single highlighting method (2D-C and 2.5D-S)",
+    "url": "https://sites.cs.ucsb.edu/~holl/pubs/Alper-2011-Infovis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "we did not find any significant difference in user performance when stereoscopic highlighting and static visualization highlighting were used independently.",
+    "url": "https://sites.cs.ucsb.edu/~holl/pubs/Alper-2011-Infovis.pdf",
+    "check": "ok"
+   }
+  ],
+  "caveat": [
+   {
+    "quote": "The 3D graph layouts were at a disadvantage without rotation since certain nodes could be occluded from a static viewpoint.",
+    "url": "https://sites.cs.ucsb.edu/~holl/pubs/Alper-2011-Infovis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "We believe that this is due to differences in our evaluation methods, including the fact that we looked at much smaller data sets for a different range of tasks while using static visual highlighting for all techniques.",
+    "url": "https://sites.cs.ucsb.edu/~holl/pubs/Alper-2011-Infovis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "One of the important details of our study that we did not investigate fully was the labeling of the nodes.",
+    "url": "https://sites.cs.ucsb.edu/~holl/pubs/Alper-2011-Infovis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "In follow-up work, we will investigate the effect of stereographic highlighting in presence of other depth cues, such as motion parallax and kinetic depth.",
+    "url": "https://sites.cs.ucsb.edu/~holl/pubs/Alper-2011-Infovis.pdf",
+    "check": "ok"
+   }
+  ],
+  "not_found": [],
+  "id": "alper-2011"
+ },
+ "marriott-2018": {
+  "citation": "Marriott et al. 2018, Immersive Analytics: Time to Reconsider the Value of 3D for Information Visualisation",
+  "pages_read": [
+   "https://vvise.iat.sfu.ca/pubs/marriott2018immersive",
+   "https://vvise.iat.sfu.ca/user/data/papers/IAchapter2_3DVis.pdf"
+  ],
+  "setup": [
+   {
+    "quote": "In this section we review empirical studies comparing 2D with 3D representations",
+    "url": "https://vvise.iat.sfu.ca/user/data/papers/IAchapter2_3DVis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "Ware and Franck [100] report the results of a user study in which graph visualisation with 2D and different 3D displays were compared.",
+    "url": "https://vvise.iat.sfu.ca/user/data/papers/IAchapter2_3DVis.pdf",
+    "check": "ok"
+   }
+  ],
+  "better_3d": [
+   {
+    "quote": "According to their results, the 3D displays allowed participants to decide if there is a path between highlighted nodes with the same accuracy for graphs up to three times larger than in the 2D case.",
+    "url": "https://vvise.iat.sfu.ca/user/data/papers/IAchapter2_3DVis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "A binocular display was found to be 1.6 times more accurate than a 2D display when detecting paths of length two through the complex structure, and binocular presentation combined with head-coupled motion produced the best results.",
+    "url": "https://vvise.iat.sfu.ca/user/data/papers/IAchapter2_3DVis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "Greffard et al. found benefits for binocular 3D over 2D for community detection in social networks [40].",
+    "url": "https://vvise.iat.sfu.ca/user/data/papers/IAchapter2_3DVis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "We have seen that there is empirical evidence that laying out node-link diagrams in 3D can benefit path following [100, 105].",
+    "url": "https://vvise.iat.sfu.ca/user/data/papers/IAchapter2_3DVis.pdf",
+    "check": "ok"
+   }
+  ],
+  "better_2d": [
+   {
+    "quote": "On the other hand some of these studies also found that 2D representations were preferable for precise manipulation or accurate data value measurement or comparison",
+    "url": "https://vvise.iat.sfu.ca/user/data/papers/IAchapter2_3DVis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "In hindsight, cone trees, because of occlusion and the inherent slowness of tree rotation, are a poor representation for hierarchical data.",
+    "url": "https://vvise.iat.sfu.ca/user/data/papers/IAchapter2_3DVis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "found that task performance was slower with cone trees and that users rated the cone interface as worse for seeing and for interacting with the hierarchy.",
+    "url": "https://vvise.iat.sfu.ca/user/data/papers/IAchapter2_3DVis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "3D views were better for understanding the overall shape while 2D orthogonal views were better for precisely judging relative position.",
+    "url": "https://vvise.iat.sfu.ca/user/data/papers/IAchapter2_3DVis.pdf",
+    "check": "ok"
+   }
+  ],
+  "no_difference": [
+   {
+    "quote": "While 2.5D outperformed 2D, which in turn outperformed 3D, the differences were not statistically significant.",
+    "url": "https://vvise.iat.sfu.ca/user/data/papers/IAchapter2_3DVis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "In the case of document management there is no difference between 2 and 2.5D.",
+    "url": "https://vvise.iat.sfu.ca/user/data/papers/IAchapter2_3DVis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "It is clear from the studies that 3D representations are not generally better than 2D representations, but nor are 2D representations always better than 3D: which is better depends upon the kind of task.",
+    "url": "https://vvise.iat.sfu.ca/user/data/papers/IAchapter2_3DVis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "Belcher et al. [5] found similar benefits to 3D and motion cues but not binocular views when viewing graphs using augmented reality.",
+    "url": "https://vvise.iat.sfu.ca/user/data/papers/IAchapter2_3DVis.pdf",
+    "check": "ok"
+   }
+  ],
+  "caveat": [
+   {
+    "quote": "Flaws in the design and implementation mean it is difficult to draw conclusions from the physical implementation.",
+    "url": "https://vvise.iat.sfu.ca/user/data/papers/IAchapter2_3DVis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "Studies also indicate that more than 30% of the population may experience some form of binocular deficiency [47], and binocular acuity generally decreases with age [110].",
+    "url": "https://vvise.iat.sfu.ca/user/data/papers/IAchapter2_3DVis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "With increasing numbers of objects, occlusion becomes a major limiting factor.",
+    "url": "https://vvise.iat.sfu.ca/user/data/papers/IAchapter2_3DVis.pdf",
+    "check": "ok"
+   },
+   {
+    "quote": "Gracia et al. [39] identified several issues arising in 3D visualisation: line-of-sight ambiguity, occlusion and linear perspective distortion.",
+    "url": "https://vvise.iat.sfu.ca/user/data/papers/IAchapter2_3DVis.pdf",
+    "check": "ok"
+   }
+  ],
+  "not_found": [
+   "https://link.springer.com/chapter/10.1007/978-3-030-01388-2_2 返回验证页（Client Challenge），未读；全文以 VVISE 站 PDF 为准。"
+  ],
+  "id": "marriott-2018"
+ }
+}

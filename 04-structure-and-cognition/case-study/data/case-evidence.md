@@ -1600,38 +1600,104 @@
   - 回答的问题：“Users can construct specialized linear projections based on text searches, supporting Task 3, finding meaningful directions in space.” [✓](https://ar5iv.arxiv.org/html/1611.05469)
   - 关系：“brings up a list of nearest points and distances, which shows which words the algorithm has learned to be semantically related” [✓](https://research.google/blog/open-sourcing-the-embedding-projector-a-tool-for-visualizing-high-dimensional-data/)
   - 编码：“where users can choose data columns to color and label points” [✓](https://ar5iv.arxiv.org/html/1611.05469)
+  - 编码：“changing the size of points based on distance to camera” [✓](https://arxiv.org/pdf/1611.05469)
 <details><summary>本案例读到的其他原文摘录</summary>
 
 - 处理的材料：“Embeddings are ubiquitous in machine learning, appearing in recommender systems, NLP, and many other applications.” [✓](https://ar5iv.arxiv.org/html/1611.05469)
 - 处理的材料：“TensorBoard reads tensors and metadata from the logs of your tensorflow projects” [✓](https://www.tensorflow.org/tensorboard/tensorboard_projector_plugin)
 - 处理的材料：“Each word (or sub-word in this case) will be associated with a 16-dimensional vector (or embedding)” [✓](https://www.tensorflow.org/tensorboard/tensorboard_projector_plugin)
+- 处理的材料：“it often has hundreds or even thousands of dimensions, requiring special tools to investigate the space” [✓](https://research.google/blog/open-sourcing-the-embedding-projector-a-tool-for-visualizing-high-dimensional-data/)
+- 处理的材料：“Users may either upload arbitrary high-dimensional data, in a simple text format, or (in TensorFlow) take advantage of the model checkpoint system” [✓](https://arxiv.org/pdf/1611.05469)
 - 对象：“Clicking on any point (which represents the learned embedding for a given word)” [✓](https://research.google/blog/open-sourcing-the-embedding-projector-a-tool-for-visualizing-high-dimensional-data/)
+- 对象：“a mathematical vector representation that captures different facets (dimensions) of the data” [✓](https://research.google/blog/open-sourcing-the-embedding-projector-a-tool-for-visualizing-high-dimensional-data/)
 - 关系：“highlights words that are adjacent to each other in the embedding (low-dimensional) space” [✓](https://www.tensorflow.org/tensorboard/tensorboard_projector_plugin)
+- 关系：“similar words are mapped to points that are close to each other” [✓](https://research.google/blog/open-sourcing-the-embedding-projector-a-tool-for-visualizing-high-dimensional-data/)
 - 属性与度量：“each of which has a sentiment label (positive/negative)” [✓](https://www.tensorflow.org/tensorboard/tensorboard_projector_plugin)
 - 属性与度量：“Save Labels separately on a line-by-line manner.” [✓](https://www.tensorflow.org/tensorboard/tensorboard_projector_plugin)
+- 属性与度量：“users can choose data columns to color and label points” [✓](https://arxiv.org/pdf/1611.05469)
 - 视图：“views of data in either a 2D or a 3D mode” [✓](https://research.google/blog/open-sourcing-the-embedding-projector-a-tool-for-visualizing-high-dimensional-data/)
 - 视图：“(b) the projected view in the center” [✓](https://ar5iv.arxiv.org/html/1611.05469)
 - 视图：“(c) the inspector panel on the right side, where users can search for particular points and see a list of nearest neighbors” [✓](https://ar5iv.arxiv.org/html/1611.05469)
+- 视图：“users can navigate the views in either a 2D or a 3D mode” [✓](https://arxiv.org/pdf/1611.05469)
+- 视图：“The Embedding Projector offers both two- and three-dimensional t-SNE views.” [✓](https://arxiv.org/pdf/1611.05469)
+- 视图：“In 3D mode, labels can appear as "billboards" – flat images that always face the user.” [✓](https://arxiv.org/pdf/1611.05469)
 - 编码：“to fade out more distant points” [✓](https://ar5iv.arxiv.org/html/1611.05469)
+- 编码：“The Embedding Projector computes the top 10 principal components. Menus let the user project those components onto any combination of two or three.” [✓](https://arxiv.org/pdf/1611.05469)
+- 编码：“adding fog to fade out more distant points” [✓](https://arxiv.org/pdf/1611.05469)
+- 编码：“initializing the view with an animated "lazy susan" motion” [✓](https://arxiv.org/pdf/1611.05469)
 - 交互：“zooming, rotating, and panning using natural click-and-drag gestures” [✓](https://research.google/blog/open-sourcing-the-embedding-projector-a-tool-for-visualizing-high-dimensional-data/)
 - 交互：“right-clicking and dragging defines a selection sphere” [✓](https://ar5iv.arxiv.org/html/1611.05469)
 - 交互：“the user can isolate those points for further analysis on their own with the "Isolate Points" button” [✓](https://ar5iv.arxiv.org/html/1611.05469)
+- 交互：“restrict the view to a subset of points and perform t-SNE or PCA only on those points” [✓](https://arxiv.org/pdf/1611.05469)
+- 交互：“after clicking on a point, its nearest neighbors are selected” [✓](https://arxiv.org/pdf/1611.05469)
 - 回答的问题：“Many users wanted to inspect the nearest neighbors of a given point.” [✓](https://ar5iv.arxiv.org/html/1611.05469)
+- 回答的问题：“it is increasingly important for research scientists to be able to explore how the data is being interpreted by the models” [✓](https://research.google/blog/open-sourcing-the-embedding-projector-a-tool-for-visualizing-high-dimensional-data/)
+- 回答的问题：“PCA is often effective at exploring the internal structure of the embeddings, revealing the most influential dimensions in the data” [✓](https://research.google/blog/open-sourcing-the-embedding-projector-a-tool-for-visualizing-high-dimensional-data/)
 - 抽象与层级：“users then typically want to switch quickly between many views, zooming and filtering, and then closely inspecting details” [✓](https://ar5iv.arxiv.org/html/1611.05469)
+- 抽象与层级：“t-SNE, on the other hand, is useful for exploring local neighborhoods and finding clusters” [✓](https://research.google/blog/open-sourcing-the-embedding-projector-a-tool-for-visualizing-high-dimensional-data/)
+- 抽象与层级：“Because t-SNE often preserves some local structure, in practice it supports both Task 1 and Task 2.” [✓](https://arxiv.org/pdf/1611.05469)
 - 为什么这样画：“it is customized for the kinds of tasks faced by machine learning developers and researchers” [✓](https://ar5iv.arxiv.org/html/1611.05469)
 - 为什么这样画：“it is optimized for the use cases that arise in machine learning and includes special features to explore meaningful directions in a data set.” [✓](https://ar5iv.arxiv.org/html/1611.05469)
 - 为什么这样画：“Because t-SNE often preserves some local structure, in practice it supports both Task 1 and Task 2.” [✓](https://ar5iv.arxiv.org/html/1611.05469)
 - 为什么这样画：“To help interpretation of the 3D mode, the Projector uses multiple redundant depth cues” [✓](https://ar5iv.arxiv.org/html/1611.05469)
+- 为什么这样画：“PCA is often effective at supporting Task 2, examining global geometry.” [✓](https://arxiv.org/pdf/1611.05469)
 - 原来的问题：“Unfortunately, these static views are generally inadequate for exploring high-dimensional data” [✓](https://ar5iv.arxiv.org/html/1611.05469)
 - 原来的问题：“Many tools exist to perform various types of dimensionality reduction, but they are largely non-interactive” [✓](https://ar5iv.arxiv.org/html/1611.05469)
 - 原来的问题：“traditional systems often assume the underlying dimensions have a particular meaning” [✓](https://ar5iv.arxiv.org/html/1611.05469)
 - 原来的问题：“We know of no current tools that help with this use case.” [✓](https://ar5iv.arxiv.org/html/1611.05469)
+- 原来的问题：“Zooming into the cluster gives some information, but it is sometimes more helpful to restrict the view to a subset of points and perform t-SNE or PCA only on those points” [✓](https://arxiv.org/pdf/1611.05469)
 - 局限与代价：“it could be useful to visually compare two embeddings. Doing so would require nontrivial additions to the current visualizations.” [✓](https://ar5iv.arxiv.org/html/1611.05469)
 - 局限与代价：“A second direction for future research is to make it easier for users to discover meaningful directions in the data.” [✓](https://ar5iv.arxiv.org/html/1611.05469)
 - 局限与代价：“While the current interface makes it easy to explore various hypotheses, there may be ways for the computer to generate and test hypotheses automatically.” [✓](https://ar5iv.arxiv.org/html/1611.05469)
 
 </details>
 - 没读到：说明：projector.tensorflow.org 首页只读到 JS 代码和许可证文本，没有界面文字；界面描述来自 arXiv 论文与 Google 研究博客
+
+<a id="pca3d"></a>
+
+### pca3d
+
+- 领域：统计与组学；议题：看样本在前几个主成分上怎样按分组聚在一起；在三维里探索、挑选成分，再出论文用的二维图
+- 编码：空间与几何 + 表与多维属性；重点：群落与相似、有什么；把握：页面信息支持，归类靠推断
+- 说明：作者把三维当探索工具、二维当表达工具；文档没有给三维比二维好的比较证据。包 2023 年被移出 CRAN，源码包还在 CRAN 归档里。
+- 编码所依据的原文：
+  - 对象：“The samples fall into one of three groups” [✓](https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd)
+  - 编码：“Factor levels can be used to automatically generate symbols and colors for the points shown” [✓](https://rdrr.io/cran/pca3d/man/pca3d-package.html)
+  - 视图：“The pca3d function shows a three dimensional representation of a PCA object or any other matrix. It uses the rgl package for rendering.” [✓](https://rdrr.io/cran/pca3d/man/pca3d-package.html)
+  - 编码：“Draw a thin grey line from the point to the xy plane” [✓](https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd)
+  - 抽象与层级：“Show a large symbol of the group at the average coordinates of samples in that group (centroids)” [✓](https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd)
+<details><summary>本案例读到的其他原文摘录</summary>
+
+- 处理的材料：“Either a prcomp object or a matrix with at least three columns” [✓](https://rdrr.io/cran/pca3d/man/pca3d-package.html)
+- 处理的材料：“The provided data set, metabo, includes metabolic profiles for over 400 metabolites sampled from 136 tuberculosis (TB) patients and healthy volunteers” [✓](https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd)
+- 对象：“either NULL or a factor of length equal to number of rows. Factor levels can be used to automatically generate symbols and colors for the points shown” [✓](https://rdrr.io/cran/pca3d/man/pca3d-package.html)
+- 关系：“lines from each data point to the corresponding centroid” [✓](https://rdrr.io/cran/pca3d/man/pca3d-package.html)
+- 属性与度量：“Scaling item for the size of points to be shown.” [✓](https://rdrr.io/cran/pca3d/man/pca3d-package.html)
+- 属性与度量：“The confidence level of a pairwise confidence region for the CI.” [✓](https://rdrr.io/cran/pca3d/man/pca3d-package.html)
+- 视图：“Show a three- two-dimensional plot of a prcomp object or a matrix, using different symbols and colors for groups of data” [✓](https://rdrr.io/cran/pca3d/man/pca3d-package.html)
+- 视图：“A TRUTH/FALSE value indicating whether to show confidence interval ellipses or ellipsoids around each defined group” [✓](https://rdrr.io/cran/pca3d/man/pca3d-package.html)
+- 视图：“A biplot shows information on variable loadings, which helps to interpret a PCA.” [✓](https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd)
+- 编码：“Currently, there are four possible 3D shapes to choose from: tetrahedrons, cubes, spheres and octahedrons.” [✓](https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd)
+- 编码：“Vector of length 3 ( pca3d ) or 2 ( pca2d ) containing the components to be shown” [✓](https://rdrr.io/cran/pca3d/man/pca3d-package.html)
+- 交互：“When pca3d is called, the opened window is interactive and can be used to explore differences.” [✓](https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd)
+- 交互：“it is very simple to create animated GIFs in the rgl package with the build-in functions spin3d, play3d and movie3d” [✓](https://logfc.wordpress.com/tag/pca3d/)
+- 交互：“makeMoviePCA: Create a PCA movie” [✓](https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd)
+- 交互：“snapshotPCA3d: Save a 3D PCA snapshot” [✓](https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd)
+- 回答的问题：“The idea is to have a few functions that can be quickly and reliably used to visualize and explore multivariate models, and then create a publication-ready figure.” [✓](https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd)
+- 回答的问题：“a simple call with two parameters – the pca object and the vector with group assignments of the samples – is sufficient for a basic diagnosis.” [✓](https://rdrr.io/cran/pca3d/man/pca3d-package.html)
+- 抽象与层级：“Show group labels at the centroids” [✓](https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd)
+- 抽象与层级：“The top N variables are selected based on their absolute loadings.” [✓](https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd)
+- 为什么这样画：“The idea is that you can fiddle around with the 3D version to explore your graphics and / or choose the components, and then use pca2d to create a figure for a publication.” [✓](https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd)
+- 为什么这样画：“This package is actually a bunch of shortcuts to the RGL graphics library, which does the actual job.” [✓](https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd)
+- 原来的问题：“a biplot showing all variable loadings will be unreadable if the data is highly dimensional (for example, gene expression data)” [✓](https://rdrr.io/cran/pca3d/man/pca3d-package.html)
+- 原来的问题：“mostly for demonstration purposes, because the plot is then hardly readable” [✓](https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd)
+- 局限与代价：“For 3D plots, colors and palette should not contain an alpha channel” [✓](https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd)
+- 局限与代价：“it is worthwile to remove the grey plane at z=0 with the show.plane=FALSE option” [✓](https://rdrr.io/cran/pca3d/f/vignettes/pca3d.rmd)
+- 局限与代价：“Package ‘pca3d’ was removed from the CRAN repository.” [✓](https://cran.r-project.org/web/packages/pca3d/index.html)
+- 局限与代价：“Archived on 2023-02-02 as issues were not corrected in time.” [✓](https://cran.r-project.org/web/packages/pca3d/index.html)
+
+</details>
+- 没读到：备注：rdrr.io 是 CRAN 包内容的第三方镜像，vignette 与帮助页来自这里；CRAN 官方页说明包已于 2023-02-02 归档。博客只读了首页与标签页，没有逐篇通读。
 
 <a id="gephi"></a>
 
@@ -2677,6 +2743,53 @@
 
 </details>
 - 没读到：interactions（页面未写交互操作，只写了查看器）
+
+<a id="geographviz"></a>
+
+### GeoGraphViz
+
+- 领域：地理空间知识图谱；议题：在知识图谱里同时看语义关系和地理位置，发现图结构里藏着的地理分布模式
+- 编码：一般图与网络 + 空间与几何；重点：空间位置、连通与邻域、群落与相似；把握：页面信息支持，归类靠推断
+- 说明：论文是方法论文，没有用户研究；数据和代码的地址写在论文里，同时写“将公开”，仓库内容没读（会话读不了 GitHub 页面）；没有找到展示页。来源编 given 是推测：摘录里同时出现了专家数据和“按预定义概率连边”的生成数据，没有读到全部实验设置。
+- 编码所依据的原文：
+  - 对象：“clusters of disease experts who share similar research interests” [✓](https://arxiv.org/pdf/2304.09864)
+  - 关系：“uses the green lines to connect the nodes with its geolocation on the map layer” [✓](https://arxiv.org/pdf/2304.09864)
+  - 视图：““Graph Above the Map” solution to enable interactive graph exploration from both the graph and map perspectives” [✓](https://arxiv.org/pdf/2304.09864)
+  - 抽象与层级：“This mechanism helps create a balanced graph view between the semantic forces among the graph nodes and the attractive force from a geolocation to a graph node” [✓](https://arxiv.org/pdf/2304.09864)
+  - 交互：“users can drag the graph nodes and place them in a different position on the screen; they can also rotate the entire graph to observe patterns from different viewpoints” [✓](https://arxiv.org/pdf/2304.09864)
+<details><summary>本案例读到的其他原文摘录</summary>
+
+- 处理的材料：“Knowledge graphs are a key technique for linking and integrating cross-domain data, concepts, tools, and knowledge to enable data-driven analytics.” [✓](https://arxiv.org/pdf/2304.09864)
+- 处理的材料：“Quantitative measures for graph structure change of expert data under different force balancing parameter” [✓](https://arxiv.org/pdf/2304.09864)
+- 对象：“nodes are used to represent the entities, and edges represent interrelationships between the entities” [✓](https://arxiv.org/pdf/2304.09864)
+- 关系：“linkage between two nodes, whether they are in the same cluster or not, is based on a predefined probability” [✓](https://arxiv.org/pdf/2304.09864)
+- 属性与度量：“representing the geolocation property of a graph node” [✓](https://arxiv.org/pdf/2304.09864)
+- 属性与度量：“a word cloud view showing collective expertise of the experts in a selected subgraph” [✓](https://arxiv.org/pdf/2304.09864)
+- 视图：“3D web-based graph visualization is enabled in combination with a 2D map view” [✓](https://arxiv.org/pdf/2304.09864)
+- 视图：“to display purely a graph view or the “Graph Above the Map” view” [✓](https://arxiv.org/pdf/2304.09864)
+- 视图：“a word cloud view showing collective expertise of the experts in a selected subgraph” [✓](https://arxiv.org/pdf/2304.09864)
+- 编码：“The offset is computed as the horizontal distance that a node moves in the 2D map plane.” [✓](https://arxiv.org/pdf/2304.09864)
+- 编码：“𝐶(⋅) indicates the coordinate vector of a graph node in a virtual 3D space in which the graph is placed.” [✓](https://arxiv.org/pdf/2304.09864)
+- 编码：“uses the green lines to connect the nodes with its geolocation on the map layer” [✓](https://arxiv.org/pdf/2304.09864)
+- 编码：“The graph nodes in Figure 2 c locate nearly exactly on top of their actual geolocation, showing a clear geographic distribution pattern.” [✓](https://arxiv.org/pdf/2304.09864)
+- 交互：“The graph can also be rotated, panned, and zoomed to improve user experience.” [✓](https://arxiv.org/pdf/2304.09864)
+- 交互：“a force balancing variable that allows for the dynamic adjustment of the 3D graph structure and layout” [✓](https://arxiv.org/pdf/2304.09864)
+- 回答的问题：“to identify hidden patterns, and most importantly, to support discovery of new (geospatial) knowledge from massive cross-domain datasets” [✓](https://arxiv.org/pdf/2304.09864)
+- 回答的问题：“to interactively explore graph data” [✓](https://arxiv.org/pdf/2304.09864)
+- 抽象与层级：“a force balancing variable that allows for the dynamic adjustment of the 3D graph structure and layout” [✓](https://arxiv.org/pdf/2304.09864)
+- 抽象与层级：“These two layers together could demonstrate the clusters of disease experts who share similar research interests from the graph perspective” [✓](https://arxiv.org/pdf/2304.09864)
+- 为什么这样画：“most graph visualization techniques rely on 2D graph visualization, which constraints the dimensions of information that can be presented” [✓](https://arxiv.org/abs/2304.09864)
+- 为什么这样画：“Despite the fact that many such phenomena (e.g., disasters) have clear spatial footprints and geographical properties” [✓](https://arxiv.org/abs/2304.09864)
+- 为什么这样画：“to enable interactive exploration of graph content and patterns in a spatially explicit manner” [✓](https://arxiv.org/abs/2304.09864)
+- 原来的问题：“One major limitation in such solutions is the lack of geographical reference for the graph data” [✓](https://arxiv.org/pdf/2304.09864)
+- 原来的问题：“mainly support 2D graph visualization” [✓](https://arxiv.org/pdf/2304.09864)
+- 局限与代价：“where the geo-force dominates the graph layout simulation” [✓](https://arxiv.org/pdf/2304.09864)
+- 局限与代价：“the local cluster presented in Figure 2 a almost completely gone” [✓](https://arxiv.org/pdf/2304.09864)
+- 局限与代价：“In the future, we will continue to refine the visualization algorithm to enhance its spatial-semantic visual presentation” [✓](https://arxiv.org/pdf/2304.09864)
+- 局限与代价：“The data and code will be openly shared to benefit the broader research community.” [✓](https://arxiv.org/pdf/2304.09864)
+
+</details>
+- 没读到：备注：论文写数据和代码见 https://github.com/ASUcicilab/GeoGraphViz，按规则没有访问 GitHub。搜索没有找到单独的展示页（demo）。
 
 <a id="affine"></a>
 
@@ -4061,6 +4174,104 @@
 
 </details>
 - 没读到：interactions（两篇论文都没有写交互操作）；来源说明：PMC11446450（Lause 等的 PMC 版）返回 reCAPTCHA 人机验证页，没读到；改读 PLOS 上的同一篇原文
+
+<a id="vrnetzer"></a>
+
+### VRNetzer
+
+- 领域：分子生物学与医学；议题：在 VR 里连续地从局部簇看到全局结构，探索大型分子网络，找出与罕见病相关的基因
+- 编码：一般图与网络 + 空间与几何；重点：连通与邻域、群落与相似、对象上的度量；把握：官方页面直接写了
+- 说明：论文的对照表比较的是网络工具的功能和大图上的流畅度，摘录里没有 VR 与二维的用户实验；“立体深度是别的办法给不了的”是设计者的主张，不是实验结果。
+- 编码所依据的原文：
+  - 处理的材料：“the human interactome network of protein–protein interactions as curated from the HIPPIE database” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/)
+  - 对象：“the human interactome consisting of around 16,000 proteins as nodes” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/)
+  - 关系：“around 300,000 physical interactions as links” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/)
+  - 编码：“We then use the dimensionality reduction method tSNE 59 to embed the nodes into 3D space” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/)
+  - 视图：“providing an immersive 3D frontend for visualizing and exploring large networks” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/)
+  - 交互：“The most basic navigation modes are the free movement within the surrounding network, rotation, and translation of the network with full six degrees of freedom” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/)
+  - 抽象与层级：“Meso-scale node clusters (representing, for example, biological functions or disease-associated processes) are annotated using floating labels derived from gene set enrichment and network proximity” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/)
+<details><summary>本案例读到的其他原文摘录</summary>
+
+- 处理的材料：“widely used gene annotation data ranging from molecular functions to disease associations” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/)
+- 对象：“Seed genes are typically compiled from genes associated with similar diseases or phenotypes” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/)
+- 关系：“by highlighting all directly connected neighbors” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/)
+- 属性与度量：“Individual nodes can be inspected via a panel displaying any information contained in the underlying database” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/)
+- 属性与度量：“The algorithm ranks the candidate genes based on their visiting frequency.” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/)
+- 视图：“We also provide a (5) web module as a browser-based frontend” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/)
+- 视图：“In functional landscape layouts, the nodes are clustered together based on a combination of network proximity and annotation similarity” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/)
+- 视图：“‘projected 3D’ refers to 3D renderings on a 2D screen” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/)
+- 编码：“These layouts allow us to assign explicit meaning to absolute and relative node positions in 3D space” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/)
+- 编码：“such that the distance between nodes reflects the cosine similarity of their respective feature vectors” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/)
+- 编码：“We included six 3D layouts: (i) a spring-based layout generated using a standard Fruchtermann–Reingold algorithm” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/)
+- 交互：“Individual nodes are selected by directly pointing at them.” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/)
+- 交互：“For more complex searches, up to four AND and OR clauses can be combined.” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/)
+- 交互：“By observing the dynamic transition between different explicit layouts” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/)
+- 回答的问题：“to identify genes associated with rare diseases and understand how they might contribute to disease development” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/)
+- 回答的问题：“allow users to quickly locate individual nodes and node clusters, identify their immediate and broader neighborhoods in different functional contexts” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/)
+- 抽象与层级：“Large networks exhibit functionally relevant structures at various scales, ranging from small node clusters (representing, e.g., protein complexes) to mesoscale structures” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/)
+- 抽象与层级：“The scaling allows for a seamless transition between global network views and close-up inspection of local node clusters or individual nodes.” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/)
+- 为什么这样画：“The immersive nature of VR provides a sense of depth that cannot be achieved by other means, such as 2D or non-immersive 3D representations.” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/)
+- 为什么这样画：“This allows for quickly and accurately resolving connections that would otherwise be ambiguous due to partially occluded nodes and/or links.” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/)
+- 原来的问题：“On a conventional computer screen, networks beyond this size typically lead to unintelligible hairball visualizations that obscure existing structure and offer little insights.” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/)
+- 原来的问题：“This requires the selection of a smaller subnetwork, yet in many applications, it is not clear how to select the most meaningful one.” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/)
+- 原来的问题：“However, as any 2D network visualization tool, these analyses are critically limited by the size of the considered subnetworks” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/)
+- 原来的问题：“in which the positioning of nodes is often only indirectly linked to structural or functional network characteristics” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/)
+- 局限与代价：“The primary performance requirement is the fluid display of 3D graphics, i.e., rendering high-resolution stereoscopic images at a framerate of 60 Hz or higher.” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/)
+- 局限与代价：“Not all these metaphors can be translated to an immersive 3D environment, and VR-specific interaction modes are scarce and not widely recognized” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/)
+- 局限与代价：“can be used for exploring small to medium size networks, as well as for testing during the development of new functionalities” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC8065164/)
+
+</details>
+- 没读到：备注：论文没有单列局限的段落，以上 limit 条目是在 Methods 与 Results 中零散写到的。论文给出的代码地址 github.com/menchelab/vrnetzer 按规则没有访问；搜索没有找到独立的文档站。
+
+<a id="icave"></a>
+
+### iCAVE
+
+- 领域：分子生物学与医学；议题：在三维、立体或 CAVE 沉浸环境里查看大型、多层的生物分子网络，看清二维里看不清的结构
+- 编码：一般图与网络；重点：连通与邻域、群落与相似、对象上的度量；把握：官方页面直接写了
+- 说明：作者引用别人的用户研究作理由（页面写 has been shown to be particularly beneficial ……、better performance than 2D in user studies for relatively difficult tasks），自己没有做实验；还写明大网络的显示里“靠得近”可能被误读成有关系（作者没有说这是三维特有的）。
+- 编码所依据的原文：
+  - 处理的材料：“iCAVE supports tabular input formats (.txt, .csv, or .tsv).” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)
+  - 对象：“layer1: genes; layer2: diseases; layer3: drugs” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)
+  - 视图：“Users can explore networks (i) in 3D using a desktop, (ii) in stereoscopic 3D using 3D-vision glasses and a desktop, or (iii) in immersive 3D within a CAVE environment.” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)
+  - 编码：“segregates the network into separate layers (default 7) in the third dimension” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)
+  - 交互：“iCAVE users can turn 3D stereoscopy on or off during exploration.” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)
+  - 抽象与层级：“Bundling is extremely useful in identifying global patterns in very large networks” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)
+<details><summary>本案例读到的其他原文摘录</summary>
+
+- 处理的材料：“iCAVE input is provided as a tab-delimited text file of identifiers and optional information on magnitude of change, edge directionality, edge weights, node/edge colors, and patterns” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)
+- 对象：“visualize their own networks (e.g., disease, drug, protein, metabolite)” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)
+- 关系：“Interactions are either user-defined, or are queries of the iCAVE COMBO database” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)
+- 关系：““connectors” between 2 dense network regions (modules)” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)
+- 属性与度量：“These include the number of nodes, the number of edges, network diameter, node-betweenness centrality, closeness centrality, neighborhood connectivity” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)
+- 属性与度量：“iCAVE automatically generates and reports network topology statistics and centrality measures both graphically and in tabular form.” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)
+- 视图：“a CAVE environment, which includes projectors directed to several walls of a room-sized cube” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)
+- 视图：“visual outputs can be saved in 2D snapshots or movies configured with user-defined rotation, zoom, and speeds” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)
+- 视图：“Additional reports on network statistics are provided in 2D.” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)
+- 编码：“positions the network on the surface of a 3D hemisphere. The most connected node is positioned at the top center of the hemisphere.” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)
+- 编码：“Optional weights are represented with edge color frequency, directed edges with arrows, and node types with node glyph patterns.” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)
+- 编码：“using different node color, size, and transparency options” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)
+- 交互：“they can use their mouse (in lieu of hand-held controls) to zoom in/out or rotate the network to a view without occlusions” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)
+- 交互：“users can click on any edge or node for further information” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)
+- 交互：“users can simultaneously query several built-in databases within iCAVE for network generation” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)
+- 回答的问题：“Utilizing iCAVE, investigators from diverse fields can gain insights from large, heterogeneous datasets” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)
+- 回答的问题：“we observed a network feature that was not intuitive from the original 2D layout” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)
+- 抽象与层级：“if the interaction network has a hierarchy, semantic layers layout can help visualize the hierarchical nature of the interactions easily” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)
+- 抽象与层级：““edge-bundled display” [ 50 ] option for visually bundling adjacent edges together” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)
+- 为什么这样画：“has been shown to be particularly beneficial for exploring large, complex networks, either alone or combined with rotation or user motion cues” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)
+- 为什么这样画：“have also led to better performance than 2D in user studies for relatively difficult tasks and large networks” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)
+- 为什么这样画：“Three-dimensional elements that appear to form a pattern because of their visual positioning in one viewpoint can be interpreted correctly by rotating the image to a different viewpoint” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)
+- 原来的问题：“are limited by the number of molecules and interactions that can be displayed on a 2D screen” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)
+- 原来的问题：“The visual clutter problem due to edge crossings that create a hairball effect in 2D is eliminated” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)
+- 原来的问题：“it does not offer global layout and clustering algorithms to make full use of the third dimension” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)
+- 原来的问题：“it does not utilize 3D effects to improve comprehension (e.g., transparency or advanced shadow effects)” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)
+- 局限与代价：“However, a CAVE facility is a substantial investment to build and maintain that only a limited number of institutions have.” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)
+- 局限与代价：“visualizations of large networks may exhibit problems with display clutter, molecular positioning, or perceptual tension, leading the user to misinterpret closely positioned molecules as related” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)
+- 局限与代价：“More user and case studies are needed to understand how best we can make use of immersion, stereoscopy, and 3D.” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)
+- 局限与代价：“how best to utilize features specific to 3D or to take advantage of new 3D technologies is currently an open research question” [✓](https://pmc.ncbi.nlm.nih.gov/articles/PMC5554349/)
+
+</details>
+- 没读到：备注：论文写的项目页 http://research.mssm.edu/gumuslab/software.html 本次访问时 DNS 解析失败；labs.icahn.mssm.edu/gumuslab/software/ 返回 403，没有读到下载页。论文写明许可为 GNU Lesser General Public License，代码地址以项目页为准，未核实。
 
 <a id="tube-map"></a>
 
