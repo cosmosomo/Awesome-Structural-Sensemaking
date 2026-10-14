@@ -397,11 +397,11 @@
   site: https://dtour.dev
   demo: https://dtour.dev
   demo_source: search
-  notes: "2026 年 5 月的论文（arXiv:2605.04306），论文作者的博客里给了仓库和网站地址；PyPI 上有同名包 dtour，但它的元数据没有写仓库地址，没有核对是不是同一个项目。"
+  notes: "2026 年 5 月的论文（arXiv:2605.04306），论文作者的博客里给了仓库和网站地址；PyPI 上有同名包 dtour（MIT，0.5.1，2026-10-12 发布），元数据的仓库字段是空的，但包说明里的发布链接指向 flekschas/dtour，与这里的仓库一致。"
   added_by_maintainer: [repo]
   demo_checked: "2026-10-14"
   repo_checked: "2026-10-14"
-  repo_check_via: "作者博客 lekschas.de 里的 dtour 仓库链接"
+  repo_check_via: "作者博客 lekschas.de 里的 dtour 仓库链接；PyPI 包 dtour 的说明里也链到 flekschas/dtour"
   facts_checked: "2026-10-14"
   facts_gaps: ["官网 dtour.dev 正文由 JS 渲染，页面文字只有标题；说明依据是论文 HTML 版和作者博客"]
 

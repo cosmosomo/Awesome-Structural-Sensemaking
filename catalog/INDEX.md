@@ -3,7 +3,7 @@
 > 本文件由 `scripts/build.py` 根据 `catalog/` 生成，请改 YAML，不要直接改这里。
 > 条目信息来自 2026-10 调研报告。展示页来自报告原文或事后的搜索结果，除标 ✓ 的外都没有实际访问过。
 
-共 100 个条目；有开源项目地址 96 个，有展示页 73 个（其中 65 个已访问核对，标 ✓）；另有 19 个本身没有展示页。
+共 100 个条目；有开源项目地址 96 个，有展示页 72 个（其中 64 个已访问核对，标 ✓）；另有 19 个本身没有展示页。
 有 89 个开源项目地址已核对（标 ✓，鼠标悬停可看依据）：npm / PyPI 的包元数据、项目官网或官方文档里的源码链接，或 Go 模块代理指向的仓库与这里一致。其余没有核对，GitHub 页面本身没有访问。
 “定位与值得研究”一列末尾的标记：✓ 表示这段说明的主要点在官方页面里都找到了依据（57 个）；△ 表示有些点没找到依据，写在备注里（38 个）；没有标记的没核对过。找不到依据不等于说法有误，官方页面由 JS 渲染读不到的、或者只是整理者的评价性判断，也会落在这一类。
 
@@ -192,7 +192,7 @@
 | [HiPlot](https://github.com/facebookresearch/hiplot) | Meta（原 Facebook AI Research）的交互式高维数据探索工具，以平行坐标图为核心。<br>每个维度一根轴、每条记录一条线：刷选、重排与删除轴、按另一根轴着色，用来看超参数与指标的关系。 ✓ | [仓库](https://github.com/facebookresearch/hiplot "核对依据：PyPI 包元数据声明的仓库") ✓ | [展示页](https://facebookresearch.github.io/hiplot/) ✓ | — | PyPI 最近一次发布是 2022-10-27（0.1.33），包元数据没有写许可证；“删除轴、按另一根轴着色”在 Meta AI 博客里有原文，文档页没有。 |
 | [Facets](https://pair-code.github.io/facets/) | Google PAIR 的机器学习数据集可视化：Overview 逐特征看分布，Dive 按特征值摆放每个数据点。<br>特征成百上千时，先逐特征看总体分布与异常，再按特征分面、着色地看单条记录。 ✓ | [仓库](https://github.com/pair-code/facets "核对依据：PyPI 包元数据声明的仓库；项目站点的 Code 链接") ✓ | [展示页](https://pair-code.github.io/facets/) ✓ | — | 开源；PyPI 最近一次发布是 2023-05-24（facets-overview 1.1.1）；仓库当前是否仍在维护没有核实（GitHub 页面没有访问）。“特征成百上千”见 Google 开源博客 2017 年的发布文章。 |
 | [KeplerMapper](https://github.com/scikit-tda/kepler-mapper) | 拓扑数据分析里 Mapper 算法的 Python 实现，把高维数据变成一张由聚类节点组成的小图。<br>投影、覆盖、聚类三步；节点和边的大小、颜色由用户指定的函数决定。 ✓ | [仓库](https://github.com/scikit-tda/kepler-mapper "核对依据：官方文档站首页的源码仓库链接") ✓ | [展示页](https://kepler-mapper.scikit-tda.org/en/latest/notebooks/Cancer-demo.html) ✓ | [文档](https://kepler-mapper.scikit-tda.org/en/latest/) | 开源；展示页是文档里的 notebook 示例，输出是预先生成的，不是在线交互。 |
-| [dtour](https://dtour.dev) | 在浏览器里沿一串二维投影“巡游”高维数据的工具，支持引导式巡游、手动拖动投影和自动漫游。<br>点的身份怎样在投影之间保持；只有关键帧可解释，中间的插值只是帮助跟踪。 △ | [仓库](https://github.com/flekschas/dtour "核对依据：作者博客 lekschas.de 里的 dtour 仓库链接") ✓ | [展示页](https://dtour.dev) ✓ | — | 2026 年 5 月的论文（arXiv:2605.04306），论文作者的博客里给了仓库和网站地址；PyPI 上有同名包 dtour，但它的元数据没有写仓库地址，没有核对是不是同一个项目；官方页面没找到依据的说明：官网 dtour.dev 正文由 JS 渲染，页面文字只有标题；说明依据是论文 HTML 版和作者博客 |
+| [dtour](https://dtour.dev) | 在浏览器里沿一串二维投影“巡游”高维数据的工具，支持引导式巡游、手动拖动投影和自动漫游。<br>点的身份怎样在投影之间保持；只有关键帧可解释，中间的插值只是帮助跟踪。 △ | [仓库](https://github.com/flekschas/dtour "核对依据：作者博客 lekschas.de 里的 dtour 仓库链接；PyPI 包 dtour 的说明里也链到 flekschas/dtour") ✓ | [展示页](https://dtour.dev) ✓ | — | 2026 年 5 月的论文（arXiv:2605.04306），论文作者的博客里给了仓库和网站地址；PyPI 上有同名包 dtour（MIT，0.5.1，2026-10-12 发布），元数据的仓库字段是空的，但包说明里的发布链接指向 flekschas/dtour，与这里的仓库一致；官方页面没找到依据的说明：官网 dtour.dev 正文由 JS 渲染，页面文字只有标题；说明依据是论文 HTML 版和作者博客 |
 | [DataMapPlot](https://github.com/TutteInstitute/datamapplot) | 把嵌入的二维投影画成带标签的静态或交互式“数据地图”的 Python 库。<br>给簇的点加标签后自动排版；社区页列出了用它做的交互地图，包括 Semantic Map of GitHub。 ✓ | [仓库](https://github.com/TutteInstitute/datamapplot "核对依据：PyPI 包元数据声明的仓库") ✓ | [展示页](https://datamapplot.readthedocs.io/en/latest/) ✓ | — | 开源 |
 | [Embedding Atlas](https://apple.github.io/embedding-atlas/) | Apple 的开源嵌入可视化工具：二维地图加密度等高线、自动聚类标签和元数据联动视图。<br>几百万个点的嵌入怎样低门槛地搜索、找近邻并联动过滤。 ✓ | [仓库](https://github.com/apple/embedding-atlas "核对依据：PyPI、npm 包元数据声明的仓库") ✓ | [展示页](https://apple.github.io/embedding-atlas/) ✓ | — | 开源 |
 | [UpSet](https://upset.app/) | 用矩阵加条形图表示多个集合的交集，替代集合超过三四个以后的 Venn 图。<br>集合很多时怎样排序、聚合和查询交集；元素的属性怎样接在交集旁边。 ✓ | [仓库](https://github.com/visdesignlab/upset2 "核对依据：upset.app/implementations 页面的 Source Code 链接（UpSet 2）") ✓ | [展示页](https://upset.app/) ✓ | — | 2014 年原版 UpSet 的仓库是 VCG/upset，upset.app 的实现页同时列了两个；这里记的是新版 UpSet 2。 |
@@ -309,7 +309,7 @@
 
 | 项目 | 定位与值得研究 | 开源项目 | 展示页 | 站点 / 文档 | 备注 |
 | --- | --- | --- | --- | --- | --- |
-| [Nomic Atlas](https://docs.nomic.ai/atlas/datasets/data-maps/how-atlas-works/1-key_terms) | 把大规模文本或嵌入数据变成可在浏览器里探索的二维地图的云平台。<br>嵌入到二维用什么投影（UMAP 与自研投影按规模切换）、主题层级与标签、分享与筛选。 ✓ | — | [展示页](https://atlas.nomic.ai/) ✓ | [文档](https://docs.nomic.ai/atlas/datasets/data-maps/how-atlas-works/1-key_terms) | 商业产品；商业云平台，Python 客户端 nomic 在 PyPI（包元数据声明的仓库是 nomic-ai/nomic，客户端不是平台本身）；技术报告写明无法公开许多技术细节。 |
+| [Nomic Atlas](https://docs.nomic.ai/atlas/datasets/data-maps/how-atlas-works/1-key_terms) | 把大规模文本或嵌入数据变成可在浏览器里探索的二维地图的云平台。<br>嵌入到二维用什么投影（UMAP 与自研投影按规模切换）、主题层级与标签、分享与筛选。 ✓ | — | 待收集 | [文档](https://docs.nomic.ai/atlas/datasets/data-maps/how-atlas-works/1-key_terms) | 商业产品；商业云平台，Python 客户端 nomic 在 PyPI（包元数据声明的仓库是 nomic-ai/nomic，客户端不是平台本身）；技术报告写明无法公开许多技术细节。没有收展示页：atlas.nomic.ai 静态读到标题“Nomic Atlas”，但无头 Chromium 实际打开（2026-10-14）会跳到 nomic.ai/developer，是 Nomic Agent API（面向建筑工程图纸与文档）的产品页，不是地图；atlas.nomic.ai/data/nomic/news 未登录时显示 Page Not Found；文档站仍在写 Atlas，没有链到公开示例地图。 |
 | [Orange](https://orangedatamining.com/) | 开源的数据挖掘与可视化软件，用组件搭流程；可视化组件里有 Radviz、FreeViz 等多维投影。<br>VizRank 在众多可能的投影里替人挑出“有信息”的那几张；锚点可以拖动。 ✓ | [仓库](https://github.com/biolab/orange3 "核对依据：官网首页的 GitHub 链接；PyPI 包元数据") ✓ | 无：桌面软件，没有在线展示页。 | [站点](https://orangedatamining.com/) · [文档](https://orangedatamining.com/docs) | 开源；许可证 GPLv3+（PyPI 元数据）。 |
 
 ## 第四板块 结构提炼与认知建模

@@ -1307,7 +1307,7 @@
 
 <sub>机器学习与嵌入分析 · 空间与几何 · 重点：群落与相似、包含与层次</sub>　把大规模文本或嵌入数据放到一张地图上，找簇、离群点和误分类，并协作标注
 
-- 展示页：没有找到在线展示页<sub>（https://atlas.nomic.ai/ 返回 200、标题 'Nomic Atlas'，但正文由脚本渲染，静态读不到任何可操作内容，无法确认是否需要登录，所以未收为展示页…）</sub>
+- 展示页：没有找到在线展示页<sub>（https://atlas.nomic.ai/ 静态读到 200、标题 'Nomic Atlas'，但无头 Chromium 实际打开（2026-10-14）会跳到 nomic.ai/developer…）</sub>
 - 网页：[How to Visualize Embeddings with t-SNE, UMAP, and Nomic Atlas \| Nomic Platform Documentation](https://docs.nomic.ai/atlas/embeddings-and-retrieval/guides/how-to-visualize-embeddings)（官方指南：并列介绍 t-SNE、UMAP 与 Nomic Atlas（页面称 'Cloud-based, Interactive Visualization'）三种嵌入可视化方法，各自列出优缺点）
 - 网页：[Atlas Data Maps \| Nomic Platform Documentation](https://docs.nomic.ai/atlas/datasets/data-maps)（官方文档：Atlas 数据地图功能页，目录列出 Data Map Controls、Analyst、Topic Modeling、Duplicate Detection 等子页）
 

@@ -109,6 +109,6 @@ Dify、Langflow、n8n、Node-RED 的重点已超出画图，进入完整的应�
 <!-- gen:catalog:L3/data-exploration-platforms -->
 | 项目 | 定位与值得研究 | 开源项目 | 展示页 | 站点 / 文档 | 备注 |
 | --- | --- | --- | --- | --- | --- |
-| [Nomic Atlas](https://docs.nomic.ai/atlas/datasets/data-maps/how-atlas-works/1-key_terms) | 把大规模文本或嵌入数据变成可在浏览器里探索的二维地图的云平台。<br>嵌入到二维用什么投影（UMAP 与自研投影按规模切换）、主题层级与标签、分享与筛选。 ✓ | — | [展示页](https://atlas.nomic.ai/) ✓ | [文档](https://docs.nomic.ai/atlas/datasets/data-maps/how-atlas-works/1-key_terms) | 商业产品；商业云平台，Python 客户端 nomic 在 PyPI（包元数据声明的仓库是 nomic-ai/nomic，客户端不是平台本身）；技术报告写明无法公开许多技术细节。 |
+| [Nomic Atlas](https://docs.nomic.ai/atlas/datasets/data-maps/how-atlas-works/1-key_terms) | 把大规模文本或嵌入数据变成可在浏览器里探索的二维地图的云平台。<br>嵌入到二维用什么投影（UMAP 与自研投影按规模切换）、主题层级与标签、分享与筛选。 ✓ | — | 待收集 | [文档](https://docs.nomic.ai/atlas/datasets/data-maps/how-atlas-works/1-key_terms) | 商业产品；商业云平台，Python 客户端 nomic 在 PyPI（包元数据声明的仓库是 nomic-ai/nomic，客户端不是平台本身）；技术报告写明无法公开许多技术细节。没有收展示页：atlas.nomic.ai 静态读到标题“Nomic Atlas”，但无头 Chromium 实际打开（2026-10-14）会跳到 nomic.ai/developer，是 Nomic Agent API（面向建筑工程图纸与文档）的产品页，不是地图；atlas.nomic.ai/data/nomic/news 未登录时显示 Page Not Found；文档站仍在写 Atlas，没有链到公开示例地图。 |
 | [Orange](https://orangedatamining.com/) | 开源的数据挖掘与可视化软件，用组件搭流程；可视化组件里有 Radviz、FreeViz 等多维投影。<br>VizRank 在众多可能的投影里替人挑出“有信息”的那几张；锚点可以拖动。 ✓ | [仓库](https://github.com/biolab/orange3 "核对依据：官网首页的 GitHub 链接；PyPI 包元数据") ✓ | 无：桌面软件，没有在线展示页。 | [站点](https://orangedatamining.com/) · [文档](https://orangedatamining.com/docs) | 开源；许可证 GPLv3+（PyPI 元数据）。 |
 <!-- /gen -->

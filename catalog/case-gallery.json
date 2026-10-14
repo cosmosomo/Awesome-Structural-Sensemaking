@@ -3415,7 +3415,7 @@
    }
   ],
   "not_found": [
-   "https://atlas.nomic.ai/ 返回 200、标题 'Nomic Atlas'，但正文由脚本渲染，静态读不到任何可操作内容，无法确认是否需要登录，所以未收为展示页；文档的指南页（Data Map Guides）也没有链接到公开的示例地图",
+   "https://atlas.nomic.ai/ 静态读到 200、标题 'Nomic Atlas'，但无头 Chromium 实际打开（2026-10-14）会跳到 nomic.ai/developer，是 Nomic Agent API（面向建筑工程图纸与文档）的产品页，不是 Atlas 地图；atlas.nomic.ai/data/nomic/news 未登录时显示 Page Not Found；文档里的指南页也没有链接到公开的示例地图，所以未收为展示页",
    "文档站截图中 data-maps 的 map_icon.png、vector_search_icon.png 是图标；data-maps/controls 的搜索、过滤、视图设置截图是界面细节，均未收",
    "how-to-visualize-embeddings 的图只出现在 og:image 分享卡片（visualize-embeddings-tsne-umap-atlas.png）中，正文没有 img，未收",
    "技术报告 static.nomic.ai/atlas_tech_report.pdf 只读到地址，未读其内容，未收其中的图"

@@ -528,12 +528,9 @@
   summary: "把大规模文本或嵌入数据变成可在浏览器里探索的二维地图的云平台。"
   focus: "嵌入到二维用什么投影（UMAP 与自研投影按规模切换）、主题层级与标签、分享与筛选。"
   docs: https://docs.nomic.ai/atlas/datasets/data-maps/how-atlas-works/1-key_terms
-  demo: https://atlas.nomic.ai/
-  demo_source: search
   access: commercial
-  demo_checked: "2026-10-14"
   facts_checked: "2026-10-14"
-  notes: "商业云平台，Python 客户端 nomic 在 PyPI（包元数据声明的仓库是 nomic-ai/nomic，客户端不是平台本身）；技术报告写明无法公开许多技术细节。"
+  notes: "商业云平台，Python 客户端 nomic 在 PyPI（包元数据声明的仓库是 nomic-ai/nomic，客户端不是平台本身）；技术报告写明无法公开许多技术细节。没有收展示页：atlas.nomic.ai 静态读到标题“Nomic Atlas”，但无头 Chromium 实际打开（2026-10-14）会跳到 nomic.ai/developer，是 Nomic Agent API（面向建筑工程图纸与文档）的产品页，不是地图；atlas.nomic.ai/data/nomic/news 未登录时显示 Page Not Found；文档站仍在写 Atlas，没有链到公开示例地图。"
 
 - id: orange
   name: Orange
